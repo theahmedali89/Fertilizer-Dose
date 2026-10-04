@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "hi",
+    "name": "Hindi",
+    "nativeName": "हिन्दी",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

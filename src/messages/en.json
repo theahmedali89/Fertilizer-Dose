@@ -1,0 +1,548 @@
+{
+  "calculator": {
+    "desc": "Pick your crop, enter your land in the unit you use — acre, kanal, marla or hectare — and get precise urea, DAP and MOP quantities plus a stage-wise application schedule.",
+    "empty": {
+      "desc": "Choose a crop, enter your land area, and hit calculate. Every step of the math is shown.",
+      "title": "Your dose will appear here"
+    },
+    "eyebrow": "Dose calculator",
+    "form": {
+      "area": "Land area",
+      "areaError": "Please enter a valid land area greater than zero.",
+      "areaLargeError": "That area looks unusually large — please double-check the value and unit.",
+      "areaPlaceholder": "e.g. 5",
+      "crop": "Crop",
+      "cropHint": "Only crops with verified recommendations are selectable.",
+      "inReview": "data in review",
+      "soil": "Soil type (optional)",
+      "soilHint": "Soil type doesn't change the math — it changes the advice. Sandy soils leach nitrogen faster; saline soils need care with MOP.",
+      "submit": "Calculate dose",
+      "unit": "Unit"
+    },
+    "method": {
+      "desc": "No black box. This is the same DAP-first procedure taught in agronomy courses.",
+      "eyebrow": "Method",
+      "title": "The method, in plain words"
+    },
+    "results": {
+      "bags": "× 50 kg bags",
+      "disclaimer": "Estimates follow published recommendations. Confirm with your local agriculture officer before application.",
+      "howTitle": "How this was calculated",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Application schedule",
+      "soilDefault": "Standard dose shown. Adjust after a soil test.",
+      "soilNoteLabel": "Soil note:",
+      "sourceLabel": "Data source:",
+      "total": "Total fertilizer",
+      "kgUnit": "kg",
+      "recommendedLine": "Recommended {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "You selected \"{soil}\". On {soilLower} soils, consider a soil test before changing the dose — the base calculation above stays the same."
+    },
+    "title": "Exact fertilizer dose, with the math shown.",
+    "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
+    "metaDescription": "Calculate exact urea, DAP and MOP doses for wheat, rice and maize. Enter area in acre, kanal, marla or hectare — see every calculation step.",
+    "methodFaq": [
+      {
+        "q": "Why is DAP calculated first?",
+        "a": "Phosphorus is immobile in soil, so the full P₂O₅ dose must come from DAP at sowing. DAP also contains 18% nitrogen, which counts toward the total nitrogen need — calculating DAP first lets us subtract that nitrogen before computing urea, so you never double-dose nitrogen."
+      },
+      {
+        "q": "How are kanal and marla converted?",
+        "a": "1 acre = 8 kanal = 160 marla, and 1 kanal = 20 marla. In metric: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. The calculator converts your area to hectares, applies the per-hectare dose, then scales back."
+      },
+      {
+        "q": "Why are some crops disabled?",
+        "a": "A crop is only selectable when its recommended NPK dose is verified against a published source. We would rather disable a crop than invent its figures — unverified crops are marked \"data in review\" until confirmed."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Switch to dark mode",
+    "themeLight": "Switch to light mode"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "With the standard agronomic formula: fertilizer (kg) = (nutrient needed × 100) ÷ nutrient % in the fertilizer. We apply it DAP-first — phosphorus from DAP, then the remaining nitrogen from urea (accounting for DAP's 18% nitrogen), then potassium from MOP — and show every step.",
+        "q": "How is the fertilizer dose calculated?"
+      },
+      {
+        "a": "Acre, kanal, marla and hectare. Conversions used: 1 acre = 8 kanal = 160 marla, 1 kanal = 20 marla, 1 hectare = 2.471 acres.",
+        "q": "Which land units are supported?"
+      },
+      {
+        "a": "Published provincial and research-institute recommendations (e.g. PAU package of practices), region-tagged. Every figure in the calculator carries its source citation, and crops without a verified source are marked 'data in review' rather than guessed.",
+        "q": "Where do the crop nutrient figures come from?"
+      },
+      {
+        "a": "No. It gives AI-assisted possibilities with uncertainty wording, but you should always confirm with your local agriculture officer before treating a crop — especially before spraying anything.",
+        "q": "Is the Plant Doctor a replacement for an agronomist?"
+      },
+      {
+        "a": "Yes — the calculator, libraries and guides are free. An account is only needed for features like saving diagnoses.",
+        "q": "Is Fertilizer Dose free to use?"
+      }
+    ],
+    "title": "Questions farmers ask us",
+    "metaTitle": "FAQ — Fertilizer Dose Questions Answered",
+    "metaDescription": "Answers about fertilizer dose calculation, NPK formulas, acre/kanal/marla units, data sources and the Plant Doctor."
+  },
+  "footer": {
+    "company": "Company",
+    "disclaimer": "Dose estimates follow published recommendations. Always confirm with your local agriculture officer and soil test before application.",
+    "library": "Library",
+    "links": {
+      "about": "About",
+      "blog": "Blog",
+      "calculator": "Fertilizer Dose Calculator",
+      "charts": "Dose Charts",
+      "contact": "Contact",
+      "crops": "Crop Library",
+      "faq": "FAQ",
+      "fertilizers": "Fertilizer Library",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "wheat": "Wheat Guide",
+      "plants": "Plant Library",
+      "vegetables": "Vegetable Library",
+      "plantingCalendar": "Planting Calendar",
+      "myGarden": "My Garden",
+      "profitCalculator": "Profit Calculator",
+      "compare": "Compare"
+    },
+    "rights": "All rights reserved.",
+    "tagline": "Exact fertilizer doses from real agronomic data — for wheat, rice, maize and more. Built for farmers across Pakistan & India.",
+    "tools": "Tools"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "From the blog",
+      "minRead": "min read",
+      "title": "Learn the why behind the dose"
+    },
+    "crops": {
+      "desc": "Recommended N–P₂O₅–K₂O per hectare from published sources. Crops marked 'in review' are never guessed — data lands only when verified.",
+      "eyebrow": "Crop library",
+      "inReview": "In review",
+      "openGuide": "Open crop guide",
+      "perHa": "kg/ha",
+      "reviewNote": "Recommendation being verified",
+      "title": "Doses for the crops you actually grow",
+      "verified": "Verified data"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Upload a clear leaf or plant photo — the AI reads visual symptoms.",
+          "t": "Photo-first diagnosis"
+        },
+        {
+          "d": "Every suggestion carries low / medium / high confidence wording. No false certainty.",
+          "t": "Honest uncertainty"
+        },
+        {
+          "d": "Causes, immediate actions and prevention — plus when to call your agri officer.",
+          "t": "Actionable next steps"
+        }
+      ],
+      "cta": "Open Plant Doctor",
+      "desc": "Upload a leaf photo, describe what you see, and get a structured assessment — possible issues, likely causes, what to do next, and how to prevent it.",
+      "dropSub": "JPG, PNG or WebP · max 5 MB",
+      "dropTitle": "Drop a leaf photo here",
+      "eyebrow": "AI Plant Doctor",
+      "serverNote": "Runs server-side via Gemini — your API key never touches the browser.",
+      "title": "Something wrong with your crop? Ask the Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Browse the full fertilizer library →",
+      "desc": "Label-accurate NPK compositions. These percentages are the entire basis of every dose calculation.",
+      "eyebrow": "Fertilizer library",
+      "thBest": "Best for",
+      "thName": "Fertilizer",
+      "title": "Know what's actually in the bag",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Calculate fertilizer dose",
+      "desc": "The right dose saves money, protects your soil, and lifts yield. It takes less than a minute.",
+      "title": "Stop guessing. Start calculating."
+    },
+    "hero": {
+      "ctaCalc": "Calculate my dose",
+      "ctaDoctor": "Diagnose a plant",
+      "stats": [
+        {
+          "s": "Every figure cited",
+          "t": "Sourced data"
+        },
+        {
+          "s": "Standard NPK method",
+          "t": "DAP-first"
+        },
+        {
+          "s": "Acre · Kanal · Marla · Ha",
+          "t": "4 units"
+        }
+      ],
+      "subtitle": "Fertilizer Dose turns published agronomic recommendations into precise per-acre, per-kanal and per-marla fertilizer doses — with real data, every calculation shown, and nothing invented.",
+      "tagline": "Fertilizer dose, done right",
+      "title": "Know exactly how much <em>fertilizer</em> your crop needs."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Enter crop + area in acre, kanal, marla or hectare — get exact urea, DAP and MOP quantities with every calculation step shown.",
+          "title": "Dose Calculator"
+        },
+        {
+          "desc": "Upload a leaf photo, describe the symptoms, and get an AI-assisted diagnosis with causes, actions and prevention steps.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Label-accurate NPK compositions, benefits, precautions and application guidance for every major fertilizer.",
+          "title": "Fertilizer Library"
+        },
+        {
+          "desc": "Season, soil, water, growth stages and common problems for wheat, rice, maize, cotton, sugarcane and potato.",
+          "title": "Crop Library"
+        },
+        {
+          "title": "Profit Calculator",
+          "desc": "Enter your own yield, price and cost assumptions — see net profit, break-even and ROI per acre and per hectare."
+        },
+        {
+          "title": "Compare",
+          "desc": "Side-by-side fertilizer nutrient costs from your own prices, and crop doses from verified data."
+        }
+      ],
+      "eyebrow": "Main tools",
+      "title": "Everything a grower needs, in one place"
+    },
+    "why": {
+      "eyebrow": "Why Fertilizer Dose",
+      "items": [
+        {
+          "d": "Every NPK value and crop dose is sourced and cited. No invented numbers, ever.",
+          "t": "Real figures only"
+        },
+        {
+          "d": "Each result explains the formula step by step — verify it with a pen if you like.",
+          "t": "Shows its working"
+        },
+        {
+          "d": "Acre, kanal, marla, hectare. Enter land the way you measure it.",
+          "t": "Speaks your units"
+        },
+        {
+          "d": "A full day/night theme that respects your system setting and your eyes.",
+          "t": "Light & dark"
+        }
+      ],
+      "regionCta": "Try the calculator",
+      "regionDesc": "Default recommendations follow Punjab (Pakistan) and North Indian agronomic guidance, with region tags on every figure. Units, terminology and crop calendars match how farming actually works here.",
+      "regionTitle": "Rooted in the region",
+      "title": "Built on proof, not promises"
+    },
+    "metaTitle": "NPK Fertilizer Dose Calculator — Per Acre, Kanal, Marla & Hectare",
+    "metaDescription": "Calculate exact urea, DAP & MOP doses for wheat, rice, maize and more. Free NPK fertilizer calculator with acre/kanal/marla/hectare support, crop guides and planting calendar.",
+    "grow": {
+      "eyebrow": "Grow",
+      "title": "Crops, plants & vegetables",
+      "desc": "One growing library: field crops with verified fertilizer doses, plus vegetables and plants with honest, review-gated data.",
+      "cards": [
+        {
+          "title": "Crops",
+          "desc": "Wheat, rice, maize, cotton and more — with verified NPK doses where published."
+        },
+        {
+          "title": "Vegetables",
+          "desc": "Tomato, onion, chili, okra and more. Data lands only after verification."
+        },
+        {
+          "title": "Plants",
+          "desc": "Flowering, indoor, outdoor and fruit plants for home gardens."
+        }
+      ],
+      "browse": "Browse"
+    },
+    "planting": {
+      "eyebrow": "Planting calendar",
+      "title": "What to grow this month?",
+      "desc": "A region-aware sowing calendar for your province — no one-size-fits-all guesses. Every window is sourced and verification-badged.",
+      "cta": "Open planting calendar"
+    }
+  },
+  "language": {
+    "choose": "Choose language",
+    "label": "Language"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Calculate Dose",
+    "calculator": "Dose Calculator",
+    "closeMenu": "Close menu",
+    "crops": "Crops",
+    "faq": "FAQ",
+    "fertilizers": "Fertilizers",
+    "home": "Home",
+    "mobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Plants",
+    "vegetables": "Vegetables",
+    "grow": "Grow",
+    "plantingCalendar": "Planting Calendar",
+    "myGarden": "My Garden",
+    "tools": "Tools",
+    "profitCalculator": "Profit Calculator",
+    "compare": "Compare"
+  },
+  "plantDoctor": {
+    "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
+    "eyebrow": "Plant Doctor",
+    "title": "Show us the leaf. We'll help read it.",
+    "metaTitle": "Plant Doctor — AI Crop Problem Diagnosis",
+    "metaDescription": "Upload a crop photo and describe symptoms for AI-assisted diagnosis with causes, actions and prevention steps."
+  },
+  "growing": {
+    "searchPlaceholder": "Search by name…",
+    "filterAll": "All",
+    "filterVerified": "Verified",
+    "filterInReview": "In review",
+    "verifiedBadge": "Verified data",
+    "inReviewBadge": "In review",
+    "verifiedDose": "Verified dose",
+    "doseInReview": "Dose in review",
+    "resultsCount": "{count} items",
+    "noResults": "No matches found",
+    "noResultsHint": "Try a different spelling or clear the search.",
+    "noData": "No verified data available yet.",
+    "noDataHint": "We publish agronomic figures only after verification against published sources — never guessed.",
+    "sections": {
+      "fertilizer": "Fertilizer recommendation",
+      "growingConditions": "Growing conditions",
+      "soil": "Soil",
+      "water": "Water",
+      "sunlight": "Sunlight",
+      "climate": "Climate",
+      "season": "Growing season",
+      "sowingWindow": "Sowing / planting window",
+      "harvestWindow": "Harvest window",
+      "regions": "Suitable regions",
+      "stages": "Growth stages & feeding",
+      "deficiencies": "Common nutrient deficiencies",
+      "problems": "Watch out for",
+      "references": "References",
+      "lastReviewed": "Last reviewed"
+    },
+    "calculateCta": "Calculate for my land",
+    "doctorCta": "Seeing symptoms? Try the Plant Doctor →",
+    "relatedFertilizers": "Related fertilizers",
+    "relatedItems": "Related",
+    "inReviewNotice": "The recommended dose for {name} is currently being verified against published sources. We publish it here only when confirmed — never guessed.",
+    "indexable": {
+      "cropsTitle": "Every crop, its needs, in one place.",
+      "plantsTitle": "Plants for every kind of garden.",
+      "vegetablesTitle": "Vegetables, from field to kitchen garden."
+    },
+    "subcategoryAll": "All types"
+  },
+  "calendar": {
+    "metaTitle": "Planting Calendar — What to Grow This Month",
+    "metaDescription": "Region-aware planting calendar: which crops, vegetables and plants to sow this month in your province. Verified windows only.",
+    "eyebrow": "Planting calendar",
+    "title": "What to grow this month",
+    "desc": "Pick your country and region, then browse the sowing windows we can stand behind. No guessed calendars — every window carries its source and verification status.",
+    "country": "Country",
+    "region": "Region / province",
+    "month": "Month",
+    "category": "Category",
+    "catAll": "All",
+    "catCrop": "Crops",
+    "catVegetable": "Vegetables",
+    "catPlant": "Plants",
+    "prevMonth": "Previous month",
+    "currentMonth": "Current month",
+    "nextMonth": "Next month",
+    "sowingWindow": "Sowing window",
+    "harvestWindow": "Harvest window",
+    "season": "Season",
+    "regionLabel": "Region",
+    "source": "Source",
+    "lastReviewed": "Last reviewed",
+    "inReview": "In review",
+    "verified": "Verified",
+    "emptyTitle": "No verified planting data here yet",
+    "emptyHint": "We have not verified sowing windows for this region and month yet. We would rather show nothing than a guessed calendar.",
+    "countryPages": {
+      "pakistanTitle": "Planting Calendar — Pakistan",
+      "pakistanDesc": "Sowing windows by province for Pakistan. Verified data only.",
+      "indiaTitle": "Planting Calendar — India",
+      "indiaDesc": "Sowing windows by state for India. Verified data only.",
+      "regionsTitle": "Regions",
+      "hasData": "Planting data available",
+      "noDataYet": "Data in verification",
+      "openCalendar": "Open planting calendar"
+    }
+  },
+  "garden": {
+    "metaTitle": "My Garden — Track Plots, Plantings & Fertilizer Plans",
+    "metaDescription": "Your personal garden dashboard: plots, plantings, growth stages, saved fertilizer calculations and reminders. Stored privately in your browser.",
+    "eyebrow": "My garden",
+    "title": "My Garden",
+    "desc": "Track your plots, what you planted, and your fertilizer plans — all in one place.",
+    "localNote": "Saved privately in this browser. Accounts with cloud sync are coming later.",
+    "loading": "Loading your garden…",
+    "newPlot": "Add plot",
+    "editPlot": "Edit plot",
+    "deletePlot": "Delete plot",
+    "confirmDeletePlot": "Delete this plot and all its plantings? This cannot be undone.",
+    "plotName": "Plot name",
+    "plotNamePh": "e.g. Front field",
+    "location": "Location",
+    "locationPh": "e.g. Village name (optional)",
+    "region": "Region (for sowing suggestions)",
+    "regionNone": "No region — skip sowing suggestions",
+    "area": "Area",
+    "soilType": "Soil type",
+    "soilUnknown": "Not specified",
+    "notes": "Notes",
+    "notesPh": "Anything worth remembering…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "noPlots": "No plots yet",
+    "noPlotsHint": "Add your first plot to start tracking plantings, stages and reminders.",
+    "overview": "Overview",
+    "plots": "Plots",
+    "activePlantings": "Active plantings",
+    "upcomingTasks": "Upcoming tasks",
+    "seasonalSuggestions": "Seasonal suggestions",
+    "savedCalculations": "Saved calculations",
+    "statPlots": "plots",
+    "statPlantings": "plantings",
+    "statTasks": "open tasks",
+    "addPlanting": "Add planting",
+    "plantingWhat": "Crop / plant / vegetable",
+    "plantedOn": "Planting date",
+    "stage": "Growth stage",
+    "stagePh": "e.g. Tillering (optional)",
+    "plantedDaysAgo": "planted {days} days ago",
+    "harvestWindow": "Harvest window",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Remove this planting? This cannot be undone.",
+    "markDone": "Mark done",
+    "reopen": "Reopen",
+    "addReminder": "Add reminder",
+    "reminderTitle": "Reminder",
+    "reminderTitlePh": "e.g. Apply second urea split",
+    "dueDate": "Due date",
+    "confirmDeleteReminder": "Delete this reminder?",
+    "noTasks": "No upcoming tasks. Add a reminder to stay on track.",
+    "noSuggestions": "No sowing suggestions right now. Set a region on your plots to get seasonal suggestions.",
+    "noCalculations": "No saved calculations yet. Run the dose calculator and save a result here.",
+    "viewInCalculator": "Open dose calculator",
+    "suggestionCta": "Sow {item} in {plot}",
+    "overdue": "Overdue",
+    "done": "Done",
+    "backToGarden": "Back to My Garden",
+    "saveCalculation": "Save to My Garden",
+    "savedToGarden": "Saved to My Garden",
+    "viewGarden": "View My Garden"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Profit Calculator — Farm Profit, Break-Even & ROI",
+      "metaDescription": "Estimate crop profit from your own yield, price and cost assumptions. Transparent formulas, break-even yield and price, per-acre and per-hectare views.",
+      "eyebrow": "Profit calculator",
+      "title": "Will this crop make money?",
+      "desc": "Enter your own assumptions — expected yield, market price and every input cost. The math is fully transparent, and nothing is pre-filled with guessed figures.",
+      "assumptionNote": "Every figure below comes from numbers you enter. We add no market prices, yields or costs of our own.",
+      "crop": "Crop (optional)",
+      "noCrop": "Select a crop…",
+      "area": "Area",
+      "yieldPerUnit": "Expected yield per acre",
+      "yieldUnit": "Yield unit",
+      "yieldUnitPh": "e.g. maunds, kg, tons",
+      "pricePerYieldUnit": "Expected price per yield unit",
+      "currency": "Currency label",
+      "currencyPh": "e.g. Rs, PKR, ₹",
+      "costsTitle": "Input costs (your figures)",
+      "costSeed": "Seed",
+      "costFertilizer": "Fertilizer",
+      "costPesticide": "Pesticide / weedicide",
+      "costLabor": "Labor",
+      "costIrrigation": "Irrigation / water",
+      "costRent": "Land rent",
+      "costOther": "Other",
+      "calculate": "Calculate profit",
+      "reset": "Reset",
+      "print": "Print",
+      "saveScenario": "Save scenario",
+      "scenarioName": "Scenario name",
+      "scenarioNamePh": "e.g. Wheat 2026 — 5 acres",
+      "scenarios": "Saved scenarios",
+      "noScenarios": "No saved scenarios yet.",
+      "deleteScenario": "Delete",
+      "results": "Results",
+      "revenue": "Total revenue",
+      "totalCost": "Total cost",
+      "netProfit": "Net profit",
+      "profitPerAcre": "Profit per acre",
+      "profitPerHa": "Profit per hectare",
+      "costPerYieldUnit": "Cost per yield unit",
+      "breakEvenYield": "Break-even yield",
+      "breakEvenPrice": "Break-even price",
+      "roi": "Return on investment",
+      "formulasTitle": "How it is calculated",
+      "perAcre": "per acre",
+      "perHectare": "per hectare",
+      "loss": "loss",
+      "openCropGuide": "Open crop guide",
+      "openCalculator": "Calculate fertilizer cost"
+    },
+    "compare": {
+      "metaTitle": "Compare Fertilizers & Crops — Nutrient Cost Comparison",
+      "metaDescription": "Compare fertilizers by price per kg of nutrient using your own market prices, and compare crops by verified dose and growing data.",
+      "eyebrow": "Compare",
+      "title": "Compare, side by side",
+      "desc": "Fertilizer nutrient costs from prices you enter — we never guess market prices. Crop data comes only from verified figures.",
+      "tabFertilizers": "Fertilizers",
+      "tabCrops": "Crops",
+      "selectFertilizers": "Select fertilizers to compare",
+      "pricePerBag": "Price per bag",
+      "bagSize": "Bag size (kg)",
+      "pricePerKgN": "per kg N",
+      "pricePerKgP": "per kg P₂O₅",
+      "pricePerKgK": "per kg K₂O",
+      "cheapest": "cheapest",
+      "na": "—",
+      "userPriceNote": "Prices are entered by you — enter your local market price per bag for a true comparison.",
+      "viewFertilizer": "View guide",
+      "selectCrops": "Select crops to compare (up to 3)",
+      "dose": "NPK dose / ha",
+      "season": "Season",
+      "water": "Water",
+      "soil": "Soil",
+      "inReview": "In review",
+      "noDoseData": "Dose under review — not guessed",
+      "viewGuide": "Open crop guide"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — Fertilizer Science & Crop Nutrition Guides",
+    "metaDescription": "Practical guides on fertilizer doses, NPK calculations, crop nutrition and soil health for Pakistani and Indian farmers."
+  },
+  "fertilizers": {
+    "metaTitle": "Fertilizer Library — NPK Composition, Uses & Dose Guidance",
+    "metaDescription": "Label-accurate NPK compositions, benefits, precautions and application guidance for urea, DAP, MOP, SSP, SOP and more."
+  },
+  "chart": {
+    "metaTitle": "Fertilizer Dose Chart — Quick NPK Reference",
+    "metaDescription": "Quick-reference fertilizer dose chart: NPK recommendations per crop with urea, DAP and MOP quantities."
+  }
+}

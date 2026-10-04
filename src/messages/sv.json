@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "sv",
+    "name": "Swedish",
+    "nativeName": "Svenska",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

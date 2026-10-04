@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "ko",
+    "name": "Korean",
+    "nativeName": "한국어",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

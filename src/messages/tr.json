@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "tr",
+    "name": "Turkish",
+    "nativeName": "Türkçe",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

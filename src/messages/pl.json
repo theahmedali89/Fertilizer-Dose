@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "pl",
+    "name": "Polish",
+    "nativeName": "Polski",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

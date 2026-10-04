@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "it",
+    "name": "Italian",
+    "nativeName": "Italiano",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

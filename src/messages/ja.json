@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "ja",
+    "name": "Japanese",
+    "nativeName": "日本語",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

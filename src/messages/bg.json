@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "bg",
+    "name": "Bulgarian",
+    "nativeName": "Български",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "ms",
+    "name": "Malay",
+    "nativeName": "Bahasa Melayu",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

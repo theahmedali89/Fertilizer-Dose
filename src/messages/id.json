@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "id",
+    "name": "Indonesian",
+    "nativeName": "Bahasa Indonesia",
+    "dir": "ltr",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}

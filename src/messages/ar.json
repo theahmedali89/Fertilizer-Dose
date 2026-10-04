@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "locale": "ar",
+    "name": "Arabic",
+    "nativeName": "العربية",
+    "dir": "rtl",
+    "status": "scaffold — falls back to English until professionally translated"
+  }
+}
