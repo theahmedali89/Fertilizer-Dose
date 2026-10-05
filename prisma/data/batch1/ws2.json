@@ -16,7 +16,7 @@
       "soilContext": null,
       "sourceKey": "jar-soybean-2021",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "basal via 12:32:16",
@@ -34,7 +34,8 @@
       "soilContext": null,
       "sourceKey": "icar-soybean-2022",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Region imprecise: source is the ICAR-IISR Indore RDF for Madhya Pradesh, but regionSlug is null (should be in-mp) — kept under_review"
     },
     {
       "applicationMethod": null,
@@ -52,7 +53,8 @@
       "soilContext": null,
       "sourceKey": "plantarchives-soybean-2025",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Region imprecise: source is the VNMKV Parbhani RDF for Maharashtra, but regionSlug is null (should be in-mh) — kept under_review"
     },
     {
       "applicationMethod": "28 kg urea + 200 kg SSP per acre",
@@ -70,7 +72,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -88,7 +90,7 @@
       "soilContext": null,
       "sourceKey": "narc-groundnut-2019",
       "variety": "NARC-2019",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -106,7 +108,7 @@
       "soilContext": null,
       "sourceKey": "jau-groundnut-reco",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -124,7 +126,7 @@
       "soilContext": null,
       "sourceKey": "jau-groundnut-reco",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -142,7 +144,7 @@
       "soilContext": null,
       "sourceKey": "angrau-groundnut-2022",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -160,7 +162,7 @@
       "soilContext": "medium fertility",
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -178,7 +180,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -196,7 +198,7 @@
       "soilContext": null,
       "sourceKey": "ccri-cotton-2023-24",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "120 kg urea (55 kg N)/acre",
@@ -214,7 +216,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": "Bt hybrids",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "3.25 bags urea + 2 bags DAP + 2 bags SOP per acre",
@@ -232,7 +234,7 @@
       "soilContext": "moderately fertile",
       "sourceKey": "punjabext-sugarcane-2025",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -250,7 +252,8 @@
       "soilContext": "poor fertility",
       "sourceKey": "sugarcane-perfertility",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
     },
     {
       "applicationMethod": null,
@@ -268,7 +271,8 @@
       "soilContext": "average fertility",
       "sourceKey": "sugarcane-perfertility",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
     },
     {
       "applicationMethod": null,
@@ -286,7 +290,8 @@
       "soilContext": "rich fertility",
       "sourceKey": "sugarcane-perfertility",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
     },
     {
       "applicationMethod": "130 kg urea (60 kg N)/acre",
@@ -304,7 +309,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "195 kg urea (90 kg N)/acre",
@@ -322,7 +327,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -340,7 +345,7 @@
       "soilContext": null,
       "sourceKey": "icar-sugarcane-rdf",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -358,7 +363,7 @@
       "soilContext": null,
       "sourceKey": "bmc-potato-2024",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "165 kg urea + 155 kg SSP + 40 kg MOP per acre + 20 t FYM/acre",
@@ -376,7 +381,7 @@
       "soilContext": null,
       "sourceKey": "pau-veg-2021",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "110 kg neem-coated urea + 55 kg DAP per acre",
@@ -394,7 +399,7 @@
       "soilContext": "medium fertility",
       "sourceKey": "pau-rabi-2025-26",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -412,7 +417,7 @@
       "soilContext": null,
       "sourceKey": "soilenv-wheat",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "90 kg neem urea + 27 kg DAP or 75 kg SSP + 20 kg MOP per acre",
@@ -430,7 +435,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -448,7 +453,7 @@
       "soilContext": null,
       "sourceKey": "sfri-rice",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": "110 kg urea + 55 kg DAP + 20 kg MOP per acre",
@@ -466,7 +471,7 @@
       "soilContext": null,
       "sourceKey": "pau-kharif-2026",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     }
   ],
   "refused": [

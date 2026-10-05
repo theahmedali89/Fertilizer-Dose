@@ -60,7 +60,7 @@
       "soilContext": null,
       "sourceKey": "brri-rice-doses",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -78,7 +78,7 @@
       "soilContext": null,
       "sourceKey": "brri-rice-doses",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -96,7 +96,7 @@
       "soilContext": null,
       "sourceKey": "barc-frg-2018-rd",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -114,7 +114,7 @@
       "soilContext": null,
       "sourceKey": "brri-rice-doses",
       "variety": "BRRI dhan29 (product-rate variant, haor)",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -132,7 +132,7 @@
       "soilContext": null,
       "sourceKey": "bari-wheat-2011",
       "variety": "BARI Gom-24",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -150,7 +150,7 @@
       "soilContext": null,
       "sourceKey": "barc-frg-2018-rd",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -168,7 +168,7 @@
       "soilContext": null,
       "sourceKey": "maize-frg-2012",
       "variety": "sole hybrid maize",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -186,7 +186,7 @@
       "soilContext": null,
       "sourceKey": "potato-frg-2012",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -204,7 +204,7 @@
       "soilContext": null,
       "sourceKey": "potato-bari-tcrc",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -222,7 +222,7 @@
       "soilContext": "Gypsum & ZnSO4 only where soils are S/Zn deficient",
       "sourceKey": "bjri-jute",
       "variety": "all white & tossa varieties",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -240,7 +240,7 @@
       "soilContext": null,
       "sourceKey": "bjri-jute",
       "variety": "tossa",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -258,7 +258,7 @@
       "soilContext": null,
       "sourceKey": "bjri-jute",
       "variety": "deshi (white)",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -276,7 +276,7 @@
       "soilContext": null,
       "sourceKey": "mustard-frg-2018",
       "variety": "BARI Sarisha-14",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -294,7 +294,7 @@
       "soilContext": null,
       "sourceKey": "mustard-bina-2008",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -312,7 +312,7 @@
       "soilContext": null,
       "sourceKey": "chickpea-bjar",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -330,7 +330,7 @@
       "soilContext": null,
       "sourceKey": "brinjal-bari-2024",
       "variety": "BARI Bt Begun-2",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -348,7 +348,7 @@
       "soilContext": null,
       "sourceKey": "tomato-frg-2012",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -366,7 +366,7 @@
       "soilContext": "Soil-test-based (BARI Joydebpur)",
       "sourceKey": "onion-bari-stb",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -384,7 +384,7 @@
       "soilContext": null,
       "sourceKey": "chili-bari-arr-2023-24",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "applicationMethod": null,
@@ -402,7 +402,7 @@
       "soilContext": "Soil-test-based (BARI Joydebpur)",
       "sourceKey": "chili-onion-stb",
       "variety": null,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "okra",
@@ -420,7 +420,7 @@
       "irrigationContext": null,
       "notes": "BARC FRG 2005 dose (via BJAR)",
       "sourceKey": "barc-frg-2005",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "okra",
@@ -438,7 +438,7 @@
       "irrigationContext": null,
       "notes": "BJAR 2022 improved pattern (Atia, Tangail trial) — kept separate from FRG 2005, not averaged",
       "sourceKey": "bjar-2022-atia",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "cabbage",
@@ -456,7 +456,7 @@
       "irrigationContext": null,
       "notes": "BJAR 2022 improved pattern (Atia, Tangail trial)",
       "sourceKey": "bjar-2022-atia",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     }
   ],
   "refused": [
