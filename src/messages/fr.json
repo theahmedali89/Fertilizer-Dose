@@ -514,7 +514,9 @@
       "perHectare": "par hectare",
       "loss": "perte",
       "openCropGuide": "Ouvrir le guide de la culture",
-      "openCalculator": "Calculer le coût des engrais"
+      "openCalculator": "Calculer le coût des engrais",
+      "figuresDisclaimerTitle": "Avertissement sur les chiffres",
+      "figuresDisclaimer": "Tous les prix, rendements et coûts utilisés ici sont vos propres hypothèses — nous ne fournissons aucune donnée de marché. Les résultats ne sont que des estimations de planification ; vérifiez les tarifs actuels du marché local avant de prendre des décisions."
     },
     "compare": {
       "metaTitle": "Comparer engrais et cultures — Comparaison du coût des nutriments",
@@ -541,7 +543,9 @@
       "soil": "Sol",
       "inReview": "En cours de vérification",
       "noDoseData": "Dose en cours de vérification — pas devinée",
-      "viewGuide": "Ouvrir le guide de la culture"
+      "viewGuide": "Ouvrir le guide de la culture",
+      "priceDisclaimerTitle": "Avertissement sur les prix",
+      "priceDisclaimer": "Les prix des engrais changent souvent et varient selon la région, le revendeur et la taille du sac. Nous ne publions ni ne vérifions les prix du marché — chaque prix sur cette page est saisi par vous. Vérifiez toujours les tarifs actuels auprès de votre revendeur local avant d’acheter."
     }
   },
   "blog": {

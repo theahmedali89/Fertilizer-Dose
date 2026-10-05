@@ -514,7 +514,9 @@
       "perHectare": "hectare당",
       "loss": "손실",
       "openCropGuide": "작물 가이드 열기",
-      "openCalculator": "비료 비용 계산"
+      "openCalculator": "비료 비용 계산",
+      "figuresDisclaimerTitle": "수치 고지 사항",
+      "figuresDisclaimer": "여기에 사용된 모든 가격, 수확량, 비용은 귀하의 가정이며 시장 데이터를 제공하지 않습니다. 결과는 계획용 추정치일 뿐이므로, 결정 전에 현재 현지 시장 가격으로 확인하세요."
     },
     "compare": {
       "metaTitle": "비료·작물 비교 — 양분 비용 비교",
@@ -541,7 +543,9 @@
       "soil": "토양",
       "inReview": "검토 중",
       "noDoseData": "비료량 검토 중 — 추측하지 않음",
-      "viewGuide": "작물 가이드 열기"
+      "viewGuide": "작물 가이드 열기",
+      "priceDisclaimerTitle": "가격 고지 사항",
+      "priceDisclaimer": "비료 가격은 자주 변동하며 지역, 판매점, 포대 크기에 따라 다릅니다. 저희는 시장 가격을 게시하거나 검증하지 않습니다 — 이 페이지의 모든 가격은 귀하가 입력한 것입니다. 구매 전 반드시 현지 판매점에서 현재 가격을 확인하세요."
     }
   },
   "blog": {

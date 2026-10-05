@@ -514,7 +514,9 @@
       "perHectare": "pro Hektar",
       "loss": "Verlust",
       "openCropGuide": "Kulturanleitung öffnen",
-      "openCalculator": "Düngerkosten berechnen"
+      "openCalculator": "Düngerkosten berechnen",
+      "figuresDisclaimerTitle": "Hinweis zu den Zahlen",
+      "figuresDisclaimer": "Alle hier verwendeten Preise, Erträge und Kosten sind Ihre eigenen Annahmen — wir liefern keine Marktdaten. Die Ergebnisse sind nur Planungsschätzungen; prüfen Sie vor Entscheidungen die aktuellen lokalen Marktpreise."
     },
     "compare": {
       "metaTitle": "Dünger & Kulturen vergleichen — Nährstoffkostenvergleich",
@@ -541,7 +543,9 @@
       "soil": "Boden",
       "inReview": "In Prüfung",
       "noDoseData": "Dosis in Prüfung – nicht geschätzt",
-      "viewGuide": "Kulturanleitung öffnen"
+      "viewGuide": "Kulturanleitung öffnen",
+      "priceDisclaimerTitle": "Preishinweis",
+      "priceDisclaimer": "Düngemittelpreise ändern sich häufig und variieren je nach Region, Händler und Sackgröße. Wir veröffentlichen oder prüfen keine Marktpreise — jeder Preis auf dieser Seite wird von Ihnen eingegeben. Bestätigen Sie vor dem Kauf immer die aktuellen Preise bei Ihrem Händler vor Ort."
     }
   },
   "blog": {

@@ -153,6 +153,14 @@ export function CompareTool() {
           {fertRows.rows.length > 0 && (
             <Card>
               <CardBody className="overflow-x-auto">
+                <div className="mb-4 rounded-xl border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 px-4 py-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 mb-1">
+                    {t("priceDisclaimerTitle")}
+                  </p>
+                  <p className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                    {t("priceDisclaimer")}
+                  </p>
+                </div>
                 <table className="w-full text-sm min-w-[560px]">
                   <thead>
                     <tr className="text-start text-xs uppercase tracking-wider text-ink-faint">

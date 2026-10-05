@@ -514,7 +514,9 @@
       "perHectare": "per hectare",
       "loss": "rugi",
       "openCropGuide": "Buka panduan tanaman",
-      "openCalculator": "Kira kos baja"
+      "openCalculator": "Kira kos baja",
+      "figuresDisclaimerTitle": "Penafian angka",
+      "figuresDisclaimer": "Semua harga, hasil dan kos yang digunakan di sini adalah andaian anda sendiri — kami tidak menyediakan data pasaran. Keputusan hanyalah anggaran perancangan; sahkan dengan kadar pasaran tempatan terkini sebelum membuat keputusan."
     },
     "compare": {
       "metaTitle": "Banding Baja & Tanaman — Perbandingan Kos Nutrien",
@@ -541,7 +543,9 @@
       "soil": "Tanah",
       "inReview": "Dalam semakan",
       "noDoseData": "Dos dalam semakan — tidak diagak",
-      "viewGuide": "Buka panduan tanaman"
+      "viewGuide": "Buka panduan tanaman",
+      "priceDisclaimerTitle": "Penafian harga",
+      "priceDisclaimer": "Harga baja sering berubah dan berbeza mengikut wilayah, penjual dan saiz guni. Kami tidak menerbitkan atau mengesahkan harga pasaran — setiap harga di halaman ini anda masukkan sendiri. Sentiasa sahkan kadar terkini dengan penjual tempatan anda sebelum membeli."
     }
   },
   "blog": {

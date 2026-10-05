@@ -514,7 +514,9 @@
       "perHectare": "per ettaro",
       "loss": "perdita",
       "openCropGuide": "Apri la guida alla coltura",
-      "openCalculator": "Calcola il costo del fertilizzante"
+      "openCalculator": "Calcola il costo del fertilizzante",
+      "figuresDisclaimerTitle": "Avviso sui dati",
+      "figuresDisclaimer": "Tutti i prezzi, le rese e i costi utilizzati qui sono tue supposizioni: non forniamo dati di mercato. I risultati sono solo stime di pianificazione; verifica le tariffe attuali del mercato locale prima di prendere decisioni."
     },
     "compare": {
       "metaTitle": "Confronta fertilizzanti e colture — Confronto del costo dei nutrienti",
@@ -541,7 +543,9 @@
       "soil": "Suolo",
       "inReview": "In revisione",
       "noDoseData": "Dose in revisione — non stimata",
-      "viewGuide": "Apri la guida alla coltura"
+      "viewGuide": "Apri la guida alla coltura",
+      "priceDisclaimerTitle": "Avviso sui prezzi",
+      "priceDisclaimer": "I prezzi dei fertilizzanti cambiano spesso e variano in base a regione, rivenditore e dimensione del sacco. Non pubblichiamo né verifichiamo i prezzi di mercato: ogni prezzo in questa pagina è inserito da te. Verifica sempre le tariffe attuali con il tuo rivenditore locale prima di acquistare."
     }
   },
   "blog": {

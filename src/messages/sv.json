@@ -514,7 +514,9 @@
       "perHectare": "per hektar",
       "loss": "förlust",
       "openCropGuide": "Öppna grödguide",
-      "openCalculator": "Beräkna gödselkostnad"
+      "openCalculator": "Beräkna gödselkostnad",
+      "figuresDisclaimerTitle": "Friskrivning för siffror",
+      "figuresDisclaimer": "Alla priser, skördar och kostnader som används här är dina egna antaganden — vi tillhandahåller inga marknadsdata. Resultaten är endast planeringsestimat; verifiera med aktuella lokala marknadspriser innan du fattar beslut."
     },
     "compare": {
       "metaTitle": "Jämför gödsel & grödor — Näringskostnadsjämförelse",
@@ -541,7 +543,9 @@
       "soil": "Jord",
       "inReview": "Under granskning",
       "noDoseData": "Dos under granskning – inte gissad",
-      "viewGuide": "Öppna grödguide"
+      "viewGuide": "Öppna grödguide",
+      "priceDisclaimerTitle": "Prisfriskrivning",
+      "priceDisclaimer": "Gödselpriser ändras ofta och varierar beroende på region, återförsäljare och säckstorlek. Vi publicerar eller verifierar inga marknadspriser — varje pris på den här sidan anges av dig. Bekräfta alltid aktuella priser hos din lokala återförsäljare innan du köper."
     }
   },
   "blog": {

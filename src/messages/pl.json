@@ -514,7 +514,9 @@
       "perHectare": "na hektar",
       "loss": "strata",
       "openCropGuide": "Otwórz przewodnik uprawy",
-      "openCalculator": "Oblicz koszt nawozu"
+      "openCalculator": "Oblicz koszt nawozu",
+      "figuresDisclaimerTitle": "Zastrzeżenie dotyczące danych",
+      "figuresDisclaimer": "Wszystkie ceny, plony i koszty użyte tutaj to Twoje własne założenia — nie dostarczamy danych rynkowych. Wyniki są jedynie szacunkami planistycznymi; przed podjęciem decyzji zweryfikuj je z aktualnymi lokalnymi cenami rynkowymi."
     },
     "compare": {
       "metaTitle": "Porównaj nawozy i uprawy — porównanie kosztów składników",
@@ -541,7 +543,9 @@
       "soil": "Gleba",
       "inReview": "W weryfikacji",
       "noDoseData": "Dawka w weryfikacji — niezgadywana",
-      "viewGuide": "Otwórz przewodnik uprawy"
+      "viewGuide": "Otwórz przewodnik uprawy",
+      "priceDisclaimerTitle": "Zastrzeżenie cenowe",
+      "priceDisclaimer": "Ceny nawozów często się zmieniają i różnią w zależności od regionu, sprzedawcy i wielkości worka. Nie publikujemy ani nie weryfikujemy cen rynkowych — każda cena na tej stronie jest wpisana przez Ciebie. Przed zakupem zawsze potwierdź aktualne ceny u lokalnego sprzedawcy."
     }
   },
   "blog": {

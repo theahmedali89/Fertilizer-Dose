@@ -514,7 +514,9 @@
       "perHectare": "hectare当たり",
       "loss": "損失",
       "openCropGuide": "作物ガイドを開く",
-      "openCalculator": "肥料コストを計算"
+      "openCalculator": "肥料コストを計算",
+      "figuresDisclaimerTitle": "数値に関する免責事項",
+      "figuresDisclaimer": "ここで使用される価格・収量・コストはすべてあなた自身の想定であり、市場データは提供していません。結果は計画用の推定値にすぎません。意思決定の前に現在の地元市場価格で確認してください。"
     },
     "compare": {
       "metaTitle": "肥料・作物の比較 — 養分コスト比較",
@@ -541,7 +543,9 @@
       "soil": "土壌",
       "inReview": "審査中",
       "noDoseData": "施肥量は審査中 — 推測しません",
-      "viewGuide": "作物ガイドを開く"
+      "viewGuide": "作物ガイドを開く",
+      "priceDisclaimerTitle": "価格に関する免責事項",
+      "priceDisclaimer": "肥料価格は頻繁に変動し、地域・販売店・袋サイズによって異なります。当サイトでは市場価格を掲載・検証していません — このページの価格はすべてあなたが入力したものです。購入前に必ず地元の販売店で現在の価格を確認してください。"
     }
   },
   "blog": {

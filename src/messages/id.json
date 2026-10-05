@@ -514,7 +514,9 @@
       "perHectare": "per hectare",
       "loss": "rugi",
       "openCropGuide": "Buka panduan tanaman",
-      "openCalculator": "Hitung biaya pupuk"
+      "openCalculator": "Hitung biaya pupuk",
+      "figuresDisclaimerTitle": "Penafian angka",
+      "figuresDisclaimer": "Semua harga, hasil, dan biaya yang digunakan di sini adalah asumsi Anda sendiri — kami tidak menyediakan data pasar. Hasilnya hanya estimasi perencanaan; verifikasi dengan tarif pasar lokal terkini sebelum mengambil keputusan."
     },
     "compare": {
       "metaTitle": "Bandingkan Pupuk & Tanaman — Perbandingan Biaya Hara",
@@ -541,7 +543,9 @@
       "soil": "Tanah",
       "inReview": "Sedang ditinjau",
       "noDoseData": "Dosis sedang ditinjau — tidak ditebak",
-      "viewGuide": "Buka panduan tanaman"
+      "viewGuide": "Buka panduan tanaman",
+      "priceDisclaimerTitle": "Penafian harga",
+      "priceDisclaimer": "Harga pupuk sering berubah dan bervariasi menurut wilayah, penjual, dan ukuran karung. Kami tidak menerbitkan atau memverifikasi harga pasar — setiap harga di halaman ini Anda masukkan sendiri. Selalu konfirmasi tarif terkini ke penjual lokal Anda sebelum membeli."
     }
   },
   "blog": {

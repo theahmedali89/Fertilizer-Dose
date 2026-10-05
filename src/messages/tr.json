@@ -514,7 +514,9 @@
       "perHectare": "hektar başına",
       "loss": "zarar",
       "openCropGuide": "Ürün kılavuzunu aç",
-      "openCalculator": "Gübre maliyetini hesapla"
+      "openCalculator": "Gübre maliyetini hesapla",
+      "figuresDisclaimerTitle": "Veri sorumluluk reddi",
+      "figuresDisclaimer": "Burada kullanılan tüm fiyatlar, verimler ve maliyetler kendi varsayımlarınızdır — pazar verisi sağlamıyoruz. Sonuçlar yalnızca planlama tahminidir; karar vermeden önce güncel yerel pazar fiyatlarıyla doğrulayın."
     },
     "compare": {
       "metaTitle": "Gübre ve Ürün Karşılaştırma — Besin Maliyeti Karşılaştırması",
@@ -541,7 +543,9 @@
       "soil": "Toprak",
       "inReview": "İnceleniyor",
       "noDoseData": "Doz inceleniyor — tahmin edilmedi",
-      "viewGuide": "Ürün kılavuzunu aç"
+      "viewGuide": "Ürün kılavuzunu aç",
+      "priceDisclaimerTitle": "Fiyat sorumluluk reddi",
+      "priceDisclaimer": "Gübre fiyatları sık değişir ve bölgeye, satıcıya ve torba boyutuna göre farklılık gösterir. Pazar fiyatlarını yayınlamıyor veya doğrulamıyoruz — bu sayfadaki her fiyat sizin tarafınızdan girilmiştir. Satın almadan önce güncel fiyatları yerel satıcınızla mutlaka teyit edin."
     }
   },
   "blog": {

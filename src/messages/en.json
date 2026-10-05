@@ -507,7 +507,9 @@
       "perHectare": "per hectare",
       "loss": "loss",
       "openCropGuide": "Open crop guide",
-      "openCalculator": "Calculate fertilizer cost"
+      "openCalculator": "Calculate fertilizer cost",
+      "figuresDisclaimerTitle": "Figures disclaimer",
+      "figuresDisclaimer": "All prices, yields and costs used here are your own assumptions — we provide no market data. Results are planning estimates only; verify with current local market rates before making decisions."
     },
     "compare": {
       "metaTitle": "Compare Fertilizers & Crops — Nutrient Cost Comparison",
@@ -534,7 +536,9 @@
       "soil": "Soil",
       "inReview": "In review",
       "noDoseData": "Dose under review — not guessed",
-      "viewGuide": "Open crop guide"
+      "viewGuide": "Open crop guide",
+      "priceDisclaimerTitle": "Price disclaimer",
+      "priceDisclaimer": "Fertilizer prices change often and vary by region, dealer and bag size. We do not publish or verify market prices — every price on this page is entered by you. Always confirm current rates with your local dealer before buying."
     }
   },
   "blog": {

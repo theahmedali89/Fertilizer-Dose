@@ -288,6 +288,14 @@ export function ProfitCalculator() {
                   <li>ROI = profit ÷ total cost × 100</li>
                 </ul>
                 <p className="mt-3 text-xs text-ink-faint leading-relaxed">{t("assumptionNote")}</p>
+                <div className="mt-3 rounded-xl border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 px-4 py-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 mb-1">
+                    {t("figuresDisclaimerTitle")}
+                  </p>
+                  <p className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                    {t("figuresDisclaimer")}
+                  </p>
+                </div>
               </CardBody>
             </Card>
 
