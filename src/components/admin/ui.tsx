@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 
 /* ── Page header ── */
 export function AdminHeader({ title, actionHref, actionLabel }: { title: string; actionHref?: string; actionLabel?: string }) {
@@ -152,17 +152,27 @@ export function AdminForm({
 }) {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const router = useRouter();
 
   return (
     <form
       action={async (fd) => {
         setError("");
         setBusy(true);
-        const res = await action(fd);
-        setBusy(false);
-        if (!res.ok) {
-          setError(res.error ?? "Save failed.");
+        try {
+          const res = await action(fd);
+          if (!res.ok) {
+            setError(res.error ?? "Save failed.");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          } else {
+            router.push(backHref);
+            router.refresh();
+          }
+        } catch {
+          setError("Something went wrong. Please try again.");
           window.scrollTo({ top: 0, behavior: "smooth" });
+        } finally {
+          setBusy(false);
         }
       }}
       className="space-y-5 max-w-3xl"

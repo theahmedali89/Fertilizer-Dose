@@ -18,6 +18,12 @@ function revalidateAdmin() {
 export type ActionResult = { ok: true } | { ok: false; error: string };
 const fail = (error: string): ActionResult => ({ ok: false, error });
 
+/** Human-readable zod error naming the offending fields. */
+function invalidFields(error: z.ZodError): string {
+  const fields = [...new Set(error.issues.map((i) => String(i.path[0] ?? "field")))];
+  return `Please check these fields: ${fields.join(", ")}.`;
+}
+
 const str = z.string().trim();
 const optStr = z.string().trim().optional().transform((v) => (v ? v : null));
 const num = z.coerce.number();
@@ -85,7 +91,7 @@ const growingSchema = z.object({
 export async function upsertGrowingItem(id: string | null, formData: FormData): Promise<ActionResult> {
   await guard();
   const parsed = growingSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return fail("Please check all fields.");
+  if (!parsed.success) return fail(invalidFields(parsed.error));
   const { stages, ...d } = parsed.data;
   try {
     if (id) {
@@ -123,7 +129,7 @@ const postSchema = z.object({
 export async function upsertPost(id: string | null, formData: FormData): Promise<ActionResult> {
   await guard();
   const parsed = postSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return fail("Please check all fields.");
+  if (!parsed.success) return fail(invalidFields(parsed.error));
   const d = parsed.data;
   const data = { ...d, publishedAt: d.published ? new Date() : null };
   try {
@@ -153,7 +159,7 @@ const faqSchema = z.object({
 export async function upsertFaq(id: string | null, formData: FormData): Promise<ActionResult> {
   await guard();
   const parsed = faqSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return fail("Please check all fields.");
+  if (!parsed.success) return fail(invalidFields(parsed.error));
   const d = parsed.data;
   if (id) await db.faq.update({ where: { id }, data: d });
   else await db.faq.create({ data: d });
@@ -179,7 +185,7 @@ const regionSchema = z.object({
 export async function upsertRegion(id: string | null, formData: FormData): Promise<ActionResult> {
   await guard();
   const parsed = regionSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return fail("Please check all fields.");
+  if (!parsed.success) return fail(invalidFields(parsed.error));
   try {
     if (id) await db.region.update({ where: { id }, data: parsed.data });
     else await db.region.create({ data: parsed.data });
@@ -214,7 +220,7 @@ const windowSchema = z.object({
 export async function upsertWindow(id: string | null, formData: FormData): Promise<ActionResult> {
   await guard();
   const parsed = windowSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return fail("Please check all fields.");
+  if (!parsed.success) return fail(invalidFields(parsed.error));
   const { sourceOrganization, sourceTitle, sourceCountry, sourceRegion, ...d } = parsed.data;
   const win = id
     ? await db.plantingWindow.update({ where: { id }, data: d })
@@ -247,7 +253,7 @@ const sourceSchema = z.object({
 export async function upsertSource(id: string | null, formData: FormData): Promise<ActionResult> {
   await guard();
   const parsed = sourceSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return fail("Please check all fields.");
+  if (!parsed.success) return fail(invalidFields(parsed.error));
   if (id) await db.source.update({ where: { id }, data: parsed.data });
   else await db.source.create({ data: parsed.data });
   revalidateAdmin();
