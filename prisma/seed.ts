@@ -14,6 +14,7 @@ import { POSTS } from "../src/lib/blog";
 import { seedBatch1 } from "./seed-batch1";
 import { seedBatch2 } from "./seed-batch2";
 import { seedBatch3 } from "./seed-batch3";
+import { seedBatch4 } from "./seed-batch4";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
 if (!connectionString) {
@@ -199,6 +200,9 @@ async function main() {
 
   // ── Batch 3 agricultural data (CN/TR/MY/JP/KR) — idempotent, approved 2026-10-05 ──
   await seedBatch3(db);
+
+  // ── Batch 4 agricultural data (ES/FR/DE/IT/PL/RU) — idempotent, approved 2026-10-05 ──
+  await seedBatch4(db);
 
   console.log("seed complete");
 }
