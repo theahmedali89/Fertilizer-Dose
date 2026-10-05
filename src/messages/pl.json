@@ -4,6 +4,576 @@
     "name": "Polish",
     "nativeName": "Polski",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Wybierz uprawę, podaj powierzchnię w używanej przez siebie jednostce — akr, kanal, marla lub hektar — i otrzymaj dokładne ilości mocznika, DAP i MOP oraz harmonogram nawożenia według faz wzrostu.",
+    "empty": {
+      "desc": "Wybierz uprawę, podaj powierzchnię i naciśnij Oblicz. Każdy krok obliczeń jest pokazany.",
+      "title": "Twoja dawka pojawi się tutaj"
+    },
+    "eyebrow": "Kalkulator dawek",
+    "form": {
+      "area": "Powierzchnia",
+      "areaError": "Podaj prawidłową powierzchnię większą od zera.",
+      "areaLargeError": "Ta powierzchnia wygląda na niezwykle dużą — sprawdź wartość i jednostkę.",
+      "areaPlaceholder": "np. 5",
+      "crop": "Uprawa",
+      "cropHint": "Do wyboru są tylko uprawy ze zweryfikowanymi zaleceniami.",
+      "inReview": "dane w weryfikacji",
+      "soil": "Rodzaj gleby (opcjonalnie)",
+      "soilHint": "Rodzaj gleby nie zmienia obliczeń — zmienia zalecenia. Gleby piaszczyste szybciej tracą azot; gleby zasolone wymagają ostrożności przy MOP.",
+      "submit": "Oblicz dawkę",
+      "unit": "Jednostka"
+    },
+    "method": {
+      "desc": "Żadnej czarnej skrzynki. To ta sama metoda „najpierw DAP”, której uczą na kursach agronomii.",
+      "eyebrow": "Metoda",
+      "title": "Metoda prostymi słowami"
+    },
+    "results": {
+      "bags": "× worki 50 kg",
+      "disclaimer": "Szacunki opierają się na opublikowanych zaleceniach. Przed zastosowaniem potwierdź je u lokalnego doradcy rolnego.",
+      "howTitle": "Jak to obliczono",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Harmonogram nawożenia",
+      "soilDefault": "Pokazano dawkę standardową. Dostosuj ją po badaniu gleby.",
+      "soilNoteLabel": "Uwaga o glebie:",
+      "sourceLabel": "Źródło danych:",
+      "total": "Nawóz łącznie",
+      "kgUnit": "kg",
+      "recommendedLine": "Zalecane {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Wybrano „{soil}”. Na glebach {soilLower} rozważ badanie gleby przed zmianą dawki — powyższe obliczenie bazowe pozostaje bez zmian."
+    },
+    "title": "Dokładna dawka nawozu, z pokazanymi obliczeniami.",
+    "metaTitle": "Kalkulator dawki nawozu — mocznik, DAP i MOP na akr/kanal/marla",
+    "metaDescription": "Oblicz dokładne dawki mocznika, DAP i MOP dla pszenicy, ryżu i kukurydzy. Podaj powierzchnię w akrach, kanalach, marlach lub hektarach — zobacz każdy krok obliczeń.",
+    "methodFaq": [
+      {
+        "q": "Dlaczego najpierw oblicza się DAP?",
+        "a": "Fosfor jest nieruchomy w glebie, więc pełna dawka P₂O₅ musi pochodzić z DAP podczas siewu. DAP zawiera też 18% azotu, który wlicza się do całkowitego zapotrzebowania na azot — obliczając najpierw DAP, możemy odjąć ten azot przed obliczeniem mocznika, dzięki czemu nigdy nie podasz podwójnej dawki azotu."
+      },
+      {
+        "q": "Jak przelicza się kanale i marle?",
+        "a": "1 akr = 8 kanali = 160 marli, a 1 kanal = 20 marli. Metrycznie: 1 akr = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Kalkulator przelicza powierzchnię na hektary, stosuje dawkę na hektar, a następnie skaluje z powrotem."
+      },
+      {
+        "q": "Dlaczego niektóre uprawy są wyłączone?",
+        "a": "Uprawę można wybrać tylko wtedy, gdy jej zalecana dawka NPK jest zweryfikowana względem opublikowanego źródła. Wolimy wyłączyć uprawę, niż wymyślać jej dane — niezweryfikowane uprawy są oznaczone jako „dane w weryfikacji” do czasu potwierdzenia."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Przełącz na tryb ciemny",
+    "themeLight": "Przełącz na tryb jasny"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Według standardowego wzoru agronomicznego: nawóz (kg) = (potrzebny składnik × 100) ÷ zawartość % składnika w nawozie. Stosujemy go w kolejności „najpierw DAP” — fosfor z DAP, potem pozostały azot z mocznika (z uwzględnieniem 18% azotu w DAP), potem potas z MOP — i pokazujemy każdy krok.",
+        "q": "Jak obliczana jest dawka nawozu?"
+      },
+      {
+        "a": "Akr, kanal, marla i hektar. Stosowane przeliczenia: 1 akr = 8 kanali = 160 marli, 1 kanal = 20 marli, 1 hektar = 2,471 akra.",
+        "q": "Które jednostki powierzchni są obsługiwane?"
+      },
+      {
+        "a": "Z opublikowanych zaleceń prowincji i instytutów badawczych (np. programów uprawowych PAU), oznaczonych regionem. Każda wartość w kalkulatorze ma podane źródło, a uprawy bez zweryfikowanego źródła są oznaczone jako „dane w weryfikacji”, a nie zgadywane.",
+        "q": "Skąd pochodzą dane o składnikach pokarmowych upraw?"
+      },
+      {
+        "a": "Nie. Podaje wspomagane przez SI możliwości z zastrzeżeniem niepewności, ale zawsze potwierdź je u lokalnego doradcy rolnego przed potraktowaniem uprawy — zwłaszcza przed jakimkolwiek opryskiem.",
+        "q": "Czy Plant Doctor zastępuje agronoma?"
+      },
+      {
+        "a": "Tak — kalkulator, biblioteki i przewodniki są bezpłatne. Konto jest potrzebne tylko do funkcji takich jak zapisywanie diagnoz.",
+        "q": "Czy korzystanie z Fertilizer Dose jest bezpłatne?"
+      }
+    ],
+    "title": "Pytania, które zadają nam rolnicy",
+    "metaTitle": "FAQ — odpowiedzi na pytania o dawki nawozów",
+    "metaDescription": "Odpowiedzi o obliczaniu dawek nawozów, wzorach NPK, jednostkach akr/kanal/marla, źródłach danych i Plant Doctor."
+  },
+  "footer": {
+    "company": "Firma",
+    "disclaimer": "Szacunkowe dawki opierają się na opublikowanych zaleceniach. Przed zastosowaniem zawsze potwierdź je u lokalnego doradcy rolnego i na podstawie badania gleby.",
+    "library": "Biblioteka",
+    "links": {
+      "about": "O nas",
+      "blog": "Blog",
+      "calculator": "Kalkulator dawki nawozu",
+      "charts": "Tabele dawek",
+      "contact": "Kontakt",
+      "crops": "Biblioteka upraw",
+      "faq": "FAQ",
+      "fertilizers": "Biblioteka nawozów",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Polityka prywatności",
+      "terms": "Warunki korzystania",
+      "wheat": "Przewodnik: pszenica",
+      "plants": "Biblioteka roślin",
+      "vegetables": "Biblioteka warzyw",
+      "plantingCalendar": "Kalendarz siewu",
+      "myGarden": "Mój ogród",
+      "profitCalculator": "Kalkulator zysku",
+      "compare": "Porównaj"
+    },
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "tagline": "Dokładne dawki nawozów z prawdziwych danych agronomicznych — dla pszenicy, ryżu, kukurydzy i innych. Zbudowane dla rolników w Pakistanie i Indiach.",
+    "tools": "Narzędzia"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Z bloga",
+      "minRead": "min czytania",
+      "title": "Zrozum, dlaczego taka dawka"
+    },
+    "crops": {
+      "desc": "Zalecane N–P₂O₅–K₂O na hektar z opublikowanych źródeł. Uprawy oznaczone jako „w weryfikacji” nigdy nie są zgadywane — dane pojawiają się dopiero po weryfikacji.",
+      "eyebrow": "Biblioteka upraw",
+      "inReview": "W weryfikacji",
+      "openGuide": "Otwórz przewodnik uprawy",
+      "perHa": "kg/ha",
+      "reviewNote": "Zalecenie w trakcie weryfikacji",
+      "title": "Dawki dla upraw, które naprawdę uprawiasz",
+      "verified": "Zweryfikowane dane"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Prześlij wyraźne zdjęcie liścia lub rośliny — SI odczytuje objawy wizualne.",
+          "t": "Diagnoza na podstawie zdjęcia"
+        },
+        {
+          "d": "Każda sugestia ma oznaczenie niskiej / średniej / wysokiej pewności. Żadnej fałszywej pewności.",
+          "t": "Uczciwa niepewność"
+        },
+        {
+          "d": "Przyczyny, natychmiastowe działania i zapobieganie — oraz kiedy zadzwonić do doradcy rolnego.",
+          "t": "Konkretne kolejne kroki"
+        }
+      ],
+      "cta": "Otwórz Plant Doctor",
+      "desc": "Prześlij zdjęcie liścia, opisz, co widzisz, i otrzymaj uporządkowaną ocenę — możliwe problemy, prawdopodobne przyczyny, co dalej i jak zapobiegać.",
+      "dropSub": "JPG, PNG lub WebP · maks. 5 MB",
+      "dropTitle": "Upuść tu zdjęcie liścia",
+      "eyebrow": "Plant Doctor ze SI",
+      "serverNote": "Działa po stronie serwera przez Gemini — Twój klucz API nigdy nie trafia do przeglądarki.",
+      "title": "Coś nie tak z Twoją uprawą? Zapytaj Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Przeglądaj całą bibliotekę nawozów →",
+      "desc": "Zgodne z etykietą składy NPK. Te procenty to cała podstawa każdego obliczenia dawki.",
+      "eyebrow": "Biblioteka nawozów",
+      "thBest": "Najlepszy do",
+      "thName": "Nawóz",
+      "title": "Wiedz, co naprawdę jest w worku",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Oblicz dawkę nawozu",
+      "desc": "Właściwa dawka oszczędza pieniądze, chroni glebę i zwiększa plon. Zajmuje to mniej niż minutę.",
+      "title": "Przestań zgadywać. Zacznij liczyć."
+    },
+    "hero": {
+      "ctaCalc": "Oblicz moją dawkę",
+      "ctaDoctor": "Zdiagnozuj roślinę",
+      "stats": [
+        {
+          "s": "Każda wartość udokumentowana",
+          "t": "Udokumentowane dane"
+        },
+        {
+          "s": "Standardowa metoda NPK",
+          "t": "Najpierw DAP"
+        },
+        {
+          "s": "Akr · Kanal · Marla · ha",
+          "t": "4 jednostki"
+        }
+      ],
+      "subtitle": "Fertilizer Dose zamienia opublikowane zalecenia agronomiczne w precyzyjne dawki nawozów na akr, kanal i marlę — z prawdziwymi danymi, każdym obliczeniem pokazanym i niczym niewymyślonym.",
+      "tagline": "Dawka nawozu jak należy",
+      "title": "Wiedz dokładnie, ile <em>nawozu</em> potrzebuje Twoja uprawa."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Podaj uprawę + powierzchnię w akrach, kanalach, marlach lub hektarach — otrzymaj dokładne ilości mocznika, DAP i MOP z pokazanym każdym krokiem obliczeń.",
+          "title": "Kalkulator dawek"
+        },
+        {
+          "desc": "Prześlij zdjęcie liścia, opisz objawy i otrzymaj diagnozę wspomaganą SI z przyczynami, działaniami i zapobieganiem.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Zgodne z etykietą składy NPK, korzyści, środki ostrożności i wskazówki stosowania dla każdego ważnego nawozu.",
+          "title": "Biblioteka nawozów"
+        },
+        {
+          "desc": "Sezon, gleba, woda, fazy wzrostu i typowe problemy pszenicy, ryżu, kukurydzy, bawełny, trzciny cukrowej i ziemniaka.",
+          "title": "Biblioteka upraw"
+        },
+        {
+          "title": "Kalkulator zysku",
+          "desc": "Wpisz własne założenia dotyczące plonu, ceny i kosztów — zobacz zysk netto, próg rentowności i ROI na akr i na hektar."
+        },
+        {
+          "title": "Porównaj",
+          "desc": "Koszty składników nawozów obok siebie z Twoich własnych cen oraz dawki upraw ze zweryfikowanych danych."
+        }
+      ],
+      "eyebrow": "Główne narzędzia",
+      "title": "Wszystko, czego potrzebuje plantator, w jednym miejscu"
+    },
+    "why": {
+      "eyebrow": "Dlaczego Fertilizer Dose",
+      "items": [
+        {
+          "d": "Każda wartość NPK i dawka uprawy ma źródło i cytat. Nigdy żadnych wymyślonych liczb.",
+          "t": "Tylko prawdziwe liczby"
+        },
+        {
+          "d": "Każdy wynik wyjaśnia wzór krok po kroku — sprawdź go długopisem, jeśli chcesz.",
+          "t": "Pokazuje obliczenia"
+        },
+        {
+          "d": "Akr, kanal, marla, hektar. Podawaj powierzchnię tak, jak ją mierzysz.",
+          "t": "Mówi Twoimi jednostkami"
+        },
+        {
+          "d": "Pełny motyw dnia/nocy, który szanuje ustawienia systemowe i Twoje oczy.",
+          "t": "Jasny i ciemny"
+        }
+      ],
+      "regionCta": "Wypróbuj kalkulator",
+      "regionDesc": "Domyślne zalecenia opierają się na wytycznych agronomicznych dla Pendżabu (Pakistan) i północnych Indii, z oznaczeniem regionu przy każdej wartości. Jednostki, terminologia i kalendarze upraw odpowiadają temu, jak rolnictwo naprawdę tu działa.",
+      "regionTitle": "Zakorenione w regionie",
+      "title": "Zbudowane na dowodach, nie obietnicach"
+    },
+    "metaTitle": "Kalkulator dawki nawozu NPK — na akr, kanal, marlę i hektar",
+    "metaDescription": "Oblicz dokładne dawki mocznika, DAP i MOP dla pszenicy, ryżu, kukurydzy i innych. Darmowy kalkulator nawozów NPK z obsługą akrów/kanali/marli/hektarów, przewodnikami upraw i kalendarzem siewu.",
+    "grow": {
+      "eyebrow": "Uprawa",
+      "title": "Uprawy, rośliny i warzywa",
+      "desc": "Jedna biblioteka uprawowa: uprawy polowe ze zweryfikowanymi dawkami nawozów oraz warzywa i rośliny z uczciwymi danymi poddanymi weryfikacji.",
+      "cards": [
+        {
+          "title": "Uprawy",
+          "desc": "Pszenica, ryż, kukurydza, bawełna i inne — ze zweryfikowanymi dawkami NPK tam, gdzie opublikowano."
+        },
+        {
+          "title": "Warzywa",
+          "desc": "Pomidor, cebula, chili, okra i inne. Dane pojawiają się dopiero po weryfikacji."
+        },
+        {
+          "title": "Rośliny",
+          "desc": "Rośliny kwitnące, domowe, ogrodowe i owocowe do przydomowych ogrodów."
+        }
+      ],
+      "browse": "Przeglądaj"
+    },
+    "planting": {
+      "eyebrow": "Kalendarz siewu",
+      "title": "Co siać w tym miesiącu?",
+      "desc": "Kalendarz siewu dopasowany do regionu Twojego województwa — żadnych zgadywanek dla wszystkich. Każde okno ma źródło i status weryfikacji.",
+      "cta": "Otwórz kalendarz siewu"
+    }
+  },
+  "language": {
+    "choose": "Wybierz język",
+    "label": "Język"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Oblicz dawkę",
+    "calculator": "Kalkulator dawek",
+    "closeMenu": "Zamknij menu",
+    "crops": "Uprawy",
+    "faq": "FAQ",
+    "fertilizers": "Nawozy",
+    "home": "Start",
+    "mobileNav": "Nawigacja mobilna",
+    "openMenu": "Otwórz menu",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Rośliny",
+    "vegetables": "Warzywa",
+    "grow": "Uprawa",
+    "plantingCalendar": "Kalendarz siewu",
+    "myGarden": "Mój ogród",
+    "tools": "Narzędzia",
+    "profitCalculator": "Kalkulator zysku",
+    "compare": "Porównaj",
+    "login": "Zaloguj się",
+    "account": "Konto",
+    "admin": "Admin",
+    "logout": "Wyloguj się"
+  },
+  "plantDoctor": {
+    "desc": "Prześlij wyraźne zdjęcie, opisz objawy i otrzymaj uporządkowaną ocenę — możliwe problemy z uczciwym poziomem pewności, prawdopodobne przyczyny i co dalej.",
+    "eyebrow": "Plant Doctor",
+    "title": "Pokaż nam liść. Pomożemy go odczytać.",
+    "metaTitle": "Plant Doctor — diagnoza problemów upraw ze SI",
+    "metaDescription": "Prześlij zdjęcie uprawy i opisz objawy, aby otrzymać diagnozę wspomaganą SI z przyczynami, działaniami i zapobieganiem."
+  },
+  "growing": {
+    "searchPlaceholder": "Szukaj po nazwie…",
+    "filterAll": "Wszystkie",
+    "filterVerified": "Zweryfikowane",
+    "filterInReview": "W weryfikacji",
+    "verifiedBadge": "Zweryfikowane dane",
+    "inReviewBadge": "W weryfikacji",
+    "verifiedDose": "Zweryfikowana dawka",
+    "doseInReview": "Dawka w weryfikacji",
+    "resultsCount": "{count} pozycji",
+    "noResults": "Nie znaleziono wyników",
+    "noResultsHint": "Spróbuj innej pisowni lub wyczyść wyszukiwanie.",
+    "noData": "Brak zweryfikowanych danych.",
+    "noDataHint": "Publikujemy dane agronomiczne dopiero po weryfikacji względem opublikowanych źródeł — nigdy nie zgadujemy.",
+    "sections": {
+      "fertilizer": "Zalecenie nawożenia",
+      "growingConditions": "Warunki uprawy",
+      "soil": "Gleba",
+      "water": "Woda",
+      "sunlight": "Nasłonecznienie",
+      "climate": "Klimat",
+      "season": "Sezon wegetacyjny",
+      "sowingWindow": "Okno siewu / sadzenia",
+      "harvestWindow": "Okno zbioru",
+      "regions": "Odpowiednie regiony",
+      "stages": "Fazy wzrostu i nawożenie",
+      "deficiencies": "Typowe niedobory składników",
+      "problems": "Uważaj na",
+      "references": "Bibliografia",
+      "lastReviewed": "Ostatnia weryfikacja"
+    },
+    "calculateCta": "Oblicz dla mojej powierzchni",
+    "doctorCta": "Widzisz objawy? Wypróbuj Plant Doctor →",
+    "relatedFertilizers": "Powiązane nawozy",
+    "relatedItems": "Powiązane",
+    "inReviewNotice": "Zalecana dawka dla {name} jest obecnie weryfikowana względem opublikowanych źródeł. Opublikujemy ją tutaj dopiero po potwierdzeniu — nigdy nie zgadujemy.",
+    "indexable": {
+      "cropsTitle": "Każda uprawa i jej potrzeby w jednym miejscu.",
+      "plantsTitle": "Rośliny do każdego rodzaju ogrodu.",
+      "vegetablesTitle": "Warzywa, od pola po ogródek kuchenny."
+    },
+    "subcategoryAll": "Wszystkie typy"
+  },
+  "calendar": {
+    "metaTitle": "Kalendarz siewu — co siać w tym miesiącu",
+    "metaDescription": "Kalendarz siewu dopasowany do regionu: które uprawy, warzywa i rośliny siać w tym miesiącu w Twoim województwie. Tylko zweryfikowane okna.",
+    "eyebrow": "Kalendarz siewu",
+    "title": "Co siać w tym miesiącu",
+    "desc": "Wybierz kraj i region, a następnie przeglądaj okna siewu, za które możemy ręczyć. Żadnych zgadywanych kalendarzy — każde okno ma podane źródło i status weryfikacji.",
+    "country": "Kraj",
+    "region": "Region / województwo",
+    "month": "Miesiąc",
+    "category": "Kategoria",
+    "catAll": "Wszystkie",
+    "catCrop": "Uprawy",
+    "catVegetable": "Warzywa",
+    "catPlant": "Rośliny",
+    "prevMonth": "Poprzedni miesiąc",
+    "currentMonth": "Bieżący miesiąc",
+    "nextMonth": "Następny miesiąc",
+    "sowingWindow": "Okno siewu",
+    "harvestWindow": "Okno zbioru",
+    "season": "Sezon",
+    "regionLabel": "Region",
+    "source": "Źródło",
+    "lastReviewed": "Ostatnia weryfikacja",
+    "inReview": "W weryfikacji",
+    "verified": "Zweryfikowane",
+    "emptyTitle": "Brak zweryfikowanych danych siewu",
+    "emptyHint": "Nie zweryfikowaliśmy jeszcze okien siewu dla tego regionu i miesiąca. Wolimy nic nie pokazywać niż zgadywany kalendarz.",
+    "countryPages": {
+      "pakistanTitle": "Kalendarz siewu — Pakistan",
+      "pakistanDesc": "Okna siewu według prowincji dla Pakistanu. Tylko zweryfikowane dane.",
+      "indiaTitle": "Kalendarz siewu — Indie",
+      "indiaDesc": "Okna siewu według stanów dla Indii. Tylko zweryfikowane dane.",
+      "regionsTitle": "Regiony",
+      "hasData": "Dane siewu dostępne",
+      "noDataYet": "Dane w weryfikacji",
+      "openCalendar": "Otwórz kalendarz siewu"
+    }
+  },
+  "garden": {
+    "metaTitle": "Mój ogród — działki, nasadzenia i plany nawożenia",
+    "metaDescription": "Twój osobisty panel ogrodowy: działki, nasadzenia, fazy wzrostu, zapisane obliczenia nawozów i przypomnienia. Przechowywane prywatnie w Twojej przeglądarce.",
+    "eyebrow": "Mój ogród",
+    "title": "Mój ogród",
+    "desc": "Śledź swoje działki, co posadziłeś i swoje plany nawożenia — wszystko w jednym miejscu.",
+    "localNote": "Zapisane w tej przeglądarce. Zaloguj się, aby synchronizować ogród między urządzeniami.",
+    "loading": "Ładowanie ogrodu…",
+    "newPlot": "Dodaj działkę",
+    "editPlot": "Edytuj działkę",
+    "deletePlot": "Usuń działkę",
+    "confirmDeletePlot": "Usunąć tę działkę i wszystkie jej nasadzenia? Tego nie można cofnąć.",
+    "plotName": "Nazwa działki",
+    "plotNamePh": "np. Przednie pole",
+    "location": "Lokalizacja",
+    "locationPh": "np. nazwa wsi (opcjonalnie)",
+    "region": "Region (do sugestii siewu)",
+    "regionNone": "Bez regionu — pomiń sugestie siewu",
+    "area": "Powierzchnia",
+    "soilType": "Rodzaj gleby",
+    "soilUnknown": "Nie podano",
+    "notes": "Notatki",
+    "notesPh": "Wszystko warte zapamiętania…",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "noPlots": "Brak działek",
+    "noPlotsHint": "Dodaj pierwszą działkę, aby śledzić nasadzenia, fazy i przypomnienia.",
+    "overview": "Przegląd",
+    "plots": "Działki",
+    "activePlantings": "Aktywne nasadzenia",
+    "upcomingTasks": "Nadchodzące zadania",
+    "seasonalSuggestions": "Sugestie sezonowe",
+    "savedCalculations": "Zapisane obliczenia",
+    "statPlots": "działek",
+    "statPlantings": "nasadzeń",
+    "statTasks": "otwartych zadań",
+    "addPlanting": "Dodaj nasadzenie",
+    "plantingWhat": "Uprawa / roślina / warzywo",
+    "plantedOn": "Data sadzenia",
+    "stage": "Faza wzrostu",
+    "stagePh": "np. krzewienie (opcjonalnie)",
+    "plantedDaysAgo": "posadzono {days} dni temu",
+    "harvestWindow": "Okno zbioru",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Usunąć to nasadzenie? Tego nie można cofnąć.",
+    "markDone": "Oznacz jako wykonane",
+    "reopen": "Otwórz ponownie",
+    "addReminder": "Dodaj przypomnienie",
+    "reminderTitle": "Przypomnienie",
+    "reminderTitlePh": "np. Zastosuj drugą dawkę mocznika",
+    "dueDate": "Termin",
+    "confirmDeleteReminder": "Usunąć to przypomnienie?",
+    "noTasks": "Brak nadchodzących zadań. Dodaj przypomnienie, aby trzymać się planu.",
+    "noSuggestions": "Brak sugestii siewu. Ustaw region dla działek, aby otrzymywać sugestie sezonowe.",
+    "noCalculations": "Brak zapisanych obliczeń. Uruchom kalkulator dawek i zapisz tu wynik.",
+    "viewInCalculator": "Otwórz kalkulator dawek",
+    "suggestionCta": "Zasiej {item} na działce {plot}",
+    "overdue": "Zaległe",
+    "done": "Wykonane",
+    "backToGarden": "Wróć do Mojego ogrodu",
+    "saveCalculation": "Zapisz w Moim ogrodzie",
+    "savedToGarden": "Zapisano w Moim ogrodzie",
+    "viewGarden": "Zobacz Mój ogród"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Kalkulator zysku — zysk z uprawy, próg rentowności i ROI",
+      "metaDescription": "Oszacuj zysk z uprawy na podstawie własnych założeń dotyczących plonu, ceny i kosztów. Przejrzyste wzory, próg rentowności plonu i ceny, widoki na akr i na hektar.",
+      "eyebrow": "Kalkulator zysku",
+      "title": "Czy ta uprawa będzie zarabiać?",
+      "desc": "Wpisz własne założenia — oczekiwany plon, cenę rynkową i wszystkie koszty. Obliczenia są w pełni przejrzyste i nic nie jest wstępnie wypełnione zgadywanymi liczbami.",
+      "assumptionNote": "Każda liczba poniżej pochodzi z liczb, które wpisujesz. Nie dodajemy własnych cen rynkowych, plonów ani kosztów.",
+      "crop": "Uprawa (opcjonalnie)",
+      "noCrop": "Wybierz uprawę…",
+      "area": "Powierzchnia",
+      "yieldPerUnit": "Oczekiwany plon z akra",
+      "yieldUnit": "Jednostka plonu",
+      "yieldUnitPh": "np. maundy, kg, tony",
+      "pricePerYieldUnit": "Oczekiwana cena za jednostkę plonu",
+      "currency": "Oznaczenie waluty",
+      "currencyPh": "np. Rs, PKR, ₹",
+      "costsTitle": "Koszty (Twoje dane)",
+      "costSeed": "Nasiona",
+      "costFertilizer": "Nawóz",
+      "costPesticide": "Pestycyd / herbicyd",
+      "costLabor": "Praca",
+      "costIrrigation": "Nawadnianie / woda",
+      "costRent": "Dzierżawa",
+      "costOther": "Inne",
+      "calculate": "Oblicz zysk",
+      "reset": "Resetuj",
+      "print": "Drukuj",
+      "saveScenario": "Zapisz scenariusz",
+      "scenarioName": "Nazwa scenariusza",
+      "scenarioNamePh": "np. Pszenica 2026 — 5 akrów",
+      "scenarios": "Zapisane scenariusze",
+      "noScenarios": "Brak zapisanych scenariuszy.",
+      "deleteScenario": "Usuń",
+      "results": "Wyniki",
+      "revenue": "Przychód całkowity",
+      "totalCost": "Koszt całkowity",
+      "netProfit": "Zysk netto",
+      "profitPerAcre": "Zysk na akr",
+      "profitPerHa": "Zysk na hektar",
+      "costPerYieldUnit": "Koszt na jednostkę plonu",
+      "breakEvenYield": "Próg rentowności plonu",
+      "breakEvenPrice": "Próg rentowności ceny",
+      "roi": "Zwrot z inwestycji",
+      "formulasTitle": "Jak to jest liczone",
+      "perAcre": "na akr",
+      "perHectare": "na hektar",
+      "loss": "strata",
+      "openCropGuide": "Otwórz przewodnik uprawy",
+      "openCalculator": "Oblicz koszt nawozu"
+    },
+    "compare": {
+      "metaTitle": "Porównaj nawozy i uprawy — porównanie kosztów składników",
+      "metaDescription": "Porównaj nawozy według ceny za kg składnika na podstawie własnych cen rynkowych, a uprawy według zweryfikowanej dawki i danych uprawowych.",
+      "eyebrow": "Porównaj",
+      "title": "Porównaj obok siebie",
+      "desc": "Koszty składników nawozów z cen, które podajesz — nigdy nie zgadujemy cen rynkowych. Dane o uprawach pochodzą wyłącznie ze zweryfikowanych danych.",
+      "tabFertilizers": "Nawozy",
+      "tabCrops": "Uprawy",
+      "selectFertilizers": "Wybierz nawozy do porównania",
+      "pricePerBag": "Cena za worek",
+      "bagSize": "Wielkość worka (kg)",
+      "pricePerKgN": "za kg N",
+      "pricePerKgP": "za kg P₂O₅",
+      "pricePerKgK": "za kg K₂O",
+      "cheapest": "najtańszy",
+      "na": "—",
+      "userPriceNote": "Ceny wpisujesz Ty — podaj lokalną cenę rynkową za worek, aby porównanie było miarodajne.",
+      "viewFertilizer": "Zobacz przewodnik",
+      "selectCrops": "Wybierz uprawy do porównania (maks. 3)",
+      "dose": "Dawka NPK / ha",
+      "season": "Sezon",
+      "water": "Woda",
+      "soil": "Gleba",
+      "inReview": "W weryfikacji",
+      "noDoseData": "Dawka w weryfikacji — niezgadywana",
+      "viewGuide": "Otwórz przewodnik uprawy"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — nauka o nawożeniu i przewodniki żywienia roślin",
+    "metaDescription": "Praktyczne przewodniki o dawkach nawozów, obliczeniach NPK, żywieniu roślin i zdrowiu gleby dla rolników z Pakistanu i Indii."
+  },
+  "fertilizers": {
+    "metaTitle": "Biblioteka nawozów — skład NPK, zastosowanie i dawkowanie",
+    "metaDescription": "Zgodne z etykietą składy NPK, korzyści, środki ostrożności i wskazówki stosowania mocznika, DAP, MOP, SSP, SOP i innych."
+  },
+  "chart": {
+    "metaTitle": "Tabela dawek nawozów — skrócona ściągawka NPK",
+    "metaDescription": "Skrócona ściągawka dawek nawozów: zalecenia NPK dla upraw z ilościami mocznika, DAP i MOP."
+  },
+  "auth": {
+    "loginTitle": "Zaloguj się",
+    "loginDesc": "Uzyskaj dostęp do swojego ogrodu, zapisanych elementów i narzędzi administratora.",
+    "signupTitle": "Utwórz konto",
+    "signupDesc": "Zapisz swój ogród w chmurze i synchronizuj między urządzeniami.",
+    "name": "Imię i nazwisko",
+    "email": "E-mail",
+    "password": "Hasło",
+    "loginCta": "Zaloguj się",
+    "signupCta": "Utwórz konto",
+    "noAccount": "Nie masz jeszcze konta?",
+    "haveAccount": "Masz już konto?",
+    "invalid": "Nieprawidłowy e-mail lub hasło.",
+    "error": "Coś poszło nie tak. Spróbuj ponownie.",
+    "accountTitle": "Moje konto",
+    "role": "Rola",
+    "signOut": "Wyloguj się",
+    "adminLink": "Otwórz panel administratora",
+    "gardenNote": "Twój ogród synchronizuje się teraz z Twoim kontem, gdy jesteś zalogowany."
   }
 }

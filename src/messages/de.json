@@ -4,6 +4,576 @@
     "name": "German",
     "nativeName": "Deutsch",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Wählen Sie Ihre Kultur, geben Sie Ihre Fläche in der Einheit ein, die Sie verwenden – Acre, Kanal, Marla oder Hektar – und erhalten Sie genaue Urea-, DAP- und MOP-Mengen plus einen phasenweisen Ausbringungsplan.",
+    "empty": {
+      "desc": "Wählen Sie eine Kultur, geben Sie Ihre Fläche ein und klicken Sie auf Berechnen. Jeder Rechenschritt wird angezeigt.",
+      "title": "Ihre Dosis erscheint hier"
+    },
+    "eyebrow": "Dosisrechner",
+    "form": {
+      "area": "Fläche",
+      "areaError": "Bitte geben Sie eine gültige Fläche größer als null ein.",
+      "areaLargeError": "Diese Fläche erscheint ungewöhnlich groß – bitte prüfen Sie Wert und Einheit.",
+      "areaPlaceholder": "z. B. 5",
+      "crop": "Kultur",
+      "cropHint": "Nur Kulturen mit verifizierten Empfehlungen sind auswählbar.",
+      "inReview": "Daten in Prüfung",
+      "soil": "Bodenart (optional)",
+      "soilHint": "Die Bodenart ändert nicht die Berechnung – sie ändert die Beratung. Sandige Böden verlieren Stickstoff schneller; salzhaltige Böden erfordern Vorsicht bei MOP.",
+      "submit": "Dosis berechnen",
+      "unit": "Einheit"
+    },
+    "method": {
+      "desc": "Keine Blackbox. Dies ist dasselbe DAP-zuerst-Verfahren, das in Agronomiekursen gelehrt wird.",
+      "eyebrow": "Methode",
+      "title": "Die Methode, in einfachen Worten"
+    },
+    "results": {
+      "bags": "× 50-kg-Säcke",
+      "disclaimer": "Schätzungen folgen veröffentlichten Empfehlungen. Bestätigen Sie die Werte vor der Anwendung mit Ihrem örtlichen Landwirtschaftsberater.",
+      "howTitle": "So wurde dies berechnet",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Ausbringungsplan",
+      "soilDefault": "Standarddosis angezeigt. Passen Sie sie nach einer Bodenuntersuchung an.",
+      "soilNoteLabel": "Bodenhinweis:",
+      "sourceLabel": "Datenquelle:",
+      "total": "Gesamtdünger",
+      "kgUnit": "kg",
+      "recommendedLine": "Empfohlen {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Sie haben „{soil}“ gewählt. Auf {soilLower}-Böden sollten Sie vor einer Änderung der Dosis eine Bodenuntersuchung in Betracht ziehen – die obige Grundberechnung bleibt gleich."
+    },
+    "title": "Exakte Düngerdosis, mit offengelegter Berechnung.",
+    "metaTitle": "Düngerdosis-Rechner — Urea, DAP & MOP pro Acre/Kanal/Marla",
+    "metaDescription": "Berechnen Sie exakte Urea-, DAP- und MOP-Dosen für Weizen, Reis und Mais. Geben Sie die Fläche in Acre, Kanal, Marla oder Hektar ein – sehen Sie jeden Rechenschritt.",
+    "methodFaq": [
+      {
+        "q": "Warum wird DAP zuerst berechnet?",
+        "a": "Phosphor ist im Boden unbeweglich, daher muss die volle P₂O₅-Dosis aus DAP bei der Aussaat kommen. DAP enthält außerdem 18 % Stickstoff, der auf den Gesamtstickstoffbedarf angerechnet wird – wird DAP zuerst berechnet, können wir diesen Stickstoff abziehen, bevor wir Urea berechnen, sodass Sie Stickstoff niemals doppelt dosieren."
+      },
+      {
+        "q": "Wie werden Kanal und Marla umgerechnet?",
+        "a": "1 Acre = 8 Kanal = 160 Marla, und 1 Kanal = 20 Marla. Metrisch: 1 Acre = 0,4047 ha, 1 Kanal = 0,0506 ha, 1 Marla = 0,00253 ha. Der Rechner wandelt Ihre Fläche in Hektar um, wendet die Dosis pro Hektar an und rechnet dann zurück."
+      },
+      {
+        "q": "Warum sind manche Kulturen deaktiviert?",
+        "a": "Eine Kultur ist nur auswählbar, wenn ihre empfohlene NPK-Dosis anhand einer veröffentlichten Quelle verifiziert ist. Wir deaktivieren eine Kultur lieber, als ihre Werte zu erfinden – unverifizierte Kulturen sind bis zur Bestätigung als „Daten in Prüfung“ markiert."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Zum Dunkelmodus wechseln",
+    "themeLight": "Zum Hellmodus wechseln"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Mit der agronomischen Standardformel: Dünger (kg) = (benötigter Nährstoff × 100) ÷ Nährstoff-% im Dünger. Wir wenden sie DAP-zuerst an – Phosphor aus DAP, dann der restliche Stickstoff aus Urea (unter Anrechnung der 18 % Stickstoff im DAP), dann Kalium aus MOP – und zeigen jeden Schritt.",
+        "q": "Wie wird die Düngerdosis berechnet?"
+      },
+      {
+        "a": "Acre, Kanal, Marla und Hektar. Verwendete Umrechnungen: 1 Acre = 8 Kanal = 160 Marla, 1 Kanal = 20 Marla, 1 Hektar = 2,471 Acre.",
+        "q": "Welche Flächeneinheiten werden unterstützt?"
+      },
+      {
+        "a": "Aus veröffentlichten Empfehlungen von Provinzen und Forschungsinstituten (z. B. PAU-Anbauprogramme), mit Regionskennzeichnung. Jeder Wert im Rechner trägt seine Quellenangabe, und Kulturen ohne verifizierte Quelle sind als „Daten in Prüfung“ markiert statt geschätzt.",
+        "q": "Woher stammen die Nährstoffwerte der Kulturen?"
+      },
+      {
+        "a": "Nein. Er liefert KI-gestützte Möglichkeiten mit Unsicherheitsangaben, aber Sie sollten immer Ihren örtlichen Landwirtschaftsberater konsultieren, bevor Sie eine Kultur behandeln – besonders vor dem Spritzen.",
+        "q": "Ist der Plant Doctor ein Ersatz für einen Agronomen?"
+      },
+      {
+        "a": "Ja – Rechner, Bibliotheken und Anleitungen sind kostenlos. Ein Konto ist nur für Funktionen wie das Speichern von Diagnosen nötig.",
+        "q": "Ist Fertilizer Dose kostenlos?"
+      }
+    ],
+    "title": "Fragen, die uns Landwirte stellen",
+    "metaTitle": "FAQ — Fragen zur Düngerdosis beantwortet",
+    "metaDescription": "Antworten zur Berechnung der Düngerdosis, NPK-Formeln, Acre/Kanal/Marla-Einheiten, Datenquellen und zum Plant Doctor."
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "disclaimer": "Dosisschätzungen folgen veröffentlichten Empfehlungen. Bestätigen Sie die Werte immer mit Ihrem örtlichen Landwirtschaftsberater und einer Bodenuntersuchung vor der Anwendung.",
+    "library": "Bibliothek",
+    "links": {
+      "about": "Über uns",
+      "blog": "Blog",
+      "calculator": "Düngerdosis-Rechner",
+      "charts": "Dosistabellen",
+      "contact": "Kontakt",
+      "crops": "Kulturbibliothek",
+      "faq": "FAQ",
+      "fertilizers": "Düngerbibliothek",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Datenschutzerklärung",
+      "terms": "Nutzungsbedingungen",
+      "wheat": "Weizenanleitung",
+      "plants": "Pflanzenbibliothek",
+      "vegetables": "Gemüsebibliothek",
+      "plantingCalendar": "Aussaatkalender",
+      "myGarden": "Mein Garten",
+      "profitCalculator": "Gewinnrechner",
+      "compare": "Vergleichen"
+    },
+    "rights": "Alle Rechte vorbehalten.",
+    "tagline": "Exakte Düngerdosen aus echten agronomischen Daten – für Weizen, Reis, Mais und mehr. Gebaut für Landwirte in Pakistan & Indien.",
+    "tools": "Werkzeuge"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Aus dem Blog",
+      "minRead": "Min. Lesezeit",
+      "title": "Verstehen Sie das Warum hinter der Dosis"
+    },
+    "crops": {
+      "desc": "Empfohlenes N–P₂O₅–K₂O pro Hektar aus veröffentlichten Quellen. Als „in Prüfung“ markierte Kulturen werden niemals geschätzt – Daten erscheinen erst nach Verifizierung.",
+      "eyebrow": "Kulturbibliothek",
+      "inReview": "In Prüfung",
+      "openGuide": "Kulturanleitung öffnen",
+      "perHa": "kg/ha",
+      "reviewNote": "Empfehlung wird verifiziert",
+      "title": "Dosen für die Kulturen, die Sie wirklich anbauen",
+      "verified": "Verifizierte Daten"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Laden Sie ein klares Blatt- oder Pflanzenfoto hoch – die KI liest visuelle Symptome.",
+          "t": "Foto-basierte Diagnose"
+        },
+        {
+          "d": "Jeder Vorschlag trägt eine niedrige / mittlere / hohe Konfidenzangabe. Keine falsche Sicherheit.",
+          "t": "Ehrliche Unsicherheit"
+        },
+        {
+          "d": "Ursachen, Sofortmaßnahmen und Vorbeugung – plus wann Sie Ihren Agrarberater rufen sollten.",
+          "t": "Umsetzbare nächste Schritte"
+        }
+      ],
+      "cta": "Plant Doctor öffnen",
+      "desc": "Laden Sie ein Blattfoto hoch, beschreiben Sie, was Sie sehen, und erhalten Sie eine strukturierte Einschätzung – mögliche Probleme, wahrscheinliche Ursachen, was als Nächstes zu tun ist und wie Sie vorbeugen.",
+      "dropSub": "JPG, PNG oder WebP · max. 5 MB",
+      "dropTitle": "Blattfoto hier ablegen",
+      "eyebrow": "KI Plant Doctor",
+      "serverNote": "Läuft serverseitig via Gemini – Ihr API-Schlüssel berührt nie den Browser.",
+      "title": "Stimmt etwas mit Ihrer Kultur nicht? Fragen Sie den Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Die gesamte Düngerbibliothek durchsuchen →",
+      "desc": "Etikettgenaue NPK-Zusammensetzungen. Diese Prozentsätze sind die gesamte Grundlage jeder Dosisberechnung.",
+      "eyebrow": "Düngerbibliothek",
+      "thBest": "Am besten für",
+      "thName": "Dünger",
+      "title": "Wissen, was wirklich im Sack ist",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Düngerdosis berechnen",
+      "desc": "Die richtige Dosis spart Geld, schützt Ihren Boden und steigert den Ertrag. Es dauert weniger als eine Minute.",
+      "title": "Hören Sie auf zu raten. Fangen Sie an zu rechnen."
+    },
+    "hero": {
+      "ctaCalc": "Meine Dosis berechnen",
+      "ctaDoctor": "Pflanze diagnostizieren",
+      "stats": [
+        {
+          "s": "Jeder Wert belegt",
+          "t": "Belegte Daten"
+        },
+        {
+          "s": "Standard-NPK-Methode",
+          "t": "DAP-zuerst"
+        },
+        {
+          "s": "Acre · Kanal · Marla · ha",
+          "t": "4 Einheiten"
+        }
+      ],
+      "subtitle": "Fertilizer Dose verwandelt veröffentlichte agronomische Empfehlungen in präzise Düngerdosen pro Acre, Kanal und Marla – mit echten Daten, jeder Berechnung offengelegt und nichts erfunden.",
+      "tagline": "Düngerdosis, richtig gemacht",
+      "title": "Wissen Sie genau, wie viel <em>Dünger</em> Ihre Kultur braucht."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Geben Sie Kultur + Fläche in Acre, Kanal, Marla oder Hektar ein – erhalten Sie exakte Urea-, DAP- und MOP-Mengen, wobei jeder Rechenschritt gezeigt wird.",
+          "title": "Dosisrechner"
+        },
+        {
+          "desc": "Laden Sie ein Blattfoto hoch, beschreiben Sie die Symptome und erhalten Sie eine KI-gestützte Diagnose mit Ursachen, Maßnahmen und Vorbeugung.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Etikettgenaue NPK-Zusammensetzungen, Vorteile, Vorsichtsmaßnahmen und Anwendungsanleitung für jeden wichtigen Dünger.",
+          "title": "Düngerbibliothek"
+        },
+        {
+          "desc": "Saison, Boden, Wasser, Wachstumsstadien und häufige Probleme für Weizen, Reis, Mais, Baumwolle, Zuckerrohr und Kartoffel.",
+          "title": "Kulturbibliothek"
+        },
+        {
+          "title": "Gewinnrechner",
+          "desc": "Geben Sie Ihre eigenen Ertrags-, Preis- und Kostenannahmen ein – sehen Sie Nettogewinn, Break-even und ROI pro Acre und pro Hektar."
+        },
+        {
+          "title": "Vergleichen",
+          "desc": "Dünger-Nährstoffkosten im direkten Vergleich aus Ihren eigenen Preisen, und Kulturdosen aus verifizierten Daten."
+        }
+      ],
+      "eyebrow": "Hauptwerkzeuge",
+      "title": "Alles, was ein Anbauer braucht, an einem Ort"
+    },
+    "why": {
+      "eyebrow": "Warum Fertilizer Dose",
+      "items": [
+        {
+          "d": "Jeder NPK-Wert und jede Kulturdosis ist belegt und zitiert. Keine erfundenen Zahlen, jemals.",
+          "t": "Nur echte Zahlen"
+        },
+        {
+          "d": "Jedes Ergebnis erklärt die Formel Schritt für Schritt – prüfen Sie es gern mit dem Stift nach.",
+          "t": "Zeigt seine Herleitung"
+        },
+        {
+          "d": "Acre, Kanal, Marla, Hektar. Geben Sie Land so ein, wie Sie es messen.",
+          "t": "Spricht Ihre Einheiten"
+        },
+        {
+          "d": "Ein vollständiges Tag/Nacht-Theme, das Ihre Systemeinstellung und Ihre Augen respektiert.",
+          "t": "Hell & dunkel"
+        }
+      ],
+      "regionCta": "Rechner ausprobieren",
+      "regionDesc": "Standardempfehlungen folgen agronomischen Leitlinien für Punjab (Pakistan) und Nordindien, mit Regionskennzeichnung bei jedem Wert. Einheiten, Terminologie und Kulturkalender entsprechen der tatsächlichen landwirtschaftlichen Praxis hier.",
+      "regionTitle": "In der Region verwurzelt",
+      "title": "Auf Beweisen gebaut, nicht auf Versprechen"
+    },
+    "metaTitle": "NPK-Düngerdosis-Rechner — pro Acre, Kanal, Marla & Hektar",
+    "metaDescription": "Berechnen Sie exakte Urea-, DAP- & MOP-Dosen für Weizen, Reis, Mais und mehr. Kostenloser NPK-Düngerrechner mit Acre/Kanal/Marla/Hektar-Unterstützung, Kulturanleitungen und Aussaatkalender.",
+    "grow": {
+      "eyebrow": "Anbauen",
+      "title": "Kulturen, Pflanzen & Gemüse",
+      "desc": "Eine Anbaubibliothek: Feldkulturen mit verifizierten Düngerdosen, plus Gemüse und Pflanzen mit ehrlichen, prüfungsgesteuerten Daten.",
+      "cards": [
+        {
+          "title": "Kulturen",
+          "desc": "Weizen, Reis, Mais, Baumwolle und mehr – mit verifizierten NPK-Dosen, wo veröffentlicht."
+        },
+        {
+          "title": "Gemüse",
+          "desc": "Tomate, Zwiebel, Chili, Okra und mehr. Daten erscheinen erst nach Verifizierung."
+        },
+        {
+          "title": "Pflanzen",
+          "desc": "Blühende, Zimmer-, Outdoor- und Obstpflanzen für Hausgärten."
+        }
+      ],
+      "browse": "Durchsuchen"
+    },
+    "planting": {
+      "eyebrow": "Aussaatkalender",
+      "title": "Was soll diesen Monat angebaut werden?",
+      "desc": "Ein regionsbezogener Aussaatkalender für Ihre Provinz – keine Einheitsratschläge. Jedes Zeitfenster ist belegt und mit Verifizierungsstatus versehen.",
+      "cta": "Aussaatkalender öffnen"
+    }
+  },
+  "language": {
+    "choose": "Sprache wählen",
+    "label": "Sprache"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Dosis berechnen",
+    "calculator": "Dosisrechner",
+    "closeMenu": "Menü schließen",
+    "crops": "Kulturen",
+    "faq": "FAQ",
+    "fertilizers": "Dünger",
+    "home": "Start",
+    "mobileNav": "Mobile Navigation",
+    "openMenu": "Menü öffnen",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Pflanzen",
+    "vegetables": "Gemüse",
+    "grow": "Anbauen",
+    "plantingCalendar": "Aussaatkalender",
+    "myGarden": "Mein Garten",
+    "tools": "Werkzeuge",
+    "profitCalculator": "Gewinnrechner",
+    "compare": "Vergleichen",
+    "login": "Anmelden",
+    "account": "Konto",
+    "admin": "Admin",
+    "logout": "Abmelden"
+  },
+  "plantDoctor": {
+    "desc": "Laden Sie ein klares Foto hoch, beschreiben Sie die Symptome und erhalten Sie eine strukturierte Einschätzung – mögliche Probleme mit ehrlichen Konfidenzangaben, wahrscheinliche Ursachen und was als Nächstes zu tun ist.",
+    "eyebrow": "Plant Doctor",
+    "title": "Zeigen Sie uns das Blatt. Wir helfen beim Lesen.",
+    "metaTitle": "Plant Doctor — KI-Diagnose für Kulturprobleme",
+    "metaDescription": "Laden Sie ein Kulturfoto hoch und beschreiben Sie Symptome für eine KI-gestützte Diagnose mit Ursachen, Maßnahmen und Vorbeugung."
+  },
+  "growing": {
+    "searchPlaceholder": "Nach Name suchen…",
+    "filterAll": "Alle",
+    "filterVerified": "Verifiziert",
+    "filterInReview": "In Prüfung",
+    "verifiedBadge": "Verifizierte Daten",
+    "inReviewBadge": "In Prüfung",
+    "verifiedDose": "Verifizierte Dosis",
+    "doseInReview": "Dosis in Prüfung",
+    "resultsCount": "{count} Einträge",
+    "noResults": "Keine Treffer gefunden",
+    "noResultsHint": "Versuchen Sie eine andere Schreibweise oder löschen Sie die Suche.",
+    "noData": "Noch keine verifizierten Daten verfügbar.",
+    "noDataHint": "Wir veröffentlichen agronomische Werte erst nach Verifizierung anhand veröffentlichter Quellen – niemals geschätzt.",
+    "sections": {
+      "fertilizer": "Düngeempfehlung",
+      "growingConditions": "Anbaubedingungen",
+      "soil": "Boden",
+      "water": "Wasser",
+      "sunlight": "Sonnenlicht",
+      "climate": "Klima",
+      "season": "Anbausaison",
+      "sowingWindow": "Aussaat- / Pflanzfenster",
+      "harvestWindow": "Erntefenster",
+      "regions": "Geeignete Regionen",
+      "stages": "Wachstumsstadien & Düngung",
+      "deficiencies": "Häufige Nährstoffmängel",
+      "problems": "Achtung bei",
+      "references": "Referenzen",
+      "lastReviewed": "Zuletzt geprüft"
+    },
+    "calculateCta": "Für meine Fläche berechnen",
+    "doctorCta": "Symptome sichtbar? Probieren Sie den Plant Doctor →",
+    "relatedFertilizers": "Verwandte Dünger",
+    "relatedItems": "Verwandt",
+    "inReviewNotice": "Die empfohlene Dosis für {name} wird derzeit anhand veröffentlichter Quellen verifiziert. Wir veröffentlichen sie hier erst nach Bestätigung – niemals geschätzt.",
+    "indexable": {
+      "cropsTitle": "Jede Kultur, ihre Bedürfnisse, an einem Ort.",
+      "plantsTitle": "Pflanzen für jede Art von Garten.",
+      "vegetablesTitle": "Gemüse, vom Feld bis zum Küchengarten."
+    },
+    "subcategoryAll": "Alle Typen"
+  },
+  "calendar": {
+    "metaTitle": "Aussaatkalender — Was diesen Monat anbauen",
+    "metaDescription": "Regionsbezogener Aussaatkalender: welche Kulturen, Gemüse und Pflanzen Sie diesen Monat in Ihrer Provinz säen sollten. Nur verifizierte Zeitfenster.",
+    "eyebrow": "Aussaatkalender",
+    "title": "Was diesen Monat anbauen",
+    "desc": "Wählen Sie Land und Region und durchsuchen Sie die Aussaatfenster, für die wir einstehen können. Keine geratenen Kalender – jedes Fenster trägt seine Quelle und seinen Verifizierungsstatus.",
+    "country": "Land",
+    "region": "Region / Provinz",
+    "month": "Monat",
+    "category": "Kategorie",
+    "catAll": "Alle",
+    "catCrop": "Kulturen",
+    "catVegetable": "Gemüse",
+    "catPlant": "Pflanzen",
+    "prevMonth": "Voriger Monat",
+    "currentMonth": "Aktueller Monat",
+    "nextMonth": "Nächster Monat",
+    "sowingWindow": "Aussaatfenster",
+    "harvestWindow": "Erntefenster",
+    "season": "Saison",
+    "regionLabel": "Region",
+    "source": "Quelle",
+    "lastReviewed": "Zuletzt geprüft",
+    "inReview": "In Prüfung",
+    "verified": "Verifiziert",
+    "emptyTitle": "Noch keine verifizierten Aussaatdaten hier",
+    "emptyHint": "Wir haben Aussaatfenster für diese Region und diesen Monat noch nicht verifiziert. Wir zeigen lieber nichts als einen geratenen Kalender.",
+    "countryPages": {
+      "pakistanTitle": "Aussaatkalender — Pakistan",
+      "pakistanDesc": "Aussaatfenster nach Provinz für Pakistan. Nur verifizierte Daten.",
+      "indiaTitle": "Aussaatkalender — Indien",
+      "indiaDesc": "Aussaatfenster nach Bundesstaat für Indien. Nur verifizierte Daten.",
+      "regionsTitle": "Regionen",
+      "hasData": "Aussaatdaten verfügbar",
+      "noDataYet": "Daten in Verifizierung",
+      "openCalendar": "Aussaatkalender öffnen"
+    }
+  },
+  "garden": {
+    "metaTitle": "Mein Garten — Parzellen, Pflanzungen & Düngepläne verfolgen",
+    "metaDescription": "Ihr persönliches Garten-Dashboard: Parzellen, Pflanzungen, Wachstumsstadien, gespeicherte Düngerberechnungen und Erinnerungen. Privat in Ihrem Browser gespeichert.",
+    "eyebrow": "Mein Garten",
+    "title": "Mein Garten",
+    "desc": "Verfolgen Sie Ihre Parzellen, was Sie gepflanzt haben und Ihre Düngepläne – alles an einem Ort.",
+    "localNote": "In diesem Browser gespeichert. Melden Sie sich an, um Ihren Garten auf allen Geräten zu synchronisieren.",
+    "loading": "Ihr Garten wird geladen…",
+    "newPlot": "Parzelle hinzufügen",
+    "editPlot": "Parzelle bearbeiten",
+    "deletePlot": "Parzelle löschen",
+    "confirmDeletePlot": "Diese Parzelle und alle ihre Pflanzungen löschen? Dies kann nicht rückgängig gemacht werden.",
+    "plotName": "Parzellenname",
+    "plotNamePh": "z. B. Vorderes Feld",
+    "location": "Standort",
+    "locationPh": "z. B. Dorfname (optional)",
+    "region": "Region (für Aussaatvorschläge)",
+    "regionNone": "Keine Region – Aussaatvorschläge überspringen",
+    "area": "Fläche",
+    "soilType": "Bodenart",
+    "soilUnknown": "Nicht angegeben",
+    "notes": "Notizen",
+    "notesPh": "Alles Bemerkenswerte…",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "noPlots": "Noch keine Parzellen",
+    "noPlotsHint": "Fügen Sie Ihre erste Parzelle hinzu, um Pflanzungen, Stadien und Erinnerungen zu verfolgen.",
+    "overview": "Überblick",
+    "plots": "Parzellen",
+    "activePlantings": "Aktive Pflanzungen",
+    "upcomingTasks": "Anstehende Aufgaben",
+    "seasonalSuggestions": "Saisonale Vorschläge",
+    "savedCalculations": "Gespeicherte Berechnungen",
+    "statPlots": "Parzellen",
+    "statPlantings": "Pflanzungen",
+    "statTasks": "offene Aufgaben",
+    "addPlanting": "Pflanzung hinzufügen",
+    "plantingWhat": "Kultur / Pflanze / Gemüse",
+    "plantedOn": "Pflanzdatum",
+    "stage": "Wachstumsstadium",
+    "stagePh": "z. B. Bestockung (optional)",
+    "plantedDaysAgo": "vor {days} Tagen gepflanzt",
+    "harvestWindow": "Erntefenster",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Diese Pflanzung entfernen? Dies kann nicht rückgängig gemacht werden.",
+    "markDone": "Als erledigt markieren",
+    "reopen": "Wieder öffnen",
+    "addReminder": "Erinnerung hinzufügen",
+    "reminderTitle": "Erinnerung",
+    "reminderTitlePh": "z. B. Zweite Urea-Teilgabe",
+    "dueDate": "Fälligkeitsdatum",
+    "confirmDeleteReminder": "Diese Erinnerung löschen?",
+    "noTasks": "Keine anstehenden Aufgaben. Fügen Sie eine Erinnerung hinzu, um auf Kurs zu bleiben.",
+    "noSuggestions": "Gerade keine Aussaatvorschläge. Legen Sie eine Region für Ihre Parzellen fest, um saisonale Vorschläge zu erhalten.",
+    "noCalculations": "Noch keine gespeicherten Berechnungen. Führen Sie den Dosisrechner aus und speichern Sie hier ein Ergebnis.",
+    "viewInCalculator": "Dosisrechner öffnen",
+    "suggestionCta": "{item} in {plot} säen",
+    "overdue": "Überfällig",
+    "done": "Erledigt",
+    "backToGarden": "Zurück zu Mein Garten",
+    "saveCalculation": "In Mein Garten speichern",
+    "savedToGarden": "In Mein Garten gespeichert",
+    "viewGarden": "Mein Garten ansehen"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Gewinnrechner — Agrargewinn, Break-even & ROI",
+      "metaDescription": "Schätzen Sie den Kulturgewinn aus Ihren eigenen Ertrags-, Preis- und Kostenannahmen. Transparente Formeln, Break-even-Ertrag und -Preis, Ansichten pro Acre und pro Hektar.",
+      "eyebrow": "Gewinnrechner",
+      "title": "Wird diese Kultur Geld bringen?",
+      "desc": "Geben Sie Ihre eigenen Annahmen ein – erwarteter Ertrag, Marktpreis und alle Inputkosten. Die Mathematik ist vollständig transparent, und nichts ist mit geschätzten Zahlen vorausgefüllt.",
+      "assumptionNote": "Jede Zahl unten stammt aus Zahlen, die Sie eingeben. Wir fügen keine eigenen Marktpreise, Erträge oder Kosten hinzu.",
+      "crop": "Kultur (optional)",
+      "noCrop": "Kultur wählen…",
+      "area": "Fläche",
+      "yieldPerUnit": "Erwarteter Ertrag pro Acre",
+      "yieldUnit": "Ertragseinheit",
+      "yieldUnitPh": "z. B. Maund, kg, Tonnen",
+      "pricePerYieldUnit": "Erwarteter Preis pro Ertragseinheit",
+      "currency": "Währungsbezeichnung",
+      "currencyPh": "z. B. Rs, PKR, ₹",
+      "costsTitle": "Inputkosten (Ihre Zahlen)",
+      "costSeed": "Saatgut",
+      "costFertilizer": "Dünger",
+      "costPesticide": "Pestizid / Herbizid",
+      "costLabor": "Arbeit",
+      "costIrrigation": "Bewässerung / Wasser",
+      "costRent": "Pacht",
+      "costOther": "Sonstiges",
+      "calculate": "Gewinn berechnen",
+      "reset": "Zurücksetzen",
+      "print": "Drucken",
+      "saveScenario": "Szenario speichern",
+      "scenarioName": "Szenarioname",
+      "scenarioNamePh": "z. B. Weizen 2026 — 5 Acre",
+      "scenarios": "Gespeicherte Szenarien",
+      "noScenarios": "Noch keine gespeicherten Szenarien.",
+      "deleteScenario": "Löschen",
+      "results": "Ergebnisse",
+      "revenue": "Gesamtumsatz",
+      "totalCost": "Gesamtkosten",
+      "netProfit": "Nettogewinn",
+      "profitPerAcre": "Gewinn pro Acre",
+      "profitPerHa": "Gewinn pro Hektar",
+      "costPerYieldUnit": "Kosten pro Ertragseinheit",
+      "breakEvenYield": "Break-even-Ertrag",
+      "breakEvenPrice": "Break-even-Preis",
+      "roi": "Kapitalrendite",
+      "formulasTitle": "So wird es berechnet",
+      "perAcre": "pro Acre",
+      "perHectare": "pro Hektar",
+      "loss": "Verlust",
+      "openCropGuide": "Kulturanleitung öffnen",
+      "openCalculator": "Düngerkosten berechnen"
+    },
+    "compare": {
+      "metaTitle": "Dünger & Kulturen vergleichen — Nährstoffkostenvergleich",
+      "metaDescription": "Vergleichen Sie Dünger nach Preis pro kg Nährstoff anhand Ihrer eigenen Marktpreise und Kulturen nach verifizierter Dosis und Anbaudaten.",
+      "eyebrow": "Vergleichen",
+      "title": "Vergleichen, Seite an Seite",
+      "desc": "Dünger-Nährstoffkosten aus Preisen, die Sie eingeben – wir raten niemals Marktpreise. Kulturdaten stammen nur aus verifizierten Zahlen.",
+      "tabFertilizers": "Dünger",
+      "tabCrops": "Kulturen",
+      "selectFertilizers": "Dünger zum Vergleichen wählen",
+      "pricePerBag": "Preis pro Sack",
+      "bagSize": "Sackgröße (kg)",
+      "pricePerKgN": "pro kg N",
+      "pricePerKgP": "pro kg P₂O₅",
+      "pricePerKgK": "pro kg K₂O",
+      "cheapest": "günstigste",
+      "na": "—",
+      "userPriceNote": "Preise geben Sie ein – geben Sie Ihren lokalen Marktpreis pro Sack für einen echten Vergleich ein.",
+      "viewFertilizer": "Anleitung ansehen",
+      "selectCrops": "Kulturen zum Vergleichen wählen (bis zu 3)",
+      "dose": "NPK-Dosis / ha",
+      "season": "Saison",
+      "water": "Wasser",
+      "soil": "Boden",
+      "inReview": "In Prüfung",
+      "noDoseData": "Dosis in Prüfung – nicht geschätzt",
+      "viewGuide": "Kulturanleitung öffnen"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — Düngerwissenschaft & Pflanzenernährungs-Anleitungen",
+    "metaDescription": "Praxisanleitungen zu Düngerdosen, NPK-Berechnungen, Pflanzenernährung und Bodengesundheit für pakistanische und indische Landwirte."
+  },
+  "fertilizers": {
+    "metaTitle": "Düngerbibliothek — NPK-Zusammensetzung, Verwendung & Dosieranleitung",
+    "metaDescription": "Etikettgenaue NPK-Zusammensetzungen, Vorteile, Vorsichtsmaßnahmen und Anwendungsanleitung für Urea, DAP, MOP, SSP, SOP und mehr."
+  },
+  "chart": {
+    "metaTitle": "Düngerdosis-Tabelle — NPK-Kurzreferenz",
+    "metaDescription": "Düngerdosis-Kurzreferenz: NPK-Empfehlungen pro Kultur mit Urea-, DAP- und MOP-Mengen."
+  },
+  "auth": {
+    "loginTitle": "Anmelden",
+    "loginDesc": "Greifen Sie auf Ihren Garten, gespeicherte Elemente und Admin-Werkzeuge zu.",
+    "signupTitle": "Konto erstellen",
+    "signupDesc": "Speichern Sie Ihren Garten in der Cloud und synchronisieren Sie ihn geräteübergreifend.",
+    "name": "Name",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "loginCta": "Anmelden",
+    "signupCta": "Konto erstellen",
+    "noAccount": "Noch kein Konto?",
+    "haveAccount": "Haben Sie bereits ein Konto?",
+    "invalid": "Ungültige E-Mail oder ungültiges Passwort.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "accountTitle": "Mein Konto",
+    "role": "Rolle",
+    "signOut": "Abmelden",
+    "adminLink": "Admin-Dashboard öffnen",
+    "gardenNote": "Ihr Garten wird jetzt mit Ihrem Konto synchronisiert, wenn Sie angemeldet sind."
   }
 }

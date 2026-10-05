@@ -4,6 +4,576 @@
     "name": "Turkish",
     "nativeName": "Türkçe",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Ürününüzü seçin, arazinizi kullandığınız birimle girin — acre, kanal, marla veya hectare — ve hassas urea, DAP ve MOP miktarları ile büyüme dönemlerine göre uygulama programı alın.",
+    "empty": {
+      "desc": "Bir ürün seçin, arazi alanınızı girin ve hesapla'ya basın. Hesabın her adımı gösterilir.",
+      "title": "Dozunuz burada görünecek"
+    },
+    "eyebrow": "Doz hesaplayıcı",
+    "form": {
+      "area": "Arazi alanı",
+      "areaError": "Lütfen sıfırdan büyük geçerli bir arazi alanı girin.",
+      "areaLargeError": "Bu alan alışılmadık derecede büyük görünüyor — lütfen değeri ve birimi kontrol edin.",
+      "areaPlaceholder": "örn. 5",
+      "crop": "Ürün",
+      "cropHint": "Yalnızca doğrulanmış önerilere sahip ürünler seçilebilir.",
+      "inReview": "veriler inceleniyor",
+      "soil": "Toprak tipi (isteğe bağlı)",
+      "soilHint": "Toprak tipi hesabı değiştirmez — öneriyi değiştirir. Kumlu topraklar azotu daha hızlı kaybeder; tuzlu topraklarda MOP kullanımında dikkatli olunmalıdır.",
+      "submit": "Dozu hesapla",
+      "unit": "Birim"
+    },
+    "method": {
+      "desc": "Kara kutu yok. Bu, agronomi derslerinde öğretilen DAP-öncelikli prosedürün aynısıdır.",
+      "eyebrow": "Yöntem",
+      "title": "Yöntem, sade bir dille"
+    },
+    "results": {
+      "bags": "× 50 kg torba",
+      "disclaimer": "Tahminler, yayınlanmış önerilere dayanır. Uygulamadan önce yerel tarım danışmanınızla teyit edin.",
+      "howTitle": "Bu nasıl hesaplandı",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Uygulama programı",
+      "soilDefault": "Standart doz gösteriliyor. Toprak testinden sonra ayarlayın.",
+      "soilNoteLabel": "Toprak notu:",
+      "sourceLabel": "Veri kaynağı:",
+      "total": "Toplam gübre",
+      "kgUnit": "kg",
+      "recommendedLine": "Önerilen {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "\"{soil}\" seçtiniz. {soilLower} topraklarda dozu değiştirmeden önce toprak testi yaptırmayı düşünün — yukarıdaki temel hesaplama aynı kalır."
+    },
+    "title": "Hesabı gösterilen, hassas gübre dozu.",
+    "metaTitle": "Gübre Doz Hesaplayıcı — Acre/Kanal/Marla Başına Urea, DAP ve MOP",
+    "metaDescription": "Buğday, pirinç ve mısır için hassas urea, DAP ve MOP dozlarını hesaplayın. Alanı acre, kanal, marla veya hectare olarak girin — her hesaplama adımını görün.",
+    "methodFaq": [
+      {
+        "q": "DAP neden önce hesaplanır?",
+        "a": "Fosfor toprakta hareketsizdir, bu nedenle tüm P₂O₅ dozu ekimde DAP'tan gelmelidir. DAP ayrıca %18 azot içerir ve bu, toplam azot ihtiyacından sayılır — DAP'ı önce hesaplamak, urea hesabından önce bu azotu çıkarmamızı sağlar, böylece azotu asla iki kez vermezsiniz."
+      },
+      {
+        "q": "Kanal ve marla nasıl çevrilir?",
+        "a": "1 acre = 8 kanal = 160 marla ve 1 kanal = 20 marla. Metrik olarak: 1 acre = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Hesaplayıcı alanınızı hektara çevirir, hektar başına dozu uygular, ardından geri ölçekler."
+      },
+      {
+        "q": "Bazı ürünler neden devre dışı?",
+        "a": "Bir ürün, yalnızca önerilen NPK dozu yayınlanmış bir kaynakla doğrulandığında seçilebilir. Rakamları uydurmaktansa ürünü devre dışı bırakmayı tercih ederiz — doğrulanmamış ürünler teyit edilene kadar \"veriler inceleniyor\" olarak işaretlenir."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Koyu moda geç",
+    "themeLight": "Açık moda geç"
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "items": [
+      {
+        "a": "Standart agronomik formülle: gübre (kg) = (gerekli besin × 100) ÷ gübredeki besin %. Bunu DAP-öncelikli uygularız — fosfor DAP'tan, ardından kalan azot urea'dan (DAP'ın %18 azotu hesaba katılarak), sonra potasyum MOP'tan — ve her adımı gösteririz.",
+        "q": "Gübre dozu nasıl hesaplanır?"
+      },
+      {
+        "a": "Acre, kanal, marla ve hectare. Kullanılan çevrimler: 1 acre = 8 kanal = 160 marla, 1 kanal = 20 marla, 1 hectare = 2,471 acre.",
+        "q": "Hangi arazi birimleri desteklenir?"
+      },
+      {
+        "a": "Yayınlanmış eyalet ve araştırma enstitüsü önerilerinden (örn. PAU uygulama paketi), bölge etiketli. Hesaplayıcıdaki her rakam kaynak gösterimi taşır ve doğrulanmış kaynağı olmayan ürünler tahmin edilmek yerine 'veriler inceleniyor' olarak işaretlenir.",
+        "q": "Ürün besin değerleri nereden geliyor?"
+      },
+      {
+        "a": "Hayır. Belirsizlik ifadeleriyle yapay zekâ destekli olasılıklar sunar, ancak bir ürünü tedavi etmeden önce — özellikle ilaçlamadan önce — her zaman yerel tarım danışmanınızla teyit etmelisiniz.",
+        "q": "Plant Doctor bir ziraat mühendisinin yerini tutar mı?"
+      },
+      {
+        "a": "Evet — hesaplayıcı, kütüphaneler ve kılavuzlar ücretsizdir. Hesap yalnızca tanı kaydetme gibi özellikler için gereklidir.",
+        "q": "Fertilizer Dose ücretsiz mi?"
+      }
+    ],
+    "title": "Çiftçilerin bize sorduğu sorular",
+    "metaTitle": "SSS — Fertilizer Dose Soruları Yanıtlandı",
+    "metaDescription": "Gübre dozu hesaplama, NPK formülleri, acre/kanal/marla birimleri, veri kaynakları ve Plant Doctor hakkında yanıtlar."
+  },
+  "footer": {
+    "company": "Şirket",
+    "disclaimer": "Doz tahminleri yayınlanmış önerilere dayanır. Uygulamadan önce daima yerel tarım danışmanınızla ve toprak testiyle teyit edin.",
+    "library": "Kütüphane",
+    "links": {
+      "about": "Hakkında",
+      "blog": "Blog",
+      "calculator": "Gübre Doz Hesaplayıcı",
+      "charts": "Doz Tabloları",
+      "contact": "İletişim",
+      "crops": "Ürün Kütüphanesi",
+      "faq": "SSS",
+      "fertilizers": "Gübre Kütüphanesi",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları",
+      "wheat": "Buğday Kılavuzu",
+      "plants": "Bitki Kütüphanesi",
+      "vegetables": "Sebze Kütüphanesi",
+      "plantingCalendar": "Ekim Takvimi",
+      "myGarden": "Bahçem",
+      "profitCalculator": "Kâr Hesaplayıcı",
+      "compare": "Karşılaştır"
+    },
+    "rights": "Tüm hakları saklıdır.",
+    "tagline": "Gerçek agronomik verilerden hassas gübre dozları — buğday, pirinç, mısır ve daha fazlası için. Pakistan ve Hindistan'daki çiftçiler için hazırlandı.",
+    "tools": "Araçlar"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Blogdan",
+      "minRead": "dk okuma",
+      "title": "Dozun arkasındaki nedeni öğrenin"
+    },
+    "crops": {
+      "desc": "Yayınlanmış kaynaklardan hektar başına önerilen N–P₂O₅–K₂O. 'İnceleniyor' olarak işaretli ürünler asla tahmin edilmez — veriler yalnızca doğrulandığında eklenir.",
+      "eyebrow": "Ürün kütüphanesi",
+      "inReview": "İnceleniyor",
+      "openGuide": "Ürün kılavuzunu aç",
+      "perHa": "kg/ha",
+      "reviewNote": "Öneri doğrulanıyor",
+      "title": "Gerçekten yetiştirdiğiniz ürünler için dozlar",
+      "verified": "Doğrulanmış veri"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Net bir yaprak veya bitki fotoğrafı yükleyin — yapay zekâ görsel belirtileri okur.",
+          "t": "Fotoğraf öncelikli tanı"
+        },
+        {
+          "d": "Her öneri düşük / orta / yüksek güven ifadesi taşır. Sahte kesinlik yok.",
+          "t": "Dürüst belirsizlik"
+        },
+        {
+          "d": "Nedenler, acil eylemler ve önleme — ayrıca tarım danışmanınızı ne zaman çağıracağınız.",
+          "t": "Uygulanabilir sonraki adımlar"
+        }
+      ],
+      "cta": "Plant Doctor'ı aç",
+      "desc": "Bir yaprak fotoğrafı yükleyin, gördüklerinizi anlatın ve yapılandırılmış bir değerlendirme alın — olası sorunlar, muhtemel nedenler, bundan sonra ne yapılacağı ve nasıl önleneceği.",
+      "dropSub": "JPG, PNG veya WebP · en fazla 5 MB",
+      "dropTitle": "Buraya bir yaprak fotoğrafı bırakın",
+      "eyebrow": "Yapay Zekâ Plant Doctor",
+      "serverNote": "Gemini ile sunucu tarafında çalışır — API anahtarınız asla tarayıcıya dokunmaz.",
+      "title": "Ürününüzde bir sorun mu var? Plant Doctor'a sorun."
+    },
+    "fertilizers": {
+      "browse": "Tüm gübre kütüphanesine göz atın →",
+      "desc": "Etiket-doğru NPK bileşimleri. Bu yüzdeler her doz hesabının tüm temelidir.",
+      "eyebrow": "Gübre kütüphanesi",
+      "thBest": "En uygun",
+      "thName": "Gübre",
+      "title": "Torbanın içinde gerçekte ne olduğunu bilin",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Gübre dozunu hesapla",
+      "desc": "Doğru doz paradan tasarruf sağlar, toprağınızı korur ve verimi artırır. Bir dakikadan az sürer.",
+      "title": "Tahmin etmeyi bırakın. Hesaplamaya başlayın."
+    },
+    "hero": {
+      "ctaCalc": "Dozumu hesapla",
+      "ctaDoctor": "Bitkiyi teşhis et",
+      "stats": [
+        {
+          "s": "Her rakam kaynaklı",
+          "t": "Kaynaklı veri"
+        },
+        {
+          "s": "Standart NPK yöntemi",
+          "t": "Önce DAP"
+        },
+        {
+          "s": "Acre · Kanal · Marla · Ha",
+          "t": "4 birim"
+        }
+      ],
+      "subtitle": "Fertilizer Dose, yayınlanmış agronomik önerileri acre, kanal ve marla başına hassas gübre dozlarına dönüştürür — gerçek verilerle, gösterilen her hesaplamayla ve uydurma olmadan.",
+      "tagline": "Gübre dozu, doğru şekilde",
+      "title": "Ürününüzün tam olarak ne kadar <em>gübreye</em> ihtiyacı olduğunu bilin."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Ürün + acre, kanal, marla veya hectare olarak alan girin — her hesaplama adımı gösterilen hassas urea, DAP ve MOP miktarlarını alın.",
+          "title": "Doz Hesaplayıcı"
+        },
+        {
+          "desc": "Bir yaprak fotoğrafı yükleyin, belirtileri anlatın ve nedenler, eylemler ve önleme adımlarıyla yapay zekâ destekli tanı alın.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Her önemli gübre için etiket-doğru NPK bileşimleri, faydalar, önlemler ve uygulama rehberliği.",
+          "title": "Gübre Kütüphanesi"
+        },
+        {
+          "desc": "Buğday, pirinç, mısır, pamuk, şeker kamışı ve patates için mevsim, toprak, su, büyüme dönemleri ve yaygın sorunlar.",
+          "title": "Ürün Kütüphanesi"
+        },
+        {
+          "title": "Kâr Hesaplayıcı",
+          "desc": "Kendi verim, fiyat ve maliyet varsayımlarınızı girin — acre ve hektar başına net kâr, başabaş ve ROI görün."
+        },
+        {
+          "title": "Karşılaştır",
+          "desc": "Kendi fiyatlarınızdan yan yana gübre besin maliyetleri ve doğrulanmış verilerden ürün dozları."
+        }
+      ],
+      "eyebrow": "Ana araçlar",
+      "title": "Bir yetiştiricinin ihtiyacı olan her şey, tek yerde"
+    },
+    "why": {
+      "eyebrow": "Neden Fertilizer Dose",
+      "items": [
+        {
+          "d": "Her NPK değeri ve ürün dozu kaynaklı ve alıntılıdır. Asla uydurma rakam yok.",
+          "t": "Yalnızca gerçek rakamlar"
+        },
+        {
+          "d": "Her sonuç formülü adım adım açıklar — isterseniz kalemle doğrulayın.",
+          "t": "Hesabını gösterir"
+        },
+        {
+          "d": "Acre, kanal, marla, hectare. Araziyi ölçtüğünüz gibi girin.",
+          "t": "Birimlerinizi konuşur"
+        },
+        {
+          "d": "Sistem ayarınınıza ve gözlerinize saygılı, tam bir gündüz/gece teması.",
+          "t": "Açık ve koyu"
+        }
+      ],
+      "regionCta": "Hesaplayıcıyı deneyin",
+      "regionDesc": "Varsayılan öneriler Pencap (Pakistan) ve Kuzey Hindistan agronomik rehberliğini takip eder, her rakamda bölge etiketleri bulunur. Birimler, terminoloji ve ürün takvimleri çiftçiliğin burada gerçekten nasıl işlediğiyle uyumludur.",
+      "regionTitle": "Bölgeye kök salmış",
+      "title": "Vaade değil, kanıta dayalı"
+    },
+    "metaTitle": "NPK Gübre Doz Hesaplayıcı — Acre, Kanal, Marla ve Hektar Başına",
+    "metaDescription": "Buğday, pirinç, mısır ve daha fazlası için hassas urea, DAP ve MOP dozlarını hesaplayın. Acre/kanal/marla/hectare destekli ücretsiz NPK gübre hesaplayıcı, ürün kılavuzları ve ekim takvimi.",
+    "grow": {
+      "eyebrow": "Yetiştirme",
+      "title": "Ürünler, bitkiler ve sebzeler",
+      "desc": "Tek bir yetiştirme kütüphanesi: doğrulanmış gübre dozlarına sahip tarla ürünleri, ayrıca dürüst, incelemeden geçen verilere sahip sebzeler ve bitkiler.",
+      "cards": [
+        {
+          "title": "Ürünler",
+          "desc": "Buğday, pirinç, mısır, pamuk ve daha fazlası — yayınlandığı yerlerde doğrulanmış NPK dozlarıyla."
+        },
+        {
+          "title": "Sebzeler",
+          "desc": "Domates, soğan, biber, bamya ve daha fazlası. Veriler yalnızca doğrulamadan sonra eklenir."
+        },
+        {
+          "title": "Bitkiler",
+          "desc": "Ev bahçeleri için çiçekli, iç mekân, dış mekân ve meyve bitkileri."
+        }
+      ],
+      "browse": "Göz at"
+    },
+    "planting": {
+      "eyebrow": "Ekim takvimi",
+      "title": "Bu ay ne ekilmeli?",
+      "desc": "İlinize özel bölge duyarlı ekim takvimi — herkese uyan tahminler yok. Her dönem kaynaklı ve doğrulama rozetlidir.",
+      "cta": "Ekim takvimini aç"
+    }
+  },
+  "language": {
+    "choose": "Dil seçin",
+    "label": "Dil"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Dozu Hesapla",
+    "calculator": "Doz Hesaplayıcı",
+    "closeMenu": "Menüyü kapat",
+    "crops": "Ürünler",
+    "faq": "SSS",
+    "fertilizers": "Gübreler",
+    "home": "Ana Sayfa",
+    "mobileNav": "Mobil gezinme",
+    "openMenu": "Menüyü aç",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Bitkiler",
+    "vegetables": "Sebzeler",
+    "grow": "Yetiştirme",
+    "plantingCalendar": "Ekim Takvimi",
+    "myGarden": "Bahçem",
+    "tools": "Araçlar",
+    "profitCalculator": "Kâr Hesaplayıcı",
+    "compare": "Karşılaştır",
+    "login": "Giriş yap",
+    "account": "Hesap",
+    "admin": "Yönetici",
+    "logout": "Çıkış yap"
+  },
+  "plantDoctor": {
+    "desc": "Net bir fotoğraf yükleyin, belirtileri anlatın ve yapılandırılmış bir değerlendirme alın — dürüst güven düzeyleriyle olası sorunlar, muhtemel nedenler ve bundan sonra ne yapılacağı.",
+    "eyebrow": "Plant Doctor",
+    "title": "Yaprağı bize gösterin. Okumanıza yardımcı olalım.",
+    "metaTitle": "Plant Doctor — Yapay Zekâ Ürün Sorun Teşhisi",
+    "metaDescription": "Nedenler, eylemler ve önleme adımlarıyla yapay zekâ destekli tanı için ürün fotoğrafı yükleyin ve belirtileri anlatın."
+  },
+  "growing": {
+    "searchPlaceholder": "İsme göre ara…",
+    "filterAll": "Tümü",
+    "filterVerified": "Doğrulanmış",
+    "filterInReview": "İnceleniyor",
+    "verifiedBadge": "Doğrulanmış veri",
+    "inReviewBadge": "İnceleniyor",
+    "verifiedDose": "Doğrulanmış doz",
+    "doseInReview": "Doz inceleniyor",
+    "resultsCount": "{count} öğe",
+    "noResults": "Eşleşme bulunamadı",
+    "noResultsHint": "Farklı bir yazım deneyin veya aramayı temizleyin.",
+    "noData": "Henüz doğrulanmış veri yok.",
+    "noDataHint": "Agronomik rakamları yalnızca yayınlanmış kaynaklara karşı doğruladıktan sonra yayınlarız — asla tahmin etmeyiz.",
+    "sections": {
+      "fertilizer": "Gübre önerisi",
+      "growingConditions": "Yetiştirme koşulları",
+      "soil": "Toprak",
+      "water": "Su",
+      "sunlight": "Güneş ışığı",
+      "climate": "İklim",
+      "season": "Yetiştirme mevsimi",
+      "sowingWindow": "Ekim / dikim dönemi",
+      "harvestWindow": "Hasat dönemi",
+      "regions": "Uygun bölgeler",
+      "stages": "Büyüme dönemleri ve besleme",
+      "deficiencies": "Yaygın besin eksiklikleri",
+      "problems": "Dikkat edilecekler",
+      "references": "Kaynaklar",
+      "lastReviewed": "Son inceleme"
+    },
+    "calculateCta": "Arazim için hesapla",
+    "doctorCta": "Belirti mi görüyorsunuz? Plant Doctor'ı deneyin →",
+    "relatedFertilizers": "İlgili gübreler",
+    "relatedItems": "İlgili",
+    "inReviewNotice": "{name} için önerilen doz şu anda yayınlanmış kaynaklara karşı doğrulanıyor. Yalnızca teyit edildiğinde burada yayınlarız — asla tahmin etmeyiz.",
+    "indexable": {
+      "cropsTitle": "Her ürün, ihtiyaçları, tek yerde.",
+      "plantsTitle": "Her türlü bahçe için bitkiler.",
+      "vegetablesTitle": "Sebzeler, tarladan mutfak bahçesine."
+    },
+    "subcategoryAll": "Tüm tipler"
+  },
+  "calendar": {
+    "metaTitle": "Ekim Takvimi — Bu Ay Ne Ekilmeli",
+    "metaDescription": "Bölge duyarlı ekim takvimi: bu ay ilinizde hangi ürün, sebze ve bitkilerin ekileceği. Yalnızca doğrulanmış dönemler.",
+    "eyebrow": "Ekim takvimi",
+    "title": "Bu ay ne ekilmeli",
+    "desc": "Ülkenizi ve bölgenizi seçin, ardından arkasında durabileceğimiz ekim dönemlerine göz atın. Tahmini takvim yok — her dönem kaynağını ve doğrulama durumunu taşır.",
+    "country": "Ülke",
+    "region": "Bölge / il",
+    "month": "Ay",
+    "category": "Kategori",
+    "catAll": "Tümü",
+    "catCrop": "Ürünler",
+    "catVegetable": "Sebzeler",
+    "catPlant": "Bitkiler",
+    "prevMonth": "Önceki ay",
+    "currentMonth": "Bu ay",
+    "nextMonth": "Sonraki ay",
+    "sowingWindow": "Ekim dönemi",
+    "harvestWindow": "Hasat dönemi",
+    "season": "Mevsim",
+    "regionLabel": "Bölge",
+    "source": "Kaynak",
+    "lastReviewed": "Son inceleme",
+    "inReview": "İnceleniyor",
+    "verified": "Doğrulandı",
+    "emptyTitle": "Burada henüz doğrulanmış ekim verisi yok",
+    "emptyHint": "Bu bölge ve ay için ekim dönemlerini henüz doğrulamadık. Tahmini bir takvimdense hiçbir şey göstermemeyi tercih ederiz.",
+    "countryPages": {
+      "pakistanTitle": "Ekim Takvimi — Pakistan",
+      "pakistanDesc": "Pakistan için illere göre ekim dönemleri. Yalnızca doğrulanmış veri.",
+      "indiaTitle": "Ekim Takvimi — Hindistan",
+      "indiaDesc": "Hindistan için eyaletlere göre ekim dönemleri. Yalnızca doğrulanmış veri.",
+      "regionsTitle": "Bölgeler",
+      "hasData": "Ekim verisi mevcut",
+      "noDataYet": "Veri doğrulanıyor",
+      "openCalendar": "Ekim takvimini aç"
+    }
+  },
+  "garden": {
+    "metaTitle": "Bahçem — Parselleri, Ekimleri ve Gübre Planlarını Takip Edin",
+    "metaDescription": "Kişisel bahçe paneliniz: parseller, ekimler, büyüme dönemleri, kaydedilmiş gübre hesaplamaları ve hatırlatıcılar. Tarayıcınızda özel olarak saklanır.",
+    "eyebrow": "Bahçem",
+    "title": "Bahçem",
+    "desc": "Parsellerinizi, ektiklerinizi ve gübre planlarınızı takip edin — hepsi tek yerde.",
+    "localNote": "Bu tarayıcıda saklanır. Bahçenizi cihazlarınız arasında senkronize etmek için giriş yapın.",
+    "loading": "Bahçeniz yükleniyor…",
+    "newPlot": "Parsel ekle",
+    "editPlot": "Parseli düzenle",
+    "deletePlot": "Parseli sil",
+    "confirmDeletePlot": "Bu parsel ve tüm ekimleri silinsin mi? Bu geri alınamaz.",
+    "plotName": "Parsel adı",
+    "plotNamePh": "örn. Ön tarla",
+    "location": "Konum",
+    "locationPh": "örn. Köy adı (isteğe bağlı)",
+    "region": "Bölge (ekim önerileri için)",
+    "regionNone": "Bölge yok — ekim önerilerini atla",
+    "area": "Alan",
+    "soilType": "Toprak tipi",
+    "soilUnknown": "Belirtilmemiş",
+    "notes": "Notlar",
+    "notesPh": "Hatırlanmaya değer her şey…",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "noPlots": "Henüz parsel yok",
+    "noPlotsHint": "Ekimleri, dönemleri ve hatırlatıcıları takip etmeye başlamak için ilk parselinizi ekleyin.",
+    "overview": "Genel bakış",
+    "plots": "Parseller",
+    "activePlantings": "Aktif ekimler",
+    "upcomingTasks": "Yaklaşan görevler",
+    "seasonalSuggestions": "Mevsimsel öneriler",
+    "savedCalculations": "Kaydedilmiş hesaplamalar",
+    "statPlots": "parsel",
+    "statPlantings": "ekim",
+    "statTasks": "açık görev",
+    "addPlanting": "Ekim ekle",
+    "plantingWhat": "Ürün / bitki / sebze",
+    "plantedOn": "Ekim tarihi",
+    "stage": "Büyüme dönemi",
+    "stagePh": "örn. Kardeşlenme (isteğe bağlı)",
+    "plantedDaysAgo": "{days} gün önce ekildi",
+    "harvestWindow": "Hasat dönemi",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Bu ekim kaldırılsın mı? Bu geri alınamaz.",
+    "markDone": "Tamamlandı olarak işaretle",
+    "reopen": "Yeniden aç",
+    "addReminder": "Hatırlatıcı ekle",
+    "reminderTitle": "Hatırlatıcı",
+    "reminderTitlePh": "örn. İkinci urea uygulamasını yap",
+    "dueDate": "Bitiş tarihi",
+    "confirmDeleteReminder": "Bu hatırlatıcı silinsin mi?",
+    "noTasks": "Yaklaşan görev yok. Takipte kalmak için bir hatırlatıcı ekleyin.",
+    "noSuggestions": "Şu anda ekim önerisi yok. Mevsimsel öneriler almak için parsellerinize bölge belirleyin.",
+    "noCalculations": "Henüz kaydedilmiş hesaplama yok. Doz hesaplayıcıyı çalıştırın ve bir sonucu buraya kaydedin.",
+    "viewInCalculator": "Doz hesaplayıcıyı aç",
+    "suggestionCta": "{plot} parselinde {item} ekin",
+    "overdue": "Gecikmiş",
+    "done": "Tamamlandı",
+    "backToGarden": "Bahçem'e dön",
+    "saveCalculation": "Bahçem'e kaydet",
+    "savedToGarden": "Bahçem'e kaydedildi",
+    "viewGarden": "Bahçem'i görüntüle"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Kâr Hesaplayıcı — Çiftlik Kârı, Başabaş ve ROI",
+      "metaDescription": "Kendi verim, fiyat ve maliyet varsayımlarınızdan ürün kârını tahmin edin. Şeffaf formüller, başabaş verim ve fiyat, acre ve hektar başına görünümler.",
+      "eyebrow": "Kâr hesaplayıcı",
+      "title": "Bu ürün para kazandırır mı?",
+      "desc": "Kendi varsayımlarınızı girin — beklenen verim, piyasa fiyatı ve her girdi maliyeti. Hesap tamamen şeffaftır ve tahmin edilen rakamlarla hiçbir şey önceden doldurulmamıştır.",
+      "assumptionNote": "Aşağıdaki her rakam girdiğiniz sayılardan gelir. Kendi piyasa fiyatımızı, verimimizi veya maliyetimizi eklemeyiz.",
+      "crop": "Ürün (isteğe bağlı)",
+      "noCrop": "Bir ürün seçin…",
+      "area": "Alan",
+      "yieldPerUnit": "Acre başına beklenen verim",
+      "yieldUnit": "Verim birimi",
+      "yieldUnitPh": "örn. maund, kg, ton",
+      "pricePerYieldUnit": "Verim birimi başına beklenen fiyat",
+      "currency": "Para birimi etiketi",
+      "currencyPh": "örn. Rs, PKR, ₹",
+      "costsTitle": "Girdi maliyetleri (sizin rakamlarınız)",
+      "costSeed": "Tohum",
+      "costFertilizer": "Gübre",
+      "costPesticide": "Pestisit / herbisit",
+      "costLabor": "İşçilik",
+      "costIrrigation": "Sulama / su",
+      "costRent": "Arazi kirası",
+      "costOther": "Diğer",
+      "calculate": "Kârı hesapla",
+      "reset": "Sıfırla",
+      "print": "Yazdır",
+      "saveScenario": "Senaryoyu kaydet",
+      "scenarioName": "Senaryo adı",
+      "scenarioNamePh": "örn. Buğday 2026 — 5 acre",
+      "scenarios": "Kaydedilmiş senaryolar",
+      "noScenarios": "Henüz kaydedilmiş senaryo yok.",
+      "deleteScenario": "Sil",
+      "results": "Sonuçlar",
+      "revenue": "Toplam gelir",
+      "totalCost": "Toplam maliyet",
+      "netProfit": "Net kâr",
+      "profitPerAcre": "Acre başına kâr",
+      "profitPerHa": "Hektar başına kâr",
+      "costPerYieldUnit": "Verim birimi başına maliyet",
+      "breakEvenYield": "Başabaş verim",
+      "breakEvenPrice": "Başabaş fiyat",
+      "roi": "Yatırım getirisi",
+      "formulasTitle": "Nasıl hesaplanır",
+      "perAcre": "acre başına",
+      "perHectare": "hektar başına",
+      "loss": "zarar",
+      "openCropGuide": "Ürün kılavuzunu aç",
+      "openCalculator": "Gübre maliyetini hesapla"
+    },
+    "compare": {
+      "metaTitle": "Gübre ve Ürün Karşılaştırma — Besin Maliyeti Karşılaştırması",
+      "metaDescription": "Kendi piyasa fiyatlarınızı kullanarak gübreleri kg besin başına fiyatla karşılaştırın ve ürünleri doğrulanmış doz ve yetiştirme verileriyle karşılaştırın.",
+      "eyebrow": "Karşılaştır",
+      "title": "Yan yana karşılaştırın",
+      "desc": "Girdiğiniz fiyatlardan gübre besin maliyetleri — piyasa fiyatlarını asla tahmin etmeyiz. Ürün verileri yalnızca doğrulanmış rakamlardan gelir.",
+      "tabFertilizers": "Gübreler",
+      "tabCrops": "Ürünler",
+      "selectFertilizers": "Karşılaştırılacak gübreleri seçin",
+      "pricePerBag": "Torba başına fiyat",
+      "bagSize": "Torba boyutu (kg)",
+      "pricePerKgN": "kg N başına",
+      "pricePerKgP": "kg P₂O₅ başına",
+      "pricePerKgK": "kg K₂O başına",
+      "cheapest": "en ucuz",
+      "na": "—",
+      "userPriceNote": "Fiyatları siz girersiniz — gerçek bir karşılaştırma için torba başına yerel piyasa fiyatınızı girin.",
+      "viewFertilizer": "Kılavuzu görüntüle",
+      "selectCrops": "Karşılaştırılacak ürünleri seçin (en fazla 3)",
+      "dose": "NPK dozu / ha",
+      "season": "Mevsim",
+      "water": "Su",
+      "soil": "Toprak",
+      "inReview": "İnceleniyor",
+      "noDoseData": "Doz inceleniyor — tahmin edilmedi",
+      "viewGuide": "Ürün kılavuzunu aç"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — Gübre Bilimi ve Ürün Besleme Kılavuzları",
+    "metaDescription": "Pakistanlı ve Hintli çiftçiler için gübre dozları, NPK hesaplamaları, ürün besleme ve toprak sağlığı hakkında pratik kılavuzlar."
+  },
+  "fertilizers": {
+    "metaTitle": "Gübre Kütüphanesi — NPK Bileşimi, Kullanımlar ve Doz Rehberliği",
+    "metaDescription": "Urea, DAP, MOP, SSP, SOP ve daha fazlası için etiket-doğru NPK bileşimleri, faydalar, önlemler ve uygulama rehberliği."
+  },
+  "chart": {
+    "metaTitle": "Gübre Doz Tablosu — Hızlı NPK Referansı",
+    "metaDescription": "Hızlı referans gübre doz tablosu: urea, DAP ve MOP miktarlarıyla ürüne göre NPK önerileri."
+  },
+  "auth": {
+    "loginTitle": "Giriş yap",
+    "loginDesc": "Bahçenize, kaydedilen öğelerinize ve yönetici araçlarına erişin.",
+    "signupTitle": "Hesap oluştur",
+    "signupDesc": "Bahçenizi buluta kaydedin ve cihazlar arasında senkronize edin.",
+    "name": "Ad",
+    "email": "E-posta",
+    "password": "Şifre",
+    "loginCta": "Giriş yap",
+    "signupCta": "Hesap oluştur",
+    "noAccount": "Henüz hesabınız yok mu?",
+    "haveAccount": "Zaten hesabınız var mı?",
+    "invalid": "Geçersiz e-posta veya şifre.",
+    "error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "accountTitle": "Hesabım",
+    "role": "Rol",
+    "signOut": "Çıkış yap",
+    "adminLink": "Yönetici panelini aç",
+    "gardenNote": "Giriş yaptığınızda bahçeniz artık hesabınızla senkronize olur."
   }
 }

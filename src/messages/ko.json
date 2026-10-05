@@ -4,6 +4,576 @@
     "name": "Korean",
     "nativeName": "한국어",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "작물을 선택하고 에이커·카날·말라·hectare 등 평소에 사용하시는 단위로 농지 면적을 입력하세요. Urea·DAP·MOP의 정확한 양과 생육 단계별 시비 일정을 확인할 수 있습니다.",
+    "empty": {
+      "desc": "작물을 선택하고 농지 면적을 입력한 뒤 계산 버튼을 눌러주세요. 모든 계산 과정이 표시됩니다.",
+      "title": "계산 결과가 여기에 표시됩니다"
+    },
+    "eyebrow": "비료량 계산기",
+    "form": {
+      "area": "농지 면적",
+      "areaError": "0보다 큰 올바른 농지 면적을 입력해주세요.",
+      "areaLargeError": "면적이 비정상적으로 크게 보입니다. 수치와 단위를 다시 확인해주세요.",
+      "areaPlaceholder": "예: 5",
+      "crop": "작물",
+      "cropHint": "검증된 권장량이 있는 작물만 선택할 수 있습니다.",
+      "inReview": "검토 중인 데이터",
+      "soil": "토양 유형 (선택사항)",
+      "soilHint": "토양 유형은 계산식을 바꾸지 않지만 조언을 바꿉니다. 사질토에서는 질소가 쉽게 유실되고, 염류 토양에서는 MOP 사용에 주의가 필요합니다.",
+      "submit": "비료량 계산",
+      "unit": "단위"
+    },
+    "method": {
+      "desc": "블랙박스가 아닙니다. 농학 수업에서 배우는 DAP 우선의 표준 절차 그대로입니다.",
+      "eyebrow": "계산 방법",
+      "title": "계산 방법을 알기 쉽게 설명"
+    },
+    "results": {
+      "bags": "× 50 kg 포대",
+      "disclaimer": "추정치는 공표된 권장량을 따릅니다. 시비 전에 지역 농업지도사와 상담하세요.",
+      "howTitle": "계산 과정",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "시비 일정",
+      "soilDefault": "표준량을 표시합니다. 토양 검정 후 조정하세요.",
+      "soilNoteLabel": "토양 메모:",
+      "sourceLabel": "데이터 출처:",
+      "total": "비료 합계",
+      "kgUnit": "kg",
+      "recommendedLine": "권장 {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "\"{soil}\"을(를) 선택하셨습니다. {soilLower} 토양에서는 비료량을 바꾸기 전에 토양 검정을 권장합니다. 위의 기본 계산은 그대로 유지됩니다."
+    },
+    "title": "계산 과정까지 보이는 정확한 비료량.",
+    "metaTitle": "Fertilizer Dose Calculator — 에이커·카날·말라 대응 Urea·DAP·MOP 비료량 계산",
+    "metaDescription": "밀·벼·옥수수의 Urea·DAP·MOP 정확한 비료량을 계산하세요. 에이커·카날·말라·hectare로 면적 입력 — 모든 계산 단계를 확인できます.",
+    "methodFaq": [
+      {
+        "q": "왜 DAP를 먼저 계산하나요?",
+        "a": "인은 토양에서 이동하지 않기 때문에 P₂O₅ 전량은 파종 시 DAP로 공급해야 합니다. DAP에는 18%의 질소도 들어 있어 총 질소 필요량에 포함됩니다. DAP를 먼저 계산하면 그만큼의 질소를 빼고 Urea를 계산할 수 있어 질소를 이중으로 주는 일을 막을 수 있습니다."
+      },
+      {
+        "q": "카날과 말라는 어떻게 환산되나요?",
+        "a": "1에이커 = 8카날 = 160말라, 1카날 = 20말라입니다. 미터법으로는 1에이커 = 0.4047 hectare, 1카날 = 0.0506 hectare, 1말라 = 0.00253 hectare입니다. 계산기는 면적을 hectare로 환산해 hectare당 비료량을 적용한 뒤 원래 단위로 되돌립니다."
+      },
+      {
+        "q": "왜 일부 작물은 선택할 수 없나요?",
+        "a": "작물은 권장 NPK량이 공표된 자료로 검증된 경우에만 선택할 수 있습니다. 수치를 추측하느니 차라리 해당 작물을 비활성화합니다. 미검증 작물은 확인될 때까지 \"검토 중인 데이터\"로 표시됩니다."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "다크 모드로 전환",
+    "themeLight": "라이트 모드로 전환"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "표준 농학 공식을 사용합니다: 비료(kg) = (필요 양분 × 100) ÷ 비료 중 양분 %. DAP 우선으로 적용합니다 — DAP에서 인을, 남은 질소는 Urea에서(DAP의 18% 질소 반영), 칼륨은 MOP에서 공급하며 모든 단계를 보여줍니다.",
+        "q": "비료량은 어떻게 계산되나요?"
+      },
+      {
+        "a": "에이커, 카날, 말라, hectare입니다. 환산율: 1에이커 = 8카날 = 160말라, 1카날 = 20말라, 1 hectare = 2.471에이커.",
+        "q": "지원되는 토지 단위는 무엇인가요?"
+      },
+      {
+        "a": "공표된 주·연구기관 권장(예: PAU 재배 지침)을 지역 태그와 함께 사용합니다. 계산기의 모든 수치에는 출처가 표기되며, 검증된 출처가 없는 작물은 추측하지 않고 '검토 중인 데이터'로 표시됩니다.",
+        "q": "작물 양분 수치는 어디에서 왔나요?"
+      },
+      {
+        "a": "아니요. AI가 가능성을 제시하고 불확실성도 명시하지만, 작물 방제 전 — 특히 살포 전 — 에는 반드시 지역 농업지도사와 상담하세요.",
+        "q": "Plant Doctor가 농학자를 대신할 수 있나요?"
+      },
+      {
+        "a": "네. 계산기, 라이브러리, 가이드는 무료입니다. 계정이 필요한 것은 진단 저장 같은 기능뿐입니다.",
+        "q": "Fertilizer Dose는 무료인가요?"
+      }
+    ],
+    "title": "농민들이 자주 묻는 질문",
+    "metaTitle": "FAQ — Fertilizer Dose 자주 묻는 질문과 답변",
+    "metaDescription": "비료량 계산, NPK 공식, 에이커·카날·말라 단위, 데이터 출처, Plant Doctor에 대한 답변."
+  },
+  "footer": {
+    "company": "회사 정보",
+    "disclaimer": "추정치는 공표된 권장량을 따릅니다. 시비 전에는 반드시 지역 농업지도사 및 토양 검정으로 확인하세요.",
+    "library": "라이브러리",
+    "links": {
+      "about": "소개",
+      "blog": "블로그",
+      "calculator": "Fertilizer Dose Calculator",
+      "charts": "비료량 차트",
+      "contact": "문의하기",
+      "crops": "작물 라이브러리",
+      "faq": "FAQ",
+      "fertilizers": "비료 라이브러리",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "개인정보처리방침",
+      "terms": "이용약관",
+      "wheat": "밀 가이드",
+      "plants": "식물 라이브러리",
+      "vegetables": "채소 라이브러리",
+      "plantingCalendar": "파종 캘린더",
+      "myGarden": "나의 정원",
+      "profitCalculator": "수익 계산기",
+      "compare": "비교"
+    },
+    "rights": "무단 복제·전재를 금합니다.",
+    "tagline": "실제 농학 데이터 기반의 정확한 비료량 — 밀, 벼, 옥수수 등. 파키스탄과 인도의 농민을 위해 만들었습니다.",
+    "tools": "도구"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "블로그에서",
+      "minRead": "분 소요",
+      "title": "비료량의 '왜'를 배워보세요"
+    },
+    "crops": {
+      "desc": "공표 자료 기반 hectare당 권장 N–P₂O₅–K₂O량. '검토 중' 작물은 절대 추측하지 않습니다 — 검증된 데이터만 게재합니다.",
+      "eyebrow": "작물 라이브러리",
+      "inReview": "검토 중",
+      "openGuide": "작물 가이드 열기",
+      "perHa": "kg/ha",
+      "reviewNote": "권장량 검증 중",
+      "title": "실제로 재배하는 작물의 비료량",
+      "verified": "검증된 데이터"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "선명한 잎·식물 사진을 올리세요 — AI가 시각적 증상을 읽습니다.",
+          "t": "사진 우선 진단"
+        },
+        {
+          "d": "모든 제안에는 낮음·중간·높음 신뢰도를 명시합니다. 근거 없는 단정은 하지 않습니다.",
+          "t": "솔직한 불확실성 표시"
+        },
+        {
+          "d": "원인, 즉시 조치, 예방법 — 농업지도사에게 연락해야 할 시점까지.",
+          "t": "실행 가능한 다음 단계"
+        }
+      ],
+      "cta": "Plant Doctor 열기",
+      "desc": "잎 사진을 올리고 보이는 증상을 설명하면 구조적인 진단을 받을 수 있습니다 — 가능한 문제, 원인 후보, 다음 조치와 예방법까지.",
+      "dropSub": "JPG·PNG·WebP · 최대 5 MB",
+      "dropTitle": "잎 사진을 여기에 놓으세요",
+      "eyebrow": "AI Plant Doctor",
+      "serverNote": "Gemini로 서버에서 실행 — API 키가 브라우저에 노출되지 않습니다.",
+      "title": "작물에 이상이 있나요? Plant Doctor에게 물어보세요."
+    },
+    "fertilizers": {
+      "browse": "비료 라이브러리 전체 보기 →",
+      "desc": "라벨 그대로의 정확한 NPK 조성. 이 퍼센트들이 모든 비료량 계산의 토대입니다.",
+      "eyebrow": "비료 라이브러리",
+      "thBest": "적합한 용도",
+      "thName": "비료",
+      "title": "포대 속 성분을 정확히 알기",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "비료량 계산하기",
+      "desc": "적정 비료량은 비용을 아끼고, 토양을 지키고, 수량을 올립니다. 1분도 걸리지 않습니다.",
+      "title": "추측은 그만. 계산을 시작하세요."
+    },
+    "hero": {
+      "ctaCalc": "내 비료량 계산하기",
+      "ctaDoctor": "식물 진단하기",
+      "stats": [
+        {
+          "s": "모든 수치에 출처 표기",
+          "t": "출처 있는 데이터"
+        },
+        {
+          "s": "표준 NPK 계산법",
+          "t": "DAP 우선"
+        },
+        {
+          "s": "에이커 · 카날 · 말라 · ha",
+          "t": "4개 단위"
+        }
+      ],
+      "subtitle": "Fertilizer Dose는 공표된 농학 권장량을 에이커·카날·말라 단위의 정확한 비료량으로 바꿔줍니다. 실제 데이터만, 계산 과정 전부 공개, 추측은 일절 없습니다.",
+      "tagline": "비료량, 정확하게.",
+      "title": "작물에 필요한 <em>비료</em>의 양을 정확히 알아보세요."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "작물과 면적을 에이커·카날·말라·hectare로 입력 — Urea·DAP·MOP의 정확한 양을 계산 과정과 함께 확인하세요.",
+          "title": "비료량 계산기"
+        },
+        {
+          "desc": "잎 사진을 올리고 증상을 설명하면 원인·조치·예방법이 담긴 AI 진단을 받을 수 있습니다.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "주요 비료의 라벨 그대로의 NPK 조성, 효과, 주의사항과 시비 가이드.",
+          "title": "비료 라이브러리"
+        },
+        {
+          "desc": "밀, 벼, 옥수수, 목화, 사탕수수, 감자의 계절·토양·물·생육 단계와 흔한 문제.",
+          "title": "작물 라이브러리"
+        },
+        {
+          "title": "수익 계산기",
+          "desc": "수량·가격·비용 가정을 직접 입력 — 에이커·hectare당 순이익, 손익분기점, ROI를 확인하세요."
+        },
+        {
+          "title": "비교",
+          "desc": "직접 입력한 가격 기준 비료 양분 비용 비교, 검증된 데이터 기준 작물 비료량 비교."
+        }
+      ],
+      "eyebrow": "주요 도구",
+      "title": "재배자에게 필요한 모든 것을 한곳에"
+    },
+    "why": {
+      "eyebrow": "Fertilizer Dose를 선택하는 이유",
+      "items": [
+        {
+          "d": "모든 NPK 수치와 작물 비료량에는 출처를 명시합니다. 추측한 숫자는 절대 없습니다.",
+          "t": "실제 수치만"
+        },
+        {
+          "d": "각 결과는 계산식을 단계별로 설명합니다 — 펜으로 검산해보셔도 좋습니다.",
+          "t": "계산 과정 공개"
+        },
+        {
+          "d": "에이커, 카날, 말라, hectare. 평소에 재는 단위 그대로 입력하세요.",
+          "t": "익숙한 단위로"
+        },
+        {
+          "d": "시스템 설정과 눈을 배려하는 완벽한 라이트·다크 테마.",
+          "t": "라이트 & 다크"
+        }
+      ],
+      "regionCta": "계산기 사용해보기",
+      "regionDesc": "기본 권장량은 펀자브(파키스탄)와 북인도 농학 지침을 따르며 모든 수치에 지역 태그가 붙습니다. 단위·용어·작물 달력은 현지의 실제 영농에 맞춰져 있습니다.",
+      "regionTitle": "지역에 뿌리내림",
+      "title": "약속이 아닌 증거로 만듭니다"
+    },
+    "metaTitle": "Fertilizer Dose — 에이커·카날·말라·hectare 대응 NPK 비료량 계산기",
+    "metaDescription": "밀·벼·옥수수 등의 Urea·DAP·MOP 정확한 비료량을 계산하세요. 에이커·카날·말라·hectare 지원 무료 NPK 비료 계산기. 작물 가이드와 파종 캘린더 포함.",
+    "grow": {
+      "eyebrow": "재배",
+      "title": "작물·식물·채소",
+      "desc": "하나의 재배 라이브러리: 검증된 비료량의 밭작물에, 솔직하게 검토 중인 채소·식물 데이터까지.",
+      "cards": [
+        {
+          "title": "작물",
+          "desc": "밀, 벼, 옥수수, 목화 등 — 공표된 검증 NPK 비료량 포함."
+        },
+        {
+          "title": "채소",
+          "desc": "토마토, 양파, 고추, 오크라 등. 검증 후에만 데이터를 게재합니다."
+        },
+        {
+          "title": "식물",
+          "desc": "가정 정원용 꽃·실내식물·야외식물·과수."
+        }
+      ],
+      "browse": "보기"
+    },
+    "planting": {
+      "eyebrow": "파종 캘린더",
+      "title": "이번 달에는 무엇을 심을까요?",
+      "desc": "거주 지역에 맞춘 파종 캘린더 — 획일적인 추측은 하지 않습니다. 모든 파종 적기에 출처와 검증 배지가 붙습니다.",
+      "cta": "파종 캘린더 열기"
+    }
+  },
+  "language": {
+    "choose": "언어 선택",
+    "label": "언어"
+  },
+  "nav": {
+    "blog": "블로그",
+    "calculateDose": "비료량 계산",
+    "calculator": "비료량 계산기",
+    "closeMenu": "메뉴 닫기",
+    "crops": "작물",
+    "faq": "FAQ",
+    "fertilizers": "비료",
+    "home": "홈",
+    "mobileNav": "모바일 내비게이션",
+    "openMenu": "메뉴 열기",
+    "plantDoctor": "Plant Doctor",
+    "plants": "식물",
+    "vegetables": "채소",
+    "grow": "재배",
+    "plantingCalendar": "파종 캘린더",
+    "myGarden": "나의 정원",
+    "tools": "도구",
+    "profitCalculator": "수익 계산기",
+    "compare": "비교",
+    "login": "로그인",
+    "account": "계정",
+    "admin": "관리",
+    "logout": "로그아웃"
+  },
+  "plantDoctor": {
+    "desc": "선명한 사진을 올리고 증상을 설명해주세요. 솔직한 신뢰도와 함께 가능한 문제, 원인 후보, 다음 조치까지 구조적으로 진단해 드립니다.",
+    "eyebrow": "Plant Doctor",
+    "title": "잎을 보여주세요. 함께 읽어드릴게요.",
+    "metaTitle": "Plant Doctor — AI 작물 병해 진단",
+    "metaDescription": "작물 사진을 올리고 증상을 설명하면 원인·조치·예방법이 담긴 AI 진단을 받을 수 있습니다."
+  },
+  "growing": {
+    "searchPlaceholder": "이름으로 검색…",
+    "filterAll": "전체",
+    "filterVerified": "검증됨",
+    "filterInReview": "검토 중",
+    "verifiedBadge": "검증된 데이터",
+    "inReviewBadge": "검토 중",
+    "verifiedDose": "검증된 비료량",
+    "doseInReview": "비료량 검토 중",
+    "resultsCount": "{count}건",
+    "noResults": "일치하는 결과가 없습니다",
+    "noResultsHint": "철자를 바꾸거나 검색을 지워보세요.",
+    "noData": "검증된 데이터가 아직 없습니다.",
+    "noDataHint": "농학 수치는 공표 자료로 검증한 뒤에만 게재합니다 — 추측하지 않습니다.",
+    "sections": {
+      "fertilizer": "비료 권장",
+      "growingConditions": "재배 조건",
+      "soil": "토양",
+      "water": "물",
+      "sunlight": "일조",
+      "climate": "기후",
+      "season": "재배 계절",
+      "sowingWindow": "파종·심기 적기",
+      "harvestWindow": "수확기",
+      "regions": "적합 지역",
+      "stages": "생육 단계와 시비",
+      "deficiencies": "흔한 양분 결핍",
+      "problems": "주의할 점",
+      "references": "참고문헌",
+      "lastReviewed": "마지막 확인일"
+    },
+    "calculateCta": "내 농지로 계산하기",
+    "doctorCta": "증상이 보이나요? Plant Doctor 사용해보기 →",
+    "relatedFertilizers": "관련 비료",
+    "relatedItems": "관련",
+    "inReviewNotice": "{name}의 권장 비료량은 현재 공표 자료와 대조해 검증 중입니다. 확인된 뒤에만 게재합니다 — 추측하지 않습니다.",
+    "indexable": {
+      "cropsTitle": "모든 작물과 필요량을 한곳에.",
+      "plantsTitle": "모든 정원에 어울리는 식물.",
+      "vegetablesTitle": "채소, 밭에서 텃밭까지."
+    },
+    "subcategoryAll": "모든 종류"
+  },
+  "calendar": {
+    "metaTitle": "파종 캘린더 — 이번 달에 심을 것",
+    "metaDescription": "지역별 파종 캘린더: 이번 달 거주 지역에서 파종할 작물·채소·식물. 검증된 파종 적기만.",
+    "eyebrow": "파종 캘린더",
+    "title": "이번 달에는 무엇을 심을까요",
+    "desc": "국가와 지역을 선택하고 근거 있는 파종 적기를 확인하세요. 추측한 달력은 만들지 않습니다 — 모든 적기에 출처와 검증 상태가 표시됩니다.",
+    "country": "국가",
+    "region": "지역·주",
+    "month": "월",
+    "category": "분류",
+    "catAll": "전체",
+    "catCrop": "작물",
+    "catVegetable": "채소",
+    "catPlant": "식물",
+    "prevMonth": "이전 달",
+    "currentMonth": "이번 달",
+    "nextMonth": "다음 달",
+    "sowingWindow": "파종 적기",
+    "harvestWindow": "수확기",
+    "season": "계절",
+    "regionLabel": "지역",
+    "source": "출처",
+    "lastReviewed": "마지막 확인일",
+    "inReview": "검토 중",
+    "verified": "검증됨",
+    "emptyTitle": "이 지역·이 달의 검증된 파종 데이터가 아직 없습니다",
+    "emptyHint": "이 지역과 월의 파종 적기를 아직 검증하지 못했습니다. 추측한 달력을 보여드리느니 차라리 보여드리지 않겠습니다.",
+    "countryPages": {
+      "pakistanTitle": "파종 캘린더 — 파키스탄",
+      "pakistanDesc": "파키스탄 주별 파종 적기. 검증된 데이터만.",
+      "indiaTitle": "파종 캘린더 — 인도",
+      "indiaDesc": "인도 주별 파종 적기. 검증된 데이터만.",
+      "regionsTitle": "지역",
+      "hasData": "파종 데이터 있음",
+      "noDataYet": "데이터 검증 중",
+      "openCalendar": "파종 캘린더 열기"
+    }
+  },
+  "garden": {
+    "metaTitle": "나의 정원 — 포장·파종·비료 계획 관리",
+    "metaDescription": "나만의 정원 대시보드: 포장, 파종, 생육 단계, 저장한 비료 계산과 알림. 브라우저에 비공개로 저장됩니다.",
+    "eyebrow": "나의 정원",
+    "title": "나의 정원",
+    "desc": "포장과 심은 작물, 비료 계획을 한곳에서 관리하세요.",
+    "localNote": "이 브라우저에 저장됩니다. 여러 기기에서 정원을 동기화하려면 로그인하세요.",
+    "loading": "정원을 불러오는 중…",
+    "newPlot": "포장 추가",
+    "editPlot": "포장 수정",
+    "deletePlot": "포장 삭제",
+    "confirmDeletePlot": "이 포장과 모든 파종 기록을 삭제할까요? 되돌릴 수 없습니다.",
+    "plotName": "포장 이름",
+    "plotNamePh": "예: 앞밭",
+    "location": "위치",
+    "locationPh": "예: 마을 이름 (선택사항)",
+    "region": "지역 (파종 제안용)",
+    "regionNone": "지역 없음 — 파종 제안 건너뛰기",
+    "area": "면적",
+    "soilType": "토양 유형",
+    "soilUnknown": "미지정",
+    "notes": "메모",
+    "notesPh": "기억해둘 만한 것…",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "noPlots": "아직 포장이 없습니다",
+    "noPlotsHint": "첫 포장을 추가하고 파종·단계·알림 관리를 시작하세요.",
+    "overview": "개요",
+    "plots": "포장",
+    "activePlantings": "재배 중인 파종",
+    "upcomingTasks": "예정된 작업",
+    "seasonalSuggestions": "계절별 제안",
+    "savedCalculations": "저장된 계산",
+    "statPlots": "포장",
+    "statPlantings": "파종",
+    "statTasks": "미완료 작업",
+    "addPlanting": "파종 추가",
+    "plantingWhat": "작물·식물·채소",
+    "plantedOn": "파종일",
+    "stage": "생육 단계",
+    "stagePh": "예: 분얼기 (선택사항)",
+    "plantedDaysAgo": "{days}일 전 파종",
+    "harvestWindow": "수확기",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "이 파종 기록을 삭제할까요? 되돌릴 수 없습니다.",
+    "markDone": "완료로 표시",
+    "reopen": "다시 열기",
+    "addReminder": "알림 추가",
+    "reminderTitle": "알림",
+    "reminderTitlePh": "예: Urea 2차 분시",
+    "dueDate": "기한",
+    "confirmDeleteReminder": "이 알림을 삭제할까요?",
+    "noTasks": "예정된 작업이 없습니다. 알림을 추가해 계획을 지키세요.",
+    "noSuggestions": "지금은 파종 제안이 없습니다. 포장에 지역을 설정하면 계절별 제안을 받을 수 있습니다.",
+    "noCalculations": "저장된 계산이 아직 없습니다. 비료량 계산기에서 계산하고 결과를 여기에 저장하세요.",
+    "viewInCalculator": "비료량 계산기 열기",
+    "suggestionCta": "{plot}에 {item} 파종",
+    "overdue": "기한 초과",
+    "done": "완료",
+    "backToGarden": "나의 정원으로 돌아가기",
+    "saveCalculation": "나의 정원에 저장",
+    "savedToGarden": "나의 정원에 저장됨",
+    "viewGarden": "나의 정원 보기"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "수익 계산기 — 농업 이익·손익분기점·ROI",
+      "metaDescription": "수량·가격·비용 가정을 직접 입력해 작물 이익을 추정합니다. 투명한 계산식, 손익분기 수량·가격, 에이커·hectare별 표시.",
+      "eyebrow": "수익 계산기",
+      "title": "이 작물이 돈을 벌 수 있을까요?",
+      "desc": "예상 수량, 시장 가격, 모든 투입 비용을 직접 입력하세요. 계산은 완전히 투명하며 추측한 수치를 미리 입력하지 않습니다.",
+      "assumptionNote": "아래 수치는 모두 입력하신 숫자에서 나옵니다. 시장 가격·수량·비용을 저희가 임의로 추가하지 않습니다.",
+      "crop": "작물 (선택사항)",
+      "noCrop": "작물 선택…",
+      "area": "면적",
+      "yieldPerUnit": "에이커당 예상 수량",
+      "yieldUnit": "수량 단위",
+      "yieldUnitPh": "예: maunds, kg, tons",
+      "pricePerYieldUnit": "수량 단위당 예상 가격",
+      "currency": "통화 표기",
+      "currencyPh": "예: Rs, PKR, ₹",
+      "costsTitle": "투입 비용 (입력하신 수치)",
+      "costSeed": "종자",
+      "costFertilizer": "비료",
+      "costPesticide": "농약·제초제",
+      "costLabor": "노동력",
+      "costIrrigation": "관개·물",
+      "costRent": "지대",
+      "costOther": "기타",
+      "calculate": "수익 계산",
+      "reset": "초기화",
+      "print": "인쇄",
+      "saveScenario": "시나리오 저장",
+      "scenarioName": "시나리오 이름",
+      "scenarioNamePh": "예: 밀 2026 — 5에이커",
+      "scenarios": "저장된 시나리오",
+      "noScenarios": "저장된 시나리오가 아직 없습니다.",
+      "deleteScenario": "삭제",
+      "results": "결과",
+      "revenue": "총수입",
+      "totalCost": "총비용",
+      "netProfit": "순이익",
+      "profitPerAcre": "에이커당 이익",
+      "profitPerHa": "hectare당 이익",
+      "costPerYieldUnit": "수량 단위당 비용",
+      "breakEvenYield": "손익분기 수량",
+      "breakEvenPrice": "손익분기 가격",
+      "roi": "투자수익률",
+      "formulasTitle": "계산 방법",
+      "perAcre": "에이커당",
+      "perHectare": "hectare당",
+      "loss": "손실",
+      "openCropGuide": "작물 가이드 열기",
+      "openCalculator": "비료 비용 계산"
+    },
+    "compare": {
+      "metaTitle": "비료·작물 비교 — 양분 비용 비교",
+      "metaDescription": "직접 입력한 시장 가격으로 비료의 양분당 가격을 비교하고, 검증된 비료량과 재배 데이터로 작물을 비교합니다.",
+      "eyebrow": "비교",
+      "title": "나란히 비교",
+      "desc": "비료 양분 비용은 입력하신 가격 기준 — 시장 가격을 추측하지 않습니다. 작물 데이터는 검증된 수치만 사용합니다.",
+      "tabFertilizers": "비료",
+      "tabCrops": "작물",
+      "selectFertilizers": "비교할 비료 선택",
+      "pricePerBag": "포대당 가격",
+      "bagSize": "포대 크기 (kg)",
+      "pricePerKgN": "N 1 kg당",
+      "pricePerKgP": "P₂O₅ 1 kg당",
+      "pricePerKgK": "K₂O 1 kg당",
+      "cheapest": "최저가",
+      "na": "—",
+      "userPriceNote": "가격은 직접 입력합니다 — 정확한 비교를 위해 지역 시장 가격을 포대당으로 입력해주세요.",
+      "viewFertilizer": "가이드 보기",
+      "selectCrops": "비교할 작물 선택 (최대 3개)",
+      "dose": "NPK 비료량 / ha",
+      "season": "계절",
+      "water": "물",
+      "soil": "토양",
+      "inReview": "검토 중",
+      "noDoseData": "비료량 검토 중 — 추측하지 않음",
+      "viewGuide": "작물 가이드 열기"
+    }
+  },
+  "blog": {
+    "metaTitle": "블로그 — 비료 과학과 작물 영양 가이드",
+    "metaDescription": "파키스탄과 인도 농민을 위한 비료량·NPK 계산·작물 영양·토양 건강 실용 가이드."
+  },
+  "fertilizers": {
+    "metaTitle": "비료 라이브러리 — NPK 조성·용도·시비 가이드",
+    "metaDescription": "Urea·DAP·MOP·SSP·SOP 등의 라벨 그대로의 NPK 조성, 효과, 주의사항과 시비 가이드."
+  },
+  "chart": {
+    "metaTitle": "Fertilizer Dose — 비료량 차트·NPK 간편 참조표",
+    "metaDescription": "비료량 간편 참조 차트: 작물별 NPK 권장량과 Urea·DAP·MOP 양."
+  },
+  "auth": {
+    "loginTitle": "로그인",
+    "loginDesc": "정원, 저장 항목, 관리 도구에 접근합니다.",
+    "signupTitle": "계정 만들기",
+    "signupDesc": "정원을 클라우드에 저장하고 기기 간에 동기화합니다.",
+    "name": "이름",
+    "email": "이메일",
+    "password": "비밀번호",
+    "loginCta": "로그인",
+    "signupCta": "계정 만들기",
+    "noAccount": "계정이 없으신가요?",
+    "haveAccount": "이미 계정이 있으신가요?",
+    "invalid": "이메일 또는 비밀번호가 올바르지 않습니다.",
+    "error": "문제가 발생했습니다. 다시 시도해주세요.",
+    "accountTitle": "내 계정",
+    "role": "권한",
+    "signOut": "로그아웃",
+    "adminLink": "관리 대시보드 열기",
+    "gardenNote": "로그인 중에는 정원이 계정에 동기화됩니다."
   }
 }

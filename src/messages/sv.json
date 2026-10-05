@@ -4,6 +4,576 @@
     "name": "Swedish",
     "nativeName": "Svenska",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Välj din gröda, ange din areal i den enhet du använder – acre, kanal, marla eller hektar – och få exakta mängder urea, DAP och MOP plus ett schema för spridning per tillväxtstadium.",
+    "empty": {
+      "desc": "Välj en gröda, ange din areal och tryck på beräkna. Varje steg i beräkningen visas.",
+      "title": "Din dos visas här"
+    },
+    "eyebrow": "Dosberäknare",
+    "form": {
+      "area": "Areal",
+      "areaError": "Ange en giltig areal större än noll.",
+      "areaLargeError": "Den arealen ser ovanligt stor ut – kontrollera värdet och enheten.",
+      "areaPlaceholder": "t.ex. 5",
+      "crop": "Gröda",
+      "cropHint": "Endast grödor med verifierade rekommendationer kan väljas.",
+      "inReview": "data under granskning",
+      "soil": "Jordtyp (valfritt)",
+      "soilHint": "Jordtypen ändrar inte beräkningen – den ändrar rådgivningen. Sandjordar läcker kväve snabbare; salthaltiga jordar kräver försiktighet med MOP.",
+      "submit": "Beräkna dos",
+      "unit": "Enhet"
+    },
+    "method": {
+      "desc": "Ingen svart låda. Detta är samma DAP-först-metod som lärs ut i agronomiutbildningar.",
+      "eyebrow": "Metod",
+      "title": "Metoden, med enkla ord"
+    },
+    "results": {
+      "bags": "× 50 kg-säckar",
+      "disclaimer": "Uppskattningar följer publicerade rekommendationer. Bekräfta med din lokala lantbruksrådgivare före spridning.",
+      "howTitle": "Så här beräknades detta",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Spridningsschema",
+      "soilDefault": "Standarddos visas. Justera efter ett jordprov.",
+      "soilNoteLabel": "Jordnotering:",
+      "sourceLabel": "Datakälla:",
+      "total": "Total gödsel",
+      "kgUnit": "kg",
+      "recommendedLine": "Rekommenderat {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Du valde ”{soil}”. På {soilLower}jordar bör du överväga ett jordprov innan du ändrar dosen – grundberäkningen ovan förblir densamma."
+    },
+    "title": "Exakt gödseldos, med beräkningen visad.",
+    "metaTitle": "Gödseldosberäknare — Urea, DAP & MOP per Acre/Kanal/Marla",
+    "metaDescription": "Beräkna exakta doser av urea, DAP och MOP för vete, ris och majs. Ange areal i acre, kanal, marla eller hektar – se varje beräkningssteg.",
+    "methodFaq": [
+      {
+        "q": "Varför beräknas DAP först?",
+        "a": "Fosfor är orörligt i jorden, så hela P₂O₅-dosen måste komma från DAP vid sådd. DAP innehåller också 18 % kväve, som räknas mot det totala kvävebehovet – genom att beräkna DAP först kan vi dra av det kvävet innan vi beräknar urea, så att du aldrig dubbeldoserar kväve."
+      },
+      {
+        "q": "Hur omvandlas kanal och marla?",
+        "a": "1 acre = 8 kanal = 160 marla, och 1 kanal = 20 marla. Metriskt: 1 acre = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Beräknaren omvandlar din areal till hektar, tillämpar dosen per hektar och skalar sedan tillbaka."
+      },
+      {
+        "q": "Varför är vissa grödor inaktiverade?",
+        "a": "En gröda kan bara väljas när dess rekommenderade NPK-dos är verifierad mot en publicerad källa. Vi inaktiverar hellre en gröda än hittar på dess värden – overifierade grödor är märkta ”data under granskning” tills de bekräftats."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Växla till mörkt läge",
+    "themeLight": "Växla till ljust läge"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Med den agronomiska standardformeln: gödsel (kg) = (behövt näringsämne × 100) ÷ näringsämnets % i gödseln. Vi tillämpar den DAP-först – fosfor från DAP, sedan återstående kväve från urea (med hänsyn till DAP:s 18 % kväve), sedan kalium från MOP – och visar varje steg.",
+        "q": "Hur beräknas gödseldosen?"
+      },
+      {
+        "a": "Acre, kanal, marla och hektar. Omvandlingar som används: 1 acre = 8 kanal = 160 marla, 1 kanal = 20 marla, 1 hektar = 2,471 acre.",
+        "q": "Vilka ytenheter stöds?"
+      },
+      {
+        "a": "Från publicerade rekommendationer från provinser och forskningsinstitut (t.ex. PAU:s odlingsprogram), märkta per region. Varje värde i beräknaren har sin källhänvisning, och grödor utan verifierad källa är märkta ”data under granskning” snarare än gissade.",
+        "q": "Var kommer grödornas näringsvärden ifrån?"
+      },
+      {
+        "a": "Nej. Den ger AI-assisterade möjligheter med osäkerhetsformuleringar, men du bör alltid bekräfta med din lokala lantbruksrådgivare innan du behandlar en gröda – särskilt innan du sprutar något.",
+        "q": "Ersätter Plant Doctor en agronom?"
+      },
+      {
+        "a": "Ja – beräknaren, biblioteken och guiderna är gratis. Ett konto behövs bara för funktioner som att spara diagnoser.",
+        "q": "Är Fertilizer Dose gratis att använda?"
+      }
+    ],
+    "title": "Frågor som lantbrukare ställer oss",
+    "metaTitle": "FAQ — Svar på frågor om gödseldoser",
+    "metaDescription": "Svar om beräkning av gödseldoser, NPK-formler, enheterna acre/kanal/marla, datakällor och Plant Doctor."
+  },
+  "footer": {
+    "company": "Företaget",
+    "disclaimer": "Dosuppskattningar följer publicerade rekommendationer. Bekräfta alltid med din lokala lantbruksrådgivare och ett jordprov före spridning.",
+    "library": "Bibliotek",
+    "links": {
+      "about": "Om oss",
+      "blog": "Blogg",
+      "calculator": "Gödseldosberäknare",
+      "charts": "Dostabeller",
+      "contact": "Kontakt",
+      "crops": "Grödbibliotek",
+      "faq": "FAQ",
+      "fertilizers": "Gödselbibliotek",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Integritetspolicy",
+      "terms": "Användarvillkor",
+      "wheat": "Veteguide",
+      "plants": "Växtbibliotek",
+      "vegetables": "Grönsaksbibliotek",
+      "plantingCalendar": "Såkalender",
+      "myGarden": "Min trädgård",
+      "profitCalculator": "Vinstberäknare",
+      "compare": "Jämför"
+    },
+    "rights": "Alla rättigheter förbehållna.",
+    "tagline": "Exakta gödseldoser från verkliga agronomiska data – för vete, ris, majs och mer. Byggd för lantbrukare i Pakistan och Indien.",
+    "tools": "Verktyg"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Från bloggen",
+      "minRead": "min läsning",
+      "title": "Lär dig varför bakom dosen"
+    },
+    "crops": {
+      "desc": "Rekommenderat N–P₂O₅–K₂O per hektar från publicerade källor. Grödor märkta ”under granskning” gissas aldrig – data publiceras först när den verifierats.",
+      "eyebrow": "Grödbibliotek",
+      "inReview": "Under granskning",
+      "openGuide": "Öppna grödguide",
+      "perHa": "kg/ha",
+      "reviewNote": "Rekommendation verifieras",
+      "title": "Doser för grödorna du faktiskt odlar",
+      "verified": "Verifierad data"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Ladda upp ett tydligt blad- eller växtfoto – AI:n läser visuella symptom.",
+          "t": "Fotobaserad diagnos"
+        },
+        {
+          "d": "Varje förslag har låg / medel / hög konfidens. Ingen falsk säkerhet.",
+          "t": "Ärlig osäkerhet"
+        },
+        {
+          "d": "Orsaker, omedelbara åtgärder och förebyggande – plus när du ska ringa din lantbruksrådgivare.",
+          "t": "Åtgärdbara nästa steg"
+        }
+      ],
+      "cta": "Öppna Plant Doctor",
+      "desc": "Ladda upp ett bladfoton, beskriv vad du ser och få en strukturerad bedömning – möjliga problem, troliga orsaker, vad du ska göra härnäst och hur du förebygger.",
+      "dropSub": "JPG, PNG eller WebP · max 5 MB",
+      "dropTitle": "Släpp ett bladfoton här",
+      "eyebrow": "AI Plant Doctor",
+      "serverNote": "Körs serversidigt via Gemini – din API-nyckel når aldrig webbläsaren.",
+      "title": "Något fel med din gröda? Fråga Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Bläddra i hela gödselbiblioteket →",
+      "desc": "Etikettkorrekta NPK-sammansättningar. Dessa procentsatser är hela grunden för varje dosberäkning.",
+      "eyebrow": "Gödselbibliotek",
+      "thBest": "Bäst för",
+      "thName": "Gödsel",
+      "title": "Vet vad som faktiskt finns i säcken",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Beräkna gödseldos",
+      "desc": "Rätt dos sparar pengar, skyddar din jord och höjer skörden. Det tar mindre än en minut.",
+      "title": "Sluta gissa. Börja beräkna."
+    },
+    "hero": {
+      "ctaCalc": "Beräkna min dos",
+      "ctaDoctor": "Diagnostisera en växt",
+      "stats": [
+        {
+          "s": "Varje värde belagt",
+          "t": "Belagda data"
+        },
+        {
+          "s": "Standard NPK-metod",
+          "t": "DAP-först"
+        },
+        {
+          "s": "Acre · Kanal · Marla · ha",
+          "t": "4 enheter"
+        }
+      ],
+      "subtitle": "Fertilizer Dose förvandlar publicerade agronomiska rekommendationer till exakta gödseldoser per acre, kanal och marla – med verkliga data, varje beräkning visad och inget påhittat.",
+      "tagline": "Gödseldos, gjord rätt",
+      "title": "Vet exakt hur mycket <em>gödsel</em> din gröda behöver."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Ange gröda + areal i acre, kanal, marla eller hektar – få exakta mängder urea, DAP och MOP med varje beräkningssteg visat.",
+          "title": "Dosberäknare"
+        },
+        {
+          "desc": "Ladda upp ett bladfoton, beskriv symptomen och få en AI-assisterad diagnos med orsaker, åtgärder och förebyggande.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Etikettkorrekta NPK-sammansättningar, fördelar, försiktighetsåtgärder och spridningsvägledning för varje viktigt gödsel.",
+          "title": "Gödselbibliotek"
+        },
+        {
+          "desc": "Säsong, jord, vatten, tillväxtstadier och vanliga problem för vete, ris, majs, bomull, sockerrör och potatis.",
+          "title": "Grödbibliotek"
+        },
+        {
+          "title": "Vinstberäknare",
+          "desc": "Ange dina egna antaganden om skörd, pris och kostnader – se nettovinst, break-even och ROI per acre och per hektar."
+        },
+        {
+          "title": "Jämför",
+          "desc": "Gödselns näringskostnader sida vid sida från dina egna priser, och gröddoser från verifierade data."
+        }
+      ],
+      "eyebrow": "Huvudverktyg",
+      "title": "Allt en odlare behöver, på ett ställe"
+    },
+    "why": {
+      "eyebrow": "Varför Fertilizer Dose",
+      "items": [
+        {
+          "d": "Varje NPK-värde och gröddos är belagd och citerad. Inga påhittade siffror, någonsin.",
+          "t": "Endast verkliga siffror"
+        },
+        {
+          "d": "Varje resultat förklarar formeln steg för steg – kontrollräkna gärna med penna.",
+          "t": "Visar sitt arbete"
+        },
+        {
+          "d": "Acre, kanal, marla, hektar. Ange areal så som du mäter den.",
+          "t": "Talar dina enheter"
+        },
+        {
+          "d": "Ett komplett dag/natt-tema som respekterar din systeminställning och dina ögon.",
+          "t": "Ljust & mörkt"
+        }
+      ],
+      "regionCta": "Prova beräknaren",
+      "regionDesc": "Standardrekommendationer följer agronomisk vägledning för Punjab (Pakistan) och norra Indien, med regionmärkning på varje värde. Enheter, terminologi och grödkalendrar matchar hur jordbruk faktiskt fungerar här.",
+      "regionTitle": "Rotad i regionen",
+      "title": "Byggd på bevis, inte löften"
+    },
+    "metaTitle": "NPK-gödseldosberäknare — per Acre, Kanal, Marla & Hektar",
+    "metaDescription": "Beräkna exakta doser av urea, DAP & MOP för vete, ris, majs med mera. Gratis NPK-gödselberäknare med stöd för acre/kanal/marla/hektar, grödguider och såkalender.",
+    "grow": {
+      "eyebrow": "Odla",
+      "title": "Grödor, växter & grönsaker",
+      "desc": "Ett odlingsbibliotek: fältgrödor med verifierade gödseldoser, plus grönsaker och växter med ärliga, granskningsstyrda data.",
+      "cards": [
+        {
+          "title": "Grödor",
+          "desc": "Vete, ris, majs, bomull med mera – med verifierade NPK-doser där de publicerats."
+        },
+        {
+          "title": "Grönsaker",
+          "desc": "Tomat, lök, chili, okra med mera. Data publiceras först efter verifiering."
+        },
+        {
+          "title": "Växter",
+          "desc": "Blommande växter, inomhus-, utomhus- och fruktväxter för hemträdgårdar."
+        }
+      ],
+      "browse": "Bläddra"
+    },
+    "planting": {
+      "eyebrow": "Såkalender",
+      "title": "Vad ska odlas denna månad?",
+      "desc": "En regionsanpassad såkalender för din provins – inga generella gissningar. Varje fönster har källa och verifieringsstatus.",
+      "cta": "Öppna såkalendern"
+    }
+  },
+  "language": {
+    "choose": "Välj språk",
+    "label": "Språk"
+  },
+  "nav": {
+    "blog": "Blogg",
+    "calculateDose": "Beräkna dos",
+    "calculator": "Dosberäknare",
+    "closeMenu": "Stäng menyn",
+    "crops": "Grödor",
+    "faq": "FAQ",
+    "fertilizers": "Gödsel",
+    "home": "Hem",
+    "mobileNav": "Mobil navigering",
+    "openMenu": "Öppna menyn",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Växter",
+    "vegetables": "Grönsaker",
+    "grow": "Odla",
+    "plantingCalendar": "Såkalender",
+    "myGarden": "Min trädgård",
+    "tools": "Verktyg",
+    "profitCalculator": "Vinstberäknare",
+    "compare": "Jämför",
+    "login": "Logga in",
+    "account": "Konto",
+    "admin": "Admin",
+    "logout": "Logga ut"
+  },
+  "plantDoctor": {
+    "desc": "Ladda upp ett tydligt foto, beskriv symptomen och få en strukturerad bedömning – möjliga problem med ärliga konfidensnivåer, troliga orsaker och vad du ska göra härnäst.",
+    "eyebrow": "Plant Doctor",
+    "title": "Visa oss bladet. Vi hjälper dig att läsa det.",
+    "metaTitle": "Plant Doctor — AI-diagnos av grödproblem",
+    "metaDescription": "Ladda upp ett grödfoto och beskriv symptom för AI-assisterad diagnos med orsaker, åtgärder och förebyggande."
+  },
+  "growing": {
+    "searchPlaceholder": "Sök på namn…",
+    "filterAll": "Alla",
+    "filterVerified": "Verifierad",
+    "filterInReview": "Under granskning",
+    "verifiedBadge": "Verifierad data",
+    "inReviewBadge": "Under granskning",
+    "verifiedDose": "Verifierad dos",
+    "doseInReview": "Dos under granskning",
+    "resultsCount": "{count} poster",
+    "noResults": "Inga träffar hittades",
+    "noResultsHint": "Prova en annan stavning eller rensa sökningen.",
+    "noData": "Inga verifierade data tillgängliga ännu.",
+    "noDataHint": "Vi publicerar agronomiska värden först efter verifiering mot publicerade källor – aldrig gissade.",
+    "sections": {
+      "fertilizer": "Gödslingsrekommendation",
+      "growingConditions": "Odlingsförhållanden",
+      "soil": "Jord",
+      "water": "Vatten",
+      "sunlight": "Solljus",
+      "climate": "Klimat",
+      "season": "Odlingsäsong",
+      "sowingWindow": "Så- / planteringsfönster",
+      "harvestWindow": "Skördefönster",
+      "regions": "Lämpliga regioner",
+      "stages": "Tillväxtstadier & gödsling",
+      "deficiencies": "Vanliga näringsbrister",
+      "problems": "Se upp för",
+      "references": "Referenser",
+      "lastReviewed": "Senast granskad"
+    },
+    "calculateCta": "Beräkna för min areal",
+    "doctorCta": "Ser du symptom? Prova Plant Doctor →",
+    "relatedFertilizers": "Relaterade gödsel",
+    "relatedItems": "Relaterat",
+    "inReviewNotice": "Den rekommenderade dosen för {name} verifieras för närvarande mot publicerade källor. Vi publicerar den här först när den bekräftats – aldrig gissad.",
+    "indexable": {
+      "cropsTitle": "Varje gröda, dess behov, på ett ställe.",
+      "plantsTitle": "Växter för varje slags trädgård.",
+      "vegetablesTitle": "Grönsaker, från fält till köksträdgård."
+    },
+    "subcategoryAll": "Alla typer"
+  },
+  "calendar": {
+    "metaTitle": "Såkalender — Vad ska odlas denna månad",
+    "metaDescription": "Regionsanpassad såkalender: vilka grödor, grönsaker och växter du ska så denna månad i din provins. Endast verifierade fönster.",
+    "eyebrow": "Såkalender",
+    "title": "Vad ska odlas denna månad",
+    "desc": "Välj land och region och bläddra bland såfönstren vi kan stå bakom. Inga gissade kalendrar – varje fönster har sin källa och verifieringsstatus.",
+    "country": "Land",
+    "region": "Region / provins",
+    "month": "Månad",
+    "category": "Kategori",
+    "catAll": "Alla",
+    "catCrop": "Grödor",
+    "catVegetable": "Grönsaker",
+    "catPlant": "Växter",
+    "prevMonth": "Föregående månad",
+    "currentMonth": "Aktuell månad",
+    "nextMonth": "Nästa månad",
+    "sowingWindow": "Såfönster",
+    "harvestWindow": "Skördefönster",
+    "season": "Säsong",
+    "regionLabel": "Region",
+    "source": "Källa",
+    "lastReviewed": "Senast granskad",
+    "inReview": "Under granskning",
+    "verified": "Verifierad",
+    "emptyTitle": "Inga verifierade sådata här ännu",
+    "emptyHint": "Vi har ännu inte verifierat såfönster för denna region och månad. Vi visar hellre ingenting än en gissad kalender.",
+    "countryPages": {
+      "pakistanTitle": "Såkalender — Pakistan",
+      "pakistanDesc": "Såfönster per provins för Pakistan. Endast verifierade data.",
+      "indiaTitle": "Såkalender — Indien",
+      "indiaDesc": "Såfönster per delstat för Indien. Endast verifierade data.",
+      "regionsTitle": "Regioner",
+      "hasData": "Sådata tillgängliga",
+      "noDataYet": "Data under verifiering",
+      "openCalendar": "Öppna såkalendern"
+    }
+  },
+  "garden": {
+    "metaTitle": "Min trädgård — Följ lotter, planteringar & gödslingsplaner",
+    "metaDescription": "Din personliga trädgårdspanel: lotter, planteringar, tillväxtstadier, sparade gödselberäkningar och påminnelser. Lagras privat i din webbläsare.",
+    "eyebrow": "Min trädgård",
+    "title": "Min trädgård",
+    "desc": "Följ dina lotter, vad du planterat och dina gödslingsplaner – allt på ett ställe.",
+    "localNote": "Sparas i den här webbläsaren. Logga in för att synkronisera din trädgård mellan enheter.",
+    "loading": "Laddar din trädgård…",
+    "newPlot": "Lägg till lott",
+    "editPlot": "Redigera lott",
+    "deletePlot": "Ta bort lott",
+    "confirmDeletePlot": "Ta bort denna lott och alla dess planteringar? Detta kan inte ångras.",
+    "plotName": "Lottens namn",
+    "plotNamePh": "t.ex. Främre fältet",
+    "location": "Plats",
+    "locationPh": "t.ex. Byns namn (valfritt)",
+    "region": "Region (för såförslag)",
+    "regionNone": "Ingen region – hoppa över såförslag",
+    "area": "Areal",
+    "soilType": "Jordtyp",
+    "soilUnknown": "Ej angiven",
+    "notes": "Anteckningar",
+    "notesPh": "Allt värt att minnas…",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "delete": "Ta bort",
+    "noPlots": "Inga lotter ännu",
+    "noPlotsHint": "Lägg till din första lott för att följa planteringar, stadier och påminnelser.",
+    "overview": "Översikt",
+    "plots": "Lotter",
+    "activePlantings": "Aktiva planteringar",
+    "upcomingTasks": "Kommande uppgifter",
+    "seasonalSuggestions": "Säsongsförslag",
+    "savedCalculations": "Sparade beräkningar",
+    "statPlots": "lotter",
+    "statPlantings": "planteringar",
+    "statTasks": "öppna uppgifter",
+    "addPlanting": "Lägg till plantering",
+    "plantingWhat": "Gröda / växt / grönsak",
+    "plantedOn": "Planteringsdatum",
+    "stage": "Tillväxtstadium",
+    "stagePh": "t.ex. Bestockning (valfritt)",
+    "plantedDaysAgo": "planterad för {days} dagar sedan",
+    "harvestWindow": "Skördefönster",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Ta bort denna plantering? Detta kan inte ångras.",
+    "markDone": "Markera som klar",
+    "reopen": "Öppna igen",
+    "addReminder": "Lägg till påminnelse",
+    "reminderTitle": "Påminnelse",
+    "reminderTitlePh": "t.ex. Applicera andra ureagivan",
+    "dueDate": "Förfallodatum",
+    "confirmDeleteReminder": "Ta bort denna påminnelse?",
+    "noTasks": "Inga kommande uppgifter. Lägg till en påminnelse för att hålla kursen.",
+    "noSuggestions": "Inga såförslag just nu. Ange en region på dina lotter för att få säsongsförslag.",
+    "noCalculations": "Inga sparade beräkningar ännu. Kör dosberäknaren och spara ett resultat här.",
+    "viewInCalculator": "Öppna dosberäknaren",
+    "suggestionCta": "Så {item} i {plot}",
+    "overdue": "Försenad",
+    "done": "Klar",
+    "backToGarden": "Tillbaka till Min trädgård",
+    "saveCalculation": "Spara i Min trädgård",
+    "savedToGarden": "Sparad i Min trädgård",
+    "viewGarden": "Visa Min trädgård"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Vinstberäknare — Lantbruksvinst, break-even & ROI",
+      "metaDescription": "Uppskatta grödvinst från dina egna antaganden om skörd, pris och kostnader. Transparenta formler, break-even-skörd och -pris, vyer per acre och per hektar.",
+      "eyebrow": "Vinstberäknare",
+      "title": "Kommer denna gröda att ge vinst?",
+      "desc": "Ange dina egna antaganden – förväntad skörd, marknadspris och alla insatskostnader. Matematiken är helt transparent, och inget är förifyllt med gissade siffror.",
+      "assumptionNote": "Varje siffra nedan kommer från siffror du anger. Vi lägger inte till några egna marknadspriser, skördar eller kostnader.",
+      "crop": "Gröda (valfritt)",
+      "noCrop": "Välj en gröda…",
+      "area": "Areal",
+      "yieldPerUnit": "Förväntad skörd per acre",
+      "yieldUnit": "Skördeenhet",
+      "yieldUnitPh": "t.ex. maunds, kg, ton",
+      "pricePerYieldUnit": "Förväntat pris per skördeenhet",
+      "currency": "Valutabeteckning",
+      "currencyPh": "t.ex. Rs, PKR, ₹",
+      "costsTitle": "Insatskostnader (dina siffror)",
+      "costSeed": "Utsäde",
+      "costFertilizer": "Gödsel",
+      "costPesticide": "Bekämpningsmedel / ogräsmedel",
+      "costLabor": "Arbete",
+      "costIrrigation": "Bevattning / vatten",
+      "costRent": "Arrende",
+      "costOther": "Övrigt",
+      "calculate": "Beräkna vinst",
+      "reset": "Återställ",
+      "print": "Skriv ut",
+      "saveScenario": "Spara scenario",
+      "scenarioName": "Scenarionamn",
+      "scenarioNamePh": "t.ex. Vete 2026 — 5 acre",
+      "scenarios": "Sparade scenarier",
+      "noScenarios": "Inga sparade scenarier ännu.",
+      "deleteScenario": "Ta bort",
+      "results": "Resultat",
+      "revenue": "Total intäkt",
+      "totalCost": "Total kostnad",
+      "netProfit": "Nettovinst",
+      "profitPerAcre": "Vinst per acre",
+      "profitPerHa": "Vinst per hektar",
+      "costPerYieldUnit": "Kostnad per skördeenhet",
+      "breakEvenYield": "Break-even-skörd",
+      "breakEvenPrice": "Break-even-pris",
+      "roi": "Avkastning på investering",
+      "formulasTitle": "Så här beräknas det",
+      "perAcre": "per acre",
+      "perHectare": "per hektar",
+      "loss": "förlust",
+      "openCropGuide": "Öppna grödguide",
+      "openCalculator": "Beräkna gödselkostnad"
+    },
+    "compare": {
+      "metaTitle": "Jämför gödsel & grödor — Näringskostnadsjämförelse",
+      "metaDescription": "Jämför gödsel efter pris per kg näringsämne med dina egna marknadspriser, och grödor efter verifierad dos och odlingsdata.",
+      "eyebrow": "Jämför",
+      "title": "Jämför, sida vid sida",
+      "desc": "Gödselns näringskostnader från priser du anger – vi gissar aldrig marknadspriser. Gröddata kommer endast från verifierade siffror.",
+      "tabFertilizers": "Gödsel",
+      "tabCrops": "Grödor",
+      "selectFertilizers": "Välj gödsel att jämföra",
+      "pricePerBag": "Pris per säck",
+      "bagSize": "Säckstorlek (kg)",
+      "pricePerKgN": "per kg N",
+      "pricePerKgP": "per kg P₂O₅",
+      "pricePerKgK": "per kg K₂O",
+      "cheapest": "billigast",
+      "na": "—",
+      "userPriceNote": "Priserna anges av dig – ange ditt lokala marknadspris per säck för en sann jämförelse.",
+      "viewFertilizer": "Visa guide",
+      "selectCrops": "Välj grödor att jämföra (upp till 3)",
+      "dose": "NPK-dos / ha",
+      "season": "Säsong",
+      "water": "Vatten",
+      "soil": "Jord",
+      "inReview": "Under granskning",
+      "noDoseData": "Dos under granskning – inte gissad",
+      "viewGuide": "Öppna grödguide"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blogg — Gödselvetenskap & växtnäringsguider",
+    "metaDescription": "Praktiska guider om gödseldoser, NPK-beräkningar, växtnäring och jordhälsa för pakistanska och indiska lantbrukare."
+  },
+  "fertilizers": {
+    "metaTitle": "Gödselbibliotek — NPK-sammansättning, användning & dosvägledning",
+    "metaDescription": "Etikettkorrekta NPK-sammansättningar, fördelar, försiktighetsåtgärder och spridningsvägledning för urea, DAP, MOP, SSP, SOP med mera."
+  },
+  "chart": {
+    "metaTitle": "Gödseldostabell — NPK-snabbreferens",
+    "metaDescription": "Snabbreferens för gödseldoser: NPK-rekommendationer per gröda med mängder av urea, DAP och MOP."
+  },
+  "auth": {
+    "loginTitle": "Logga in",
+    "loginDesc": "Få åtkomst till din trädgård, sparade objekt och adminverktyg.",
+    "signupTitle": "Skapa konto",
+    "signupDesc": "Spara din trädgård i molnet och synka mellan enheter.",
+    "name": "Namn",
+    "email": "E-post",
+    "password": "Lösenord",
+    "loginCta": "Logga in",
+    "signupCta": "Skapa konto",
+    "noAccount": "Inget konto ännu?",
+    "haveAccount": "Har du redan ett konto?",
+    "invalid": "Ogiltig e-post eller lösenord.",
+    "error": "Något gick fel. Försök igen.",
+    "accountTitle": "Mitt konto",
+    "role": "Roll",
+    "signOut": "Logga ut",
+    "adminLink": "Öppna adminpanelen",
+    "gardenNote": "Din trädgård synkas nu till ditt konto när du är inloggad."
   }
 }

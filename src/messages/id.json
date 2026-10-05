@@ -4,6 +4,576 @@
     "name": "Indonesian",
     "nativeName": "Bahasa Indonesia",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Pilih tanaman Anda, masukkan luas lahan dalam satuan yang biasa Anda pakai — acre, kanal, marla, atau hectare — dan dapatkan takaran Urea, DAP, dan MOP yang tepat plus jadwal aplikasi per tahap pertumbuhan.",
+    "empty": {
+      "desc": "Pilih tanaman, masukkan luas lahan, lalu tekan hitung. Setiap langkah perhitungan ditampilkan.",
+      "title": "Dosis Anda akan muncul di sini"
+    },
+    "eyebrow": "Kalkulator dosis",
+    "form": {
+      "area": "Luas lahan",
+      "areaError": "Masukkan luas lahan yang valid dan lebih besar dari nol.",
+      "areaLargeError": "Luasnya terlihat sangat besar — mohon periksa kembali nilai dan satuannya.",
+      "areaPlaceholder": "cth. 5",
+      "crop": "Tanaman",
+      "cropHint": "Hanya tanaman dengan rekomendasi terverifikasi yang bisa dipilih.",
+      "inReview": "data sedang ditinjau",
+      "soil": "Jenis tanah (opsional)",
+      "soilHint": "Jenis tanah tidak mengubah hitungan — tapi mengubah sarannya. Tanah berpasir melarutkan nitrogen lebih cepat; tanah salin perlu hati-hati dengan MOP.",
+      "submit": "Hitung dosis",
+      "unit": "Satuan"
+    },
+    "method": {
+      "desc": "Bukan kotak hitam. Ini prosedur standar DAP-dulu yang diajarkan di kuliah agronomi.",
+      "eyebrow": "Metode",
+      "title": "Metodenya, dijelaskan sederhana"
+    },
+    "results": {
+      "bags": "× karung 50 kg",
+      "disclaimer": "Estimasi mengikuti rekomendasi yang dipublikasikan. Konfirmasikan dengan petugas pertanian setempat sebelum aplikasi.",
+      "howTitle": "Cara menghitungnya",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Jadwal aplikasi",
+      "soilDefault": "Dosis standar ditampilkan. Sesuaikan setelah uji tanah.",
+      "soilNoteLabel": "Catatan tanah:",
+      "sourceLabel": "Sumber data:",
+      "total": "Total pupuk",
+      "kgUnit": "kg",
+      "recommendedLine": "Dianjurkan {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Anda memilih \"{soil}\". Pada tanah {soilLower}, pertimbangkan uji tanah sebelum mengubah dosis — perhitungan dasar di atas tetap sama."
+    },
+    "title": "Dosis pupuk yang tepat, lengkap dengan hitungannya.",
+    "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
+    "metaDescription": "Hitung dosis Urea, DAP, dan MOP yang tepat untuk gandum, padi, dan jagung. Masukkan luas dalam acre, kanal, marla, atau hectare — lihat setiap langkah perhitungan.",
+    "methodFaq": [
+      {
+        "q": "Mengapa DAP dihitung lebih dulu?",
+        "a": "Fosfor tidak bergerak di dalam tanah, jadi seluruh dosis P₂O₅ harus berasal dari DAP saat tanam. DAP juga mengandung 18% nitrogen yang dihitung ke dalam total kebutuhan nitrogen — menghitung DAP lebih dulu memungkinkan kita mengurangkan nitrogen tersebut sebelum menghitung Urea, sehingga nitrogen tidak terhitung ganda."
+      },
+      {
+        "q": "Bagaimana kanal dan marla dikonversi?",
+        "a": "1 acre = 8 kanal = 160 marla, dan 1 kanal = 20 marla. Dalam metrik: 1 acre = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Kalkulator mengonversi luas Anda ke hectare, menerapkan dosis per hectare, lalu mengembalikannya."
+      },
+      {
+        "q": "Mengapa beberapa tanaman tidak bisa dipilih?",
+        "a": "Tanaman hanya bisa dipilih jika dosis NPK yang dianjurkan sudah terverifikasi terhadap sumber yang dipublikasikan. Kami lebih memilih menonaktifkan tanaman daripada mengarang angkanya — tanaman yang belum terverifikasi ditandai \"data sedang ditinjau\" hingga terkonfirmasi."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Beralih ke mode gelap",
+    "themeLight": "Beralih ke mode terang"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Dengan rumus agronomi standar: pupuk (kg) = (hara yang dibutuhkan × 100) ÷ % hara dalam pupuk. Kami menerapkannya DAP-dulu — fosfor dari DAP, lalu sisa nitrogen dari Urea (memperhitungkan 18% nitrogen DAP), lalu kalium dari MOP — dan menampilkan setiap langkahnya.",
+        "q": "Bagaimana dosis pupuk dihitung?"
+      },
+      {
+        "a": "Acre, kanal, marla, dan hectare. Konversi yang dipakai: 1 acre = 8 kanal = 160 marla, 1 kanal = 20 marla, 1 hectare = 2,471 acre.",
+        "q": "Satuan lahan apa saja yang didukung?"
+      },
+      {
+        "a": "Rekomendasi provinsi dan lembaga riset yang dipublikasikan (mis. paket praktik PAU), diberi label wilayah. Setiap angka di kalkulator mencantumkan sumbernya, dan tanaman tanpa sumber terverifikasi ditandai 'data sedang ditinjau' bukannya ditebak.",
+        "q": "Dari mana angka hara tanaman berasal?"
+      },
+      {
+        "a": "Bukan. Ia memberikan kemungkinan berbantuan AI dengan pernyataan ketidakpastian, tetapi Anda harus selalu mengonfirmasi dengan petugas pertanian setempat sebelum menangani tanaman — terutama sebelum menyemprot apa pun.",
+        "q": "Apakah Plant Doctor pengganti ahli agronomi?"
+      },
+      {
+        "a": "Ya — kalkulator, pustaka, dan panduan gratis. Akun hanya dibutuhkan untuk fitur seperti menyimpan diagnosis.",
+        "q": "Apakah Fertilizer Dose gratis?"
+      }
+    ],
+    "title": "Pertanyaan yang sering ditanyakan petani",
+    "metaTitle": "FAQ — Pertanyaan & Jawaban Fertilizer Dose",
+    "metaDescription": "Jawaban tentang perhitungan dosis pupuk, rumus NPK, satuan acre/kanal/marla, sumber data, dan Plant Doctor."
+  },
+  "footer": {
+    "company": "Perusahaan",
+    "disclaimer": "Estimasi dosis mengikuti rekomendasi yang dipublikasikan. Selalu konfirmasikan dengan petugas pertanian setempat dan uji tanah sebelum aplikasi.",
+    "library": "Pustaka",
+    "links": {
+      "about": "Tentang",
+      "blog": "Blog",
+      "calculator": "Fertilizer Dose Calculator",
+      "charts": "Bagan Dosis",
+      "contact": "Kontak",
+      "crops": "Pustaka Tanaman",
+      "faq": "FAQ",
+      "fertilizers": "Pustaka Pupuk",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Kebijakan Privasi",
+      "terms": "Syarat Penggunaan",
+      "wheat": "Panduan Gandum",
+      "plants": "Pustaka Tanaman Hias",
+      "vegetables": "Pustaka Sayuran",
+      "plantingCalendar": "Kalender Tanam",
+      "myGarden": "Kebunku",
+      "profitCalculator": "Kalkulator Keuntungan",
+      "compare": "Bandingkan"
+    },
+    "rights": "Hak cipta dilindungi undang-undang.",
+    "tagline": "Dosis pupuk yang tepat dari data agronomi nyata — untuk gandum, padi, jagung, dan lainnya. Dibuat untuk petani di Pakistan & India.",
+    "tools": "Perkakas"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Dari blog",
+      "minRead": "menit baca",
+      "title": "Pelajari alasan di balik dosis"
+    },
+    "crops": {
+      "desc": "Anjuran N–P₂O₅–K₂O per hectare dari sumber yang dipublikasikan. Tanaman bertanda 'sedang ditinjau' tidak pernah ditebak — data hanya dimuat setelah terverifikasi.",
+      "eyebrow": "Pustaka tanaman",
+      "inReview": "Sedang ditinjau",
+      "openGuide": "Buka panduan tanaman",
+      "perHa": "kg/ha",
+      "reviewNote": "Rekomendasi sedang diverifikasi",
+      "title": "Dosis untuk tanaman yang Anda tanam",
+      "verified": "Data terverifikasi"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Unggah foto daun atau tanaman yang jelas — AI membaca gejala visualnya.",
+          "t": "Diagnosis berbasis foto"
+        },
+        {
+          "d": "Setiap saran disertai tingkat kepercayaan rendah / sedang / tinggi. Tanpa kepastian palsu.",
+          "t": "Ketidakpastian yang jujur"
+        },
+        {
+          "d": "Penyebab, tindakan segera, dan pencegahan — plus kapan harus menghubungi petugas pertanian.",
+          "t": "Langkah nyata berikutnya"
+        }
+      ],
+      "cta": "Buka Plant Doctor",
+      "desc": "Unggah foto daun, jelaskan yang Anda lihat, dan dapatkan penilaian terstruktur — kemungkinan masalah, dugaan penyebab, apa yang harus dilakukan, dan cara mencegahnya.",
+      "dropSub": "JPG, PNG, atau WebP · maks 5 MB",
+      "dropTitle": "Taruh foto daun di sini",
+      "eyebrow": "AI Plant Doctor",
+      "serverNote": "Berjalan di server via Gemini — kunci API Anda tidak pernah menyentuh browser.",
+      "title": "Ada yang salah dengan tanaman Anda? Tanya Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Jelajahi pustaka pupuk selengkapnya →",
+      "desc": "Komposisi NPK yang akurat sesuai label. Persentase inilah dasar dari setiap perhitungan dosis.",
+      "eyebrow": "Pustaka pupuk",
+      "thBest": "Cocok untuk",
+      "thName": "Pupuk",
+      "title": "Ketahui isi karung yang sebenarnya",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Hitung dosis pupuk",
+      "desc": "Dosis yang tepat menghemat uang, melindungi tanah, dan menaikkan hasil. Kurang dari satu menit.",
+      "title": "Berhenti menebak. Mulai menghitung."
+    },
+    "hero": {
+      "ctaCalc": "Hitung dosis saya",
+      "ctaDoctor": "Diagnosis tanaman",
+      "stats": [
+        {
+          "s": "Setiap angka bersumber",
+          "t": "Data bersumber"
+        },
+        {
+          "s": "Metode NPK standar",
+          "t": "DAP-dulu"
+        },
+        {
+          "s": "Acre · Kanal · Marla · Ha",
+          "t": "4 satuan"
+        }
+      ],
+      "subtitle": "Fertilizer Dose mengubah rekomendasi agronomi yang dipublikasikan menjadi dosis pupuk yang tepat per acre, per kanal, dan per marla — dengan data nyata, setiap perhitungan ditampilkan, tanpa ada yang dikarang.",
+      "tagline": "Dosis pupuk, dilakukan dengan benar",
+      "title": "Ketahui persis berapa banyak <em>pupuk</em> yang dibutuhkan tanaman Anda."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Masukkan tanaman + luas dalam acre, kanal, marla, atau hectare — dapatkan takaran Urea, DAP, dan MOP yang tepat beserta setiap langkah perhitungan.",
+          "title": "Kalkulator Dosis"
+        },
+        {
+          "desc": "Unggah foto daun, jelaskan gejalanya, dan dapatkan diagnosis berbantuan AI berisi penyebab, tindakan, dan langkah pencegahan.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Komposisi NPK akurat sesuai label, manfaat, tindakan pencegahan, dan panduan aplikasi untuk setiap pupuk utama.",
+          "title": "Pustaka Pupuk"
+        },
+        {
+          "desc": "Musim, tanah, air, tahap pertumbuhan, dan masalah umum untuk gandum, padi, jagung, kapas, tebu, dan kentang.",
+          "title": "Pustaka Tanaman"
+        },
+        {
+          "title": "Kalkulator Keuntungan",
+          "desc": "Masukkan asumsi hasil, harga, dan biaya Anda sendiri — lihat laba bersih, titik impas, dan ROI per acre dan per hectare."
+        },
+        {
+          "title": "Bandingkan",
+          "desc": "Biaya hara pupuk berdampingan dari harga Anda sendiri, dan dosis tanaman dari data terverifikasi."
+        }
+      ],
+      "eyebrow": "Perkakas utama",
+      "title": "Semua yang dibutuhkan petani, dalam satu tempat"
+    },
+    "why": {
+      "eyebrow": "Mengapa Fertilizer Dose",
+      "items": [
+        {
+          "d": "Setiap nilai NPK dan dosis tanaman bersumber dan dikutip. Tidak ada angka karangan, selamanya.",
+          "t": "Hanya angka nyata"
+        },
+        {
+          "d": "Setiap hasil menjelaskan rumusnya langkah demi langkah — silakan verifikasi dengan pulpen jika mau.",
+          "t": "Menunjukkan cara kerjanya"
+        },
+        {
+          "d": "Acre, kanal, marla, hectare. Masukkan lahan seperti cara Anda mengukurnya.",
+          "t": "Berbicara dalam satuan Anda"
+        },
+        {
+          "d": "Tema siang/malam penuh yang menghormati pengaturan sistem dan mata Anda.",
+          "t": "Terang & gelap"
+        }
+      ],
+      "regionCta": "Coba kalkulator",
+      "regionDesc": "Rekomendasi bawaan mengikuti panduan agronomi Punjab (Pakistan) dan India Utara, dengan label wilayah pada setiap angka. Satuan, istilah, dan kalender tanam sesuai dengan cara bertani yang sebenarnya di sini.",
+      "regionTitle": "Berakar di wilayah ini",
+      "title": "Dibangun di atas bukti, bukan janji"
+    },
+    "metaTitle": "Fertilizer Dose — Kalkulator Dosis Pupuk NPK per Acre, Kanal, Marla & Hectare",
+    "metaDescription": "Hitung dosis Urea, DAP & MOP yang tepat untuk gandum, padi, jagung, dan lainnya. Kalkulator pupuk NPK gratis dengan dukungan acre/kanal/marla/hectare, panduan tanaman, dan kalender tanam.",
+    "grow": {
+      "eyebrow": "Budidaya",
+      "title": "Tanaman, tanaman hias & sayuran",
+      "desc": "Satu pustaka budidaya: tanaman ladang dengan dosis pupuk terverifikasi, plus sayuran dan tanaman hias dengan data jujur yang dibatasi tinjauan.",
+      "cards": [
+        {
+          "title": "Tanaman",
+          "desc": "Gandum, padi, jagung, kapas, dan lainnya — dengan dosis NPK terverifikasi jika sudah dipublikasikan."
+        },
+        {
+          "title": "Sayuran",
+          "desc": "Tomat, bawang, cabai, okra, dan lainnya. Data hanya dimuat setelah verifikasi."
+        },
+        {
+          "title": "Tanaman Hias",
+          "desc": "Tanaman berbunga, dalam ruang, luar ruang, dan buah untuk kebun rumah."
+        }
+      ],
+      "browse": "Jelajahi"
+    },
+    "planting": {
+      "eyebrow": "Kalender tanam",
+      "title": "Bulan ini menanam apa?",
+      "desc": "Kalender tanam yang sadar wilayah untuk provinsi Anda — tanpa tebakan seragam. Setiap jendela bersumber dan berlabel verifikasi.",
+      "cta": "Buka kalender tanam"
+    }
+  },
+  "language": {
+    "choose": "Pilih bahasa",
+    "label": "Bahasa"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Hitung Dosis",
+    "calculator": "Kalkulator Dosis",
+    "closeMenu": "Tutup menu",
+    "crops": "Tanaman",
+    "faq": "FAQ",
+    "fertilizers": "Pupuk",
+    "home": "Beranda",
+    "mobileNav": "Navigasi seluler",
+    "openMenu": "Buka menu",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Tanaman Hias",
+    "vegetables": "Sayuran",
+    "grow": "Budidaya",
+    "plantingCalendar": "Kalender Tanam",
+    "myGarden": "Kebunku",
+    "tools": "Perkakas",
+    "profitCalculator": "Kalkulator Keuntungan",
+    "compare": "Bandingkan",
+    "login": "Masuk",
+    "account": "Akun",
+    "admin": "Admin",
+    "logout": "Keluar"
+  },
+  "plantDoctor": {
+    "desc": "Unggah foto yang jelas, jelaskan gejalanya, dan dapatkan penilaian terstruktur — kemungkinan masalah dengan tingkat kepercayaan yang jujur, dugaan penyebab, dan langkah selanjutnya.",
+    "eyebrow": "Plant Doctor",
+    "title": "Tunjukkan daunnya. Kami bantu membacanya.",
+    "metaTitle": "Plant Doctor — Diagnosis Masalah Tanaman dengan AI",
+    "metaDescription": "Unggah foto tanaman dan jelaskan gejalanya untuk diagnosis berbantuan AI berisi penyebab, tindakan, dan langkah pencegahan."
+  },
+  "growing": {
+    "searchPlaceholder": "Cari berdasarkan nama…",
+    "filterAll": "Semua",
+    "filterVerified": "Terverifikasi",
+    "filterInReview": "Sedang ditinjau",
+    "verifiedBadge": "Data terverifikasi",
+    "inReviewBadge": "Sedang ditinjau",
+    "verifiedDose": "Dosis terverifikasi",
+    "doseInReview": "Dosis sedang ditinjau",
+    "resultsCount": "{count} item",
+    "noResults": "Tidak ada hasil yang cocok",
+    "noResultsHint": "Coba ejaan lain atau hapus pencarian.",
+    "noData": "Belum ada data terverifikasi.",
+    "noDataHint": "Kami mempublikasikan angka agronomi hanya setelah verifikasi terhadap sumber yang dipublikasikan — tidak pernah ditebak.",
+    "sections": {
+      "fertilizer": "Rekomendasi pupuk",
+      "growingConditions": "Kondisi tumbuh",
+      "soil": "Tanah",
+      "water": "Air",
+      "sunlight": "Sinar matahari",
+      "climate": "Iklim",
+      "season": "Musim tanam",
+      "sowingWindow": "Jendela tanam",
+      "harvestWindow": "Jendela panen",
+      "regions": "Wilayah yang cocok",
+      "stages": "Tahap pertumbuhan & pemupukan",
+      "deficiencies": "Defisiensi hara umum",
+      "problems": "Waspadai",
+      "references": "Referensi",
+      "lastReviewed": "Terakhir ditinjau"
+    },
+    "calculateCta": "Hitung untuk lahanku",
+    "doctorCta": "Melihat gejala? Coba Plant Doctor →",
+    "relatedFertilizers": "Pupuk terkait",
+    "relatedItems": "Terkait",
+    "inReviewNotice": "Dosis anjuran untuk {name} sedang diverifikasi terhadap sumber yang dipublikasikan. Kami mempublikasikannya di sini hanya setelah terkonfirmasi — tidak pernah ditebak.",
+    "indexable": {
+      "cropsTitle": "Setiap tanaman dan kebutuhannya, dalam satu tempat.",
+      "plantsTitle": "Tanaman untuk setiap jenis kebun.",
+      "vegetablesTitle": "Sayuran, dari ladang hingga kebun dapur."
+    },
+    "subcategoryAll": "Semua jenis"
+  },
+  "calendar": {
+    "metaTitle": "Kalender Tanam — Apa yang Ditanam Bulan Ini",
+    "metaDescription": "Kalender tanam sadar wilayah: tanaman, sayuran, dan tanaman hias apa yang ditanam bulan ini di provinsi Anda. Hanya jendela terverifikasi.",
+    "eyebrow": "Kalender tanam",
+    "title": "Bulan ini menanam apa",
+    "desc": "Pilih negara dan wilayah Anda, lalu jelajahi jendela tanam yang bisa kami pertanggungjawabkan. Tanpa kalender tebakan — setiap jendela mencantumkan sumber dan status verifikasinya.",
+    "country": "Negara",
+    "region": "Wilayah / provinsi",
+    "month": "Bulan",
+    "category": "Kategori",
+    "catAll": "Semua",
+    "catCrop": "Tanaman",
+    "catVegetable": "Sayuran",
+    "catPlant": "Tanaman Hias",
+    "prevMonth": "Bulan lalu",
+    "currentMonth": "Bulan ini",
+    "nextMonth": "Bulan depan",
+    "sowingWindow": "Jendela tanam",
+    "harvestWindow": "Jendela panen",
+    "season": "Musim",
+    "regionLabel": "Wilayah",
+    "source": "Sumber",
+    "lastReviewed": "Terakhir ditinjau",
+    "inReview": "Sedang ditinjau",
+    "verified": "Terverifikasi",
+    "emptyTitle": "Belum ada data tanam terverifikasi di sini",
+    "emptyHint": "Kami belum memverifikasi jendela tanam untuk wilayah dan bulan ini. Kami lebih memilih tidak menampilkan apa pun daripada kalender tebakan.",
+    "countryPages": {
+      "pakistanTitle": "Kalender Tanam — Pakistan",
+      "pakistanDesc": "Jendela tanam per provinsi untuk Pakistan. Hanya data terverifikasi.",
+      "indiaTitle": "Kalender Tanam — India",
+      "indiaDesc": "Jendela tanam per negara bagian untuk India. Hanya data terverifikasi.",
+      "regionsTitle": "Wilayah",
+      "hasData": "Data tanam tersedia",
+      "noDataYet": "Data sedang diverifikasi",
+      "openCalendar": "Buka kalender tanam"
+    }
+  },
+  "garden": {
+    "metaTitle": "Kebunku — Pantau Petak, Penanaman & Rencana Pupuk",
+    "metaDescription": "Dasbor kebun pribadi Anda: petak, penanaman, tahap pertumbuhan, perhitungan pupuk tersimpan, dan pengingat. Tersimpan privat di browser Anda.",
+    "eyebrow": "Kebunku",
+    "title": "Kebunku",
+    "desc": "Pantau petak Anda, apa yang Anda tanam, dan rencana pupuk Anda — semua dalam satu tempat.",
+    "localNote": "Disimpan di browser ini. Masuk untuk menyinkronkan kebun Anda di semua perangkat.",
+    "loading": "Memuat kebun Anda…",
+    "newPlot": "Tambah petak",
+    "editPlot": "Ubah petak",
+    "deletePlot": "Hapus petak",
+    "confirmDeletePlot": "Hapus petak ini beserta semua penanamannya? Tindakan ini tidak dapat dibatalkan.",
+    "plotName": "Nama petak",
+    "plotNamePh": "cth. Lahan depan",
+    "location": "Lokasi",
+    "locationPh": "cth. Nama desa (opsional)",
+    "region": "Wilayah (untuk saran tanam)",
+    "regionNone": "Tanpa wilayah — lewati saran tanam",
+    "area": "Luas",
+    "soilType": "Jenis tanah",
+    "soilUnknown": "Tidak disebutkan",
+    "notes": "Catatan",
+    "notesPh": "Hal yang layak diingat…",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "noPlots": "Belum ada petak",
+    "noPlotsHint": "Tambahkan petak pertama Anda untuk mulai memantau penanaman, tahap, dan pengingat.",
+    "overview": "Ringkasan",
+    "plots": "Petak",
+    "activePlantings": "Penanaman aktif",
+    "upcomingTasks": "Tugas mendatang",
+    "seasonalSuggestions": "Saran musiman",
+    "savedCalculations": "Perhitungan tersimpan",
+    "statPlots": "petak",
+    "statPlantings": "penanaman",
+    "statTasks": "tugas terbuka",
+    "addPlanting": "Tambah penanaman",
+    "plantingWhat": "Tanaman / tanaman hias / sayuran",
+    "plantedOn": "Tanggal tanam",
+    "stage": "Tahap pertumbuhan",
+    "stagePh": "cth. Anakan (opsional)",
+    "plantedDaysAgo": "ditanam {days} hari lalu",
+    "harvestWindow": "Jendela panen",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Hapus penanaman ini? Tindakan ini tidak dapat dibatalkan.",
+    "markDone": "Tandai selesai",
+    "reopen": "Buka kembali",
+    "addReminder": "Tambah pengingat",
+    "reminderTitle": "Pengingat",
+    "reminderTitlePh": "cth. Beri susulan Urea kedua",
+    "dueDate": "Tenggat",
+    "confirmDeleteReminder": "Hapus pengingat ini?",
+    "noTasks": "Tidak ada tugas mendatang. Tambahkan pengingat agar tetap on track.",
+    "noSuggestions": "Tidak ada saran tanam saat ini. Atur wilayah pada petak Anda untuk mendapatkan saran musiman.",
+    "noCalculations": "Belum ada perhitungan tersimpan. Jalankan kalkulator dosis dan simpan hasilnya di sini.",
+    "viewInCalculator": "Buka kalkulator dosis",
+    "suggestionCta": "Tanam {item} di {plot}",
+    "overdue": "Terlambat",
+    "done": "Selesai",
+    "backToGarden": "Kembali ke Kebunku",
+    "saveCalculation": "Simpan ke Kebunku",
+    "savedToGarden": "Tersimpan ke Kebunku",
+    "viewGarden": "Lihat Kebunku"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Kalkulator Keuntungan — Laba Usaha Tani, Titik Impas & ROI",
+      "metaDescription": "Estimasi keuntungan tanaman dari asumsi hasil, harga, dan biaya Anda sendiri. Rumus transparan, hasil dan harga titik impas, tampilan per acre dan per hectare.",
+      "eyebrow": "Kalkulator keuntungan",
+      "title": "Apakah tanaman ini akan menguntungkan?",
+      "desc": "Masukkan asumsi Anda sendiri — perkiraan hasil, harga pasar, dan setiap biaya input. Hitungannya sepenuhnya transparan, dan tidak ada yang diisi dengan angka tebakan.",
+      "assumptionNote": "Setiap angka di bawah berasal dari angka yang Anda masukkan. Kami tidak menambahkan harga pasar, hasil, atau biaya apa pun.",
+      "crop": "Tanaman (opsional)",
+      "noCrop": "Pilih tanaman…",
+      "area": "Luas",
+      "yieldPerUnit": "Perkiraan hasil per acre",
+      "yieldUnit": "Satuan hasil",
+      "yieldUnitPh": "cth. maunds, kg, ton",
+      "pricePerYieldUnit": "Perkiraan harga per satuan hasil",
+      "currency": "Label mata uang",
+      "currencyPh": "cth. Rs, PKR, ₹",
+      "costsTitle": "Biaya input (angka Anda)",
+      "costSeed": "Benih",
+      "costFertilizer": "Pupuk",
+      "costPesticide": "Pestisida / herbisida",
+      "costLabor": "Tenaga kerja",
+      "costIrrigation": "Irigasi / air",
+      "costRent": "Sewa lahan",
+      "costOther": "Lainnya",
+      "calculate": "Hitung keuntungan",
+      "reset": "Atur ulang",
+      "print": "Cetak",
+      "saveScenario": "Simpan skenario",
+      "scenarioName": "Nama skenario",
+      "scenarioNamePh": "cth. Gandum 2026 — 5 acre",
+      "scenarios": "Skenario tersimpan",
+      "noScenarios": "Belum ada skenario tersimpan.",
+      "deleteScenario": "Hapus",
+      "results": "Hasil",
+      "revenue": "Total pendapatan",
+      "totalCost": "Total biaya",
+      "netProfit": "Laba bersih",
+      "profitPerAcre": "Laba per acre",
+      "profitPerHa": "Laba per hectare",
+      "costPerYieldUnit": "Biaya per satuan hasil",
+      "breakEvenYield": "Hasil titik impas",
+      "breakEvenPrice": "Harga titik impas",
+      "roi": "Tingkat pengembalian investasi",
+      "formulasTitle": "Cara menghitungnya",
+      "perAcre": "per acre",
+      "perHectare": "per hectare",
+      "loss": "rugi",
+      "openCropGuide": "Buka panduan tanaman",
+      "openCalculator": "Hitung biaya pupuk"
+    },
+    "compare": {
+      "metaTitle": "Bandingkan Pupuk & Tanaman — Perbandingan Biaya Hara",
+      "metaDescription": "Bandingkan pupuk berdasarkan harga per kg hara memakai harga pasar Anda sendiri, dan bandingkan tanaman berdasarkan dosis terverifikasi dan data budidaya.",
+      "eyebrow": "Bandingkan",
+      "title": "Bandingkan, berdampingan",
+      "desc": "Biaya hara pupuk dari harga yang Anda masukkan — kami tidak pernah menebak harga pasar. Data tanaman hanya dari angka terverifikasi.",
+      "tabFertilizers": "Pupuk",
+      "tabCrops": "Tanaman",
+      "selectFertilizers": "Pilih pupuk untuk dibandingkan",
+      "pricePerBag": "Harga per karung",
+      "bagSize": "Ukuran karung (kg)",
+      "pricePerKgN": "per kg N",
+      "pricePerKgP": "per kg P₂O₅",
+      "pricePerKgK": "per kg K₂O",
+      "cheapest": "termurah",
+      "na": "—",
+      "userPriceNote": "Harga dimasukkan oleh Anda — masukkan harga pasar setempat per karung untuk perbandingan yang benar.",
+      "viewFertilizer": "Lihat panduan",
+      "selectCrops": "Pilih tanaman untuk dibandingkan (maks 3)",
+      "dose": "Dosis NPK / ha",
+      "season": "Musim",
+      "water": "Air",
+      "soil": "Tanah",
+      "inReview": "Sedang ditinjau",
+      "noDoseData": "Dosis sedang ditinjau — tidak ditebak",
+      "viewGuide": "Buka panduan tanaman"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — Sains Pupuk & Panduan Nutrisi Tanaman",
+    "metaDescription": "Panduan praktis tentang dosis pupuk, perhitungan NPK, nutrisi tanaman, dan kesehatan tanah untuk petani Pakistan dan India."
+  },
+  "fertilizers": {
+    "metaTitle": "Pustaka Pupuk — Komposisi NPK, Kegunaan & Panduan Dosis",
+    "metaDescription": "Komposisi NPK akurat sesuai label, manfaat, tindakan pencegahan, dan panduan aplikasi untuk Urea, DAP, MOP, SSP, SOP, dan lainnya."
+  },
+  "chart": {
+    "metaTitle": "Fertilizer Dose — Bagan Dosis Pupuk & Referensi Cepat NPK",
+    "metaDescription": "Bagan dosis pupuk referensi cepat: rekomendasi NPK per tanaman beserta takaran Urea, DAP, dan MOP."
+  },
+  "auth": {
+    "loginTitle": "Masuk",
+    "loginDesc": "Akses kebun, item tersimpan, dan perkakas admin Anda.",
+    "signupTitle": "Buat akun",
+    "signupDesc": "Simpan kebun Anda ke cloud dan sinkronkan antar perangkat.",
+    "name": "Nama",
+    "email": "Email",
+    "password": "Kata sandi",
+    "loginCta": "Masuk",
+    "signupCta": "Buat akun",
+    "noAccount": "Belum punya akun?",
+    "haveAccount": "Sudah punya akun?",
+    "invalid": "Email atau kata sandi salah.",
+    "error": "Terjadi kesalahan. Silakan coba lagi.",
+    "accountTitle": "Akunku",
+    "role": "Peran",
+    "signOut": "Keluar",
+    "adminLink": "Buka dasbor admin",
+    "gardenNote": "Kebun Anda kini tersinkron ke akun saat Anda masuk."
   }
 }

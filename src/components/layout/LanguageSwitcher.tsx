@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { LOCALES } from "@/i18n/routing";
-import { localizePath } from "@/lib/i18n-utils";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -42,7 +41,9 @@ export function LanguageSwitcher() {
     if (code === locale) return setOpen(false);
     setLocaleCookie(code);
     setOpen(false);
-    router.replace(localizePath(pathname, code));
+    // Canonical next-intl API: unprefixed pathname + target locale.
+    // (usePathname() already strips the locale prefix.)
+    router.replace(pathname, { locale: code });
   };
 
   return (
@@ -116,7 +117,7 @@ export function LanguageList() {
   const switchTo = (code: string) => {
     if (code === locale) return;
     setLocaleCookie(code);
-    router.replace(localizePath(pathname, code));
+    router.replace(pathname, { locale: code });
   };
 
   return (

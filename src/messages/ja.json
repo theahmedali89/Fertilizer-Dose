@@ -4,6 +4,576 @@
     "name": "Japanese",
     "nativeName": "日本語",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "作物を選び、エーカー・カナル・マルラ・hectareなど、ふだんお使いの単位で農地面積を入力してください。Urea・DAP・MOPの正確な量と、生育ステージ別の施肥スケジュールが表示されます。",
+    "empty": {
+      "desc": "作物と農地面積を選んで「計算」を押してください。計算のすべての手順が表示されます。",
+      "title": "計算結果はここに表示されます"
+    },
+    "eyebrow": "施肥量計算ツール",
+    "form": {
+      "area": "農地面積",
+      "areaError": "0より大きい正しい農地面積を入力してください。",
+      "areaLargeError": "面積が異常に大きく見えます。数値と単位をもう一度ご確認ください。",
+      "areaPlaceholder": "例: 5",
+      "crop": "作物",
+      "cropHint": "検証済みの推奨量がある作物のみ選択できます。",
+      "inReview": "審査中のデータ",
+      "soil": "土壌タイプ（任意）",
+      "soilHint": "土壌タイプは計算式を変えませんが、アドバイスが変わります。砂質土では窒素が流出しやすく、塩類土壌ではMOPの使用に注意が必要です。",
+      "submit": "施肥量を計算",
+      "unit": "単位"
+    },
+    "method": {
+      "desc": "ブラックボックスではありません。農学の授業で教わるDAP優先の標準的な手順です。",
+      "eyebrow": "計算方法",
+      "title": "計算方法をわかりやすく解説"
+    },
+    "results": {
+      "bags": "× 50 kg袋",
+      "disclaimer": "推定値は公表されている推奨量に基づいています。施肥前に地域の農業普及員にご確認ください。",
+      "howTitle": "計算の手順",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "施肥スケジュール",
+      "soilDefault": "標準量を表示しています。土壌診断後に調整してください。",
+      "soilNoteLabel": "土壌メモ：",
+      "sourceLabel": "データ出典：",
+      "total": "肥料合計",
+      "kgUnit": "kg",
+      "recommendedLine": "推奨 {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "「{soil}」を選択しました。{soilLower}の土壌では、施肥量を変更する前に土壌診断をおすすめします。上の基本計算は変わりません。"
+    },
+    "title": "計算過程も見える、正確な施肥量。",
+    "metaTitle": "Fertilizer Dose Calculator — エーカー・カナル・マルラ対応のUrea・DAP・MOP施肥量計算",
+    "metaDescription": "小麦・米・トウモロコシのUrea・DAP・MOPの正確な施肥量を計算。エーカー・カナル・マルラ・hectareで面積を入力 — 計算手順もすべて表示します。",
+    "methodFaq": [
+      {
+        "q": "なぜDAPを先に計算するのですか？",
+        "a": "リンは土壌中で移動しにくいため、P₂O₅の全量は播種時にDAPで与える必要があります。DAPには18%の窒素も含まれており、これは総窒素必要量に算入されます。DAPを先に計算することで、その分の窒素を差し引いてからUreaを計算できるため、窒素の二重施肥を防げます。"
+      },
+      {
+        "q": "カナルやマルラはどう換算されますか？",
+        "a": "1エーカー = 8カナル = 160マルラ、1カナル = 20マルラです。メートル法では、1エーカー = 0.4047 hectare、1カナル = 0.0506 hectare、1マルラ = 0.00253 hectareです。計算ツールは面積をhectareに換算し、hectare当たりの施肥量を適用してから元の単位に戻します。"
+      },
+      {
+        "q": "なぜ一部の作物が選べないのですか？",
+        "a": "作物は、推奨NPK量が公表資料で検証されている場合のみ選択できます。数値を推測するくらいなら、その作物を無効にします。未検証の作物は、確認されるまで「審査中のデータ」と表示されます。"
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "ダークモードに切り替え",
+    "themeLight": "ライトモードに切り替え"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "標準的な農学の計算式を使います：肥料（kg）＝（必要な養分 × 100）÷ 肥料中の養分％。DAP優先で適用します — DAPからリンを、残りの窒素をUreaから（DAPの18%の窒素を考慮）、カリウムをMOPから与え、すべての手順を表示します。",
+        "q": "肥料の施肥量はどう計算されますか？"
+      },
+      {
+        "a": "エーカー、カナル、マルラ、hectareです。換算率：1エーカー = 8カナル = 160マルラ、1カナル = 20マルラ、1 hectare = 2.471エーカー。",
+        "q": "対応している土地の単位は？"
+      },
+      {
+        "a": "公表されている州・研究機関の推奨（例：PAUの栽培指針）を地域タグ付きで使用しています。計算ツール内のすべての数値には出典が明記され、検証済みの出典がない作物は推測せず「審査中のデータ」と表示されます。",
+        "q": "作物の養分データはどこから来ていますか？"
+      },
+      {
+        "a": "いいえ。AIによる可能性の提示であり、確信度も明示されますが、作物の治療前 — 特に散布前 — には必ず地域の農業普及員にご確認ください。",
+        "q": "Plant Doctorは農学者の代わりになりますか？"
+      },
+      {
+        "a": "はい。計算ツール、ライブラリ、ガイドは無料です。アカウントが必要なのは、診断結果の保存などの機能のみです。",
+        "q": "Fertilizer Doseは無料で使えますか？"
+      }
+    ],
+    "title": "農家の方からよくいただく質問",
+    "metaTitle": "FAQ — Fertilizer Doseのよくある質問と回答",
+    "metaDescription": "施肥量の計算、NPK計算式、エーカー・カナル・マルラの単位、データ出典、Plant Doctorについての回答。"
+  },
+  "footer": {
+    "company": "会社情報",
+    "disclaimer": "推定値は公表されている推奨量に基づいています。施肥前には必ず地域の農業普及員と土壌診断でご確認ください。",
+    "library": "ライブラリ",
+    "links": {
+      "about": "概要",
+      "blog": "ブログ",
+      "calculator": "Fertilizer Dose Calculator",
+      "charts": "施肥量チャート",
+      "contact": "お問い合わせ",
+      "crops": "作物ライブラリ",
+      "faq": "FAQ",
+      "fertilizers": "肥料ライブラリ",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "wheat": "小麦ガイド",
+      "plants": "植物ライブラリ",
+      "vegetables": "野菜ライブラリ",
+      "plantingCalendar": "播種カレンダー",
+      "myGarden": "マイガーデン",
+      "profitCalculator": "収益計算ツール",
+      "compare": "比較"
+    },
+    "rights": "無断複写・転載を禁じます。",
+    "tagline": "実際の農学データに基づく正確な施肥量 — 小麦、米、トウモロコシなど。パキスタンとインドの農家のために作られました。",
+    "tools": "ツール"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "ブログから",
+      "minRead": "分で読めます",
+      "title": "施肥量の「なぜ」を学ぶ"
+    },
+    "crops": {
+      "desc": "公表資料に基づくhectare当たりの推奨N–P₂O₅–K₂O量。「審査中」の作物は推測しません — 検証済みデータのみ掲載します。",
+      "eyebrow": "作物ライブラリ",
+      "inReview": "審査中",
+      "openGuide": "作物ガイドを開く",
+      "perHa": "kg/ha",
+      "reviewNote": "推奨量を検証中",
+      "title": "実際に育てる作物の施肥量",
+      "verified": "検証済みデータ"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "鮮明な葉や植物の写真をアップロード — AIが視覚的な症状を読み取ります。",
+          "t": "写真優先の診断"
+        },
+        {
+          "d": "すべての提案には低・中・高の確信度を明示。根拠のない断定はしません。",
+          "t": "率直な不確かさの提示"
+        },
+        {
+          "d": "原因、すぐにできる対策、予防法 — 農業普及員に相談すべきタイミングも。",
+          "t": "実行できる次のステップ"
+        }
+      ],
+      "cta": "Plant Doctorを開く",
+      "desc": "葉の写真をアップロードし、見た目を説明してください。可能性のある問題、原因の候補、次の対策、予防法を含む構造的な評価が得られます。",
+      "dropSub": "JPG・PNG・WebP · 最大5 MB",
+      "dropTitle": "葉の写真をここにドロップ",
+      "eyebrow": "AI Plant Doctor",
+      "serverNote": "Geminiでサーバー側実行 — APIキーがブラウザに触れることはありません。",
+      "title": "作物の調子がおかしい？Plant Doctorに相談。"
+    },
+    "fertilizers": {
+      "browse": "肥料ライブラリをすべて見る →",
+      "desc": "ラベル通りの正確なNPK組成。これらのパーセンテージが、すべての施肥量計算の土台です。",
+      "eyebrow": "肥料ライブラリ",
+      "thBest": "適した用途",
+      "thName": "肥料",
+      "title": "袋の中身を正しく知る",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "施肥量を計算する",
+      "desc": "適切な施肥量はコストを抑え、土壌を守り、収量を上げます。1分もかかりません。",
+      "title": "推測はやめて、計算を始めましょう。"
+    },
+    "hero": {
+      "ctaCalc": "施肥量を計算する",
+      "ctaDoctor": "植物を診断する",
+      "stats": [
+        {
+          "s": "すべての数値に出典あり",
+          "t": "出典付きデータ"
+        },
+        {
+          "s": "標準NPK計算法",
+          "t": "DAP優先"
+        },
+        {
+          "s": "エーカー · カナル · マルラ · ha",
+          "t": "4つの単位"
+        }
+      ],
+      "subtitle": "Fertilizer Doseは、公表されている農学の推奨量を、エーカー・カナル・マルラ単位の正確な施肥量に変換します。実データのみ、計算過程もすべて公開、推測は一切なし。",
+      "tagline": "施肥量は、正確に。",
+      "title": "作物に必要な<em>肥料</em>の量を正確に把握しましょう。"
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "作物と面積をエーカー・カナル・マルラ・hectareで入力 — Urea・DAP・MOPの正確な量を、計算手順とともに表示します。",
+          "title": "施肥量計算ツール"
+        },
+        {
+          "desc": "葉の写真をアップロードし、症状を説明すると、原因・対策・予防法を含むAI診断が得られます。",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "主要な肥料のラベル通りのNPK組成、効果、注意点、施肥ガイダンス。",
+          "title": "肥料ライブラリ"
+        },
+        {
+          "desc": "小麦、米、トウモロコシ、綿花、サトウキビ、ジャガイモの季節・土壌・水・生育ステージ・よくある問題。",
+          "title": "作物ライブラリ"
+        },
+        {
+          "title": "収益計算ツール",
+          "desc": "収量・価格・コストの仮定を自分で入力 — エーカー・hectare当たりの純利益、損益分岐点、ROIを表示します。"
+        },
+        {
+          "title": "比較",
+          "desc": "自分の価格による肥料の養分コスト比較、検証済みデータによる作物の施肥量比較。"
+        }
+      ],
+      "eyebrow": "主なツール",
+      "title": "生産者に必要なすべてを、ひとつの場所に"
+    },
+    "why": {
+      "eyebrow": "Fertilizer Doseが選ばれる理由",
+      "items": [
+        {
+          "d": "すべてのNPK値と作物施肥量には出典を明記。推測の数値は一切ありません。",
+          "t": "実数値のみ"
+        },
+        {
+          "d": "各結果は計算式を手順ごとに解説 — ペンで検算もできます。",
+          "t": "計算過程を公開"
+        },
+        {
+          "d": "エーカー、カナル、マルラ、hectare。ふだん測っている単位で入力できます。",
+          "t": "単位に寄り添う"
+        },
+        {
+          "d": "システム設定と目にやさしい、完全なライト・ダークテーマ。",
+          "t": "ライト & ダーク"
+        }
+      ],
+      "regionCta": "計算ツールを試す",
+      "regionDesc": "標準の推奨量はパンジャーブ（パキスタン）と北インドの農学指針に準拠し、すべての数値に地域タグ付き。単位・用語・作付け暦は、現地の営農実態に合わせています。",
+      "regionTitle": "地域に根ざす",
+      "title": "約束ではなく、根拠で作る"
+    },
+    "metaTitle": "Fertilizer Dose — エーカー・カナル・マルラ・hectare対応 NPK施肥量計算ツール",
+    "metaDescription": "小麦・米・トウモロコシなどのUrea・DAP・MOPの正確な施肥量を計算。エーカー・カナル・マルラ・hectare対応の無料NPK肥料計算ツール。作物ガイドと播種カレンダー付き。",
+    "grow": {
+      "eyebrow": "栽培",
+      "title": "作物・植物・野菜",
+      "desc": "ひとつの栽培ライブラリ：検証済み施肥量の畑作物に加え、正直に審査中の野菜・植物データも。",
+      "cards": [
+        {
+          "title": "作物",
+          "desc": "小麦、米、トウモロコシ、綿花など — 公表済みの検証済みNPK施肥量付き。"
+        },
+        {
+          "title": "野菜",
+          "desc": "トマト、タマネギ、トウガラシ、オクラなど。検証後のみデータを掲載します。"
+        },
+        {
+          "title": "植物",
+          "desc": "家庭菜園向けの花・観葉植物・屋外植物・果樹。"
+        }
+      ],
+      "browse": "見る"
+    },
+    "planting": {
+      "eyebrow": "播種カレンダー",
+      "title": "今月は何を育てる？",
+      "desc": "お住まいの地域に合わせた播種カレンダー — 画一的な推測はしません。すべての播種適期に出典と検証バッジ付き。",
+      "cta": "播種カレンダーを開く"
+    }
+  },
+  "language": {
+    "choose": "言語を選択",
+    "label": "言語"
+  },
+  "nav": {
+    "blog": "ブログ",
+    "calculateDose": "施肥量を計算",
+    "calculator": "施肥量計算ツール",
+    "closeMenu": "メニューを閉じる",
+    "crops": "作物",
+    "faq": "FAQ",
+    "fertilizers": "肥料",
+    "home": "ホーム",
+    "mobileNav": "モバイルナビゲーション",
+    "openMenu": "メニューを開く",
+    "plantDoctor": "Plant Doctor",
+    "plants": "植物",
+    "vegetables": "野菜",
+    "grow": "栽培",
+    "plantingCalendar": "播種カレンダー",
+    "myGarden": "マイガーデン",
+    "tools": "ツール",
+    "profitCalculator": "収益計算ツール",
+    "compare": "比較",
+    "login": "ログイン",
+    "account": "アカウント",
+    "admin": "管理",
+    "logout": "ログアウト"
+  },
+  "plantDoctor": {
+    "desc": "鮮明な写真をアップロードし、症状を説明してください。可能性のある問題を率直な確信度とともに、原因の候補と次の対策を含めて構造的に評価します。",
+    "eyebrow": "Plant Doctor",
+    "title": "葉を見せてください。読み解きをお手伝いします。",
+    "metaTitle": "Plant Doctor — AIによる作物の病害診断",
+    "metaDescription": "作物の写真をアップロードし、症状を説明すると、原因・対策・予防法を含むAI診断が得られます。"
+  },
+  "growing": {
+    "searchPlaceholder": "名前で検索…",
+    "filterAll": "すべて",
+    "filterVerified": "検証済み",
+    "filterInReview": "審査中",
+    "verifiedBadge": "検証済みデータ",
+    "inReviewBadge": "審査中",
+    "verifiedDose": "検証済み施肥量",
+    "doseInReview": "施肥量を審査中",
+    "resultsCount": "{count}件",
+    "noResults": "一致する結果がありません",
+    "noResultsHint": "つづりを変えるか、検索をクリアしてみてください。",
+    "noData": "検証済みデータはまだありません。",
+    "noDataHint": "農学の数値は、公表資料で検証してからのみ掲載します — 推測はしません。",
+    "sections": {
+      "fertilizer": "施肥の推奨",
+      "growingConditions": "栽培条件",
+      "soil": "土壌",
+      "water": "水",
+      "sunlight": "日照",
+      "climate": "気候",
+      "season": "栽培季節",
+      "sowingWindow": "播種・植付け適期",
+      "harvestWindow": "収穫期",
+      "regions": "適した地域",
+      "stages": "生育ステージと施肥",
+      "deficiencies": "よくある養分欠乏",
+      "problems": "注意すべき点",
+      "references": "参考文献",
+      "lastReviewed": "最終確認日"
+    },
+    "calculateCta": "自分の農地で計算する",
+    "doctorCta": "症状が出ていますか？Plant Doctorを試す →",
+    "relatedFertilizers": "関連する肥料",
+    "relatedItems": "関連",
+    "inReviewNotice": "{name}の推奨施肥量は現在、公表資料と照合して検証中です。確認できてからのみ掲載します — 推測はしません。",
+    "indexable": {
+      "cropsTitle": "すべての作物とその必要量を、ひとつの場所に。",
+      "plantsTitle": "あらゆる庭に合う植物。",
+      "vegetablesTitle": "野菜を、畑から家庭菜園まで。"
+    },
+    "subcategoryAll": "すべての種類"
+  },
+  "calendar": {
+    "metaTitle": "播種カレンダー — 今月育てるもの",
+    "metaDescription": "地域別の播種カレンダー：今月、お住まいの地域で播くべき作物・野菜・植物。検証済みの播種適期のみ。",
+    "eyebrow": "播種カレンダー",
+    "title": "今月は何を育てる？",
+    "desc": "国と地域を選んで、裏付けのある播種適期をご覧ください。推測のカレンダーは作りません — すべての適期に出典と検証ステータス付き。",
+    "country": "国",
+    "region": "地域・州",
+    "month": "月",
+    "category": "カテゴリ",
+    "catAll": "すべて",
+    "catCrop": "作物",
+    "catVegetable": "野菜",
+    "catPlant": "植物",
+    "prevMonth": "前の月",
+    "currentMonth": "今月",
+    "nextMonth": "次の月",
+    "sowingWindow": "播種適期",
+    "harvestWindow": "収穫期",
+    "season": "季節",
+    "regionLabel": "地域",
+    "source": "出典",
+    "lastReviewed": "最終確認日",
+    "inReview": "審査中",
+    "verified": "検証済み",
+    "emptyTitle": "この地域・月の検証済み播種データはまだありません",
+    "emptyHint": "この地域と月の播種適期はまだ検証できていません。推測のカレンダーを出すくらいなら、何も表示しません。",
+    "countryPages": {
+      "pakistanTitle": "播種カレンダー — パキスタン",
+      "pakistanDesc": "パキスタンの州別播種適期。検証済みデータのみ。",
+      "indiaTitle": "播種カレンダー — インド",
+      "indiaDesc": "インドの州別播種適期。検証済みデータのみ。",
+      "regionsTitle": "地域",
+      "hasData": "播種データあり",
+      "noDataYet": "データを検証中",
+      "openCalendar": "播種カレンダーを開く"
+    }
+  },
+  "garden": {
+    "metaTitle": "マイガーデン — 区画・植付け・施肥計画の管理",
+    "metaDescription": "あなたのガーデンダッシュボード：区画、植付け、生育ステージ、保存した施肥計算、リマインダー。ブラウザ内に非公開で保存されます。",
+    "eyebrow": "マイガーデン",
+    "title": "マイガーデン",
+    "desc": "区画、植えたもの、施肥計画をひとつの場所で管理しましょう。",
+    "localNote": "このブラウザに保存されます。デバイス間で菜園を同期するにはサインインしてください。",
+    "loading": "ガーデンを読み込んでいます…",
+    "newPlot": "区画を追加",
+    "editPlot": "区画を編集",
+    "deletePlot": "区画を削除",
+    "confirmDeletePlot": "この区画とすべての植付けを削除しますか？元に戻せません。",
+    "plotName": "区画名",
+    "plotNamePh": "例： 前の畑",
+    "location": "場所",
+    "locationPh": "例： 村の名前（任意）",
+    "region": "地域（播種提案用）",
+    "regionNone": "地域なし — 播種提案をスキップ",
+    "area": "面積",
+    "soilType": "土壌タイプ",
+    "soilUnknown": "未指定",
+    "notes": "メモ",
+    "notesPh": "覚えておきたいこと…",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "noPlots": "区画はまだありません",
+    "noPlotsHint": "最初の区画を追加して、植付け・ステージ・リマインダーの管理を始めましょう。",
+    "overview": "概要",
+    "plots": "区画",
+    "activePlantings": "栽培中の植付け",
+    "upcomingTasks": "今後のタスク",
+    "seasonalSuggestions": "季節の提案",
+    "savedCalculations": "保存した計算",
+    "statPlots": "区画",
+    "statPlantings": "植付け",
+    "statTasks": "未完了タスク",
+    "addPlanting": "植付けを追加",
+    "plantingWhat": "作物・植物・野菜",
+    "plantedOn": "植付け日",
+    "stage": "生育ステージ",
+    "stagePh": "例： 分げつ期（任意）",
+    "plantedDaysAgo": "{days}日前に植付け",
+    "harvestWindow": "収穫期",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "この植付けを削除しますか？元に戻せません。",
+    "markDone": "完了にする",
+    "reopen": "再開する",
+    "addReminder": "リマインダーを追加",
+    "reminderTitle": "リマインダー",
+    "reminderTitlePh": "例： 2回目のUrea分施",
+    "dueDate": "期限",
+    "confirmDeleteReminder": "このリマインダーを削除しますか？",
+    "noTasks": "今後のタスクはありません。リマインダーを追加して計画的に進めましょう。",
+    "noSuggestions": "今は播種提案がありません。区画に地域を設定すると季節の提案が表示されます。",
+    "noCalculations": "保存した計算はまだありません。施肥量計算ツールで計算して、結果をここに保存しましょう。",
+    "viewInCalculator": "施肥量計算ツールを開く",
+    "suggestionCta": "{plot}に{item}を播く",
+    "overdue": "期限切れ",
+    "done": "完了",
+    "backToGarden": "マイガーデンに戻る",
+    "saveCalculation": "マイガーデンに保存",
+    "savedToGarden": "マイガーデンに保存しました",
+    "viewGarden": "マイガーデンを見る"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "収益計算ツール — 農業の利益・損益分岐点・ROI",
+      "metaDescription": "収量・価格・コストの仮定から作物の利益を見積もります。透明な計算式、損益分岐収量・価格、エーカー・hectare別表示。",
+      "eyebrow": "収益計算ツール",
+      "title": "この作物は儲かる？",
+      "desc": "収量見込み、市場価格、すべての投入コストを自分で入力してください。計算は完全に透明で、推測値をあらかじめ入力することはありません。",
+      "assumptionNote": "以下の数値はすべて、あなたが入力した数字から算出されます。市場価格・収量・コストを当方で加えることはありません。",
+      "crop": "作物（任意）",
+      "noCrop": "作物を選択…",
+      "area": "面積",
+      "yieldPerUnit": "エーカー当たりの予想収量",
+      "yieldUnit": "収量単位",
+      "yieldUnitPh": "例： maunds、kg、tons",
+      "pricePerYieldUnit": "収量単位当たりの予想価格",
+      "currency": "通貨表示",
+      "currencyPh": "例： Rs、PKR、₹",
+      "costsTitle": "投入コスト（あなたの数値）",
+      "costSeed": "種子",
+      "costFertilizer": "肥料",
+      "costPesticide": "農薬・除草剤",
+      "costLabor": "労働力",
+      "costIrrigation": "かんがい・水",
+      "costRent": "地代",
+      "costOther": "その他",
+      "calculate": "利益を計算",
+      "reset": "リセット",
+      "print": "印刷",
+      "saveScenario": "シナリオを保存",
+      "scenarioName": "シナリオ名",
+      "scenarioNamePh": "例： 小麦2026 — 5エーカー",
+      "scenarios": "保存したシナリオ",
+      "noScenarios": "保存したシナリオはまだありません。",
+      "deleteScenario": "削除",
+      "results": "結果",
+      "revenue": "総収入",
+      "totalCost": "総コスト",
+      "netProfit": "純利益",
+      "profitPerAcre": "エーカー当たり利益",
+      "profitPerHa": "hectare当たり利益",
+      "costPerYieldUnit": "収量単位当たりコスト",
+      "breakEvenYield": "損益分岐収量",
+      "breakEvenPrice": "損益分岐価格",
+      "roi": "投資収益率",
+      "formulasTitle": "計算方法",
+      "perAcre": "エーカー当たり",
+      "perHectare": "hectare当たり",
+      "loss": "損失",
+      "openCropGuide": "作物ガイドを開く",
+      "openCalculator": "肥料コストを計算"
+    },
+    "compare": {
+      "metaTitle": "肥料・作物の比較 — 養分コスト比較",
+      "metaDescription": "自分の市場価格による肥料の養分当たり価格を比較し、検証済み施肥量と栽培データで作物を比較します。",
+      "eyebrow": "比較",
+      "title": "並べて比較",
+      "desc": "肥料の養分コストはあなたが入力した価格から — 市場価格を推測しません。作物のデータは検証済みの数値のみです。",
+      "tabFertilizers": "肥料",
+      "tabCrops": "作物",
+      "selectFertilizers": "比較する肥料を選択",
+      "pricePerBag": "1袋当たりの価格",
+      "bagSize": "袋のサイズ（kg）",
+      "pricePerKgN": "N 1 kg当たり",
+      "pricePerKgP": "P₂O₅ 1 kg当たり",
+      "pricePerKgK": "K₂O 1 kg当たり",
+      "cheapest": "最安",
+      "na": "—",
+      "userPriceNote": "価格はあなたが入力します — 正確な比較のため、地元の市場価格を1袋当たりで入力してください。",
+      "viewFertilizer": "ガイドを見る",
+      "selectCrops": "比較する作物を選択（最大3つ）",
+      "dose": "NPK施肥量 / ha",
+      "season": "季節",
+      "water": "水",
+      "soil": "土壌",
+      "inReview": "審査中",
+      "noDoseData": "施肥量は審査中 — 推測しません",
+      "viewGuide": "作物ガイドを開く"
+    }
+  },
+  "blog": {
+    "metaTitle": "ブログ — 肥料科学と作物栄養ガイド",
+    "metaDescription": "パキスタンとインドの農家のための、施肥量・NPK計算・作物栄養・土壌の健康に関する実践ガイド。"
+  },
+  "fertilizers": {
+    "metaTitle": "肥料ライブラリ — NPK組成・用途・施肥ガイダンス",
+    "metaDescription": "Urea・DAP・MOP・SSP・SOPなどのラベル通りのNPK組成、効果、注意点、施肥ガイダンス。"
+  },
+  "chart": {
+    "metaTitle": "Fertilizer Dose — 施肥量チャート・NPK早見表",
+    "metaDescription": "施肥量の早見チャート：作物別のNPK推奨量とUrea・DAP・MOPの量。"
+  },
+  "auth": {
+    "loginTitle": "ログイン",
+    "loginDesc": "ガーデン、保存項目、管理ツールにアクセスします。",
+    "signupTitle": "アカウントを作成",
+    "signupDesc": "ガーデンをクラウドに保存し、デバイス間で同期します。",
+    "name": "名前",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "loginCta": "ログイン",
+    "signupCta": "アカウントを作成",
+    "noAccount": "アカウントをお持ちでない方",
+    "haveAccount": "すでにアカウントをお持ちの方",
+    "invalid": "メールアドレスまたはパスワードが正しくありません。",
+    "error": "問題が発生しました。もう一度お試しください。",
+    "accountTitle": "マイアカウント",
+    "role": "権限",
+    "signOut": "ログアウト",
+    "adminLink": "管理ダッシュボードを開く",
+    "gardenNote": "ログイン中は、ガーデンがアカウントに同期されます。"
   }
 }

@@ -4,6 +4,576 @@
     "name": "Spanish",
     "nativeName": "Español",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Elija su cultivo, ingrese su terreno en la unidad que utilice —acre, kanal, marla o hectárea— y obtenga cantidades precisas de urea, DAP y MOP, además de un cronograma de aplicación por etapa.",
+    "empty": {
+      "desc": "Elija un cultivo, ingrese el área de su terreno y presione calcular. Se muestra cada paso del cálculo.",
+      "title": "Su dosis aparecerá aquí"
+    },
+    "eyebrow": "Calculadora de dosis",
+    "form": {
+      "area": "Área del terreno",
+      "areaError": "Ingrese un área de terreno válida mayor que cero.",
+      "areaLargeError": "Esa área parece inusualmente grande: verifique el valor y la unidad.",
+      "areaPlaceholder": "p. ej. 5",
+      "crop": "Cultivo",
+      "cropHint": "Solo se pueden seleccionar cultivos con recomendaciones verificadas.",
+      "inReview": "datos en revisión",
+      "soil": "Tipo de suelo (opcional)",
+      "soilHint": "El tipo de suelo no cambia el cálculo, cambia el consejo. Los suelos arenosos pierden nitrógeno más rápido; los suelos salinos requieren cuidado con el MOP.",
+      "submit": "Calcular dosis",
+      "unit": "Unidad"
+    },
+    "method": {
+      "desc": "Sin caja negra. Este es el mismo procedimiento «DAP primero» que se enseña en los cursos de agronomía.",
+      "eyebrow": "Método",
+      "title": "El método, en palabras sencillas"
+    },
+    "results": {
+      "bags": "× sacos de 50 kg",
+      "disclaimer": "Las estimaciones siguen recomendaciones publicadas. Confirme con su oficial agrícola local antes de la aplicación.",
+      "howTitle": "Cómo se calculó esto",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Cronograma de aplicación",
+      "soilDefault": "Se muestra la dosis estándar. Ajústela después de un análisis de suelo.",
+      "soilNoteLabel": "Nota sobre el suelo:",
+      "sourceLabel": "Fuente de datos:",
+      "total": "Fertilizante total",
+      "kgUnit": "kg",
+      "recommendedLine": "Recomendado {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Usted seleccionó \"{soil}\". En suelos {soilLower}, considere un análisis de suelo antes de cambiar la dosis; el cálculo base anterior no cambia."
+    },
+    "title": "Dosis exacta de fertilizante, con el cálculo mostrado.",
+    "metaTitle": "Calculadora de dosis de fertilizantes — Urea, DAP y MOP por acre/kanal/marla",
+    "metaDescription": "Calcule dosis exactas de urea, DAP y MOP para trigo, arroz y maíz. Ingrese el área en acre, kanal, marla o hectárea y vea cada paso del cálculo.",
+    "methodFaq": [
+      {
+        "q": "¿Por qué se calcula el DAP primero?",
+        "a": "El fósforo es inmóvil en el suelo, por lo que la dosis completa de P₂O₅ debe provenir del DAP en la siembra. El DAP también contiene 18 % de nitrógeno, que cuenta para la necesidad total de nitrógeno; calcular el DAP primero permite restar ese nitrógeno antes de calcular la urea, de modo que nunca se aplica nitrógeno en exceso."
+      },
+      {
+        "q": "¿Cómo se convierten el kanal y la marla?",
+        "a": "1 acre = 8 kanal = 160 marla, y 1 kanal = 20 marla. En sistema métrico: 1 acre = 0,4047 ha; 1 kanal = 0,0506 ha; 1 marla = 0,00253 ha. La calculadora convierte su área a hectáreas, aplica la dosis por hectárea y luego la escala."
+      },
+      {
+        "q": "¿Por qué algunos cultivos están deshabilitados?",
+        "a": "Un cultivo solo es seleccionable cuando su dosis recomendada de NPK está verificada con una fuente publicada. Preferimos deshabilitar un cultivo antes que inventar sus cifras: los cultivos no verificados se marcan como \"datos en revisión\" hasta su confirmación."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Cambiar al modo oscuro",
+    "themeLight": "Cambiar al modo claro"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Con la fórmula agronómica estándar: fertilizante (kg) = (nutriente necesario × 100) ÷ % del nutriente en el fertilizante. La aplicamos con el procedimiento «DAP primero»: fósforo del DAP, luego el nitrógeno restante de la urea (teniendo en cuenta el 18 % de nitrógeno del DAP), después el potasio del MOP, y mostramos cada paso.",
+        "q": "¿Cómo se calcula la dosis de fertilizante?"
+      },
+      {
+        "a": "Acre, kanal, marla y hectárea. Conversiones utilizadas: 1 acre = 8 kanal = 160 marla; 1 kanal = 20 marla; 1 hectárea = 2,471 acres.",
+        "q": "¿Qué unidades de superficie son compatibles?"
+      },
+      {
+        "a": "Recomendaciones publicadas de provincias e institutos de investigación (p. ej., el paquete de prácticas de la PAU), etiquetadas por región. Cada cifra de la calculadora lleva su cita de fuente, y los cultivos sin una fuente verificada se marcan como «datos en revisión» en lugar de adivinarse.",
+        "q": "¿De dónde provienen las cifras de nutrientes de los cultivos?"
+      },
+      {
+        "a": "No. Ofrece posibilidades asistidas por IA con redacción de incertidumbre, pero siempre debe confirmar con su oficial agrícola local antes de tratar un cultivo, especialmente antes de fumigar.",
+        "q": "¿El Plant Doctor reemplaza a un agrónomo?"
+      },
+      {
+        "a": "Sí: la calculadora, las bibliotecas y las guías son gratuitas. Solo se necesita una cuenta para funciones como guardar diagnósticos.",
+        "q": "¿Fertilizer Dose es gratuito?"
+      }
+    ],
+    "title": "Preguntas que nos hacen los agricultores",
+    "metaTitle": "Preguntas frecuentes — Respuestas sobre Fertilizer Dose",
+    "metaDescription": "Respuestas sobre el cálculo de dosis de fertilizantes, fórmulas NPK, unidades acre/kanal/marla, fuentes de datos y el Plant Doctor."
+  },
+  "footer": {
+    "company": "Empresa",
+    "disclaimer": "Las estimaciones de dosis siguen recomendaciones publicadas. Confirme siempre con su oficial agrícola local y un análisis de suelo antes de la aplicación.",
+    "library": "Biblioteca",
+    "links": {
+      "about": "Nosotros",
+      "blog": "Blog",
+      "calculator": "Calculadora de dosis de Fertilizer Dose",
+      "charts": "Tablas de dosis",
+      "contact": "Contacto",
+      "crops": "Biblioteca de cultivos",
+      "faq": "FAQ",
+      "fertilizers": "Biblioteca de fertilizantes",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Política de privacidad",
+      "terms": "Términos de uso",
+      "wheat": "Guía del trigo",
+      "plants": "Biblioteca de plantas",
+      "vegetables": "Biblioteca de hortalizas",
+      "plantingCalendar": "Calendario de siembra",
+      "myGarden": "Mi huerto",
+      "profitCalculator": "Calculadora de rentabilidad",
+      "compare": "Comparar"
+    },
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Dosis exactas de fertilizantes a partir de datos agronómicos reales: para trigo, arroz, maíz y más. Creado para agricultores de Pakistán y la India.",
+    "tools": "Herramientas"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Del blog",
+      "minRead": "min de lectura",
+      "title": "Aprenda el porqué de la dosis"
+    },
+    "crops": {
+      "desc": "N–P₂O₅–K₂O recomendado por hectárea a partir de fuentes publicadas. Los cultivos marcados «en revisión» nunca se adivinan: los datos solo se publican cuando están verificados.",
+      "eyebrow": "Biblioteca de cultivos",
+      "inReview": "En revisión",
+      "openGuide": "Abrir guía del cultivo",
+      "perHa": "kg/ha",
+      "reviewNote": "Recomendación en verificación",
+      "title": "Dosis para los cultivos que usted realmente cultiva",
+      "verified": "Datos verificados"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Suba una foto clara de una hoja o planta: la IA interpreta los síntomas visuales.",
+          "t": "Diagnóstico basado en fotos"
+        },
+        {
+          "d": "Cada sugerencia incluye un nivel de confianza bajo, medio o alto. Sin falsas certezas.",
+          "t": "Incertidumbre honesta"
+        },
+        {
+          "d": "Causas, acciones inmediatas y prevención, además de cuándo llamar a su oficial agrícola.",
+          "t": "Próximos pasos prácticos"
+        }
+      ],
+      "cta": "Abrir Plant Doctor",
+      "desc": "Suba una foto de una hoja, describa lo que ve y obtenga una evaluación estructurada: posibles problemas, causas probables, qué hacer a continuación y cómo prevenirlo.",
+      "dropSub": "JPG, PNG o WebP · máx. 5 MB",
+      "dropTitle": "Suelte aquí una foto de una hoja",
+      "eyebrow": "Plant Doctor con IA",
+      "serverNote": "Se ejecuta en el servidor mediante Gemini: su clave API nunca llega al navegador.",
+      "title": "¿Algo anda mal con su cultivo? Pregunte al Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Explorar la biblioteca completa de fertilizantes →",
+      "desc": "Composiciones NPK fieles a la etiqueta. Estos porcentajes son la base completa de cada cálculo de dosis.",
+      "eyebrow": "Biblioteca de fertilizantes",
+      "thBest": "Ideal para",
+      "thName": "Fertilizante",
+      "title": "Sepa qué hay realmente en el saco",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Calcular la dosis de fertilizante",
+      "desc": "La dosis correcta ahorra dinero, protege su suelo y aumenta el rendimiento. Toma menos de un minuto.",
+      "title": "Deje de adivinar. Empiece a calcular."
+    },
+    "hero": {
+      "ctaCalc": "Calcular mi dosis",
+      "ctaDoctor": "Diagnosticar una planta",
+      "stats": [
+        {
+          "s": "Cada cifra citada",
+          "t": "Datos con fuente"
+        },
+        {
+          "s": "Método NPK estándar",
+          "t": "DAP primero"
+        },
+        {
+          "s": "Acre · Kanal · Marla · Ha",
+          "t": "4 unidades"
+        }
+      ],
+      "subtitle": "Fertilizer Dose convierte recomendaciones agronómicas publicadas en dosis precisas de fertilizantes por acre, kanal y marla: con datos reales, cada cálculo mostrado y nada inventado.",
+      "tagline": "Dosis de fertilizante, bien hecha",
+      "title": "Sepa exactamente cuánto <em>fertilizante</em> necesita su cultivo."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Ingrese el cultivo y el área en acre, kanal, marla o hectárea, y obtenga cantidades exactas de urea, DAP y MOP con cada paso del cálculo mostrado.",
+          "title": "Calculadora de dosis"
+        },
+        {
+          "desc": "Suba una foto de una hoja, describa los síntomas y obtenga un diagnóstico asistido por IA con causas, acciones y pasos de prevención.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Composiciones NPK fieles a la etiqueta, beneficios, precauciones y guía de aplicación para cada fertilizante principal.",
+          "title": "Biblioteca de fertilizantes"
+        },
+        {
+          "desc": "Temporada, suelo, agua, etapas de crecimiento y problemas comunes del trigo, arroz, maíz, algodón, caña de azúcar y papa.",
+          "title": "Biblioteca de cultivos"
+        },
+        {
+          "title": "Calculadora de rentabilidad",
+          "desc": "Ingrese sus propios supuestos de rendimiento, precio y costos, y vea la ganancia neta, el punto de equilibrio y el ROI por acre y por hectárea."
+        },
+        {
+          "title": "Comparar",
+          "desc": "Costos de nutrientes de fertilizantes lado a lado a partir de sus propios precios, y dosis de cultivos a partir de datos verificados."
+        }
+      ],
+      "eyebrow": "Herramientas principales",
+      "title": "Todo lo que un agricultor necesita, en un solo lugar"
+    },
+    "why": {
+      "eyebrow": "Por qué Fertilizer Dose",
+      "items": [
+        {
+          "d": "Cada valor NPK y cada dosis de cultivo tiene fuente y cita. Nunca números inventados.",
+          "t": "Solo cifras reales"
+        },
+        {
+          "d": "Cada resultado explica la fórmula paso a paso: verifíquelo con lápiz si lo desea.",
+          "t": "Muestra su procedimiento"
+        },
+        {
+          "d": "Acre, kanal, marla, hectárea. Ingrese el terreno como usted lo mide.",
+          "t": "Habla sus unidades"
+        },
+        {
+          "d": "Un tema completo de día/noche que respeta la configuración de su sistema y sus ojos.",
+          "t": "Claro y oscuro"
+        }
+      ],
+      "regionCta": "Probar la calculadora",
+      "regionDesc": "Las recomendaciones predeterminadas siguen la guía agronómica de Punyab (Pakistán) y del norte de la India, con etiquetas de región en cada cifra. Las unidades, la terminología y los calendarios de cultivo coinciden con la agricultura real de aquí.",
+      "regionTitle": "Arraigado en la región",
+      "title": "Construido sobre pruebas, no promesas"
+    },
+    "metaTitle": "Calculadora de dosis NPK de fertilizantes — por acre, kanal, marla y hectárea",
+    "metaDescription": "Calcule dosis exactas de urea, DAP y MOP para trigo, arroz, maíz y más. Calculadora gratuita de fertilizantes NPK con soporte para acre/kanal/marla/hectárea, guías de cultivos y calendario de siembra.",
+    "grow": {
+      "eyebrow": "Cultivar",
+      "title": "Cultivos, plantas y hortalizas",
+      "desc": "Una biblioteca de cultivo: cultivos de campo con dosis verificadas de fertilizantes, además de hortalizas y plantas con datos honestos y controlados por revisión.",
+      "cards": [
+        {
+          "title": "Cultivos",
+          "desc": "Trigo, arroz, maíz, algodón y más, con dosis NPK verificadas donde están publicadas."
+        },
+        {
+          "title": "Hortalizas",
+          "desc": "Tomate, cebolla, chile, okra y más. Los datos solo se publican tras la verificación."
+        },
+        {
+          "title": "Plantas",
+          "desc": "Plantas con flores, de interior, de exterior y frutales para huertos caseros."
+        }
+      ],
+      "browse": "Explorar"
+    },
+    "planting": {
+      "eyebrow": "Calendario de siembra",
+      "title": "¿Qué sembrar este mes?",
+      "desc": "Un calendario de siembra adaptado a su provincia: sin conjeturas genéricas. Cada ventana tiene fuente e insignia de verificación.",
+      "cta": "Abrir calendario de siembra"
+    }
+  },
+  "language": {
+    "choose": "Elegir idioma",
+    "label": "Idioma"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Calcular dosis",
+    "calculator": "Calculadora de dosis",
+    "closeMenu": "Cerrar menú",
+    "crops": "Cultivos",
+    "faq": "FAQ",
+    "fertilizers": "Fertilizantes",
+    "home": "Inicio",
+    "mobileNav": "Navegación móvil",
+    "openMenu": "Abrir menú",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Plantas",
+    "vegetables": "Hortalizas",
+    "grow": "Cultivar",
+    "plantingCalendar": "Calendario de siembra",
+    "myGarden": "Mi huerto",
+    "tools": "Herramientas",
+    "profitCalculator": "Calculadora de rentabilidad",
+    "compare": "Comparar",
+    "login": "Iniciar sesión",
+    "account": "Cuenta",
+    "admin": "Administración",
+    "logout": "Cerrar sesión"
+  },
+  "plantDoctor": {
+    "desc": "Suba una foto clara, describa los síntomas y obtenga una evaluación estructurada: posibles problemas con niveles honestos de confianza, causas probables y qué hacer a continuación.",
+    "eyebrow": "Plant Doctor",
+    "title": "Muéstrenos la hoja. Le ayudaremos a interpretarla.",
+    "metaTitle": "Plant Doctor: diagnóstico de problemas de cultivos con IA",
+    "metaDescription": "Suba una foto de su cultivo y describa los síntomas para un diagnóstico asistido por IA con causas, acciones y pasos de prevención."
+  },
+  "growing": {
+    "searchPlaceholder": "Buscar por nombre…",
+    "filterAll": "Todos",
+    "filterVerified": "Verificado",
+    "filterInReview": "En revisión",
+    "verifiedBadge": "Datos verificados",
+    "inReviewBadge": "En revisión",
+    "verifiedDose": "Dosis verificada",
+    "doseInReview": "Dosis en revisión",
+    "resultsCount": "{count} elementos",
+    "noResults": "No se encontraron coincidencias",
+    "noResultsHint": "Pruebe otra ortografía o borre la búsqueda.",
+    "noData": "Aún no hay datos verificados disponibles.",
+    "noDataHint": "Solo publicamos cifras agronómicas tras verificarlas con fuentes publicadas; nunca las adivinamos.",
+    "sections": {
+      "fertilizer": "Recomendación de fertilizante",
+      "growingConditions": "Condiciones de cultivo",
+      "soil": "Suelo",
+      "water": "Agua",
+      "sunlight": "Luz solar",
+      "climate": "Clima",
+      "season": "Temporada de cultivo",
+      "sowingWindow": "Ventana de siembra / plantación",
+      "harvestWindow": "Ventana de cosecha",
+      "regions": "Regiones adecuadas",
+      "stages": "Etapas de crecimiento y nutrición",
+      "deficiencies": "Deficiencias comunes de nutrientes",
+      "problems": "A tener en cuenta",
+      "references": "Referencias",
+      "lastReviewed": "Última revisión"
+    },
+    "calculateCta": "Calcular para mi terreno",
+    "doctorCta": "¿Ve síntomas? Pruebe el Plant Doctor →",
+    "relatedFertilizers": "Fertilizantes relacionados",
+    "relatedItems": "Relacionados",
+    "inReviewNotice": "La dosis recomendada para {name} se está verificando actualmente con fuentes publicadas. Solo la publicamos aquí cuando está confirmada; nunca la adivinamos.",
+    "indexable": {
+      "cropsTitle": "Cada cultivo, sus necesidades, en un solo lugar.",
+      "plantsTitle": "Plantas para todo tipo de jardín.",
+      "vegetablesTitle": "Hortalizas, del campo al huerto casero."
+    },
+    "subcategoryAll": "Todos los tipos"
+  },
+  "calendar": {
+    "metaTitle": "Calendario de siembra: qué sembrar este mes",
+    "metaDescription": "Calendario de siembra adaptado a su región: qué cultivos, hortalizas y plantas sembrar este mes en su provincia. Solo ventanas verificadas.",
+    "eyebrow": "Calendario de siembra",
+    "title": "Qué sembrar este mes",
+    "desc": "Elija su país y región y explore las ventanas de siembra que respaldamos. Sin calendarios adivinados: cada ventana incluye su fuente y estado de verificación.",
+    "country": "País",
+    "region": "Región / provincia",
+    "month": "Mes",
+    "category": "Categoría",
+    "catAll": "Todos",
+    "catCrop": "Cultivos",
+    "catVegetable": "Hortalizas",
+    "catPlant": "Plantas",
+    "prevMonth": "Mes anterior",
+    "currentMonth": "Mes actual",
+    "nextMonth": "Mes siguiente",
+    "sowingWindow": "Ventana de siembra",
+    "harvestWindow": "Ventana de cosecha",
+    "season": "Temporada",
+    "regionLabel": "Región",
+    "source": "Fuente",
+    "lastReviewed": "Última revisión",
+    "inReview": "En revisión",
+    "verified": "Verificado",
+    "emptyTitle": "Aún no hay datos verificados de siembra aquí",
+    "emptyHint": "Aún no hemos verificado las ventanas de siembra para esta región y mes. Preferimos no mostrar nada antes que un calendario adivinado.",
+    "countryPages": {
+      "pakistanTitle": "Calendario de siembra — Pakistán",
+      "pakistanDesc": "Ventanas de siembra por provincia para Pakistán. Solo datos verificados.",
+      "indiaTitle": "Calendario de siembra — India",
+      "indiaDesc": "Ventanas de siembra por estado para la India. Solo datos verificados.",
+      "regionsTitle": "Regiones",
+      "hasData": "Datos de siembra disponibles",
+      "noDataYet": "Datos en verificación",
+      "openCalendar": "Abrir calendario de siembra"
+    }
+  },
+  "garden": {
+    "metaTitle": "Mi huerto: controle parcelas, siembras y planes de fertilización",
+    "metaDescription": "Su panel personal de huerto: parcelas, siembras, etapas de crecimiento, cálculos de fertilizantes guardados y recordatorios. Almacenado de forma privada en su navegador.",
+    "eyebrow": "Mi huerto",
+    "title": "Mi huerto",
+    "desc": "Controle sus parcelas, lo que sembró y sus planes de fertilización, todo en un solo lugar.",
+    "localNote": "Se guarda en este navegador. Inicia sesión para sincronizar tu jardín en tus dispositivos.",
+    "loading": "Cargando su huerto…",
+    "newPlot": "Agregar parcela",
+    "editPlot": "Editar parcela",
+    "deletePlot": "Eliminar parcela",
+    "confirmDeletePlot": "¿Eliminar esta parcela y todas sus siembras? Esta acción no se puede deshacer.",
+    "plotName": "Nombre de la parcela",
+    "plotNamePh": "p. ej. Campo delantero",
+    "location": "Ubicación",
+    "locationPh": "p. ej. Nombre del pueblo (opcional)",
+    "region": "Región (para sugerencias de siembra)",
+    "regionNone": "Sin región: omitir sugerencias de siembra",
+    "area": "Área",
+    "soilType": "Tipo de suelo",
+    "soilUnknown": "Sin especificar",
+    "notes": "Notas",
+    "notesPh": "Algo que valga la pena recordar…",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "noPlots": "Aún no hay parcelas",
+    "noPlotsHint": "Agregue su primera parcela para empezar a controlar siembras, etapas y recordatorios.",
+    "overview": "Resumen",
+    "plots": "Parcelas",
+    "activePlantings": "Siembras activas",
+    "upcomingTasks": "Tareas próximas",
+    "seasonalSuggestions": "Sugerencias de temporada",
+    "savedCalculations": "Cálculos guardados",
+    "statPlots": "parcelas",
+    "statPlantings": "siembras",
+    "statTasks": "tareas abiertas",
+    "addPlanting": "Agregar siembra",
+    "plantingWhat": "Cultivo / planta / hortaliza",
+    "plantedOn": "Fecha de siembra",
+    "stage": "Etapa de crecimiento",
+    "stagePh": "p. ej. Macollamiento (opcional)",
+    "plantedDaysAgo": "sembrado hace {days} días",
+    "harvestWindow": "Ventana de cosecha",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "¿Eliminar esta siembra? Esta acción no se puede deshacer.",
+    "markDone": "Marcar como hecho",
+    "reopen": "Reabrir",
+    "addReminder": "Agregar recordatorio",
+    "reminderTitle": "Recordatorio",
+    "reminderTitlePh": "p. ej. Aplicar segunda fracción de urea",
+    "dueDate": "Fecha límite",
+    "confirmDeleteReminder": "¿Eliminar este recordatorio?",
+    "noTasks": "No hay tareas próximas. Agregue un recordatorio para mantenerse al día.",
+    "noSuggestions": "No hay sugerencias de siembra ahora mismo. Asigne una región a sus parcelas para recibir sugerencias de temporada.",
+    "noCalculations": "Aún no hay cálculos guardados. Ejecute la calculadora de dosis y guarde un resultado aquí.",
+    "viewInCalculator": "Abrir calculadora de dosis",
+    "suggestionCta": "Sembrar {item} en {plot}",
+    "overdue": "Vencido",
+    "done": "Hecho",
+    "backToGarden": "Volver a Mi huerto",
+    "saveCalculation": "Guardar en Mi huerto",
+    "savedToGarden": "Guardado en Mi huerto",
+    "viewGarden": "Ver Mi huerto"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Calculadora de rentabilidad: ganancia agrícola, punto de equilibrio y ROI",
+      "metaDescription": "Estime la ganancia de su cultivo a partir de sus propios supuestos de rendimiento, precio y costos. Fórmulas transparentes, rendimiento y precio de equilibrio, vistas por acre y por hectárea.",
+      "eyebrow": "Calculadora de rentabilidad",
+      "title": "¿Este cultivo será rentable?",
+      "desc": "Ingrese sus propios supuestos: rendimiento esperado, precio de mercado y cada costo de insumos. El cálculo es totalmente transparente y nada viene precargado con cifras adivinadas.",
+      "assumptionNote": "Cada cifra a continuación proviene de los números que usted ingresa. No agregamos precios de mercado, rendimientos ni costos propios.",
+      "crop": "Cultivo (opcional)",
+      "noCrop": "Seleccione un cultivo…",
+      "area": "Área",
+      "yieldPerUnit": "Rendimiento esperado por acre",
+      "yieldUnit": "Unidad de rendimiento",
+      "yieldUnitPh": "p. ej. maunds, kg, toneladas",
+      "pricePerYieldUnit": "Precio esperado por unidad de rendimiento",
+      "currency": "Etiqueta de moneda",
+      "currencyPh": "p. ej. Rs, PKR, ₹",
+      "costsTitle": "Costos de insumos (sus cifras)",
+      "costSeed": "Semilla",
+      "costFertilizer": "Fertilizante",
+      "costPesticide": "Pesticida / herbicida",
+      "costLabor": "Mano de obra",
+      "costIrrigation": "Riego / agua",
+      "costRent": "Alquiler de la tierra",
+      "costOther": "Otros",
+      "calculate": "Calcular ganancia",
+      "reset": "Restablecer",
+      "print": "Imprimir",
+      "saveScenario": "Guardar escenario",
+      "scenarioName": "Nombre del escenario",
+      "scenarioNamePh": "p. ej. Trigo 2026 — 5 acres",
+      "scenarios": "Escenarios guardados",
+      "noScenarios": "Aún no hay escenarios guardados.",
+      "deleteScenario": "Eliminar",
+      "results": "Resultados",
+      "revenue": "Ingresos totales",
+      "totalCost": "Costo total",
+      "netProfit": "Ganancia neta",
+      "profitPerAcre": "Ganancia por acre",
+      "profitPerHa": "Ganancia por hectárea",
+      "costPerYieldUnit": "Costo por unidad de rendimiento",
+      "breakEvenYield": "Rendimiento de equilibrio",
+      "breakEvenPrice": "Precio de equilibrio",
+      "roi": "Retorno de la inversión",
+      "formulasTitle": "Cómo se calcula",
+      "perAcre": "por acre",
+      "perHectare": "por hectárea",
+      "loss": "pérdida",
+      "openCropGuide": "Abrir guía del cultivo",
+      "openCalculator": "Calcular costo de fertilizante"
+    },
+    "compare": {
+      "metaTitle": "Comparar fertilizantes y cultivos: comparación de costos de nutrientes",
+      "metaDescription": "Compare fertilizantes por precio por kg de nutriente usando sus propios precios de mercado, y compare cultivos por dosis verificada y datos de cultivo.",
+      "eyebrow": "Comparar",
+      "title": "Compare, lado a lado",
+      "desc": "Costos de nutrientes de fertilizantes a partir de los precios que usted ingresa; nunca adivinamos precios de mercado. Los datos de cultivos provienen solo de cifras verificadas.",
+      "tabFertilizers": "Fertilizantes",
+      "tabCrops": "Cultivos",
+      "selectFertilizers": "Seleccione fertilizantes para comparar",
+      "pricePerBag": "Precio por saco",
+      "bagSize": "Tamaño del saco (kg)",
+      "pricePerKgN": "por kg N",
+      "pricePerKgP": "por kg P₂O₅",
+      "pricePerKgK": "por kg K₂O",
+      "cheapest": "más barato",
+      "na": "—",
+      "userPriceNote": "Los precios los ingresa usted: indique el precio de mercado local por saco para una comparación real.",
+      "viewFertilizer": "Ver guía",
+      "selectCrops": "Seleccione cultivos para comparar (hasta 3)",
+      "dose": "Dosis NPK / ha",
+      "season": "Temporada",
+      "water": "Agua",
+      "soil": "Suelo",
+      "inReview": "En revisión",
+      "noDoseData": "Dosis en revisión: no adivinada",
+      "viewGuide": "Abrir guía del cultivo"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog: guías de ciencia de fertilizantes y nutrición de cultivos",
+    "metaDescription": "Guías prácticas sobre dosis de fertilizantes, cálculos NPK, nutrición de cultivos y salud del suelo para agricultores pakistaníes e indios."
+  },
+  "fertilizers": {
+    "metaTitle": "Biblioteca de fertilizantes: composición NPK, usos y guía de dosis",
+    "metaDescription": "Composiciones NPK fieles a la etiqueta, beneficios, precauciones y guía de aplicación para urea, DAP, MOP, SSP, SOP y más."
+  },
+  "chart": {
+    "metaTitle": "Tabla de dosis de fertilizantes: referencia rápida NPK",
+    "metaDescription": "Tabla de referencia rápida de dosis de fertilizantes: recomendaciones NPK por cultivo con cantidades de urea, DAP y MOP."
+  },
+  "auth": {
+    "loginTitle": "Iniciar sesión",
+    "loginDesc": "Acceda a su huerto, elementos guardados y herramientas de administración.",
+    "signupTitle": "Crear cuenta",
+    "signupDesc": "Guarde su huerto en la nube y sincronícelo entre dispositivos.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "loginCta": "Iniciar sesión",
+    "signupCta": "Crear cuenta",
+    "noAccount": "¿Aún no tiene cuenta?",
+    "haveAccount": "¿Ya tiene una cuenta?",
+    "invalid": "Correo electrónico o contraseña no válidos.",
+    "error": "Algo salió mal. Inténtelo de nuevo.",
+    "accountTitle": "Mi cuenta",
+    "role": "Rol",
+    "signOut": "Cerrar sesión",
+    "adminLink": "Abrir panel de administración",
+    "gardenNote": "Su huerto ahora se sincroniza con su cuenta cuando ha iniciado sesión."
   }
 }

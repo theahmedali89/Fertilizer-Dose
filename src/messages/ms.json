@@ -4,6 +4,576 @@
     "name": "Malay",
     "nativeName": "Bahasa Melayu",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Pilih tanaman anda, masukkan luas tanah dalam unit yang biasa anda guna — acre, kanal, marla atau hectare — dan dapatkan sukatan Urea, DAP dan MOP yang tepat serta jadual aplikasi mengikut peringkat pertumbuhan.",
+    "empty": {
+      "desc": "Pilih tanaman, masukkan luas tanah, dan tekan kira. Setiap langkah pengiraan ditunjukkan.",
+      "title": "Dos anda akan muncul di sini"
+    },
+    "eyebrow": "Kalkulator dos",
+    "form": {
+      "area": "Luas tanah",
+      "areaError": "Sila masukkan luas tanah yang sah dan lebih besar daripada sifar.",
+      "areaLargeError": "Luas itu kelihatan luar biasa besar — sila semak semula nilai dan unit.",
+      "areaPlaceholder": "cth. 5",
+      "crop": "Tanaman",
+      "cropHint": "Hanya tanaman dengan syor yang disahkan boleh dipilih.",
+      "inReview": "data dalam semakan",
+      "soil": "Jenis tanah (pilihan)",
+      "soilHint": "Jenis tanah tidak mengubah kiraan — ia mengubah nasihat. Tanah berpasir melarutkan nitrogen lebih cepat; tanah masin perlu berhati-hati dengan MOP.",
+      "submit": "Kira dos",
+      "unit": "Unit"
+    },
+    "method": {
+      "desc": "Bukan kotak hitam. Ini prosedur standard DAP-dahulu yang diajar dalam kursus agronomi.",
+      "eyebrow": "Kaedah",
+      "title": "Kaedahnya, dijelaskan dengan mudah"
+    },
+    "results": {
+      "bags": "× guni 50 kg",
+      "disclaimer": "Anggaran mengikut syor yang diterbitkan. Sahkan dengan pegawai pertanian tempatan sebelum aplikasi.",
+      "howTitle": "Cara ia dikira",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Jadual aplikasi",
+      "soilDefault": "Dos standard ditunjukkan. Laraskan selepas ujian tanah.",
+      "soilNoteLabel": "Nota tanah:",
+      "sourceLabel": "Sumber data:",
+      "total": "Jumlah baja",
+      "kgUnit": "kg",
+      "recommendedLine": "Disyorkan {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Anda memilih \"{soil}\". Pada tanah {soilLower}, pertimbangkan ujian tanah sebelum mengubah dos — pengiraan asas di atas kekal sama."
+    },
+    "title": "Dos baja yang tepat, lengkap dengan kiraannya.",
+    "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
+    "metaDescription": "Kira dos Urea, DAP dan MOP yang tepat untuk gandum, padi dan jagung. Masukkan luas dalam acre, kanal, marla atau hectare — lihat setiap langkah pengiraan.",
+    "methodFaq": [
+      {
+        "q": "Mengapa DAP dikira dahulu?",
+        "a": "Fosforus tidak bergerak dalam tanah, jadi seluruh dos P₂O₅ mesti datang daripada DAP semasa menyemai. DAP juga mengandungi 18% nitrogen yang dikira dalam jumlah keperluan nitrogen — mengira DAP dahulu membolehkan kita menolak nitrogen itu sebelum mengira Urea, jadi nitrogen tidak dikira dua kali."
+      },
+      {
+        "q": "Bagaimana kanal dan marla ditukar?",
+        "a": "1 acre = 8 kanal = 160 marla, dan 1 kanal = 20 marla. Dalam metrik: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Kalkulator menukar luas anda kepada hectare, menggunakan dos per hectare, kemudian menukarnya semula."
+      },
+      {
+        "q": "Mengapa sesetengah tanaman tidak boleh dipilih?",
+        "a": "Tanaman hanya boleh dipilih jika dos NPK yang disyorkan telah disahkan terhadap sumber yang diterbitkan. Kami lebih rela menyahdayakan tanaman daripada mereka angkanya — tanaman yang belum disahkan ditanda \"data dalam semakan\" sehingga disahkan."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Tukar ke mod gelap",
+    "themeLight": "Tukar ke mod cerah"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Dengan formula agronomi standard: baja (kg) = (nutrien diperlukan × 100) ÷ % nutrien dalam baja. Kami gunakannya DAP-dahulu — fosforus daripada DAP, kemudian baki nitrogen daripada Urea (mengambil kira 18% nitrogen DAP), kemudian kalium daripada MOP — dan menunjukkan setiap langkah.",
+        "q": "Bagaimana dos baja dikira?"
+      },
+      {
+        "a": "Acre, kanal, marla dan hectare. Penukaran yang digunakan: 1 acre = 8 kanal = 160 marla, 1 kanal = 20 marla, 1 hectare = 2.471 acre.",
+        "q": "Unit tanah apa yang disokong?"
+      },
+      {
+        "a": "Syor wilayah dan institut penyelidikan yang diterbitkan (cth. pakej amalan PAU), berlabel wilayah. Setiap angka dalam kalkulator memetik sumbernya, dan tanaman tanpa sumber yang disahkan ditanda 'data dalam semakan' bukannya diagak.",
+        "q": "Dari mana datangnya angka nutrien tanaman?"
+      },
+      {
+        "a": "Tidak. Ia memberi kemungkinan berbantukan AI dengan pernyataan ketidakpastian, tetapi anda harus sentiasa mengesahkan dengan pegawai pertanian tempatan sebelum merawat tanaman — terutamanya sebelum menyembur apa-apa.",
+        "q": "Adakah Plant Doctor pengganti ahli agronomi?"
+      },
+      {
+        "a": "Ya — kalkulator, pustaka dan panduan adalah percuma. Akaun hanya diperlukan untuk ciri seperti menyimpan diagnosis.",
+        "q": "Adakah Fertilizer Dose percuma?"
+      }
+    ],
+    "title": "Soalan yang sering ditanya petani",
+    "metaTitle": "FAQ — Soalan & Jawapan Fertilizer Dose",
+    "metaDescription": "Jawapan tentang pengiraan dos baja, formula NPK, unit acre/kanal/marla, sumber data dan Plant Doctor."
+  },
+  "footer": {
+    "company": "Syarikat",
+    "disclaimer": "Anggaran dos mengikut syor yang diterbitkan. Sentiasa sahkan dengan pegawai pertanian tempatan dan ujian tanah sebelum aplikasi.",
+    "library": "Pustaka",
+    "links": {
+      "about": "Perihal",
+      "blog": "Blog",
+      "calculator": "Fertilizer Dose Calculator",
+      "charts": "Carta Dos",
+      "contact": "Hubungi",
+      "crops": "Pustaka Tanaman",
+      "faq": "FAQ",
+      "fertilizers": "Pustaka Baja",
+      "plantDoctor": "Plant Doctor",
+      "privacy": "Dasar Privasi",
+      "terms": "Syarat Penggunaan",
+      "wheat": "Panduan Gandum",
+      "plants": "Pustaka Pokok",
+      "vegetables": "Pustaka Sayur",
+      "plantingCalendar": "Kalendar Menanam",
+      "myGarden": "Kebun Saya",
+      "profitCalculator": "Kalkulator Keuntungan",
+      "compare": "Banding"
+    },
+    "rights": "Hak cipta terpelihara.",
+    "tagline": "Dos baja yang tepat daripada data agronomi sebenar — untuk gandum, padi, jagung dan banyak lagi. Dibina untuk petani di Pakistan & India.",
+    "tools": "Alatan"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Dari blog",
+      "minRead": "minit bacaan",
+      "title": "Pelajari sebab di sebalik dos"
+    },
+    "crops": {
+      "desc": "N–P₂O₅–K₂O per hectare yang disyorkan daripada sumber yang diterbitkan. Tanaman bertanda 'dalam semakan' tidak pernah diagak — data hanya dimuatkan setelah disahkan.",
+      "eyebrow": "Pustaka tanaman",
+      "inReview": "Dalam semakan",
+      "openGuide": "Buka panduan tanaman",
+      "perHa": "kg/ha",
+      "reviewNote": "Syor sedang disahkan",
+      "title": "Dos untuk tanaman yang anda tanam",
+      "verified": "Data disahkan"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Muat naik foto daun atau tanaman yang jelas — AI membaca gejala visual.",
+          "t": "Diagnosis berasaskan foto"
+        },
+        {
+          "d": "Setiap cadangan disertai tahap keyakinan rendah / sederhana / tinggi. Tiada kepastian palsu.",
+          "t": "Ketidakpastian yang jujur"
+        },
+        {
+          "d": "Punca, tindakan segera dan pencegahan — serta bila perlu hubungi pegawai pertanian.",
+          "t": "Langkah seterusnya yang boleh diambil"
+        }
+      ],
+      "cta": "Buka Plant Doctor",
+      "desc": "Muat naik foto daun, jelaskan apa yang anda lihat, dan dapatkan penilaian berstruktur — kemungkinan masalah, jangkaan punca, apa yang perlu dilakukan, dan cara mencegahnya.",
+      "dropSub": "JPG, PNG atau WebP · maks 5 MB",
+      "dropTitle": "Letak foto daun di sini",
+      "eyebrow": "AI Plant Doctor",
+      "serverNote": "Berjalan di pelayan melalui Gemini — kunci API anda tidak pernah menyentuh pelayar.",
+      "title": "Ada yang tidak kena dengan tanaman anda? Tanya Plant Doctor."
+    },
+    "fertilizers": {
+      "browse": "Lihat pustaka baja selengkapnya →",
+      "desc": "Komposisi NPK yang tepat mengikut label. Peratusan inilah asas setiap pengiraan dos.",
+      "eyebrow": "Pustaka baja",
+      "thBest": "Sesuai untuk",
+      "thName": "Baja",
+      "title": "Ketahui isi sebenar dalam guni",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Kira dos baja",
+      "desc": "Dos yang tepat menjimatkan wang, melindungi tanah, dan menaikkan hasil. Kurang daripada seminit.",
+      "title": "Berhenti meneka. Mula mengira."
+    },
+    "hero": {
+      "ctaCalc": "Kira dos saya",
+      "ctaDoctor": "Diagnosis tanaman",
+      "stats": [
+        {
+          "s": "Setiap angka bersumber",
+          "t": "Data bersumber"
+        },
+        {
+          "s": "Kaedah NPK standard",
+          "t": "DAP-dahulu"
+        },
+        {
+          "s": "Acre · Kanal · Marla · Ha",
+          "t": "4 unit"
+        }
+      ],
+      "subtitle": "Fertilizer Dose menukar syor agronomi yang diterbitkan kepada dos baja yang tepat per acre, per kanal dan per marla — dengan data sebenar, setiap pengiraan ditunjukkan, tiada yang direka.",
+      "tagline": "Dos baja, dilakukan dengan betul",
+      "title": "Ketahui dengan tepat berapa banyak <em>baja</em> yang diperlukan tanaman anda."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Masukkan tanaman + luas dalam acre, kanal, marla atau hectare — dapatkan sukatan Urea, DAP dan MOP yang tepat dengan setiap langkah pengiraan ditunjukkan.",
+          "title": "Kalkulator Dos"
+        },
+        {
+          "desc": "Muat naik foto daun, jelaskan gejalanya, dan dapatkan diagnosis berbantukan AI dengan punca, tindakan dan langkah pencegahan.",
+          "title": "Plant Doctor"
+        },
+        {
+          "desc": "Komposisi NPK tepat mengikut label, manfaat, langkah berjaga-jaga dan panduan aplikasi untuk setiap baja utama.",
+          "title": "Pustaka Baja"
+        },
+        {
+          "desc": "Musim, tanah, air, peringkat pertumbuhan dan masalah biasa untuk gandum, padi, jagung, kapas, tebu dan kentang.",
+          "title": "Pustaka Tanaman"
+        },
+        {
+          "title": "Kalkulator Keuntungan",
+          "desc": "Masukkan andaian hasil, harga dan kos anda sendiri — lihat keuntungan bersih, titik pulang modal dan ROI per acre dan per hectare."
+        },
+        {
+          "title": "Banding",
+          "desc": "Kos nutrien baja bersebelahan daripada harga anda sendiri, dan dos tanaman daripada data yang disahkan."
+        }
+      ],
+      "eyebrow": "Alatan utama",
+      "title": "Semua yang diperlukan penanam, di satu tempat"
+    },
+    "why": {
+      "eyebrow": "Mengapa Fertilizer Dose",
+      "items": [
+        {
+          "d": "Setiap nilai NPK dan dos tanaman bersumber dan dipetik. Tiada angka rekaan, selamanya.",
+          "t": "Hanya angka sebenar"
+        },
+        {
+          "d": "Setiap hasil menerangkan formulanya langkah demi langkah — sahkan dengan pen jika mahu.",
+          "t": "Menunjukkan cara kerjanya"
+        },
+        {
+          "d": "Acre, kanal, marla, hectare. Masukkan tanah seperti cara anda mengukurnya.",
+          "t": "Berbicara dalam unit anda"
+        },
+        {
+          "d": "Tema siang/malam penuh yang menghormati tetapan sistem dan mata anda.",
+          "t": "Cerah & gelap"
+        }
+      ],
+      "regionCta": "Cuba kalkulator",
+      "regionDesc": "Syor lalai mengikut panduan agronomi Punjab (Pakistan) dan India Utara, dengan label wilayah pada setiap angka. Unit, istilah dan kalendar tanaman sepadan dengan cara bertani yang sebenar di sini.",
+      "regionTitle": "Berakar di wilayah ini",
+      "title": "Dibina atas bukti, bukan janji"
+    },
+    "metaTitle": "Fertilizer Dose — Kalkulator Dos Baja NPK per Acre, Kanal, Marla & Hectare",
+    "metaDescription": "Kira dos Urea, DAP & MOP yang tepat untuk gandum, padi, jagung dan banyak lagi. Kalkulator baja NPK percuma dengan sokongan acre/kanal/marla/hectare, panduan tanaman dan kalendar menanam.",
+    "grow": {
+      "eyebrow": "Penanaman",
+      "title": "Tanaman, pokok & sayur",
+      "desc": "Satu pustaka penanaman: tanaman ladang dengan dos baja yang disahkan, serta data sayur dan pokok yang jujur dan terhad semakan.",
+      "cards": [
+        {
+          "title": "Tanaman",
+          "desc": "Gandum, padi, jagung, kapas dan banyak lagi — dengan dos NPK yang disahkan jika telah diterbitkan."
+        },
+        {
+          "title": "Sayur",
+          "desc": "Tomato, bawang, cili, bendi dan banyak lagi. Data hanya dimuatkan selepas pengesahan."
+        },
+        {
+          "title": "Pokok",
+          "desc": "Pokok berbunga, dalaman, luaran dan buah-buahan untuk kebun rumah."
+        }
+      ],
+      "browse": "Lihat"
+    },
+    "planting": {
+      "eyebrow": "Kalendar menanam",
+      "title": "Bulan ini tanam apa?",
+      "desc": "Kalendar menyemai yang peka wilayah untuk provinsi anda — tiada tekaan seragam. Setiap tetingkap bersumber dan berlabel pengesahan.",
+      "cta": "Buka kalendar menanam"
+    }
+  },
+  "language": {
+    "choose": "Pilih bahasa",
+    "label": "Bahasa"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Kira Dos",
+    "calculator": "Kalkulator Dos",
+    "closeMenu": "Tutup menu",
+    "crops": "Tanaman",
+    "faq": "FAQ",
+    "fertilizers": "Baja",
+    "home": "Laman",
+    "mobileNav": "Navigasi mudah alih",
+    "openMenu": "Buka menu",
+    "plantDoctor": "Plant Doctor",
+    "plants": "Pokok",
+    "vegetables": "Sayur",
+    "grow": "Penanaman",
+    "plantingCalendar": "Kalendar Menanam",
+    "myGarden": "Kebun Saya",
+    "tools": "Alatan",
+    "profitCalculator": "Kalkulator Keuntungan",
+    "compare": "Banding",
+    "login": "Log masuk",
+    "account": "Akaun",
+    "admin": "Admin",
+    "logout": "Log keluar"
+  },
+  "plantDoctor": {
+    "desc": "Muat naik foto yang jelas, jelaskan gejalanya, dan dapatkan penilaian berstruktur — kemungkinan masalah dengan tahap keyakinan yang jujur, jangkaan punca, dan langkah seterusnya.",
+    "eyebrow": "Plant Doctor",
+    "title": "Tunjukkan daunnya. Kami bantu membacanya.",
+    "metaTitle": "Plant Doctor — Diagnosis Masalah Tanaman dengan AI",
+    "metaDescription": "Muat naik foto tanaman dan jelaskan gejala untuk diagnosis berbantukan AI yang mengandungi punca, tindakan dan langkah pencegahan."
+  },
+  "growing": {
+    "searchPlaceholder": "Cari mengikut nama…",
+    "filterAll": "Semua",
+    "filterVerified": "Disahkan",
+    "filterInReview": "Dalam semakan",
+    "verifiedBadge": "Data disahkan",
+    "inReviewBadge": "Dalam semakan",
+    "verifiedDose": "Dos disahkan",
+    "doseInReview": "Dos dalam semakan",
+    "resultsCount": "{count} item",
+    "noResults": "Tiada hasil yang sepadan",
+    "noResultsHint": "Cuba ejaan lain atau padam carian.",
+    "noData": "Tiada data yang disahkan buat masa ini.",
+    "noDataHint": "Kami menerbitkan angka agronomi hanya selepas pengesahan terhadap sumber yang diterbitkan — tidak pernah diagak.",
+    "sections": {
+      "fertilizer": "Syor baja",
+      "growingConditions": "Keadaan penanaman",
+      "soil": "Tanah",
+      "water": "Air",
+      "sunlight": "Cahaya matahari",
+      "climate": "Iklim",
+      "season": "Musim penanaman",
+      "sowingWindow": "Tetingkap menyemai / menanam",
+      "harvestWindow": "Tetingkap menuai",
+      "regions": "Wilayah yang sesuai",
+      "stages": "Peringkat pertumbuhan & pembajaan",
+      "deficiencies": "Kekurangan nutrien biasa",
+      "problems": "Awas",
+      "references": "Rujukan",
+      "lastReviewed": "Terakhir disemak"
+    },
+    "calculateCta": "Kira untuk tanah saya",
+    "doctorCta": "Nampak gejala? Cuba Plant Doctor →",
+    "relatedFertilizers": "Baja berkaitan",
+    "relatedItems": "Berkaitan",
+    "inReviewNotice": "Dos yang disyorkan untuk {name} sedang disahkan terhadap sumber yang diterbitkan. Kami menerbitkannya di sini hanya setelah disahkan — tidak pernah diagak.",
+    "indexable": {
+      "cropsTitle": "Setiap tanaman dan keperluannya, di satu tempat.",
+      "plantsTitle": "Pokok untuk setiap jenis kebun.",
+      "vegetablesTitle": "Sayur, dari ladang ke kebun dapur."
+    },
+    "subcategoryAll": "Semua jenis"
+  },
+  "calendar": {
+    "metaTitle": "Kalendar Menanam — Apa yang Ditanam Bulan Ini",
+    "metaDescription": "Kalendar menanam peka wilayah: tanaman, sayur dan pokok apa yang disemai bulan ini di provinsi anda. Hanya tetingkap yang disahkan.",
+    "eyebrow": "Kalendar menanam",
+    "title": "Bulan ini tanam apa",
+    "desc": "Pilih negara dan wilayah anda, kemudian lihat tetingkap menyemai yang boleh kami pertahankan. Tiada kalendar tekaan — setiap tetingkap menyatakan sumber dan status pengesahannya.",
+    "country": "Negara",
+    "region": "Wilayah / provinsi",
+    "month": "Bulan",
+    "category": "Kategori",
+    "catAll": "Semua",
+    "catCrop": "Tanaman",
+    "catVegetable": "Sayur",
+    "catPlant": "Pokok",
+    "prevMonth": "Bulan lalu",
+    "currentMonth": "Bulan ini",
+    "nextMonth": "Bulan depan",
+    "sowingWindow": "Tetingkap menyemai",
+    "harvestWindow": "Tetingkap menuai",
+    "season": "Musim",
+    "regionLabel": "Wilayah",
+    "source": "Sumber",
+    "lastReviewed": "Terakhir disemak",
+    "inReview": "Dalam semakan",
+    "verified": "Disahkan",
+    "emptyTitle": "Tiada data menanam yang disahkan di sini buat masa ini",
+    "emptyHint": "Kami belum mengesahkan tetingkap menyemai untuk wilayah dan bulan ini. Kami lebih rela tidak menunjukkan apa-apa daripada kalendar tekaan.",
+    "countryPages": {
+      "pakistanTitle": "Kalendar Menanam — Pakistan",
+      "pakistanDesc": "Tetingkap menyemai mengikut provinsi untuk Pakistan. Hanya data yang disahkan.",
+      "indiaTitle": "Kalendar Menanam — India",
+      "indiaDesc": "Tetingkap menyemai mengikut negeri untuk India. Hanya data yang disahkan.",
+      "regionsTitle": "Wilayah",
+      "hasData": "Data menanam tersedia",
+      "noDataYet": "Data dalam pengesahan",
+      "openCalendar": "Buka kalendar menanam"
+    }
+  },
+  "garden": {
+    "metaTitle": "Kebun Saya — Jejak Petak, Penanaman & Pelan Baja",
+    "metaDescription": "Papan pemuka kebun peribadi anda: petak, penanaman, peringkat pertumbuhan, pengiraan baja tersimpan dan peringatan. Disimpan secara peribadi dalam pelayar anda.",
+    "eyebrow": "Kebun saya",
+    "title": "Kebun Saya",
+    "desc": "Jejaki petak anda, apa yang anda tanam, dan pelan baja anda — semua di satu tempat.",
+    "localNote": "Disimpan dalam pelayar ini. Log masuk untuk menyegerakkan kebun anda merentas peranti.",
+    "loading": "Memuatkan kebun anda…",
+    "newPlot": "Tambah petak",
+    "editPlot": "Ubah petak",
+    "deletePlot": "Padam petak",
+    "confirmDeletePlot": "Padam petak ini dan semua tanamannya? Ini tidak boleh dibatalkan.",
+    "plotName": "Nama petak",
+    "plotNamePh": "cth. Ladang depan",
+    "location": "Lokasi",
+    "locationPh": "cth. Nama kampung (pilihan)",
+    "region": "Wilayah (untuk cadangan menyemai)",
+    "regionNone": "Tiada wilayah — langkau cadangan menyemai",
+    "area": "Luas",
+    "soilType": "Jenis tanah",
+    "soilUnknown": "Tidak dinyatakan",
+    "notes": "Nota",
+    "notesPh": "Perkara yang wajar diingati…",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Padam",
+    "noPlots": "Tiada petak lagi",
+    "noPlotsHint": "Tambah petak pertama anda untuk mula menjejak penanaman, peringkat dan peringatan.",
+    "overview": "Ringkasan",
+    "plots": "Petak",
+    "activePlantings": "Penanaman aktif",
+    "upcomingTasks": "Tugas akan datang",
+    "seasonalSuggestions": "Cadangan bermusim",
+    "savedCalculations": "Pengiraan tersimpan",
+    "statPlots": "petak",
+    "statPlantings": "penanaman",
+    "statTasks": "tugas terbuka",
+    "addPlanting": "Tambah penanaman",
+    "plantingWhat": "Tanaman / pokok / sayur",
+    "plantedOn": "Tarikh menanam",
+    "stage": "Peringkat pertumbuhan",
+    "stagePh": "cth. Beranak (pilihan)",
+    "plantedDaysAgo": "ditanam {days} hari lalu",
+    "harvestWindow": "Tetingkap menuai",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Buang penanaman ini? Ini tidak boleh dibatalkan.",
+    "markDone": "Tanda selesai",
+    "reopen": "Buka semula",
+    "addReminder": "Tambah peringatan",
+    "reminderTitle": "Peringatan",
+    "reminderTitlePh": "cth. Beri susulan Urea kedua",
+    "dueDate": "Tarikh akhir",
+    "confirmDeleteReminder": "Padam peringatan ini?",
+    "noTasks": "Tiada tugas akan datang. Tambah peringatan untuk kekal di landasan.",
+    "noSuggestions": "Tiada cadangan menyemai buat masa ini. Tetapkan wilayah pada petak anda untuk mendapatkan cadangan bermusim.",
+    "noCalculations": "Tiada pengiraan tersimpan lagi. Jalankan kalkulator dos dan simpan hasilnya di sini.",
+    "viewInCalculator": "Buka kalkulator dos",
+    "suggestionCta": "Semai {item} di {plot}",
+    "overdue": "Telah lewat",
+    "done": "Selesai",
+    "backToGarden": "Kembali ke Kebun Saya",
+    "saveCalculation": "Simpan ke Kebun Saya",
+    "savedToGarden": "Tersimpan ke Kebun Saya",
+    "viewGarden": "Lihat Kebun Saya"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Kalkulator Keuntungan — Keuntungan Ladang, Titik Pulang Modal & ROI",
+      "metaDescription": "Anggar keuntungan tanaman daripada andaian hasil, harga dan kos anda sendiri. Formula telus, hasil dan harga titik pulang modal, paparan per acre dan per hectare.",
+      "eyebrow": "Kalkulator keuntungan",
+      "title": "Adakah tanaman ini akan menguntungkan?",
+      "desc": "Masukkan andaian anda sendiri — jangkaan hasil, harga pasaran dan setiap kos input. Kiranya telus sepenuhnya, dan tiada yang diisi dengan angka tekaan.",
+      "assumptionNote": "Setiap angka di bawah datang daripada angka yang anda masukkan. Kami tidak menambah harga pasaran, hasil atau kos kami sendiri.",
+      "crop": "Tanaman (pilihan)",
+      "noCrop": "Pilih tanaman…",
+      "area": "Luas",
+      "yieldPerUnit": "Jangkaan hasil per acre",
+      "yieldUnit": "Unit hasil",
+      "yieldUnitPh": "cth. maunds, kg, tan",
+      "pricePerYieldUnit": "Jangkaan harga per unit hasil",
+      "currency": "Label mata wang",
+      "currencyPh": "cth. Rs, PKR, ₹",
+      "costsTitle": "Kos input (angka anda)",
+      "costSeed": "Benih",
+      "costFertilizer": "Baja",
+      "costPesticide": "Racun / racun rumpai",
+      "costLabor": "Buruh",
+      "costIrrigation": "Pengairan / air",
+      "costRent": "Sewa tanah",
+      "costOther": "Lain-lain",
+      "calculate": "Kira keuntungan",
+      "reset": "Set semula",
+      "print": "Cetak",
+      "saveScenario": "Simpan senario",
+      "scenarioName": "Nama senario",
+      "scenarioNamePh": "cth. Gandum 2026 — 5 acre",
+      "scenarios": "Senario tersimpan",
+      "noScenarios": "Tiada senario tersimpan lagi.",
+      "deleteScenario": "Padam",
+      "results": "Keputusan",
+      "revenue": "Jumlah hasil",
+      "totalCost": "Jumlah kos",
+      "netProfit": "Keuntungan bersih",
+      "profitPerAcre": "Keuntungan per acre",
+      "profitPerHa": "Keuntungan per hectare",
+      "costPerYieldUnit": "Kos per unit hasil",
+      "breakEvenYield": "Hasil titik pulang modal",
+      "breakEvenPrice": "Harga titik pulang modal",
+      "roi": "Pulangan atas pelaburan",
+      "formulasTitle": "Cara ia dikira",
+      "perAcre": "per acre",
+      "perHectare": "per hectare",
+      "loss": "rugi",
+      "openCropGuide": "Buka panduan tanaman",
+      "openCalculator": "Kira kos baja"
+    },
+    "compare": {
+      "metaTitle": "Banding Baja & Tanaman — Perbandingan Kos Nutrien",
+      "metaDescription": "Bandingkan baja mengikut harga per kg nutrien menggunakan harga pasaran anda sendiri, dan bandingkan tanaman mengikut dos yang disahkan dan data penanaman.",
+      "eyebrow": "Banding",
+      "title": "Banding, bersebelahan",
+      "desc": "Kos nutrien baja daripada harga yang anda masukkan — kami tidak pernah mengagak harga pasaran. Data tanaman hanya daripada angka yang disahkan.",
+      "tabFertilizers": "Baja",
+      "tabCrops": "Tanaman",
+      "selectFertilizers": "Pilih baja untuk dibandingkan",
+      "pricePerBag": "Harga per guni",
+      "bagSize": "Saiz guni (kg)",
+      "pricePerKgN": "per kg N",
+      "pricePerKgP": "per kg P₂O₅",
+      "pricePerKgK": "per kg K₂O",
+      "cheapest": "termurah",
+      "na": "—",
+      "userPriceNote": "Harga dimasukkan oleh anda — masukkan harga pasaran tempatan per guni untuk perbandingan yang tepat.",
+      "viewFertilizer": "Lihat panduan",
+      "selectCrops": "Pilih tanaman untuk dibandingkan (maks 3)",
+      "dose": "Dos NPK / ha",
+      "season": "Musim",
+      "water": "Air",
+      "soil": "Tanah",
+      "inReview": "Dalam semakan",
+      "noDoseData": "Dos dalam semakan — tidak diagak",
+      "viewGuide": "Buka panduan tanaman"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — Sains Baja & Panduan Pemakanan Tanaman",
+    "metaDescription": "Panduan praktikal tentang dos baja, pengiraan NPK, pemakanan tanaman dan kesihatan tanah untuk petani Pakistan dan India."
+  },
+  "fertilizers": {
+    "metaTitle": "Pustaka Baja — Komposisi NPK, Kegunaan & Panduan Dos",
+    "metaDescription": "Komposisi NPK tepat mengikut label, manfaat, langkah berjaga-jaga dan panduan aplikasi untuk Urea, DAP, MOP, SSP, SOP dan banyak lagi."
+  },
+  "chart": {
+    "metaTitle": "Fertilizer Dose — Carta Dos Baja & Rujukan Pantas NPK",
+    "metaDescription": "Carta dos baja rujukan pantas: syor NPK per tanaman dengan sukatan Urea, DAP dan MOP."
+  },
+  "auth": {
+    "loginTitle": "Log masuk",
+    "loginDesc": "Akses kebun, item tersimpan dan alatan admin anda.",
+    "signupTitle": "Cipta akaun",
+    "signupDesc": "Simpan kebun anda ke awan dan segerakkan merentas peranti.",
+    "name": "Nama",
+    "email": "E-mel",
+    "password": "Kata laluan",
+    "loginCta": "Log masuk",
+    "signupCta": "Cipta akaun",
+    "noAccount": "Belum ada akaun?",
+    "haveAccount": "Sudah ada akaun?",
+    "invalid": "E-mel atau kata laluan tidak sah.",
+    "error": "Sesuatu tidak kena. Sila cuba lagi.",
+    "accountTitle": "Akaun saya",
+    "role": "Peranan",
+    "signOut": "Log keluar",
+    "adminLink": "Buka papan pemuka admin",
+    "gardenNote": "Kebun anda kini disegerakkan ke akaun apabila anda log masuk."
   }
 }

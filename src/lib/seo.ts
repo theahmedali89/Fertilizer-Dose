@@ -21,9 +21,11 @@ export function localizedMetadata({
   description: string;
 }): Metadata {
   const canonical = `${siteConfig.url}${localizePath(path, locale)}`;
-  // 17 of 18 dictionaries are English-fallback scaffolds. Until real
-  // translations land, keep non-English variants out of the index to avoid
-  // mass duplicate content. Revisit per-locale when translations ship.
+  // UI chrome is translated for all 18 locales, but long-form data content
+  // (fertilizer/crop descriptions etc.) is still English-only. Until data
+  // content is translated per-locale, keep non-English variants out of the
+  // index to avoid thin/duplicate content. Revisit per-locale when data
+  // translations ship.
   const indexable = locale === "en";
   return {
     // Absolute title: includes the brand suffix here because a child string

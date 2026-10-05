@@ -4,6 +4,576 @@
     "name": "French",
     "nativeName": "Français",
     "dir": "ltr",
-    "status": "scaffold — falls back to English until professionally translated"
+    "status": "translated"
+  },
+  "calculator": {
+    "desc": "Choisissez votre culture, saisissez votre superficie dans l’unité que vous utilisez — acre, kanal, marla ou hectare — et obtenez des quantités précises d’urea, de DAP et de MOP, ainsi qu’un calendrier d’application par stade de croissance.",
+    "empty": {
+      "desc": "Choisissez une culture, saisissez votre superficie et lancez le calcul. Chaque étape du calcul est affichée.",
+      "title": "Votre dose apparaîtra ici"
+    },
+    "eyebrow": "Calculateur de doses",
+    "form": {
+      "area": "Superficie",
+      "areaError": "Veuillez saisir une superficie valide, supérieure à zéro.",
+      "areaLargeError": "Cette superficie semble inhabituellement grande — veuillez vérifier la valeur et l’unité.",
+      "areaPlaceholder": "p. ex. 5",
+      "crop": "Culture",
+      "cropHint": "Seules les cultures avec des recommandations vérifiées sont sélectionnables.",
+      "inReview": "données en cours de vérification",
+      "soil": "Type de sol (facultatif)",
+      "soilHint": "Le type de sol ne change pas le calcul — il change le conseil. Les sols sableux perdent l’azote plus vite par lessivage ; les sols salins exigent de la prudence avec le MOP.",
+      "submit": "Calculer la dose",
+      "unit": "Unité"
+    },
+    "method": {
+      "desc": "Pas de boîte noire. C’est la même méthode DAP en premier enseignée dans les cours d’agronomie.",
+      "eyebrow": "Méthode",
+      "title": "La méthode, en termes simples"
+    },
+    "results": {
+      "bags": "sacs de 50 kg",
+      "disclaimer": "Les estimations suivent les recommandations publiées. Confirmez auprès de votre agent agricole local avant l’application.",
+      "howTitle": "Comment ce calcul a été effectué",
+      "perHa": "kg N–P₂O₅–K₂O/ha",
+      "scheduleTitle": "Calendrier d’application",
+      "soilDefault": "Dose standard affichée. Ajustez après une analyse de sol.",
+      "soilNoteLabel": "Note sur le sol :",
+      "sourceLabel": "Source des données :",
+      "total": "Engrais total",
+      "kgUnit": "kg",
+      "recommendedLine": "Recommandé : {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "soilCustom": "Vous avez sélectionné « {soil} ». Sur les sols {soilLower}, envisagez une analyse de sol avant de modifier la dose — le calcul de base ci-dessus reste inchangé."
+    },
+    "title": "Dose d’engrais exacte, calculs à l’appui.",
+    "metaTitle": "Calculateur de dose d’engrais — Urea, DAP et MOP par acre/kanal/marla",
+    "metaDescription": "Calculez les doses exactes d’urea, de DAP et de MOP pour le blé, le riz et le maïs. Saisissez la superficie en acre, kanal, marla ou hectare — voyez chaque étape du calcul.",
+    "methodFaq": [
+      {
+        "q": "Pourquoi le DAP est-il calculé en premier ?",
+        "a": "Le phosphore est immobile dans le sol, donc la totalité de la dose de P₂O₅ doit provenir du DAP au semis. Le DAP contient aussi 18 % d’azote, qui compte dans le besoin total en azote — calculer le DAP en premier permet de soustraire cet azote avant de calculer l’urea, pour ne jamais appliquer deux fois l’azote."
+      },
+      {
+        "q": "Comment les kanals et marlas sont-ils convertis ?",
+        "a": "1 acre = 8 kanals = 160 marlas, et 1 kanal = 20 marlas. En métrique : 1 acre = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Le calculateur convertit votre superficie en hectares, applique la dose par hectare, puis reconvertit."
+      },
+      {
+        "q": "Pourquoi certaines cultures sont-elles désactivées ?",
+        "a": "Une culture n’est sélectionnable que lorsque sa dose de NPK recommandée est vérifiée auprès d’une source publiée. Nous préférons désactiver une culture plutôt qu’inventer ses chiffres — les cultures non vérifiées sont marquées « données en cours de vérification » jusqu’à confirmation."
+      }
+    ]
+  },
+  "common": {
+    "themeDark": "Passer en mode sombre",
+    "themeLight": "Passer en mode clair"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "items": [
+      {
+        "a": "Avec la formule agronomique standard : engrais (kg) = (nutriment nécessaire × 100) ÷ % de nutriment dans l’engrais. Nous l’appliquons DAP en premier — le phosphore via le DAP, puis l’azote restant via l’urea (en tenant compte des 18 % d’azote du DAP), puis le potassium via le MOP — et nous montrons chaque étape.",
+        "q": "Comment la dose d’engrais est-elle calculée ?"
+      },
+      {
+        "a": "Acre, kanal, marla et hectare. Conversions utilisées : 1 acre = 8 kanals = 160 marlas, 1 kanal = 20 marlas, 1 hectare = 2,471 acres.",
+        "q": "Quelles unités de superficie sont prises en charge ?"
+      },
+      {
+        "a": "Recommandations provinciales et d’instituts de recherche publiées (p. ex. le « package of practices » du PAU), avec indication de la région. Chaque chiffre du calculateur porte sa source, et les cultures sans source vérifiée sont marquées « données en cours de vérification » plutôt que devinées.",
+        "q": "D’où viennent les chiffres des besoins des cultures ?"
+      },
+      {
+        "a": "Non. Il propose des possibilités assistées par l’IA avec une formulation d’incertitude, mais vous devez toujours confirmer auprès de votre agent agricole local avant de traiter une culture — surtout avant de pulvériser quoi que ce soit.",
+        "q": "Le Docteur des plantes remplace-t-il un agronome ?"
+      },
+      {
+        "a": "Oui — le calculateur, les bibliothèques et les guides sont gratuits. Un compte n’est nécessaire que pour des fonctionnalités comme la sauvegarde des diagnostics.",
+        "q": "Fertilizer Dose est-il gratuit ?"
+      }
+    ],
+    "title": "Les questions que les agriculteurs nous posent",
+    "metaTitle": "FAQ — Réponses aux questions sur Fertilizer Dose",
+    "metaDescription": "Réponses sur le calcul des doses d’engrais, les formules NPK, les unités acre/kanal/marla, les sources de données et le Docteur des plantes."
+  },
+  "footer": {
+    "company": "Société",
+    "disclaimer": "Les estimations de doses suivent les recommandations publiées. Confirmez toujours auprès de votre agent agricole local et faites une analyse de sol avant l’application.",
+    "library": "Bibliothèque",
+    "links": {
+      "about": "À propos",
+      "blog": "Blog",
+      "calculator": "Calculateur de dose d’engrais Fertilizer Dose",
+      "charts": "Tableaux de doses",
+      "contact": "Contact",
+      "crops": "Bibliothèque des cultures",
+      "faq": "FAQ",
+      "fertilizers": "Bibliothèque d’engrais",
+      "plantDoctor": "Docteur des plantes",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "wheat": "Guide du blé",
+      "plants": "Bibliothèque des plantes",
+      "vegetables": "Bibliothèque des légumes",
+      "plantingCalendar": "Calendrier de semis",
+      "myGarden": "Mon jardin",
+      "profitCalculator": "Calculateur de rentabilité",
+      "compare": "Comparer"
+    },
+    "rights": "Tous droits réservés.",
+    "tagline": "Doses d’engrais exactes issues de vraies données agronomiques — pour le blé, le riz, le maïs et bien plus. Conçu pour les agriculteurs du Pakistan et de l’Inde.",
+    "tools": "Outils"
+  },
+  "home": {
+    "blog": {
+      "eyebrow": "Du blog",
+      "minRead": "min de lecture",
+      "title": "Comprenez le pourquoi derrière la dose"
+    },
+    "crops": {
+      "desc": "N–P₂O₅–K₂O recommandés par hectare d’après des sources publiées. Les cultures marquées « en cours de vérification » ne sont jamais devinées — les données sont publiées uniquement une fois vérifiées.",
+      "eyebrow": "Bibliothèque des cultures",
+      "inReview": "En cours de vérification",
+      "openGuide": "Ouvrir le guide de la culture",
+      "perHa": "kg/ha",
+      "reviewNote": "Recommandation en cours de vérification",
+      "title": "Des doses pour les cultures que vous cultivez vraiment",
+      "verified": "Données vérifiées"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "Téléversez une photo nette d’une feuille ou d’une plante — l’IA lit les symptômes visuels.",
+          "t": "Diagnostic basé sur la photo"
+        },
+        {
+          "d": "Chaque suggestion est assortie d’un niveau de confiance faible / moyen / élevé. Aucune fausse certitude.",
+          "t": "Incertitude honnête"
+        },
+        {
+          "d": "Causes, actions immédiates et prévention — et quand appeler votre agent agricole.",
+          "t": "Prochaines étapes concrètes"
+        }
+      ],
+      "cta": "Ouvrir le Docteur des plantes",
+      "desc": "Téléversez une photo de feuille, décrivez ce que vous voyez et obtenez une évaluation structurée — problèmes possibles, causes probables, mesures à prendre et prévention.",
+      "dropSub": "JPG, PNG ou WebP · 5 Mo max",
+      "dropTitle": "Déposez une photo de feuille ici",
+      "eyebrow": "Docteur des plantes IA",
+      "serverNote": "S’exécute côté serveur via Gemini — votre clé API ne transite jamais par le navigateur.",
+      "title": "Un problème avec votre culture ? Demandez au Docteur des plantes."
+    },
+    "fertilizers": {
+      "browse": "Parcourir toute la bibliothèque d’engrais →",
+      "desc": "Compositions NPK conformes à l’étiquette. Ces pourcentages sont la base même de chaque calcul de dose.",
+      "eyebrow": "Bibliothèque d’engrais",
+      "thBest": "Idéal pour",
+      "thName": "Engrais",
+      "title": "Sachez ce qu’il y a vraiment dans le sac",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "Calculer la dose d’engrais",
+      "desc": "La bonne dose fait économiser de l’argent, protège votre sol et augmente le rendement. Cela prend moins d’une minute.",
+      "title": "Arrêtez de deviner. Commencez à calculer."
+    },
+    "hero": {
+      "ctaCalc": "Calculer ma dose",
+      "ctaDoctor": "Diagnostiquer une plante",
+      "stats": [
+        {
+          "s": "Chaque chiffre cité",
+          "t": "Données sourcées"
+        },
+        {
+          "s": "Méthode NPK standard",
+          "t": "DAP en premier"
+        },
+        {
+          "s": "Acre · Kanal · Marla · Ha",
+          "t": "4 unités"
+        }
+      ],
+      "subtitle": "Fertilizer Dose transforme les recommandations agronomiques publiées en doses d’engrais précises par acre, par kanal et par marla — avec de vraies données, chaque calcul montré, et rien d’inventé.",
+      "tagline": "La dose d’engrais, bien faite",
+      "title": "Sachez exactement la quantité d’<em>engrais</em> dont votre culture a besoin."
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "Saisissez la culture et la superficie en acre, kanal, marla ou hectare — obtenez des quantités exactes d’urea, de DAP et de MOP avec chaque étape du calcul affichée.",
+          "title": "Calculateur de doses"
+        },
+        {
+          "desc": "Téléversez une photo de feuille, décrivez les symptômes et obtenez un diagnostic assisté par l’IA avec causes, actions et étapes de prévention.",
+          "title": "Docteur des plantes"
+        },
+        {
+          "desc": "Compositions NPK conformes à l’étiquette, avantages, précautions et conseils d’application pour chaque engrais majeur.",
+          "title": "Bibliothèque d’engrais"
+        },
+        {
+          "desc": "Saison, sol, eau, stades de croissance et problèmes courants pour le blé, le riz, le maïs, le coton, la canne à sucre et la pomme de terre.",
+          "title": "Bibliothèque des cultures"
+        },
+        {
+          "title": "Calculateur de rentabilité",
+          "desc": "Saisissez vos propres hypothèses de rendement, de prix et de coûts — voyez le bénéfice net, le seuil de rentabilité et le ROI par acre et par hectare."
+        },
+        {
+          "title": "Comparer",
+          "desc": "Coûts des nutriments des engrais côte à côte à partir de vos prix, et doses des cultures issues de données vérifiées."
+        }
+      ],
+      "eyebrow": "Outils principaux",
+      "title": "Tout ce dont un cultivateur a besoin, au même endroit"
+    },
+    "why": {
+      "eyebrow": "Pourquoi Fertilizer Dose",
+      "items": [
+        {
+          "d": "Chaque valeur NPK et chaque dose de culture est sourcée et citée. Aucun chiffre inventé, jamais.",
+          "t": "Uniquement des chiffres réels"
+        },
+        {
+          "d": "Chaque résultat explique la formule étape par étape — vérifiez-la avec un crayon si vous voulez.",
+          "t": "Montre son raisonnement"
+        },
+        {
+          "d": "Acre, kanal, marla, hectare. Saisissez votre terre comme vous la mesurez.",
+          "t": "Parle vos unités"
+        },
+        {
+          "d": "Un thème jour/nuit complet qui respecte votre réglage système et vos yeux.",
+          "t": "Clair et sombre"
+        }
+      ],
+      "regionCta": "Essayer le calculateur",
+      "regionDesc": "Les recommandations par défaut suivent les directives agronomiques du Pendjab (Pakistan) et du nord de l’Inde, avec une indication de région sur chaque chiffre. Unités, terminologie et calendriers de culture correspondent à la réalité du terrain.",
+      "regionTitle": "Ancré dans la région",
+      "title": "Bâti sur des preuves, pas des promesses"
+    },
+    "metaTitle": "Calculateur de dose d’engrais NPK — Par acre, kanal, marla et hectare",
+    "metaDescription": "Calculez les doses exactes d’urea, de DAP et de MOP pour le blé, le riz, le maïs et plus encore. Calculateur d’engrais NPK gratuit avec prise en charge acre/kanal/marla/hectare, guides de cultures et calendrier de semis.",
+    "grow": {
+      "eyebrow": "Cultiver",
+      "title": "Cultures, plantes et légumes",
+      "desc": "Une seule bibliothèque de culture : grandes cultures avec doses d’engrais vérifiées, plus légumes et plantes avec des données honnêtes, publiées après vérification.",
+      "cards": [
+        {
+          "title": "Cultures",
+          "desc": "Blé, riz, maïs, coton et plus — avec doses NPK vérifiées lorsqu’elles sont publiées."
+        },
+        {
+          "title": "Légumes",
+          "desc": "Tomate, oignon, piment, gombo et plus. Les données ne sont publiées qu’après vérification."
+        },
+        {
+          "title": "Plantes",
+          "desc": "Plantes à fleurs, d’intérieur, d’extérieur et fruitières pour les jardins familiaux."
+        }
+      ],
+      "browse": "Parcourir"
+    },
+    "planting": {
+      "eyebrow": "Calendrier de semis",
+      "title": "Que semer ce mois-ci ?",
+      "desc": "Un calendrier de semis adapté à votre province — pas d’approximations passe-partout. Chaque période est sourcée et marquée de son statut de vérification.",
+      "cta": "Ouvrir le calendrier de semis"
+    }
+  },
+  "language": {
+    "choose": "Choisir la langue",
+    "label": "Langue"
+  },
+  "nav": {
+    "blog": "Blog",
+    "calculateDose": "Calculer la dose",
+    "calculator": "Calculateur de doses",
+    "closeMenu": "Fermer le menu",
+    "crops": "Cultures",
+    "faq": "FAQ",
+    "fertilizers": "Engrais",
+    "home": "Accueil",
+    "mobileNav": "Navigation mobile",
+    "openMenu": "Ouvrir le menu",
+    "plantDoctor": "Docteur des plantes",
+    "plants": "Plantes",
+    "vegetables": "Légumes",
+    "grow": "Cultiver",
+    "plantingCalendar": "Calendrier de semis",
+    "myGarden": "Mon jardin",
+    "tools": "Outils",
+    "profitCalculator": "Calculateur de rentabilité",
+    "compare": "Comparer",
+    "login": "Se connecter",
+    "account": "Compte",
+    "admin": "Admin",
+    "logout": "Se déconnecter"
+  },
+  "plantDoctor": {
+    "desc": "Téléversez une photo nette, décrivez les symptômes et obtenez une évaluation structurée — problèmes possibles avec niveaux de confiance honnêtes, causes probables et prochaines étapes.",
+    "eyebrow": "Docteur des plantes",
+    "title": "Montrez-nous la feuille. Nous vous aiderons à la lire.",
+    "metaTitle": "Docteur des plantes — Diagnostic IA des problèmes de cultures",
+    "metaDescription": "Téléversez une photo de culture et décrivez les symptômes pour un diagnostic assisté par l’IA avec causes, actions et étapes de prévention."
+  },
+  "growing": {
+    "searchPlaceholder": "Rechercher par nom…",
+    "filterAll": "Tous",
+    "filterVerified": "Vérifié",
+    "filterInReview": "En cours de vérification",
+    "verifiedBadge": "Données vérifiées",
+    "inReviewBadge": "En cours de vérification",
+    "verifiedDose": "Dose vérifiée",
+    "doseInReview": "Dose en cours de vérification",
+    "resultsCount": "{count} éléments",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsHint": "Essayez une autre orthographe ou effacez la recherche.",
+    "noData": "Aucune donnée vérifiée disponible pour l’instant.",
+    "noDataHint": "Nous publions les chiffres agronomiques uniquement après vérification auprès de sources publiées — jamais devinés.",
+    "sections": {
+      "fertilizer": "Recommandation d’engrais",
+      "growingConditions": "Conditions de culture",
+      "soil": "Sol",
+      "water": "Eau",
+      "sunlight": "Ensoleillement",
+      "climate": "Climat",
+      "season": "Saison de culture",
+      "sowingWindow": "Période de semis / plantation",
+      "harvestWindow": "Période de récolte",
+      "regions": "Régions adaptées",
+      "stages": "Stades de croissance et fertilisation",
+      "deficiencies": "Carences nutritives courantes",
+      "problems": "À surveiller",
+      "references": "Références",
+      "lastReviewed": "Dernière révision"
+    },
+    "calculateCta": "Calculer pour ma terre",
+    "doctorCta": "Vous voyez des symptômes ? Essayez le Docteur des plantes →",
+    "relatedFertilizers": "Engrais associés",
+    "relatedItems": "Associés",
+    "inReviewNotice": "La dose recommandée pour {name} est en cours de vérification auprès de sources publiées. Nous la publions ici uniquement une fois confirmée — jamais devinée.",
+    "indexable": {
+      "cropsTitle": "Chaque culture, ses besoins, au même endroit.",
+      "plantsTitle": "Des plantes pour tous les jardins.",
+      "vegetablesTitle": "Des légumes, du champ au potager."
+    },
+    "subcategoryAll": "Tous types"
+  },
+  "calendar": {
+    "metaTitle": "Calendrier de semis — Que semer ce mois-ci",
+    "metaDescription": "Calendrier de semis adapté à votre région : quelles cultures, légumes et plantes semer ce mois-ci dans votre province. Périodes vérifiées uniquement.",
+    "eyebrow": "Calendrier de semis",
+    "title": "Que semer ce mois-ci",
+    "desc": "Choisissez votre pays et votre région, puis parcourez les périodes de semis que nous pouvons garantir. Pas de calendriers devinés — chaque période porte sa source et son statut de vérification.",
+    "country": "Pays",
+    "region": "Région / province",
+    "month": "Mois",
+    "category": "Catégorie",
+    "catAll": "Tous",
+    "catCrop": "Cultures",
+    "catVegetable": "Légumes",
+    "catPlant": "Plantes",
+    "prevMonth": "Mois précédent",
+    "currentMonth": "Mois en cours",
+    "nextMonth": "Mois suivant",
+    "sowingWindow": "Période de semis",
+    "harvestWindow": "Période de récolte",
+    "season": "Saison",
+    "regionLabel": "Région",
+    "source": "Source",
+    "lastReviewed": "Dernière révision",
+    "inReview": "En cours de vérification",
+    "verified": "Vérifié",
+    "emptyTitle": "Aucune donnée de semis vérifiée ici pour l’instant",
+    "emptyHint": "Nous n’avons pas encore vérifié les périodes de semis pour cette région et ce mois. Nous préférons ne rien afficher plutôt qu’un calendrier deviné.",
+    "countryPages": {
+      "pakistanTitle": "Calendrier de semis — Pakistan",
+      "pakistanDesc": "Périodes de semis par province pour le Pakistan. Données vérifiées uniquement.",
+      "indiaTitle": "Calendrier de semis — Inde",
+      "indiaDesc": "Périodes de semis par État pour l’Inde. Données vérifiées uniquement.",
+      "regionsTitle": "Régions",
+      "hasData": "Données de semis disponibles",
+      "noDataYet": "Données en cours de vérification",
+      "openCalendar": "Ouvrir le calendrier de semis"
+    }
+  },
+  "garden": {
+    "metaTitle": "Mon jardin — Suivez parcelles, plantations et plans d’engrais",
+    "metaDescription": "Votre tableau de bord personnel : parcelles, plantations, stades de croissance, calculs d’engrais sauvegardés et rappels. Stockés en privé dans votre navigateur.",
+    "eyebrow": "Mon jardin",
+    "title": "Mon jardin",
+    "desc": "Suivez vos parcelles, ce que vous avez planté et vos plans d’engrais — tout au même endroit.",
+    "localNote": "Enregistré dans ce navigateur. Connectez-vous pour synchroniser votre jardin sur vos appareils.",
+    "loading": "Chargement de votre jardin…",
+    "newPlot": "Ajouter une parcelle",
+    "editPlot": "Modifier la parcelle",
+    "deletePlot": "Supprimer la parcelle",
+    "confirmDeletePlot": "Supprimer cette parcelle et toutes ses plantations ? Cette action est irréversible.",
+    "plotName": "Nom de la parcelle",
+    "plotNamePh": "p. ex. Champ de devant",
+    "location": "Lieu",
+    "locationPh": "p. ex. Nom du village (facultatif)",
+    "region": "Région (pour les suggestions de semis)",
+    "regionNone": "Aucune région — ignorer les suggestions de semis",
+    "area": "Superficie",
+    "soilType": "Type de sol",
+    "soilUnknown": "Non spécifié",
+    "notes": "Notes",
+    "notesPh": "Tout ce qui mérite d’être retenu…",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "noPlots": "Aucune parcelle pour l’instant",
+    "noPlotsHint": "Ajoutez votre première parcelle pour suivre plantations, stades et rappels.",
+    "overview": "Aperçu",
+    "plots": "Parcelles",
+    "activePlantings": "Plantations actives",
+    "upcomingTasks": "Tâches à venir",
+    "seasonalSuggestions": "Suggestions de saison",
+    "savedCalculations": "Calculs sauvegardés",
+    "statPlots": "parcelles",
+    "statPlantings": "plantations",
+    "statTasks": "tâches en cours",
+    "addPlanting": "Ajouter une plantation",
+    "plantingWhat": "Culture / plante / légume",
+    "plantedOn": "Date de plantation",
+    "stage": "Stade de croissance",
+    "stagePh": "p. ex. Tallage (facultatif)",
+    "plantedDaysAgo": "planté il y a {days} jours",
+    "harvestWindow": "Période de récolte",
+    "notAvailable": "—",
+    "confirmDeletePlanting": "Supprimer cette plantation ? Cette action est irréversible.",
+    "markDone": "Marquer comme terminé",
+    "reopen": "Rouvrir",
+    "addReminder": "Ajouter un rappel",
+    "reminderTitle": "Rappel",
+    "reminderTitlePh": "p. ex. Appliquer le deuxième apport d’urea",
+    "dueDate": "Date d’échéance",
+    "confirmDeleteReminder": "Supprimer ce rappel ?",
+    "noTasks": "Aucune tâche à venir. Ajoutez un rappel pour rester sur la bonne voie.",
+    "noSuggestions": "Aucune suggestion de semis pour l’instant. Définissez une région sur vos parcelles pour recevoir des suggestions de saison.",
+    "noCalculations": "Aucun calcul sauvegardé pour l’instant. Lancez le calculateur de doses et sauvegardez un résultat ici.",
+    "viewInCalculator": "Ouvrir le calculateur de doses",
+    "suggestionCta": "Semer {item} dans {plot}",
+    "overdue": "En retard",
+    "done": "Terminé",
+    "backToGarden": "Retour à Mon jardin",
+    "saveCalculation": "Enregistrer dans Mon jardin",
+    "savedToGarden": "Enregistré dans Mon jardin",
+    "viewGarden": "Voir Mon jardin"
+  },
+  "tools": {
+    "profit": {
+      "metaTitle": "Calculateur de rentabilité — Bénéfice agricole, seuil de rentabilité et ROI",
+      "metaDescription": "Estimez le bénéfice d’une culture à partir de vos propres hypothèses de rendement, de prix et de coûts. Formules transparentes, rendement et prix d’équilibre, vues par acre et par hectare.",
+      "eyebrow": "Calculateur de rentabilité",
+      "title": "Cette culture sera-t-elle rentable ?",
+      "desc": "Saisissez vos propres hypothèses — rendement attendu, prix du marché et chaque coût d’intrant. Le calcul est entièrement transparent, et rien n’est pré-rempli avec des chiffres devinés.",
+      "assumptionNote": "Chaque chiffre ci-dessous provient de nombres que vous saisissez. Nous n’ajoutons aucun prix du marché, rendement ou coût de notre part.",
+      "crop": "Culture (facultatif)",
+      "noCrop": "Sélectionnez une culture…",
+      "area": "Superficie",
+      "yieldPerUnit": "Rendement attendu par acre",
+      "yieldUnit": "Unité de rendement",
+      "yieldUnitPh": "p. ex. maunds, kg, tonnes",
+      "pricePerYieldUnit": "Prix attendu par unité de rendement",
+      "currency": "Devise",
+      "currencyPh": "p. ex. Rs, PKR, ₹",
+      "costsTitle": "Coûts des intrants (vos chiffres)",
+      "costSeed": "Semences",
+      "costFertilizer": "Engrais",
+      "costPesticide": "Pesticide / herbicide",
+      "costLabor": "Main-d’œuvre",
+      "costIrrigation": "Irrigation / eau",
+      "costRent": "Fermage",
+      "costOther": "Autre",
+      "calculate": "Calculer le bénéfice",
+      "reset": "Réinitialiser",
+      "print": "Imprimer",
+      "saveScenario": "Enregistrer le scénario",
+      "scenarioName": "Nom du scénario",
+      "scenarioNamePh": "p. ex. Blé 2026 — 5 acres",
+      "scenarios": "Scénarios enregistrés",
+      "noScenarios": "Aucun scénario enregistré pour l’instant.",
+      "deleteScenario": "Supprimer",
+      "results": "Résultats",
+      "revenue": "Revenu total",
+      "totalCost": "Coût total",
+      "netProfit": "Bénéfice net",
+      "profitPerAcre": "Bénéfice par acre",
+      "profitPerHa": "Bénéfice par hectare",
+      "costPerYieldUnit": "Coût par unité de rendement",
+      "breakEvenYield": "Rendement d’équilibre",
+      "breakEvenPrice": "Prix d’équilibre",
+      "roi": "Retour sur investissement",
+      "formulasTitle": "Comment c’est calculé",
+      "perAcre": "par acre",
+      "perHectare": "par hectare",
+      "loss": "perte",
+      "openCropGuide": "Ouvrir le guide de la culture",
+      "openCalculator": "Calculer le coût des engrais"
+    },
+    "compare": {
+      "metaTitle": "Comparer engrais et cultures — Comparaison du coût des nutriments",
+      "metaDescription": "Comparez les engrais au prix par kg de nutriment avec vos propres prix du marché, et comparez les cultures par dose vérifiée et données de culture.",
+      "eyebrow": "Comparer",
+      "title": "Comparer, côte à côte",
+      "desc": "Coûts des nutriments des engrais à partir de prix que vous saisissez — nous ne devinons jamais les prix du marché. Les données des cultures proviennent uniquement de chiffres vérifiés.",
+      "tabFertilizers": "Engrais",
+      "tabCrops": "Cultures",
+      "selectFertilizers": "Sélectionnez les engrais à comparer",
+      "pricePerBag": "Prix par sac",
+      "bagSize": "Taille du sac (kg)",
+      "pricePerKgN": "par kg de N",
+      "pricePerKgP": "par kg de P₂O₅",
+      "pricePerKgK": "par kg de K₂O",
+      "cheapest": "le moins cher",
+      "na": "—",
+      "userPriceNote": "Les prix sont saisis par vous — saisissez le prix du marché local par sac pour une vraie comparaison.",
+      "viewFertilizer": "Voir le guide",
+      "selectCrops": "Sélectionnez les cultures à comparer (3 max.)",
+      "dose": "Dose NPK / ha",
+      "season": "Saison",
+      "water": "Eau",
+      "soil": "Sol",
+      "inReview": "En cours de vérification",
+      "noDoseData": "Dose en cours de vérification — pas devinée",
+      "viewGuide": "Ouvrir le guide de la culture"
+    }
+  },
+  "blog": {
+    "metaTitle": "Blog — Science des engrais et guides de nutrition des cultures",
+    "metaDescription": "Guides pratiques sur les doses d’engrais, les calculs NPK, la nutrition des cultures et la santé des sols pour les agriculteurs pakistanais et indiens."
+  },
+  "fertilizers": {
+    "metaTitle": "Bibliothèque d’engrais — Composition NPK, usages et conseils de dosage",
+    "metaDescription": "Compositions NPK conformes à l’étiquette, avantages, précautions et conseils d’application pour l’urea, le DAP, le MOP, le SSP, le SOP et plus encore."
+  },
+  "chart": {
+    "metaTitle": "Tableau des doses d’engrais — Référence NPK rapide",
+    "metaDescription": "Tableau de référence rapide des doses d’engrais : recommandations NPK par culture avec quantités d’urea, de DAP et de MOP."
+  },
+  "auth": {
+    "loginTitle": "Se connecter",
+    "loginDesc": "Accédez à votre jardin, vos éléments sauvegardés et vos outils d’administration.",
+    "signupTitle": "Créer un compte",
+    "signupDesc": "Sauvegardez votre jardin dans le cloud et synchronisez-le entre vos appareils.",
+    "name": "Nom",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "loginCta": "Se connecter",
+    "signupCta": "Créer un compte",
+    "noAccount": "Pas encore de compte ?",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "invalid": "E-mail ou mot de passe invalide.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "accountTitle": "Mon compte",
+    "role": "Rôle",
+    "signOut": "Se déconnecter",
+    "adminLink": "Ouvrir le tableau de bord admin",
+    "gardenNote": "Votre jardin se synchronise désormais avec votre compte lorsque vous êtes connecté."
   }
 }

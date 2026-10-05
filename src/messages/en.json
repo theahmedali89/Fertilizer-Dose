@@ -399,7 +399,7 @@
     "eyebrow": "My garden",
     "title": "My Garden",
     "desc": "Track your plots, what you planted, and your fertilizer plans — all in one place.",
-    "localNote": "Saved privately in this browser. Accounts with cloud sync are coming later.",
+    "localNote": "Saved in this browser. Sign in to sync your garden across devices.",
     "loading": "Loading your garden…",
     "newPlot": "Add plot",
     "editPlot": "Edit plot",
