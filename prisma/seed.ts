@@ -6,12 +6,19 @@
  * so admin CMS edits always survive re-seeding. Safe to run on every deploy.
  */
 import { PrismaClient, VerificationStatus } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { FERTILIZERS } from "../src/lib/agronomy";
 import { GROWING_ITEMS } from "../src/lib/growing";
 import { REGIONS, PLANTING_WINDOWS } from "../src/lib/planting";
 import { POSTS } from "../src/lib/blog";
 
-const db = new PrismaClient();
+const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
+if (!connectionString) {
+  throw new Error("DATABASE_URL (or DATABASE_POSTGRES_URL) is not set.");
+}
+const db = new PrismaClient({
+  adapter: new PrismaPg({ connectionString }),
+});
 
 async function main() {
   // ── Fertilizers (insert-if-missing by slug) ──
