@@ -13,6 +13,7 @@ import { REGIONS, PLANTING_WINDOWS } from "../src/lib/planting";
 import { POSTS } from "../src/lib/blog";
 import { seedBatch1 } from "./seed-batch1";
 import { seedBatch2 } from "./seed-batch2";
+import { seedBatch3 } from "./seed-batch3";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
 if (!connectionString) {
@@ -195,6 +196,9 @@ async function main() {
 
   // ── Batch 2 agricultural data (US/BR/ID/AU) — idempotent, approved 2026-10-05 ──
   await seedBatch2(db);
+
+  // ── Batch 3 agricultural data (CN/TR/MY/JP/KR) — idempotent, approved 2026-10-05 ──
+  await seedBatch3(db);
 
   console.log("seed complete");
 }
