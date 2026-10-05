@@ -11,6 +11,7 @@ import { FERTILIZERS } from "../src/lib/agronomy";
 import { GROWING_ITEMS } from "../src/lib/growing";
 import { REGIONS, PLANTING_WINDOWS } from "../src/lib/planting";
 import { POSTS } from "../src/lib/blog";
+import { seedBatch1 } from "./seed-batch1";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
 if (!connectionString) {
@@ -186,6 +187,10 @@ async function main() {
     update: {},
     create: { key: "site.name", value: "Fertilizer Dose" },
   });
+
+  // ── Batch 1 agricultural data (PK/IN/BD) — idempotent, approved 2026-10-05 ──
+  // Runs AFTER the base seed so countries/regions/items exist for FK lookup.
+  await seedBatch1(db);
 
   console.log("seed complete");
 }
