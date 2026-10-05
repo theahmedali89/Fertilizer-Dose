@@ -24,6 +24,7 @@
     "postcss": "^8.5.3",
     "prisma": "^7.10.0",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.15",
     "typescript": "^5.8.3"
   },
   "name": "khaadguide-v2",
@@ -34,7 +35,8 @@
     "lint": "eslint src",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "next build"
+    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && next build"
   },
   "version": "0.1.0"
 }
