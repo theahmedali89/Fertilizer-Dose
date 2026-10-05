@@ -21,7 +21,7 @@ export type PlantSubcategory =
   | "outdoor"
   | "fruit";
 
-export type VerificationStatus = "verified" | "in_review";
+export type VerificationStatus = "draft" | "under_review" | "verified" | "published" | "archived";
 
 export interface SourceRef {
   organization: string;
@@ -127,7 +127,7 @@ const cropItems: GrowingItem[] = CROPS.map((c: CropInfo) => ({
       ]
     : [],
   lastReviewed: "2026-10-01",
-  verificationStatus: c.npk ? "verified" : "in_review",
+  verificationStatus: c.npk ? "verified" : "under_review",
   indexable: true, // substantive content even when the dose is in review
 }));
 
@@ -158,7 +158,7 @@ const newCrops: GrowingItem[] = [
     region: "",
     sources: [],
     lastReviewed: null,
-    verificationStatus: "in_review",
+    verificationStatus: "under_review",
     indexable: false,
   },
   {
@@ -185,7 +185,7 @@ const newCrops: GrowingItem[] = [
     region: "",
     sources: [],
     lastReviewed: null,
-    verificationStatus: "in_review",
+    verificationStatus: "under_review",
     indexable: false,
   },
 ];
@@ -222,7 +222,7 @@ function vegetable(
     region: "",
     sources: [],
     lastReviewed: null,
-    verificationStatus: "in_review",
+    verificationStatus: "under_review",
     indexable: false,
   };
 }

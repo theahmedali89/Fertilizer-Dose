@@ -46,8 +46,11 @@ export function GrowingForm({ initial }: { initial: GrowingFormData }) {
         <SelectField
           label="Verification status" name="verificationStatus" defaultValue={initial.verificationStatus}
           options={[
-            { value: "in_review", label: "In review" },
+            { value: "draft", label: "Draft" },
+            { value: "under_review", label: "Under review" },
             { value: "verified", label: "Verified" },
+            { value: "published", label: "Published" },
+            { value: "archived", label: "Archived" },
           ]}
         />
       </div>

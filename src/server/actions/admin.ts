@@ -78,7 +78,7 @@ const growingSchema = z.object({
   soil: optStr, water: optStr, sunlight: optStr, climate: optStr,
   regions: z.string().transform((v) => v.split(",").map((s) => s.trim()).filter(Boolean)),
   npkN: optNum, npkP: optNum, npkK: optNum, npkSource: optStr,
-  verificationStatus: z.enum(["verified", "in_review"]),
+  verificationStatus: z.enum(["draft", "under_review", "verified", "published", "archived"]),
   indexable: bool, published: bool,
   stages: z.string().transform((v) =>
     v.split("\n").map((s) => s.trim()).filter(Boolean).map((line, i) => {
@@ -212,7 +212,7 @@ const windowSchema = z.object({
   startMonth: z.coerce.number().int().min(1).max(12),
   endMonth: z.coerce.number().int().min(1).max(12),
   harvestText: optStr, notes: optStr,
-  verificationStatus: z.enum(["verified", "in_review"]),
+  verificationStatus: z.enum(["draft", "under_review", "verified", "published", "archived"]),
   sourceOrganization: str.min(2), sourceTitle: str.min(2),
   sourceCountry: optStr, sourceRegion: optStr,
 });

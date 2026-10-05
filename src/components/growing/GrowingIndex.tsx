@@ -15,7 +15,7 @@ export function GrowingIndex({
 }) {
   const t = useTranslations("growing");
   const [query, setQuery] = useState("");
-  const [status, setStatus] = useState<"all" | "verified" | "in_review">("all");
+  const [status, setStatus] = useState<"all" | "verified" | "under_review">("all");
   const [subcat, setSubcat] = useState<PlantSubcategory | "all">("all");
 
   const filtered = useMemo(() => {
@@ -31,7 +31,7 @@ export function GrowingIndex({
     });
   }, [items, query, status, subcat, category]);
 
-  const statusBtn = (id: "all" | "verified" | "in_review", label: string) => (
+  const statusBtn = (id: "all" | "verified" | "under_review", label: string) => (
     <button
       key={id}
       type="button"
@@ -77,7 +77,7 @@ export function GrowingIndex({
         <div className="flex flex-wrap gap-2">
           {statusBtn("all", t("filterAll"))}
           {statusBtn("verified", t("filterVerified"))}
-          {statusBtn("in_review", t("filterInReview"))}
+          {statusBtn("under_review", t("filterInReview"))}
         </div>
       </div>
 

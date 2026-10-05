@@ -78,7 +78,7 @@ type GrowingRow = {
   seasonDetail: string | null; sowingMonths: string | null; harvestPeriod: string | null;
   soil: string | null; water: string | null; sunlight: string | null; climate: string | null;
   regions: string[]; npkN: number | null; npkP: number | null; npkK: number | null;
-  npkSource: string | null; verificationStatus: "verified" | "in_review";
+  npkSource: string | null; verificationStatus: "draft" | "under_review" | "verified" | "published" | "archived";
   indexable: boolean;
   stages: { name: string; timing: string | null; note: string | null }[];
 };

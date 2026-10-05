@@ -22,8 +22,14 @@ enum Role {
 }
 
 enum VerificationStatus {
+  draft
+  under_review
   verified
-  in_review
+  published
+  archived
+  // NOTE: the underlying Postgres enum may still contain the legacy value
+  // 'in_review' (Postgres cannot drop enum values). All rows were migrated
+  // to 'under_review'; application code must use the five values above.
 }
 
 // ── Auth.js ──────────────────────────────────────────────
@@ -113,7 +119,7 @@ model GrowingItem {
   name              String
   urdu              String?
   scientificName    String?
-  category          String // crop | plant | vegetable
+  category          String // crop | vegetable | fruit | herb | flower | garden_plant | indoor_plant | outdoor_plant | plant (legacy)
   plantSubcategory  String?
   season            String?
   seasonDetail      String?            @db.Text
@@ -128,15 +134,17 @@ model GrowingItem {
   npkP              Float?
   npkK              Float?
   npkSource         String?
-  verificationStatus VerificationStatus @default(in_review)
+  verificationStatus VerificationStatus @default(under_review)
   indexable         Boolean            @default(false)
   published         Boolean            @default(true)
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
 
-  stages  GrowthStage[]
-  sources GrowingSource[]
-  windows PlantingWindow[]
+  stages          GrowthStage[]
+  sources         GrowingSource[]
+  windows         PlantingWindow[]
+  translations    GrowingItemTranslation[]
+  recommendations FertilizerRecommendation[]
 }
 
 model GrowthStage {
@@ -152,56 +160,168 @@ model GrowthStage {
   @@index([itemId, position])
 }
 
-// ── CMS: regions + planting windows ──────────────────────
+// ── CMS: countries + regions + planting windows ──────────
+
+model Country {
+  id          String   @id @default(cuid())
+  code        String   @unique // ISO-ish: PK, IN, BD…
+  name        String // Pakistan
+  slug        String   @unique // pakistan
+  defaultUnit String   @default("acre")
+  status      String   @default("active") // active | inactive
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  regions         Region[]
+  seasons         Season[]
+  recommendations FertilizerRecommendation[]
+}
 
 model Region {
-  id      String @id @default(cuid())
-  slug    String @unique // e.g. pk-punjab
-  country String // pakistan | india
-  name    String
+  id        String  @id @default(cuid())
+  slug      String  @unique // e.g. pk-punjab
+  country   String // pakistan | india (legacy string; prefer countryId)
+  countryId String?
+  name      String
 
-  windows PlantingWindow[]
-  plots   GardenPlot[]
+  countryObj      Country?                  @relation(fields: [countryId], references: [id], onDelete: SetNull)
+  windows         PlantingWindow[]
+  plots           GardenPlot[]
+  seasons         Season[]
+  recommendations FertilizerRecommendation[]
+
+  @@index([countryId])
 }
 
 model PlantingWindow {
   id                 String             @id @default(cuid())
   itemId             String
   regionId           String
+  // SOW | TRANSPLANT | PLANT | HARVEST | LAND_PREPARATION
+  activityType       String             @default("SOW")
+  seasonId           String?
   startMonth         Int
   endMonth           Int
   harvestText        String?
   notes              String?            @db.Text
-  verificationStatus VerificationStatus @default(in_review)
+  verificationStatus VerificationStatus @default(under_review)
   lastReviewed       DateTime?
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
 
   item    GrowingItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
   region  Region      @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  season  Season?     @relation(fields: [seasonId], references: [id], onDelete: SetNull)
   sources WindowSource[]
 
   @@index([regionId, startMonth])
+  @@index([regionId, activityType])
+}
+
+// ── CMS: seasons (country/region agro-climatic seasons) ──
+
+model Season {
+  id          String   @id @default(cuid())
+  countryId   String
+  regionId    String? // null = country-wide season
+  name        String // Rabi | Kharif | Spring …
+  startMonth  Int
+  endMonth    Int
+  description String?  @db.Text
+  sourceId    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  country Country @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  region  Region? @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  source  Source? @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  windows PlantingWindow[]
+
+  @@index([countryId, regionId])
+}
+
+// ── CMS: per-locale presentation of growing items ────────
+// Agronomic facts stay on GrowingItem (shared); only presentation
+// (names/descriptions) is translated. Never duplicate facts per locale.
+
+model GrowingItemTranslation {
+  id            String   @id @default(cuid())
+  growingItemId String
+  locale        String // hi | ar | es …
+  name          String
+  localName     String?
+  description   String?  @db.Text
+  growingNotes  String?  @db.Text
+  status        String   @default("draft") // draft | machine_translated | review_required | reviewed | published
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  item GrowingItem @relation(fields: [growingItemId], references: [id], onDelete: Cascade)
+
+  @@unique([growingItemId, locale])
+  @@index([locale])
+}
+
+// ── CMS: fertilizer recommendations (highest-risk data) ──
+// One row = one verified recommendation with explicit applicability.
+// NEVER infer a recommendation for a country/region it wasn't sourced for.
+// Nutrient basis is explicit: n is elemental N (kg/ha); p2o5/k2o are oxide
+// basis (kg/ha). Never silently mix elemental P/K with P2O5/K2O.
+
+model FertilizerRecommendation {
+  id                 String             @id @default(cuid())
+  growingItemId      String
+  countryId          String
+  regionId           String? // null = country-wide applicability
+  variety            String?
+  soilContext        String?            @db.Text
+  irrigationContext  String?
+  growthStage        String?
+  n                  Float? // kg N / ha (elemental)
+  p2o5               Float? // kg P2O5 / ha (oxide basis)
+  k2o                Float? // kg K2O / ha (oxide basis)
+  nutrientBasis      String             @default("P2O5_K2O")
+  micronutrients     String?            @db.Text
+  applicationTiming  String?            @db.Text
+  applicationMethod  String?            @db.Text
+  sourceId           String
+  verificationStatus VerificationStatus @default(draft)
+  lastReviewed       DateTime?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  item    GrowingItem @relation(fields: [growingItemId], references: [id], onDelete: Cascade)
+  country Country     @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  region  Region?     @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  source  Source      @relation(fields: [sourceId], references: [id], onDelete: Restrict)
+
+  @@index([countryId, regionId])
+  @@index([growingItemId, countryId])
 }
 
 // ── CMS: sources ─────────────────────────────────────────
 
 model Source {
-  id           String    @id @default(cuid())
-  organization String
-  title        String
-  url          String?
-  country      String?
-  region       String?
-  publishedAt  DateTime?
-  lastReviewed DateTime?
-  notes        String?   @db.Text
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+  id                 String             @id @default(cuid())
+  organization       String
+  title              String
+  url                String?
+  country            String?
+  region             String?
+  publishedAt        DateTime?
+  lastReviewed       DateTime?
+  // government | university | extension | research | international | peer_reviewed | other
+  sourceType         String?
+  verificationStatus VerificationStatus @default(under_review)
+  notes              String?            @db.Text
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
 
-  fertilizers FertilizerSource[]
-  growing     GrowingSource[]
-  windows     WindowSource[]
+  fertilizers     FertilizerSource[]
+  growing         GrowingSource[]
+  windows         WindowSource[]
+  seasons         Season[]
+  recommendations FertilizerRecommendation[]
 }
 
 model FertilizerSource {

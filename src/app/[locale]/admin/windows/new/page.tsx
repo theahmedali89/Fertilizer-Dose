@@ -31,7 +31,7 @@ export default async function NewWindow({
         initial={{
           id: null, itemId: itemOptions[0]?.value ?? "", regionId: regionOptions[0]?.value ?? "",
           startMonth: 1, endMonth: 12, harvestText: "", notes: "",
-          verificationStatus: "in_review",
+          verificationStatus: "under_review",
           sourceOrganization: "", sourceTitle: "", sourceCountry: "", sourceRegion: "",
         }}
         itemOptions={itemOptions}

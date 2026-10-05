@@ -5,7 +5,7 @@
  * - Planting windows are seeded ONLY from the app's existing published crop
  *   guidance (seasonDetail strings). Nothing is invented.
  * - Every window carries a SourceRef + verificationStatus. Seeds derived from
- *   editorial summaries are marked "in_review" until checked against a named
+ *   editorial summaries are marked "under_review" until checked against a named
  *   provincial publication.
  * - Regions/months with no records render an honest empty state — never a
  *   guessed calendar.
@@ -30,7 +30,7 @@ export interface PlantingWindow {
   harvestText: string | null;
   notes: string | null;
   source: SourceRef;
-  verificationStatus: "verified" | "in_review";
+  verificationStatus: "draft" | "under_review" | "verified" | "published" | "archived";
   lastReviewed: string | null;
 }
 
@@ -77,7 +77,7 @@ function window(
     harvestText,
     notes,
     source: editorialSource(region),
-    verificationStatus: "in_review",
+    verificationStatus: "under_review",
     lastReviewed: "2026-10-04",
   };
 }

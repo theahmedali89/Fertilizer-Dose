@@ -9,7 +9,7 @@ const empty: GrowingFormData = {
   soil: "", water: "", sunlight: "", climate: "",
   regions: "",
   npkN: null, npkP: null, npkK: null, npkSource: "",
-  verificationStatus: "in_review",
+  verificationStatus: "under_review",
   stages: "",
   indexable: false, published: true,
 };

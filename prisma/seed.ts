@@ -68,14 +68,45 @@ async function main() {
   }
   console.log(`growing items inserted: ${gCount}`);
 
+  // ── Countries (insert-if-missing by code) ──
+  // Phase A seeds only the 2 currently configured countries. Additional
+  // countries are added via Admin → Countries (never invented in seed).
+  const COUNTRIES = [
+    { code: "PK", name: "Pakistan", slug: "pakistan", defaultUnit: "acre" },
+    { code: "IN", name: "India", slug: "india", defaultUnit: "acre" },
+  ];
+  const countryIdByCode = new Map<string, string>();
+  for (const c of COUNTRIES) {
+    const rec = await db.country.upsert({
+      where: { code: c.code },
+      update: {},
+      create: { code: c.code, name: c.name, slug: c.slug, defaultUnit: c.defaultUnit, status: "active" },
+    });
+    countryIdByCode.set(c.code, rec.id);
+  }
+  console.log(`countries: ${COUNTRIES.length}`);
+
   // ── Regions (insert-if-missing by slug) ──
   const regionIdBySlug = new Map<string, string>();
+  const legacyCountryToCode: Record<string, string> = { pakistan: "PK", india: "IN" };
   for (const r of REGIONS) {
     let rec = await db.region.findUnique({ where: { slug: r.id } });
     if (!rec) {
       rec = await db.region.create({
         data: { slug: r.id, country: r.country, name: r.name },
       });
+    }
+    // Backfill countryId (idempotent): link legacy string country -> Country row.
+    // The legacy `country` string column is kept during transition.
+    if (!rec.countryId) {
+      const code = legacyCountryToCode[r.country];
+      const countryId = code ? countryIdByCode.get(code) : undefined;
+      if (countryId) {
+        rec = await db.region.update({
+          where: { id: rec.id },
+          data: { countryId },
+        });
+      }
     }
     regionIdBySlug.set(r.id, rec.id);
   }
