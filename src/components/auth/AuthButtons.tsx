@@ -17,7 +17,7 @@ export function AuthButtons() {
     return (
       <Link
         href="/login"
-        className="hidden sm:inline-flex items-center rounded-xl border border-line px-4 py-2 text-[14px] font-semibold text-ink-soft hover:border-leaf-600 hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors"
+        className="hidden sm:inline-flex items-center rounded-xl border border-line px-4 py-2 text-[14px] font-semibold text-ink-soft hover:border-leaf-600 hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors whitespace-nowrap shrink-0"
       >
         {t("login")}
       </Link>

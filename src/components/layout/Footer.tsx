@@ -82,7 +82,7 @@ export function Footer() {
           <p className="text-xs text-ink-faint">
             © {year} {siteConfig.name}. {t("rights")}
           </p>
-          <p className="text-xs text-ink-faint" lang="ur">
+          <p className="text-xs text-ink-faint">
             {siteConfig.urduFooterLine}
           </p>
         </div>

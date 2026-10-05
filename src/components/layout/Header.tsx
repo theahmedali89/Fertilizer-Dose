@@ -131,7 +131,7 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
               <AuthButtons />
               <Link
                 href="/calculator"
-                className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-5 py-2.5 text-[14.5px] font-semibold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors shadow-card"
+                className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-5 py-2.5 text-[14.5px] font-semibold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors shadow-card whitespace-nowrap shrink-0"
               >
                 {t("calculateDose")}
               </Link>
