@@ -87,7 +87,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${fraunces.variable} font-sans bg-cream text-ink antialiased dark:bg-ink dark:text-cream`}
+        className={`${inter.variable} ${fraunces.variable} font-sans bg-canvas text-ink antialiased`}
       >
         <NextIntlClientProvider>
           <AuthProvider>
