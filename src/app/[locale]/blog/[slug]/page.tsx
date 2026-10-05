@@ -4,13 +4,14 @@ import { notFound } from "next/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { POSTS, getPost } from "@/lib/blog";
+import { getPosts, getPost } from "@/server/data";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
-export function generateStaticParams() {
-  return POSTS.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const p = getPost(slug);
+  const p = await getPost(slug);
   if (!p) return {};
   return localizedMetadata({
     locale,
@@ -36,9 +37,9 @@ export default async function BlogPostPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const post = getPost(slug);
+  const post = await getPost(slug);
   if (!post) notFound();
-  const related = POSTS.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const related = (await getPosts()).filter((p) => p.slug !== post.slug).slice(0, 2);
   const postUrl = `${siteConfig.url}/blog/${post.slug}`;
 
   return (

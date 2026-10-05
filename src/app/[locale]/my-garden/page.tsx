@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Section } from "@/components/ui/Section";
 import { GardenDashboard } from "@/components/garden/GardenDashboard";
+import { GardenSync } from "@/components/garden/GardenSync";
 import { localizedMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -41,6 +42,9 @@ export default async function MyGardenPage({
           <p className="mt-4 text-lg text-ink-soft max-w-2xl leading-relaxed">
             {t("desc")}
           </p>
+          <div className="mt-3">
+            <GardenSync />
+          </div>
         </div>
       </section>
 

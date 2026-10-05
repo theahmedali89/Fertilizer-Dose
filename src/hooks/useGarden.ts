@@ -48,6 +48,14 @@ function updateStore(fn: (s: GardenState) => GardenState): void {
   emit();
 }
 
+/** Subscribe to garden mutations (same-tab). Used by GardenSync for cloud push. */
+export function subscribeToGarden(cb: () => void): () => void {
+  listeners.add(cb);
+  return () => {
+    listeners.delete(cb);
+  };
+}
+
 /**
  * Client-side garden store (localStorage). SSR-safe via useSyncExternalStore:
  * the server renders the empty garden, the client hydrates with stored data.

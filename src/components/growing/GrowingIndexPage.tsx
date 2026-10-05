@@ -3,9 +3,9 @@ import { Section } from "@/components/ui/Section";
 import { GrowingIndex } from "./GrowingIndex";
 import {
   CATEGORY_META,
-  getItemsByCategory,
   type GrowingCategory,
 } from "@/lib/growing";
+import { getGrowingByCategory } from "@/server/data";
 
 const INDEX_TITLES: Record<GrowingCategory, "cropsTitle" | "plantsTitle" | "vegetablesTitle"> = {
   crop: "cropsTitle",
@@ -24,7 +24,7 @@ export async function GrowingIndexPage({
   setRequestLocale(locale);
   const t = await getTranslations("growing");
   const meta = CATEGORY_META[category];
-  const items = getItemsByCategory(category);
+  const items = await getGrowingByCategory(category);
 
   return (
     <>

@@ -1,0 +1,355 @@
+// Prisma schema — Fertilizer Dose backend.
+// Covers: Auth.js models, CMS (fertilizers, growing library, regions,
+// planting windows, sources, blog, FAQs, settings), My Garden (plots,
+// plantings, calculations, reminders), Plant Doctor diagnoses.
+//
+// The frontend reads through src/server/data.ts, which falls back to the
+// static TS datasets when DATABASE_URL is unset (so builds and local dev
+// work without a database).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  USER
+  EDITOR
+  ADMIN
+}
+
+enum VerificationStatus {
+  verified
+  in_review
+}
+
+// ── Auth.js ──────────────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?
+  role          Role      @default(USER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  plots         GardenPlot[]
+  calculations  SavedCalculation[]
+  reminders     GardenReminder[]
+  diagnoses     Diagnosis[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ── CMS: fertilizers ─────────────────────────────────────
+
+model Fertilizer {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  urdu        String?
+  n           Float
+  p           Float
+  k           Float
+  tagline     String?
+  description String   @db.Text
+  benefits    String[]
+  precautions String[]
+  application String   @db.Text
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  sources FertilizerSource[]
+}
+
+// ── CMS: growing library (crops, plants, vegetables) ────
+
+model GrowingItem {
+  id                String             @id @default(cuid())
+  slug              String             @unique
+  name              String
+  urdu              String?
+  scientificName    String?
+  category          String // crop | plant | vegetable
+  plantSubcategory  String?
+  season            String?
+  seasonDetail      String?            @db.Text
+  sowingMonths      String?
+  harvestPeriod     String?
+  soil              String?            @db.Text
+  water             String?            @db.Text
+  sunlight          String?
+  climate           String?            @db.Text
+  regions           String[]
+  npkN              Float?
+  npkP              Float?
+  npkK              Float?
+  npkSource         String?
+  verificationStatus VerificationStatus @default(in_review)
+  indexable         Boolean            @default(false)
+  published         Boolean            @default(true)
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  stages  GrowthStage[]
+  sources GrowingSource[]
+  windows PlantingWindow[]
+}
+
+model GrowthStage {
+  id          String      @id @default(cuid())
+  itemId      String
+  name        String
+  timing      String?
+  note        String?     @db.Text
+  position    Int         @default(0)
+
+  item GrowingItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@index([itemId, position])
+}
+
+// ── CMS: regions + planting windows ──────────────────────
+
+model Region {
+  id      String @id @default(cuid())
+  slug    String @unique // e.g. pk-punjab
+  country String // pakistan | india
+  name    String
+
+  windows PlantingWindow[]
+  plots   GardenPlot[]
+}
+
+model PlantingWindow {
+  id                 String             @id @default(cuid())
+  itemId             String
+  regionId           String
+  startMonth         Int
+  endMonth           Int
+  harvestText        String?
+  notes              String?            @db.Text
+  verificationStatus VerificationStatus @default(in_review)
+  lastReviewed       DateTime?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  item    GrowingItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  region  Region      @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  sources WindowSource[]
+
+  @@index([regionId, startMonth])
+}
+
+// ── CMS: sources ─────────────────────────────────────────
+
+model Source {
+  id           String    @id @default(cuid())
+  organization String
+  title        String
+  url          String?
+  country      String?
+  region       String?
+  publishedAt  DateTime?
+  lastReviewed DateTime?
+  notes        String?   @db.Text
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  fertilizers FertilizerSource[]
+  growing     GrowingSource[]
+  windows     WindowSource[]
+}
+
+model FertilizerSource {
+  fertilizerId String
+  sourceId     String
+
+  fertilizer Fertilizer @relation(fields: [fertilizerId], references: [id], onDelete: Cascade)
+  source     Source     @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@id([fertilizerId, sourceId])
+}
+
+model GrowingSource {
+  itemId   String
+  sourceId String
+
+  item   GrowingItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  source Source      @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@id([itemId, sourceId])
+}
+
+model WindowSource {
+  windowId String
+  sourceId String
+
+  window PlantingWindow @relation(fields: [windowId], references: [id], onDelete: Cascade)
+  source Source         @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@id([windowId, sourceId])
+}
+
+// ── CMS: blog + FAQ + settings ───────────────────────────
+
+model Post {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  excerpt     String    @db.Text
+  body        String    @db.Text
+  category    String?
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Faq {
+  id        String   @id @default(cuid())
+  question  String   @db.Text
+  answer    String   @db.Text
+  position  Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Setting {
+  key       String   @id
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+}
+
+// ── My Garden (per-user; localStorage remains the offline fallback) ──
+
+model GardenPlot {
+  id       String  @id @default(cuid())
+  userId   String
+  name     String
+  location String?
+  regionId String?
+  area     Float
+  unit     String // acre | kanal | marla | hectare
+  soilType String?
+  notes    String? @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  region    Region?    @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  plantings Planting[]
+  reminders GardenReminder[]
+
+  @@index([userId])
+}
+
+model Planting {
+  id        String   @id @default(cuid())
+  plotId    String
+  itemSlug  String
+  plantedOn DateTime @db.Date
+  stage     String?
+  notes     String?  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  plot      GardenPlot       @relation(fields: [plotId], references: [id], onDelete: Cascade)
+  reminders GardenReminder[]
+
+  @@index([plotId])
+}
+
+model SavedCalculation {
+  id        String   @id @default(cuid())
+  userId    String
+  cropSlug  String
+  area      Float
+  unit      String
+  products  Json // [{ product, kg }]
+  notes     String?  @db.Text
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model GardenReminder {
+  id         String    @id @default(cuid())
+  userId     String
+  title      String
+  dueDate    DateTime  @db.Date
+  plotId     String?
+  plantingId String?
+  done       Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plot     GardenPlot? @relation(fields: [plotId], references: [id], onDelete: Cascade)
+  planting Planting?   @relation(fields: [plantingId], references: [id], onDelete: Cascade)
+
+  @@index([userId, dueDate])
+}
+
+// ── Plant Doctor diagnoses ───────────────────────────────
+
+model Diagnosis {
+  id         String   @id @default(cuid())
+  userId     String?
+  imageUrl   String?
+  symptoms   String   @db.Text
+  cropHint   String?
+  result     Json
+  confidence String?
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+}

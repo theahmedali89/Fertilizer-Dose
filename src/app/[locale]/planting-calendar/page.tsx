@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Section } from "@/components/ui/Section";
 import { PlantingCalendar } from "@/components/planting/PlantingCalendar";
 import { localizedMetadata } from "@/lib/seo";
+import { getRegions, getPlantingWindows, getGrowingItems } from "@/server/data";
 
 export async function generateMetadata({
   params,
@@ -26,6 +27,11 @@ export default async function PlantingCalendarPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("calendar");
+  const [regions, windows, items] = await Promise.all([
+    getRegions(),
+    getPlantingWindows(),
+    getGrowingItems(),
+  ]);
 
   return (
     <>
@@ -45,7 +51,7 @@ export default async function PlantingCalendarPage({
       </section>
 
       <Section>
-        <PlantingCalendar />
+        <PlantingCalendar regions={regions} windows={windows} items={items} />
       </Section>
     </>
   );

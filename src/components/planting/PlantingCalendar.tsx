@@ -6,14 +6,13 @@ import { Link } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import {
-  REGIONS,
-  PLANTING_WINDOWS,
   monthInWindow,
   monthName,
   windowLabel,
   type PlantingWindow,
+  type Region,
 } from "@/lib/planting";
-import { getItem, type GrowingCategory } from "@/lib/growing";
+import { type GrowingCategory, type GrowingItem } from "@/lib/growing";
 import { cn } from "@/lib/utils";
 
 const CATEGORY_BASE: Record<GrowingCategory, string> = {
@@ -28,10 +27,22 @@ const CATEGORY_BADGE: Record<GrowingCategory, string> = {
   plant: "bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300",
 };
 
-function WindowCard({ w, t, locale }: { w: PlantingWindow; t: ReturnType<typeof useTranslations>; locale: string }) {
-  const item = getItem(w.itemSlug);
+function WindowCard({
+  w,
+  t,
+  locale,
+  items,
+  regions,
+}: {
+  w: PlantingWindow;
+  t: ReturnType<typeof useTranslations>;
+  locale: string;
+  items: GrowingItem[];
+  regions: Region[];
+}) {
+  const item = items.find((i) => i.slug === w.itemSlug);
   if (!item) return null;
-  const region = REGIONS.find((r) => r.id === w.regionId)!;
+  const region = regions.find((r) => r.id === w.regionId)!;
   return (
     <Card className="h-full">
       <CardBody>
@@ -114,9 +125,15 @@ function WindowCard({ w, t, locale }: { w: PlantingWindow; t: ReturnType<typeof 
 }
 
 export function PlantingCalendar({
+  regions,
+  windows,
+  items,
   initialCountry = "pakistan",
   initialRegion = "pk-punjab",
 }: {
+  regions: Region[];
+  windows: PlantingWindow[];
+  items: GrowingItem[];
   initialCountry?: "pakistan" | "india";
   initialRegion?: string;
 }) {
@@ -127,22 +144,22 @@ export function PlantingCalendar({
   const [month, setMonth] = useState(() => new Date().getMonth() + 1);
   const [category, setCategory] = useState<GrowingCategory | "all">("all");
 
-  const regions = useMemo(() => REGIONS.filter((r) => r.country === country), [country]);
+  const regionsForCountry = useMemo(() => regions.filter((r) => r.country === country), [regions, country]);
 
   const onCountry = (c: "pakistan" | "india") => {
     setCountry(c);
-    const first = REGIONS.find((r) => r.country === c)!;
+    const first = regions.find((r) => r.country === c)!;
     setRegionId(first.id);
   };
 
   const results = useMemo(() => {
-    return PLANTING_WINDOWS.filter((w) => {
+    return windows.filter((w) => {
       if (w.regionId !== regionId) return false;
       if (!monthInWindow(month, w)) return false;
       if (category === "all") return true;
-      return getItem(w.itemSlug)?.category === category;
+      return items.find((i) => i.slug === w.itemSlug)?.category === category;
     });
-  }, [regionId, month, category]);
+  }, [regionId, month, category, windows, items]);
 
   const shiftMonth = (d: number) => setMonth((m) => ((m - 1 + d + 12) % 12) + 1);
 
@@ -169,7 +186,7 @@ export function PlantingCalendar({
                 {t("region")}
               </span>
               <select value={regionId} onChange={(e) => setRegionId(e.target.value)} className={selectCls}>
-                {regions.map((r) => (
+                {regionsForCountry.map((r) => (
                   <option key={r.id} value={r.id}>
                     {r.name}
                   </option>
@@ -251,13 +268,13 @@ export function PlantingCalendar({
           <p className="font-display text-xl font-semibold">{t("emptyTitle")}</p>
           <p className="text-sm text-ink-soft mt-2 leading-relaxed">{t("emptyHint")}</p>
           <p className="text-xs text-ink-faint mt-3">
-            {REGIONS.find((r) => r.id === regionId)?.name} · {monthName(month, locale)}
+            {regions.find((r) => r.id === regionId)?.name} · {monthName(month, locale)}
           </p>
         </div>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {results.map((w) => (
-            <WindowCard key={`${w.itemSlug}-${w.startMonth}`} w={w} t={t} locale={locale} />
+            <WindowCard key={`${w.itemSlug}-${w.startMonth}`} w={w} t={t} locale={locale} items={items} regions={regions} />
           ))}
         </div>
       )}

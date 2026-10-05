@@ -2,10 +2,11 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { localizedMetadata } from "@/lib/seo";
 import { GrowingDetail } from "@/components/growing/GrowingDetail";
-import { getItem, getItemsByCategory } from "@/lib/growing";
+import { getGrowingItem, getGrowingByCategory } from "@/server/data";
 
-export function generateStaticParams() {
-  return getItemsByCategory("plant").map((i) => ({ slug: i.slug }));
+export async function generateStaticParams() {
+  const items = await getGrowingByCategory("plant");
+  return items.map((i) => ({ slug: i.slug }));
 }
 
 export async function generateMetadata({
@@ -14,7 +15,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const item = getItem(slug);
+  const item = await getGrowingItem(slug);
   if (!item || item.category !== "plant") return {};
   const base = localizedMetadata({
     locale,
@@ -35,8 +36,8 @@ export default async function PlantDetail({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const item = getItem(slug);
+  const item = await getGrowingItem(slug);
   if (!item || item.category !== "plant") notFound();
-  const related = getItemsByCategory("plant").filter((i) => i.slug !== slug);
+  const related = (await getGrowingByCategory("plant")).filter((i) => i.slug !== slug);
   return <GrowingDetail item={item} related={related} />;
 }

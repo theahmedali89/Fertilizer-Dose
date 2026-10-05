@@ -3,13 +3,14 @@ import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
-import { FERTILIZERS, getFertilizer } from "@/lib/agronomy";
+import { getFertilizers, getFertilizer } from "@/server/data";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
-export function generateStaticParams() {
-  return FERTILIZERS.map((f) => ({ slug: f.slug }));
+export async function generateStaticParams() {
+  const fertilizers = await getFertilizers();
+  return fertilizers.map((f) => ({ slug: f.slug }));
 }
 
 export async function generateMetadata({
@@ -18,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const f = getFertilizer(slug);
+  const f = await getFertilizer(slug);
   if (!f) return {};
   return localizedMetadata({
     locale,
@@ -35,8 +36,9 @@ export default async function FertilizerDetail({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const f = getFertilizer(slug);
+  const f = await getFertilizer(slug);
   if (!f) notFound();
+  const fertilizers = await getFertilizers();
   const fertUrl = `${siteConfig.url}/fertilizers/${f.slug}`;
 
   return (
@@ -117,7 +119,7 @@ export default async function FertilizerDetail({
             <Card><CardBody>
               <h3 className="font-semibold text-sm mb-2">More fertilizers</h3>
               <ul className="space-y-1.5">
-                {FERTILIZERS.filter((x) => x.slug !== f.slug).map((x) => (
+                {fertilizers.filter((x) => x.slug !== f.slug).map((x) => (
                   <li key={x.slug}>
                     <Link href={`/fertilizers/${x.slug}`} className="text-sm text-leaf-800 dark:text-leaf-300 hover:underline">
                       {x.name}

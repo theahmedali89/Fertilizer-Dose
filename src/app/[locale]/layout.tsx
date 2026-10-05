@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 import { Fraunces, Inter } from "next/font/google";
 import { routing, getLocaleMeta } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
         className={`${inter.variable} ${fraunces.variable} font-sans bg-cream text-ink antialiased dark:bg-ink dark:text-cream`}
       >
         <NextIntlClientProvider>
+          <AuthProvider>
           <ThemeProvider>
             <a
               href="#main-content"
@@ -102,6 +104,7 @@ export default async function LocaleLayout({
             </main>
             <Footer />
           </ThemeProvider>
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>

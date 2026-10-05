@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { POSTS } from "@/lib/blog";
+import { getPosts } from "@/server/data";
 
 export async function generateMetadata({
   params,
@@ -29,6 +29,7 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const posts = await getPosts();
   return (
     <>
       <section className="border-b border-line bg-surface">
@@ -44,7 +45,7 @@ export default async function BlogPage({
       </section>
       <Section>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {POSTS.map((post) => (
+          {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <Card className="h-full transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
                 <CardBody>

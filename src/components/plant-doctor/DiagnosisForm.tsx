@@ -11,8 +11,15 @@ export function DiagnosisForm() {
   const [preview, setPreview] = useState<string>("");
   const [symptoms, setSymptoms] = useState("");
   const [crop, setCrop] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "error" | "info">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "error" | "info" | "done">("idle");
   const [message, setMessage] = useState("");
+  const [result, setResult] = useState<{
+    likelyIssues: { name: string; confidence: string; description: string }[];
+    recommendations: string[];
+    urgency: string;
+    needsExpert: boolean;
+    disclaimer: string;
+  } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const pick = (f: File | undefined) => {
@@ -47,6 +54,7 @@ export function DiagnosisForm() {
     }
     setStatus("sending");
     setMessage("");
+    setResult(null);
     try {
       const form = new FormData();
       form.append("image", file);
@@ -54,8 +62,13 @@ export function DiagnosisForm() {
       form.append("crop", crop);
       const res = await fetch("/api/plant-doctor/diagnose", { method: "POST", body: form });
       const data = await res.json();
-      setStatus(res.ok ? "idle" : res.status === 501 ? "info" : "error");
-      setMessage(data.error ?? "Unexpected response. Please try again.");
+      if (res.ok && data.result) {
+        setStatus("done");
+        setResult(data.result);
+      } else {
+        setStatus(res.status === 501 ? "info" : "error");
+        setMessage(data.error ?? "Unexpected response. Please try again.");
+      }
     } catch {
       setStatus("error");
       setMessage("Network error — please check your connection and try again.");
@@ -145,6 +158,58 @@ export function DiagnosisForm() {
           <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "sending"}>
             {status === "sending" ? "Analyzing…" : "Diagnose my plant"}
           </Button>
+
+          {status === "done" && result && (
+            <div className="rounded-2xl border border-line bg-surface-2/50 p-5 sm:p-6 space-y-5" aria-live="polite">
+              <div className="flex items-center gap-2.5">
+                <h2 className="font-display text-xl font-semibold">Diagnosis</h2>
+                <span
+                  className={`text-xs font-bold uppercase tracking-wide rounded-full px-2.5 py-1 ${
+                    result.urgency === "high"
+                      ? "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300"
+                      : result.urgency === "medium"
+                        ? "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300"
+                        : "bg-leaf-100 text-leaf-800 dark:bg-leaf-950 dark:text-leaf-300"
+                  }`}
+                >
+                  {result.urgency} urgency
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                {result.likelyIssues.map((issue, i) => (
+                  <div key={i} className="rounded-xl bg-surface border border-line p-4">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <p className="font-semibold">{issue.name}</p>
+                      <span className="text-xs font-medium text-ink-faint shrink-0 capitalize">
+                        {issue.confidence} confidence
+                      </span>
+                    </div>
+                    <p className="text-sm text-ink-soft mt-1 leading-relaxed">{issue.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">What to do</h3>
+                <ul className="space-y-1.5 text-sm text-ink-soft leading-relaxed">
+                  {result.recommendations.map((r, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-leaf-700 dark:text-leaf-400 mt-0.5" aria-hidden>•</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {result.needsExpert && (
+                <p className="text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900 rounded-xl px-4 py-2.5">
+                  This case needs an expert eye — please consult your local agriculture officer.
+                </p>
+              )}
+              <p className="text-xs text-ink-faint leading-relaxed">{result.disclaimer}</p>
+            </div>
+          )}
 
           <p className="text-xs text-ink-faint leading-relaxed">
             AI-assisted guidance only — always confirm with your local agriculture

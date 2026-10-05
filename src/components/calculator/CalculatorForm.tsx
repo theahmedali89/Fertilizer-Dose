@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Field, Input, Select } from "@/components/ui/fields";
 import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
-import { AREA_UNITS, CROPS, calculateDose } from "@/lib/agronomy";
+import { AREA_UNITS, calculateDose, type CropInfo } from "@/lib/agronomy";
 import { SaveCalcButton } from "@/components/garden/SaveCalcButton";
 
 const SOILS = [
@@ -19,9 +19,9 @@ const SOILS = [
   "Saline / salt-affected",
 ];
 
-export function CalculatorForm() {
+export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
   const t = useTranslations("calculator");
-  const verified = CROPS.filter((c) => c.npk);
+  const verified = crops.filter((c) => c.npk);
   const [cropSlug, setCropSlug] = useState(verified[0].slug);
   const [area, setArea] = useState("5");
   const [unit, setUnit] = useState("acre");
@@ -29,7 +29,7 @@ export function CalculatorForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  const crop = CROPS.find((c) => c.slug === cropSlug)!;
+  const crop = crops.find((c) => c.slug === cropSlug)!;
 
   const result = useMemo(() => {
     if (!submitted) return null;
@@ -63,7 +63,7 @@ export function CalculatorForm() {
           <form onSubmit={onSubmit} className="space-y-5">
             <Field label={t("form.crop")}>
               <Select value={cropSlug} onChange={(e) => { setCropSlug(e.target.value); setSubmitted(false); }}>
-                {CROPS.map((c) => (
+                {crops.map((c) => (
                   <option key={c.slug} value={c.slug} disabled={!c.npk}>
                     {c.name} {c.npk ? "" : `(${t("form.inReview")})`}
                   </option>

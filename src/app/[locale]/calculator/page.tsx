@@ -3,6 +3,7 @@ import { CalculatorForm } from "@/components/calculator/CalculatorForm";
 import { Section } from "@/components/ui/Section";
 import { Accordion } from "@/components/ui/Accordion";
 import { localizedMetadata } from "@/lib/seo";
+import { getCrops } from "@/server/data";
 
 export async function generateMetadata({
   params,
@@ -28,6 +29,7 @@ export default async function CalculatorPage({
   setRequestLocale(locale);
   const t = await getTranslations("calculator");
   const methodFaq = t.raw("methodFaq") as { q: string; a: string }[];
+  const crops = await getCrops();
 
   return (
     <>
@@ -47,7 +49,7 @@ export default async function CalculatorPage({
       </section>
 
       <Section>
-        <CalculatorForm />
+        <CalculatorForm crops={crops} />
       </Section>
 
       <div className="bg-surface border-t border-line">

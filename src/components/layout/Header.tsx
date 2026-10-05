@@ -7,6 +7,7 @@ import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher, LanguageList } from "./LanguageSwitcher";
 import { NavDropdown as GrowDropdown } from "./NavDropdown";
+import { AuthButtons } from "@/components/auth/AuthButtons";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -126,6 +127,7 @@ export function Header() {
             <div className="flex items-center gap-2.5">
               <LanguageSwitcher />
               <ThemeToggle />
+              <AuthButtons />
               <Link
                 href="/calculator"
                 className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-5 py-2.5 text-[14.5px] font-semibold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors shadow-card"

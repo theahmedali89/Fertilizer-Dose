@@ -299,7 +299,11 @@
     "myGarden": "My Garden",
     "tools": "Tools",
     "profitCalculator": "Profit Calculator",
-    "compare": "Compare"
+    "compare": "Compare",
+    "login": "Log in",
+    "account": "Account",
+    "admin": "Admin",
+    "logout": "Log out"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
@@ -544,5 +548,25 @@
   "chart": {
     "metaTitle": "Fertilizer Dose Chart — Quick NPK Reference",
     "metaDescription": "Quick-reference fertilizer dose chart: NPK recommendations per crop with urea, DAP and MOP quantities."
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginDesc": "Access your garden, saved items and admin tools.",
+    "signupTitle": "Create account",
+    "signupDesc": "Save your garden to the cloud and sync across devices.",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "loginCta": "Log in",
+    "signupCta": "Create account",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "invalid": "Invalid email or password.",
+    "error": "Something went wrong. Please try again.",
+    "accountTitle": "My account",
+    "role": "Role",
+    "signOut": "Sign out",
+    "adminLink": "Open admin dashboard",
+    "gardenNote": "Your garden now syncs to your account when you are logged in."
   }
 }

@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { localizedMetadata } from "@/lib/seo";
-import { regionsByCountry, regionHasData } from "@/lib/planting";
+import { getRegions, getPlantingWindows } from "@/server/data";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 
@@ -42,7 +42,8 @@ export default async function CountryCalendarPage({
   setRequestLocale(locale);
   const t = await getTranslations("calendar");
   const cp = t.raw("countryPages") as Record<string, string>;
-  const regions = regionsByCountry(country as "pakistan" | "india");
+  const regions = (await getRegions()).filter((r) => r.country === country);
+  const windows = await getPlantingWindows();
   const countryName = country === "pakistan" ? "Pakistan" : "India";
 
   return (
@@ -80,7 +81,7 @@ export default async function CountryCalendarPage({
         <h2 className="font-display text-2xl font-semibold mb-5">{cp.regionsTitle}</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {regions.map((r) => {
-            const hasData = regionHasData(r.id);
+            const hasData = windows.some((w) => w.regionId === r.id);
             return (
               <Card key={r.id} className="h-full">
                 <CardBody>

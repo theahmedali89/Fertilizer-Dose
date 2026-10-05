@@ -3,7 +3,7 @@ import { localizedMetadata } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
-import { FERTILIZERS } from "@/lib/agronomy";
+import { getFertilizers } from "@/server/data";
 
 export async function generateMetadata({
   params,
@@ -28,6 +28,7 @@ export default async function FertilizersPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const fertilizers = await getFertilizers();
   return (
     <>
       <section className="border-b border-line bg-surface">
@@ -48,7 +49,7 @@ export default async function FertilizersPage({
 
       <Section>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {FERTILIZERS.map((f) => (
+          {fertilizers.map((f) => (
             <Link key={f.slug} href={`/fertilizers/${f.slug}`} className="group">
               <Card className="h-full transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
                 <CardBody>
