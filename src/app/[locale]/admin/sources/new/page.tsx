@@ -14,7 +14,10 @@ export default async function NewSource({
     <div>
       <AdminHeader title="New source" />
       <SourceForm
-        initial={{ id: null, organization: "", title: "", url: "", country: "", region: "", notes: "" }}
+        initial={{
+          id: null, organization: "", title: "", url: "", country: "", region: "",
+          sourceType: "", verificationStatus: "under_review", notes: "",
+        }}
       />
     </div>
   );

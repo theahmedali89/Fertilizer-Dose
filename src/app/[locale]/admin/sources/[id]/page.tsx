@@ -20,7 +20,9 @@ export default async function EditSource({
       <SourceForm
         initial={{
           id: s.id, organization: s.organization, title: s.title, url: s.url ?? "",
-          country: s.country ?? "", region: s.region ?? "", notes: s.notes ?? "",
+          country: s.country ?? "", region: s.region ?? "",
+          sourceType: s.sourceType ?? "", verificationStatus: s.verificationStatus,
+          notes: s.notes ?? "",
         }}
       />
     </div>

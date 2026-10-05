@@ -10,6 +10,7 @@ import { POSTS } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
 import { localizedMetadata } from "@/lib/seo";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
+import { GrowThisMonth } from "@/components/home/GrowThisMonth";
 
 const TOOL_ICONS: Record<string, React.ReactNode> = {
   calculator: (
@@ -224,45 +225,7 @@ export default async function Home({
       </div>
 
       {/* ============ WHAT TO GROW THIS MONTH ============ */}
-      <Section
-        eyebrow={t("planting.eyebrow")}
-        title={t("planting.title")}
-        description={t("planting.desc")}
-      >
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-[1fr_auto] items-center gap-6 p-6 sm:p-8">
-            <div className="flex flex-wrap gap-2">
-              {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => {
-                const name = new Intl.DateTimeFormat(locale, { month: "short" }).format(
-                  new Date(2026, m - 1, 1)
-                );
-                const isCurrent = m === new Date().getMonth() + 1;
-                return (
-                  <span
-                    key={m}
-                    className={
-                      isCurrent
-                        ? "rounded-full px-3 py-1.5 text-[13px] font-bold bg-leaf-700 text-white dark:bg-leaf-600 capitalize"
-                        : "rounded-full px-3 py-1.5 text-[13px] font-medium border border-line text-ink-soft capitalize"
-                    }
-                  >
-                    {name}
-                  </span>
-                );
-              })}
-            </div>
-            <Link
-              href="/planting-calendar"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-7 py-3.5 font-semibold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors whitespace-nowrap"
-            >
-              {t("planting.cta")}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden className="rtl:rotate-180">
-                <path d="M5 12h14m-6-6 6 6-6 6" />
-              </svg>
-            </Link>
-          </div>
-        </Card>
-      </Section>
+      <GrowThisMonth locale={locale} />
 
       {/* ============ TOOLS ============ */}
       <div className="bg-surface border-y border-line">

@@ -3,6 +3,86 @@
 import { useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 
+/* ── Verification status ── */
+
+export const STATUS_OPTIONS = [
+  { value: "draft", label: "Draft" },
+  { value: "under_review", label: "Under review" },
+  { value: "verified", label: "Verified" },
+  { value: "published", label: "Published" },
+  { value: "archived", label: "Archived" },
+] as const;
+
+export function statusLabel(status: string): string {
+  return STATUS_OPTIONS.find((o) => o.value === status)?.label ?? status;
+}
+
+const STATUS_STYLES: Record<string, string> = {
+  draft: "bg-surface-2 text-ink-soft border-line",
+  under_review:
+    "bg-harvest-100 text-harvest-800 border-harvest-200 dark:bg-harvest-950 dark:text-harvest-300 dark:border-harvest-800",
+  verified:
+    "bg-leaf-100 text-leaf-800 border-leaf-200 dark:bg-leaf-950 dark:text-leaf-300 dark:border-leaf-800",
+  published:
+    "bg-sky-100 text-sky-800 border-sky-200 dark:bg-sky-950 dark:text-sky-300 dark:border-sky-800",
+  archived:
+    "bg-red-50 text-red-700 border-red-200 dark:bg-red-950/40 dark:text-red-400 dark:border-red-900",
+};
+
+export function StatusBadge({ status }: { status: string }) {
+  return (
+    <span
+      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap ${STATUS_STYLES[status] ?? STATUS_STYLES.draft}`}
+    >
+      {statusLabel(status)}
+    </span>
+  );
+}
+
+/* ── List filter tabs (server-rendered links) ── */
+
+export type FilterKey =
+  | "all"
+  | "draft"
+  | "under_review"
+  | "verified"
+  | "published"
+  | "missing_source"
+  | "needs_review";
+
+export const FILTER_OPTIONS: { value: FilterKey; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "draft", label: "Draft" },
+  { value: "under_review", label: "Under review" },
+  { value: "verified", label: "Verified" },
+  { value: "published", label: "Published" },
+  { value: "missing_source", label: "Missing source" },
+  { value: "needs_review", label: "Needs review" },
+];
+
+export function FilterTabs({ base, current }: { base: string; current: string }) {
+  return (
+    <div className="flex flex-wrap gap-1.5 mb-5">
+      {FILTER_OPTIONS.map((f) => {
+        const active = current === f.value;
+        return (
+          <Link
+            key={f.value}
+            href={f.value === "all" ? base : `${base}?filter=${f.value}`}
+            className={`rounded-full px-3.5 py-1.5 text-[13px] font-semibold border transition-colors ${
+              active
+                ? "bg-leaf-700 dark:bg-leaf-600 text-white border-transparent"
+                : "border-line text-ink-soft hover:border-leaf-600"
+            }`}
+          >
+            {f.label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
 /* ── Page header ── */
 export function AdminHeader({ title, actionHref, actionLabel }: { title: string; actionHref?: string; actionLabel?: string }) {
   return (

@@ -10,7 +10,7 @@ import { NavDropdown as GrowDropdown } from "./NavDropdown";
 import { AuthButtons } from "@/components/auth/AuthButtons";
 import { cn } from "@/lib/utils";
 
-export function Header() {
+export function Header({ countrySelector }: { countrySelector?: React.ReactNode }) {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -125,6 +125,7 @@ export function Header() {
               })}
             </nav>
             <div className="flex items-center gap-2.5">
+              {countrySelector}
               <LanguageSwitcher />
               <ThemeToggle />
               <AuthButtons />

@@ -273,7 +273,14 @@
       "eyebrow": "Planting calendar",
       "title": "What to grow this month?",
       "desc": "A region-aware sowing calendar for your province — no one-size-fits-all guesses. Every window is sourced and verification-badged.",
-      "cta": "Open planting calendar"
+      "cta": "Open planting calendar",
+      "noCountryTitle": "Where do you grow?",
+      "noCountryDesc": "Choose your country to see what to plant this month — verified windows only.",
+      "showingFor": "Showing for",
+      "changeCountry": "Change",
+      "viewCalendar": "View full planting calendar",
+      "noItemsTitle": "Nothing verified for this month yet",
+      "noItemsHint": "We have not verified any planting windows for this region and month yet."
     }
   },
   "language": {
@@ -353,7 +360,13 @@
       "plantsTitle": "Plants for every kind of garden.",
       "vegetablesTitle": "Vegetables, from field to kitchen garden."
     },
-    "subcategoryAll": "All types"
+    "subcategoryAll": "All types",
+    "filterCountry": "Country",
+    "filterRegion": "Region",
+    "filterMonth": "Planting month",
+    "anyMonth": "Any month",
+    "allCountries": "All countries",
+    "allRegions": "All regions"
   },
   "calendar": {
     "metaTitle": "Planting Calendar — What to Grow This Month",
@@ -391,7 +404,20 @@
       "hasData": "Planting data available",
       "noDataYet": "Data in verification",
       "openCalendar": "Open planting calendar"
-    }
+    },
+    "catFruit": "Fruits",
+    "catHerb": "Herbs",
+    "catFlower": "Flowers",
+    "catOther": "Other plants",
+    "activitySOW": "Sow now",
+    "activityTRANSPLANT": "Transplant now",
+    "activityPLANT": "Plant now",
+    "activityHARVEST": "Harvest period",
+    "activityLAND_PREPARATION": "Prepare land",
+    "viewGuide": "View growing guide",
+    "emptyRegionTitle": "No verified planting information is available for this region yet.",
+    "plantingWindow": "Planting window",
+    "appliesTo": "Applies to"
   },
   "garden": {
     "metaTitle": "My Garden — Track Plots, Plantings & Fertilizer Plans",
@@ -572,5 +598,10 @@
     "signOut": "Sign out",
     "adminLink": "Open admin dashboard",
     "gardenNote": "Your garden now syncs to your account when you are logged in."
+  },
+  "country": {
+    "selectCountry": "Country",
+    "selectRegion": "Region / province",
+    "selectedCountry": "Selected country"
   }
 }

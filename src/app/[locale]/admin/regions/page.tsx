@@ -11,7 +11,9 @@ export default async function RegionsAdmin({
   const { locale } = await params;
   setRequestLocale(locale);
   const rows = isDbConfigured()
-    ? await db.region.findMany({ orderBy: { name: "asc" } }).catch(() => [])
+    ? await db.region
+        .findMany({ orderBy: { name: "asc" }, include: { countryObj: true } })
+        .catch(() => [])
     : [];
 
   return (
@@ -23,7 +25,7 @@ export default async function RegionsAdmin({
           id: r.id,
           cells: [
             <span key="n" className="font-semibold">{r.name}</span>,
-            <span key="c" className="capitalize">{r.country}</span>,
+            <span key="c">{r.countryObj?.name ?? <span className="capitalize">{r.country}</span>}</span>,
             <span key="s" className="font-mono text-[13px] text-ink-faint">{r.slug}</span>,
           ],
         }))}

@@ -6,6 +6,11 @@ import {
   type GrowingCategory,
 } from "@/lib/growing";
 import { getGrowingByCategory } from "@/server/data";
+import {
+  getCountries,
+  getAllRegions,
+  getWindowFilterIndex,
+} from "@/server/country";
 
 const INDEX_TITLES: Record<GrowingCategory, "cropsTitle" | "plantsTitle" | "vegetablesTitle"> = {
   crop: "cropsTitle",
@@ -24,7 +29,12 @@ export async function GrowingIndexPage({
   setRequestLocale(locale);
   const t = await getTranslations("growing");
   const meta = CATEGORY_META[category];
-  const items = await getGrowingByCategory(category);
+  const [items, countries, regions, windowIndex] = await Promise.all([
+    getGrowingByCategory(category),
+    getCountries(),
+    getAllRegions(),
+    getWindowFilterIndex(),
+  ]);
 
   return (
     <>
@@ -44,7 +54,13 @@ export async function GrowingIndexPage({
       </section>
 
       <Section>
-        <GrowingIndex category={category} items={items} />
+        <GrowingIndex
+          category={category}
+          items={items}
+          countries={countries}
+          regions={regions}
+          windowIndex={windowIndex}
+        />
       </Section>
     </>
   );

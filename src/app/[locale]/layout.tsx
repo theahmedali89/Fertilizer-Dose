@@ -8,6 +8,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { routing, getLocaleMeta } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
+import { CountrySelector } from "@/components/layout/CountrySelector";
 import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
 
@@ -97,7 +98,7 @@ export default async function LocaleLayout({
             >
               Skip to content
             </a>
-            <Header />
+            <Header countrySelector={<CountrySelector />} />
             <main id="main-content">
               <div className="field-texture" aria-hidden="true" />
               {children}

@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { AdminHeader, AdminTable } from "@/components/admin/ui";
+import { AdminHeader, AdminTable, StatusBadge } from "@/components/admin/ui";
 import { db, isDbConfigured } from "@/lib/db";
 import { deleteGrowingItem } from "@/server/actions/admin";
 
@@ -25,7 +25,7 @@ export default async function GrowingAdmin({
             <span key="n" className="font-semibold">{g.name}</span>,
             <span key="c" className="capitalize">{g.category}</span>,
             <span key="s" className="font-mono text-[13px] text-ink-faint">{g.slug}</span>,
-            <span key="v">{g.verificationStatus === "verified" ? "Verified" : "In review"}</span>,
+            <span key="v"><StatusBadge status={g.verificationStatus} /></span>,
           ],
         }))}
         editBase="/admin/growing"

@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { db, isDbConfigured } from "@/lib/db";
 import { requireStaff } from "@/server/require-auth";
+import { SOURCE_TYPES, TRANSLATION_STATUSES } from "@/lib/adminLookups";
 
 async function guard() {
   await requireStaff();
@@ -174,11 +175,56 @@ export async function deleteFaq(id: string): Promise<ActionResult> {
   return { ok: true };
 }
 
-/* ── Regions ── */
+/* ── Countries ── */
+
+const countrySchema = z.object({
+  code: str
+    .min(2)
+    .max(4)
+    .transform((v) => v.toUpperCase())
+    .refine((v) => /^[A-Z]{2,4}$/.test(v), { message: "Code must be 2–4 letters." }),
+  name: str.min(2).max(120),
+  slug: str.min(2).max(80).regex(/^[a-z0-9-]+$/),
+  defaultUnit: z.enum(["acre", "hectare"]),
+  status: z.enum(["active", "inactive"]),
+});
+
+export async function upsertCountry(id: string | null, formData: FormData): Promise<ActionResult> {
+  await guard();
+  const parsed = countrySchema.safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return fail(invalidFields(parsed.error));
+  try {
+    if (id) await db.country.update({ where: { id }, data: parsed.data });
+    else await db.country.create({ data: parsed.data });
+  } catch {
+    return fail("Save failed (code or slug may already exist).");
+  }
+  revalidateAdmin();
+  return { ok: true };
+}
+
+export async function deleteCountry(id: string): Promise<ActionResult> {
+  await guard();
+  const [regions, recommendations, seasons] = await Promise.all([
+    db.region.count({ where: { countryId: id } }),
+    db.fertilizerRecommendation.count({ where: { countryId: id } }),
+    db.season.count({ where: { countryId: id } }),
+  ]);
+  if (regions > 0 || recommendations > 0 || seasons > 0) {
+    return fail(
+      `Cannot delete: ${regions} region(s), ${recommendations} recommendation(s), ${seasons} season(s) linked to this country.`
+    );
+  }
+  await db.country.delete({ where: { id } });
+  revalidateAdmin();
+  return { ok: true };
+}
+
+/* ── Regions (extended with countryId) ── */
 
 const regionSchema = z.object({
   slug: str.min(2).max(80).regex(/^[a-z0-9-]+$/),
-  country: z.enum(["pakistan", "india"]),
+  countryId: str.min(1),
   name: str.min(2).max(120),
 });
 
@@ -186,9 +232,18 @@ export async function upsertRegion(id: string | null, formData: FormData): Promi
   await guard();
   const parsed = regionSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) return fail(invalidFields(parsed.error));
+  const country = await db.country.findUnique({ where: { id: parsed.data.countryId } });
+  if (!country) return fail("Please select a valid country.");
+  // Keep the legacy `country` string in sync (public pages filter on it).
+  const data = {
+    slug: parsed.data.slug,
+    name: parsed.data.name,
+    countryId: country.id,
+    country: country.slug,
+  };
   try {
-    if (id) await db.region.update({ where: { id }, data: parsed.data });
-    else await db.region.create({ data: parsed.data });
+    if (id) await db.region.update({ where: { id }, data });
+    else await db.region.create({ data });
   } catch {
     return fail("Save failed (slug may already exist).");
   }
@@ -205,10 +260,18 @@ export async function deleteRegion(id: string): Promise<ActionResult> {
   return { ok: true };
 }
 
-/* ── Planting windows ── */
+/* ── Planting windows (extended: activityType + season) ── */
+
+const ACTIVITY_TYPES = ["SOW", "TRANSPLANT", "PLANT", "HARVEST", "LAND_PREPARATION"] as const;
 
 const windowSchema = z.object({
   itemId: str.min(1), regionId: str.min(1),
+  activityType: z.enum(ACTIVITY_TYPES),
+  seasonId: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v ? v : null)),
   startMonth: z.coerce.number().int().min(1).max(12),
   endMonth: z.coerce.number().int().min(1).max(12),
   harvestText: optStr, notes: optStr,
@@ -243,11 +306,18 @@ export async function deleteWindow(id: string): Promise<ActionResult> {
   return { ok: true };
 }
 
-/* ── Sources ── */
+/* ── Sources (extended: sourceType + verificationStatus) ── */
 
 const sourceSchema = z.object({
   organization: str.min(2).max(160), title: str.min(2).max(240),
-  url: optStr, country: optStr, region: optStr, notes: optStr,
+  url: optStr, country: optStr, region: optStr,
+  sourceType: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v ? v : null)),
+  verificationStatus: z.enum(["draft", "under_review", "verified", "published", "archived"]),
+  notes: optStr,
 });
 
 export async function upsertSource(id: string | null, formData: FormData): Promise<ActionResult> {
@@ -263,6 +333,97 @@ export async function upsertSource(id: string | null, formData: FormData): Promi
 export async function deleteSource(id: string): Promise<ActionResult> {
   await guard();
   await db.source.delete({ where: { id } });
+  revalidateAdmin();
+  return { ok: true };
+}
+
+/* ── Fertilizer recommendations ── */
+
+const recommendationSchema = z.object({
+  growingItemId: str.min(1),
+  countryId: str.min(1),
+  regionId: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v ? v : null)),
+  variety: optStr,
+  soilContext: optStr,
+  irrigationContext: optStr,
+  growthStage: optStr,
+  n: optNum, p2o5: optNum, k2o: optNum,
+  micronutrients: optStr,
+  applicationTiming: optStr,
+  applicationMethod: optStr,
+  sourceId: str.min(1),
+  verificationStatus: z.enum(["draft", "under_review", "verified", "published", "archived"]),
+  lastReviewed: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v ? new Date(v) : null)),
+});
+
+export async function upsertRecommendation(id: string | null, formData: FormData): Promise<ActionResult> {
+  await guard();
+  const parsed = recommendationSchema.safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return fail(invalidFields(parsed.error));
+  const d = parsed.data;
+  // Region must belong to the selected country (when set).
+  if (d.regionId) {
+    const region = await db.region.findUnique({ where: { id: d.regionId } });
+    if (!region || region.countryId !== d.countryId) {
+      return fail("Selected region does not belong to the selected country.");
+    }
+  }
+  const source = await db.source.findUnique({ where: { id: d.sourceId } });
+  if (!source) return fail("A valid source is required.");
+  try {
+    if (id) await db.fertilizerRecommendation.update({ where: { id }, data: d });
+    else await db.fertilizerRecommendation.create({ data: d });
+  } catch {
+    return fail("Save failed.");
+  }
+  revalidateAdmin();
+  return { ok: true };
+}
+
+export async function deleteRecommendation(id: string): Promise<ActionResult> {
+  await guard();
+  await db.fertilizerRecommendation.delete({ where: { id } });
+  revalidateAdmin();
+  return { ok: true };
+}
+
+/* ── Growing item translations ── */
+
+const translationSchema = z.object({
+  growingItemId: str.min(1),
+  locale: str.min(2).max(10),
+  name: str.min(2).max(200),
+  localName: optStr,
+  description: optStr,
+  growingNotes: optStr,
+  status: z.enum(["draft", "machine_translated", "review_required", "reviewed", "published"]),
+});
+
+export async function upsertTranslation(id: string | null, formData: FormData): Promise<ActionResult> {
+  await guard();
+  const parsed = translationSchema.safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return fail(invalidFields(parsed.error));
+  try {
+    if (id) await db.growingItemTranslation.update({ where: { id }, data: parsed.data });
+    else await db.growingItemTranslation.create({ data: parsed.data });
+  } catch {
+    return fail("Save failed (a translation for this item + locale may already exist).");
+  }
+  revalidateAdmin();
+  return { ok: true };
+}
+
+export async function deleteTranslation(id: string): Promise<ActionResult> {
+  await guard();
+  await db.growingItemTranslation.delete({ where: { id } });
   revalidateAdmin();
   return { ok: true };
 }
