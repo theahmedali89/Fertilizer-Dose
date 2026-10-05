@@ -27,8 +27,8 @@ export function Logo({ compact = false }: { compact?: boolean }) {
           <span className="block font-display font-bold text-xl tracking-tight">
             Fertilizer<span className="text-leaf-700 dark:text-leaf-400 font-light"> Dose</span>
           </span>
-          <span className="block text-[11px] font-medium text-ink-faint tracking-wide mt-0.5" lang="ur">
-            {siteConfig.urduTagline}
+          <span className="block text-[11px] font-medium text-ink-faint tracking-wide mt-0.5">
+            Fertilizer Dose Calculator for Crops, Plants &amp; Vegetables
           </span>
         </span>
       )}
