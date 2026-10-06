@@ -15,6 +15,7 @@ import { seedBatch1 } from "./seed-batch1";
 import { seedBatch2 } from "./seed-batch2";
 import { seedBatch3 } from "./seed-batch3";
 import { seedBatch4 } from "./seed-batch4";
+import { seedBatch5 } from "./seed-batch5";
 import { seedTranslations } from "./seed-translations";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
@@ -204,6 +205,9 @@ async function main() {
 
   // ── Batch 4 agricultural data (ES/FR/DE/IT/PL/RU) — idempotent, approved 2026-10-05 ──
   await seedBatch4(db);
+
+  // ── Batch 5 agricultural data (barley/chickpea/mustard/sunflower/lentil × IN) — idempotent, approved 2026-10-06 ──
+  await seedBatch5(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
