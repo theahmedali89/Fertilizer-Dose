@@ -9,7 +9,7 @@
       "coffee"
     ],
     "approved": "2026-10-06",
-    "scope": "India 12 + Pakistan 4 records, all under_review on import (NEVER verified on import). 3 records HELD: SB-PK-2 (truncated source URL, unverifiable citation), SB-PK-3 (elemental-P vs P2O5 ambiguity + Scribd host), J-IN-3 (seed-production jute - must never enter the calculator as a fibre dose). Coffee/jute PK: genuine gaps (no commercial cultivation), nothing populated - do NOT borrow Indian doses.",
+    "scope": "India 13 + Pakistan 3 records, all under_review on import (NEVER verified on import). 3 records HELD: SB-PK-2 (truncated source URL, unverifiable citation), SB-PK-3 (elemental-P vs P2O5 ambiguity + Scribd host), J-IN-3 (seed-production jute - must never enter the calculator as a fibre dose). Coffee/jute PK: genuine gaps (no commercial cultivation), nothing populated - do NOT borrow Indian doses. Verified 2026-10-06 (16/16 recommendations, 7/7 windows; import fidelity vs research files; CF-IN-6 K2O=173 flagged as outlier but faithful to official CCRI dose).",
     "regionMapping": "Research 'in-pb' -> reuse 'in-punjab'; 'pk-pb' -> reuse 'pk-punjab'; 'pk-kp' -> reuse 'pk-kpk' (base seed slug for Khyber Pakhtunkhwa); 'in-hr' -> reuse 'in-haryana'. 'in' (national, coffee) -> regionSlug null for recommendations, no windows (perennial plantation crop). New regions created: in-tn (Tamil Nadu), in-wb (West Bengal).",
     "notesConvention": "FertilizerRecommendation has no notes column (batches 1-4 pattern). Caveats mapped to: soilContext (K-conditionality - batch-5 precedent: base K2O normalized to 0, conditional amount in notes), micronutrients (S/B/Zn), applicationMethod (trial-status, variety-specificity, conflict flags), applicationTiming (split schedules, sowing detail), Source.notes (oxide-form caveat). isPrimary: official PoP records only (PAU canola/sugar-beet, CRIJAF-preferred jute J-IN-1, all 6 CCRI coffee records); trial/demo records stay non-primary. Tie-break among multiple primaries is createdAt-asc (seed insertion order)."
   },
@@ -120,7 +120,7 @@
       "key": "ccri-coffee-nutrient",
       "organization": "Central Coffee Research Institute (Coffee Board of India)",
       "title": "Nutrient Management in Coffee — Extension Folder / Ag. Chemistry No. 3/2024",
-      "url": "https://www.ccri100.org/new-ui/pdf/soil science and agriculture chemistry/NUTRIENT MANAGEMENT IN COFFEE.pdf",
+      "url": "https://www.ccri100.org/new-ui/pdf/soil%20science%20and%20agriculture%20chemistry/NUTRIENT%20MANAGEMENT%20IN%20COFFEE.pdf",
       "country": "IN",
       "sourceType": "research-institute",
       "notes": "Official CCRI. Source units kg/acre/yr N:P2O5:K2O, converted x2.47105, rounded to nearest integer. Applies across Coffee Board zones (KA/KL/TN). Bearing-dose table is species-neutral in source. Perennial plantation crop - no sowing season."
@@ -142,7 +142,7 @@
       "soilContext": "Medium-fertility irrigated soils. No blanket K: add 15 kg K2O/ha only if soil tests low in K.",
       "irrigationContext": "Irrigated",
       "sourceKey": "pau-canola-rabi-2526",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -160,7 +160,7 @@
       "soilContext": "Shahpur Durata soil.",
       "irrigationContext": null,
       "sourceKey": "discovery-canola-layyah",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -178,7 +178,7 @@
       "soilContext": "Official PoP without FYM. With 8 t/acre FYM reduce N to 118.6 kg/ha. No blanket K: add 30 kg K2O/ha only on K-deficient soils.",
       "irrigationContext": null,
       "sourceKey": "pau-sugarbeet-rabi-2526",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -196,7 +196,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "tnau-sugarbeet-agro303",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -214,7 +214,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "iisr-sugarbeet-review",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -232,7 +232,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "pas-sugarbeet-gomal",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -250,7 +250,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "crijaf-jute-rdf",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -268,7 +268,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ainpjaf-jute-inm",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -286,7 +286,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "mmu-durum-rdf",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -304,7 +304,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "aari-durum21",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -322,7 +322,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ccri-coffee-nutrient",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -340,7 +340,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ccri-coffee-nutrient",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -358,7 +358,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ccri-coffee-nutrient",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -376,7 +376,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ccri-coffee-nutrient",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -394,7 +394,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ccri-coffee-nutrient",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     },
     {
@@ -412,7 +412,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "ccri-coffee-nutrient",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": true
     }
   ],
@@ -426,7 +426,7 @@
       "harvestText": null,
       "notes": "Direct seeding 10-30 Oct, PAU Punjab.",
       "sourceKey": "pau-canola-rabi-2526",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "sugar-beet",
@@ -437,7 +437,7 @@
       "harvestText": null,
       "notes": "Sow whole Oct - mid-Nov, PAU Punjab.",
       "sourceKey": "pau-sugarbeet-rabi-2526",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "sugar-beet",
@@ -448,7 +448,7 @@
       "harvestText": null,
       "notes": "Sep-Nov sowing, tropical TN.",
       "sourceKey": "tnau-sugarbeet-agro303",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "sugar-beet",
@@ -459,7 +459,7 @@
       "harvestText": null,
       "notes": "Oct-Nov sowing, D.I. Khan.",
       "sourceKey": "pas-sugarbeet-gomal",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "jute",
@@ -470,7 +470,7 @@
       "harvestText": null,
       "notes": "April sowing, Barrackpore trial (J-IN-1).",
       "sourceKey": "crijaf-jute-rdf",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "jute",
@@ -481,7 +481,7 @@
       "harvestText": null,
       "notes": "April sowing, Coochbehar trial (J-IN-2).",
       "sourceKey": "ainpjaf-jute-inm",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "durum-wheat",
@@ -492,7 +492,7 @@
       "harvestText": null,
       "notes": "Sow 1-20 Nov, Durum-21 Faisalabad.",
       "sourceKey": "aari-durum21",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     }
   ]
 }
