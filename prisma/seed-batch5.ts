@@ -1,7 +1,9 @@
 /**
  * Batch 5 agricultural data population — barley, chickpea, mustard,
- * sunflower, lentil × India (22 records).
- * Approved 2026-10-06 ("1 ko implement kro"). Do NOT add other crops here.
+ * sunflower, lentil × India (22 records, verified) + Pakistan (3 records,
+ * under_review: mustard/raya cultivar trial, canola, sunflower recommended
+ * dose). Approved 2026-10-06 ("1 ko implement kro" + "Pakistan records
+ * complete kro"). Do NOT add other crops here.
  *
  * IDEMPOTENT: every write is insert-if-missing, so re-running the seed
  * never duplicates rows and never overwrites admin CMS edits. Safe to run
@@ -9,11 +11,13 @@
  *
  * Data lives in prisma/data/batch5/batch5-data.json (extracted 2026-10-06
  * from research-batch5/batch5-data.json + research-report-batch5.md).
- * All imported records are under_review — NEVER verified on import.
+ * India records verified 2026-10-06 (22/22); Pakistan records import as
+ * under_review — NEVER verified on import.
  *
  * Region mapping (differs from raw research slugs where batch-1
  * conventions already exist):
  *   - "in-pb"  -> reuse "in-punjab" (same region, established by batch 1)
+ *   - "pk-pb"  -> reuse "pk-punjab" (same region, established by batch 1)
  *   - "in"     -> regionSlug null on recommendations (country-wide);
  *                 windows use the new "in-national" region (bd-national
  *                 precedent from batch 1)
@@ -27,7 +31,10 @@
  * Refused (trial-only, below the batches 1-4 bar — NOT populated):
  *   M-IN-4, M-IN-8, S-IN-3, S-IN-4, L-IN-5, L-IN-6.
  * Held (genuine source conflicts/gaps — NOT populated):
- *   M-PK-1, C-PK-1, S-PK-1, S-PK-2, L-PK-1.
+ *   S-PK-2 (sunflower: UAF 150-100-62 conflicts with PMAS-UAAR 80-60-0),
+ *   L-PK-1 (lentil: press advisory, assumed 50 kg bag weight, N rate
+ *   suspiciously high for a legume). Barley/chickpea PK: no official NPK
+ *   located — documented gaps, nothing to populate.
  */
 import { PrismaClient, VerificationStatus } from "@prisma/client";
 import { readFileSync } from "node:fs";
@@ -98,13 +105,18 @@ function vs(s: string): VerificationStatus {
 export async function seedBatch5(db: PrismaClient): Promise<void> {
   const f = loadBatchFile("batch5-data.json");
 
-  // ── 1. Country (IN already seeded by main seed) ──
-  const country = await db.country.findUnique({ where: { code: "IN" }, select: { id: true } });
-  if (!country) {
+  // ── 1. Countries (IN + PK) ──
+  const countryIdByCode = new Map<string, string>();
+  for (const code of ["IN", "PK"]) {
+    const c = await db.country.findUnique({ where: { code }, select: { id: true } });
+    if (c) countryIdByCode.set(code, c.id);
+    else console.warn(`batch5: country ${code} not found`);
+  }
+  const inCountryId = countryIdByCode.get("IN");
+  if (!inCountryId) {
     console.warn("batch5: country IN not found, skipped");
     return;
   }
-  const countryId = country.id;
 
   // ── 2. New regions (insert-if-missing by slug) ──
   const legacyCountryName: Record<string, string> = { PK: "pakistan", IN: "india" };
@@ -117,12 +129,12 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
           slug: r.slug,
           name: r.name,
           country: legacyCountryName[r.countryCode] ?? r.countryCode.toLowerCase(),
-          countryId,
+          countryId: inCountryId,
         },
       });
       regionCount++;
     } else if (!existing.countryId) {
-      await db.region.update({ where: { id: existing.id }, data: { countryId } });
+      await db.region.update({ where: { id: existing.id }, data: { countryId: inCountryId } });
     }
   }
   console.log(`batch5: regions created: ${regionCount}`);
@@ -170,7 +182,8 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
     const itemId = itemIdBySlug.get(r.itemSlug);
     const regionId = r.regionSlug ? regionIdBySlug.get(r.regionSlug) ?? null : null;
     const sourceId = sourceIdByKey.get(r.sourceKey);
-    if (!itemId || !sourceId) {
+    const recCountryId = countryIdByCode.get(r.countryCode) ?? null;
+    if (!itemId || !sourceId || !recCountryId) {
       console.warn(`batch5: recommendation skipped (missing ref): ${r.itemSlug}/${r.countryCode}/${r.sourceKey}`);
       recSkipped++;
       continue;
@@ -184,7 +197,7 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
     const variety = r.variety ?? null;
     const soilContext = r.soilContext ?? null;
     const existing = await db.fertilizerRecommendation.findFirst({
-      where: { growingItemId: itemId, countryId, regionId, growthStage, variety, soilContext, sourceId },
+      where: { growingItemId: itemId, countryId: recCountryId, regionId, growthStage, variety, soilContext, sourceId },
       select: { id: true },
     });
     if (existing) {
@@ -198,7 +211,7 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
     await db.fertilizerRecommendation.create({
       data: {
         growingItemId: itemId,
-        countryId,
+        countryId: recCountryId,
         regionId,
         variety,
         soilContext,

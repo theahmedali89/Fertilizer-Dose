@@ -10,8 +10,8 @@
       "lentil"
     ],
     "notesConvention": "FertilizerRecommendation has no notes column (batches 1-4 pattern). Caveats mapped to: soilContext (K-conditionality), micronutrients (S/B/Zn), applicationMethod (inoculation, trial-status), Source.notes (oxide-form caveat).",
-    "regionMapping": "Research JSON used 'in-pb' — reused existing 'in-punjab' (same region, established by batch 1). 'in' (national) → regionSlug null for recommendations; new 'in-national' region for windows only (bd-national precedent). New regions created: in-rj (Rajasthan), in-ka (Karnataka), in-ar (Arunachal Pradesh), in-mn (Manipur).",
-    "scope": "India only — 22 records (confidence high/medium-high/medium). 6 India records refused (trial-only, below the batches 1-4 bar): M-IN-4, M-IN-8, S-IN-3, S-IN-4, L-IN-5, L-IN-6. 5 Pakistan records HELD (M-PK-1, C-PK-1, S-PK-1, S-PK-2, L-PK-1) — genuine source conflicts/gaps, NOT populated."
+    "regionMapping": "Research JSON used 'in-pb' — reused existing 'in-punjab' (same region, established by batch 1). 'in' (national) → regionSlug null for recommendations; new 'in-national' region for windows only (bd-national precedent). New regions created: in-rj (Rajasthan), in-ka (Karnataka), in-ar (Arunachal Pradesh), in-mn (Manipur). 'pk-pb' -> reuse 'pk-punjab' (same region, established by batch 1).",
+    "scope": "India 22 records (verified) + Pakistan 3 records (under_review). 6 India records refused (trial-only, below bar): M-IN-4, M-IN-8, S-IN-3, S-IN-4, L-IN-5, L-IN-6. 2 Pakistan records HELD: S-PK-2 (sunflower conflict 80-60-0 vs 150-100-62), L-PK-1 (press advisory, assumed 50 kg bag weight, N rate suspiciously high for a legume). Barley/chickpea PK: no official NPK — gaps, nothing populated."
   },
   "newRegions": [
     {
@@ -414,6 +414,57 @@
       "sourceKey": "tnau-lentil-electure",
       "variety": null,
       "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": "Cultivar-specific trial optimum (national trials, Khanpur 2019-20) — NOT a general extension recommendation.",
+      "applicationTiming": "Best sowing 30 Sep (trial).",
+      "countryCode": "PK",
+      "growthStage": null,
+      "irrigationContext": "Irrigated",
+      "itemSlug": "mustard",
+      "k2o": 40,
+      "micronutrients": null,
+      "n": 80,
+      "p2o5": 40,
+      "regionSlug": "pk-punjab",
+      "soilContext": "Bagh-o-Bahar raya cultivar; irrigated.",
+      "sourceKey": "bagh-o-bahar-raya-pk",
+      "variety": "Raya — Bagh-o-Bahar (trial optimum)",
+      "verificationStatus": "under_review"
+    },
+    {
+      "applicationMethod": "Journal-stated recommended dose 35:34:25 N:P:K kg/acre (urea + DAP + MOP); half N at sowing + rest in split, full P and K at sowing. NOT an official extension package.",
+      "applicationTiming": "Sowing months not stated in source.",
+      "countryCode": "PK",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "canola",
+      "k2o": 62,
+      "micronutrients": null,
+      "n": 87,
+      "p2o5": 84,
+      "regionSlug": "pk-punjab",
+      "soilContext": "Arid climate, southern Punjab.",
+      "sourceKey": "pjbot-canola-southpunjab",
+      "variety": null,
+      "verificationStatus": "under_review"
+    },
+    {
+      "applicationMethod": "Stated as the recommended dose in the source paper (urea + DAP at last ploughing). CONFLICT: UAF Faisalabad trial states 150-100-62 for the same region — held as S-PK-2, not populated.",
+      "applicationTiming": "Sowing months not stated in source (trial sown 18 Mar / 18 Aug).",
+      "countryCode": "PK",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "sunflower",
+      "k2o": 0,
+      "micronutrients": null,
+      "n": 80,
+      "p2o5": 60,
+      "regionSlug": "pk-punjab",
+      "soilContext": "Sub-humid, loam pH 7.4 (Pothwar/Rawalpindi).",
+      "sourceKey": "pmas-uaar-sunflower-npk",
+      "variety": null,
+      "verificationStatus": "under_review"
     }
   ],
   "sources": [
@@ -578,6 +629,33 @@
       "sourceType": "university",
       "title": "AGR 301 Lecture 06 — Lentil (e-lecture)",
       "url": "http://www.eagri.org/eagri50/AGRO301/lec06.html"
+    },
+    {
+      "country": "PK",
+      "key": "bagh-o-bahar-raya-pk",
+      "notes": "Cultivar-specific trial optimum (Bagh-o-Bahar raya), funded by Punjab Agriculture Department; PARC-acknowledged national trials (Khanpur 2019-20). NOT a general extension recommendation.",
+      "organization": "Agriculture Department, Government of Punjab, Pakistan (via ResearchersLinks)",
+      "sourceType": "peer_reviewed",
+      "title": "Development of Bagh-o-Bahar Raya — trial nutrient optimum, Khanpur 2019-20",
+      "url": "https://researcherslinks.com/current-issues/Development-Bagh-o-Bahar-Raya-A-Newly-Bred-High-Yielding/14/1/5930/html"
+    },
+    {
+      "country": "PK",
+      "key": "pjbot-canola-southpunjab",
+      "notes": "Stated recommended dose 35:34:25 N:P:K kg/acre (urea 46% N, DAP 46% P/18% N, MOP 60% K), converted x2.471 = 87-84-62 kg/ha. Southern Punjab arid context; not an official extension package. Sowing months not stated.",
+      "organization": "Pakistan Journal of Botany",
+      "sourceType": "peer_reviewed",
+      "title": "Improved agronomic practices to enhance the productivity and quality of canola under the arid climate of southern Punjab",
+      "url": "http://www.pakbs.org/pjbot/papers/1736230037.pdf"
+    },
+    {
+      "country": "PK",
+      "key": "pmas-uaar-sunflower-npk",
+      "notes": "Stated as the recommended dose: 80 kg N + 60 kg P2O5/ha (urea + DAP at last ploughing). CONFLICT: UAF Faisalabad trial states 150-100-62 for Punjab — held as S-PK-2, NOT populated.",
+      "organization": "PMAS-Arid Agriculture University, Rawalpindi",
+      "sourceType": "research",
+      "title": "Influence of seasonal disparity on NPK uptake in sunflower — stated recommended dose (urea + DAP at last ploughing)",
+      "url": "https://www.thefreelibrary.com/INFLUENCE+OF+SEASONAL+DISPARITY+ON+NPK+UPTAKE+IN+SUNFLOWER-a0377733405"
     }
   ],
   "windows": [
@@ -734,6 +812,17 @@
       "sourceKey": "ijags-lentil-zone5-up",
       "startMonth": 10,
       "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 9,
+      "harvestText": null,
+      "itemSlug": "mustard",
+      "notes": "Best sowing 30 Sep (Bagh-o-Bahar trial, Punjab PK).",
+      "regionSlug": "pk-punjab",
+      "sourceKey": "bagh-o-bahar-raya-pk",
+      "startMonth": 9,
+      "verificationStatus": "under_review"
     }
   ]
 }
