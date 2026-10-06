@@ -512,7 +512,7 @@
   "tools": {
     "profit": {
       "metaTitle": "Profit Calculator — Farm Profit, Break-Even & ROI",
-      "metaDescription": "Estimate crop profit from your own yield, price and cost assumptions. Transparent formulas, break-even yield and price, per-acre and per-hectare views.",
+      "metaDescription": "Estimate crop profit from your own yield, price and cost assumptions. Transparent formulas, break-even yield and price, per-acre and per-hectare views. Calculate fertilizer cost per acre and see how input costs affect your farm profit.",
       "eyebrow": "Profit calculator",
       "title": "Will this crop make money?",
       "desc": "Enter your own assumptions — expected yield, market price and every input cost. The math is fully transparent, and nothing is pre-filled with guessed figures.",
@@ -602,7 +602,7 @@
   },
   "chart": {
     "metaTitle": "Fertilizer Dose Chart — Quick NPK Reference",
-    "metaDescription": "Quick-reference fertilizer dose chart: NPK recommendations per crop with urea, DAP and MOP quantities."
+    "metaDescription": "Quick-reference fertilizer dose chart: NPK recommendations per crop and vegetable with urea, DAP and MOP quantities per acre and hectare."
   },
   "auth": {
     "loginTitle": "Log in",
