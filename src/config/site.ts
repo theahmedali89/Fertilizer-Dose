@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline: "Fertilizer dose, done right",
   description:
     "Calculate the exact fertilizer dose for wheat, rice, maize and more. Real NPK data, acre/kanal/marla support, AI plant doctor, and crop guides for Pakistan & India.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fertilizerdose.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fertdose.com",
   locale: "en",
   urduFooterLine: "Right fertilizer dose — better crop yield",
   contactEmail: "hello@fertilizerdose.com",

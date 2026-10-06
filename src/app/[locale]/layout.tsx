@@ -43,6 +43,9 @@ export async function generateMetadata({
       description: siteConfig.description,
     },
     robots: { index: true, follow: true },
+    verification: {
+      google: "D9sj8d0owhO9v-rR4pPZxhf7ia-XW_1nuEEXM6_Inzc",
+    },
   };
 }
 
