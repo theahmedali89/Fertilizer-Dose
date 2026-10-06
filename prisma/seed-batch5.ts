@@ -72,6 +72,7 @@ interface BatchRecommendation {
   irrigationContext?: string | null;
   sourceKey: string;
   verificationStatus: string;
+  isPrimary?: boolean | null; // official package-of-practices dose -> calculator shows this record
 }
 interface BatchWindow {
   itemSlug: string;
@@ -201,9 +202,16 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
       select: { id: true },
     });
     if (existing) {
+      // Existing row: refresh verificationStatus (same pattern as before).
+      // isPrimary is only ever promoted to true here — never reset — so an
+      // admin marking a different record primary in the CMS is not clobbered
+      // by a re-run of this seed.
       await db.fertilizerRecommendation.update({
         where: { id: existing.id },
-        data: { verificationStatus: vs(r.verificationStatus) },
+        data: {
+          verificationStatus: vs(r.verificationStatus),
+          ...(r.isPrimary === true ? { isPrimary: true } : {}),
+        },
       });
       recSkipped++;
       continue;
@@ -224,6 +232,7 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
         applicationMethod: r.applicationMethod ?? null,
         sourceId,
         verificationStatus: vs(r.verificationStatus),
+        isPrimary: r.isPrimary === true,
       },
     });
     recCount++;

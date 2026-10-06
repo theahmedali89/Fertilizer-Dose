@@ -56,7 +56,8 @@
       "soilContext": "Well-drained soils. No blanket K: add 14.8 kg K2O/ha only if soil tests low in K.",
       "sourceKey": "pau-barley-rabi-2324",
       "variety": "Irrigated",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": null,
@@ -107,7 +108,8 @@
       "soilContext": "No potash given.",
       "sourceKey": "pau-gram-rabi-2324-desi",
       "variety": "Desi",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Seed inoculation with Mesorhizobium (LGR-33) + Rhizobacterium (RB-1); 13 kg urea + 100 kg SSP/acre drilled at sowing.",
@@ -158,7 +160,8 @@
       "soilContext": "No blanket K: add 15 kg K2O/ha only in K-deficient soils.",
       "sourceKey": "pau-mustard-rabi-2526",
       "variety": "Raya / Gobhi sarson / African sarson (irrigated)",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "55 kg urea + 50 kg SSP/acre.",
@@ -175,7 +178,8 @@
       "soilContext": null,
       "sourceKey": "pau-mustard-rabi-2526",
       "variety": "Toria (irrigated)",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": null,
@@ -192,7 +196,8 @@
       "soilContext": null,
       "sourceKey": "pau-mustard-rabi-2526",
       "variety": "Raya (rainfed)",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": null,
@@ -209,7 +214,8 @@
       "soilContext": "Sandy / loamy-sand soils.",
       "sourceKey": "pau-mustard-rabi-2526",
       "variety": "Taramira (rainfed)",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Per Government of Rajasthan Package of Practices (Zone IVa), cited secondhand in peer-reviewed paper.",
@@ -226,7 +232,8 @@
       "soilContext": null,
       "sourceKey": "gor-mustard-zone4a",
       "variety": null,
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Trial RDF — NOT the official DRMR package.",
@@ -311,7 +318,8 @@
       "soilContext": "No blanket K: 30–59 kg K2O/ha only on K-deficient soils.",
       "sourceKey": "pau-sunflower-rabi-2526",
       "variety": "Spring sunflower",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Regional RDF cited in two UAS-Raichur papers; primary PoP document not retrieved.",
@@ -328,7 +336,8 @@
       "soilContext": "Clay / clay-loam (NE dry zone, Karnataka).",
       "sourceKey": "uas-raichur-sunflower-rdf",
       "variety": "Hybrids",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Rhizobium LLR-12 + Rhizobacterium RB-2 seed inoculation; 11 kg urea + 50 kg SSP/acre drilled at sowing. Non-inoculated alternative: 100 kg SSP/acre (16 kg P2O5/acre, no N).",
@@ -345,7 +354,8 @@
       "soilContext": null,
       "sourceKey": "pau-lentil-rabi-2526-inoc",
       "variety": "Seed inoculated (Rhizobium) — primary",
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Seed NOT inoculated; 100 kg SSP/acre at sowing, no nitrogen.",
@@ -379,7 +389,8 @@
       "soilContext": "Hamirpur & Unnao districts; Rhizobium widely adopted.",
       "sourceKey": "iipr-lentil-validated-up",
       "variety": null,
-      "verificationStatus": "verified"
+      "verificationStatus": "verified",
+      "isPrimary": true
     },
     {
       "applicationMethod": "Rhizobium seed treatment; farmers'-field demonstration dose (Upper Gangetic Plains, Zone-V).",

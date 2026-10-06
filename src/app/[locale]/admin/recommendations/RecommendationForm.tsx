@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import {
-  AdminForm, TextField, NumberField, TextAreaField, SelectField, STATUS_OPTIONS,
+  AdminForm, TextField, NumberField, TextAreaField, SelectField, CheckField, STATUS_OPTIONS,
 } from "@/components/admin/ui";
 import { upsertRecommendation } from "@/server/actions/admin";
 
@@ -14,6 +14,7 @@ export type RecommendationFormData = {
   micronutrients: string; soilContext: string; irrigationContext: string;
   applicationTiming: string; applicationMethod: string;
   sourceId: string; verificationStatus: string; lastReviewed: string;
+  isPrimary: boolean;
 };
 
 export type RecOption = { value: string; label: string };
@@ -93,6 +94,17 @@ export function RecommendationForm({
           label="Verification status" name="verificationStatus" defaultValue={initial.verificationStatus}
           options={[...STATUS_OPTIONS]}
         />
+        <div className="sm:col-span-2">
+          <CheckField
+            label="Primary dose — show this record in the calculator for its crop × country"
+            name="isPrimary"
+            defaultChecked={initial.isPrimary}
+          />
+          <p className="text-xs text-ink-faint mt-1 ml-7">
+            Only one record per crop × country should be primary. The calculator prefers it over
+            region-specific records.
+          </p>
+        </div>
         <TextField label="Last reviewed" name="lastReviewed" type="date" defaultValue={initial.lastReviewed} />
       </div>
     </AdminForm>

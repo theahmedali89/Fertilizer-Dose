@@ -31,6 +31,7 @@ export default async function NewRecommendation({
           micronutrients: "", soilContext: "", irrigationContext: "",
           applicationTiming: "", applicationMethod: "",
           sourceId: "", verificationStatus: "draft", lastReviewed: "",
+          isPrimary: false,
         }}
         itemOptions={items.map((i) => ({ value: i.id, label: i.name }))}
         countryOptions={countries.map((c) => ({ value: c.id, label: c.name }))}

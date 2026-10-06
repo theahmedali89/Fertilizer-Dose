@@ -233,15 +233,29 @@ export async function getCrops(): Promise<CropInfo[]> {
             item: { select: { slug: true } },
             source: { select: { title: true, organization: true } },
           },
+          // Primaries first so the first primary per crop wins deterministically.
+          orderBy: [{ isPrimary: "desc" }, { createdAt: "asc" }],
         });
+        // Track which crops already have their primary record picked.
+        const primaryPicked = new Set<string>();
         for (const r of recs) {
           const slug = r.item.slug;
-          // Keep first (most specific) record per crop; prefer region-specific over country-wide
-          if (!recMap.has(slug) || r.regionId) {
-            recMap.set(slug, {
-              n: r.n, p: r.p2o5, k: r.k2o,
-              source: r.source.organization ? `${r.source.organization} — ${r.source.title}` : r.source.title,
-            });
+          const entry = {
+            n: r.n, p: r.p2o5, k: r.k2o,
+            source: r.source.organization ? `${r.source.organization} — ${r.source.title}` : r.source.title,
+          };
+          if (!recMap.has(slug)) {
+            recMap.set(slug, entry);
+            if (r.isPrimary) primaryPicked.add(slug);
+          } else if (r.isPrimary && !primaryPicked.has(slug)) {
+            // A primary (official package-of-practices) record replaces a
+            // non-primary one; the first primary per crop wins.
+            recMap.set(slug, entry);
+            primaryPicked.add(slug);
+          } else if (!primaryPicked.has(slug) && r.regionId) {
+            // No primary for this crop: legacy behavior — prefer
+            // region-specific over country-wide. (Batches 1-4: unchanged.)
+            recMap.set(slug, entry);
           }
         }
       }

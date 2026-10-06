@@ -357,6 +357,7 @@ const recommendationSchema = z.object({
   applicationMethod: optStr,
   sourceId: str.min(1),
   verificationStatus: z.enum(["draft", "under_review", "verified", "published", "archived"]),
+  isPrimary: bool,
   lastReviewed: z
     .string()
     .trim()

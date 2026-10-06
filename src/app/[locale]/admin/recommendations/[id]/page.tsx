@@ -40,6 +40,7 @@ export default async function EditRecommendation({
           irrigationContext: r.irrigationContext ?? "",
           applicationTiming: r.applicationTiming ?? "", applicationMethod: r.applicationMethod ?? "",
           sourceId: r.sourceId, verificationStatus: r.verificationStatus,
+          isPrimary: r.isPrimary,
           lastReviewed: dateStr(r.lastReviewed),
         }}
         itemOptions={items.map((i) => ({ value: i.id, label: i.name }))}

@@ -286,6 +286,7 @@ model FertilizerRecommendation {
   applicationMethod  String?            @db.Text
   sourceId           String
   verificationStatus VerificationStatus @default(draft)
+  isPrimary          Boolean            @default(false) // calculator shows this record for its crop x country when set
   lastReviewed       DateTime?
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
