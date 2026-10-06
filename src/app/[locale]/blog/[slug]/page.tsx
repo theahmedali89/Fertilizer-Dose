@@ -90,9 +90,31 @@ export default async function BlogPostPage({
         <div className="max-w-3xl">
           <Card><CardBody className="sm:p-8">
             <div className="space-y-5 text-[16.5px] leading-[1.8] text-ink-soft">
-              {post.body.map((para, i) => (
-                <p key={i} className={i === 0 ? "text-lg text-ink font-medium" : ""}>{para}</p>
-              ))}
+              {(() => {
+                // First non-heading block gets the lead-paragraph treatment.
+                const firstParaIdx = post.body.findIndex((b) => !b.startsWith("## "));
+                return post.body.map((block, i) => {
+                  if (block.startsWith("### ")) {
+                    return (
+                      <h3 key={i} className="font-display text-xl font-semibold text-ink pt-3">
+                        {block.slice(4)}
+                      </h3>
+                    );
+                  }
+                  if (block.startsWith("## ")) {
+                    return (
+                      <h2 key={i} className="font-display text-2xl font-semibold text-ink pt-4">
+                        {block.slice(3)}
+                      </h2>
+                    );
+                  }
+                  return (
+                    <p key={i} className={i === firstParaIdx ? "text-lg text-ink font-medium" : ""}>
+                      {block}
+                    </p>
+                  );
+                });
+              })()}
             </div>
             <div className="mt-8 pt-6 border-t border-line flex flex-wrap items-center gap-3">
               <span className="text-sm font-semibold">Share:</span>

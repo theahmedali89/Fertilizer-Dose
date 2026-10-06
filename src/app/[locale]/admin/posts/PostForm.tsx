@@ -21,7 +21,7 @@ export function PostForm({ initial }: { initial: PostFormData }) {
       <TextAreaField label="Excerpt" name="excerpt" defaultValue={initial.excerpt} required />
       <TextAreaField
         label="Body" name="body" defaultValue={initial.body} required
-        hint="Separate paragraphs with a blank line."
+        hint="Separate paragraphs with a blank line. Start a line with ## for a section heading or ### for a subheading."
       />
       <CheckField label="Published" name="published" defaultChecked={initial.published} />
     </AdminForm>
