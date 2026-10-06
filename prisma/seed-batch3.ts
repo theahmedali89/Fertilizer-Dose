@@ -191,7 +191,15 @@ export async function seedBatch3(db: PrismaClient): Promise<void> {
         where: { growingItemId: itemId, countryId, regionId, growthStage, variety, soilContext, sourceId },
         select: { id: true },
       });
-      if (existing) { recSkipped++; continue; }
+      if (existing) {
+        // Update verification status for existing records (verification pass)
+        await db.fertilizerRecommendation.update({
+          where: { id: existing.id },
+          data: { verificationStatus: vs(r.verificationStatus) },
+        });
+        recSkipped++;
+        continue;
+      }
       await db.fertilizerRecommendation.create({
         data: {
           growingItemId: itemId,
