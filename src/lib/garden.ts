@@ -14,6 +14,7 @@
  */
 import { getItem } from "./growing";
 import { PLANTING_WINDOWS, monthInWindow, windowLabel } from "./planting";
+import { reminderScheduleFor } from "./splitDose";
 
 export { getItem };
 
@@ -180,4 +181,56 @@ export function upcomingTasks(state: GardenState, now = new Date()): UpcomingTas
       return { reminder, overdue: due < today };
     })
     .sort((a, b) => (a.reminder.dueDate ?? "").localeCompare(b.reminder.dueDate ?? ""));
+}
+
+/** Add `days` to an ISO date (YYYY-MM-DD), returning YYYY-MM-DD. */
+function addDaysISO(isoDate: string, days: number): string {
+  const d = new Date(isoDate + "T00:00:00");
+  if (Number.isNaN(d.getTime())) return isoDate;
+  d.setDate(d.getDate() + days);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+export type ReminderCandidate = Omit<GardenReminder, "id" | "createdAt" | "done">;
+
+/**
+ * Suggested fertilizer reminders for a planting, derived from the generic
+ * split-dose timing in src/lib/splitDose.ts (due = plantedOn + daysAfterPlanting).
+ *
+ * HONESTY: these are generic timing suggestions from standard extension
+ * practice, NOT agronomist prescriptions for this plot. Callers should pass a
+ * titlePrefix (e.g. "Suggested") so the label travels with each reminder.
+ */
+export function suggestedFertilizerReminders(
+  planting: Planting,
+  cropName: string,
+  titlePrefix = ""
+): ReminderCandidate[] {
+  return reminderScheduleFor(planting.itemSlug, cropName).map(
+    ({ title, daysAfterPlanting }) => ({
+      title: titlePrefix ? `${titlePrefix}: ${title}` : title,
+      dueDate: addDaysISO(planting.plantedOn, daysAfterPlanting),
+      plotId: planting.plotId,
+      plantingId: planting.id,
+    })
+  );
+}
+
+/**
+ * Deduplicate: drop candidates whose (plantingId + title) already exist in
+ * the state's reminders — running generation twice never creates dupes.
+ */
+export function dedupeReminderCandidates(
+  state: GardenState,
+  candidates: ReminderCandidate[]
+): ReminderCandidate[] {
+  const existing = new Set(
+    state.reminders.map((r) => `${r.plantingId ?? ""}::${r.title}`)
+  );
+  return candidates.filter(
+    (c) => !existing.has(`${c.plantingId ?? ""}::${c.title}`)
+  );
 }

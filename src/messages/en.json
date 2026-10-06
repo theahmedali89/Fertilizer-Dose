@@ -36,10 +36,23 @@
       "sourceLabel": "Data source:",
       "total": "Total fertilizer",
       "kgUnit": "kg",
+      "unitToggleLabel": "Display units",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Display only — your saved calculation stays in kg.",
+      "splitTitle": "Split-dose schedule",
+      "splitGenericBadge": "Generic schedule",
       "recommendedLine": "Recommended {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "You selected \"{soil}\". On {soilLower} soils, consider a soil test before changing the dose — the base calculation above stays the same."
     },
     "title": "Exact fertilizer dose, with the math shown.",
+    "soilTestCard": {
+      "eyebrow": "Soil test?",
+      "title": "Have your soil-test results? Get a precision dose.",
+      "desc": "Enter available P and K, organic carbon and pH from your soil health card — the tool builds up low nutrients, maintains medium ones, and draws down high ones.",
+      "cta": "Open the soil-test calculator →"
+    },
     "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
     "metaDescription": "Calculate exact urea, DAP and MOP doses per acre, kanal, marla or hectare — see how many 50 kg bags you need for wheat, rice, maize and more crops.",
     "methodFaq": [
@@ -63,7 +76,31 @@
         "q": "Why are some crops disabled?",
         "a": "A crop is only selectable when its recommended NPK dose is verified against a published source. We would rather disable a crop than invent its figures — unverified crops are marked \"data in review\" until confirmed."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Organic material contribution — your own analysis",
+      "desc": "Enter the N / P₂O₅ / K₂O percentages from your lab report or supplier label, plus your application rate. This is pure arithmetic on your inputs: the app holds no organic nutrient data of its own.",
+      "materialLabel": "Material",
+      "customOption": "Custom material — I'll enter my own values",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Application rate",
+      "rateUnit": "t/ha",
+      "rangeHint": "Published typical range for {name}: {range}. Your batch may differ — enter your lab value.",
+      "noRangeHint": "No published range for this material — enter your lab or label values.",
+      "resultsTitle": "Nutrients applied",
+      "formulaLabel": "Formula",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Enter percentages and a rate above to see the contribution.",
+      "warnTitle": "Read this before trusting the numbers",
+      "warnBody": "Organic materials vary batch to batch — feedstock, preparation and storage change the analysis. Published ranges are not your batch's analysis. Organic nitrogen also releases slowly (only ~30% of FYM nitrogen is available to the first crop, per TNAU), so treat the result as nutrients applied, not nutrients available this season. For precision, get a lab analysis of your actual material.",
+      "dismiss": "Dismiss",
+      "resultN": "Nitrogen (N)",
+      "resultP": "Phosphate (P₂O₅)",
+      "resultK": "Potash (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Switch to dark mode",
@@ -112,6 +149,107 @@
     "title": "Questions farmers ask us",
     "metaTitle": "FAQ — Fertilizer Dose Questions Answered",
     "metaDescription": "Answers about fertilizer dose calculation, NPK formulas, acre/kanal/marla units, data sources and the Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Soil test calculator",
+    "title": "Adjust your dose to your soil test.",
+    "desc": "Enter your soil-test results — available P and K, organic carbon and pH — and a verified crop dose is adjusted up or down: build up low nutrients, maintain medium ones, draw down high ones.",
+    "metaTitle": "Soil Test Based Fertilizer Dose Calculator — Adjust NPK to Your Soil Test",
+    "metaDescription": "Soil test based fertilizer dose calculator: enter available P, K, organic carbon and pH to adjust any verified crop's NPK recommendation — build up low nutrients, draw down high ones.",
+    "empty": {
+      "title": "Your adjusted dose will appear here",
+      "desc": "Pick a crop, enter your soil-test values, and hit calculate. Every adjustment step is shown."
+    },
+    "form": {
+      "crop": "Crop",
+      "cropHint": "Only crops with verified recommendations are selectable. Choose \"Custom base dose\" to enter your own NPK.",
+      "cropSearchPlaceholder": "Type to search crops…",
+      "inReview": "data in review",
+      "custom": "Custom base dose (generic)",
+      "area": "Land area",
+      "unit": "Unit",
+      "areaError": "Please enter a valid land area greater than zero.",
+      "areaLargeError": "That area looks unusually large — please double-check the value and unit.",
+      "phRangeError": "Soil pH must be between 0 and 14.",
+      "negativeError": "Values cannot be negative — please check your entries.",
+      "baseN": "Base nitrogen (N)",
+      "baseP": "Base phosphorus (P₂O₅)",
+      "baseK": "Base potassium (K₂O)",
+      "baseHint": "Generic guidance only — this is not a verified recommendation. Enter kg/ha.",
+      "noVerified": "No verified recommendation for {crop} in your region yet. Enter a custom base dose below, or pick a verified crop.",
+      "phosphorus": "Available phosphorus (Olsen P)",
+      "potassium": "Available potassium (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Organic carbon (%)",
+      "ph": "Soil pH",
+      "optional": "optional",
+      "nProxyNote": "Soil labs rarely report a nitrogen class, so organic carbon is used as the proxy for your soil's nitrogen-supplying capacity.",
+      "submit": "Adjust dose",
+      "soilTestHint": "From your soil health card or lab report. Leave blank any value you don't have — that nutrient keeps its base dose."
+    },
+    "results": {
+      "title": "Soil-test adjusted dose",
+      "adjustedLine": "Adjusted {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "baseLine": "Base {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "notRated": "Not rated",
+      "acidic": "Acidic",
+      "neutral": "Neutral",
+      "alkaline": "Alkaline",
+      "ratingP": "Phosphorus",
+      "ratingK": "Potassium",
+      "ratingN": "Nitrogen (via organic carbon)",
+      "phLabel": "pH class",
+      "phFixation": "Alkaline soil (pH above 7.5): phosphorus can get fixed as calcium/magnesium phosphates. Band-place the full P dose near the seed at sowing — the adjusted dose above stays the same.",
+      "buildUp": "+30% build-up",
+      "maintenance": "Maintenance",
+      "drawdown": "−25% drawdown",
+      "notRatedNote": "No test value — base dose kept",
+      "kgUnit": "kg",
+      "bags": "× 50 kg bags",
+      "total": "Total fertilizer",
+      "basisTitle": "Why these numbers",
+      "basis": [
+        "Ratings follow the Indian soil-testing laboratory / Soil Health Card classes: P (Olsen) low <10, medium 10–25, high >25 mg/kg; K (NH₄OAc) low <120, medium 120–280, high >280 kg/ha; organic carbon low <0.5, medium 0.5–0.75, high >0.75%.",
+        "ppm and kg/ha are converted with the standard furrow-slice factor ×2.24 (≈2.24 million kg of soil per hectare).",
+        "Low-rated nutrients get +30% (build-up), medium stays at base (maintenance), high gets −25% (drawdown). These bands are advisory planning estimates, not published critical values.",
+        "Organic carbon is a proxy for nitrogen-supplying capacity, not a measured N value — most soil labs do not report a nitrogen class.",
+        "pH does not change the dose; it only flags placement risk. Alkaline soils fix phosphorus — band-placement matters more than ever."
+      ],
+      "sourceLabel": "Data source:",
+      "genericLabel": "Custom base (generic guidance only — not a verified recommendation)",
+      "disclaimer": "All doses are estimates. Confirm with your local agronomist / agriculture extension officer before applying fertilizer."
+    },
+    "method": {
+      "eyebrow": "Method",
+      "title": "The method, in plain words",
+      "desc": "Build-up, maintenance, drawdown — the same logic soil labs use on health cards."
+    },
+    "methodFaq": [
+      {
+        "q": "What is a soil test based fertilizer dose?",
+        "a": "A blanket recommendation assumes an average soil. A soil test tells you what your field already holds: if phosphorus tests high, you can cut the P dose and save money; if it tests low, you raise it to build the soil up. This tool starts from a verified crop recommendation and applies exactly that logic — +30% for low-rated nutrients, base for medium, −25% for high."
+      },
+      {
+        "q": "Which soil-test values do I need?",
+        "a": "Available phosphorus (Olsen method, mg/kg or ppm), available potassium (ammonium acetate method, kg/ha or ppm), organic carbon (%), and pH — the four values on a standard soil health card. You can enter P and K in either unit; the tool converts with the standard furrow-slice factor (×2.24)."
+      },
+      {
+        "q": "Why is nitrogen rated from organic carbon?",
+        "a": "Routine soil labs rarely report a mineral-nitrogen class, so extension systems use organic carbon as the proxy for native nitrogen-supplying capacity: more organic carbon means more nitrogen will mineralize during the season. It is a well-established proxy, but it is not a measured N value — the result is labeled as such."
+      },
+      {
+        "q": "Does an alkaline pH change my dose?",
+        "a": "No — pH never changes the calculated dose here. Above pH 7.5, phosphorus increasingly precipitates as calcium and magnesium phosphates (P fixation), so placement matters: band the full phosphorus dose near the seed at sowing instead of broadcasting. The tool flags this as a note, not a dose change."
+      },
+      {
+        "q": "When should I not use the custom base dose?",
+        "a": "The custom base option is generic guidance only — a starting point for crops with no verified recommendation in our database. If a verified crop×region dose exists, always use that instead; verified figures carry their published source."
+      }
+    ]
   },
   "footer": {
     "company": "Company",
@@ -331,6 +469,7 @@
     "myGarden": "My Garden",
     "tools": "Tools",
     "profitCalculator": "Profit Calculator",
+    "soilTestCalculator": "Soil Test Calculator",
     "compare": "Compare",
     "login": "Log in",
     "account": "Account",
@@ -493,6 +632,11 @@
     "markDone": "Mark done",
     "reopen": "Reopen",
     "addReminder": "Add reminder",
+    "generateFertilizerReminders": "Generate fertilizer reminders",
+    "fertilizerReminderNote": "Suggested generic timing from standard split-dose practice — not an agronomist prescription for your plot.",
+    "suggestedPrefix": "Suggested",
+    "remindersAdded": "{count} fertilizer reminders added to upcoming tasks",
+    "remindersAlreadyExist": "All suggested reminders already exist for this planting",
     "reminderTitle": "Reminder",
     "reminderTitlePh": "e.g. Apply second urea split",
     "dueDate": "Due date",
@@ -598,7 +742,97 @@
   },
   "fertilizers": {
     "metaTitle": "Fertilizer Library — NPK Composition, Uses & Dose Guidance",
-    "metaDescription": "Label-accurate NPK compositions, benefits, precautions and application guidance for urea, DAP, MOP, SSP, SOP and more."
+    "metaDescription": "Label-accurate NPK compositions, benefits, precautions and application guidance for urea, DAP, MOP, SSP, SOP and more.",
+    "libraryEyebrow": "Fertilizer library",
+    "libraryTitle": "Know what's in the bag.",
+    "libraryDesc": "Mineral fertilizers carry exact label percentages — the numbers the dose calculator runs on. Organic materials carry typical ranges from published extension sources, because no two batches are alike.",
+    "tabAll": "All",
+    "tabMineral": "Mineral",
+    "tabOrganic": "Organic",
+    "typeMineral": "Mineral",
+    "typeOrganic": "Organic",
+    "typicalRangeLabel": "Typical range",
+    "organicHubCta": "What are organic fertilizers? Read the guide →",
+    "detail": {
+      "typeLabel": "Type",
+      "categoryLabel": "Category",
+      "categoryManure": "Manure",
+      "categoryCompost": "Compost",
+      "categoryGreenManure": "Green manure",
+      "typicalRangeTitle": "Typical nutrient range",
+      "fixedValuesTitle": "Nutrient content",
+      "caveatTitle": "Why a range, not a number",
+      "sourceLabel": "Range source"
+    },
+    "organic": {
+      "metaTitle": "Organic Fertilizers — Types, Nutrient Ranges & Honest Limitations",
+      "metaDescription": "Farmyard manure, compost, vermicompost and green manure: typical NPK ranges from extension sources, how organics differ from mineral fertilizers, and their real limitations.",
+      "eyebrow": "Organic fertilizers",
+      "title": "Slow, variable — and honest about it.",
+      "intro": "Organic fertilizers are plant and animal wastes that release nutrients as they decompose. They build soil, but they are dilute and inconsistent compared with mineral fertilizers. This page gives you typical nutrient ranges from published extension sources, and the limitations nobody should skip.",
+      "whatTitle": "What organic fertilizers are",
+      "whatBody1": "Manures are plant and animal wastes used as sources of plant nutrients; they release those nutrients after decomposition (TNAU). The most widely used bulky organic manures are farmyard manure (FYM), compost and green manure. A second group — concentrated organic manures such as oilcakes, blood meal and bone meal — carries more nutrients per kilogram but is still far below mineral concentrations.",
+      "whatBody2": "The defining trait of organics is variability: the same material from two farms can differ several-fold in nutrient content depending on feedstock, preparation and storage. That is why this library shows ranges, never single label values, for organic materials.",
+      "typesTitle": "The four materials in this library",
+      "typesIntro": "Each card shows the typical N–P₂O₅–K₂O percentage range from published extension sources. Your batch will differ — these are starting points, not guarantees.",
+      "compareTitle": "How organics differ from mineral fertilizers",
+      "compareIntro": "Neither side is 'always better'. They do different jobs:",
+      "compareRows": [
+        {
+          "aspect": "Nutrient density",
+          "mineral": "High and exact — urea is 46% N, printed on the bag.",
+          "organic": "Low and variable — FYM is roughly 0.5–1.0% N, and every heap differs."
+        },
+        {
+          "aspect": "Release speed",
+          "mineral": "Fast — nutrients are water-soluble and available within days.",
+          "organic": "Slow — microbes must mineralize them first; only ~30% of FYM nitrogen reaches the first crop (TNAU)."
+        },
+        {
+          "aspect": "Dosing precision",
+          "mineral": "Precise — the calculator can dose to the kilogram.",
+          "organic": "Approximate without a lab analysis of your specific batch."
+        },
+        {
+          "aspect": "Soil effects",
+          "mineral": "Little direct effect on soil structure or organic matter.",
+          "organic": "Improves structure, water-holding capacity and microbial activity."
+        },
+        {
+          "aspect": "Logistics",
+          "mineral": "Concentrated — a few bags per acre.",
+          "organic": "Bulky — tonnes per hectare to move, spread and incorporate."
+        },
+        {
+          "aspect": "Residual effect",
+          "mineral": "Mostly taken up or lost within the season.",
+          "organic": "Long — feeds subsequent crops as decomposition continues."
+        }
+      ],
+      "usesTitle": "Where organics make sense",
+      "usesIntro": "Appropriate uses, stated plainly:",
+      "uses": [
+        "Building soil organic matter and structure over seasons — their strongest role.",
+        "Basal soil conditioning before sowing, especially on degraded or sandy soils.",
+        "Integrated nutrient management: organics for soil health plus mineral fertilizers for precise crop nutrition.",
+        "Nurseries, vegetables and high-value crops where soil biology pays back fastest.",
+        "Green manuring before transplanted rice, where dhaincha can add 130–185 kg N/ha of biologically fixed nitrogen."
+      ],
+      "limitsTitle": "Limitations — read before relying on them",
+      "limitsIntro": "What organics cannot do:",
+      "limits": [
+        "Low nutrient density: matching 100 kg N/ha with FYM needs 10–20 tonnes per hectare.",
+        "Variable composition: published ranges span 2–3× within a single material; only a lab analysis of your batch is precise.",
+        "Slow release: nutrients arrive over months, not days — they cannot rescue a mid-season deficiency.",
+        "Bulk and labour: tonnes to transport, spread and incorporate, versus bags of mineral fertilizer.",
+        "Quality risks: weed seeds and pathogens in poorly composted material; possible contaminants in municipal compost.",
+        "Not a drop-in replacement: 'manure instead of fertilizer' only works as a partial substitution inside a planned nutrient budget — never as an unqualified claim."
+      ],
+      "warnTitle": "Warnings for calculator use",
+      "warnBody": "The calculator's organic section runs pure arithmetic on numbers YOU enter (your lab report or supplier label). It does not know your batch's real analysis, and it cannot account for slow release — treat its output as an upper bound on nutrients applied, not nutrients available to this season's crop. For precision dosing, get a lab analysis of your actual material.",
+      "exploreCta": "Open the calculator's organic section",
+      "detailCta": "View details"
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose Chart — Quick NPK Reference",

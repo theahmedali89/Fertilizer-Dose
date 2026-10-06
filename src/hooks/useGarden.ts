@@ -7,6 +7,8 @@ import {
   loadGarden,
   saveGarden,
   newId,
+  dedupeReminderCandidates,
+  suggestedFertilizerReminders,
   type GardenPlot,
   type Planting,
   type SavedCalculation,
@@ -161,6 +163,33 @@ export function useGarden() {
     }));
   }, []);
 
+  /**
+   * Generate suggested fertilizer reminders for a planting (from
+   * suggestedFertilizerReminders), skipping any whose (plantingId + title)
+   * already exist. Returns how many were added. Flows through updateStore so
+   * GardenSync picks it up like any other reminder change.
+   */
+  const addFertilizerReminders = useCallback(
+    (planting: Planting, cropName: string, titlePrefix = "") => {
+      const candidates = suggestedFertilizerReminders(planting, cropName, titlePrefix);
+      let added = 0;
+      updateStore((s) => {
+        const fresh = dedupeReminderCandidates(s, candidates);
+        added = fresh.length;
+        const now = new Date().toISOString();
+        const full: GardenReminder[] = fresh.map((c) => ({
+          ...c,
+          id: newId(),
+          done: false,
+          createdAt: now,
+        }));
+        return { ...s, reminders: [...s.reminders, ...full] };
+      });
+      return added;
+    },
+    []
+  );
+
   return {
     state,
     addPlot,
@@ -174,6 +203,7 @@ export function useGarden() {
     addReminder,
     toggleReminder,
     removeReminder,
+    addFertilizerReminders,
   };
 }
 

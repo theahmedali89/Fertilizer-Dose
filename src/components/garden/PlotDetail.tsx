@@ -11,6 +11,8 @@ import {
   daysSince,
   harvestWindowFor,
   getItem,
+  suggestedFertilizerReminders,
+  dedupeReminderCandidates,
 } from "@/lib/garden";
 import { getRegion } from "@/lib/planting";
 
@@ -21,6 +23,7 @@ export function PlotDetail({ plotId }: { plotId: string }) {
   const [editOpen, setEditOpen] = useState(false);
   const [plantingOpen, setPlantingOpen] = useState(false);
   const [reminderFor, setReminderFor] = useState<string | null>(null);
+  const [genNote, setGenNote] = useState<{ id: string; msg: string } | null>(null);
 
   const plot = g.state.plots.find((p) => p.id === plotId);
   if (!plot) {
@@ -102,6 +105,11 @@ export function PlotDetail({ plotId }: { plotId: string }) {
             {plantings.map((pl) => {
               const item = getItem(pl.itemSlug);
               const harvest = harvestWindowFor(pl, plot.regionId);
+              const cropName = item ? item.name : pl.itemSlug;
+              const missing = dedupeReminderCandidates(
+                g.state,
+                suggestedFertilizerReminders(pl, cropName, t("suggestedPrefix"))
+              );
               return (
                 <Card key={pl.id}>
                   <CardBody>
@@ -137,12 +145,37 @@ export function PlotDetail({ plotId }: { plotId: string }) {
                       </div>
                     </dl>
                     {pl.notes && <p className="mt-2.5 text-sm text-ink-soft">{pl.notes}</p>}
-                    <button
-                      onClick={() => setReminderFor(pl.id)}
-                      className="mt-3 text-xs font-semibold text-leaf-700 dark:text-leaf-300 hover:underline"
-                    >
-                      + {t("addReminder")}
-                    </button>
+                    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1">
+                      <button
+                        onClick={() => setReminderFor(pl.id)}
+                        className="text-xs font-semibold text-leaf-700 dark:text-leaf-300 hover:underline"
+                      >
+                        + {t("addReminder")}
+                      </button>
+                      {missing.length > 0 && (
+                        <button
+                          onClick={() => {
+                            const added = g.addFertilizerReminders(pl, cropName, t("suggestedPrefix"));
+                            setGenNote({
+                              id: pl.id,
+                              msg:
+                                added > 0
+                                  ? t("remindersAdded", { count: added })
+                                  : t("remindersAlreadyExist"),
+                            });
+                          }}
+                          className="text-xs font-semibold text-leaf-700 dark:text-leaf-300 hover:underline"
+                        >
+                          + {t("generateFertilizerReminders")}
+                        </button>
+                      )}
+                    </div>
+                    <p className="text-[11px] text-ink-faint mt-1.5">{t("fertilizerReminderNote")}</p>
+                    {genNote?.id === pl.id && (
+                      <p className="text-xs font-medium text-leaf-700 dark:text-leaf-300 mt-1">
+                        {genNote.msg}
+                      </p>
+                    )}
                   </CardBody>
                 </Card>
               );
