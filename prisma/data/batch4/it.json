@@ -345,15 +345,15 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 5,
       "itemSlug": "tomato",
       "notes": "Industry tomato transplant end-April – May (seedling thermal acclimatisation at least until end of April). Harvest month NOT FOUND — see gaps.",
       "regionSlug": "it-emilia-romagna",
       "sourceKey": "it-er-bollettino-2021",
       "startMonth": 4,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research (Regione ER Bollettino prod. integrata n.8, 08/04/2021) documents industry tomato TRANSPLANTED end-April-May; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 4-5 confirmed."
     }
   ]
 }

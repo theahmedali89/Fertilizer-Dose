@@ -486,15 +486,15 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 7,
       "itemSlug": "rice",
       "notes": "Late rice (double-crop) transplanted late Jul-early Aug (nursery sown Jun 15-25). Rush-harvesting/rush-planting window.",
       "regionSlug": "cn-south",
       "sourceKey": "cn-south-rice-calendar",
       "startMonth": 7,
-      "verificationStatus": "under_review",
-      "verificationNote": "Month and activity mismatch: research (Remote Sensing 11(1):35; 15(19):4814) documents late-rice nursery SOWN Jun 15-25 and TRANSPLANTED late Jul-early Aug. Window records SOW in July. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 7-7 confirmed."
     },
     {
       "activityType": "HARVEST",

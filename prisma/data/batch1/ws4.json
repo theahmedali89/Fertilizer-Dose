@@ -682,7 +682,7 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 7,
       "harvestText": "Nov-Dec",
       "itemSlug": "rice",
@@ -690,8 +690,8 @@
       "regionSlug": "bd-national",
       "sourceKey": "brri-rice-doses",
       "startMonth": 6,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research (BRRI/BAMIS) documents Aman (mostly T. Aman) as TRANSPLANTED in Jun-Jul; no nursery/sowing window is given. Window records SOW — should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 6-7 confirmed."
     },
     {
       "activityType": "SOW",
@@ -816,15 +816,15 @@
     },
     {
       "activityType": "SOW",
-      "endMonth": 12,
+      "endMonth": 10,
       "harvestText": "Jan-Mar",
       "itemSlug": "tomato",
       "notes": "Rabi (BAMIS Dhaka calendar, 120-150 days): seedbed Sep-Oct, transplanting Oct-Dec.",
       "regionSlug": "bd-national",
       "sourceKey": "bamis-calendars",
       "startMonth": 9,
-      "verificationStatus": "under_review",
-      "verificationNote": "Window spans Sep-Dec as SOW, but research (BAMIS Dhaka calendar) bounds the tomato seedbed to Sep-Oct with transplanting Oct-Dec; the SOW window extends into the transplant period. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: window trimmed 9-12→9-10 (BAMIS bounds seedbed to Sep-Oct; Oct-Dec is transplanting)."
     },
     {
       "activityType": "SOW",
@@ -839,15 +839,15 @@
     },
     {
       "activityType": "SOW",
-      "endMonth": 12,
+      "endMonth": 10,
       "harvestText": "Feb-Mar",
       "itemSlug": "chili",
       "notes": "Rabi/winter (100-120 days): seedbed 2nd week Oct, transplanting late Nov-Dec.",
       "regionSlug": "bd-national",
       "sourceKey": "chili-bari-arr-2023-24",
       "startMonth": 10,
-      "verificationStatus": "under_review",
-      "verificationNote": "Window spans Oct-Dec as SOW, but research (BARI Spices Research Centre ARR 2023-24) bounds the chili seedbed to the 2nd week of Oct with transplanting late Nov-Dec; the SOW window extends into the transplant period. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: window trimmed 10-12→10-10 (BARI bounds seedbed to 2nd week Oct)."
     },
     {
       "itemSlug": "okra",

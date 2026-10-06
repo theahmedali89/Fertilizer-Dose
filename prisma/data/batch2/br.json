@@ -122,10 +122,10 @@
       "notes": "5ª Aproximação via EMATER-MG. Fertilize Sep-Mar (rainy season). N 6.2 kg/bag rule of thumb.",
       "p2o5": 40,
       "regionSlug": "br-southeast",
-      "soilContext": "Medium soil/leaf test",
+      "soilContext": "Low soil/leaf test",
       "sourceKey": "emater-mg-cafe",
-      "verificationStatus": "under_review",
-      "verificationNote": "soilContext says 'Medium soil/leaf test' but N=300/P2O5=40/K2O=300 correspond to the 'low' soil-P / low leaf-N columns of the 5a Aproximacao 30-40 bags/ha table (medium columns give N=220, P2O5=25, K2O=225). Confirm intended soil/leaf-test band."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: soilContext corrected from \"Medium\" to \"Low\" to match values (300/40/300 = low soil-P/low leaf-N columns in source table)."
     }
   ],
   "refused": [

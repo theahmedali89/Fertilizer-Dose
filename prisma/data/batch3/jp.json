@@ -249,15 +249,15 @@
   ],
   "windows": [
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 5,
       "itemSlug": "rice",
       "notes": "Hokkaido rice transplanted in May (nursery starts April in vinyl houses); stored as paddy/brown rice in cold storage.",
       "regionSlug": "jp-hokkaido",
       "sourceKey": "jp-hokkaido-rice-cal",
       "startMonth": 5,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research (MLIT Hokkaido) documents rice TRANSPLANTED in May (nursery starts April); window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 5-5 confirmed."
     },
     {
       "activityType": "HARVEST",
@@ -270,15 +270,15 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 4,
       "itemSlug": "rice",
       "notes": "Kyushu early cultivation (早期栽培) transplanted in April — avoids typhoon damage at heading/maturity. Kagoshima example (secondary source).",
       "regionSlug": "jp-kyushu",
       "sourceKey": "jp-kyushu-rice-cal",
       "startMonth": 4,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research documents Kyushu early-cultivation rice TRANSPLANTED in April; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 4-4 confirmed."
     },
     {
       "activityType": "HARVEST",
@@ -291,15 +291,15 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 6,
       "itemSlug": "rice",
       "notes": "Kyushu normal cultivation (普通期栽培) transplanted in June; heading/maturity overlaps typhoon season.",
       "regionSlug": "jp-kyushu",
       "sourceKey": "jp-kyushu-rice-cal",
       "startMonth": 6,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research documents Kyushu normal-cultivation rice TRANSPLANTED in June; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 6-6 confirmed."
     },
     {
       "activityType": "HARVEST",
@@ -312,15 +312,15 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 6,
       "itemSlug": "rice",
       "notes": "Saitama (Kanto): transplant May 15 or Jun 22 by variety (彩のきずな / 彩のかがやき / キヌヒカリ). Tohoku (Yamagata): transplant May 10-25 (つや姫 by May 20); Yamagata harvest months not stated in the source.",
       "regionSlug": "jp-kanto",
       "sourceKey": "jp-saitama-rice",
       "startMonth": 5,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research (JA Irumano, Saitama) documents rice TRANSPLANTED May 15 / Jun 22 by variety; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 5-6 confirmed."
     },
     {
       "activityType": "HARVEST",

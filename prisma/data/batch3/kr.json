@@ -204,15 +204,15 @@
   ],
   "windows": [
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 6,
       "itemSlug": "rice",
       "notes": "Rice transplanted late May-early Jun (mechanical transplanting ~Jun 5 in southern plains; Ongjin optimum May 15-25). RDA standard.",
       "regionSlug": "kr-jeolla",
       "sourceKey": "kr-rda-rice",
       "startMonth": 5,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research (RDA standard cultivation) documents rice TRANSPLANTED late May-early Jun; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 5-6 confirmed."
     },
     {
       "activityType": "HARVEST",
@@ -265,15 +265,15 @@
       "verificationStatus": "verified"
     },
     {
-      "activityType": "SOW",
+      "activityType": "TRANSPLANT",
       "endMonth": 10,
       "itemSlug": "onion",
       "notes": "Onion: 60-day seedlings transplanted late Oct (Gangwon east-coast trial).",
       "regionSlug": "kr-jeolla",
       "sourceKey": "kr-mdpi-n-input",
       "startMonth": 10,
-      "verificationStatus": "under_review",
-      "verificationNote": "Activity mismatch: research (Gangwon ARES) documents 60-day onion seedlings TRANSPLANTED late Oct; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: activityType corrected SOW→TRANSPLANT per research. Months 10-10 confirmed."
     },
     {
       "activityType": "HARVEST",

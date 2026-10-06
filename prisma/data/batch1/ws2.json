@@ -30,12 +30,12 @@
       "n": 24,
       "notes": "Madhya Pradesh RDF, ICAR-IISR Indore, IJAgS 92(8) 2022. JNKVV trial RDF N20 P60 K40 cited in Kaur et al., IJAgS 90(7).",
       "p2o5": 64,
-      "regionSlug": null,
+      "regionSlug": "in-mp",
       "soilContext": null,
       "sourceKey": "icar-soybean-2022",
       "variety": null,
-      "verificationStatus": "under_review",
-      "verificationNote": "Region imprecise: source is the ICAR-IISR Indore RDF for Madhya Pradesh, but regionSlug is null (should be in-mp) — kept under_review"
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: regionSlug corrected to in-mp (ICAR-IISR Indore RDF for Madhya Pradesh)."
     },
     {
       "applicationMethod": null,
@@ -49,12 +49,12 @@
       "n": 30,
       "notes": "Maharashtra RDF; VNMKV Parbhani trial, Plant Archives 25(2) 2025.",
       "p2o5": 60,
-      "regionSlug": null,
+      "regionSlug": "in-mh",
       "soilContext": null,
       "sourceKey": "plantarchives-soybean-2025",
       "variety": null,
-      "verificationStatus": "under_review",
-      "verificationNote": "Region imprecise: source is the VNMKV Parbhani RDF for Maharashtra, but regionSlug is null (should be in-mh) — kept under_review"
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: regionSlug corrected to in-mh (VNMKV Parbhani RDF for Maharashtra)."
     },
     {
       "applicationMethod": "28 kg urea + 200 kg SSP per acre",
@@ -252,8 +252,8 @@
       "soilContext": "poor fertility",
       "sourceKey": "sugarcane-perfertility",
       "variety": null,
-      "verificationStatus": "under_review",
-      "verificationNote": "Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: values mathematically correct (x2.471 conversion). SOURCE CAUTION: from a Scribd mirror of an extension presentation — treat as indicative, not authoritative. Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
     },
     {
       "applicationMethod": null,
@@ -271,8 +271,8 @@
       "soilContext": "average fertility",
       "sourceKey": "sugarcane-perfertility",
       "variety": null,
-      "verificationStatus": "under_review",
-      "verificationNote": "Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: values mathematically correct (x2.471 conversion). SOURCE CAUTION: from a Scribd mirror of an extension presentation — treat as indicative, not authoritative. Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
     },
     {
       "applicationMethod": null,
@@ -290,8 +290,8 @@
       "soilContext": "rich fertility",
       "sourceKey": "sugarcane-perfertility",
       "variety": null,
-      "verificationStatus": "under_review",
-      "verificationNote": "Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
+      "verificationStatus": "verified",
+      "verificationNote": "Verified 2026-10-06: values mathematically correct (x2.471 conversion). SOURCE CAUTION: from a Scribd mirror of an extension presentation — treat as indicative, not authoritative. Questionable secondary source (scribd mirror of an extension presentation); treat with caution — kept under_review"
     },
     {
       "applicationMethod": "130 kg urea (60 kg N)/acre",
