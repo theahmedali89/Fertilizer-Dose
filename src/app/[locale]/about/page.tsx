@@ -65,6 +65,16 @@ export default async function AboutPage({
               they actually use: acre, kanal, marla or hectare.
             </p>
           </CardBody></Card>
+          <Card><CardBody className="sm:p-8">
+            <h2 className="font-display text-2xl font-semibold mb-3">A note on translations</h2>
+            <p className="text-ink-soft leading-relaxed">
+              Fertilizer Dose is offered in several languages, but professional
+              translations are still in progress — non-English pages may show
+              machine-translated text. The English version is the authoritative
+              reference. If anything looks off in another language, please check
+              the English page.
+            </p>
+          </CardBody></Card>
         </div>
       </Section>
     </>
