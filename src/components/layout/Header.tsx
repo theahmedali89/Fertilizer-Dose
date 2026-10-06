@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 
 export function Header({ countrySelector }: { countrySelector?: React.ReactNode }) {
   const t = useTranslations("nav");
+  const tLang = useTranslations("language");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -278,7 +279,7 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
           <div className="p-5 border-t border-line space-y-4">
             <div className="flex items-center gap-3">
               <span className="text-xs font-bold uppercase tracking-widest text-ink-faint shrink-0">
-                {t("language")}
+                {tLang("label")}
               </span>
               <div className="flex-1 min-w-0">
                 <DrawerLanguageSelect />

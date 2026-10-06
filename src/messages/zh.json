@@ -22,7 +22,10 @@
       "noItemsHint": "我们尚未验证该地区本月的任何播种期。"
     }
   },
-  "language": {},
+  "language": {
+    "choose": "选择语言",
+    "label": "语言"
+  },
   "nav": {},
   "plantDoctor": {},
   "growing": {},
