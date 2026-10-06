@@ -11,8 +11,8 @@
 
 | # | Cluster | Primary keyword | Secondary keywords | Intent | Target page | Status | Cannibalization risk | Action |
 |---|---------|----------------|-------------------|--------|-------------|--------|---------------------|--------|
-| 1 | Core tools | fertilizer dose calculator | khad calculator, fertilizer calculator per acre | Transactional | `/calculator` | ✅ Live | None — single canonical tool page | Keep. Monitor rankings; no duplicate calculator pages |
-| 2 | NPK method | npk fertilizer calculation formula | how to calculate npk fertilizer, fertilizer formula | Informational | `/guides/npk-fertilizer-calculation-formula` | ❌ Missing | None yet | **Content backlog:** publish as blog post first; promote to `/guides/*` when CMS lands |
+| 1 | Core tools | fertilizer dose calculator | khad calculator, fertilizer calculator per acre, fertilizer rate calculator, fertilizer requirement calculator, how much fertilizer do i need, fertilizer quantity calculator, npk fertilizer calculator, fertilizer dose per hectare | Transactional | `/calculator` | ✅ Live | None — single canonical tool page | Keep. Monitor rankings; no duplicate calculator pages |
+| 2 | NPK method | npk fertilizer calculation formula | how to calculate npk fertilizer, fertilizer formula, npk ratio calculator, how to mix fertilizers for npk, fertilizer blending calculation | Informational | `/guides/npk-fertilizer-calculation-formula` | ❌ Missing | None yet | **Content backlog:** publish as blog post first; promote to `/guides/*` when CMS lands |
 | 3 | How-to | how to calculate fertilizer dose per acre | fertilizer dose per acre formula | Informational | `/guides/how-to-calculate-fertilizer-dose-per-acre` | ❌ Missing | Low — calculator page targets transactional intent, guide targets informational | **Content backlog:** same as #2. Do NOT merge into `/calculator` (intent differs) |
 | 4 | Charts | fertilizer dose chart | npk chart for crops | Informational | `/fertilizer-dose-chart` | ✅ Live | None | Keep |
 | 5 | Crop: wheat | fertilizer dose for wheat per acre | wheat npk dose, urea dap for wheat | Transactional/Informational | `/crops/wheat` | ✅ Live | **Avoided:** planned `/fertilizer-dose/wheat` NOT built — dose content lives on the crop page | Keep single page; add dose-focused H2 + FAQ to strengthen intent match |
@@ -22,16 +22,16 @@
 | 9 | Crop: sugarcane | sugarcane fertilizer dose per acre | kamad khad | Transactional/Informational | `/crops/sugarcane` | ✅ Live (dose in review) | Same as #5 | Same as #7 |
 | 10 | Crop: potato | fertilizer dose of potato per acre | aloo khad dose | Transactional/Informational | `/crops/potato` | ✅ Live (dose in review) | Same as #5 | Same as #7 |
 | 11 | Crop: soybean/groundnut | fertilizer dose for soybean per acre | groundnut fertilizer dose | Informational | `/crops/soybean`, `/crops/groundnut` | ⚠️ Live but noindex (identity-only, no verified dose) | None | Keep noindex until verified dose data lands; then flip `indexable` |
-| 12 | Products | dap dose per acre, urea dose per acre | dap vs urea, mop dose per acre | Transactional/Informational | `/fertilizers/dap`, `/fertilizers/urea`, `/fertilizers/mop` … | ✅ Live | None — one page per fertilizer | Keep. Dose-per-acre intent also served contextually by `/calculator` |
+| 12 | Products | dap dose per acre, urea dose per acre | dap vs urea, mop dose per acre, how much urea per acre, how much dap per acre, potash fertilizer dose, urea fertilizer for wheat, dap fertilizer for rice | Transactional/Informational | `/fertilizers/dap`, `/fertilizers/urea`, `/fertilizers/mop` … | ✅ Live | None — one page per fertilizer | Keep. Dose-per-acre intent also served contextually by `/calculator` |
 | 13 | Micronutrients | boron fertilizer dose per acre | zinc sulphate dose, micronutrient deficiency | Informational | `/guides/boron-fertilizer-dose` | ❌ Missing | None yet | **Content backlog:** blog-first, then guides |
 | 14 | Organic | organic fertilizer for plants | organic khad, compost vs chemical fertilizer | Informational | `/guides/organic-fertilizers` | ❌ Missing | None yet | **Content backlog:** blog-first, then guides |
 | 15 | Prices | npk fertilizer price in pakistan | urea price today, dap rate | Transactional (price check) | — | ❌ Deliberately unserved | N/A | **Do NOT build** a static price page (would require fabricated or stale prices). Intent served honestly by `/compare` with user-entered prices |
 | 16 | Regional | khad dose per acre, fertilizer dose in punjab | — | Local informational | `/planting-calendar/pakistan`, `/planting-calendar/india` | ⚠️ Partial | None | Calendar pages cover sowing intent; dose-by-region guides are a content backlog item |
-| 17 | FAQ/homepage | what is fertilizer, fertilizer dose per acre | npk meaning, what is dap | Informational | `/` + `/faq` | ✅ Live | Low — homepage targets brand + core tool; `/faq` targets question intents | Keep distinct: homepage = tool/brand, FAQ = questions |
-| 18 | Planting calendar (new) | what to plant in october pakistan | sowing calendar punjab, planting calendar india | Local informational | `/planting-calendar` + country pages | ✅ Live | None — month/region selection is client state, no URL spam | Keep. Add regions only with verified windows |
+| 17 | FAQ/homepage | what is fertilizer, fertilizer dose per acre | npk meaning, what is dap, how much fertilizer does wheat need, when should i apply fertilizer, what fertilizer is best for my crop, how much npk does my crop need | Informational | `/` + `/faq` | ✅ Live | Low — homepage targets brand + core tool; `/faq` targets question intents | Keep distinct: homepage = tool/brand, FAQ = questions |
+| 18 | Planting calendar (new) | what to plant in october pakistan | sowing calendar punjab, planting calendar india, fertilizer application timing, when to apply urea to wheat, fertilizer schedule for crops | Local informational | `/planting-calendar` + country pages | ✅ Live | None — month/region selection is client state, no URL spam | Keep. Add regions only with verified windows |
 | 19 | Garden (new) | farm management app, my farm records | crop diary app | Navigational/Transactional | `/my-garden` | ✅ Live | None | Keep |
 | 20 | Profit (new) | crop profit calculator | farming profit per acre, break even yield formula | Transactional | `/profit-calculator` | ✅ Live | None | Keep |
-| 21 | Compare (new) | cheapest nitrogen fertilizer | dap vs urea which is better, fertilizer price comparison | Commercial investigation | `/compare` | ✅ Live | None | Keep |
+| 21 | Compare (new) | cheapest nitrogen fertilizer | dap vs urea which is better, fertilizer price comparison, cheapest phosphorus fertilizer, cheapest potash fertilizer, fertilizer cost per acre comparison | Commercial investigation | `/compare` | ✅ Live | None | Keep |
 | 22 | Plants/vegetables (new) | rose fertilizer, tomato fertilizer dose | money plant care, onion fertilizer | Informational | `/plants/*`, `/vegetables/*` | ⚠️ Live but noindex (identity-only) | None | Keep noindex until verified growing data lands |
 
 ### Duplicate-intent decisions (explicit)
@@ -99,6 +99,11 @@
 5. Region-specific dose guides (Punjab/Sindh) — guides, only with provincial sources
 6. Flip `indexable` on soybean/groundnut/vegetables/plants pages as verified data lands
 7. Per-locale translation → lift the noindex gate locale by locale
+8. `soil test based fertilizer recommendation` — guide (pending blog; no new tool section)
+9. `fertilizer dose by growth stage` (tillering, flowering, grain filling) — crop page FAQ expansions, not new pages
+10. `fertilizer deficiency symptoms` (nitrogen deficiency, phosphorus deficiency) — guide (pending blog)
+11. `how much fertilizer per hectare` — already covered by calculator; add hectare examples to FAQ
+12. `fertilizer application methods` (broadcasting vs banding vs fertigation) — guide (pending blog)
 
 ---
 
