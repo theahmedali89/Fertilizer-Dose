@@ -280,7 +280,14 @@
       "eyebrow": "Calendario di semina",
       "title": "Cosa coltivare questo mese?",
       "desc": "Un calendario di semina adattato alla tua regione per la tua provincia — niente ipotesi universali. Ogni finestra è documentata e contrassegnata per lo stato di verifica.",
-      "cta": "Apri il calendario di semina"
+      "cta": "Apri il calendario di semina",
+      "noCountryTitle": "Dove coltivi?",
+      "noCountryDesc": "Scegli il tuo paese per vedere cosa piantare questo mese — solo finestre verificate.",
+      "showingFor": "Visualizzato per:",
+      "changeCountry": "Cambia",
+      "viewCalendar": "Vedi il calendario di semina completo",
+      "noItemsTitle": "Niente di verificato per questo mese",
+      "noItemsHint": "Non abbiamo ancora verificato alcuna finestra di semina per questa regione e questo mese."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Dati di semina disponibili",
       "noDataYet": "Dati in verifica",
       "openCalendar": "Apri il calendario di semina"
-    }
+    },
+    "catFruit": "Frutta",
+    "catHerb": "Erbe aromatiche",
+    "catFlower": "Fiori",
+    "catOther": "Altre piante",
+    "activitySOW": "Semina ora",
+    "activityTRANSPLANT": "Trapianta ora",
+    "activityPLANT": "Pianta ora",
+    "activityHARVEST": "Periodo di raccolta",
+    "activityLAND_PREPARATION": "Prepara il terreno",
+    "viewGuide": "Vedi la guida di coltivazione",
+    "plantingWindow": "Finestra di semina",
+    "appliesTo": "Si applica a",
+    "emptyRegionTitle": "Nessuna informazione di semina verificata disponibile per questa regione."
   },
   "garden": {
     "metaTitle": "Il mio giardino — Tieni traccia di appezzamenti, semine e piani di concimazione",
@@ -579,5 +599,10 @@
     "signOut": "Esci",
     "adminLink": "Apri la dashboard di amministrazione",
     "gardenNote": "Il tuo giardino ora si sincronizza con il tuo account quando hai effettuato l'accesso."
+  },
+  "country": {
+    "selectCountry": "Paese",
+    "selectRegion": "Regione / provincia",
+    "selectedCountry": "Paese selezionato"
   }
 }

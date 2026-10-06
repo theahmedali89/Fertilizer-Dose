@@ -280,7 +280,14 @@
       "eyebrow": "Calendário de plantio",
       "title": "O que plantar este mês?",
       "desc": "Um calendário de semeadura adaptado à sua província — sem palpites universais. Cada janela tem fonte e selo de verificação.",
-      "cta": "Abrir calendário de plantio"
+      "cta": "Abrir calendário de plantio",
+      "noCountryTitle": "Onde você cultiva?",
+      "noCountryDesc": "Escolha seu país para ver o que plantar este mês — apenas janelas verificadas.",
+      "showingFor": "Mostrando para:",
+      "changeCountry": "Alterar",
+      "viewCalendar": "Ver o calendário de plantio completo",
+      "noItemsTitle": "Nada verificado para este mês ainda",
+      "noItemsHint": "Ainda não verificamos nenhuma janela de plantio para esta região e este mês."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Dados de plantio disponíveis",
       "noDataYet": "Dados em verificação",
       "openCalendar": "Abrir calendário de plantio"
-    }
+    },
+    "catFruit": "Frutas",
+    "catHerb": "Ervas",
+    "catFlower": "Flores",
+    "catOther": "Outras plantas",
+    "activitySOW": "Semeie agora",
+    "activityTRANSPLANT": "Transplante agora",
+    "activityPLANT": "Plante agora",
+    "activityHARVEST": "Período de colheita",
+    "activityLAND_PREPARATION": "Prepare o solo",
+    "viewGuide": "Ver guia de cultivo",
+    "plantingWindow": "Janela de plantio",
+    "appliesTo": "Aplica-se a",
+    "emptyRegionTitle": "Ainda não há informações de plantio verificadas para esta região."
   },
   "garden": {
     "metaTitle": "Meu Jardim — Acompanhe Talhões, Plantios e Planos de Adubação",
@@ -579,5 +599,10 @@
     "signOut": "Sair",
     "adminLink": "Abrir painel de administração",
     "gardenNote": "Seu jardim agora sincroniza com sua conta quando você está conectado."
+  },
+  "country": {
+    "selectCountry": "País",
+    "selectRegion": "Região / província",
+    "selectedCountry": "País selecionado"
   }
 }

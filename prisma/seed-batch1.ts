@@ -73,8 +73,8 @@ function loadBatchFile(name: string): BatchFile {
 }
 
 function vs(s: string): VerificationStatus {
-  // Only allow the two import-safe statuses; anything else falls back to draft.
-  return (s === "under_review" ? "under_review" : "draft") as VerificationStatus;
+  // Allow verified/under_review (verification passes set these in JSON); anything else falls back to draft.
+  return (s === "verified" ? "verified" : s === "under_review" ? "under_review" : "draft") as VerificationStatus;
 }
 
 // ── Task 1: correct the 3 wrong flat-NPK records ───────────────────────
@@ -286,6 +286,11 @@ export async function seedBatch1(db: PrismaClient): Promise<void> {
       });
       let windowId: string;
       if (existing) {
+        // Update verification status for existing records (verification pass)
+        await db.plantingWindow.update({
+          where: { id: existing.id },
+          data: { verificationStatus: vs(w.verificationStatus) },
+        });
         windowId = existing.id;
         winSkipped++;
       } else {

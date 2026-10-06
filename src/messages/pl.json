@@ -280,7 +280,14 @@
       "eyebrow": "Kalendarz siewu",
       "title": "Co siać w tym miesiącu?",
       "desc": "Kalendarz siewu dopasowany do regionu Twojego województwa — żadnych zgadywanek dla wszystkich. Każde okno ma źródło i status weryfikacji.",
-      "cta": "Otwórz kalendarz siewu"
+      "cta": "Otwórz kalendarz siewu",
+      "noCountryTitle": "Gdzie uprawiasz?",
+      "noCountryDesc": "Wybierz swój kraj, aby zobaczyć, co sadzić w tym miesiącu — tylko zweryfikowane okna.",
+      "showingFor": "Pokazano dla:",
+      "changeCountry": "Zmień",
+      "viewCalendar": "Zobacz pełny kalendarz siewu",
+      "noItemsTitle": "Nic jeszcze nie zweryfikowano na ten miesiąc",
+      "noItemsHint": "Nie zweryfikowaliśmy jeszcze żadnych okien siewu dla tego regionu i miesiąca."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Dane siewu dostępne",
       "noDataYet": "Dane w weryfikacji",
       "openCalendar": "Otwórz kalendarz siewu"
-    }
+    },
+    "catFruit": "Owoce",
+    "catHerb": "Zioła",
+    "catFlower": "Kwiaty",
+    "catOther": "Inne rośliny",
+    "activitySOW": "Siej teraz",
+    "activityTRANSPLANT": "Przesadzaj teraz",
+    "activityPLANT": "Sadź teraz",
+    "activityHARVEST": "Okres zbiorów",
+    "activityLAND_PREPARATION": "Przygotuj glebę",
+    "viewGuide": "Zobacz przewodnik uprawy",
+    "plantingWindow": "Okno siewu",
+    "appliesTo": "Dotyczy",
+    "emptyRegionTitle": "Brak zweryfikowanych informacji o sadzeniu dla tego regionu."
   },
   "garden": {
     "metaTitle": "Mój ogród — działki, nasadzenia i plany nawożenia",
@@ -579,5 +599,10 @@
     "signOut": "Wyloguj się",
     "adminLink": "Otwórz panel administratora",
     "gardenNote": "Twój ogród synchronizuje się teraz z Twoim kontem, gdy jesteś zalogowany."
+  },
+  "country": {
+    "selectCountry": "Kraj",
+    "selectRegion": "Region / województwo",
+    "selectedCountry": "Wybrany kraj"
   }
 }

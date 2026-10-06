@@ -280,7 +280,14 @@
       "eyebrow": "Kalender tanam",
       "title": "Bulan ini menanam apa?",
       "desc": "Kalender tanam yang sadar wilayah untuk provinsi Anda — tanpa tebakan seragam. Setiap jendela bersumber dan berlabel verifikasi.",
-      "cta": "Buka kalender tanam"
+      "cta": "Buka kalender tanam",
+      "noCountryTitle": "Di mana Anda bercocok tanam?",
+      "noCountryDesc": "Pilih negara Anda untuk melihat apa yang ditanam bulan ini — hanya jendela terverifikasi.",
+      "showingFor": "Ditampilkan untuk:",
+      "changeCountry": "Ubah",
+      "viewCalendar": "Lihat kalender tanam lengkap",
+      "noItemsTitle": "Belum ada yang terverifikasi untuk bulan ini",
+      "noItemsHint": "Kami belum memverifikasi jendela tanam apa pun untuk wilayah dan bulan ini."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Data tanam tersedia",
       "noDataYet": "Data sedang diverifikasi",
       "openCalendar": "Buka kalender tanam"
-    }
+    },
+    "catFruit": "Buah-buahan",
+    "catHerb": "Herbal",
+    "catFlower": "Bunga",
+    "catOther": "Tanaman lain",
+    "activitySOW": "Semai sekarang",
+    "activityTRANSPLANT": "Pindah tanam sekarang",
+    "activityPLANT": "Tanam sekarang",
+    "activityHARVEST": "Masa panen",
+    "activityLAND_PREPARATION": "Siapkan lahan",
+    "viewGuide": "Lihat panduan budidaya",
+    "plantingWindow": "Jendela tanam",
+    "appliesTo": "Berlaku untuk",
+    "emptyRegionTitle": "Belum ada informasi tanam terverifikasi untuk wilayah ini."
   },
   "garden": {
     "metaTitle": "Kebunku — Pantau Petak, Penanaman & Rencana Pupuk",
@@ -579,5 +599,10 @@
     "signOut": "Keluar",
     "adminLink": "Buka dasbor admin",
     "gardenNote": "Kebun Anda kini tersinkron ke akun saat Anda masuk."
+  },
+  "country": {
+    "selectCountry": "Negara",
+    "selectRegion": "Wilayah / provinsi",
+    "selectedCountry": "Negara terpilih"
   }
 }

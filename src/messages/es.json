@@ -280,7 +280,14 @@
       "eyebrow": "Calendario de siembra",
       "title": "¿Qué sembrar este mes?",
       "desc": "Un calendario de siembra adaptado a su provincia: sin conjeturas genéricas. Cada ventana tiene fuente e insignia de verificación.",
-      "cta": "Abrir calendario de siembra"
+      "cta": "Abrir calendario de siembra",
+      "noCountryTitle": "¿Dónde cultivas?",
+      "noCountryDesc": "Elige tu país para ver qué plantar este mes — solo ventanas verificadas.",
+      "showingFor": "Mostrando para:",
+      "changeCountry": "Cambiar",
+      "viewCalendar": "Ver el calendario de siembra completo",
+      "noItemsTitle": "Nada verificado para este mes todavía",
+      "noItemsHint": "Aún no hemos verificado ninguna ventana de siembra para esta región y este mes."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Datos de siembra disponibles",
       "noDataYet": "Datos en verificación",
       "openCalendar": "Abrir calendario de siembra"
-    }
+    },
+    "catFruit": "Frutas",
+    "catHerb": "Hierbas",
+    "catFlower": "Flores",
+    "catOther": "Otras plantas",
+    "activitySOW": "Siembra ahora",
+    "activityTRANSPLANT": "Trasplanta ahora",
+    "activityPLANT": "Planta ahora",
+    "activityHARVEST": "Período de cosecha",
+    "activityLAND_PREPARATION": "Prepara la tierra",
+    "viewGuide": "Ver guía de cultivo",
+    "plantingWindow": "Ventana de siembra",
+    "appliesTo": "Aplica a",
+    "emptyRegionTitle": "Aún no hay información de siembra verificada para esta región."
   },
   "garden": {
     "metaTitle": "Mi huerto: controle parcelas, siembras y planes de fertilización",
@@ -579,5 +599,10 @@
     "signOut": "Cerrar sesión",
     "adminLink": "Abrir panel de administración",
     "gardenNote": "Su huerto ahora se sincroniza con su cuenta cuando ha iniciado sesión."
+  },
+  "country": {
+    "selectCountry": "País",
+    "selectRegion": "Región / provincia",
+    "selectedCountry": "País seleccionado"
   }
 }

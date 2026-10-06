@@ -280,7 +280,14 @@
       "eyebrow": "Calendrier de semis",
       "title": "Que semer ce mois-ci ?",
       "desc": "Un calendrier de semis adapté à votre province — pas d’approximations passe-partout. Chaque période est sourcée et marquée de son statut de vérification.",
-      "cta": "Ouvrir le calendrier de semis"
+      "cta": "Ouvrir le calendrier de semis",
+      "noCountryTitle": "Où cultivez-vous ?",
+      "noCountryDesc": "Choisissez votre pays pour voir quoi planter ce mois-ci — périodes vérifiées uniquement.",
+      "showingFor": "Affiché pour :",
+      "changeCountry": "Modifier",
+      "viewCalendar": "Voir le calendrier de plantation complet",
+      "noItemsTitle": "Rien de vérifié pour ce mois-ci pour le moment",
+      "noItemsHint": "Nous n'avons pas encore vérifié de période de semis pour cette région et ce mois."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Données de semis disponibles",
       "noDataYet": "Données en cours de vérification",
       "openCalendar": "Ouvrir le calendrier de semis"
-    }
+    },
+    "catFruit": "Fruits",
+    "catHerb": "Herbes",
+    "catFlower": "Fleurs",
+    "catOther": "Autres plantes",
+    "activitySOW": "Semer maintenant",
+    "activityTRANSPLANT": "Repiquer maintenant",
+    "activityPLANT": "Planter maintenant",
+    "activityHARVEST": "Période de récolte",
+    "activityLAND_PREPARATION": "Préparer le sol",
+    "viewGuide": "Voir le guide de culture",
+    "plantingWindow": "Période de semis",
+    "appliesTo": "S'applique à",
+    "emptyRegionTitle": "Aucune information de plantation vérifiée n'est encore disponible pour cette région."
   },
   "garden": {
     "metaTitle": "Mon jardin — Suivez parcelles, plantations et plans d’engrais",
@@ -579,5 +599,10 @@
     "signOut": "Se déconnecter",
     "adminLink": "Ouvrir le tableau de bord admin",
     "gardenNote": "Votre jardin se synchronise désormais avec votre compte lorsque vous êtes connecté."
+  },
+  "country": {
+    "selectCountry": "Pays",
+    "selectRegion": "Région / province",
+    "selectedCountry": "Pays sélectionné"
   }
 }

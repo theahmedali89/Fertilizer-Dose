@@ -1,1 +1,359 @@
-{"country":{"code":"IT","defaultUnit":"hectare","name":"Italy","slug":"italy"},"newRegions":[{"countryCode":"IT","name":"Emilia-Romagna","slug":"it-emilia-romagna"},{"countryCode":"IT","name":"Lombardy","slug":"it-lombardy"}],"recommendations":[{"applicationMethod":null,"applicationTiming":null,"countryCode":"IT","growthStage":null,"irrigationContext":null,"itemSlug":"wheat","k2o":120,"micronutrients":null,"n":155,"notes":"DOSE STANDARD (normal soil fertility). Soft wheat is a SEPARATE item from durum wheat — never merged. N = 155 for FP/FPS varieties (140 biscottiere / 160 FF).","p2o5":60,"regionSlug":"it-emilia-romagna","soilContext":"Frumento tenero (soft wheat), 5–7 t/ha, normal soil fertility","sourceKey":"it-er-dpi-2021","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"IT","growthStage":null,"irrigationContext":null,"itemSlug":"durum-wheat","k2o":120,"micronutrients":null,"n":160,"notes":"DOSE STANDARD (normal soil fertility). Durum wheat is a SEPARATE item from soft wheat — never merged. No official regional standard dose sheet found for Puglia (see gaps).","p2o5":60,"regionSlug":"it-emilia-romagna","soilContext":"Frumento duro (durum wheat), media produzione, 5–7 t/ha, normal soil fertility","sourceKey":"it-er-dpi-2021","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"IT","growthStage":null,"irrigationContext":null,"itemSlug":"maize","k2o":75,"micronutrients":null,"n":240,"notes":"DOSE STANDARD (normal soil fertility). Media produzione level: 150–50–40 (not seeded).","p2o5":80,"regionSlug":"it-emilia-romagna","soilContext":"Grain maize, alta produzione 10–14 t/ha, normal soil fertility","sourceKey":"it-er-nta-mais-2025","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":"N near sowing — no autumn-winter N","countryCode":"IT","growthStage":null,"irrigationContext":null,"itemSlug":"rice","k2o":120,"micronutrients":null,"n":110,"notes":"DOSE STANDARD (normal soil fertility). K₂O halved if straw is left in the field.","p2o5":50,"regionSlug":"it-emilia-romagna","soilContext":"Riso da pila, 5.6–8.4 t/ha, normal soil fertility","sourceKey":"it-er-nta-riso-2025","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"IT","growthStage":null,"irrigationContext":null,"itemSlug":"tomato","k2o":200,"micronutrients":null,"n":130,"notes":"DOSE STANDARD (normal soil fertility). 80–100 t/ha level: N 150, P₂O₅ 150, K₂O 230 (not seeded).","p2o5":130,"regionSlug":"it-emilia-romagna","soilContext":"Pomodoro da industria, 60–80 t/ha, normal soil fertility","sourceKey":"it-er-nta-pomodoro-2023","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"IT","growthStage":null,"irrigationContext":null,"itemSlug":"grape","k2o":120,"micronutrients":null,"n":80,"notes":"DOSE STANDARD (normal soil fertility). Medio-bassa production 8–12 t/ha: 50–40–80 (not seeded).","p2o5":80,"regionSlug":"it-emilia-romagna","soilContext":"Vite da vino (wine grape), alta produzione 16–24 t/ha, normal soil fertility","sourceKey":"it-er-nta-vite-2025","variety":null,"verificationStatus":"verified"}],"refused":[{"reason":"No Regione Lombardia / ERSAF published standard NPK dose sheet located (ERSAF being absorbed into ARPAL/ERLAF structures); ER sheets used for Po Valley crops","what":"Lombardy standard NPK"},{"reason":"No regional standard dose sheet located for Puglia durum wheat; AgroNotizie/ImageLine 'Quattro strategie' (2023) is practice (Foggia, ~3.5 t/ha), NOT an official recommendation","what":"Puglia durum wheat official NPK"},{"reason":"No official regional standard NPK located for any target crop in Sicily","what":"Sicily official NPK"},{"reason":"Not stated in ER NTA/bollettini for maize","what":"Maize harvest month"},{"reason":"Not stated in ER sheets for industry tomato","what":"Tomato harvest month (industry)"},{"reason":"Not stated in ER NTA 2025 (variety-dependent)","what":"Grape planting & harvest (vendemmia) months"},{"reason":"ER DPI does not state a month; July given from secondary source only","what":"Wheat harvest in official/extension sources"},{"reason":"No CREA or MIPAAF standard NPK sheets located in this pass; ER regional DPI was the effective official source","what":"CREA / MIPAAF standard NPK sheets"}],"sources":[{"country":"IT","key":"it-er-dpi-2021","notes":"Frumento N-P-K dose-standard sheet: soft wheat 155-60-120; durum wheat 160-60-120 (normal soil fertility, 5–7 t/ha). Sowing: from 2nd half of October.","organization":"Regione Emilia-Romagna","sourceType":"government","title":"DPI 2021 — colture erbacee (frumento NPK + norme di semina)","url":"https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2021/norme/erbacee/raccolta-colture-erbacee.pdf/@@download/file/raccolta%20colture%20erbacee.pdf"},{"country":"IT","key":"it-er-nta-mais-2025","notes":"Maize grain alta produzione 240-80-75 (10–14 t/ha); media produzione 150-50-40. Sowing epochs: 1st April, delayed May, 2nd June.","organization":"Regione Emilia-Romagna","sourceType":"government","title":"NTA Mais 2025 (norme tecniche di coltura)","url":"https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2025/norme-tecniche-di-coltura/erbacee/erbacee/nta-mais-2025.pdf/@@download/file/NTA%20MAIS%202025.pdf"},{"country":"IT","key":"it-er-nta-riso-2025","notes":"Rice 110-50-120 (5.6–8.4 t/ha); K₂O halved if straw left in field.","organization":"Regione Emilia-Romagna","sourceType":"government","title":"NTA Riso 2025 (norme tecniche di coltura)","url":"https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2025/norme-tecniche-di-coltura/erbacee/erbacee/nta-riso-2025.pdf/@@download/file/NTA%20RISO%202025.pdf"},{"country":"IT","key":"it-er-nta-vite-2025","notes":"Wine grape alta produzione 80-80-120 (16–24 t/ha); medio-bassa 50-40-80.","organization":"Regione Emilia-Romagna","sourceType":"government","title":"NTA Vite 2025 (norme tecniche di coltura)","url":"https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2025/norme-tecniche-di-coltura/arboree/frutticole/nta-vite-2025.pdf/@@download/file/NTA%20VITE%202025.pdf"},{"country":"IT","key":"it-er-nta-pomodoro-2023","notes":"Industry tomato 130-130-200 (60–80 t/ha).","organization":"Regione Emilia-Romagna","sourceType":"government","title":"Norme tecniche agronomiche pomodoro da industria 2023","url":"https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2023/norme/orticole/norme-tecniche-agronomiche-pomodoro-da-industria-2023.pdf/@@download/file/NORME%20TECNICHE%20AGRONOMICHE%20POMODORO%20DA%20INDUSTRIA%202023.pdf"},{"country":"IT","key":"it-er-bollettino-2021","notes":"Tomato NPK + transplant end-April–May.","organization":"Regione Emilia-Romagna","sourceType":"government","title":"Bollettino produzione integrata n.8 del 08/04/2021","url":"https://agricoltura.regione.emilia-romagna.it/fitosanitario/difesa-sostenibile/bollettini/archivio-bollettini/copy2_of_bollettini-di-produzione-integrata-e-biologica-2021/reggio-emilia/bollettino-di-reggio-emilia-n8-del-08_04_2021.pdf/@@download/file"},{"country":"IT","key":"it-agronotizie-riso","notes":"Secondary/practice source: rice sown April–May.","organization":"AgroNotizie / ImageLine","sourceType":"industry","title":"Coltivare il riso in maniera intensiva e sostenibile","url":"https://agronotizie.imagelinenetwork.com/agronomia/2022/05/09/coltivare-il-riso-in-maniera-intensiva-e-sostenibile-si-puo/74824"},{"country":"IT","key":"it-in-lombardia-riso","notes":"Pavia (Lombardy) rice harvest Sep–Oct.","organization":"Regione Lombardia (in-lombardia.it)","sourceType":"government","title":"La provincia di Pavia, Capitale Italiana del Riso","url":"https://www.in-lombardia.it/la-provincia-di-pavia-capitale-italiana-del-riso"},{"country":"IT","key":"it-aiab-wheat-sow","notes":"Wheat sowing late-Oct – early-Nov (NE Italy).","organization":"AIAB FVG","sourceType":"research","title":"B-SEM 12/2024","url":"https://www.aiab.fvg.it/wp-content/uploads/2024/09/B-SEM-12_17-09-24-REV-FT.pdf"},{"country":"IT","key":"it-ortodacoltivare","notes":"Secondary source: wheat harvest July (not official).","organization":"ortodacoltivare.it","sourceType":"industry","title":"Coltivare cereali","url":"https://www.ortodacoltivare.it/guide/cereali/"}],"windows":[{"activityType":"SOW","endMonth":11,"itemSlug":"wheat","notes":"Soft wheat autumn sowing: from 2nd half of October (AIAB FVG: late-Oct – early-Nov).","regionSlug":"it-emilia-romagna","sourceKey":"it-er-dpi-2021","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"wheat","notes":"Harvest July — secondary source only (ER DPI states no month; see gaps).","regionSlug":"it-emilia-romagna","sourceKey":"it-ortodacoltivare","startMonth":7,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":11,"itemSlug":"durum-wheat","notes":"Autumn sowing: from 2nd half of October.","regionSlug":"it-emilia-romagna","sourceKey":"it-er-dpi-2021","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"durum-wheat","notes":"Harvest July (autumn-sown; secondary source only — see gaps).","regionSlug":"it-emilia-romagna","sourceKey":"it-ortodacoltivare","startMonth":7,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":6,"itemSlug":"maize","notes":"1st sowing April; delayed May; 2nd sowing June (precocity-class table). Harvest month NOT FOUND — see gaps.","regionSlug":"it-emilia-romagna","sourceKey":"it-er-nta-mais-2025","startMonth":4,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":4,"itemSlug":"rice","notes":"Rice sown April (N near sowing; no autumn-winter N).","regionSlug":"it-emilia-romagna","sourceKey":"it-agronotizie-riso","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":10,"itemSlug":"rice","notes":"Rice harvested late September – October.","regionSlug":"it-emilia-romagna","sourceKey":"it-in-lombardia-riso","startMonth":9,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"rice","notes":"Rice sown April–May (Po Valley / Lombardy, Pavia area).","regionSlug":"it-lombardy","sourceKey":"it-agronotizie-riso","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":10,"itemSlug":"rice","notes":"Rice harvested September – October (Regione Lombardia).","regionSlug":"it-lombardy","sourceKey":"it-in-lombardia-riso","startMonth":9,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"tomato","notes":"Industry tomato transplant end-April – May (seedling thermal acclimatisation at least until end of April). Harvest month NOT FOUND — see gaps.","regionSlug":"it-emilia-romagna","sourceKey":"it-er-bollettino-2021","startMonth":4,"verificationStatus":"under_review"}]}
+{
+  "country": {
+    "code": "IT",
+    "defaultUnit": "hectare",
+    "name": "Italy",
+    "slug": "italy"
+  },
+  "newRegions": [
+    {
+      "countryCode": "IT",
+      "name": "Emilia-Romagna",
+      "slug": "it-emilia-romagna"
+    },
+    {
+      "countryCode": "IT",
+      "name": "Lombardy",
+      "slug": "it-lombardy"
+    }
+  ],
+  "recommendations": [
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "IT",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "wheat",
+      "k2o": 120,
+      "micronutrients": null,
+      "n": 155,
+      "notes": "DOSE STANDARD (normal soil fertility). Soft wheat is a SEPARATE item from durum wheat — never merged. N = 155 for FP/FPS varieties (140 biscottiere / 160 FF).",
+      "p2o5": 60,
+      "regionSlug": "it-emilia-romagna",
+      "soilContext": "Frumento tenero (soft wheat), 5–7 t/ha, normal soil fertility",
+      "sourceKey": "it-er-dpi-2021",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "IT",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "durum-wheat",
+      "k2o": 120,
+      "micronutrients": null,
+      "n": 160,
+      "notes": "DOSE STANDARD (normal soil fertility). Durum wheat is a SEPARATE item from soft wheat — never merged. No official regional standard dose sheet found for Puglia (see gaps).",
+      "p2o5": 60,
+      "regionSlug": "it-emilia-romagna",
+      "soilContext": "Frumento duro (durum wheat), media produzione, 5–7 t/ha, normal soil fertility",
+      "sourceKey": "it-er-dpi-2021",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "IT",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "maize",
+      "k2o": 75,
+      "micronutrients": null,
+      "n": 240,
+      "notes": "DOSE STANDARD (normal soil fertility). Media produzione level: 150–50–40 (not seeded).",
+      "p2o5": 80,
+      "regionSlug": "it-emilia-romagna",
+      "soilContext": "Grain maize, alta produzione 10–14 t/ha, normal soil fertility",
+      "sourceKey": "it-er-nta-mais-2025",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": "N near sowing — no autumn-winter N",
+      "countryCode": "IT",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "rice",
+      "k2o": 120,
+      "micronutrients": null,
+      "n": 110,
+      "notes": "DOSE STANDARD (normal soil fertility). K₂O halved if straw is left in the field.",
+      "p2o5": 50,
+      "regionSlug": "it-emilia-romagna",
+      "soilContext": "Riso da pila, 5.6–8.4 t/ha, normal soil fertility",
+      "sourceKey": "it-er-nta-riso-2025",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "IT",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "tomato",
+      "k2o": 200,
+      "micronutrients": null,
+      "n": 130,
+      "notes": "DOSE STANDARD (normal soil fertility). 80–100 t/ha level: N 150, P₂O₅ 150, K₂O 230 (not seeded).",
+      "p2o5": 130,
+      "regionSlug": "it-emilia-romagna",
+      "soilContext": "Pomodoro da industria, 60–80 t/ha, normal soil fertility",
+      "sourceKey": "it-er-nta-pomodoro-2023",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "IT",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "grape",
+      "k2o": 120,
+      "micronutrients": null,
+      "n": 80,
+      "notes": "DOSE STANDARD (normal soil fertility). Medio-bassa production 8–12 t/ha: 50–40–80 (not seeded).",
+      "p2o5": 80,
+      "regionSlug": "it-emilia-romagna",
+      "soilContext": "Vite da vino (wine grape), alta produzione 16–24 t/ha, normal soil fertility",
+      "sourceKey": "it-er-nta-vite-2025",
+      "variety": null,
+      "verificationStatus": "verified"
+    }
+  ],
+  "refused": [
+    {
+      "reason": "No Regione Lombardia / ERSAF published standard NPK dose sheet located (ERSAF being absorbed into ARPAL/ERLAF structures); ER sheets used for Po Valley crops",
+      "what": "Lombardy standard NPK"
+    },
+    {
+      "reason": "No regional standard dose sheet located for Puglia durum wheat; AgroNotizie/ImageLine 'Quattro strategie' (2023) is practice (Foggia, ~3.5 t/ha), NOT an official recommendation",
+      "what": "Puglia durum wheat official NPK"
+    },
+    {
+      "reason": "No official regional standard NPK located for any target crop in Sicily",
+      "what": "Sicily official NPK"
+    },
+    {
+      "reason": "Not stated in ER NTA/bollettini for maize",
+      "what": "Maize harvest month"
+    },
+    {
+      "reason": "Not stated in ER sheets for industry tomato",
+      "what": "Tomato harvest month (industry)"
+    },
+    {
+      "reason": "Not stated in ER NTA 2025 (variety-dependent)",
+      "what": "Grape planting & harvest (vendemmia) months"
+    },
+    {
+      "reason": "ER DPI does not state a month; July given from secondary source only",
+      "what": "Wheat harvest in official/extension sources"
+    },
+    {
+      "reason": "No CREA or MIPAAF standard NPK sheets located in this pass; ER regional DPI was the effective official source",
+      "what": "CREA / MIPAAF standard NPK sheets"
+    }
+  ],
+  "sources": [
+    {
+      "country": "IT",
+      "key": "it-er-dpi-2021",
+      "notes": "Frumento N-P-K dose-standard sheet: soft wheat 155-60-120; durum wheat 160-60-120 (normal soil fertility, 5–7 t/ha). Sowing: from 2nd half of October.",
+      "organization": "Regione Emilia-Romagna",
+      "sourceType": "government",
+      "title": "DPI 2021 — colture erbacee (frumento NPK + norme di semina)",
+      "url": "https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2021/norme/erbacee/raccolta-colture-erbacee.pdf/@@download/file/raccolta%20colture%20erbacee.pdf"
+    },
+    {
+      "country": "IT",
+      "key": "it-er-nta-mais-2025",
+      "notes": "Maize grain alta produzione 240-80-75 (10–14 t/ha); media produzione 150-50-40. Sowing epochs: 1st April, delayed May, 2nd June.",
+      "organization": "Regione Emilia-Romagna",
+      "sourceType": "government",
+      "title": "NTA Mais 2025 (norme tecniche di coltura)",
+      "url": "https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2025/norme-tecniche-di-coltura/erbacee/erbacee/nta-mais-2025.pdf/@@download/file/NTA%20MAIS%202025.pdf"
+    },
+    {
+      "country": "IT",
+      "key": "it-er-nta-riso-2025",
+      "notes": "Rice 110-50-120 (5.6–8.4 t/ha); K₂O halved if straw left in field.",
+      "organization": "Regione Emilia-Romagna",
+      "sourceType": "government",
+      "title": "NTA Riso 2025 (norme tecniche di coltura)",
+      "url": "https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2025/norme-tecniche-di-coltura/erbacee/erbacee/nta-riso-2025.pdf/@@download/file/NTA%20RISO%202025.pdf"
+    },
+    {
+      "country": "IT",
+      "key": "it-er-nta-vite-2025",
+      "notes": "Wine grape alta produzione 80-80-120 (16–24 t/ha); medio-bassa 50-40-80.",
+      "organization": "Regione Emilia-Romagna",
+      "sourceType": "government",
+      "title": "NTA Vite 2025 (norme tecniche di coltura)",
+      "url": "https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2025/norme-tecniche-di-coltura/arboree/frutticole/nta-vite-2025.pdf/@@download/file/NTA%20VITE%202025.pdf"
+    },
+    {
+      "country": "IT",
+      "key": "it-er-nta-pomodoro-2023",
+      "notes": "Industry tomato 130-130-200 (60–80 t/ha).",
+      "organization": "Regione Emilia-Romagna",
+      "sourceType": "government",
+      "title": "Norme tecniche agronomiche pomodoro da industria 2023",
+      "url": "https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/agricoltura-sostenibile/agricoltura-integrata/Collezione-dpi/dpi_2023/norme/orticole/norme-tecniche-agronomiche-pomodoro-da-industria-2023.pdf/@@download/file/NORME%20TECNICHE%20AGRONOMICHE%20POMODORO%20DA%20INDUSTRIA%202023.pdf"
+    },
+    {
+      "country": "IT",
+      "key": "it-er-bollettino-2021",
+      "notes": "Tomato NPK + transplant end-April–May.",
+      "organization": "Regione Emilia-Romagna",
+      "sourceType": "government",
+      "title": "Bollettino produzione integrata n.8 del 08/04/2021",
+      "url": "https://agricoltura.regione.emilia-romagna.it/fitosanitario/difesa-sostenibile/bollettini/archivio-bollettini/copy2_of_bollettini-di-produzione-integrata-e-biologica-2021/reggio-emilia/bollettino-di-reggio-emilia-n8-del-08_04_2021.pdf/@@download/file"
+    },
+    {
+      "country": "IT",
+      "key": "it-agronotizie-riso",
+      "notes": "Secondary/practice source: rice sown April–May.",
+      "organization": "AgroNotizie / ImageLine",
+      "sourceType": "industry",
+      "title": "Coltivare il riso in maniera intensiva e sostenibile",
+      "url": "https://agronotizie.imagelinenetwork.com/agronomia/2022/05/09/coltivare-il-riso-in-maniera-intensiva-e-sostenibile-si-puo/74824"
+    },
+    {
+      "country": "IT",
+      "key": "it-in-lombardia-riso",
+      "notes": "Pavia (Lombardy) rice harvest Sep–Oct.",
+      "organization": "Regione Lombardia (in-lombardia.it)",
+      "sourceType": "government",
+      "title": "La provincia di Pavia, Capitale Italiana del Riso",
+      "url": "https://www.in-lombardia.it/la-provincia-di-pavia-capitale-italiana-del-riso"
+    },
+    {
+      "country": "IT",
+      "key": "it-aiab-wheat-sow",
+      "notes": "Wheat sowing late-Oct – early-Nov (NE Italy).",
+      "organization": "AIAB FVG",
+      "sourceType": "research",
+      "title": "B-SEM 12/2024",
+      "url": "https://www.aiab.fvg.it/wp-content/uploads/2024/09/B-SEM-12_17-09-24-REV-FT.pdf"
+    },
+    {
+      "country": "IT",
+      "key": "it-ortodacoltivare",
+      "notes": "Secondary source: wheat harvest July (not official).",
+      "organization": "ortodacoltivare.it",
+      "sourceType": "industry",
+      "title": "Coltivare cereali",
+      "url": "https://www.ortodacoltivare.it/guide/cereali/"
+    }
+  ],
+  "windows": [
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "wheat",
+      "notes": "Soft wheat autumn sowing: from 2nd half of October (AIAB FVG: late-Oct – early-Nov).",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-er-dpi-2021",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "wheat",
+      "notes": "Harvest July — secondary source only (ER DPI states no month; see gaps).",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-ortodacoltivare",
+      "startMonth": 7,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "durum-wheat",
+      "notes": "Autumn sowing: from 2nd half of October.",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-er-dpi-2021",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "durum-wheat",
+      "notes": "Harvest July (autumn-sown; secondary source only — see gaps).",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-ortodacoltivare",
+      "startMonth": 7,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 6,
+      "itemSlug": "maize",
+      "notes": "1st sowing April; delayed May; 2nd sowing June (precocity-class table). Harvest month NOT FOUND — see gaps.",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-er-nta-mais-2025",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 4,
+      "itemSlug": "rice",
+      "notes": "Rice sown April (N near sowing; no autumn-winter N).",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-agronotizie-riso",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 10,
+      "itemSlug": "rice",
+      "notes": "Rice harvested late September – October.",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-in-lombardia-riso",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "rice",
+      "notes": "Rice sown April–May (Po Valley / Lombardy, Pavia area).",
+      "regionSlug": "it-lombardy",
+      "sourceKey": "it-agronotizie-riso",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 10,
+      "itemSlug": "rice",
+      "notes": "Rice harvested September – October (Regione Lombardia).",
+      "regionSlug": "it-lombardy",
+      "sourceKey": "it-in-lombardia-riso",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "tomato",
+      "notes": "Industry tomato transplant end-April – May (seedling thermal acclimatisation at least until end of April). Harvest month NOT FOUND — see gaps.",
+      "regionSlug": "it-emilia-romagna",
+      "sourceKey": "it-er-bollettino-2021",
+      "startMonth": 4,
+      "verificationStatus": "under_review",
+      "verificationNote": "Activity mismatch: research (Regione ER Bollettino prod. integrata n.8, 08/04/2021) documents industry tomato TRANSPLANTED end-April-May; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+    }
+  ]
+}

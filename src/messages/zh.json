@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "locale": "zh",
+    "name": "Chinese (Simplified)",
+    "nativeName": "简体中文",
+    "dir": "ltr",
+    "status": "machine_translated",
+    "note": "AI-translated draft (2026-10-06) — NOT native-reviewed"
+  },
+  "calculator": {},
+  "common": {},
+  "faq": {},
+  "footer": {},
+  "home": {
+    "planting": {
+      "noCountryTitle": "您在哪里种植？",
+      "noCountryDesc": "选择您的国家，查看本月种植什么——仅限经过验证的播种期。",
+      "showingFor": "正在显示：",
+      "changeCountry": "更改",
+      "viewCalendar": "查看完整种植日历",
+      "noItemsTitle": "本月尚无经过验证的内容",
+      "noItemsHint": "我们尚未验证该地区本月的任何播种期。"
+    }
+  },
+  "language": {},
+  "nav": {},
+  "plantDoctor": {},
+  "growing": {},
+  "calendar": {
+    "catFruit": "水果",
+    "catHerb": "香草",
+    "catFlower": "花卉",
+    "catOther": "其他植物",
+    "activitySOW": "现在播种",
+    "activityTRANSPLANT": "现在移栽",
+    "activityPLANT": "现在种植",
+    "activityHARVEST": "收获期",
+    "activityLAND_PREPARATION": "整地",
+    "viewGuide": "查看种植指南",
+    "plantingWindow": "播种期",
+    "appliesTo": "适用于",
+    "emptyRegionTitle": "该地区尚无经过验证的种植信息。"
+  },
+  "garden": {},
+  "tools": {},
+  "blog": {},
+  "fertilizers": {},
+  "chart": {},
+  "auth": {},
+  "country": {
+    "selectCountry": "国家",
+    "selectRegion": "地区 / 省",
+    "selectedCountry": "所选国家"
+  }
+}

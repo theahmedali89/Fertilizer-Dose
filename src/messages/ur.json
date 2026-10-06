@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "locale": "ur",
+    "name": "Urdu",
+    "nativeName": "اردو",
+    "dir": "rtl",
+    "status": "machine_translated",
+    "note": "AI-translated draft (2026-10-06) — NOT native-reviewed"
+  },
+  "calculator": {},
+  "common": {},
+  "faq": {},
+  "footer": {},
+  "home": {
+    "planting": {
+      "noCountryTitle": "آپ کہاں کاشت کرتے ہیں؟",
+      "noCountryDesc": "اپنا ملک منتخب کریں تاکہ دیکھ سکیں اس ماہ کیا لگائیں — صرف تصدیق شدہ اوقات۔",
+      "showingFor": "دکھایا جا رہا ہے برائے",
+      "changeCountry": "تبدیل کریں",
+      "viewCalendar": "مکمل بوائی کیلنڈر دیکھیں",
+      "noItemsTitle": "اس ماہ کے لیے ابھی کچھ تصدیق شدہ نہیں",
+      "noItemsHint": "ہم نے اس علاقے اور ماہ کے لیے ابھی کوئی بوائی کا وقت تصدیق نہیں کیا۔"
+    }
+  },
+  "language": {},
+  "nav": {},
+  "plantDoctor": {},
+  "growing": {},
+  "calendar": {
+    "catFruit": "پھل",
+    "catHerb": "جڑی بوٹیاں",
+    "catFlower": "پھول",
+    "catOther": "دیگر پودے",
+    "activitySOW": "اب بوئیں",
+    "activityTRANSPLANT": "اب پنیری منتقل کریں",
+    "activityPLANT": "اب لگائیں",
+    "activityHARVEST": "فصل کاٹنے کا وقت",
+    "activityLAND_PREPARATION": "زمین تیار کریں",
+    "viewGuide": "کاشت کی رہنمائی دیکھیں",
+    "plantingWindow": "بوائی کا وقت",
+    "appliesTo": "اس پر لاگو ہوتا ہے",
+    "emptyRegionTitle": "اس علاقے کے لیے تصدیق شدہ بوائی کی معلومات ابھی دستیاب نہیں ہیں۔"
+  },
+  "garden": {},
+  "tools": {},
+  "blog": {},
+  "fertilizers": {},
+  "chart": {},
+  "auth": {},
+  "country": {
+    "selectCountry": "ملک",
+    "selectRegion": "علاقہ / صوبہ",
+    "selectedCountry": "منتخب ملک"
+  }
+}

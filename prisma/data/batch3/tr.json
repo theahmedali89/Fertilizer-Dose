@@ -1,1 +1,375 @@
-{"country":{"code":"TR","defaultUnit":"hectare","name":"Türkiye","slug":"turkiye"},"newRegions":[{"countryCode":"TR","name":"Central Anatolia","slug":"tr-central-anatolia"},{"countryCode":"TR","name":"Aegean","slug":"tr-aegean"},{"countryCode":"TR","name":"Mediterranean (Çukurova)","slug":"tr-mediterranean"},{"countryCode":"TR","name":"Southeast Anatolia","slug":"tr-southeast"},{"countryCode":"TR","name":"Thrace","slug":"tr-thrace"}],"recommendations":[{"countryCode":"TR","growthStage":null,"irrigationContext":null,"itemSlug":"wheat","k2o":70,"n":85,"notes":"Original: N 8-9, P2O5 8-9, K2O 6-8 kg/da (x10). Midpoints of the first two (low) soil-test classes from Çizelge 1 (N), 22 (P), 13 (K). Read the dose from the soil-analysis table — not a fixed blanket rate.","p2o5":85,"regionSlug":"tr-central-anatolia","soilContext":"Rainfed (kuru), soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":"Bread wheat","verificationStatus":"verified"},{"countryCode":"TR","growthStage":null,"irrigationContext":null,"itemSlug":"barley","k2o":null,"n":75,"notes":"Original: N 7-8, P2O5 7-8 kg/da (x10). K2O for barley is absent from the Orta Anadolu potassium table (Çizelge 13 lists Buğday/Mısır only) — seeded as null, not interpolated.","p2o5":75,"regionSlug":"tr-central-anatolia","soilContext":"Rainfed (kuru), soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":null,"verificationStatus":"verified"},{"countryCode":"TR","growthStage":null,"irrigationContext":"irrigated","itemSlug":"cotton","k2o":115,"n":150,"notes":"Original: N 14-16, P2O5 8-9, K2O 10-13 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 7 (N), 24 (P), 18 (K). Soil-test based, not a fixed rate.","p2o5":85,"regionSlug":"tr-aegean","soilContext":"Irrigated (sulu), soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":null,"verificationStatus":"verified"},{"countryCode":"TR","growthStage":null,"irrigationContext":"irrigated","itemSlug":"cotton","k2o":120,"n":145,"notes":"Original: N 14-15, P2O5 8-10, K2O 11-13 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 5 (N), 23 (P), 14 (K). Region produces >60% of Türkiye's cotton (GAP BKİ).","p2o5":90,"regionSlug":"tr-southeast","soilContext":"Irrigated (sulu), soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":null,"verificationStatus":"verified"},{"countryCode":"TR","growthStage":null,"irrigationContext":null,"itemSlug":"sunflower","k2o":null,"n":95,"notes":"Original: N 9-10, P2O5 9-10 kg/da (x10). No Trakya (Thrace) potassium table exists in the source — K2O seeded as null, not interpolated. Predominantly rainfed (kuru) oilseed in Thrace.","p2o5":95,"regionSlug":"tr-thrace","soilContext":"Rainfed (kuru) oilseed, soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":"Oilseed sunflower","verificationStatus":"verified"},{"countryCode":"TR","growthStage":null,"irrigationContext":"irrigated","itemSlug":"maize","k2o":120,"n":185,"notes":"Original: N 18-19, P2O5 12-13, K2O 10-14 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 9 (N), 26 (P), 10 (K).","p2o5":125,"regionSlug":"tr-mediterranean","soilContext":"Grain maize, irrigated (sulu), soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":null,"verificationStatus":"verified"},{"countryCode":"TR","growthStage":null,"irrigationContext":"irrigated","itemSlug":"maize","k2o":115,"n":165,"notes":"Original: N 16-17, P2O5 11-12, K2O 10-13 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 5 (N), 23 (P), 14 (K). 2nd-crop maize after wheat has separate slightly higher N values (not seeded).","p2o5":115,"regionSlug":"tr-southeast","soilContext":"Grain maize, irrigated (sulu), soil-test table, first two classes","sourceKey":"tr-tagam-guide","variety":null,"verificationStatus":"verified"}],"refused":[{"reason":"The Güçdemir 2006 Orta Anadolu potassium table (Çizelge 13) lists wheat and maize only — no barley K values; not found elsewhere in this research pass","what":"K2O for barley (Central Anatolia)"},{"reason":"No Trakya (Thrace) potassium table exists in the source document (K tables cover other regions, not Thrace); not found elsewhere","what":"K2O for sunflower (Thrace)"},{"reason":"Çizelge 10 (Akdeniz K table) does not list cotton; cotton K exists for Ege, Güneydoğu, Doğu Anadolu only","what":"K2O for cotton (Mediterranean/Çukurova)"},{"reason":"Mid-September field-visit reporting (sarayhaberler.com.tr) places active harvest in September; the window end is unverified — November end not confirmed by a named source","what":"Southeast Anatolia cotton harvest window"}],"sources":[{"country":"TR","key":"tr-tagam-guide","notes":"Regional NPK soil-test tables (Çizelge 1-27). 2006 vintage; read doses from soil-analysis classes, never as fixed rates. Values seeded are the first two (low) classes converted kg/da x10.","organization":"Toprak Gübre ve Su Kaynakları Merkez Araştırma Enstitüsü (TAGEM institute)","sourceType":"research","title":"İ. Güçdemir (2006) Türkiye Gübre ve Gübreleme Rehberi, Gen. Yayın No: 213, Tek. Yayın No: T69","url":"https://tazehayat.com.tr/wp-content/uploads/2026/04/TOPRAKSU-GUBRE-TAVSIYE-Verileri.pdf"},{"country":"TR","key":"tr-toros-wheat","notes":"Rainfed wheat 250-300 kg/da target: ~55-65 kg N/ha + ~55-65 kg P2O5/ha, 0 K — consistent with the lower end of the TAGEM tables. Barley: reduce vs wheat.","organization":"Toros Tarım (Prof. Dr. Habil Çolakoğlu)","sourceType":"industry","title":"Buğday ve Arpa Gübrelemesi — balanced wheat/barley fertilization guide","url":"https://www.toros.com.tr/documents/TARIMSAL/Çiftçi%20Dostu/Gübreleme%20Önerileri/bugday-arpa-dengeli.pdf"},{"country":"TR","key":"tr-gaziantep-maize","notes":"Economic optimum 18 kg N/da + 7-9 kg P/da (180 N / 70-90 P2O5 kg/ha); half N + all P at sowing. Lower than the soil-test tables' upper end.","organization":"Gaziantep Tarım ve Orman İl Müdürlüğü","sourceType":"government","title":"Mısır Tarımı (maize cultivation brochure)","url":"https://gaziantep.tarimorman.gov.tr/BelgelerArsiv/kutumenu/bro%C5%9F%C3%BCr/Tarla%20Bitkileri/misirtarimi.pdf"},{"country":"TR","key":"tr-gaziantep-wheat","notes":"All P at sowing with seedbed; N split: half at sowing (sulfate), half at end of tillering/beginning of stem elongation (nitrate).","organization":"Gaziantep Tarım ve Orman İl Müdürlüğü","sourceType":"government","title":"Buğday (wheat cultivation brochure)","url":"https://gaziantep.tarimorman.gov.tr/BelgelerArsiv/kutumenu/bro%C5%9F%C3%BCr/Tarla%20Bitkileri/bugday.pdf"},{"country":"TR","key":"tr-wheat-calendar","notes":"Sowing Oct-Nov (barley late Sep-Oct); harvest Jun-Jul. Harvest Jun-Jul per AGRO TV Konya reporting (https://www.agrotv.com.tr/konya-ovasinda-rekor-beklenen-hasat-sezonu-basladi); barley harvest ~15-20 days before wheat.","organization":"KOMHA (citing agricultural advisors)","sourceType":"news","title":"Kışlık tahıllarda ekim zamanı bölgelere göre değişiyor (2026-10-04)","url":"https://komha.net/haber/kislik-tahillarda-ekim-zamani-bolgelere-gore-degisiyor-14763"},{"country":"TR","key":"tr-cotton-aegean-calendar","notes":"Sowing Apr-May (soil >=15 °C). Harvest Aug-Sep per Aydın/TARİŞ reporting (https://yandex.com.tr/gundem/business/aydin-da-sezonun-ilk-pamugu-100-tl-3562640).","organization":"İzmir Ticaret Borsası / Ege Üniversitesi Ziraat Fakültesi","sourceType":"research","title":"Ege Bölgesi 2015-2016 pamuk rekolte raporu (cotton yield report)","url":"http://itb.org.tr/dosya/rekolteraporu/20152016-sezonu-ege-bolgesi-pamuk-rekolte-tahmini-1.pdf?v=1445954189492"},{"country":"TR","key":"tr-cotton-se-calendar","notes":"Sowing per the 15 °C soil-temperature rule (Tarım ve Orman Bakanlığı criteria). >60% of TR cotton from Southeast (GAP BKİ, sarayhaberler.com.tr 2026-09-17). Harvest window end NOT confirmed — no harvest window seeded.","organization":"nefisyemektarifleri.com (Ministry sowing criteria)","sourceType":"news","title":"Pamuk nerede yetişir — cotton regions & Ministry sowing rule","url":"https://www.nefisyemektarifleri.com/blog/pamuk-nerede-yetisir/"},{"country":"TR","key":"tr-sunflower-calendar","notes":"Sow early Apr-mid May (regional research); harvest mid-Aug to end Sep per Trakya Birlik (https://habertrak.com.tr/gundem/aycicegi-on-alim-fiyatini-aciklandi-h148332.html).","organization":"tr.wikipedia.org Şablon:GM/2020-08-05 (regional research)","sourceType":"research","title":"Ayçiçeği yetiştiriciliği — sunflower cultivation calendar","url":"https://tr.wikipedia.org/wiki/%C5%9Eablon:GM/2020-08-05"},{"country":"TR","key":"tr-maize-calendar","notes":"Sowing late Apr-mid May (Gaziantep); Çukurova (Kozan) sowing reported 10 Mar 2026 (https://www.agrotv.com.tr/cukurovada-yagis-umudu-misir-ve-aycicegi-ekimi-basladi). Harvest from early Aug (Adana, 2025).","organization":"Gaziantep Tarım ve Orman İl Müdürlüğü","sourceType":"government","title":"Mısır Tarımı — sowing guidance","url":"https://gaziantep.tarimorman.gov.tr/BelgelerArsiv/kutumenu/bro%C5%9F%C3%BCr/Tarla%20Bitkileri/misirtarimi.pdf"}],"windows":[{"activityType":"SOW","endMonth":11,"itemSlug":"wheat","notes":"Central Anatolia winter wheat sown Oct-Nov (per agricultural advisors).","regionSlug":"tr-central-anatolia","sourceKey":"tr-wheat-calendar","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"wheat","notes":"Wheat harvest Jun-Jul (Konya plain harvest began 24 Jun 2026; TMO purchases from 22 Jun 2026).","regionSlug":"tr-central-anatolia","sourceKey":"tr-wheat-calendar","startMonth":6,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":10,"itemSlug":"barley","notes":"Barley sown late Sep-Oct (slightly ahead of wheat).","regionSlug":"tr-central-anatolia","sourceKey":"tr-wheat-calendar","startMonth":9,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":6,"itemSlug":"barley","notes":"Barley harvested in June, ~15-20 days before wheat (Konya).","regionSlug":"tr-central-anatolia","sourceKey":"tr-wheat-calendar","startMonth":6,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"cotton","notes":"Aegean cotton sown Apr-May; soil temperature >=15 °C is the sowing trigger.","regionSlug":"tr-aegean","sourceKey":"tr-cotton-aegean-calendar","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":9,"itemSlug":"cotton","notes":"Aegean (Söke/Aydın) cotton harvest Aug-Sep.","regionSlug":"tr-aegean","sourceKey":"tr-cotton-aegean-calendar","startMonth":8,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"cotton","notes":"Southeast cotton sown Apr-May per the 15 °C soil-temperature rule. Harvest window end unverified — no harvest window seeded.","regionSlug":"tr-southeast","sourceKey":"tr-cotton-se-calendar","startMonth":4,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"sunflower","notes":"Thrace oilseed sunflower sown early Apr-mid May; soil >=8-10 °C at germination; early sowing raises yield.","regionSlug":"tr-thrace","sourceKey":"tr-sunflower-calendar","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":9,"itemSlug":"sunflower","notes":"Thrace sunflower harvest mid-Aug to end Sep (Trakya Birlik).","regionSlug":"tr-thrace","sourceKey":"tr-sunflower-calendar","startMonth":8,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"maize","notes":"Mediterranean/Çukurova grain maize sown late Apr-mid May (Çukurova sowing reported from 10 Mar 2026).","regionSlug":"tr-mediterranean","sourceKey":"tr-maize-calendar","startMonth":3,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":9,"itemSlug":"maize","notes":"Mediterranean maize harvest from early Aug (Adana, 2025).","regionSlug":"tr-mediterranean","sourceKey":"tr-maize-calendar","startMonth":8,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"maize","notes":"Southeast grain maize sown late Apr-mid May. 2nd-crop maize after wheat: sow Jun-Jul, harvest Oct-Nov (not seeded as a separate window).","regionSlug":"tr-southeast","sourceKey":"tr-maize-calendar","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":9,"itemSlug":"maize","notes":"Southeast maize harvest Aug-Sep (parallel to Mediterranean timing).","regionSlug":"tr-southeast","sourceKey":"tr-maize-calendar","startMonth":8,"verificationStatus":"under_review"}]}
+{
+  "country": {
+    "code": "TR",
+    "defaultUnit": "hectare",
+    "name": "Türkiye",
+    "slug": "turkiye"
+  },
+  "newRegions": [
+    {
+      "countryCode": "TR",
+      "name": "Central Anatolia",
+      "slug": "tr-central-anatolia"
+    },
+    {
+      "countryCode": "TR",
+      "name": "Aegean",
+      "slug": "tr-aegean"
+    },
+    {
+      "countryCode": "TR",
+      "name": "Mediterranean (Çukurova)",
+      "slug": "tr-mediterranean"
+    },
+    {
+      "countryCode": "TR",
+      "name": "Southeast Anatolia",
+      "slug": "tr-southeast"
+    },
+    {
+      "countryCode": "TR",
+      "name": "Thrace",
+      "slug": "tr-thrace"
+    }
+  ],
+  "recommendations": [
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "wheat",
+      "k2o": 70,
+      "n": 85,
+      "notes": "Original: N 8-9, P2O5 8-9, K2O 6-8 kg/da (x10). Midpoints of the first two (low) soil-test classes from Çizelge 1 (N), 22 (P), 13 (K). Read the dose from the soil-analysis table — not a fixed blanket rate.",
+      "p2o5": 85,
+      "regionSlug": "tr-central-anatolia",
+      "soilContext": "Rainfed (kuru), soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": "Bread wheat",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "barley",
+      "k2o": null,
+      "n": 75,
+      "notes": "Original: N 7-8, P2O5 7-8 kg/da (x10). K2O for barley is absent from the Orta Anadolu potassium table (Çizelge 13 lists Buğday/Mısır only) — seeded as null, not interpolated.",
+      "p2o5": 75,
+      "regionSlug": "tr-central-anatolia",
+      "soilContext": "Rainfed (kuru), soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": "irrigated",
+      "itemSlug": "cotton",
+      "k2o": 115,
+      "n": 150,
+      "notes": "Original: N 14-16, P2O5 8-9, K2O 10-13 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 7 (N), 24 (P), 18 (K). Soil-test based, not a fixed rate.",
+      "p2o5": 85,
+      "regionSlug": "tr-aegean",
+      "soilContext": "Irrigated (sulu), soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": "irrigated",
+      "itemSlug": "cotton",
+      "k2o": 120,
+      "n": 145,
+      "notes": "Original: N 14-15, P2O5 8-10, K2O 11-13 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 5 (N), 23 (P), 14 (K). Region produces >60% of Türkiye's cotton (GAP BKİ).",
+      "p2o5": 90,
+      "regionSlug": "tr-southeast",
+      "soilContext": "Irrigated (sulu), soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "sunflower",
+      "k2o": null,
+      "n": 95,
+      "notes": "Original: N 9-10, P2O5 9-10 kg/da (x10). No Trakya (Thrace) potassium table exists in the source — K2O seeded as null, not interpolated. Predominantly rainfed (kuru) oilseed in Thrace.",
+      "p2o5": 95,
+      "regionSlug": "tr-thrace",
+      "soilContext": "Rainfed (kuru) oilseed, soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": "Oilseed sunflower",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": "irrigated",
+      "itemSlug": "maize",
+      "k2o": 120,
+      "n": 185,
+      "notes": "Original: N 18-19, P2O5 12-13, K2O 10-14 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 9 (N), 26 (P), 10 (K).",
+      "p2o5": 125,
+      "regionSlug": "tr-mediterranean",
+      "soilContext": "Grain maize, irrigated (sulu), soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "TR",
+      "growthStage": null,
+      "irrigationContext": "irrigated",
+      "itemSlug": "maize",
+      "k2o": 115,
+      "n": 165,
+      "notes": "Original: N 16-17, P2O5 11-12, K2O 10-13 kg/da (x10). Midpoints of the first two soil-test classes from Çizelge 5 (N), 23 (P), 14 (K). 2nd-crop maize after wheat has separate slightly higher N values (not seeded).",
+      "p2o5": 115,
+      "regionSlug": "tr-southeast",
+      "soilContext": "Grain maize, irrigated (sulu), soil-test table, first two classes",
+      "sourceKey": "tr-tagam-guide",
+      "variety": null,
+      "verificationStatus": "verified"
+    }
+  ],
+  "refused": [
+    {
+      "reason": "The Güçdemir 2006 Orta Anadolu potassium table (Çizelge 13) lists wheat and maize only — no barley K values; not found elsewhere in this research pass",
+      "what": "K2O for barley (Central Anatolia)"
+    },
+    {
+      "reason": "No Trakya (Thrace) potassium table exists in the source document (K tables cover other regions, not Thrace); not found elsewhere",
+      "what": "K2O for sunflower (Thrace)"
+    },
+    {
+      "reason": "Çizelge 10 (Akdeniz K table) does not list cotton; cotton K exists for Ege, Güneydoğu, Doğu Anadolu only",
+      "what": "K2O for cotton (Mediterranean/Çukurova)"
+    },
+    {
+      "reason": "Mid-September field-visit reporting (sarayhaberler.com.tr) places active harvest in September; the window end is unverified — November end not confirmed by a named source",
+      "what": "Southeast Anatolia cotton harvest window"
+    }
+  ],
+  "sources": [
+    {
+      "country": "TR",
+      "key": "tr-tagam-guide",
+      "notes": "Regional NPK soil-test tables (Çizelge 1-27). 2006 vintage; read doses from soil-analysis classes, never as fixed rates. Values seeded are the first two (low) classes converted kg/da x10.",
+      "organization": "Toprak Gübre ve Su Kaynakları Merkez Araştırma Enstitüsü (TAGEM institute)",
+      "sourceType": "research",
+      "title": "İ. Güçdemir (2006) Türkiye Gübre ve Gübreleme Rehberi, Gen. Yayın No: 213, Tek. Yayın No: T69",
+      "url": "https://tazehayat.com.tr/wp-content/uploads/2026/04/TOPRAKSU-GUBRE-TAVSIYE-Verileri.pdf"
+    },
+    {
+      "country": "TR",
+      "key": "tr-toros-wheat",
+      "notes": "Rainfed wheat 250-300 kg/da target: ~55-65 kg N/ha + ~55-65 kg P2O5/ha, 0 K — consistent with the lower end of the TAGEM tables. Barley: reduce vs wheat.",
+      "organization": "Toros Tarım (Prof. Dr. Habil Çolakoğlu)",
+      "sourceType": "industry",
+      "title": "Buğday ve Arpa Gübrelemesi — balanced wheat/barley fertilization guide",
+      "url": "https://www.toros.com.tr/documents/TARIMSAL/Çiftçi%20Dostu/Gübreleme%20Önerileri/bugday-arpa-dengeli.pdf"
+    },
+    {
+      "country": "TR",
+      "key": "tr-gaziantep-maize",
+      "notes": "Economic optimum 18 kg N/da + 7-9 kg P/da (180 N / 70-90 P2O5 kg/ha); half N + all P at sowing. Lower than the soil-test tables' upper end.",
+      "organization": "Gaziantep Tarım ve Orman İl Müdürlüğü",
+      "sourceType": "government",
+      "title": "Mısır Tarımı (maize cultivation brochure)",
+      "url": "https://gaziantep.tarimorman.gov.tr/BelgelerArsiv/kutumenu/bro%C5%9F%C3%BCr/Tarla%20Bitkileri/misirtarimi.pdf"
+    },
+    {
+      "country": "TR",
+      "key": "tr-gaziantep-wheat",
+      "notes": "All P at sowing with seedbed; N split: half at sowing (sulfate), half at end of tillering/beginning of stem elongation (nitrate).",
+      "organization": "Gaziantep Tarım ve Orman İl Müdürlüğü",
+      "sourceType": "government",
+      "title": "Buğday (wheat cultivation brochure)",
+      "url": "https://gaziantep.tarimorman.gov.tr/BelgelerArsiv/kutumenu/bro%C5%9F%C3%BCr/Tarla%20Bitkileri/bugday.pdf"
+    },
+    {
+      "country": "TR",
+      "key": "tr-wheat-calendar",
+      "notes": "Sowing Oct-Nov (barley late Sep-Oct); harvest Jun-Jul. Harvest Jun-Jul per AGRO TV Konya reporting (https://www.agrotv.com.tr/konya-ovasinda-rekor-beklenen-hasat-sezonu-basladi); barley harvest ~15-20 days before wheat.",
+      "organization": "KOMHA (citing agricultural advisors)",
+      "sourceType": "news",
+      "title": "Kışlık tahıllarda ekim zamanı bölgelere göre değişiyor (2026-10-04)",
+      "url": "https://komha.net/haber/kislik-tahillarda-ekim-zamani-bolgelere-gore-degisiyor-14763"
+    },
+    {
+      "country": "TR",
+      "key": "tr-cotton-aegean-calendar",
+      "notes": "Sowing Apr-May (soil >=15 °C). Harvest Aug-Sep per Aydın/TARİŞ reporting (https://yandex.com.tr/gundem/business/aydin-da-sezonun-ilk-pamugu-100-tl-3562640).",
+      "organization": "İzmir Ticaret Borsası / Ege Üniversitesi Ziraat Fakültesi",
+      "sourceType": "research",
+      "title": "Ege Bölgesi 2015-2016 pamuk rekolte raporu (cotton yield report)",
+      "url": "http://itb.org.tr/dosya/rekolteraporu/20152016-sezonu-ege-bolgesi-pamuk-rekolte-tahmini-1.pdf?v=1445954189492"
+    },
+    {
+      "country": "TR",
+      "key": "tr-cotton-se-calendar",
+      "notes": "Sowing per the 15 °C soil-temperature rule (Tarım ve Orman Bakanlığı criteria). >60% of TR cotton from Southeast (GAP BKİ, sarayhaberler.com.tr 2026-09-17). Harvest window end NOT confirmed — no harvest window seeded.",
+      "organization": "nefisyemektarifleri.com (Ministry sowing criteria)",
+      "sourceType": "news",
+      "title": "Pamuk nerede yetişir — cotton regions & Ministry sowing rule",
+      "url": "https://www.nefisyemektarifleri.com/blog/pamuk-nerede-yetisir/"
+    },
+    {
+      "country": "TR",
+      "key": "tr-sunflower-calendar",
+      "notes": "Sow early Apr-mid May (regional research); harvest mid-Aug to end Sep per Trakya Birlik (https://habertrak.com.tr/gundem/aycicegi-on-alim-fiyatini-aciklandi-h148332.html).",
+      "organization": "tr.wikipedia.org Şablon:GM/2020-08-05 (regional research)",
+      "sourceType": "research",
+      "title": "Ayçiçeği yetiştiriciliği — sunflower cultivation calendar",
+      "url": "https://tr.wikipedia.org/wiki/%C5%9Eablon:GM/2020-08-05"
+    },
+    {
+      "country": "TR",
+      "key": "tr-maize-calendar",
+      "notes": "Sowing late Apr-mid May (Gaziantep); Çukurova (Kozan) sowing reported 10 Mar 2026 (https://www.agrotv.com.tr/cukurovada-yagis-umudu-misir-ve-aycicegi-ekimi-basladi). Harvest from early Aug (Adana, 2025).",
+      "organization": "Gaziantep Tarım ve Orman İl Müdürlüğü",
+      "sourceType": "government",
+      "title": "Mısır Tarımı — sowing guidance",
+      "url": "https://gaziantep.tarimorman.gov.tr/BelgelerArsiv/kutumenu/bro%C5%9F%C3%BCr/Tarla%20Bitkileri/misirtarimi.pdf"
+    }
+  ],
+  "windows": [
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "wheat",
+      "notes": "Central Anatolia winter wheat sown Oct-Nov (per agricultural advisors).",
+      "regionSlug": "tr-central-anatolia",
+      "sourceKey": "tr-wheat-calendar",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "wheat",
+      "notes": "Wheat harvest Jun-Jul (Konya plain harvest began 24 Jun 2026; TMO purchases from 22 Jun 2026).",
+      "regionSlug": "tr-central-anatolia",
+      "sourceKey": "tr-wheat-calendar",
+      "startMonth": 6,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 10,
+      "itemSlug": "barley",
+      "notes": "Barley sown late Sep-Oct (slightly ahead of wheat).",
+      "regionSlug": "tr-central-anatolia",
+      "sourceKey": "tr-wheat-calendar",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 6,
+      "itemSlug": "barley",
+      "notes": "Barley harvested in June, ~15-20 days before wheat (Konya).",
+      "regionSlug": "tr-central-anatolia",
+      "sourceKey": "tr-wheat-calendar",
+      "startMonth": 6,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "cotton",
+      "notes": "Aegean cotton sown Apr-May; soil temperature >=15 °C is the sowing trigger.",
+      "regionSlug": "tr-aegean",
+      "sourceKey": "tr-cotton-aegean-calendar",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 9,
+      "itemSlug": "cotton",
+      "notes": "Aegean (Söke/Aydın) cotton harvest Aug-Sep.",
+      "regionSlug": "tr-aegean",
+      "sourceKey": "tr-cotton-aegean-calendar",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "cotton",
+      "notes": "Southeast cotton sown Apr-May per the 15 °C soil-temperature rule. Harvest window end unverified — no harvest window seeded.",
+      "regionSlug": "tr-southeast",
+      "sourceKey": "tr-cotton-se-calendar",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "sunflower",
+      "notes": "Thrace oilseed sunflower sown early Apr-mid May; soil >=8-10 °C at germination; early sowing raises yield.",
+      "regionSlug": "tr-thrace",
+      "sourceKey": "tr-sunflower-calendar",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 9,
+      "itemSlug": "sunflower",
+      "notes": "Thrace sunflower harvest mid-Aug to end Sep (Trakya Birlik).",
+      "regionSlug": "tr-thrace",
+      "sourceKey": "tr-sunflower-calendar",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "maize",
+      "notes": "Mediterranean/Çukurova grain maize sown late Apr-mid May (Çukurova sowing reported from 10 Mar 2026).",
+      "regionSlug": "tr-mediterranean",
+      "sourceKey": "tr-maize-calendar",
+      "startMonth": 3,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 9,
+      "itemSlug": "maize",
+      "notes": "Mediterranean maize harvest from early Aug (Adana, 2025).",
+      "regionSlug": "tr-mediterranean",
+      "sourceKey": "tr-maize-calendar",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "maize",
+      "notes": "Southeast grain maize sown late Apr-mid May. 2nd-crop maize after wheat: sow Jun-Jul, harvest Oct-Nov (not seeded as a separate window).",
+      "regionSlug": "tr-southeast",
+      "sourceKey": "tr-maize-calendar",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 9,
+      "itemSlug": "maize",
+      "notes": "Southeast maize harvest Aug-Sep (parallel to Mediterranean timing).",
+      "regionSlug": "tr-southeast",
+      "sourceKey": "tr-maize-calendar",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    }
+  ]
+}

@@ -280,7 +280,14 @@
       "eyebrow": "Ekim takvimi",
       "title": "Bu ay ne ekilmeli?",
       "desc": "İlinize özel bölge duyarlı ekim takvimi — herkese uyan tahminler yok. Her dönem kaynaklı ve doğrulama rozetlidir.",
-      "cta": "Ekim takvimini aç"
+      "cta": "Ekim takvimini aç",
+      "noCountryTitle": "Nerede yetiştiriyorsunuz?",
+      "noCountryDesc": "Bu ay ne ekeceğinizi görmek için ülkenizi seçin — yalnızca doğrulanmış dönemler.",
+      "showingFor": "Gösterilen:",
+      "changeCountry": "Değiştir",
+      "viewCalendar": "Tüm ekim takvimini görüntüle",
+      "noItemsTitle": "Bu ay için henüz doğrulanmış bir şey yok",
+      "noItemsHint": "Bu bölge ve ay için henüz hiçbir ekim dönemi doğrulamadık."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Ekim verisi mevcut",
       "noDataYet": "Veri doğrulanıyor",
       "openCalendar": "Ekim takvimini aç"
-    }
+    },
+    "catFruit": "Meyveler",
+    "catHerb": "Otlar",
+    "catFlower": "Çiçekler",
+    "catOther": "Diğer bitkiler",
+    "activitySOW": "Şimdi ek",
+    "activityTRANSPLANT": "Şimdi şaşırt",
+    "activityPLANT": "Şimdi dik",
+    "activityHARVEST": "Hasat dönemi",
+    "activityLAND_PREPARATION": "Araziyi hazırla",
+    "viewGuide": "Yetiştirme kılavuzunu görüntüle",
+    "plantingWindow": "Ekim dönemi",
+    "appliesTo": "Şunlar için geçerli",
+    "emptyRegionTitle": "Bu bölge için henüz doğrulanmış ekim bilgisi bulunmamaktadır."
   },
   "garden": {
     "metaTitle": "Bahçem — Parselleri, Ekimleri ve Gübre Planlarını Takip Edin",
@@ -579,5 +599,10 @@
     "signOut": "Çıkış yap",
     "adminLink": "Yönetici panelini aç",
     "gardenNote": "Giriş yaptığınızda bahçeniz artık hesabınızla senkronize olur."
+  },
+  "country": {
+    "selectCountry": "Ülke",
+    "selectRegion": "Bölge / il",
+    "selectedCountry": "Seçili ülke"
   }
 }

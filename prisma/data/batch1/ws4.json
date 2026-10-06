@@ -679,7 +679,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "brri-rice-doses",
       "startMonth": 3,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -690,7 +690,8 @@
       "regionSlug": "bd-national",
       "sourceKey": "brri-rice-doses",
       "startMonth": 6,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Activity mismatch: research (BRRI/BAMIS) documents Aman (mostly T. Aman) as TRANSPLANTED in Jun-Jul; no nursery/sowing window is given. Window records SOW — should likely be TRANSPLANT. Kept under_review."
     },
     {
       "activityType": "SOW",
@@ -701,7 +702,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "brri-rice-doses",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -712,7 +713,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "bari-wheat-2011",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -723,7 +724,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "maize-sowing-mdpi",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -734,7 +735,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "maize-frg-2012",
       "startMonth": 3,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -745,7 +746,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "potato-frg-2012",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -756,7 +757,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "jute-sowing-pt",
       "startMonth": 3,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -767,7 +768,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "bjri-jute",
       "startMonth": 7,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -778,7 +779,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "mustard-windows-bjagri",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -789,7 +790,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "lentil-window-jard",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -800,7 +801,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "chickpea-bjar",
       "startMonth": 10,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -811,7 +812,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "bamis-calendars",
       "startMonth": 10,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -822,7 +823,8 @@
       "regionSlug": "bd-national",
       "sourceKey": "bamis-calendars",
       "startMonth": 9,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Window spans Sep-Dec as SOW, but research (BAMIS Dhaka calendar) bounds the tomato seedbed to Sep-Oct with transplanting Oct-Dec; the SOW window extends into the transplant period. Kept under_review."
     },
     {
       "activityType": "SOW",
@@ -833,7 +835,7 @@
       "regionSlug": "bd-national",
       "sourceKey": "bamis-calendars",
       "startMonth": 11,
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "activityType": "SOW",
@@ -844,7 +846,8 @@
       "regionSlug": "bd-national",
       "sourceKey": "chili-bari-arr-2023-24",
       "startMonth": 10,
-      "verificationStatus": "under_review"
+      "verificationStatus": "under_review",
+      "verificationNote": "Window spans Oct-Dec as SOW, but research (BARI Spices Research Centre ARR 2023-24) bounds the chili seedbed to the 2nd week of Oct with transplanting late Nov-Dec; the SOW window extends into the transplant period. Kept under_review."
     },
     {
       "itemSlug": "okra",
@@ -855,7 +858,7 @@
       "harvestText": "Mar–mid Jul season",
       "notes": "9–12 Mar sowing, Tangail trial (BJAR 2022)",
       "sourceKey": "bjar-2022-atia",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "cabbage",
@@ -866,7 +869,7 @@
       "harvestText": null,
       "notes": "10–16 Nov transplanting, Tangail trial (BJAR 2022)",
       "sourceKey": "bjar-2022-atia",
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     }
   ]
 }

@@ -280,7 +280,14 @@
       "eyebrow": "播種カレンダー",
       "title": "今月は何を育てる？",
       "desc": "お住まいの地域に合わせた播種カレンダー — 画一的な推測はしません。すべての播種適期に出典と検証バッジ付き。",
-      "cta": "播種カレンダーを開く"
+      "cta": "播種カレンダーを開く",
+      "noCountryTitle": "どこで栽培していますか？",
+      "noCountryDesc": "国を選んで今月何を植えるか確認 — 検証済みの時期のみ。",
+      "showingFor": "表示中：",
+      "changeCountry": "変更",
+      "viewCalendar": "作付けカレンダー全体を見る",
+      "noItemsTitle": "今月はまだ検証済みのものがありません",
+      "noItemsHint": "この地域・この月の播種時期はまだ検証していません。"
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "播種データあり",
       "noDataYet": "データを検証中",
       "openCalendar": "播種カレンダーを開く"
-    }
+    },
+    "catFruit": "果物",
+    "catHerb": "ハーブ",
+    "catFlower": "花",
+    "catOther": "その他の植物",
+    "activitySOW": "今すぐ播種",
+    "activityTRANSPLANT": "今すぐ移植",
+    "activityPLANT": "今すぐ植付け",
+    "activityHARVEST": "収穫期",
+    "activityLAND_PREPARATION": "圃場を準備",
+    "viewGuide": "栽培ガイドを見る",
+    "plantingWindow": "播種時期",
+    "appliesTo": "対象",
+    "emptyRegionTitle": "この地域の検証済み作付け情報はまだありません。"
   },
   "garden": {
     "metaTitle": "マイガーデン — 区画・植付け・施肥計画の管理",
@@ -579,5 +599,10 @@
     "signOut": "ログアウト",
     "adminLink": "管理ダッシュボードを開く",
     "gardenNote": "ログイン中は、ガーデンがアカウントに同期されます。"
+  },
+  "country": {
+    "selectCountry": "国",
+    "selectRegion": "地域 / 州",
+    "selectedCountry": "選択中の国"
   }
 }

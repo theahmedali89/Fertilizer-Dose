@@ -280,7 +280,14 @@
       "eyebrow": "Kalendar menanam",
       "title": "Bulan ini tanam apa?",
       "desc": "Kalendar menyemai yang peka wilayah untuk provinsi anda — tiada tekaan seragam. Setiap tetingkap bersumber dan berlabel pengesahan.",
-      "cta": "Buka kalendar menanam"
+      "cta": "Buka kalendar menanam",
+      "noCountryTitle": "Di manakah anda bercucuk tanam?",
+      "noCountryDesc": "Pilih negara anda untuk melihat apa yang ditanam bulan ini — hanya tempoh yang disahkan.",
+      "showingFor": "Dipaparkan untuk:",
+      "changeCountry": "Tukar",
+      "viewCalendar": "Lihat kalendar penanaman penuh",
+      "noItemsTitle": "Tiada yang disahkan untuk bulan ini lagi",
+      "noItemsHint": "Kami belum mengesahkan sebarang tempoh penanaman untuk wilayah dan bulan ini."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Data menanam tersedia",
       "noDataYet": "Data dalam pengesahan",
       "openCalendar": "Buka kalendar menanam"
-    }
+    },
+    "catFruit": "Buah-buahan",
+    "catHerb": "Herba",
+    "catFlower": "Bunga",
+    "catOther": "Tumbuhan lain",
+    "activitySOW": "Semai sekarang",
+    "activityTRANSPLANT": "Pindah tanam sekarang",
+    "activityPLANT": "Tanam sekarang",
+    "activityHARVEST": "Musim menuai",
+    "activityLAND_PREPARATION": "Sediakan tanah",
+    "viewGuide": "Lihat panduan penanaman",
+    "plantingWindow": "Tempoh penanaman",
+    "appliesTo": "Terpakai untuk",
+    "emptyRegionTitle": "Tiada maklumat penanaman yang disahkan untuk wilayah ini lagi."
   },
   "garden": {
     "metaTitle": "Kebun Saya — Jejak Petak, Penanaman & Pelan Baja",
@@ -579,5 +599,10 @@
     "signOut": "Log keluar",
     "adminLink": "Buka papan pemuka admin",
     "gardenNote": "Kebun anda kini disegerakkan ke akaun apabila anda log masuk."
+  },
+  "country": {
+    "selectCountry": "Negara",
+    "selectRegion": "Wilayah / negeri",
+    "selectedCountry": "Negara terpilih"
   }
 }

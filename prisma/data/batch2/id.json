@@ -1,1 +1,256 @@
-{"country":{"code":"ID","defaultUnit":"hectare","name":"Indonesia","slug":"indonesia"},"newRegions":[{"countryCode":"ID","name":"Java","slug":"id-java"},{"countryCode":"ID","name":"Sumatra","slug":"id-sumatra"},{"countryCode":"ID","name":"Kalimantan","slug":"id-kalimantan"},{"countryCode":"ID","name":"Sulawesi","slug":"id-sulawesi"}],"recommendations":[{"countryCode":"ID","growthStage":"per season","itemSlug":"rice","k2o":45,"n":138,"notes":"Permentan 40/2007 midpoint: Urea 300, SP-36 75, KCl 75 kg/ha. P/K refined by PUTS soil test; N by BWD leaf chart.","p2o5":27,"regionSlug":null,"sourceKey":"permentan-2007","verificationStatus":"verified"},{"countryCode":"ID","growthStage":"musim hujan (wet season)","itemSlug":"rice","k2o":33,"n":110,"notes":"BPP extension (secondary): Urea 150 + Phonska 275. Reduce N in wet season (lodging/disease).","p2o5":28,"regionSlug":null,"sourceKey":"bpp-extension","verificationStatus":"verified"},{"countryCode":"ID","growthStage":"musim kemarau (dry season)","itemSlug":"rice","k2o":24,"n":110,"notes":"BPP extension (secondary): Urea 175 + Phonska 200 + SP-36 50.","p2o5":38,"regionSlug":null,"sourceKey":"bpp-extension","verificationStatus":"verified"},{"countryCode":"ID","growthStage":"tadah hujan (rainfed)","itemSlug":"rice","k2o":30,"n":127,"notes":"Balitbangtan: Urea 250-300, SP-36 50-75, KCl 50 + organic matter. Yields 5.0-5.8 t/ha cited.","p2o5":23,"regionSlug":null,"sourceKey":"balitbangtan-rice","verificationStatus":"verified"},{"countryCode":"ID","growthStage":"mature TM (9-13 years, peak production)","itemSlug":"palm-oil","k2o":193,"n":181,"notes":"PPKS 2005: 2.75/2.25/2.25 urea/SP-36/MOP kg/palm/yr @143 palms/ha assumption. Adjust to soil/leaf analysis.","p2o5":116,"regionSlug":null,"sourceKey":"ppks-2005","verificationStatus":"verified"},{"countryCode":"ID","itemSlug":"maize","k2o":60,"n":161,"notes":"Buku Jagung Tabel 5: Urea 350, SP-36 150, KCl 100. N/K split; P at planting.","p2o5":54,"regionSlug":null,"soilContext":"Low soil P/K","sourceKey":"buku-jagung","verificationStatus":"verified"},{"countryCode":"ID","itemSlug":"maize","k2o":45,"n":161,"notes":"Buku Jagung Tabel 5: Urea 350, SP-36 125, KCl 75.","p2o5":45,"regionSlug":null,"soilContext":"Medium soil P/K","sourceKey":"buku-jagung","verificationStatus":"verified"},{"countryCode":"ID","itemSlug":"maize","k2o":30,"n":161,"notes":"Buku Jagung Tabel 5: Urea 350, SP-36 100, KCl 50.","p2o5":36,"regionSlug":null,"soilContext":"High soil P/K","sourceKey":"buku-jagung","verificationStatus":"verified"}],"refused":[{"reason":"Indonesian rates are national + soil-test refined; no provincial tables published","what":"Region-specific NPK for Java/Sumatra/Kalimantan/Sulawesi"},{"reason":"Comes from secondary BPP extension doc; primary Balitbangtan publication not located","what":"Wet/dry rice split from primary Ministry source"},{"reason":"Exact provincial planting months not in official publications","what":"Provincial planting calendars"},{"reason":"Sulawesi is a minor palm area; national PPKS standard applies","what":"Sulawesi palm-oil specific data"}],"sources":[{"country":"ID","key":"permentan-2007","notes":"National balanced-fertilization regulation. Midpoint: Urea 300/SP-36 75/KCl 75.","organization":"Kementerian Pertanian (Ministry of Agriculture)","sourceType":"government","title":"Permentan No. 40/OT.140/4/2007 — Rekomendasi Pemupukan N, P dan K pada Padi Sawah (Site-specific NPK for lowland rice)","url":"https://pupukbersubsidi.pertanian.go.id/alokasi/assets/Buku%20jagung%20revisi%201_final.pdf"},{"country":"ID","key":"balitbangtan-rice","notes":"Rainfed rice: Urea 250-300, SP-36 50-75, KCl 50 + organic matter.","organization":"Balitbangtan (IAARD)","sourceType":"government","title":"Pedoman Pemupukan N, P, K Padi Sawah (Rice NPK guidelines)","url":"https://epublikasi.pertanian.go.id/berkala/jsl/article/download/3339/3375/4285"},{"country":"ID","key":"bpp-extension","notes":"SECONDARY source: wet/dry season Urea+Phonska rates applying Balitbangtan framework.","organization":"BPP (extension)","sourceType":"extension","title":"Pemupukan Berimbang untuk Padi Sawah (Balanced fertilization for lowland rice)","url":"https://id.scribd.com/document/374575865/Pemupukan-Berimbang"},{"country":"ID","key":"ppks-2005","notes":"Per-palm rates by age band; per-ha needs density assumption (143/ha used).","organization":"PPKS / IOPRI","sourceType":"research","title":"Oil palm fertilizer standard (2005) — TM rates by age band","url":"https://repository.itsi.ac.id/bitstream/handle/123456789/289/BDP_Bima%20Panjis.pdf?isAllowed=y&sequence=3"},{"country":"ID","key":"buku-jagung","notes":"Tabel 5: corn NPK by soil P/K status (Urea 350; SP-36 150/125/100; KCl 100/75/50).","organization":"Kementerian Pertanian (Ministry of Agriculture)","sourceType":"government","title":"Buku Jagung — Rekomendasi pemupukan N, P, K pada tanaman jagung (Corn NPK recommendations)","url":"https://pupukbersubsidi.pertanian.go.id/alokasi/assets/Buku%20jagung%20revisi%201_final.pdf"}],"windows":[{"activityType":"SOW","endMonth":12,"itemSlug":"rice","notes":"Musim hujan: plant Oct-Dec (peak Dec in West Java).","regionSlug":"id-java","sourceKey":"balitbangtan-rice","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":4,"itemSlug":"rice","notes":"Wet-season harvest Mar-Apr (West Java).","regionSlug":"id-java","sourceKey":"balitbangtan-rice","startMonth":3,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":6,"itemSlug":"rice","notes":"Musim kemarau (gadu): plant Apr-Jun.","regionSlug":"id-java","sourceKey":"balitbangtan-rice","startMonth":4,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":11,"itemSlug":"palm-oil","notes":"Plant at start of wet season (Oct-Nov). Perennial crop.","regionSlug":"id-sumatra","sourceKey":"ppks-2005","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":12,"itemSlug":"palm-oil","notes":"FFB harvest year-round (every 7-15 days).","regionSlug":"id-sumatra","sourceKey":"ppks-2005","startMonth":1,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":6,"itemSlug":"maize","notes":"Typically dry-season crop (after rice or single crop).","regionSlug":"id-java","sourceKey":"buku-jagung","startMonth":4,"verificationStatus":"under_review"}]}
+{
+  "country": {
+    "code": "ID",
+    "defaultUnit": "hectare",
+    "name": "Indonesia",
+    "slug": "indonesia"
+  },
+  "newRegions": [
+    {
+      "countryCode": "ID",
+      "name": "Java",
+      "slug": "id-java"
+    },
+    {
+      "countryCode": "ID",
+      "name": "Sumatra",
+      "slug": "id-sumatra"
+    },
+    {
+      "countryCode": "ID",
+      "name": "Kalimantan",
+      "slug": "id-kalimantan"
+    },
+    {
+      "countryCode": "ID",
+      "name": "Sulawesi",
+      "slug": "id-sulawesi"
+    }
+  ],
+  "recommendations": [
+    {
+      "countryCode": "ID",
+      "growthStage": "per season",
+      "itemSlug": "rice",
+      "k2o": 45,
+      "n": 138,
+      "notes": "Permentan 40/2007 midpoint: Urea 300, SP-36 75, KCl 75 kg/ha. P/K refined by PUTS soil test; N by BWD leaf chart.",
+      "p2o5": 27,
+      "regionSlug": null,
+      "sourceKey": "permentan-2007",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "growthStage": "musim hujan (wet season)",
+      "itemSlug": "rice",
+      "k2o": 33,
+      "n": 110,
+      "notes": "BPP extension (secondary): Urea 150 + Phonska 275. Reduce N in wet season (lodging/disease).",
+      "p2o5": 28,
+      "regionSlug": null,
+      "sourceKey": "bpp-extension",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "growthStage": "musim kemarau (dry season)",
+      "itemSlug": "rice",
+      "k2o": 24,
+      "n": 110,
+      "notes": "BPP extension (secondary): Urea 175 + Phonska 200 + SP-36 50.",
+      "p2o5": 38,
+      "regionSlug": null,
+      "sourceKey": "bpp-extension",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "growthStage": "tadah hujan (rainfed)",
+      "itemSlug": "rice",
+      "k2o": 30,
+      "n": 127,
+      "notes": "Balitbangtan: Urea 250-300, SP-36 50-75, KCl 50 + organic matter. Yields 5.0-5.8 t/ha cited.",
+      "p2o5": 23,
+      "regionSlug": null,
+      "sourceKey": "balitbangtan-rice",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "growthStage": "mature TM (9-13 years, peak production)",
+      "itemSlug": "palm-oil",
+      "k2o": 193,
+      "n": 181,
+      "notes": "PPKS 2005: 2.75/2.25/2.25 urea/SP-36/MOP kg/palm/yr @143 palms/ha assumption. Adjust to soil/leaf analysis.",
+      "p2o5": 116,
+      "regionSlug": null,
+      "sourceKey": "ppks-2005",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "itemSlug": "maize",
+      "k2o": 60,
+      "n": 161,
+      "notes": "Buku Jagung Tabel 5: Urea 350, SP-36 150, KCl 100. N/K split; P at planting.",
+      "p2o5": 54,
+      "regionSlug": null,
+      "soilContext": "Low soil P/K",
+      "sourceKey": "buku-jagung",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "itemSlug": "maize",
+      "k2o": 45,
+      "n": 161,
+      "notes": "Buku Jagung Tabel 5: Urea 350, SP-36 125, KCl 75.",
+      "p2o5": 45,
+      "regionSlug": null,
+      "soilContext": "Medium soil P/K",
+      "sourceKey": "buku-jagung",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "ID",
+      "itemSlug": "maize",
+      "k2o": 30,
+      "n": 161,
+      "notes": "Buku Jagung Tabel 5: Urea 350, SP-36 100, KCl 50.",
+      "p2o5": 36,
+      "regionSlug": null,
+      "soilContext": "High soil P/K",
+      "sourceKey": "buku-jagung",
+      "verificationStatus": "verified"
+    }
+  ],
+  "refused": [
+    {
+      "reason": "Indonesian rates are national + soil-test refined; no provincial tables published",
+      "what": "Region-specific NPK for Java/Sumatra/Kalimantan/Sulawesi"
+    },
+    {
+      "reason": "Comes from secondary BPP extension doc; primary Balitbangtan publication not located",
+      "what": "Wet/dry rice split from primary Ministry source"
+    },
+    {
+      "reason": "Exact provincial planting months not in official publications",
+      "what": "Provincial planting calendars"
+    },
+    {
+      "reason": "Sulawesi is a minor palm area; national PPKS standard applies",
+      "what": "Sulawesi palm-oil specific data"
+    }
+  ],
+  "sources": [
+    {
+      "country": "ID",
+      "key": "permentan-2007",
+      "notes": "National balanced-fertilization regulation. Midpoint: Urea 300/SP-36 75/KCl 75.",
+      "organization": "Kementerian Pertanian (Ministry of Agriculture)",
+      "sourceType": "government",
+      "title": "Permentan No. 40/OT.140/4/2007 — Rekomendasi Pemupukan N, P dan K pada Padi Sawah (Site-specific NPK for lowland rice)",
+      "url": "https://pupukbersubsidi.pertanian.go.id/alokasi/assets/Buku%20jagung%20revisi%201_final.pdf"
+    },
+    {
+      "country": "ID",
+      "key": "balitbangtan-rice",
+      "notes": "Rainfed rice: Urea 250-300, SP-36 50-75, KCl 50 + organic matter.",
+      "organization": "Balitbangtan (IAARD)",
+      "sourceType": "government",
+      "title": "Pedoman Pemupukan N, P, K Padi Sawah (Rice NPK guidelines)",
+      "url": "https://epublikasi.pertanian.go.id/berkala/jsl/article/download/3339/3375/4285"
+    },
+    {
+      "country": "ID",
+      "key": "bpp-extension",
+      "notes": "SECONDARY source: wet/dry season Urea+Phonska rates applying Balitbangtan framework.",
+      "organization": "BPP (extension)",
+      "sourceType": "extension",
+      "title": "Pemupukan Berimbang untuk Padi Sawah (Balanced fertilization for lowland rice)",
+      "url": "https://id.scribd.com/document/374575865/Pemupukan-Berimbang"
+    },
+    {
+      "country": "ID",
+      "key": "ppks-2005",
+      "notes": "Per-palm rates by age band; per-ha needs density assumption (143/ha used).",
+      "organization": "PPKS / IOPRI",
+      "sourceType": "research",
+      "title": "Oil palm fertilizer standard (2005) — TM rates by age band",
+      "url": "https://repository.itsi.ac.id/bitstream/handle/123456789/289/BDP_Bima%20Panjis.pdf?isAllowed=y&sequence=3"
+    },
+    {
+      "country": "ID",
+      "key": "buku-jagung",
+      "notes": "Tabel 5: corn NPK by soil P/K status (Urea 350; SP-36 150/125/100; KCl 100/75/50).",
+      "organization": "Kementerian Pertanian (Ministry of Agriculture)",
+      "sourceType": "government",
+      "title": "Buku Jagung — Rekomendasi pemupukan N, P, K pada tanaman jagung (Corn NPK recommendations)",
+      "url": "https://pupukbersubsidi.pertanian.go.id/alokasi/assets/Buku%20jagung%20revisi%201_final.pdf"
+    }
+  ],
+  "windows": [
+    {
+      "activityType": "SOW",
+      "endMonth": 12,
+      "itemSlug": "rice",
+      "notes": "Musim hujan: plant Oct-Dec (peak Dec in West Java).",
+      "regionSlug": "id-java",
+      "sourceKey": "balitbangtan-rice",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 4,
+      "itemSlug": "rice",
+      "notes": "Wet-season harvest Mar-Apr (West Java).",
+      "regionSlug": "id-java",
+      "sourceKey": "balitbangtan-rice",
+      "startMonth": 3,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 6,
+      "itemSlug": "rice",
+      "notes": "Musim kemarau (gadu): plant Apr-Jun.",
+      "regionSlug": "id-java",
+      "sourceKey": "balitbangtan-rice",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "palm-oil",
+      "notes": "Plant at start of wet season (Oct-Nov). Perennial crop.",
+      "regionSlug": "id-sumatra",
+      "sourceKey": "ppks-2005",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 12,
+      "itemSlug": "palm-oil",
+      "notes": "FFB harvest year-round (every 7-15 days).",
+      "regionSlug": "id-sumatra",
+      "sourceKey": "ppks-2005",
+      "startMonth": 1,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 6,
+      "itemSlug": "maize",
+      "notes": "Typically dry-season crop (after rice or single crop).",
+      "regionSlug": "id-java",
+      "sourceKey": "buku-jagung",
+      "startMonth": 4,
+      "verificationStatus": "under_review",
+      "verificationNote": "Research documents no official fixed planting months for corn (dry-season crop within the Apr-Sep musim kemarau framework only; follows local water availability). Window 4-6 narrows this without a sourced month table. Kept under_review."
+    }
+  ]
+}

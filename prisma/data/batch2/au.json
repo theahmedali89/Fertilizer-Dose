@@ -1,1 +1,285 @@
-{"country":{"code":"AU","defaultUnit":"hectare","name":"Australia","slug":"australia"},"newRegions":[{"countryCode":"AU","name":"Wheatbelt (Western Australia)","slug":"au-wa"},{"countryCode":"AU","name":"New South Wales","slug":"au-nsw"},{"countryCode":"AU","name":"Victoria (Wimmera/Mallee)","slug":"au-vic"},{"countryCode":"AU","name":"Queensland (Darling Downs)","slug":"au-qld"},{"countryCode":"AU","name":"South Australia","slug":"au-sa"}],"recommendations":[{"countryCode":"AU","itemSlug":"wheat","k2o":null,"n":null,"notes":"GRDC: N budget rule = 40 kg soil mineral N per tonne target grain (50% recovery assumed). WA trial optimum P 2-17 kg/ha; avg paddock 9.5 kg P/ha x2.29. K: soil-test based, no single rec.","p2o5":21.8,"regionSlug":"au-wa","soilContext":"Dryland","sourceKey":"grdc-wheat","verificationStatus":"verified"},{"countryCode":"AU","itemSlug":"barley","k2o":null,"n":null,"notes":"GRDC GrowNotes: malting barley needs LESS N than wheat (protein 10-11% target). P similar response to wheat; ~10 kg P/ha typical WA x2.29.","p2o5":22.9,"regionSlug":"au-wa","soilContext":"Dryland","sourceKey":"grdc-barley","verificationStatus":"verified"},{"countryCode":"AU","itemSlug":"canola","k2o":null,"n":null,"notes":"GRDC: N 70-80 kg per tonne target yield (budget rule); P 7-8 kg P/t expected yield (15 kg P for 2 t/ha x2.29). S-responsive; K no single rec.","p2o5":34.4,"regionSlug":"au-nsw","soilContext":"Dryland, 2 t/ha target","sourceKey":"grdc-canola","verificationStatus":"verified"},{"countryCode":"AU","irrigationContext":"irrigated","itemSlug":"cotton","k2o":null,"n":200,"notes":"Typical irrigated NSW/QLD practice (Constable et al. 1992; industry ~280 in Welsh 2014). NUE benchmark 13-18 kg lint/kg N. Budget-based, not fixed. P/K: soil-test based, no single rec.","p2o5":null,"regionSlug":"au-nsw","sourceKey":"cotton-info","verificationStatus":"verified"},{"countryCode":"AU","itemSlug":"sugarcane","k2o":null,"n":140,"notes":"SRA Six Easy Steps: 1.4 kg N per tonne cane (100 t/ha DYP baseline), adjusted for soil OC + legume fallow. P/K from 6ES soil tables (no universal figure).","p2o5":null,"regionSlug":"au-qld","sourceKey":"sra-6es","verificationStatus":"verified"}],"refused":[{"reason":"Soil-test based only; no single Australian recommendation published","what":"Wheat/barley/canola/cotton K2O"},{"reason":"Soil-test/yield-potential based; 6ES tables are soil-specific","what":"Cotton P2O5/K2O; sugarcane P2O5/K2O universal figures"},{"reason":"No single fixed rate published; budget-based","what":"Irrigated wheat NPK"},{"reason":"District-dependent, not verified as single range","what":"Sugarcane planting window"},{"reason":"NSW verified; VIC/SA inferred","what":"Barley sowing window VIC/SA"}],"sources":[{"country":"AU","key":"grdc-wheat","notes":"40 kg N/t grain rule; WA P trial optimum 2-17 kg P/ha; avg 9.5 kg P/ha.","organization":"GRDC","sourceType":"research","title":"Wheat nutrition — N budgeting rule and P trials (Update Papers 2022)","url":"https://grdc.com.au/resources-and-publications/grdc-update-papers/tab-content/grdc-update-papers/2022/02/balancing-risk-and-reward-with-high-phosphorus-and-nitrogen-input-costs"},{"country":"AU","key":"grdc-barley","notes":"Malting barley < wheat N; P similar response to wheat.","organization":"GRDC","sourceType":"research","title":"GrowNotes Barley (Western) — nutrition","url":"https://grdc.com.au/__data/assets/pdf_file/0033/246678/GRDC-GrowNotes-Barley-Western.pdf"},{"country":"AU","key":"grdc-canola","notes":"N 70-80 kg/t; P 7-8 kg P/t expected yield; S-responsive.","organization":"GRDC","sourceType":"research","title":"GrowNotes Canola (North) — nutrition (2017)","url":"https://grdc.com.au/__data/assets/pdf_file/0032/369275/GrowNote-Canola-North-5-Nutrition.pdf"},{"country":"AU","key":"cotton-info","notes":"NUE 13-18 kg lint/kg N; typical ~200 kg N/ha irrigated.","organization":"CottonInfo / CRDC","sourceType":"research","title":"Australian cotton nitrogen (NUE benchmark, industry practice)","url":"https://www.researchsquare.com/article/rs-1547853/v1"},{"country":"AU","key":"sra-6es","notes":"N = DYP x 1.4 kg/t cane (<100 t/ha); P/K from soil-specific tables.","organization":"SRA (Sugar Research Australia)","sourceType":"research","title":"Six Easy Steps — best practice nutrient management (IS13016)","url":"https://sugarresearch.com.au/wp-content/uploads/2017/02/IS13016-Best-practice-nutrient-management-Six-Easy-Steps.pdf"},{"country":"AU","key":"nsw-dpi-sowing","notes":"Southern NSW wheat: late Apr-May sowing; canola 2nd week Apr to mid-May.","organization":"NSW DPI","sourceType":"government","title":"2026 Winter Crop Variety Sowing Guide","url":"https://www.dpird.nsw.gov.au/__data/assets/pdf_file/0008/1664405/2026-Winter-crop-variety-sowing-guide-V2.pdf"},{"country":"AU","key":"cotton-manual","notes":"Sowing 15 Oct-15 Nov (soil temp rule); harvest Mar-Jun.","organization":"Australian Cotton Industry","sourceType":"research","title":"2026 Australian Cotton Production Manual","url":"https://www.insidecotton.com/sites/default/files/article-files/2026%20Australian%20Cotton%20Production%20Manual%20%E2%80%93%20Small.pdf"}],"windows":[{"activityType":"SOW","endMonth":5,"itemSlug":"wheat","notes":"Autumn sowing (southern hemisphere). NSW DPI 2026 guide.","regionSlug":"au-nsw","sourceKey":"nsw-dpi-sowing","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":12,"itemSlug":"wheat","notes":"Late spring/summer harvest.","regionSlug":"au-nsw","sourceKey":"nsw-dpi-sowing","startMonth":11,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"wheat","notes":"WA Wheatbelt autumn sowing.","regionSlug":"au-wa","sourceKey":"grdc-wheat","startMonth":4,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"barley","notes":"Parallel to wheat (NSW DPI).","regionSlug":"au-nsw","sourceKey":"nsw-dpi-sowing","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":12,"itemSlug":"barley","notes":"Nov-Dec harvest.","regionSlug":"au-nsw","sourceKey":"nsw-dpi-sowing","startMonth":11,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"canola","notes":"NSW: 2nd week Apr to mid-May finish.","regionSlug":"au-nsw","sourceKey":"nsw-dpi-sowing","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":12,"itemSlug":"canola","notes":"Nov-Dec harvest.","regionSlug":"au-nsw","sourceKey":"nsw-dpi-sowing","startMonth":11,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":11,"itemSlug":"cotton","notes":"Optimum 15 Oct-15 Nov; soil temp >=14C; Bollgard II deadline 15 Nov.","regionSlug":"au-nsw","sourceKey":"cotton-manual","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":6,"itemSlug":"cotton","notes":"Picking Mar-Jun (earlier in central QLD, later in southern NSW).","regionSlug":"au-nsw","sourceKey":"cotton-manual","startMonth":3,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":11,"itemSlug":"sugarcane","notes":"Queensland crushing season Jun-Nov.","regionSlug":"au-qld","sourceKey":"sra-6es","startMonth":6,"verificationStatus":"under_review"}]}
+{
+  "country": {
+    "code": "AU",
+    "defaultUnit": "hectare",
+    "name": "Australia",
+    "slug": "australia"
+  },
+  "newRegions": [
+    {
+      "countryCode": "AU",
+      "name": "Wheatbelt (Western Australia)",
+      "slug": "au-wa"
+    },
+    {
+      "countryCode": "AU",
+      "name": "New South Wales",
+      "slug": "au-nsw"
+    },
+    {
+      "countryCode": "AU",
+      "name": "Victoria (Wimmera/Mallee)",
+      "slug": "au-vic"
+    },
+    {
+      "countryCode": "AU",
+      "name": "Queensland (Darling Downs)",
+      "slug": "au-qld"
+    },
+    {
+      "countryCode": "AU",
+      "name": "South Australia",
+      "slug": "au-sa"
+    }
+  ],
+  "recommendations": [
+    {
+      "countryCode": "AU",
+      "itemSlug": "wheat",
+      "k2o": null,
+      "n": null,
+      "notes": "GRDC: N budget rule = 40 kg soil mineral N per tonne target grain (50% recovery assumed). WA trial optimum P 2-17 kg/ha; avg paddock 9.5 kg P/ha x2.29. K: soil-test based, no single rec.",
+      "p2o5": 21.8,
+      "regionSlug": "au-wa",
+      "soilContext": "Dryland",
+      "sourceKey": "grdc-wheat",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "AU",
+      "itemSlug": "barley",
+      "k2o": null,
+      "n": null,
+      "notes": "GRDC GrowNotes: malting barley needs LESS N than wheat (protein 10-11% target). P similar response to wheat; ~10 kg P/ha typical WA x2.29.",
+      "p2o5": 22.9,
+      "regionSlug": "au-wa",
+      "soilContext": "Dryland",
+      "sourceKey": "grdc-barley",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "AU",
+      "itemSlug": "canola",
+      "k2o": null,
+      "n": null,
+      "notes": "GRDC: N 70-80 kg per tonne target yield (budget rule); P 7-8 kg P/t expected yield (15 kg P for 2 t/ha x2.29). S-responsive; K no single rec.",
+      "p2o5": 34.4,
+      "regionSlug": "au-nsw",
+      "soilContext": "Dryland, 2 t/ha target",
+      "sourceKey": "grdc-canola",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "AU",
+      "irrigationContext": "irrigated",
+      "itemSlug": "cotton",
+      "k2o": null,
+      "n": 200,
+      "notes": "Typical irrigated NSW/QLD practice (Constable et al. 1992; industry ~280 in Welsh 2014). NUE benchmark 13-18 kg lint/kg N. Budget-based, not fixed. P/K: soil-test based, no single rec.",
+      "p2o5": null,
+      "regionSlug": "au-nsw",
+      "sourceKey": "cotton-info",
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "AU",
+      "itemSlug": "sugarcane",
+      "k2o": null,
+      "n": 140,
+      "notes": "SRA Six Easy Steps: 1.4 kg N per tonne cane (100 t/ha DYP baseline), adjusted for soil OC + legume fallow. P/K from 6ES soil tables (no universal figure).",
+      "p2o5": null,
+      "regionSlug": "au-qld",
+      "sourceKey": "sra-6es",
+      "verificationStatus": "verified"
+    }
+  ],
+  "refused": [
+    {
+      "reason": "Soil-test based only; no single Australian recommendation published",
+      "what": "Wheat/barley/canola/cotton K2O"
+    },
+    {
+      "reason": "Soil-test/yield-potential based; 6ES tables are soil-specific",
+      "what": "Cotton P2O5/K2O; sugarcane P2O5/K2O universal figures"
+    },
+    {
+      "reason": "No single fixed rate published; budget-based",
+      "what": "Irrigated wheat NPK"
+    },
+    {
+      "reason": "District-dependent, not verified as single range",
+      "what": "Sugarcane planting window"
+    },
+    {
+      "reason": "NSW verified; VIC/SA inferred",
+      "what": "Barley sowing window VIC/SA"
+    }
+  ],
+  "sources": [
+    {
+      "country": "AU",
+      "key": "grdc-wheat",
+      "notes": "40 kg N/t grain rule; WA P trial optimum 2-17 kg P/ha; avg 9.5 kg P/ha.",
+      "organization": "GRDC",
+      "sourceType": "research",
+      "title": "Wheat nutrition — N budgeting rule and P trials (Update Papers 2022)",
+      "url": "https://grdc.com.au/resources-and-publications/grdc-update-papers/tab-content/grdc-update-papers/2022/02/balancing-risk-and-reward-with-high-phosphorus-and-nitrogen-input-costs"
+    },
+    {
+      "country": "AU",
+      "key": "grdc-barley",
+      "notes": "Malting barley < wheat N; P similar response to wheat.",
+      "organization": "GRDC",
+      "sourceType": "research",
+      "title": "GrowNotes Barley (Western) — nutrition",
+      "url": "https://grdc.com.au/__data/assets/pdf_file/0033/246678/GRDC-GrowNotes-Barley-Western.pdf"
+    },
+    {
+      "country": "AU",
+      "key": "grdc-canola",
+      "notes": "N 70-80 kg/t; P 7-8 kg P/t expected yield; S-responsive.",
+      "organization": "GRDC",
+      "sourceType": "research",
+      "title": "GrowNotes Canola (North) — nutrition (2017)",
+      "url": "https://grdc.com.au/__data/assets/pdf_file/0032/369275/GrowNote-Canola-North-5-Nutrition.pdf"
+    },
+    {
+      "country": "AU",
+      "key": "cotton-info",
+      "notes": "NUE 13-18 kg lint/kg N; typical ~200 kg N/ha irrigated.",
+      "organization": "CottonInfo / CRDC",
+      "sourceType": "research",
+      "title": "Australian cotton nitrogen (NUE benchmark, industry practice)",
+      "url": "https://www.researchsquare.com/article/rs-1547853/v1"
+    },
+    {
+      "country": "AU",
+      "key": "sra-6es",
+      "notes": "N = DYP x 1.4 kg/t cane (<100 t/ha); P/K from soil-specific tables.",
+      "organization": "SRA (Sugar Research Australia)",
+      "sourceType": "research",
+      "title": "Six Easy Steps — best practice nutrient management (IS13016)",
+      "url": "https://sugarresearch.com.au/wp-content/uploads/2017/02/IS13016-Best-practice-nutrient-management-Six-Easy-Steps.pdf"
+    },
+    {
+      "country": "AU",
+      "key": "nsw-dpi-sowing",
+      "notes": "Southern NSW wheat: late Apr-May sowing; canola 2nd week Apr to mid-May.",
+      "organization": "NSW DPI",
+      "sourceType": "government",
+      "title": "2026 Winter Crop Variety Sowing Guide",
+      "url": "https://www.dpird.nsw.gov.au/__data/assets/pdf_file/0008/1664405/2026-Winter-crop-variety-sowing-guide-V2.pdf"
+    },
+    {
+      "country": "AU",
+      "key": "cotton-manual",
+      "notes": "Sowing 15 Oct-15 Nov (soil temp rule); harvest Mar-Jun.",
+      "organization": "Australian Cotton Industry",
+      "sourceType": "research",
+      "title": "2026 Australian Cotton Production Manual",
+      "url": "https://www.insidecotton.com/sites/default/files/article-files/2026%20Australian%20Cotton%20Production%20Manual%20%E2%80%93%20Small.pdf"
+    }
+  ],
+  "windows": [
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "wheat",
+      "notes": "Autumn sowing (southern hemisphere). NSW DPI 2026 guide.",
+      "regionSlug": "au-nsw",
+      "sourceKey": "nsw-dpi-sowing",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 12,
+      "itemSlug": "wheat",
+      "notes": "Late spring/summer harvest.",
+      "regionSlug": "au-nsw",
+      "sourceKey": "nsw-dpi-sowing",
+      "startMonth": 11,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "wheat",
+      "notes": "WA Wheatbelt autumn sowing.",
+      "regionSlug": "au-wa",
+      "sourceKey": "grdc-wheat",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "barley",
+      "notes": "Parallel to wheat (NSW DPI).",
+      "regionSlug": "au-nsw",
+      "sourceKey": "nsw-dpi-sowing",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 12,
+      "itemSlug": "barley",
+      "notes": "Nov-Dec harvest.",
+      "regionSlug": "au-nsw",
+      "sourceKey": "nsw-dpi-sowing",
+      "startMonth": 11,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "canola",
+      "notes": "NSW: 2nd week Apr to mid-May finish.",
+      "regionSlug": "au-nsw",
+      "sourceKey": "nsw-dpi-sowing",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 12,
+      "itemSlug": "canola",
+      "notes": "Nov-Dec harvest.",
+      "regionSlug": "au-nsw",
+      "sourceKey": "nsw-dpi-sowing",
+      "startMonth": 11,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "cotton",
+      "notes": "Optimum 15 Oct-15 Nov; soil temp >=14C; Bollgard II deadline 15 Nov.",
+      "regionSlug": "au-nsw",
+      "sourceKey": "cotton-manual",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 6,
+      "itemSlug": "cotton",
+      "notes": "Picking Mar-Jun (earlier in central QLD, later in southern NSW).",
+      "regionSlug": "au-nsw",
+      "sourceKey": "cotton-manual",
+      "startMonth": 3,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 11,
+      "itemSlug": "sugarcane",
+      "notes": "Queensland crushing season Jun-Nov.",
+      "regionSlug": "au-qld",
+      "sourceKey": "sra-6es",
+      "startMonth": 6,
+      "verificationStatus": "verified"
+    }
+  ]
+}

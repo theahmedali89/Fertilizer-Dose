@@ -280,7 +280,14 @@
       "eyebrow": "Aussaatkalender",
       "title": "Was soll diesen Monat angebaut werden?",
       "desc": "Ein regionsbezogener Aussaatkalender für Ihre Provinz – keine Einheitsratschläge. Jedes Zeitfenster ist belegt und mit Verifizierungsstatus versehen.",
-      "cta": "Aussaatkalender öffnen"
+      "cta": "Aussaatkalender öffnen",
+      "noCountryTitle": "Wo bauen Sie an?",
+      "noCountryDesc": "Wählen Sie Ihr Land, um zu sehen, was Sie in diesem Monat pflanzen können — nur verifizierte Zeiträume.",
+      "showingFor": "Angezeigt für:",
+      "changeCountry": "Ändern",
+      "viewCalendar": "Vollständigen Pflanzkalender ansehen",
+      "noItemsTitle": "Für diesen Monat ist noch nichts verifiziert",
+      "noItemsHint": "Wir haben für diese Region und diesen Monat noch keine Aussaatzeiträume verifiziert."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "Aussaatdaten verfügbar",
       "noDataYet": "Daten in Verifizierung",
       "openCalendar": "Aussaatkalender öffnen"
-    }
+    },
+    "catFruit": "Früchte",
+    "catHerb": "Kräuter",
+    "catFlower": "Blumen",
+    "catOther": "Andere Pflanzen",
+    "activitySOW": "Jetzt säen",
+    "activityTRANSPLANT": "Jetzt umpflanzen",
+    "activityPLANT": "Jetzt pflanzen",
+    "activityHARVEST": "Erntezeit",
+    "activityLAND_PREPARATION": "Boden vorbereiten",
+    "viewGuide": "Anbauanleitung ansehen",
+    "plantingWindow": "Aussaatfenster",
+    "appliesTo": "Gilt für",
+    "emptyRegionTitle": "Für diese Region liegen noch keine verifizierten Pflanzinformationen vor."
   },
   "garden": {
     "metaTitle": "Mein Garten — Parzellen, Pflanzungen & Düngepläne verfolgen",
@@ -579,5 +599,10 @@
     "signOut": "Abmelden",
     "adminLink": "Admin-Dashboard öffnen",
     "gardenNote": "Ihr Garten wird jetzt mit Ihrem Konto synchronisiert, wenn Sie angemeldet sind."
+  },
+  "country": {
+    "selectCountry": "Land",
+    "selectRegion": "Region / Provinz",
+    "selectedCountry": "Ausgewähltes Land"
   }
 }

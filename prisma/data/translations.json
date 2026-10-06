@@ -1,0 +1,4179 @@
+[
+  {
+    "itemSlug": "wheat",
+    "locale": "ur",
+    "name": "گندم"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "hi",
+    "name": "गेहूँ"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "pa",
+    "name": "ਕਣਕ"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "bn",
+    "name": "গম"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "ar",
+    "name": "قمح"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "tr",
+    "name": "Buğday"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "fr",
+    "name": "Blé"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "de",
+    "name": "Weizen"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "es",
+    "name": "Trigo"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "it",
+    "name": "Grano",
+    "localName": "Frumento"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "pl",
+    "name": "Pszenica"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "ru",
+    "name": "Пшеница"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "pt",
+    "name": "Trigo"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "id",
+    "name": "Gandum"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "ms",
+    "name": "Gandum"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "zh",
+    "name": "小麦"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "ja",
+    "name": "小麦",
+    "localName": "コムギ"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "ko",
+    "name": "밀"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "ur",
+    "name": "چاول / دھان"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "hi",
+    "name": "धान",
+    "localName": "चावल"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "pa",
+    "name": "ਝੋਨਾ",
+    "localName": "ਚਾਵਲ"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "bn",
+    "name": "ধান",
+    "localName": "চাল"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "ar",
+    "name": "أرز"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "tr",
+    "name": "Pirinç"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "fr",
+    "name": "Riz"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "de",
+    "name": "Reis"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "es",
+    "name": "Arroz"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "it",
+    "name": "Riso"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "pl",
+    "name": "Ryż"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "ru",
+    "name": "Рис"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "pt",
+    "name": "Arroz"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "id",
+    "name": "Padi",
+    "localName": "Beras"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "ms",
+    "name": "Padi",
+    "localName": "Beras"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "zh",
+    "name": "水稻",
+    "localName": "大米"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "ja",
+    "name": "稲",
+    "localName": "米"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "ko",
+    "name": "벼",
+    "localName": "쌀"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "ur",
+    "name": "مکئی"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "hi",
+    "name": "मक्का"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "pa",
+    "name": "ਮੱਕੀ"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "bn",
+    "name": "ভুট্টা"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "ar",
+    "name": "ذرة"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "tr",
+    "name": "Mısır"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "fr",
+    "name": "Maïs"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "de",
+    "name": "Mais"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "es",
+    "name": "Maíz"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "it",
+    "name": "Mais"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "pl",
+    "name": "Kukurydza"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "ru",
+    "name": "Кукуруза"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "pt",
+    "name": "Milho"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "id",
+    "name": "Jagung"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "ms",
+    "name": "Jagung"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "zh",
+    "name": "玉米"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "ja",
+    "name": "トウモロコシ"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "ko",
+    "name": "옥수수"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "ur",
+    "name": "کپاس"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "hi",
+    "name": "कपास"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "pa",
+    "name": "ਕਪਾਹ"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "bn",
+    "name": "তুলা"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "ar",
+    "name": "قطن"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "tr",
+    "name": "Pamuk"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "fr",
+    "name": "Coton"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "de",
+    "name": "Baumwolle"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "es",
+    "name": "Algodón"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "it",
+    "name": "Cotone"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "pl",
+    "name": "Bawełna"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "ru",
+    "name": "Хлопок"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "pt",
+    "name": "Algodão"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "id",
+    "name": "Kapas"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "ms",
+    "name": "Kapas"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "zh",
+    "name": "棉花"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "ja",
+    "name": "綿"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "ko",
+    "name": "목화"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "ur",
+    "name": "گنا"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "hi",
+    "name": "गन्ना"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "pa",
+    "name": "ਗੰਨਾ"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "bn",
+    "name": "আখ"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "ar",
+    "name": "قصب السكر"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "tr",
+    "name": "Şeker kamışı"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "fr",
+    "name": "Canne à sucre"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "de",
+    "name": "Zuckerrohr"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "es",
+    "name": "Caña de azúcar"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "it",
+    "name": "Canna da zucchero"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "pl",
+    "name": "Trzcina cukrowa"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "ru",
+    "name": "Сахарный тростник"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "pt",
+    "name": "Cana-de-açúcar"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "id",
+    "name": "Tebu"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "ms",
+    "name": "Tebu"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "zh",
+    "name": "甘蔗"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "ja",
+    "name": "サトウキビ"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "ko",
+    "name": "사탕수수"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "ur",
+    "name": "آلو"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "hi",
+    "name": "आलू"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "pa",
+    "name": "ਆਲੂ"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "bn",
+    "name": "আলু"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "ar",
+    "name": "بطاطس",
+    "localName": "بطاطا"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "tr",
+    "name": "Patates"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "fr",
+    "name": "Pomme de terre"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "de",
+    "name": "Kartoffel"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "es",
+    "name": "Papa",
+    "localName": "Patata"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "it",
+    "name": "Patata"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "pl",
+    "name": "Ziemniak"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "ru",
+    "name": "Картофель"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "pt",
+    "name": "Batata"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "id",
+    "name": "Kentang"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "ms",
+    "name": "Kentang"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "zh",
+    "name": "土豆",
+    "localName": "马铃薯"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "ja",
+    "name": "ジャガイモ"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "ko",
+    "name": "감자"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "ur",
+    "name": "سویابین"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "hi",
+    "name": "सोयाबीन"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "pa",
+    "name": "ਸੋਇਆਬੀਨ"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "bn",
+    "name": "সয়াবিন"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "ar",
+    "name": "فول الصويا"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "tr",
+    "name": "Soya fasulyesi"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "fr",
+    "name": "Soja"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "de",
+    "name": "Sojabohne"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "es",
+    "name": "Soja",
+    "localName": "Soya"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "it",
+    "name": "Soia"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "pl",
+    "name": "Soja"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "ru",
+    "name": "Соя"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "pt",
+    "name": "Soja"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "id",
+    "name": "Kedelai"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "ms",
+    "name": "Kacang soya"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "zh",
+    "name": "大豆"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "ja",
+    "name": "大豆"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "ko",
+    "name": "콩"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "ur",
+    "name": "مونگ پھلی"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "hi",
+    "name": "मूंगफली"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "pa",
+    "name": "ਮੂੰਗਫਲੀ"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "bn",
+    "name": "চিনাবাদাম"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "ar",
+    "name": "فول سوداني"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "tr",
+    "name": "Yer fıstığı"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "fr",
+    "name": "Arachide",
+    "localName": "Cacahuète"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "de",
+    "name": "Erdnuss"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "es",
+    "name": "Maní",
+    "localName": "Cacahuete"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "it",
+    "name": "Arachide"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "pl",
+    "name": "Orzech ziemny",
+    "localName": "Orzech arachidowy"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "ru",
+    "name": "Арахис"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "pt",
+    "name": "Amendoim"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "id",
+    "name": "Kacang tanah"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "ms",
+    "name": "Kacang tanah"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "zh",
+    "name": "花生"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "ja",
+    "name": "落花生",
+    "localName": "ピーナッツ"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "ko",
+    "name": "땅콩"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "ur",
+    "name": "پٹسن"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "hi",
+    "name": "जूट",
+    "localName": "पटसन"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "pa",
+    "name": "ਜੂਟ",
+    "localName": "ਪਟਸਨ"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "bn",
+    "name": "পাট"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "ar",
+    "name": "جوت"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "tr",
+    "name": "Jüt"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "fr",
+    "name": "Jute"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "de",
+    "name": "Jute"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "es",
+    "name": "Yute"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "it",
+    "name": "Iuta"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "pl",
+    "name": "Juta"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "ru",
+    "name": "Джут"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "pt",
+    "name": "Juta"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "id",
+    "name": "Yute"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "ms",
+    "name": "Jut"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "zh",
+    "name": "黄麻"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "ja",
+    "name": "ジュート"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "ko",
+    "name": "황마"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "ur",
+    "name": "سرسوں"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "hi",
+    "name": "सरसों"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "pa",
+    "name": "ਸਰ੍ਹੋਂ"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "bn",
+    "name": "সরিষা"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "ar",
+    "name": "خردل"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "tr",
+    "name": "Hardal"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "fr",
+    "name": "Moutarde"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "de",
+    "name": "Senf"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "es",
+    "name": "Mostaza"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "it",
+    "name": "Senape"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "pl",
+    "name": "Gorczyca",
+    "localName": "Musztarda"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "ru",
+    "name": "Горчица"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "pt",
+    "name": "Mostarda"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "id",
+    "name": "Sawi",
+    "localName": "Sesawi"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "ms",
+    "name": "Sawi",
+    "localName": "Sesawi"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "zh",
+    "name": "芥菜"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "ja",
+    "name": "カラシナ",
+    "localName": "マスタード"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "ko",
+    "name": "겨자"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "ur",
+    "name": "مسور"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "hi",
+    "name": "मसूर"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "pa",
+    "name": "ਮਸੂਰ"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "bn",
+    "name": "মসুর"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "ar",
+    "name": "عدس"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "tr",
+    "name": "Mercimek"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "fr",
+    "name": "Lentille"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "de",
+    "name": "Linse"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "es",
+    "name": "Lenteja"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "it",
+    "name": "Lenticchia"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "pl",
+    "name": "Soczewica"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "ru",
+    "name": "Чечевица"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "pt",
+    "name": "Lentilha"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "id",
+    "name": "Kacang lentil"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "ms",
+    "name": "Kacang dal"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "zh",
+    "name": "扁豆"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "ja",
+    "name": "レンズ豆"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "ko",
+    "name": "렌즈콩"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "ur",
+    "name": "چنا"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "hi",
+    "name": "चना"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "pa",
+    "name": "ਛੋਲੇ"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "bn",
+    "name": "ছোলা"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "ar",
+    "name": "حمص"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "tr",
+    "name": "Nohut"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "fr",
+    "name": "Pois chiche"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "de",
+    "name": "Kichererbse"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "es",
+    "name": "Garbanzo"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "it",
+    "name": "Cece"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "pl",
+    "name": "Ciecierzyca"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "ru",
+    "name": "Нут"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "pt",
+    "name": "Grão-de-bico"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "id",
+    "name": "Kacang arab"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "ms",
+    "name": "Kacang kuda"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "zh",
+    "name": "鹰嘴豆"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "ja",
+    "name": "ヒヨコ豆"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "ko",
+    "name": "병아리콩"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "ur",
+    "name": "کافی"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "hi",
+    "name": "कॉफ़ी"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "pa",
+    "name": "ਕੌਫ਼ੀ"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "bn",
+    "name": "কফি"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "ar",
+    "name": "قهوة",
+    "localName": "بن"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "tr",
+    "name": "Kahve"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "fr",
+    "name": "Café"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "de",
+    "name": "Kaffee"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "es",
+    "name": "Café"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "it",
+    "name": "Caffè"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "pl",
+    "name": "Kawa"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "ru",
+    "name": "Кофе"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "pt",
+    "name": "Café"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "id",
+    "name": "Kopi"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "ms",
+    "name": "Kopi"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "zh",
+    "name": "咖啡"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "ja",
+    "name": "コーヒー"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "ko",
+    "name": "커피"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "ur",
+    "name": "آئل پام"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "hi",
+    "name": "ऑयल पाम"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "pa",
+    "name": "ਆਇਲ ਪਾਮ"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "bn",
+    "name": "অয়েল পাম"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "ar",
+    "name": "نخيل الزيت"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "tr",
+    "name": "Yağ palmiyesi"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "fr",
+    "name": "Palmier à huile"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "de",
+    "name": "Ölpalme"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "es",
+    "name": "Palma aceitera"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "it",
+    "name": "Palma da olio"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "pl",
+    "name": "Palma olejowa"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "ru",
+    "name": "Масличная пальма"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "pt",
+    "name": "Palmeira de dendê",
+    "localName": "Palma de óleo"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "id",
+    "name": "Kelapa sawit"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "ms",
+    "name": "Kelapa sawit"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "zh",
+    "name": "油棕"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "ja",
+    "name": "アブラヤシ"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "ko",
+    "name": "기름야자"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "ur",
+    "name": "کینولا"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "hi",
+    "name": "कैनोला"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "pa",
+    "name": "ਕੈਨੋਲਾ"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "bn",
+    "name": "ক্যানোলা"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "ar",
+    "name": "كانولا"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "tr",
+    "name": "Kanola"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "fr",
+    "name": "Canola",
+    "localName": "Colza"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "de",
+    "name": "Raps"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "es",
+    "name": "Canola",
+    "localName": "Colza"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "it",
+    "name": "Canola",
+    "localName": "Colza"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "pl",
+    "name": "Rzepak"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "ru",
+    "name": "Рапс"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "pt",
+    "name": "Canola"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "id",
+    "name": "Kanola"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "ms",
+    "name": "Kanola"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "zh",
+    "name": "油菜"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "ja",
+    "name": "菜種",
+    "localName": "キャノーラ"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "ko",
+    "name": "유채",
+    "localName": "카놀라"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "ur",
+    "name": "جو"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "hi",
+    "name": "जौ"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "pa",
+    "name": "ਜੌਂ"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "bn",
+    "name": "যব"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "ar",
+    "name": "شعير"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "tr",
+    "name": "Arpa"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "fr",
+    "name": "Orge"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "de",
+    "name": "Gerste"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "es",
+    "name": "Cebada"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "it",
+    "name": "Orzo"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "pl",
+    "name": "Jęczmień"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "ru",
+    "name": "Ячмень"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "pt",
+    "name": "Cevada"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "id",
+    "name": "Jelai"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "ms",
+    "name": "Barli"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "zh",
+    "name": "大麦"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "ja",
+    "name": "大麦"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "ko",
+    "name": "보리"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "ur",
+    "name": "سورج مکھی"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "hi",
+    "name": "सूरजमुखी"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "pa",
+    "name": "ਸੂਰਜਮੁਖੀ"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "bn",
+    "name": "সূর্যমুখী"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "ar",
+    "name": "دوار الشمس",
+    "localName": "عباد الشمس"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "tr",
+    "name": "Ayçiçeği"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "fr",
+    "name": "Tournesol"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "de",
+    "name": "Sonnenblume"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "es",
+    "name": "Girasol"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "it",
+    "name": "Girasole"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "pl",
+    "name": "Słonecznik"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "ru",
+    "name": "Подсолнечник"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "pt",
+    "name": "Girassol"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "id",
+    "name": "Bunga matahari"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "ms",
+    "name": "Bunga matahari"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "zh",
+    "name": "向日葵"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "ja",
+    "name": "ヒマワリ"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "ko",
+    "name": "해바라기"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "ur",
+    "name": "قدرتی ربڑ"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "hi",
+    "name": "प्राकृतिक रबर",
+    "localName": "रबर"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "pa",
+    "name": "ਕੁਦਰਤੀ ਰਬੜ"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "bn",
+    "name": "প্রাকৃতিক রাবার"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "ar",
+    "name": "مطاط طبيعي"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "tr",
+    "name": "Doğal kauçuk"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "fr",
+    "name": "Caoutchouc naturel"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "de",
+    "name": "Naturkautschuk"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "es",
+    "name": "Caucho natural"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "it",
+    "name": "Gomma naturale"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "pl",
+    "name": "Kauczuk naturalny"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "ru",
+    "name": "Натуральный каучук"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "pt",
+    "name": "Borracha natural"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "id",
+    "name": "Karet alam"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "ms",
+    "name": "Getah asli"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "zh",
+    "name": "天然橡胶"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "ja",
+    "name": "天然ゴム"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "ko",
+    "name": "천연고무"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "ur",
+    "name": "ڈیورم گندم"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "hi",
+    "name": "ड्यूरम गेहूँ"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "pa",
+    "name": "ਡਿਊਰਮ ਕਣਕ"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "bn",
+    "name": "ডুরাম গম"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "ar",
+    "name": "قمح الديورم"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "tr",
+    "name": "Durum buğdayı",
+    "localName": "Makarnalık buğday"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "fr",
+    "name": "Blé dur"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "de",
+    "name": "Hartweizen"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "es",
+    "name": "Trigo duro"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "it",
+    "name": "Grano duro"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "pl",
+    "name": "Pszenica durum"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "ru",
+    "name": "Твёрдая пшеница"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "pt",
+    "name": "Trigo duro"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "id",
+    "name": "Gandum durum"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "ms",
+    "name": "Gandum durum"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "zh",
+    "name": "硬粒小麦"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "ja",
+    "name": "デュラム小麦"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "ko",
+    "name": "듀럼밀"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "ur",
+    "name": "چقندر"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "hi",
+    "name": "चुकंदर"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "pa",
+    "name": "ਚੁਕੰਦਰ"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "bn",
+    "name": "চিনি বিট",
+    "localName": "বিট"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "ar",
+    "name": "شمندر سكري"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "tr",
+    "name": "Şeker pancarı"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "fr",
+    "name": "Betterave sucrière"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "de",
+    "name": "Zuckerrübe"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "es",
+    "name": "Remolacha azucarera"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "it",
+    "name": "Barbabietola da zucchero"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "pl",
+    "name": "Burak cukrowy"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "ru",
+    "name": "Сахарная свёкла"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "pt",
+    "name": "Beterraba açucareira"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "id",
+    "name": "Bit gula"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "ms",
+    "name": "Ubi bit gula",
+    "localName": "Bit gula"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "zh",
+    "name": "甜菜"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "ja",
+    "name": "甜菜",
+    "localName": "砂糖大根"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "ko",
+    "name": "사탕무"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "ur",
+    "name": "رائی"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "hi",
+    "name": "राई"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "pa",
+    "name": "ਰਾਈ"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "bn",
+    "name": "রাই"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "ar",
+    "name": "جاودار"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "tr",
+    "name": "Çavdar"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "fr",
+    "name": "Seigle"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "de",
+    "name": "Roggen"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "es",
+    "name": "Centeno"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "it",
+    "name": "Segale"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "pl",
+    "name": "Żyto"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "ru",
+    "name": "Рожь"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "pt",
+    "name": "Centeio"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "id",
+    "name": "Gandum hitam"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "ms",
+    "name": "Rai",
+    "localName": "Gandum rai"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "zh",
+    "name": "黑麦"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "ja",
+    "name": "ライ麦"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "ko",
+    "name": "호밀"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "ur",
+    "name": "ٹریٹیکیل"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "hi",
+    "name": "ट्रिटिकेल"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "pa",
+    "name": "ਟ੍ਰਿਟੀਕੇਲ"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "bn",
+    "name": "ট্রিটিকেল"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "ar",
+    "name": "تريتيكال"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "tr",
+    "name": "Tritikale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "fr",
+    "name": "Triticale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "de",
+    "name": "Triticale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "es",
+    "name": "Triticale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "it",
+    "name": "Triticale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "pl",
+    "name": "Pszenżyto"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "ru",
+    "name": "Тритикале"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "pt",
+    "name": "Triticale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "id",
+    "name": "Tritikale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "ms",
+    "name": "Tritikale"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "zh",
+    "name": "小黑麦"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "ja",
+    "name": "トリティカーレ"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "ko",
+    "name": "트리티케일"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "ur",
+    "name": "زیتون"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "hi",
+    "name": "जैतून"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "pa",
+    "name": "ਜ਼ੈਤੂਨ"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "bn",
+    "name": "জলপাই"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "ar",
+    "name": "زيتون"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "tr",
+    "name": "Zeytin"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "fr",
+    "name": "Olive"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "de",
+    "name": "Olive"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "es",
+    "name": "Olivo",
+    "localName": "Aceituna"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "it",
+    "name": "Olivo",
+    "localName": "Oliva"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "pl",
+    "name": "Oliwka"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "ru",
+    "name": "Олива",
+    "localName": "Маслина"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "pt",
+    "name": "Oliveira",
+    "localName": "Azeitona"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "id",
+    "name": "Zaitun"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "ms",
+    "name": "Zaitun"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "zh",
+    "name": "橄榄"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "ja",
+    "name": "オリーブ"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "ko",
+    "name": "올리브"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "ur",
+    "name": "انگور"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "hi",
+    "name": "अंगूर"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "pa",
+    "name": "ਅੰਗੂਰ"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "bn",
+    "name": "আঙুর"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "ar",
+    "name": "عنب"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "tr",
+    "name": "Üzüm"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "fr",
+    "name": "Raisin"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "de",
+    "name": "Weintraube"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "es",
+    "name": "Uva"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "it",
+    "name": "Uva"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "pl",
+    "name": "Winogrona"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "ru",
+    "name": "Виноград"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "pt",
+    "name": "Uva"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "id",
+    "name": "Anggur"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "ms",
+    "name": "Anggur"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "zh",
+    "name": "葡萄"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "ja",
+    "name": "ブドウ"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "ko",
+    "name": "포도"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "ur",
+    "name": "مالٹا",
+    "localName": "کینو"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "hi",
+    "name": "संतरा"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "pa",
+    "name": "ਸੰਤਰਾ"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "bn",
+    "name": "কমলালেবু",
+    "localName": "মাল্টা"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "ar",
+    "name": "حمضيات",
+    "localName": "برتقال"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "tr",
+    "name": "Turunçgil",
+    "localName": "Portakal"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "fr",
+    "name": "Agrume",
+    "localName": "Orange"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "de",
+    "name": "Zitrusfrucht",
+    "localName": "Orange"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "es",
+    "name": "Cítrico",
+    "localName": "Naranja"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "it",
+    "name": "Agrume",
+    "localName": "Arancia"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "pl",
+    "name": "Cytrus",
+    "localName": "Pomarańcza"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "ru",
+    "name": "Цитрус",
+    "localName": "Апельсин"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "pt",
+    "name": "Citrino",
+    "localName": "Laranja"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "id",
+    "name": "Jeruk"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "ms",
+    "name": "Limau",
+    "localName": "Oren"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "zh",
+    "name": "柑橘",
+    "localName": "橙子"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "ja",
+    "name": "柑橘類",
+    "localName": "オレンジ"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "ko",
+    "name": "감귤류",
+    "localName": "오렌지"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "ur",
+    "name": "ٹماٹر"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "hi",
+    "name": "टमाटर"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "pa",
+    "name": "ਟਮਾਟਰ"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "bn",
+    "name": "টমেটো"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "ar",
+    "name": "طماطم"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "tr",
+    "name": "Domates"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "fr",
+    "name": "Tomate"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "de",
+    "name": "Tomate"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "es",
+    "name": "Tomate"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "it",
+    "name": "Pomodoro"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "pl",
+    "name": "Pomidor"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "ru",
+    "name": "Помидор",
+    "localName": "Томат"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "pt",
+    "name": "Tomate"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "id",
+    "name": "Tomat"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "ms",
+    "name": "Tomato"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "zh",
+    "name": "番茄",
+    "localName": "西红柿"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "ja",
+    "name": "トマト"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "ko",
+    "name": "토마토"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "ur",
+    "name": "پیاز"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "hi",
+    "name": "प्याज़"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "pa",
+    "name": "ਪਿਆਜ਼"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "bn",
+    "name": "পেঁয়াজ"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "ar",
+    "name": "بصل"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "tr",
+    "name": "Soğan"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "fr",
+    "name": "Oignon"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "de",
+    "name": "Zwiebel"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "es",
+    "name": "Cebolla"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "it",
+    "name": "Cipolla"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "pl",
+    "name": "Cebula"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "ru",
+    "name": "Лук"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "pt",
+    "name": "Cebola"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "id",
+    "name": "Bawang bombai"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "ms",
+    "name": "Bawang besar",
+    "localName": "Bawang Holland"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "zh",
+    "name": "洋葱"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "ja",
+    "name": "タマネギ"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "ko",
+    "name": "양파"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "ur",
+    "name": "لہسن"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "hi",
+    "name": "लहसुन"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "pa",
+    "name": "ਲਸਣ"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "bn",
+    "name": "রসুন"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "ar",
+    "name": "ثوم"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "tr",
+    "name": "Sarımsak"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "fr",
+    "name": "Ail"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "de",
+    "name": "Knoblauch"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "es",
+    "name": "Ajo"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "it",
+    "name": "Aglio"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "pl",
+    "name": "Czosnek"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "ru",
+    "name": "Чеснок"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "pt",
+    "name": "Alho"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "id",
+    "name": "Bawang putih"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "ms",
+    "name": "Bawang putih"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "zh",
+    "name": "大蒜"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "ja",
+    "name": "ニンニク"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "ko",
+    "name": "마늘"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "ur",
+    "name": "مرچ"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "hi",
+    "name": "मिर्च"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "pa",
+    "name": "ਮਿਰਚ"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "bn",
+    "name": "মরিচ",
+    "localName": "লঙ্কা"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "ar",
+    "name": "فلفل حار"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "tr",
+    "name": "Acı biber"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "fr",
+    "name": "Piment"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "de",
+    "name": "Chili"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "es",
+    "name": "Chile",
+    "localName": "Ají"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "it",
+    "name": "Peperoncino"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "pl",
+    "name": "Papryczka chili"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "ru",
+    "name": "Перец чили",
+    "localName": "Острый перец"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "pt",
+    "name": "Pimenta",
+    "localName": "Malagueta"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "id",
+    "name": "Cabai"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "ms",
+    "name": "Cili"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "zh",
+    "name": "辣椒"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "ja",
+    "name": "唐辛子",
+    "localName": "チリ"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "ko",
+    "name": "고추",
+    "localName": "칠리"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "ur",
+    "name": "بھنڈی"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "hi",
+    "name": "भिंडी"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "pa",
+    "name": "ਭਿੰਡੀ"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "bn",
+    "name": "ঢেঁড়স"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "ar",
+    "name": "بامية"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "tr",
+    "name": "Bamya"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "fr",
+    "name": "Gombo"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "de",
+    "name": "Okra"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "es",
+    "name": "Okra",
+    "localName": "Quimbombó"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "it",
+    "name": "Okra",
+    "localName": "Gombo"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "pl",
+    "name": "Okra"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "ru",
+    "name": "Бамия",
+    "localName": "Окра"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "pt",
+    "name": "Quiabo"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "id",
+    "name": "Okra"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "ms",
+    "name": "Bendi"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "zh",
+    "name": "秋葵"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "ja",
+    "name": "オクラ"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "ko",
+    "name": "오크라"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "ur",
+    "name": "مٹر"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "hi",
+    "name": "मटर"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "pa",
+    "name": "ਮਟਰ"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "bn",
+    "name": "মটরশুটি"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "ar",
+    "name": "بازلاء",
+    "localName": "بسلة"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "tr",
+    "name": "Bezelye"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "fr",
+    "name": "Pois"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "de",
+    "name": "Erbse"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "es",
+    "name": "Guisante",
+    "localName": "Arveja"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "it",
+    "name": "Pisello"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "pl",
+    "name": "Groch"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "ru",
+    "name": "Горох"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "pt",
+    "name": "Ervilha"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "id",
+    "name": "Kacang polong"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "ms",
+    "name": "Kacang pis"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "zh",
+    "name": "豌豆"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "ja",
+    "name": "エンドウ"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "ko",
+    "name": "완두콩"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "ur",
+    "name": "گاجر"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "hi",
+    "name": "गाजर"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "pa",
+    "name": "ਗਾਜਰ"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "bn",
+    "name": "গাজর"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "ar",
+    "name": "جزر"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "tr",
+    "name": "Havuç"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "fr",
+    "name": "Carotte"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "de",
+    "name": "Karotte",
+    "localName": "Möhre"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "es",
+    "name": "Zanahoria"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "it",
+    "name": "Carota"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "pl",
+    "name": "Marchew"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "ru",
+    "name": "Морковь"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "pt",
+    "name": "Cenoura"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "id",
+    "name": "Wortel"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "ms",
+    "name": "Lobak merah"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "zh",
+    "name": "胡萝卜"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "ja",
+    "name": "ニンジン"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "ko",
+    "name": "당근"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "ur",
+    "name": "پالک"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "hi",
+    "name": "पालक"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "pa",
+    "name": "ਪਾਲਕ"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "bn",
+    "name": "পালং",
+    "localName": "পালং শাক"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "ar",
+    "name": "سبانخ"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "tr",
+    "name": "Ispanak"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "fr",
+    "name": "Épinard"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "de",
+    "name": "Spinat"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "es",
+    "name": "Espinaca"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "it",
+    "name": "Spinaci"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "pl",
+    "name": "Szpinak"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "ru",
+    "name": "Шпинат"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "pt",
+    "name": "Espinafre"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "id",
+    "name": "Bayam"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "ms",
+    "name": "Bayam"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "zh",
+    "name": "菠菜"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "ja",
+    "name": "ホウレンソウ"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "ko",
+    "name": "시금치"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "ur",
+    "name": "بینگن"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "hi",
+    "name": "बैंगन"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "pa",
+    "name": "ਬੈਂਗਣ"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "bn",
+    "name": "বেগুন"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "ar",
+    "name": "باذنجان"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "tr",
+    "name": "Patlıcan"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "fr",
+    "name": "Aubergine"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "de",
+    "name": "Aubergine"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "es",
+    "name": "Berenjena"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "it",
+    "name": "Melanzana"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "pl",
+    "name": "Bakłażan"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "ru",
+    "name": "Баклажан"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "pt",
+    "name": "Berinjela"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "id",
+    "name": "Terong"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "ms",
+    "name": "Terung"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "zh",
+    "name": "茄子"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "ja",
+    "name": "ナス"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "ko",
+    "name": "가지"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "ur",
+    "name": "کھیرا"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "hi",
+    "name": "खीरा"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "pa",
+    "name": "ਖੀਰਾ"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "bn",
+    "name": "শসা"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "ar",
+    "name": "خيار"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "tr",
+    "name": "Salatalık"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "fr",
+    "name": "Concombre"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "de",
+    "name": "Gurke"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "es",
+    "name": "Pepino"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "it",
+    "name": "Cetriolo"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "pl",
+    "name": "Ogórek"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "ru",
+    "name": "Огурец"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "pt",
+    "name": "Pepino"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "id",
+    "name": "Timun",
+    "localName": "Mentimun"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "ms",
+    "name": "Timun"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "zh",
+    "name": "黄瓜"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "ja",
+    "name": "キュウリ"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "ko",
+    "name": "오이"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "ur",
+    "name": "پھول گوبھی"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "hi",
+    "name": "फूलगोभी"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "pa",
+    "name": "ਫੁੱਲਗੋਭੀ"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "bn",
+    "name": "ফুলকপি"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "ar",
+    "name": "قرنبيط"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "tr",
+    "name": "Karnabahar"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "fr",
+    "name": "Chou-fleur"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "de",
+    "name": "Blumenkohl"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "es",
+    "name": "Coliflor"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "it",
+    "name": "Cavolfiore"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "pl",
+    "name": "Kalafior"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "ru",
+    "name": "Цветная капуста"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "pt",
+    "name": "Couve-flor"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "id",
+    "name": "Kembang kol"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "ms",
+    "name": "Kobis bunga"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "zh",
+    "name": "花椰菜",
+    "localName": "菜花"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "ja",
+    "name": "カリフラワー"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "ko",
+    "name": "콜리플라워"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "ur",
+    "name": "بند گوبھی"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "hi",
+    "name": "पत्तागोभी",
+    "localName": "बंदगोभी"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "pa",
+    "name": "ਬੰਦਗੋਭੀ"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "bn",
+    "name": "বাঁধাকপি"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "ar",
+    "name": "ملفوف",
+    "localName": "كرنب"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "tr",
+    "name": "Lahana"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "fr",
+    "name": "Chou"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "de",
+    "name": "Weißkohl",
+    "localName": "Kohl"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "es",
+    "name": "Repollo",
+    "localName": "Col"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "it",
+    "name": "Cavolo"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "pl",
+    "name": "Kapusta"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "ru",
+    "name": "Капуста"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "pt",
+    "name": "Repolho",
+    "localName": "Couve"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "id",
+    "name": "Kubis",
+    "localName": "Kol"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "ms",
+    "name": "Kobis"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "zh",
+    "name": "卷心菜",
+    "localName": "包菜"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "ja",
+    "name": "キャベツ"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "ko",
+    "name": "양배추"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "ur",
+    "name": "چینی گوبھی"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "hi",
+    "name": "चीनी गोभी",
+    "localName": "नापा पत्तागोभी"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "pa",
+    "name": "ਚੀਨੀ ਗੋਭੀ"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "bn",
+    "name": "নাপা বাঁধাকপি",
+    "localName": "চাইনিজ বাঁধাকপি"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "ar",
+    "name": "ملفوف صيني",
+    "localName": "ملفوف نابا"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "tr",
+    "name": "Çin lahanası",
+    "localName": "Napa lahana"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "fr",
+    "name": "Chou chinois",
+    "localName": "Chou nappa"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "de",
+    "name": "Chinakohl"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "es",
+    "name": "Col china",
+    "localName": "Col napa"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "it",
+    "name": "Cavolo cinese",
+    "localName": "Cavolo napa"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "pl",
+    "name": "Kapusta pekińska"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "ru",
+    "name": "Пекинская капуста"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "pt",
+    "name": "Repolho chinês",
+    "localName": "Acelga chinesa"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "id",
+    "name": "Sawi putih"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "ms",
+    "name": "Kobis cina"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "zh",
+    "name": "大白菜"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "ja",
+    "name": "ハクサイ"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "ko",
+    "name": "배추"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "ur",
+    "name": "مولی"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "hi",
+    "name": "मूली"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "pa",
+    "name": "ਮੂਲੀ"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "bn",
+    "name": "মুলা"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "ar",
+    "name": "فجل"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "tr",
+    "name": "Turp"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "fr",
+    "name": "Radis"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "de",
+    "name": "Radieschen"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "es",
+    "name": "Rábano"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "it",
+    "name": "Ravanello"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "pl",
+    "name": "Rzodkiewka"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "ru",
+    "name": "Редис"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "pt",
+    "name": "Rabanete"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "id",
+    "name": "Lobak"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "ms",
+    "name": "Lobak"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "zh",
+    "name": "萝卜"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "ja",
+    "name": "ラディッシュ"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "ko",
+    "name": "무"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "ur",
+    "name": "جاپانی مولی"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "hi",
+    "name": "जापानी मूली"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "pa",
+    "name": "ਜਾਪਾਨੀ ਮੂਲੀ"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "bn",
+    "name": "জাপানি মুলা"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "ar",
+    "name": "فجل ياباني",
+    "localName": "دايكون"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "tr",
+    "name": "Japon turpu",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "fr",
+    "name": "Radis japonais",
+    "localName": "Daïkon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "de",
+    "name": "Daikon",
+    "localName": "Japanischer Rettich"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "es",
+    "name": "Rábano japonés",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "it",
+    "name": "Ravanello giapponese",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "pl",
+    "name": "Rzodkiew japońska",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "ru",
+    "name": "Дайкон",
+    "localName": "Японская редька"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "pt",
+    "name": "Rabanete japonês",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "id",
+    "name": "Lobak jepang",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "ms",
+    "name": "Lobak jepun",
+    "localName": "Daikon"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "zh",
+    "name": "白萝卜",
+    "localName": "大根"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "ja",
+    "name": "ダイコン"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "ko",
+    "name": "일본무",
+    "localName": "다이콘"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "ur",
+    "name": "گلاب"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "hi",
+    "name": "गुलाब"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "pa",
+    "name": "ਗੁਲਾਬ"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "bn",
+    "name": "গোলাপ"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "ar",
+    "name": "ورد"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "tr",
+    "name": "Gül"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "fr",
+    "name": "Rose"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "de",
+    "name": "Rose"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "es",
+    "name": "Rosa"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "it",
+    "name": "Rosa"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "pl",
+    "name": "Róża"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "ru",
+    "name": "Роза"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "pt",
+    "name": "Rosa"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "id",
+    "name": "Mawar"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "ms",
+    "name": "Ros"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "zh",
+    "name": "玫瑰"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "ja",
+    "name": "バラ"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "ko",
+    "name": "장미"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "ur",
+    "name": "گیندا",
+    "localName": "گیندے کا پھول"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "hi",
+    "name": "गेंदा",
+    "localName": "गेंदे का फूल"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "pa",
+    "name": "ਗੇਂਦਾ"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "bn",
+    "name": "গাঁদা"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "ar",
+    "name": "قطيفة",
+    "localName": "ماريغولد"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "tr",
+    "name": "Kadife çiçeği"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "fr",
+    "name": "Œillet d'Inde",
+    "localName": "Souci"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "de",
+    "name": "Ringelblume",
+    "localName": "Studentenblume"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "es",
+    "name": "Tagete",
+    "localName": "Cempasúchil"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "it",
+    "name": "Tagete",
+    "localName": "Garofano d'India"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "pl",
+    "name": "Aksamitka",
+    "localName": "Nagietek"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "ru",
+    "name": "Бархатцы"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "pt",
+    "name": "Tagetes",
+    "localName": "Cravo-de-defunto"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "id",
+    "name": "Bunga tahi ayam",
+    "localName": "Marigold"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "ms",
+    "name": "Bunga tahi ayam",
+    "localName": "Marigold"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "zh",
+    "name": "万寿菊"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "ja",
+    "name": "マリーゴールド"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "ko",
+    "name": "메리골드"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "ur",
+    "name": "منی پلانٹ"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "hi",
+    "name": "मनी प्लांट"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "pa",
+    "name": "ਮਨੀ ਪਲਾਂਟ"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "bn",
+    "name": "মানি প্ল্যান্ট"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "ar",
+    "name": "نبتة المال"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "tr",
+    "name": "Para çiçeği",
+    "localName": "Money plant"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "fr",
+    "name": "Pothos"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "de",
+    "name": "Efeutute"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "es",
+    "name": "Potos",
+    "localName": "Planta del dinero"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "it",
+    "name": "Pothos",
+    "localName": "Pianta dei soldi"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "pl",
+    "name": "Epipremnum"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "ru",
+    "name": "Эпипремнум",
+    "localName": "Сциндапсус"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "pt",
+    "name": "Jiboia",
+    "localName": "Planta-dinheiro"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "id",
+    "name": "Sirih gading"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "ms",
+    "name": "Pokok duit-duit",
+    "localName": "Sirih gading"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "zh",
+    "name": "绿萝"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "ja",
+    "name": "ポトス"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "ko",
+    "name": "스킨답서스"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "ur",
+    "name": "آم"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "hi",
+    "name": "आम"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "pa",
+    "name": "ਅੰਬ"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "bn",
+    "name": "আম"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "ar",
+    "name": "مانجو"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "tr",
+    "name": "Mango"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "fr",
+    "name": "Mangue"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "de",
+    "name": "Mango"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "es",
+    "name": "Mango"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "it",
+    "name": "Mango"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "pl",
+    "name": "Mango"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "ru",
+    "name": "Манго"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "pt",
+    "name": "Manga"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "id",
+    "name": "Mangga"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "ms",
+    "name": "Mangga"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "zh",
+    "name": "芒果"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "ja",
+    "name": "マンゴー"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "ko",
+    "name": "망고"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "ur",
+    "name": "نیم"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "hi",
+    "name": "नीम"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "pa",
+    "name": "ਨਿੰਮ"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "bn",
+    "name": "নিম"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "ar",
+    "name": "نيم"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "tr",
+    "name": "Neem ağacı"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "fr",
+    "name": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "de",
+    "name": "Neembaum"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "es",
+    "name": "Nim",
+    "localName": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "it",
+    "name": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "pl",
+    "name": "Miodla indyjska",
+    "localName": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "ru",
+    "name": "Ним",
+    "localName": "Азадирахта"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "pt",
+    "name": "Nim",
+    "localName": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "id",
+    "name": "Mimba",
+    "localName": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "ms",
+    "name": "Mambu",
+    "localName": "Neem"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "zh",
+    "name": "印楝"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "ja",
+    "name": "ニーム"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "ko",
+    "name": "님나무",
+    "localName": "님"
+  }
+]

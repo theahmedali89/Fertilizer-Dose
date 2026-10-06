@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "locale": "pa",
+    "name": "Punjabi",
+    "nativeName": "ਪੰਜਾਬੀ",
+    "dir": "ltr",
+    "status": "machine_translated",
+    "note": "AI-translated draft (2026-10-06) — NOT native-reviewed"
+  },
+  "calculator": {},
+  "common": {},
+  "faq": {},
+  "footer": {},
+  "home": {
+    "planting": {
+      "noCountryTitle": "ਤੁਸੀਂ ਕਿੱਥੇ ਖੇਤੀ ਕਰਦੇ ਹੋ?",
+      "noCountryDesc": "ਆਪਣਾ ਦੇਸ਼ ਚੁਣੋ ਅਤੇ ਦੇਖੋ ਇਸ ਮਹੀਨੇ ਕੀ ਲਗਾਉਣਾ ਹੈ — ਸਿਰਫ਼ ਪ੍ਰਮਾਣਿਤ ਸਮਾਂ।",
+      "showingFor": "ਲਈ ਦਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ",
+      "changeCountry": "ਬਦਲੋ",
+      "viewCalendar": "ਪੂਰਾ ਬਿਜਾਈ ਕੈਲੰਡਰ ਦੇਖੋ",
+      "noItemsTitle": "ਇਸ ਮਹੀਨੇ ਲਈ ਅਜੇ ਤੱਕ ਕੁਝ ਵੀ ਪ੍ਰਮਾਣਿਤ ਨਹੀਂ",
+      "noItemsHint": "ਅਸੀਂ ਇਸ ਖੇਤਰ ਅਤੇ ਮਹੀਨੇ ਲਈ ਅਜੇ ਤੱਕ ਕੋਈ ਬਿਜਾਈ ਸਮਾਂ ਪ੍ਰਮਾਣਿਤ ਨਹੀਂ ਕੀਤਾ।"
+    }
+  },
+  "language": {},
+  "nav": {},
+  "plantDoctor": {},
+  "growing": {},
+  "calendar": {
+    "catFruit": "ਫਲ",
+    "catHerb": "ਜੜੀ-ਬੂਟੀਆਂ",
+    "catFlower": "ਫੁੱਲ",
+    "catOther": "ਹੋਰ ਪੌਦੇ",
+    "activitySOW": "ਹੁਣ ਬੀਜੋ",
+    "activityTRANSPLANT": "ਹੁਣ ਪਨੀਰੀ ਲਗਾਓ",
+    "activityPLANT": "ਹੁਣ ਲਗਾਓ",
+    "activityHARVEST": "ਵਾਢੀ ਦਾ ਸਮਾਂ",
+    "activityLAND_PREPARATION": "ਜ਼ਮੀਨ ਤਿਆਰ ਕਰੋ",
+    "viewGuide": "ਖੇਤੀ ਗਾਈਡ ਦੇਖੋ",
+    "plantingWindow": "ਬਿਜਾਈ ਦਾ ਸਮਾਂ",
+    "appliesTo": "ਲਾਗੂ ਹੁੰਦਾ ਹੈ",
+    "emptyRegionTitle": "ਇਸ ਖੇਤਰ ਲਈ ਅਜੇ ਤੱਕ ਕੋਈ ਪ੍ਰਮਾਣਿਤ ਬਿਜਾਈ ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+  },
+  "garden": {},
+  "tools": {},
+  "blog": {},
+  "fertilizers": {},
+  "chart": {},
+  "auth": {},
+  "country": {
+    "selectCountry": "ਦੇਸ਼",
+    "selectRegion": "ਖੇਤਰ / ਸੂਬਾ",
+    "selectedCountry": "ਚੁਣਿਆ ਦੇਸ਼"
+  }
+}

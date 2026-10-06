@@ -1,1 +1,309 @@
-{"country":{"code":"KR","defaultUnit":"hectare","name":"South Korea","slug":"south-korea"},"newRegions":[{"countryCode":"KR","name":"Gyeonggi","slug":"kr-gyeonggi"},{"countryCode":"KR","name":"Chungcheong","slug":"kr-chungcheong"},{"countryCode":"KR","name":"Jeolla","slug":"kr-jeolla"},{"countryCode":"KR","name":"Gyeongsang","slug":"kr-gyeongsang"},{"countryCode":"KR","name":"Gangwon","slug":"kr-gangwon"}],"recommendations":[{"countryCode":"KR","growthStage":null,"itemSlug":"rice","k2o":57,"n":90,"notes":"Original: 9 N / 4.5 P2O5 / 5.7 K2O kg/10a (x10). RDA NICS standard cultivation method (농촌진흥청 표준재배법), machine-transplanted. Used identically in trial reports by 전남·충북·전북농업기술원.","p2o5":45,"regionSlug":null,"soilContext":"Machine-transplanted, standard RDA cultivation","sourceKey":"kr-rda-rice","variety":null,"verificationStatus":"verified"},{"countryCode":"KR","growthStage":null,"itemSlug":"barley","k2o":38,"n":69,"notes":"Original product rates per 10a: basal 요소 10 kg + 용성인비 37 kg + 염화가리 6.3 kg; topdress after winter 요소 ~5 kg/10a. Nutrients DERIVED via standard guaranteed analysis (urea 46% N, fused phosphate 20% P2O5, KCl 60% K2O) — arithmetic, flagged. Southern-region recommendation.","p2o5":74,"regionSlug":"kr-chungcheong","soilContext":"Winter barley (맥류), southern-region; derived from product rates","sourceKey":"kr-chungnam-barley","variety":null,"verificationStatus":"verified"},{"countryCode":"KR","growthStage":null,"itemSlug":"barley","k2o":null,"n":80,"notes":"Original: 8 kg N/10a (x10). N-only cross-check from the same MDPI Jeju study; consistent in magnitude with the Chungnam ARES rate (6.9 kg/10a N).","p2o5":null,"regionSlug":null,"soilContext":"Standard N, national (cross-check)","sourceKey":"kr-mdpi-n-input","variety":null,"verificationStatus":"verified"},{"countryCode":"KR","growthStage":null,"itemSlug":"garlic","k2o":128,"n":250,"notes":"Original: 25.0 N / 7.7 P2O5 / 12.8 K2O kg/10a (x10). 유기질비료 표준시비량 (organic-fertilizer standard rate) from the Jeju 2019 field evaluation. Farm practice at the event was higher (40/10/11 kg/10a) — standard rate seeded.","p2o5":77,"regionSlug":null,"soilContext":"Organic-fertilizer standard rate (Jeju, nationally applicable)","sourceKey":"kr-jeju-garlic","variety":null,"verificationStatus":"verified"},{"countryCode":"KR","growthStage":null,"itemSlug":"napa-cabbage","k2o":270,"n":300,"notes":"Product schedule per 10a: 요소 65 kg + 염화가리 45 kg + 용성인비 100 kg (basal + 4 topdresses) -> ~30 N / 20 P2O5 / 27 K2O kg/10a (x10) via standard guaranteed analysis. DISCREPANCY: the same guide's nutrient text says 질소 20-26, 인산 12-20, 칼리 20-30 kg/10a — the two presentations do not convert exactly; both reproduced here, product-schedule values seeded with the discrepancy flagged.","p2o5":200,"regionSlug":null,"soilContext":"Autumn/kimjang cabbage (가을배추), Busan-Gijang guide; product-schedule derived","sourceKey":"kr-gijang-cabbage","variety":null,"verificationStatus":"verified"},{"countryCode":"KR","growthStage":null,"itemSlug":"napa-cabbage","k2o":null,"n":null,"notes":"Original: 인산 표준시비량 7.8 kg/10a (x10 = 78). Phosphate standard ONLY, from a Gangwon cabbage trial report. Differs from the Gijang guide's range — different soil/region context, not reconciled.","p2o5":78,"regionSlug":"kr-gangwon","soilContext":"Phosphate standard, Gangwon trial","sourceKey":"kr-gangwon-cabbage-p","variety":null,"verificationStatus":"verified"},{"countryCode":"KR","growthStage":null,"itemSlug":"onion","k2o":null,"n":240,"notes":"Original: 24 kg N/10a (x10). 'Standard N Fertilizer Usages' table. P2O5/K2O standard rates from an RDA or named Korean source were NOT found in accessible text — seeded N-only.","p2o5":null,"regionSlug":null,"soilContext":"Standard N, national","sourceKey":"kr-mdpi-n-input","variety":null,"verificationStatus":"verified"}],"refused":[{"reason":"RDA's official per-crop standard table (흙토람/soil.rda.go.kr, '작물별 비료 표준 사용량', ~246 crops) was identified as the authoritative master source but could not be scraped as text — needs live browser access","what":"RDA official per-crop standard NPK values (soil.rda.go.kr)"},{"reason":"P2O5/K2O standard rates from an RDA or named Korean source were not found in accessible text; only N 240 from the MDPI Jeju study","what":"Onion P2O5/K2O (South Korea)"},{"reason":"The Gijang guide's nutrient-text range (N 20-26, P 12-20, K 20-30 kg/10a) does not convert exactly to its product schedule (~30/20/27); both preserved, not reconciled","what":"Reconciled single napa cabbage NPK (nutrient text vs product schedule)"}],"sources":[{"country":"KR","key":"kr-rda-rice","notes":"Standard rice cultivation method: 9/4.5/5.7 kg/10a. Cited in NICS methane-emissions study (J. Crop Sci. Biotech. 2010, via cropbio.or.kr) and Korean Society of Crop Science proceedings (koreascience.kr).","organization":"RDA NICS (Rural Development Administration, National Institute of Crop Science)","sourceType":"government","title":"표준재배법 — standard rice cultivation method (machine-transplanted)","url":null},{"country":"KR","key":"kr-chungnam-barley","notes":"Basal per 10a: 요소 10 kg + 용성인비 37 kg + 염화가리 6.3 kg; topdress 요소 ~5 kg/10a after winter, adjusted by growth.","organization":"Chungnam Agricultural Research & Extension Services (충남도농업기술원, 이재한 연구사)","sourceType":"government","title":"Winter barley fertilization recommendation (2026-10, via Portal News/세종타임즈)","url":null},{"country":"KR","key":"kr-jeju-garlic","notes":"마늘 유기재배 현장평가회: organic-fertilizer standard 25.0/7.7/12.8 vs farm practice 40/10/11 kg/10a.","organization":"Jeju Agricultural Technology Center","sourceType":"government","title":"마늘 유기재배 현장평가회 press release (2019-05-22)","url":null},{"country":"KR","key":"kr-gijang-cabbage","notes":"'10a당 퇴비 3,000 kg, 질소 20~26 kg, 인산 12~20 kg, 칼리 20~30 kg' + product schedule table; the two do not convert exactly — discrepancy preserved.","organization":"Gijang-gun Agricultural Technology Center (기장군농업기술센터)","sourceType":"government","title":"소비자가 요구하는 맛있는 김장(가을) 배추 재배기술 (gijang.go.kr)","url":null},{"country":"KR","key":"kr-gangwon-cabbage-p","notes":"'인산 표준시비량(7.8 kg/10a⁻¹)' stated as the P standard; differs from Gijang range (different soil/region context, not reconciled).","organization":"Gangwon Agricultural Research & Extension Services (강원도농업기술원)","sourceType":"government","title":"인산시비 수준별 배추 시험 보고서 (ares.gangwon.kr)","url":null},{"country":"KR","key":"kr-mdpi-n-input","notes":"'Standard N Fertilizer Usages' table: onion 240 kg/ha, barley 80 kg/ha.","organization":"Water (MDPI, 2021)","sourceType":"research","title":"Crop Field Level Estimation of Nitrogen Input from Fertilizer Use in Jeju Island, South Korea","url":null}],"windows":[{"activityType":"SOW","endMonth":6,"itemSlug":"rice","notes":"Rice transplanted late May-early Jun (mechanical transplanting ~Jun 5 in southern plains; Ongjin optimum May 15-25). RDA standard.","regionSlug":"kr-jeolla","sourceKey":"kr-rda-rice","startMonth":5,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":10,"itemSlug":"rice","notes":"Rice harvested Sep-Oct (grain filling ~Aug 21-Oct 20 in Jeonnam trials).","regionSlug":"kr-jeolla","sourceKey":"kr-rda-rice","startMonth":9,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":11,"itemSlug":"barley","notes":"Winter barley sown mid-late Oct (Oct 20-Nov 10 in the south; Chungnam: 10월 중·하순, latest early Nov).","regionSlug":"kr-chungcheong","sourceKey":"kr-chungnam-barley","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":6,"itemSlug":"barley","notes":"Winter barley harvested May-Jun (maturity 성숙기 6.3-6.6 for southern cultivars).","regionSlug":"kr-chungcheong","sourceKey":"kr-chungnam-barley","startMonth":5,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":10,"itemSlug":"garlic","notes":"Garlic cloves planted: 난지형 (warm-land) late Sep-early Oct; 한지형 (cold-land) early Oct (Jeju guidance: early Sep-mid Oct).","regionSlug":"kr-gyeongsang","sourceKey":"kr-jeju-garlic","startMonth":9,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":6,"itemSlug":"garlic","notes":"Garlic harvested May-Jun (from late May in Uiseong; Jeju peak bulbing Apr-May).","regionSlug":"kr-gyeongsang","sourceKey":"kr-jeju-garlic","startMonth":5,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":10,"itemSlug":"onion","notes":"Onion: 60-day seedlings transplanted late Oct (Gangwon east-coast trial).","regionSlug":"kr-jeolla","sourceKey":"kr-mdpi-n-input","startMonth":10,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":6,"itemSlug":"onion","notes":"Onion harvested May-Jun (early varieties ~late May; mid-late ~mid Jun; Gangwon: Sokcho Jun 20, Samcheok Jun 17).","regionSlug":"kr-jeolla","sourceKey":"kr-mdpi-n-input","startMonth":5,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":8,"itemSlug":"napa-cabbage","notes":"Autumn/kimjang cabbage: central regions sow early Aug / transplant early Sep; southern regions sow mid-Aug / transplant mid-Sep (nursery sowing).","regionSlug":"kr-jeolla","sourceKey":"kr-gijang-cabbage","startMonth":8,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":12,"itemSlug":"napa-cabbage","notes":"Autumn napa cabbage harvested Oct-Nov, from early Nov through ~mid-Dec for kimjang.","regionSlug":"kr-jeolla","sourceKey":"kr-gijang-cabbage","startMonth":10,"verificationStatus":"under_review"}]}
+{
+  "country": {
+    "code": "KR",
+    "defaultUnit": "hectare",
+    "name": "South Korea",
+    "slug": "south-korea"
+  },
+  "newRegions": [
+    {
+      "countryCode": "KR",
+      "name": "Gyeonggi",
+      "slug": "kr-gyeonggi"
+    },
+    {
+      "countryCode": "KR",
+      "name": "Chungcheong",
+      "slug": "kr-chungcheong"
+    },
+    {
+      "countryCode": "KR",
+      "name": "Jeolla",
+      "slug": "kr-jeolla"
+    },
+    {
+      "countryCode": "KR",
+      "name": "Gyeongsang",
+      "slug": "kr-gyeongsang"
+    },
+    {
+      "countryCode": "KR",
+      "name": "Gangwon",
+      "slug": "kr-gangwon"
+    }
+  ],
+  "recommendations": [
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "rice",
+      "k2o": 57,
+      "n": 90,
+      "notes": "Original: 9 N / 4.5 P2O5 / 5.7 K2O kg/10a (x10). RDA NICS standard cultivation method (농촌진흥청 표준재배법), machine-transplanted. Used identically in trial reports by 전남·충북·전북농업기술원.",
+      "p2o5": 45,
+      "regionSlug": null,
+      "soilContext": "Machine-transplanted, standard RDA cultivation",
+      "sourceKey": "kr-rda-rice",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "barley",
+      "k2o": 38,
+      "n": 69,
+      "notes": "Original product rates per 10a: basal 요소 10 kg + 용성인비 37 kg + 염화가리 6.3 kg; topdress after winter 요소 ~5 kg/10a. Nutrients DERIVED via standard guaranteed analysis (urea 46% N, fused phosphate 20% P2O5, KCl 60% K2O) — arithmetic, flagged. Southern-region recommendation.",
+      "p2o5": 74,
+      "regionSlug": "kr-chungcheong",
+      "soilContext": "Winter barley (맥류), southern-region; derived from product rates",
+      "sourceKey": "kr-chungnam-barley",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "barley",
+      "k2o": null,
+      "n": 80,
+      "notes": "Original: 8 kg N/10a (x10). N-only cross-check from the same MDPI Jeju study; consistent in magnitude with the Chungnam ARES rate (6.9 kg/10a N).",
+      "p2o5": null,
+      "regionSlug": null,
+      "soilContext": "Standard N, national (cross-check)",
+      "sourceKey": "kr-mdpi-n-input",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "garlic",
+      "k2o": 128,
+      "n": 250,
+      "notes": "Original: 25.0 N / 7.7 P2O5 / 12.8 K2O kg/10a (x10). 유기질비료 표준시비량 (organic-fertilizer standard rate) from the Jeju 2019 field evaluation. Farm practice at the event was higher (40/10/11 kg/10a) — standard rate seeded.",
+      "p2o5": 77,
+      "regionSlug": null,
+      "soilContext": "Organic-fertilizer standard rate (Jeju, nationally applicable)",
+      "sourceKey": "kr-jeju-garlic",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "napa-cabbage",
+      "k2o": 270,
+      "n": 300,
+      "notes": "Product schedule per 10a: 요소 65 kg + 염화가리 45 kg + 용성인비 100 kg (basal + 4 topdresses) -> ~30 N / 20 P2O5 / 27 K2O kg/10a (x10) via standard guaranteed analysis. DISCREPANCY: the same guide's nutrient text says 질소 20-26, 인산 12-20, 칼리 20-30 kg/10a — the two presentations do not convert exactly; both reproduced here, product-schedule values seeded with the discrepancy flagged.",
+      "p2o5": 200,
+      "regionSlug": null,
+      "soilContext": "Autumn/kimjang cabbage (가을배추), Busan-Gijang guide; product-schedule derived",
+      "sourceKey": "kr-gijang-cabbage",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "napa-cabbage",
+      "k2o": null,
+      "n": null,
+      "notes": "Original: 인산 표준시비량 7.8 kg/10a (x10 = 78). Phosphate standard ONLY, from a Gangwon cabbage trial report. Differs from the Gijang guide's range — different soil/region context, not reconciled.",
+      "p2o5": 78,
+      "regionSlug": "kr-gangwon",
+      "soilContext": "Phosphate standard, Gangwon trial",
+      "sourceKey": "kr-gangwon-cabbage-p",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "countryCode": "KR",
+      "growthStage": null,
+      "itemSlug": "onion",
+      "k2o": null,
+      "n": 240,
+      "notes": "Original: 24 kg N/10a (x10). 'Standard N Fertilizer Usages' table. P2O5/K2O standard rates from an RDA or named Korean source were NOT found in accessible text — seeded N-only.",
+      "p2o5": null,
+      "regionSlug": null,
+      "soilContext": "Standard N, national",
+      "sourceKey": "kr-mdpi-n-input",
+      "variety": null,
+      "verificationStatus": "verified"
+    }
+  ],
+  "refused": [
+    {
+      "reason": "RDA's official per-crop standard table (흙토람/soil.rda.go.kr, '작물별 비료 표준 사용량', ~246 crops) was identified as the authoritative master source but could not be scraped as text — needs live browser access",
+      "what": "RDA official per-crop standard NPK values (soil.rda.go.kr)"
+    },
+    {
+      "reason": "P2O5/K2O standard rates from an RDA or named Korean source were not found in accessible text; only N 240 from the MDPI Jeju study",
+      "what": "Onion P2O5/K2O (South Korea)"
+    },
+    {
+      "reason": "The Gijang guide's nutrient-text range (N 20-26, P 12-20, K 20-30 kg/10a) does not convert exactly to its product schedule (~30/20/27); both preserved, not reconciled",
+      "what": "Reconciled single napa cabbage NPK (nutrient text vs product schedule)"
+    }
+  ],
+  "sources": [
+    {
+      "country": "KR",
+      "key": "kr-rda-rice",
+      "notes": "Standard rice cultivation method: 9/4.5/5.7 kg/10a. Cited in NICS methane-emissions study (J. Crop Sci. Biotech. 2010, via cropbio.or.kr) and Korean Society of Crop Science proceedings (koreascience.kr).",
+      "organization": "RDA NICS (Rural Development Administration, National Institute of Crop Science)",
+      "sourceType": "government",
+      "title": "표준재배법 — standard rice cultivation method (machine-transplanted)",
+      "url": null
+    },
+    {
+      "country": "KR",
+      "key": "kr-chungnam-barley",
+      "notes": "Basal per 10a: 요소 10 kg + 용성인비 37 kg + 염화가리 6.3 kg; topdress 요소 ~5 kg/10a after winter, adjusted by growth.",
+      "organization": "Chungnam Agricultural Research & Extension Services (충남도농업기술원, 이재한 연구사)",
+      "sourceType": "government",
+      "title": "Winter barley fertilization recommendation (2026-10, via Portal News/세종타임즈)",
+      "url": null
+    },
+    {
+      "country": "KR",
+      "key": "kr-jeju-garlic",
+      "notes": "마늘 유기재배 현장평가회: organic-fertilizer standard 25.0/7.7/12.8 vs farm practice 40/10/11 kg/10a.",
+      "organization": "Jeju Agricultural Technology Center",
+      "sourceType": "government",
+      "title": "마늘 유기재배 현장평가회 press release (2019-05-22)",
+      "url": null
+    },
+    {
+      "country": "KR",
+      "key": "kr-gijang-cabbage",
+      "notes": "'10a당 퇴비 3,000 kg, 질소 20~26 kg, 인산 12~20 kg, 칼리 20~30 kg' + product schedule table; the two do not convert exactly — discrepancy preserved.",
+      "organization": "Gijang-gun Agricultural Technology Center (기장군농업기술센터)",
+      "sourceType": "government",
+      "title": "소비자가 요구하는 맛있는 김장(가을) 배추 재배기술 (gijang.go.kr)",
+      "url": null
+    },
+    {
+      "country": "KR",
+      "key": "kr-gangwon-cabbage-p",
+      "notes": "'인산 표준시비량(7.8 kg/10a⁻¹)' stated as the P standard; differs from Gijang range (different soil/region context, not reconciled).",
+      "organization": "Gangwon Agricultural Research & Extension Services (강원도농업기술원)",
+      "sourceType": "government",
+      "title": "인산시비 수준별 배추 시험 보고서 (ares.gangwon.kr)",
+      "url": null
+    },
+    {
+      "country": "KR",
+      "key": "kr-mdpi-n-input",
+      "notes": "'Standard N Fertilizer Usages' table: onion 240 kg/ha, barley 80 kg/ha.",
+      "organization": "Water (MDPI, 2021)",
+      "sourceType": "research",
+      "title": "Crop Field Level Estimation of Nitrogen Input from Fertilizer Use in Jeju Island, South Korea",
+      "url": null
+    }
+  ],
+  "windows": [
+    {
+      "activityType": "SOW",
+      "endMonth": 6,
+      "itemSlug": "rice",
+      "notes": "Rice transplanted late May-early Jun (mechanical transplanting ~Jun 5 in southern plains; Ongjin optimum May 15-25). RDA standard.",
+      "regionSlug": "kr-jeolla",
+      "sourceKey": "kr-rda-rice",
+      "startMonth": 5,
+      "verificationStatus": "under_review",
+      "verificationNote": "Activity mismatch: research (RDA standard cultivation) documents rice TRANSPLANTED late May-early Jun; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 10,
+      "itemSlug": "rice",
+      "notes": "Rice harvested Sep-Oct (grain filling ~Aug 21-Oct 20 in Jeonnam trials).",
+      "regionSlug": "kr-jeolla",
+      "sourceKey": "kr-rda-rice",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "barley",
+      "notes": "Winter barley sown mid-late Oct (Oct 20-Nov 10 in the south; Chungnam: 10월 중·하순, latest early Nov).",
+      "regionSlug": "kr-chungcheong",
+      "sourceKey": "kr-chungnam-barley",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 6,
+      "itemSlug": "barley",
+      "notes": "Winter barley harvested May-Jun (maturity 성숙기 6.3-6.6 for southern cultivars).",
+      "regionSlug": "kr-chungcheong",
+      "sourceKey": "kr-chungnam-barley",
+      "startMonth": 5,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 10,
+      "itemSlug": "garlic",
+      "notes": "Garlic cloves planted: 난지형 (warm-land) late Sep-early Oct; 한지형 (cold-land) early Oct (Jeju guidance: early Sep-mid Oct).",
+      "regionSlug": "kr-gyeongsang",
+      "sourceKey": "kr-jeju-garlic",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 6,
+      "itemSlug": "garlic",
+      "notes": "Garlic harvested May-Jun (from late May in Uiseong; Jeju peak bulbing Apr-May).",
+      "regionSlug": "kr-gyeongsang",
+      "sourceKey": "kr-jeju-garlic",
+      "startMonth": 5,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 10,
+      "itemSlug": "onion",
+      "notes": "Onion: 60-day seedlings transplanted late Oct (Gangwon east-coast trial).",
+      "regionSlug": "kr-jeolla",
+      "sourceKey": "kr-mdpi-n-input",
+      "startMonth": 10,
+      "verificationStatus": "under_review",
+      "verificationNote": "Activity mismatch: research (Gangwon ARES) documents 60-day onion seedlings TRANSPLANTED late Oct; window records SOW. Should likely be TRANSPLANT. Kept under_review."
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 6,
+      "itemSlug": "onion",
+      "notes": "Onion harvested May-Jun (early varieties ~late May; mid-late ~mid Jun; Gangwon: Sokcho Jun 20, Samcheok Jun 17).",
+      "regionSlug": "kr-jeolla",
+      "sourceKey": "kr-mdpi-n-input",
+      "startMonth": 5,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 8,
+      "itemSlug": "napa-cabbage",
+      "notes": "Autumn/kimjang cabbage: central regions sow early Aug / transplant early Sep; southern regions sow mid-Aug / transplant mid-Sep (nursery sowing).",
+      "regionSlug": "kr-jeolla",
+      "sourceKey": "kr-gijang-cabbage",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 12,
+      "itemSlug": "napa-cabbage",
+      "notes": "Autumn napa cabbage harvested Oct-Nov, from early Nov through ~mid-Dec for kimjang.",
+      "regionSlug": "kr-jeolla",
+      "sourceKey": "kr-gijang-cabbage",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    }
+  ]
+}

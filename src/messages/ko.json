@@ -280,7 +280,14 @@
       "eyebrow": "파종 캘린더",
       "title": "이번 달에는 무엇을 심을까요?",
       "desc": "거주 지역에 맞춘 파종 캘린더 — 획일적인 추측은 하지 않습니다. 모든 파종 적기에 출처와 검증 배지가 붙습니다.",
-      "cta": "파종 캘린더 열기"
+      "cta": "파종 캘린더 열기",
+      "noCountryTitle": "어디에서 재배하시나요?",
+      "noCountryDesc": "국가를 선택하여 이번 달에 무엇을 심을지 확인하세요 — 검증된 시기만.",
+      "showingFor": "표시 중:",
+      "changeCountry": "변경",
+      "viewCalendar": "전체 재배 달력 보기",
+      "noItemsTitle": "이번 달에는 아직 검증된 것이 없습니다",
+      "noItemsHint": "이 지역과 이번 달의 파종 시기를 아직 검증하지 않았습니다."
     }
   },
   "language": {
@@ -398,7 +405,20 @@
       "hasData": "파종 데이터 있음",
       "noDataYet": "데이터 검증 중",
       "openCalendar": "파종 캘린더 열기"
-    }
+    },
+    "catFruit": "과일",
+    "catHerb": "허브",
+    "catFlower": "꽃",
+    "catOther": "기타 식물",
+    "activitySOW": "지금 파종",
+    "activityTRANSPLANT": "지금 이식",
+    "activityPLANT": "지금 심기",
+    "activityHARVEST": "수확기",
+    "activityLAND_PREPARATION": "땅 준비",
+    "viewGuide": "재배 가이드 보기",
+    "plantingWindow": "파종 시기",
+    "appliesTo": "적용 대상",
+    "emptyRegionTitle": "이 지역에 대한 검증된 재배 정보가 아직 없습니다."
   },
   "garden": {
     "metaTitle": "나의 정원 — 포장·파종·비료 계획 관리",
@@ -579,5 +599,10 @@
     "signOut": "로그아웃",
     "adminLink": "관리 대시보드 열기",
     "gardenNote": "로그인 중에는 정원이 계정에 동기화됩니다."
+  },
+  "country": {
+    "selectCountry": "국가",
+    "selectRegion": "지역 / 도",
+    "selectedCountry": "선택한 국가"
   }
 }

@@ -1,1 +1,429 @@
-{"country":{"code":"DE","defaultUnit":"hectare","name":"Germany","slug":"germany"},"newRegions":[{"countryCode":"DE","name":"Bavaria (Bayern)","slug":"de-bavaria"},{"countryCode":"DE","name":"Lower Saxony (Niedersachsen)","slug":"de-lower-saxony"},{"countryCode":"DE","name":"North Rhine-Westphalia (NRW)","slug":"de-nrw"}],"recommendations":[{"applicationMethod":null,"applicationTiming":null,"countryCode":"DE","growthStage":null,"irrigationContext":null,"itemSlug":"wheat","k2o":120,"micronutrients":null,"n":230,"notes":"N: federal DüV Anlage 4 N-Bedarfswert at reference yield — a LEGAL UPPER LIMIT (Düngebedarfsermittlung), NOT an agronomic optimum. Soil mineral N (Nmin), previous crop and manure history are subtracted; adjustment ±10 kg N/ha per 10 dt yield deviation; 170 kg N/ha/year organic-N cap. P/K: LWK Niedersachsen Grunddüngung 2020, soil class C, medium reference yield (ranges 80–50 P₂O₅, 150–90 K₂O recorded as midpoints). No Bayern- or NRW-specific P₂O₅/K₂O tables found (see gaps).","p2o5":65,"regionSlug":"de-lower-saxony","soilContext":"Winter wheat, 80 dt/ha reference yield (DüV quality classes A,B); P/K soil class C at medium reference yield","sourceKey":"de-duv-merkblatt","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"DE","growthStage":null,"irrigationContext":null,"itemSlug":"barley","k2o":120,"micronutrients":null,"n":180,"notes":"N: federal DüV Anlage 4 legal upper limit (Düngebedarfsermittlung) at reference yield — NOT an agronomic optimum; Nmin/previous crop/manure subtracted; ±10 kg N/ha per 10 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 80–50 P₂O₅, 150–90 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).","p2o5":65,"regionSlug":"de-lower-saxony","soilContext":"Winter barley, 70 dt/ha reference yield; P/K soil class C at medium reference yield","sourceKey":"de-duv-merkblatt","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"DE","growthStage":null,"irrigationContext":null,"itemSlug":"canola","k2o":170,"micronutrients":null,"n":200,"notes":"N: federal DüV Anlage 4 legal upper limit at reference yield — NOT an agronomic optimum; Nmin/previous crop/manure subtracted; ±10 kg N/ha per 5 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 80–50 P₂O₅, 200–140 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).","p2o5":65,"regionSlug":"de-lower-saxony","soilContext":"Winter rapeseed, 40 dt/ha reference yield; P/K soil class C at medium reference yield","sourceKey":"de-duv-merkblatt","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"DE","growthStage":null,"irrigationContext":null,"itemSlug":"maize","k2o":195,"micronutrients":null,"n":200,"notes":"N: federal DüV Anlage 4 legal upper limit at reference yield — NOT an agronomic optimum; Nmin/previous crop/manure subtracted; ±10 kg N/ha per 10 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 110–80 P₂O₅, 230–160 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).","p2o5":95,"regionSlug":"de-lower-saxony","soilContext":"Grain maize, 90 dt/ha reference yield (N); P/K at ~75 dt FM medium yield","sourceKey":"de-duv-merkblatt","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"DE","growthStage":null,"irrigationContext":null,"itemSlug":"sugar-beet","k2o":335,"micronutrients":null,"n":170,"notes":"N: federal DüV Anlage 4 legal upper limit — NOT an agronomic optimum; ±10 kg N/ha per 100 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 100–70 P₂O₅, 380–290 K₂O recorded as midpoints). NOTE: N and P/K reference yields differ (N at 650 dt/ha; P/K at ~500 dt FM). No Bayern-/NRW-specific P/K tables (see gaps).","p2o5":85,"regionSlug":"de-lower-saxony","soilContext":"Sugar beet, 650 dt/ha reference yield (N); P/K at ~500 dt FM medium yield","sourceKey":"de-duv-merkblatt","variety":null,"verificationStatus":"verified"},{"applicationMethod":null,"applicationTiming":null,"countryCode":"DE","growthStage":null,"irrigationContext":null,"itemSlug":"potato","k2o":260,"micronutrients":null,"n":180,"notes":"N: federal DüV Anlage 4 legal upper limit at reference yield — NOT an agronomic optimum; ±10 kg N/ha per 50 dt deviation (early potato: 220 kg N/ha at 400 dt/ha). P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 100–70 P₂O₅, 300–220 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).","p2o5":85,"regionSlug":"de-lower-saxony","soilContext":"Potato, 450 dt/ha reference yield; P/K at ~400 dt FM medium yield","sourceKey":"de-duv-merkblatt","variety":null,"verificationStatus":"verified"}],"refused":[{"reason":"Germany has no flat per-crop NPK 'recipe' tables; the system is yield-dependent (federal DüV N) and soil-test-class dependent (P/K) — no DLG or BMEL flat-dose table exists","what":"Flat NPK doses for German crops"},{"reason":"Only the LWK Niedersachsen table (Grunddüngung, Sept 2020) was located; no LfL Bayern P₂O₅/K₂O recommendation table found","what":"Bayern-specific (LfL) P₂O₅/K₂O table"},{"reason":"Only sowing windows located from LWK NRW; no LWK NRW P₂O₅/K₂O table found","what":"NRW-specific (LWK NRW) P₂O₅/K₂O table"},{"reason":"No Brandenburg-specific fertilizer source located at all; adjacent Saxony-Anhalt/Lower Saxony data exists but no Brandenburg source — Brandenburg region not created","what":"Brandenburg-specific fertilizer source"},{"reason":"Only 'season-end' (Landvolk NI via proplanta) located; no precise named-official grain-maize harvest month","what":"Precise grain-maize harvest month from a named official source"}],"sources":[{"country":"DE","key":"de-duv-merkblatt","notes":"N-Bedarfswerte DüV Anlage 4 at reference yields; legal upper limit (Düngebedarfsermittlung); Nmin subtracted; ±10 kg N per yield deviation.","organization":"BMEL / LEL Baden-Württemberg (Merkblatt zur N-Düngeberechnung)","sourceType":"government","title":"Merkblatt zur N-Düngeberechnung nach Düngeverordnung (Anlage 4)","url":"https://www.landwirtschaft-bw.de/site/pbs-bw-new/get/documents/MLR.LEL/PB5Documents/ltz_ka/Arbeitsfelder/Pflanzenbau/Nitratinformationsdienst/Merkblatt%20zur%20N-Duengeberechnung%20(blaues%20Merkblatt)_100218.pdf?attachment=true"},{"country":"DE","key":"de-duv-overview","notes":"Worked N example; red areas (rote Gebiete §13a); 170 kg N/ha/yr organic-N cap; Sperrfristen.","organization":"Landwirtschaftskammer BW (wbi.landwirtschaft-bw.de)","sourceType":"government","title":"Merkblatt 35 Düngeverordnung","url":"https://wbi.landwirtschaft-bw.de/site/pbs-bw-mlr-root/get/params_E1298541659/9015812/Merkblatt%2035%20D%C3%BCngeverordnung.pdf"},{"country":"DE","key":"de-lwk-ni-grund","notes":"P₂O₅/K₂O/MgO ranges per soil class A–E at medium reference yields; class-C midpoints used here.","organization":"LWK Niedersachsen","sourceType":"government","title":"Empfehlungen zur Grunddüngung (Sept 2020)","url":"https://www.lwk-niedersachsen.de/services/download.cfm/file/22858.html?"},{"country":"DE","key":"de-lfl-bayern-raps","notes":"Winter rapeseed sowing 20–31 Aug (Bayern); harvest end of July.","organization":"LfL Bayern","sourceType":"government","title":"Anbauempfehlungen für Winterraps","url":"https://www.lfl.bayern.de/mam/cms07/publikationen/daten/informationen/p_37308.pdf"},{"country":"DE","key":"de-lwk-nrw-maize","notes":"Maize sowing mid-April (heavy soils) – turn of Apr/May; late sowing into May.","organization":"LWK NRW","sourceType":"government","title":"Saatzeit von Mais (Ratgeber 2026)","url":"https://www.landwirtschaftskammer.de/Landwirtschaft/ackerbau/mais/saatzeit-pdf.pdf"},{"country":"DE","key":"de-landvolk-maize","notes":"Maize harvest at season end (Oct–Nov, soft window).","organization":"Landvolk Niedersachsen (via proplanta, 2025)","sourceType":"industry","title":"Maize harvest timing (proplanta reporting)","url":null},{"country":"DE","key":"de-lwk-ni-barley","notes":"Winter barley sowing mid-Sept–mid Oct (lowland 10–30 Sept; trend shifting into Oct); harvest early–mid July.","organization":"LWK Niedersachsen (LSV 2021)","sourceType":"government","title":"Landessortenversuche 2021 Wintergerste","url":"https://www.lwk-niedersachsen.de/lwk/news/38228_Landessortenversuche_2021_Wintergerste"},{"country":"DE","key":"de-lwk-nrw-raps","notes":"NRW lowland rapeseed sowing 25 Aug–1 Sept (normal); harvest end of July. No stable URL located for the guide.","organization":"LWK NRW","sourceType":"government","title":"Aussaat und Sortenwahl bei Raps (Ratgeber 2026)","url":null},{"country":"DE","key":"de-nordzucker-beet","notes":"Sugar beet sowing March.","organization":"Nordzucker Agriportal","sourceType":"industry","title":"apc_cultivation_seed_de_2023","url":"https://agriportal.nordzucker.de/cps/rde/xbcr/SID-5454EB45-4982C244/agriportal/apc_cultivation_seed_de_2023.pdf"},{"country":"DE","key":"de-lwk-nrw-beet-press","notes":"Sugar beet campaign start ~9 Sept NRW; harvest Sept–mid Nov.","organization":"LWK NRW (press, 2025)","sourceType":"government","title":"Zuckerrübenkampagne 2025","url":"https://www.landwirtschaftskammer.de/presse/archiv/2025/aa-2025-22-01.htm"},{"country":"DE","key":"de-lwk-nrw-kartoffel","notes":"Potato planting end March–mid April; harvest Aug–Sept (early from June under foil; late to mid-Oct). No stable URL located.","organization":"LWK NRW","sourceType":"government","title":"Anbau von Kartoffeln (Ratgeber 2026)","url":null},{"country":"DE","key":"de-ni-wheat-cal","notes":"Winter wheat sowing mid-Sept–early Nov (early Oct best, trials); threshing through mid-Aug (N Germany, NI/BB adjacent). No stable URL located.","organization":"LLG Sachsen-Anhalt (L. Boese) / Landvolk Niedersachsen","sourceType":"research","title":"Winter wheat sowing trials + harvest timing (via proplanta, 2025)","url":null}],"windows":[{"activityType":"SOW","endMonth":11,"itemSlug":"wheat","notes":"Winter wheat sown mid-Sept–early Nov (early Oct best in trials; N Germany, NI/BB adjacent).","regionSlug":"de-lower-saxony","sourceKey":"de-ni-wheat-cal","startMonth":9,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":8,"itemSlug":"wheat","notes":"Threshing through mid-Aug.","regionSlug":"de-lower-saxony","sourceKey":"de-ni-wheat-cal","startMonth":8,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":10,"itemSlug":"barley","notes":"Winter barley sown mid-Sept–mid Oct (lowland 10–30 Sept; trend shifting into Oct).","regionSlug":"de-lower-saxony","sourceKey":"de-lwk-ni-barley","startMonth":9,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"barley","notes":"Harvested early–mid July.","regionSlug":"de-lower-saxony","sourceKey":"de-lwk-ni-barley","startMonth":7,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":10,"itemSlug":"barley","notes":"Winter barley sown mid-Sept–mid Oct (LWK NI LSV 2021; LfL Sachsen winter malting barley guide).","regionSlug":"de-nrw","sourceKey":"de-lwk-ni-barley","startMonth":9,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"barley","notes":"Harvested early–mid July (WLV 2025; DBV Erntebericht 2025).","regionSlug":"de-nrw","sourceKey":"de-lwk-ni-barley","startMonth":7,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":9,"itemSlug":"canola","notes":"Winter rapeseed sown 20 Aug–early Sept (Bayern).","regionSlug":"de-bavaria","sourceKey":"de-lfl-bayern-raps","startMonth":8,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"canola","notes":"Harvested end of July.","regionSlug":"de-bavaria","sourceKey":"de-lfl-bayern-raps","startMonth":7,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":9,"itemSlug":"canola","notes":"Winter rapeseed sown 20 Aug–early Sept (NRW lowland normal 25 Aug–1 Sept).","regionSlug":"de-nrw","sourceKey":"de-lwk-nrw-raps","startMonth":8,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":7,"itemSlug":"canola","notes":"Harvested end of July (HBV via RNF.de).","regionSlug":"de-nrw","sourceKey":"de-lwk-nrw-raps","startMonth":7,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":5,"itemSlug":"maize","notes":"Grain maize sown mid-April (heavy soils) – turn of Apr/May; late sowing into May.","regionSlug":"de-nrw","sourceKey":"de-lwk-nrw-maize","startMonth":4,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":11,"itemSlug":"maize","notes":"Harvest at season end (Oct–Nov, soft window; Landvolk NI via proplanta) — no precise named-official harvest month (see gaps).","regionSlug":"de-nrw","sourceKey":"de-landvolk-maize","startMonth":10,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":4,"itemSlug":"sugar-beet","notes":"Sugar beet sown early March–mid April (Landratsamt Ortenaukreis; Nordzucker).","regionSlug":"de-nrw","sourceKey":"de-nordzucker-beet","startMonth":3,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":11,"itemSlug":"sugar-beet","notes":"Harvested Sept–mid Nov (campaign from ~9 Sept NRW; LWK NRW press 2025).","regionSlug":"de-nrw","sourceKey":"de-lwk-nrw-beet-press","startMonth":9,"verificationStatus":"under_review"},{"activityType":"SOW","endMonth":4,"itemSlug":"potato","notes":"Potato planted end March–mid April.","regionSlug":"de-nrw","sourceKey":"de-lwk-nrw-kartoffel","startMonth":3,"verificationStatus":"under_review"},{"activityType":"HARVEST","endMonth":9,"itemSlug":"potato","notes":"Harvested Aug–Sept (early from June under foil; late to mid-Oct).","regionSlug":"de-nrw","sourceKey":"de-lwk-nrw-kartoffel","startMonth":8,"verificationStatus":"under_review"}]}
+{
+  "country": {
+    "code": "DE",
+    "defaultUnit": "hectare",
+    "name": "Germany",
+    "slug": "germany"
+  },
+  "newRegions": [
+    {
+      "countryCode": "DE",
+      "name": "Bavaria (Bayern)",
+      "slug": "de-bavaria"
+    },
+    {
+      "countryCode": "DE",
+      "name": "Lower Saxony (Niedersachsen)",
+      "slug": "de-lower-saxony"
+    },
+    {
+      "countryCode": "DE",
+      "name": "North Rhine-Westphalia (NRW)",
+      "slug": "de-nrw"
+    }
+  ],
+  "recommendations": [
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "DE",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "wheat",
+      "k2o": 120,
+      "micronutrients": null,
+      "n": 230,
+      "notes": "N: federal DüV Anlage 4 N-Bedarfswert at reference yield — a LEGAL UPPER LIMIT (Düngebedarfsermittlung), NOT an agronomic optimum. Soil mineral N (Nmin), previous crop and manure history are subtracted; adjustment ±10 kg N/ha per 10 dt yield deviation; 170 kg N/ha/year organic-N cap. P/K: LWK Niedersachsen Grunddüngung 2020, soil class C, medium reference yield (ranges 80–50 P₂O₅, 150–90 K₂O recorded as midpoints). No Bayern- or NRW-specific P₂O₅/K₂O tables found (see gaps).",
+      "p2o5": 65,
+      "regionSlug": "de-lower-saxony",
+      "soilContext": "Winter wheat, 80 dt/ha reference yield (DüV quality classes A,B); P/K soil class C at medium reference yield",
+      "sourceKey": "de-duv-merkblatt",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "DE",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "barley",
+      "k2o": 120,
+      "micronutrients": null,
+      "n": 180,
+      "notes": "N: federal DüV Anlage 4 legal upper limit (Düngebedarfsermittlung) at reference yield — NOT an agronomic optimum; Nmin/previous crop/manure subtracted; ±10 kg N/ha per 10 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 80–50 P₂O₅, 150–90 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).",
+      "p2o5": 65,
+      "regionSlug": "de-lower-saxony",
+      "soilContext": "Winter barley, 70 dt/ha reference yield; P/K soil class C at medium reference yield",
+      "sourceKey": "de-duv-merkblatt",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "DE",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "canola",
+      "k2o": 170,
+      "micronutrients": null,
+      "n": 200,
+      "notes": "N: federal DüV Anlage 4 legal upper limit at reference yield — NOT an agronomic optimum; Nmin/previous crop/manure subtracted; ±10 kg N/ha per 5 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 80–50 P₂O₅, 200–140 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).",
+      "p2o5": 65,
+      "regionSlug": "de-lower-saxony",
+      "soilContext": "Winter rapeseed, 40 dt/ha reference yield; P/K soil class C at medium reference yield",
+      "sourceKey": "de-duv-merkblatt",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "DE",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "maize",
+      "k2o": 195,
+      "micronutrients": null,
+      "n": 200,
+      "notes": "N: federal DüV Anlage 4 legal upper limit at reference yield — NOT an agronomic optimum; Nmin/previous crop/manure subtracted; ±10 kg N/ha per 10 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 110–80 P₂O₅, 230–160 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).",
+      "p2o5": 95,
+      "regionSlug": "de-lower-saxony",
+      "soilContext": "Grain maize, 90 dt/ha reference yield (N); P/K at ~75 dt FM medium yield",
+      "sourceKey": "de-duv-merkblatt",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "DE",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "sugar-beet",
+      "k2o": 335,
+      "micronutrients": null,
+      "n": 170,
+      "notes": "N: federal DüV Anlage 4 legal upper limit — NOT an agronomic optimum; ±10 kg N/ha per 100 dt deviation. P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 100–70 P₂O₅, 380–290 K₂O recorded as midpoints). NOTE: N and P/K reference yields differ (N at 650 dt/ha; P/K at ~500 dt FM). No Bayern-/NRW-specific P/K tables (see gaps).",
+      "p2o5": 85,
+      "regionSlug": "de-lower-saxony",
+      "soilContext": "Sugar beet, 650 dt/ha reference yield (N); P/K at ~500 dt FM medium yield",
+      "sourceKey": "de-duv-merkblatt",
+      "variety": null,
+      "verificationStatus": "verified"
+    },
+    {
+      "applicationMethod": null,
+      "applicationTiming": null,
+      "countryCode": "DE",
+      "growthStage": null,
+      "irrigationContext": null,
+      "itemSlug": "potato",
+      "k2o": 260,
+      "micronutrients": null,
+      "n": 180,
+      "notes": "N: federal DüV Anlage 4 legal upper limit at reference yield — NOT an agronomic optimum; ±10 kg N/ha per 50 dt deviation (early potato: 220 kg N/ha at 400 dt/ha). P/K: LWK Niedersachsen 2020, soil class C, medium reference yield (ranges 100–70 P₂O₅, 300–220 K₂O recorded as midpoints). No Bayern-/NRW-specific P/K tables (see gaps).",
+      "p2o5": 85,
+      "regionSlug": "de-lower-saxony",
+      "soilContext": "Potato, 450 dt/ha reference yield; P/K at ~400 dt FM medium yield",
+      "sourceKey": "de-duv-merkblatt",
+      "variety": null,
+      "verificationStatus": "verified"
+    }
+  ],
+  "refused": [
+    {
+      "reason": "Germany has no flat per-crop NPK 'recipe' tables; the system is yield-dependent (federal DüV N) and soil-test-class dependent (P/K) — no DLG or BMEL flat-dose table exists",
+      "what": "Flat NPK doses for German crops"
+    },
+    {
+      "reason": "Only the LWK Niedersachsen table (Grunddüngung, Sept 2020) was located; no LfL Bayern P₂O₅/K₂O recommendation table found",
+      "what": "Bayern-specific (LfL) P₂O₅/K₂O table"
+    },
+    {
+      "reason": "Only sowing windows located from LWK NRW; no LWK NRW P₂O₅/K₂O table found",
+      "what": "NRW-specific (LWK NRW) P₂O₅/K₂O table"
+    },
+    {
+      "reason": "No Brandenburg-specific fertilizer source located at all; adjacent Saxony-Anhalt/Lower Saxony data exists but no Brandenburg source — Brandenburg region not created",
+      "what": "Brandenburg-specific fertilizer source"
+    },
+    {
+      "reason": "Only 'season-end' (Landvolk NI via proplanta) located; no precise named-official grain-maize harvest month",
+      "what": "Precise grain-maize harvest month from a named official source"
+    }
+  ],
+  "sources": [
+    {
+      "country": "DE",
+      "key": "de-duv-merkblatt",
+      "notes": "N-Bedarfswerte DüV Anlage 4 at reference yields; legal upper limit (Düngebedarfsermittlung); Nmin subtracted; ±10 kg N per yield deviation.",
+      "organization": "BMEL / LEL Baden-Württemberg (Merkblatt zur N-Düngeberechnung)",
+      "sourceType": "government",
+      "title": "Merkblatt zur N-Düngeberechnung nach Düngeverordnung (Anlage 4)",
+      "url": "https://www.landwirtschaft-bw.de/site/pbs-bw-new/get/documents/MLR.LEL/PB5Documents/ltz_ka/Arbeitsfelder/Pflanzenbau/Nitratinformationsdienst/Merkblatt%20zur%20N-Duengeberechnung%20(blaues%20Merkblatt)_100218.pdf?attachment=true"
+    },
+    {
+      "country": "DE",
+      "key": "de-duv-overview",
+      "notes": "Worked N example; red areas (rote Gebiete §13a); 170 kg N/ha/yr organic-N cap; Sperrfristen.",
+      "organization": "Landwirtschaftskammer BW (wbi.landwirtschaft-bw.de)",
+      "sourceType": "government",
+      "title": "Merkblatt 35 Düngeverordnung",
+      "url": "https://wbi.landwirtschaft-bw.de/site/pbs-bw-mlr-root/get/params_E1298541659/9015812/Merkblatt%2035%20D%C3%BCngeverordnung.pdf"
+    },
+    {
+      "country": "DE",
+      "key": "de-lwk-ni-grund",
+      "notes": "P₂O₅/K₂O/MgO ranges per soil class A–E at medium reference yields; class-C midpoints used here.",
+      "organization": "LWK Niedersachsen",
+      "sourceType": "government",
+      "title": "Empfehlungen zur Grunddüngung (Sept 2020)",
+      "url": "https://www.lwk-niedersachsen.de/services/download.cfm/file/22858.html?"
+    },
+    {
+      "country": "DE",
+      "key": "de-lfl-bayern-raps",
+      "notes": "Winter rapeseed sowing 20–31 Aug (Bayern); harvest end of July.",
+      "organization": "LfL Bayern",
+      "sourceType": "government",
+      "title": "Anbauempfehlungen für Winterraps",
+      "url": "https://www.lfl.bayern.de/mam/cms07/publikationen/daten/informationen/p_37308.pdf"
+    },
+    {
+      "country": "DE",
+      "key": "de-lwk-nrw-maize",
+      "notes": "Maize sowing mid-April (heavy soils) – turn of Apr/May; late sowing into May.",
+      "organization": "LWK NRW",
+      "sourceType": "government",
+      "title": "Saatzeit von Mais (Ratgeber 2026)",
+      "url": "https://www.landwirtschaftskammer.de/Landwirtschaft/ackerbau/mais/saatzeit-pdf.pdf"
+    },
+    {
+      "country": "DE",
+      "key": "de-landvolk-maize",
+      "notes": "Maize harvest at season end (Oct–Nov, soft window).",
+      "organization": "Landvolk Niedersachsen (via proplanta, 2025)",
+      "sourceType": "industry",
+      "title": "Maize harvest timing (proplanta reporting)",
+      "url": null
+    },
+    {
+      "country": "DE",
+      "key": "de-lwk-ni-barley",
+      "notes": "Winter barley sowing mid-Sept–mid Oct (lowland 10–30 Sept; trend shifting into Oct); harvest early–mid July.",
+      "organization": "LWK Niedersachsen (LSV 2021)",
+      "sourceType": "government",
+      "title": "Landessortenversuche 2021 Wintergerste",
+      "url": "https://www.lwk-niedersachsen.de/lwk/news/38228_Landessortenversuche_2021_Wintergerste"
+    },
+    {
+      "country": "DE",
+      "key": "de-lwk-nrw-raps",
+      "notes": "NRW lowland rapeseed sowing 25 Aug–1 Sept (normal); harvest end of July. No stable URL located for the guide.",
+      "organization": "LWK NRW",
+      "sourceType": "government",
+      "title": "Aussaat und Sortenwahl bei Raps (Ratgeber 2026)",
+      "url": null
+    },
+    {
+      "country": "DE",
+      "key": "de-nordzucker-beet",
+      "notes": "Sugar beet sowing March.",
+      "organization": "Nordzucker Agriportal",
+      "sourceType": "industry",
+      "title": "apc_cultivation_seed_de_2023",
+      "url": "https://agriportal.nordzucker.de/cps/rde/xbcr/SID-5454EB45-4982C244/agriportal/apc_cultivation_seed_de_2023.pdf"
+    },
+    {
+      "country": "DE",
+      "key": "de-lwk-nrw-beet-press",
+      "notes": "Sugar beet campaign start ~9 Sept NRW; harvest Sept–mid Nov.",
+      "organization": "LWK NRW (press, 2025)",
+      "sourceType": "government",
+      "title": "Zuckerrübenkampagne 2025",
+      "url": "https://www.landwirtschaftskammer.de/presse/archiv/2025/aa-2025-22-01.htm"
+    },
+    {
+      "country": "DE",
+      "key": "de-lwk-nrw-kartoffel",
+      "notes": "Potato planting end March–mid April; harvest Aug–Sept (early from June under foil; late to mid-Oct). No stable URL located.",
+      "organization": "LWK NRW",
+      "sourceType": "government",
+      "title": "Anbau von Kartoffeln (Ratgeber 2026)",
+      "url": null
+    },
+    {
+      "country": "DE",
+      "key": "de-ni-wheat-cal",
+      "notes": "Winter wheat sowing mid-Sept–early Nov (early Oct best, trials); threshing through mid-Aug (N Germany, NI/BB adjacent). No stable URL located.",
+      "organization": "LLG Sachsen-Anhalt (L. Boese) / Landvolk Niedersachsen",
+      "sourceType": "research",
+      "title": "Winter wheat sowing trials + harvest timing (via proplanta, 2025)",
+      "url": null
+    }
+  ],
+  "windows": [
+    {
+      "activityType": "SOW",
+      "endMonth": 11,
+      "itemSlug": "wheat",
+      "notes": "Winter wheat sown mid-Sept–early Nov (early Oct best in trials; N Germany, NI/BB adjacent).",
+      "regionSlug": "de-lower-saxony",
+      "sourceKey": "de-ni-wheat-cal",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 8,
+      "itemSlug": "wheat",
+      "notes": "Threshing through mid-Aug.",
+      "regionSlug": "de-lower-saxony",
+      "sourceKey": "de-ni-wheat-cal",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 10,
+      "itemSlug": "barley",
+      "notes": "Winter barley sown mid-Sept–mid Oct (lowland 10–30 Sept; trend shifting into Oct).",
+      "regionSlug": "de-lower-saxony",
+      "sourceKey": "de-lwk-ni-barley",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "barley",
+      "notes": "Harvested early–mid July.",
+      "regionSlug": "de-lower-saxony",
+      "sourceKey": "de-lwk-ni-barley",
+      "startMonth": 7,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 10,
+      "itemSlug": "barley",
+      "notes": "Winter barley sown mid-Sept–mid Oct (LWK NI LSV 2021; LfL Sachsen winter malting barley guide).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-ni-barley",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "barley",
+      "notes": "Harvested early–mid July (WLV 2025; DBV Erntebericht 2025).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-ni-barley",
+      "startMonth": 7,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 9,
+      "itemSlug": "canola",
+      "notes": "Winter rapeseed sown 20 Aug–early Sept (Bayern).",
+      "regionSlug": "de-bavaria",
+      "sourceKey": "de-lfl-bayern-raps",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "canola",
+      "notes": "Harvested end of July.",
+      "regionSlug": "de-bavaria",
+      "sourceKey": "de-lfl-bayern-raps",
+      "startMonth": 7,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 9,
+      "itemSlug": "canola",
+      "notes": "Winter rapeseed sown 20 Aug–early Sept (NRW lowland normal 25 Aug–1 Sept).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-nrw-raps",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 7,
+      "itemSlug": "canola",
+      "notes": "Harvested end of July (HBV via RNF.de).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-nrw-raps",
+      "startMonth": 7,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 5,
+      "itemSlug": "maize",
+      "notes": "Grain maize sown mid-April (heavy soils) – turn of Apr/May; late sowing into May.",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-nrw-maize",
+      "startMonth": 4,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 11,
+      "itemSlug": "maize",
+      "notes": "Harvest at season end (Oct–Nov, soft window; Landvolk NI via proplanta) — no precise named-official harvest month (see gaps).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-landvolk-maize",
+      "startMonth": 10,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 4,
+      "itemSlug": "sugar-beet",
+      "notes": "Sugar beet sown early March–mid April (Landratsamt Ortenaukreis; Nordzucker).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-nordzucker-beet",
+      "startMonth": 3,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 11,
+      "itemSlug": "sugar-beet",
+      "notes": "Harvested Sept–mid Nov (campaign from ~9 Sept NRW; LWK NRW press 2025).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-nrw-beet-press",
+      "startMonth": 9,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "SOW",
+      "endMonth": 4,
+      "itemSlug": "potato",
+      "notes": "Potato planted end March–mid April.",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-nrw-kartoffel",
+      "startMonth": 3,
+      "verificationStatus": "verified"
+    },
+    {
+      "activityType": "HARVEST",
+      "endMonth": 9,
+      "itemSlug": "potato",
+      "notes": "Harvested Aug–Sept (early from June under foil; late to mid-Oct).",
+      "regionSlug": "de-nrw",
+      "sourceKey": "de-lwk-nrw-kartoffel",
+      "startMonth": 8,
+      "verificationStatus": "verified"
+    }
+  ]
+}
