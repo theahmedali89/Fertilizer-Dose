@@ -172,6 +172,25 @@ async function main() {
   }
   console.log(`posts inserted: ${pCount}`);
 
+  // ── Blog post upgrade: fuller "dose per acre" guide body (guarded, one-time) ──
+  // Updates the live DB row ONLY where the slug matches AND the body is still
+  // the old short version (guarded by startsWith on the old first paragraph).
+  // Idempotent (no match after first run) and admin-safe (skipped if an admin
+  // already edited the post). Follows the NPK_CORRECTIONS precedent.
+  {
+    const upgraded = POSTS.find((p) => p.slug === "how-to-calculate-fertilizer-dose-per-acre");
+    if (upgraded) {
+      const r = await db.post.updateMany({
+        where: {
+          slug: upgraded.slug,
+          body: { startsWith: "Every fertilizer recommendation starts as nutrients, not products." },
+        },
+        data: { body: upgraded.body.join("\n\n") },
+      });
+      console.log(`blog post upgrade applied: ${r.count}`);
+    }
+  }
+
   // ── FAQ (seed only when table is empty) ──
   if ((await db.faq.count()) === 0) {
     const faqItems: { q: string; a: string }[] = (
