@@ -74,6 +74,15 @@ export default async function BlogPostPage({
             {post.title}
           </h1>
           <p className="mt-3 text-lg text-ink-soft">{post.excerpt}</p>
+          {post.image && (
+            <div className="mt-6 overflow-hidden rounded-2xl">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full aspect-[16/9] object-cover"
+              />
+            </div>
+          )}
         </div>
       </section>
 

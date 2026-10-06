@@ -5,6 +5,8 @@ export interface BlogPost {
   category: string;
   date: string;
   readMinutes: number;
+  /** Feature image path (public/). */
+  image: string;
   /** Full article body as simple markdown-ish paragraphs (rendered simply). */
   body: string[];
 }
@@ -12,6 +14,7 @@ export interface BlogPost {
 export const POSTS: BlogPost[] = [
   {
     slug: "how-to-calculate-fertilizer-dose-per-acre",
+    image: "/blog/fertilizer-calculation.webp",
     title: "How to Calculate Fertilizer Dose Per Acre (With a Worked Example)",
     excerpt:
       "The exact formula agronomists use to convert a nutrient recommendation into bags of urea, DAP and MOP — explained with a real wheat example.",
@@ -32,6 +35,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "urea-vs-dap-what-each-does",
+    image: "/blog/urea-vs-dap.webp",
     title: "Urea vs DAP: What Each Fertilizer Actually Does",
     excerpt:
       "Both supply nitrogen, but they are not interchangeable. Here's what each one does in the soil and when to use which.",
@@ -48,6 +52,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "why-soil-testing-saves-money",
+    image: "/blog/soil-testing.webp",
     title: "Why Soil Testing Saves You Money Every Season",
     excerpt:
       "A soil test costs less than a single bag of DAP — and stops you buying fertilizer your field doesn't need.",

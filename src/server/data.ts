@@ -183,6 +183,7 @@ function toBlogPost(r: {
     date: (r.publishedAt ?? new Date()).toISOString().slice(0, 10),
     readMinutes: Math.max(1, Math.round(r.body.split(/\s+/).length / 200)),
     body: r.body.split("\n\n"),
+    image: "",
   };
 }
 

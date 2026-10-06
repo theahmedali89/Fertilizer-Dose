@@ -47,7 +47,17 @@ export default async function BlogPage({
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-              <Card className="h-full transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
+              <Card className="h-full overflow-hidden transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
+                {post.image && (
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <CardBody>
                   <div className="flex items-center gap-2 text-xs">
                     <Badge variant="neutral">{post.category}</Badge>
