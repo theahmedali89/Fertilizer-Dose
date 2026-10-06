@@ -183,7 +183,8 @@ function toBlogPost(r: {
     date: (r.publishedAt ?? new Date()).toISOString().slice(0, 10),
     readMinutes: Math.max(1, Math.round(r.body.split(/\s+/).length / 200)),
     body: r.body.split("\n\n"),
-    image: "",
+    // DB rows have no image column; fall back to the static post's feature image when slugs match.
+    image: STATIC_POSTS.find((s) => s.slug === r.slug)?.image ?? "",
   };
 }
 
@@ -193,7 +194,10 @@ export async function getPosts(): Promise<BlogPost[]> {
       where: { published: true }, orderBy: { publishedAt: "desc" },
     });
     if (!rows.length) return STATIC_POSTS;
-    return rows.map(toBlogPost);
+    const dbSlugs = new Set(rows.map((r) => r.slug));
+    // Merge: DB posts first, then static posts not present in the DB
+    // (so static-only posts and their feature images are never hidden).
+    return [...rows.map(toBlogPost), ...STATIC_POSTS.filter((p) => !dbSlugs.has(p.slug))];
   }, STATIC_POSTS);
 }
 
