@@ -7,7 +7,7 @@
  */
 import { PrismaClient, VerificationStatus } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { FERTILIZERS } from "../src/lib/agronomy";
+import { FERTILIZERS, ORGANIC_FERTILIZERS } from "../src/lib/agronomy";
 import { GROWING_ITEMS } from "../src/lib/growing";
 import { REGIONS, PLANTING_WINDOWS } from "../src/lib/planting";
 import { POSTS } from "../src/lib/blog";
@@ -29,8 +29,9 @@ const db = new PrismaClient({
 
 async function main() {
   // ── Fertilizers (insert-if-missing by slug) ──
+  // Minerals (6, fixed label values) + organics (4, typical ranges, n/p/k NULL).
   let fCount = 0;
-  for (const f of FERTILIZERS) {
+  for (const f of [...FERTILIZERS, ...ORGANIC_FERTILIZERS]) {
     const exists = await db.fertilizer.findUnique({ where: { slug: f.slug }, select: { id: true } });
     if (!exists) {
       await db.fertilizer.create({
@@ -39,6 +40,10 @@ async function main() {
           tagline: f.tagline, description: f.description,
           benefits: f.benefits, precautions: f.precautions,
           application: f.application, published: true,
+          fertilizerType: f.fertilizerType, organicCategory: f.organicCategory,
+          nutrientValueType: f.nutrientValueType, nutrientNote: f.nutrientNote,
+          nMin: f.nMin, nMax: f.nMax, pMin: f.pMin, pMax: f.pMax,
+          kMin: f.kMin, kMax: f.kMax, sourceUrl: f.sourceUrl,
         },
       });
       fCount++;

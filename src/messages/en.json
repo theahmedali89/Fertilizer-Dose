@@ -754,13 +754,9 @@
     "typicalRangeLabel": "Typical range",
     "organicHubCta": "What are organic fertilizers? Read the guide →",
     "detail": {
-      "typeLabel": "Type",
-      "categoryLabel": "Category",
       "categoryManure": "Manure",
       "categoryCompost": "Compost",
       "categoryGreenManure": "Green manure",
-      "typicalRangeTitle": "Typical nutrient range",
-      "fixedValuesTitle": "Nutrient content",
       "caveatTitle": "Why a range, not a number",
       "sourceLabel": "Range source"
     },

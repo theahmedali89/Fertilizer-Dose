@@ -6,7 +6,8 @@ import { upsertFertilizer } from "@/server/actions/admin";
 export type FertilizerFormData = {
   id: string | null;
   slug: string; name: string; urdu: string | null;
-  n: number; p: number; k: number; tagline: string | null;
+  /** null = no single label value (organics with typical ranges) */
+  n: number | null; p: number | null; k: number | null; tagline: string | null;
   description: string; benefits: string[]; precautions: string[];
   application: string; published: boolean;
 };
@@ -20,9 +21,9 @@ export function FertilizerForm({ initial }: { initial: FertilizerFormData }) {
         <TextField label="Name" name="name" defaultValue={initial.name} required />
         <TextField label="Urdu name" name="urdu" defaultValue={initial.urdu ?? ""} />
         <div className="grid grid-cols-3 gap-4">
-          <NumberField label="N %" name="n" defaultValue={initial.n} required />
-          <NumberField label="P₂O₅ %" name="p" defaultValue={initial.p} required />
-          <NumberField label="K₂O %" name="k" defaultValue={initial.k} required />
+          <NumberField label="N %" name="n" defaultValue={initial.n ?? ""} hint="Blank for organics with ranges" />
+          <NumberField label="P₂O₅ %" name="p" defaultValue={initial.p ?? ""} hint="Blank for organics with ranges" />
+          <NumberField label="K₂O %" name="k" defaultValue={initial.k ?? ""} hint="Blank for organics with ranges" />
         </div>
       </div>
       <TextField label="Tagline" name="tagline" defaultValue={initial.tagline ?? ""} />

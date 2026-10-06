@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { FERTILIZERS } from "@/lib/agronomy";
+import { FERTILIZERS, ORGANIC_FERTILIZERS } from "@/lib/agronomy";
 import { GROWING_ITEMS } from "@/lib/growing";
 import { POSTS } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/calculator", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/plant-doctor", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/fertilizers", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/fertilizers/organic", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/crops", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/plants", priority: 0.7, changeFrequency: "weekly" as const },
     { path: "/vegetables", priority: 0.7, changeFrequency: "weekly" as const },
@@ -60,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entry(`${growingPaths[i.category]}/${i.slug}`, 0.7, "monthly", now)
     ),
     ...FERTILIZERS.map((f) => entry(`/fertilizers/${f.slug}`, 0.7, "monthly", now)),
+    ...ORGANIC_FERTILIZERS.map((f) => entry(`/fertilizers/${f.slug}`, 0.7, "monthly", now)),
     ...POSTS.map((p) => entry(`/blog/${p.slug}`, 0.6, "monthly", new Date(p.date))),
   ];
 }

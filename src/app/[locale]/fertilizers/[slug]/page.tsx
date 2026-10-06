@@ -1,8 +1,9 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 import { getFertilizers, getFertilizer } from "@/server/data";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
@@ -11,6 +12,14 @@ import { siteConfig } from "@/config/site";
 export async function generateStaticParams() {
   const fertilizers = await getFertilizers();
   return fertilizers.map((f) => ({ slug: f.slug }));
+}
+
+function nutrientSummary(f: { n: number | null; p: number | null; k: number | null; nMin: number | null; nMax: number | null; pMin: number | null; pMax: number | null; kMin: number | null; kMax: number | null; fertilizerType: string }): string {
+  if (f.fertilizerType === "organic") {
+    const r = (lo: number | null, hi: number | null) => (lo != null && hi != null ? `${lo}–${hi}%` : "—");
+    return `typical range N ${r(f.nMin, f.nMax)}, P₂O₅ ${r(f.pMin, f.pMax)}, K₂O ${r(f.kMin, f.kMax)}`;
+  }
+  return `${f.n}% N, ${f.p}% P₂O₅, ${f.k}% K₂O`;
 }
 
 export async function generateMetadata({
@@ -25,9 +34,15 @@ export async function generateMetadata({
     locale,
     path: `/fertilizers/${slug}`,
     title: `${f.name} — NPK, Uses & Dose Guidance`,
-    description: `${f.name}: ${f.n}% N, ${f.p}% P₂O₅, ${f.k}% K₂O. ${f.tagline}`,
+    description: `${f.name}: ${nutrientSummary(f)}. ${f.tagline}`,
   });
 }
+
+const CATEGORY_KEYS: Record<string, string> = {
+  manure: "detail.categoryManure",
+  compost: "detail.categoryCompost",
+  green_manure: "detail.categoryGreenManure",
+};
 
 export default async function FertilizerDetail({
   params,
@@ -36,10 +51,15 @@ export default async function FertilizerDetail({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("fertilizers");
   const f = await getFertilizer(slug);
   if (!f) notFound();
   const fertilizers = await getFertilizers();
   const fertUrl = `${siteConfig.url}/fertilizers/${f.slug}`;
+  const isOrganic = f.fertilizerType === "organic";
+
+  const range = (lo: number | null, hi: number | null) =>
+    lo != null && hi != null ? `${lo}–${hi}%` : "—";
 
   return (
     <>
@@ -57,18 +77,55 @@ export default async function FertilizerDetail({
             <span aria-hidden> · </span>
             <Link href="/fertilizers" className="hover:underline">Fertilizers</Link>
             <span aria-hidden> · </span>
+            {isOrganic && (
+              <>
+                <Link href="/fertilizers/organic" className="hover:underline">{t("organic.eyebrow")}</Link>
+                <span aria-hidden> · </span>
+              </>
+            )}
             <span className="text-ink-soft">{f.name}</span>
           </nav>
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            <Badge>{isOrganic ? t("typeOrganic") : t("typeMineral")}</Badge>
+            {isOrganic && f.organicCategory && (
+              <Badge>{t(CATEGORY_KEYS[f.organicCategory] ?? "detail.categoryCompost")}</Badge>
+            )}
+          </div>
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">
             {f.name}{" "}
             <span className="text-2xl font-sans font-normal text-ink-faint" lang="ur">{f.urdu}</span>
           </h1>
           <p className="mt-3 text-lg text-ink-soft max-w-2xl">{f.tagline}</p>
-          <div className="mt-6 inline-flex items-center gap-6 rounded-2xl border border-line bg-surface-2 px-6 py-4 font-mono">
-            <span><span className="text-ink-faint text-sm font-sans">N </span><b className="text-xl">{f.n}%</b></span>
-            <span><span className="text-ink-faint text-sm font-sans">P₂O₅ </span><b className="text-xl">{f.p}%</b></span>
-            <span><span className="text-ink-faint text-sm font-sans">K₂O </span><b className="text-xl">{f.k}%</b></span>
+          <div className="mt-6 inline-flex flex-wrap items-center gap-x-6 gap-y-2 rounded-2xl border border-line bg-surface-2 px-6 py-4 font-mono">
+            {isOrganic ? (
+              <>
+                <span><span className="text-ink-faint text-sm font-sans">N </span><b className="text-xl">{range(f.nMin, f.nMax)}</b></span>
+                <span><span className="text-ink-faint text-sm font-sans">P₂O₅ </span><b className="text-xl">{range(f.pMin, f.pMax)}</b></span>
+                <span><span className="text-ink-faint text-sm font-sans">K₂O </span><b className="text-xl">{range(f.kMin, f.kMax)}</b></span>
+                <span className="text-xs font-sans text-ink-faint w-full">{t("typicalRangeLabel")}</span>
+              </>
+            ) : (
+              <>
+                <span><span className="text-ink-faint text-sm font-sans">N </span><b className="text-xl">{f.n}%</b></span>
+                <span><span className="text-ink-faint text-sm font-sans">P₂O₅ </span><b className="text-xl">{f.p}%</b></span>
+                <span><span className="text-ink-faint text-sm font-sans">K₂O </span><b className="text-xl">{f.k}%</b></span>
+              </>
+            )}
           </div>
+          {isOrganic && f.nutrientNote && (
+            <div className="mt-4 max-w-3xl rounded-2xl border border-harvest-300 dark:border-harvest-800 bg-harvest-50 dark:bg-harvest-950/40 px-5 py-4">
+              <p className="text-sm font-bold mb-1">{t("detail.caveatTitle")}</p>
+              <p className="text-sm text-ink-soft leading-relaxed">{f.nutrientNote}</p>
+              {f.sourceUrl && (
+                <p className="mt-2 text-xs text-ink-faint">
+                  {t("detail.sourceLabel")}:{" "}
+                  <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-leaf-700 dark:text-leaf-300 hover:underline break-all">
+                    {f.sourceUrl.replace(/^https?:\/\//, "").split("/")[0]}
+                  </a>
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </section>
 

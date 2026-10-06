@@ -12,6 +12,7 @@
 import { db, isDbConfigured } from "@/lib/db";
 import {
   FERTILIZERS as STATIC_FERTILIZERS,
+  ORGANIC_FERTILIZERS as STATIC_ORGANIC_FERTILIZERS,
   CROPS as STATIC_CROPS,
   type FertilizerInfo,
   type CropInfo,
@@ -43,26 +44,45 @@ async function tryDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
 
 function toFertilizerInfo(r: {
   slug: string; name: string; urdu: string | null;
-  n: number; p: number; k: number; tagline: string | null;
+  n: number | null; p: number | null; k: number | null; tagline: string | null;
   description: string; benefits: string[]; precautions: string[];
   application: string;
+  fertilizerType: string; organicCategory: string | null;
+  nutrientValueType: string; nutrientNote: string | null;
+  nMin: number | null; nMax: number | null;
+  pMin: number | null; pMax: number | null;
+  kMin: number | null; kMax: number | null;
+  sourceUrl: string | null;
 }): FertilizerInfo {
   return {
     slug: r.slug, name: r.name, urdu: r.urdu ?? "",
     n: r.n, p: r.p, k: r.k, tagline: r.tagline ?? "",
     description: r.description, benefits: r.benefits,
     precautions: r.precautions, application: r.application,
+    fertilizerType: (r.fertilizerType === "organic" ? "organic" : "mineral"),
+    organicCategory: (r.organicCategory === "manure" || r.organicCategory === "compost" || r.organicCategory === "green_manure")
+      ? r.organicCategory : null,
+    nutrientValueType: (["fixed", "typical_range", "variable", "lab_analysis_required"] as const)
+      .includes(r.nutrientValueType as never) ? (r.nutrientValueType as FertilizerInfo["nutrientValueType"]) : "fixed",
+    nutrientNote: r.nutrientNote,
+    nMin: r.nMin, nMax: r.nMax, pMin: r.pMin, pMax: r.pMax,
+    kMin: r.kMin, kMax: r.kMax, sourceUrl: r.sourceUrl,
   };
 }
+
+const STATIC_ALL_FERTILIZERS: FertilizerInfo[] = [
+  ...STATIC_FERTILIZERS,
+  ...STATIC_ORGANIC_FERTILIZERS,
+];
 
 export async function getFertilizers(): Promise<FertilizerInfo[]> {
   return tryDb(async () => {
     const rows = await db.fertilizer.findMany({
       where: { published: true }, orderBy: { name: "asc" },
     });
-    if (!rows.length) return STATIC_FERTILIZERS;
+    if (!rows.length) return STATIC_ALL_FERTILIZERS;
     return rows.map(toFertilizerInfo);
-  }, STATIC_FERTILIZERS);
+  }, STATIC_ALL_FERTILIZERS);
 }
 
 export async function getFertilizer(slug: string): Promise<FertilizerInfo | undefined> {

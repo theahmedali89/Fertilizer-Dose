@@ -5,23 +5,65 @@
  * represented as `null` and surfaced in the UI as "under review".
  */
 
+export type FertilizerType = "mineral" | "organic";
+export type OrganicCategory = "manure" | "compost" | "green_manure";
+export type NutrientValueType = "fixed" | "typical_range" | "variable" | "lab_analysis_required";
+
 export interface FertilizerInfo {
   slug: string;
   name: string;
   urdu: string;
-  n: number; // % N
-  p: number; // % P2O5
-  k: number; // % K2O
+  /**
+   * Single label value (% N / % P2O5 / % K2O). NULL for organics with
+   * ranges — there is NO single honest value, and storing a midpoint
+   * would be fake precision.
+   */
+  n: number | null;
+  p: number | null;
+  k: number | null;
   tagline: string;
   description: string;
   benefits: string[];
   precautions: string[];
   application: string;
+  /** "mineral" | "organic" */
+  fertilizerType: FertilizerType;
+  /** "manure" | "compost" | "green_manure" — organics only, else null */
+  organicCategory: OrganicCategory | null;
+  /** "fixed" | "typical_range" | "variable" | "lab_analysis_required" */
+  nutrientValueType: NutrientValueType;
+  /** Honest variability caveat, shown in the UI wherever ranges appear. */
+  nutrientNote: string | null;
+  /** Typical-range bounds (percent). Null when not applicable. */
+  nMin: number | null;
+  nMax: number | null;
+  pMin: number | null;
+  pMax: number | null;
+  kMin: number | null;
+  kMax: number | null;
+  /** Source URL for the typical ranges. */
+  sourceUrl: string | null;
 }
+
+/** Shared defaults for the 6 mineral fertilizers (fixed label values). */
+const MINERAL_DEFAULTS = {
+  fertilizerType: "mineral" as const,
+  organicCategory: null as null,
+  nutrientValueType: "fixed" as const,
+  nutrientNote: null as null,
+  nMin: null as null,
+  nMax: null as null,
+  pMin: null as null,
+  pMax: null as null,
+  kMin: null as null,
+  kMax: null as null,
+  sourceUrl: null as null,
+};
 
 export const FERTILIZERS: FertilizerInfo[] = [
   {
     slug: "urea",
+    ...MINERAL_DEFAULTS,
     name: "Urea",
     urdu: "یوریا",
     n: 46,
@@ -45,6 +87,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
   },
   {
     slug: "dap",
+    ...MINERAL_DEFAULTS,
     name: "DAP (Di-Ammonium Phosphate)",
     urdu: "ڈی اے پی",
     n: 18,
@@ -68,6 +111,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
   },
   {
     slug: "mop",
+    ...MINERAL_DEFAULTS,
     name: "MOP (Muriate of Potash)",
     urdu: "ایم او پی",
     n: 0,
@@ -90,6 +134,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
   },
   {
     slug: "ssp",
+    ...MINERAL_DEFAULTS,
     name: "SSP (Single Super Phosphate)",
     urdu: "ایس ایس پی",
     n: 0,
@@ -112,6 +157,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
   },
   {
     slug: "sop",
+    ...MINERAL_DEFAULTS,
     name: "SOP (Sulphate of Potash)",
     urdu: "ایس او پی",
     n: 0,
@@ -134,6 +180,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
   },
   {
     slug: "ammonium-sulphate",
+    ...MINERAL_DEFAULTS,
     name: "Ammonium Sulphate",
     urdu: "امونیم سلفیٹ",
     n: 21,
@@ -153,6 +200,165 @@ export const FERTILIZERS: FertilizerInfo[] = [
     ],
     application:
       "Broadcast as a nitrogen top-dressing, particularly where sulphur is also deficient. Rate = (N needed × 100) ÷ 21.",
+  },
+];
+
+/* ---------------- Organic fertilizers ----------------
+ *
+ * Typical N–P2O5–K2O % RANGES from published extension sources (see
+ * sourceUrl per entry). Ranges — never single values — because composition
+ * varies with feedstock, preparation and storage. Anything unsourced is
+ * represented as lab_analysis_required with null bounds, never invented.
+ */
+
+export const ORGANIC_FERTILIZERS: FertilizerInfo[] = [
+  {
+    slug: "farmyard-manure",
+    name: "Farmyard Manure (FYM)",
+    urdu: "گوبر کی کھاد",
+    n: null,
+    p: null,
+    k: null,
+    fertilizerType: "organic",
+    organicCategory: "manure",
+    nutrientValueType: "typical_range",
+    nMin: 0.5,
+    nMax: 1.0,
+    pMin: 0.15,
+    pMax: 0.2,
+    kMin: 0.5,
+    kMax: 0.6,
+    sourceUrl: "https://agritech.tnau.ac.in/ta/org_farm/orgfarm_manure.html",
+    nutrientNote:
+      "Typical range only. TNAU reports well-decomposed FYM at 0.5% N, 0.2% P2O5, 0.5% K2O; the FAO fertilizer glossary widens this to 0.5–1.0% N, 0.15–0.20% P2O5, 0.5–0.6% K2O. Your heap depends on animal feed, litter, urine capture and storage — only ~30% of its nitrogen is available to the first crop (TNAU). Get a lab analysis for precision dosing.",
+    tagline: "The traditional bulky manure — low nutrients, high soil-conditioning value.",
+    description:
+      "Farmyard manure is the decomposed mixture of cattle dung and urine with litter and leftover fodder. It is the most widely used bulky organic manure in South Asia, but its nutrient concentration is roughly one-hundredth of urea's: it is a soil conditioner that also carries some nutrients, not a concentrated nutrient source.",
+    benefits: [
+      "Improves soil structure, water-holding capacity and microbial activity",
+      "Supplies secondary and micronutrients alongside NPK",
+      "Long residual effect — feeds subsequent crops, not just the first",
+      "Widely available on-farm at low cash cost",
+    ],
+    precautions: [
+      "Very low nutrient density: supplying 100 kg N/ha needs 10–20 t/ha of FYM",
+      "Only ~30% of nitrogen is available to the first crop; the rest mineralizes slowly",
+      "Poorly stored or fresh manure can carry weed seeds and immobilize soil nitrogen",
+      "Cannot be precision-dosed without a lab analysis of your specific heap",
+    ],
+    application:
+      "TNAU extension guidance: apply 10–20 t/ha of well-rotted FYM before sowing (at least 15 days before for heavy rates), spread and incorporate by ploughing immediately — do not leave it in small heaps in the field, which loses nutrients. Partially rotted FYM should go on 3–4 weeks before sowing.",
+  },
+  {
+    slug: "compost",
+    name: "Compost (farm compost)",
+    urdu: "کمپوسٹ",
+    n: null,
+    p: null,
+    k: null,
+    fertilizerType: "organic",
+    organicCategory: "compost",
+    nutrientValueType: "typical_range",
+    nMin: 0.5,
+    nMax: 1.4,
+    pMin: 0.15,
+    pMax: 1.0,
+    kMin: 0.5,
+    kMax: 1.4,
+    sourceUrl: "https://agritech.tnau.ac.in/org_farm/orgfarm_composting_coir.html",
+    nutrientNote:
+      "Wide range because feedstock decides the value. TNAU reports farm compost (crop residues, weeds) averaging 0.5% N, 0.15% P2O5, 0.5% K2O, while town compost (refuse, night soil) averages 1.4% N, 1.0% P2O5, 1.4% K2O. Your compost falls somewhere on this spectrum depending on what went into the pit — a lab analysis is the only precise number.",
+    tagline: "Decomposed farm and household waste — variable, feedstock-dependent nutrition.",
+    description:
+      "Compost is rotted organic matter made from farm waste (sugarcane trash, paddy straw, weeds) or town refuse. Farm compost made from crop residues is the lowest-nutrient of the four materials listed here; town compost is richer but may carry contaminants. Both are primarily soil conditioners.",
+    benefits: [
+      "Recycles on-farm waste into a stable soil amendment",
+      "Improves soil organic matter, structure and water retention",
+      "Slow, steady nutrient release with minimal leaching risk",
+      "Enrichable: TNAU notes adding rock phosphate (10–15 kg/t of raw material) raises its phosphorus value",
+    ],
+    precautions: [
+      "Farm compost is the most dilute organic source here — large volumes needed for meaningful nutrition",
+      "Town/municipal compost can contain heavy metals and glass — know your source",
+      "Immature compost can rob nitrogen from the crop as it finishes decomposing",
+      "Nutrient content cannot be read off a label — analyse before precision use",
+    ],
+    application:
+      "Make in trenches or pits (5–6 months to maturity for farm compost). Apply well-rotted compost before land preparation and incorporate. Rates of 5–10 t/ha are common for field crops; use higher rates mainly for soil building, not as a primary nutrient source.",
+  },
+  {
+    slug: "vermicompost",
+    name: "Vermicompost",
+    urdu: "ورمی کمپوسٹ",
+    n: null,
+    p: null,
+    k: null,
+    fertilizerType: "organic",
+    organicCategory: "compost",
+    nutrientValueType: "typical_range",
+    nMin: 1.0,
+    nMax: 3.0,
+    pMin: 0.8,
+    pMax: 2.9,
+    kMin: 1.0,
+    kMax: 2.0,
+    sourceUrl: "https://agritech.tnau.ac.in/ta/org_farm/orgfarm_cotton.html",
+    nutrientNote:
+      "The most variable bulky manure here. TNAU reports earthworm castings at 2.0–2.5% N, 2.5–2.9% P2O5, 1.2–1.4% K2O, while mixed-feedstock analyses (e.g. a 2018 Journal of Pharmacognosy and Phytochemistry study) found 1.10% N, 0.80% P2O5, 1.00% K2O, and a KVK extension guide gives 1.5–3.0% N, 1.5–2.5% P2O5, 1.5–2.0% K2O. Composition follows the feedstock — analyse your batch before dosing.",
+    tagline: "Earthworm-processed manure — richer than FYM, but feedstock decides everything.",
+    description:
+      "Vermicompost is organic waste (dung, crop residues, household waste) digested by earthworms into fine granular castings. It is more nutrient-concentrated than FYM or farm compost and rich in microbial activity, but its analysis swings widely with what the worms were fed.",
+    benefits: [
+      "Higher nutrient concentration than FYM or farm compost",
+      "Fine granular texture — easy to apply evenly, good for nurseries and vegetables",
+      "High microbial activity supports nutrient cycling in soil",
+      "Can be produced on-farm in pits or beds in 40–75 days",
+    ],
+    precautions: [
+      "No two batches are alike — feedstock changes the analysis completely",
+      "Still dilute versus mineral fertilizers: ~1–3% N against urea's 46%",
+      "Commercial vermicompost quality varies; buy from a trusted producer or analyse",
+      "Keep beds moist but never waterlogged during production or nutrients leach",
+    ],
+    application:
+      "Extension guidance commonly recommends mature vermicompost at ~5 t/ha for field crops, less for nurseries and potting mixes. Apply before sowing/transplanting and incorporate lightly. For high-value vegetables it works well as a basal soil builder alongside mineral top-dressing.",
+  },
+  {
+    slug: "green-manure",
+    name: "Green Manure (Dhaincha / Sesbania)",
+    urdu: "سبز کھاد",
+    n: null,
+    p: null,
+    k: null,
+    fertilizerType: "organic",
+    organicCategory: "green_manure",
+    nutrientValueType: "typical_range",
+    nMin: 2.6,
+    nMax: 3.5,
+    pMin: 0.5,
+    pMax: 0.6,
+    kMin: 1.0,
+    kMax: 1.2,
+    sourceUrl: "http://www.eagri.org/eagri50/AGRO302/lec18.pdf",
+    nutrientNote:
+      "Percentages are on an AIR-DRY biomass basis — fresh dhaincha is ~85% water, so per-tonne-fresh nutrients are far lower. eAgri/TNAU course material reports Sesbania aculeata at 2.6–3.2% N (dry basis) accumulating 130–185 kg N/ha; a published green-manure table gives 3.50% N, 0.60% P2O5, 1.20% K2O. Actual nitrogen added depends on biomass produced and incorporation timing.",
+    tagline: "A living nitrogen factory — grown, then ploughed in before the main crop.",
+    description:
+      "Green manuring means growing a fast legume crop — dhaincha (Sesbania aculeata) is the classic choice in South Asian rice systems — and incorporating it into the soil at 45–60 days, before it turns woody. The legume fixes atmospheric nitrogen, and the incorporated biomass releases it as it decomposes.",
+    benefits: [
+      "Adds 130–185 kg N/ha of biologically fixed nitrogen (eAgri/TNAU figures)",
+      "Adds large quantities of fresh organic matter, improving soil structure",
+      "No transport or purchase cost — grown in situ",
+      "Particularly valuable before transplanted rice",
+    ],
+    precautions: [
+      "Takes land and water for 45–60 days — it competes with the cropping calendar",
+      "Incorporating bulky biomass needs labour or machinery (plough/hydro-tiller)",
+      "Nutrient percentages quoted are dry-basis; fresh-weight nutrients are ~6–7× lower",
+      "Up to three-quarters of the fixed nitrogen can be lost in poorly managed lowland soils — incorporate into moist soil and transplant the next crop within 1–2 weeks",
+    ],
+    application:
+      "Sow dhaincha at ~20–25 kg seed/ha after the previous harvest. Incorporate at 45–60 days while still succulent (before flowering woodiness), preferably into standing water for rice fields. Transplant or sow the next crop 1–2 weeks after incorporation.",
   },
 ];
 

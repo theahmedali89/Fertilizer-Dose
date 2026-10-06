@@ -51,9 +51,11 @@ export function CompareTool() {
           f,
           bagPrice: Number.isFinite(bagPrice) ? bagPrice : null,
           bagKg,
-          perN: bagPrice > 0 ? perKgNutrient(bagPrice, bagKg, f.n) : null,
-          perP: bagPrice > 0 ? perKgNutrient(bagPrice, bagKg, f.p) : null,
-          perK: bagPrice > 0 ? perKgNutrient(bagPrice, bagKg, f.k) : null,
+          // FERTILIZERS here is the mineral-only list: n/p/k are always set.
+          // The `?? 0` is a type-level guard only (perKgNutrient returns null for pct <= 0).
+          perN: bagPrice > 0 ? perKgNutrient(bagPrice, bagKg, f.n ?? 0) : null,
+          perP: bagPrice > 0 ? perKgNutrient(bagPrice, bagKg, f.p ?? 0) : null,
+          perK: bagPrice > 0 ? perKgNutrient(bagPrice, bagKg, f.k ?? 0) : null,
         };
       });
     const min = (fn: (r: (typeof rows)[number]) => number | null) => {

@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CalculatorForm } from "@/components/calculator/CalculatorForm";
+import { OrganicDoseSection } from "@/components/calculator/OrganicDoseSection";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Accordion } from "@/components/ui/Accordion";
@@ -52,6 +53,8 @@ export default async function CalculatorPage({
 
       <Section>
         <CalculatorForm crops={crops} />
+        {/* Mode A — user-entered organic analysis (pure arithmetic on user inputs) */}
+        <OrganicDoseSection />
       </Section>
 
       <Section
@@ -71,7 +74,7 @@ export default async function CalculatorPage({
             </Link>
           </CardBody>
         </Card>
-       </Section>
+      </Section>
 
       <div className="bg-surface border-t border-line">
         <Section

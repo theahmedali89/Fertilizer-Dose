@@ -34,10 +34,20 @@ const lines = z.string().transform((v) => v.split("\n").map((s) => s.trim()).fil
 
 /* ── Fertilizers ── */
 
+/** Optional percentage: blank → null (organics with typical ranges have no single
+ * label value), otherwise a number 0–100. */
+const optPct = z
+  .string()
+  .trim()
+  .transform((v) => (v === "" ? null : Number(v)))
+  .refine((v) => v === null || (typeof v === "number" && Number.isFinite(v) && v >= 0 && v <= 100), {
+    message: "Must be a number between 0 and 100, or blank.",
+  });
+
 const fertilizerSchema = z.object({
   slug: str.min(2).max(80).regex(/^[a-z0-9-]+$/),
   name: str.min(2).max(120),
-  urdu: optStr, n: num.min(0).max(100), p: num.min(0).max(100), k: num.min(0).max(100),
+  urdu: optStr, n: optPct, p: optPct, k: optPct,
   tagline: optStr, description: str.min(10), benefits: lines, precautions: lines,
   application: str.min(10), published: bool,
 });

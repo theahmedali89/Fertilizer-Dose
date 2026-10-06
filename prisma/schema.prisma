@@ -96,9 +96,12 @@ model Fertilizer {
   slug        String   @unique
   name        String
   urdu        String?
-  n           Float
-  p           Float
-  k           Float
+  // Single label values. Nullable: organics with ranges have NO single
+  // honest value — a midpoint would be fake precision. Mineral rows keep
+  // their label values; this column change is additive and lossless.
+  n           Float?
+  p           Float?
+  k           Float?
   tagline     String?
   description String   @db.Text
   benefits    String[]
@@ -107,6 +110,26 @@ model Fertilizer {
   published   Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  // ── Organic fertilizer support (Phase 2; additive, all nullable/defaulted) ──
+  // fertilizerType: "mineral" | "organic"
+  fertilizerType String @default("mineral")
+  // organicCategory: "manure" | "compost" | "green_manure" (organics only)
+  organicCategory String?
+  // nutrientValueType: "fixed" | "typical_range" | "variable" | "lab_analysis_required"
+  nutrientValueType String @default("fixed")
+  // Honest variability caveat, shown in the UI wherever ranges appear.
+  nutrientNote String? @db.Text
+  // Typical-range bounds (percent). Null when not applicable. Midpoints are
+  // NEVER stored here as single values (see n/p/k above).
+  nMin Float?
+  nMax Float?
+  pMin Float?
+  pMax Float?
+  kMin Float?
+  kMax Float?
+  // Source for the typical ranges (URL).
+  sourceUrl String?
 
   sources FertilizerSource[]
 }
