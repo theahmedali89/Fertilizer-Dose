@@ -208,15 +208,59 @@ export async function getCrops(): Promise<CropInfo[]> {
     const items = await getGrowingItems();
     const crops = items.filter((i) => i.category === "crop");
     if (!crops.length) return STATIC_CROPS;
+
+    // Get verified fertilizer recommendations to populate NPK data.
+    // The calculator uses GrowingItem.npk (legacy flat field), but verified
+    // data lives in FertilizerRecommendation. Merge them here.
+    let recMap = new Map<string, { n: number | null; p: number | null; k: number | null; source: string }>();
+    try {
+      // Try to get selected country; default to PK if unavailable
+      const { getSelectedCountryCode } = await import("@/server/country");
+      const countryCode = await getSelectedCountryCode().catch(() => "PK");
+      const country = await db.country.findUnique({ where: { code: countryCode }, select: { id: true } });
+      if (country) {
+        const recs = await db.fertilizerRecommendation.findMany({
+          where: {
+            countryId: country.id,
+            verificationStatus: { in: ["verified", "published"] },
+          },
+          include: {
+            item: { select: { slug: true } },
+            source: { select: { title: true, organization: true } },
+          },
+        });
+        for (const r of recs) {
+          const slug = r.item.slug;
+          // Keep first (most specific) record per crop; prefer region-specific over country-wide
+          if (!recMap.has(slug) || r.regionId) {
+            recMap.set(slug, {
+              n: r.n, p: r.p2o5, k: r.k2o,
+              source: r.source.organization ? `${r.source.organization} — ${r.source.title}` : r.source.title,
+            });
+          }
+        }
+      }
+    } catch {
+      // If recommendation lookup fails, fall back to GrowingItem.npk
+    }
+
     // Map GrowingItem → CropInfo shape used by the calculator engine.
-    return crops.map((c) => ({
-      slug: c.slug, name: c.name, urdu: c.urdu ?? "",
-      season: c.season ?? "", seasonDetail: c.seasonDetail ?? "",
-      soil: c.soil ?? "", water: c.water ?? "",
-      stages: c.stages.map((s) => ({ name: s.name, timing: s.timing, note: s.note })),
-      problems: c.problems ?? [],
-      npk: c.npk, npkSource: c.npkSource,
-      region: c.region ?? "",
-    }));
+    return crops.map((c) => {
+      const rec = recMap.get(c.slug);
+      // Use verified recommendation NPK if available, else fall back to legacy flat field
+      const npk = rec && rec.n != null
+        ? { n: rec.n, p: rec.p ?? 0, k: rec.k ?? 0 }
+        : c.npk;
+      const npkSource = rec ? rec.source : c.npkSource;
+      return {
+        slug: c.slug, name: c.name, urdu: c.urdu ?? "",
+        season: c.season ?? "", seasonDetail: c.seasonDetail ?? "",
+        soil: c.soil ?? "", water: c.water ?? "",
+        stages: c.stages.map((s) => ({ name: s.name, timing: s.timing, note: s.note })),
+        problems: c.problems ?? [],
+        npk, npkSource,
+        region: c.region ?? "",
+      };
+    });
   }, STATIC_CROPS);
 }
