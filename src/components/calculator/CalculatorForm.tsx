@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
 import { AREA_UNITS, calculateDose, type CropInfo } from "@/lib/agronomy";
 import { SaveCalcButton } from "@/components/garden/SaveCalcButton";
+import { planSplitDose } from "@/lib/splitDose";
 
 const SOILS = [
   "Loam (default)",
@@ -29,6 +30,8 @@ export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
   const [soil, setSoil] = useState(SOILS[0]);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  // 10c — display-only unit toggle; never alters the kg calculation or saved calc
+  const [displayUnit, setDisplayUnit] = useState<"kg" | "lbs">("kg");
 
   const crop = crops.find((c) => c.slug === cropSlug)!;
 
@@ -38,6 +41,22 @@ export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
     if (!a || a <= 0) return null;
     return calculateDose(crop, a, unit);
   }, [submitted, area, crop, unit]);
+
+  // 10a — generic split-dose schedule derived from the calculated lines
+  const splitPlan = useMemo(
+    () => (result ? planSplitDose(crop.slug, result.lines) : null),
+    [result, crop.slug]
+  );
+
+  /**
+   * 10c — kg → lbs/acre conversion for display.
+   * 1 kg/ha = 2.20462 lb ÷ 2.47105 ac/ha = 0.89218 ≈ 0.892 lbs/acre.
+   * Display-only: the underlying kg result and the saved calculation are untouched.
+   */
+  const lbsPerAcre = (kg: number): number => {
+    if (!result || result.areaHa <= 0) return 0;
+    return Math.round(((kg / result.areaHa) * 0.892) * 10) / 10;
+  };
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -148,12 +167,41 @@ export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
                   <h3 className="font-display text-2xl font-semibold">
                     {result.cropName} — {result.area} {result.unitLabel}
                   </h3>
-                  <SaveCalcButton
-                    cropSlug={crop.slug}
-                    area={result.area}
-                    unit={unit}
-                    products={result.lines}
-                  />
+                  <div className="flex items-center gap-2">
+                    {/* 10c — display-only kg/lbs toggle */}
+                    <div
+                      role="group"
+                      aria-label={t("results.unitToggleLabel")}
+                      className="inline-flex rounded-full border border-line bg-surface-2 p-0.5 text-xs font-semibold"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setDisplayUnit("kg")}
+                        aria-pressed={displayUnit === "kg"}
+                        className={`rounded-full px-3 py-1 transition-colors ${displayUnit === "kg"
+                          ? "bg-leaf-700 text-white dark:bg-leaf-600"
+                          : "text-ink-soft hover:text-ink"}`}
+                      >
+                        {t("results.unitKg")}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setDisplayUnit("lbs")}
+                        aria-pressed={displayUnit === "lbs"}
+                        className={`rounded-full px-3 py-1 transition-colors ${displayUnit === "lbs"
+                          ? "bg-leaf-700 text-white dark:bg-leaf-600"
+                          : "text-ink-soft hover:text-ink"}`}
+                      >
+                        {t("results.unitLbs")}
+                      </button>
+                    </div>
+                    <SaveCalcButton
+                      cropSlug={crop.slug}
+                      area={result.area}
+                      unit={unit}
+                      products={result.lines}
+                    />
+                  </div>
                 </div>
                 <p className="text-sm text-ink-faint">
                   {t("results.recommendedLine", {
@@ -167,17 +215,32 @@ export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
                   {result.lines.map((l) => (
                     <div key={l.product} className="rounded-xl border border-line bg-surface-2 p-4">
                       <p className="text-xs font-bold uppercase tracking-wider text-ink-faint">{l.product}</p>
-                      <p className="mt-1 font-display text-3xl font-semibold">
-                        {l.kg}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.kgUnit")}</span>
-                      </p>
-                      <p className="text-xs text-ink-faint mt-0.5">≈ {l.bags} {t("results.bags")}</p>
+                      {displayUnit === "kg" ? (
+                        <>
+                          <p className="mt-1 font-display text-3xl font-semibold">
+                            {l.kg}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.kgUnit")}</span>
+                          </p>
+                          <p className="text-xs text-ink-faint mt-0.5">≈ {l.bags} {t("results.bags")}</p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="mt-1 font-display text-3xl font-semibold">
+                            {lbsPerAcre(l.kg)}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.lbsUnit")}</span>
+                          </p>
+                          <p className="text-xs text-ink-faint mt-0.5">{t("results.lbsNote")}</p>
+                        </>
+                      )}
                       <p className="text-xs text-ink-soft mt-2 leading-relaxed">{l.purpose}</p>
                     </div>
                   ))}
                 </div>
                 <div className="mt-4 flex items-center justify-between rounded-xl bg-leaf-100 dark:bg-leaf-950 px-4 py-3">
                   <span className="text-sm font-semibold">{t("results.total")}</span>
-                  <span className="font-display text-xl font-semibold">{result.totalKg} {t("results.kgUnit")}</span>
+                  <span className="font-display text-xl font-semibold">
+                    {displayUnit === "kg"
+                      ? <>{result.totalKg} {t("results.kgUnit")}</>
+                      : <>{lbsPerAcre(result.totalKg)} {t("results.lbsUnit")}</>}
+                  </span>
                 </div>
               </CardBody>
             </Card>
@@ -223,6 +286,44 @@ export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
                 </div>
               </CardBody>
             </Card>
+
+            {/* 10a — generic split-dose planner: never presented as crop-specific */}
+            {splitPlan && (
+              <Card>
+                <CardBody>
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <h4 className="font-display text-lg font-semibold">{t("results.splitTitle")}</h4>
+                    <Badge>{t("results.splitGenericBadge")}</Badge>
+                  </div>
+                  <div className="space-y-3">
+                    {splitPlan.stages.map((st, i) => (
+                      <div key={i} className="flex gap-4 items-start">
+                        <span className="shrink-0 text-xs font-bold text-leaf-800 dark:text-leaf-300 bg-leaf-100 dark:bg-leaf-950 border border-leaf-200 dark:border-leaf-800 rounded-full px-2.5 py-1">
+                          {st.timing}
+                        </span>
+                        <div>
+                          <p className="font-semibold text-sm">{st.stage}</p>
+                          <ul className="mt-1 space-y-0.5">
+                            {st.products.map((p, j) => (
+                              <li key={j} className="text-sm text-ink-soft">
+                                <span className="font-medium text-ink">{p.product}</span>
+                                {" — "}
+                                {displayUnit === "kg"
+                                  ? <>{p.kg} {t("results.kgUnit")}</>
+                                  : <>{lbsPerAcre(p.kg)} {t("results.lbsUnit")}</>}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-xs text-ink-faint leading-relaxed border-t border-line pt-3">
+                    {splitPlan.basisNote}
+                  </p>
+                </CardBody>
+              </Card>
+            )}
           </div>
         )}
       </div>
