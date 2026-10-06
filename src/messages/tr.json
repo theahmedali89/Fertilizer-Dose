@@ -20,6 +20,7 @@
       "areaPlaceholder": "örn. 5",
       "crop": "Ürün",
       "cropHint": "Yalnızca doğrulanmış önerilere sahip ürünler seçilebilir.",
+      "cropSearchPlaceholder": "Ürün aramak için yazın…",
       "inReview": "veriler inceleniyor",
       "soil": "Toprak tipi (isteğe bağlı)",
       "soilHint": "Toprak tipi hesabı değiştirmez — öneriyi değiştirir. Kumlu topraklar azotu daha hızlı kaybeder; tuzlu topraklarda MOP kullanımında dikkatli olunmalıdır.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Veri kaynağı:",
       "total": "Toplam gübre",
       "kgUnit": "kg",
+      "unitToggleLabel": "Görüntüleme birimleri",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Yalnızca görüntüleme — kaydedilen hesaplamanız kg olarak kalır.",
+      "splitTitle": "Bölünmüş doz programı",
+      "splitGenericBadge": "Genel program",
       "recommendedLine": "Önerilen {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "\"{soil}\" seçtiniz. {soilLower} topraklarda dozu değiştirmeden önce toprak testi yaptırmayı düşünün — yukarıdaki temel hesaplama aynı kalır."
     },
     "title": "Hesabı gösterilen, hassas gübre dozu.",
+    "soilTestCard": {
+      "eyebrow": "Toprak analizi?",
+      "title": "Toprak analizi sonucunuz var mı? Hassas doz alın.",
+      "desc": "Toprak sağlık kartınızdaki alınabilir P ve K, organik karbon ve pH'yi girin — araç düşük besinleri artırır, orta olanları korur, yüksek olanları azaltır.",
+      "cta": "Toprak analizi hesaplayıcısını aç →"
+    },
     "metaTitle": "Gübre Doz Hesaplayıcı — Acre/Kanal/Marla Başına Urea, DAP ve MOP",
     "metaDescription": "Buğday, pirinç ve mısır için hassas urea, DAP ve MOP dozlarını hesaplayın. Alanı acre, kanal, marla veya hectare olarak girin — her hesaplama adımını görün.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Bazı ürünler neden devre dışı?",
         "a": "Bir ürün, yalnızca önerilen NPK dozu yayınlanmış bir kaynakla doğrulandığında seçilebilir. Rakamları uydurmaktansa ürünü devre dışı bırakmayı tercih ederiz — doğrulanmamış ürünler teyit edilene kadar \"veriler inceleniyor\" olarak işaretlenir."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Organik materyal katkısı — kendi analiziniz",
+      "desc": "Laboratuvar raporunuzdaki veya tedarikçi etiketindeki N / P₂O₅ / K₂O yüzdelerini ve uygulama dozunuzu girin. Bu, girdileriniz üzerinde saf aritmetiktir: uygulamanın kendine ait organik besin verisi yoktur.",
+      "materialLabel": "Materyal",
+      "customOption": "Özel materyal — değerlerimi kendim gireceğim",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Uygulama dozu",
+      "rateUnit": "t/ha",
+      "rangeHint": "{name} için yayımlanmış tipik aralık: {range}. Partiniz farklı olabilir — laboratuvar değerinizi girin.",
+      "noRangeHint": "Bu materyal için yayımlanmış aralık yok — laboratuvar veya etiket değerlerinizi girin.",
+      "resultsTitle": "Uygulanan besinler",
+      "formulaLabel": "Formül",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Katkıyı görmek için yukarıya yüzdeleri ve dozu girin.",
+      "warnTitle": "Rakamlara güvenmeden önce bunu okuyun",
+      "warnBody": "Organik materyaller partiden partiye değişir — hammadde, hazırlık ve depolama analizi değiştirir. Yayımlanmış aralıklar partinizin analizi değildir. Organik azot da yavaş salınır (TNAU'ya göre çiftlik gübresi azotunun yalnızca ~%30'u ilk ürüne ulaşır), bu yüzden sonucu uygulanan besinler olarak kabul edin, bu sezon kullanılabilir besinler olarak değil. Hassasiyet için gerçek materyalinizin laboratuvar analizini yaptırın.",
+      "dismiss": "Kapat",
+      "resultN": "Azot (N)",
+      "resultP": "Fosfat (P₂O₅)",
+      "resultK": "Potas (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Koyu moda geç",
@@ -94,6 +132,107 @@
     "title": "Çiftçilerin bize sorduğu sorular",
     "metaTitle": "SSS — Fertilizer Dose Soruları Yanıtlandı",
     "metaDescription": "Gübre dozu hesaplama, NPK formülleri, acre/kanal/marla birimleri, veri kaynakları ve Plant Doctor hakkında yanıtlar."
+  },
+  "soilTest": {
+    "eyebrow": "Toprak analizi hesaplayıcı",
+    "title": "Dozunuzu toprak analizinize göre ayarlayın.",
+    "desc": "Toprak analizi sonuçlarınızı girin — alınabilir P ve K, organik karbon ve pH — doğrulanmış ürün dozu yukarı veya aşağı ayarlanacaktır: düşük besinleri artırın, ortaları koruyun, yüksekleri azaltın.",
+    "metaTitle": "Toprak Analizine Dayalı Gübre Dozu Hesaplayıcı — NPK'yi Toprak Analizinize Göre Ayarlayın",
+    "metaDescription": "Toprak analizine dayalı gübre dozu hesaplayıcı: herhangi bir ürünün doğrulanmış NPK önerisini ayarlamak için alınabilir P, K, organik karbon ve pH girin — düşük besinleri artırın, yüksekleri azaltın.",
+    "empty": {
+      "title": "Ayarlanan dozunuz burada görünecek",
+      "desc": "Ürün seçin, toprak analizi değerlerinizi girin ve hesapla'ya basın. Her ayarlama adımı gösterilir."
+    },
+    "form": {
+      "crop": "Ürün",
+      "cropHint": "Yalnızca doğrulanmış önerilere sahip ürünler seçilebilir. Kendi NPK'nizi girmek için “Özel baz doz”u seçin.",
+      "cropSearchPlaceholder": "Ürün aramak için yazın…",
+      "inReview": "veriler inceleniyor",
+      "custom": "Özel baz doz (genel)",
+      "area": "Arazi alanı",
+      "unit": "Birim",
+      "areaError": "Lütfen sıfırdan büyük geçerli bir arazi alanı girin.",
+      "areaLargeError": "Bu alan alışılmadık derecede büyük görünüyor — lütfen değeri ve birimi kontrol edin.",
+      "phRangeError": "Toprak pH 0 ile 14 arasında olmalıdır.",
+      "negativeError": "Değerler negatif olamaz — girişlerinizi kontrol edin.",
+      "baseN": "Baz azot (N)",
+      "baseP": "Baz fosfor (P₂O₅)",
+      "baseK": "Baz potasyum (K₂O)",
+      "baseHint": "Yalnızca genel yol gösterici — bu doğrulanmış bir öneri değildir. kg/ha girin.",
+      "noVerified": "Bölgenizde {crop} için henüz doğrulanmış bir öneri yok. Aşağıya özel bir baz doz girin veya doğrulanmış bir ürün seçin.",
+      "phosphorus": "Alınabilir fosfor (Olsen P)",
+      "potassium": "Alınabilir potasyum (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Organik karbon (%)",
+      "ph": "Toprak pH",
+      "optional": "isteğe bağlı",
+      "nProxyNote": "Toprak laboratuvarları nadiren azot sınıfı bildirir, bu nedenle toprağınızın azot sağlama kapasitesinin göstergesi olarak organik karbon kullanılır.",
+      "submit": "Dozu ayarla",
+      "soilTestHint": "Toprak sağlık kartınızdan veya laboratuvar raporunuzdan. Sahip olmadığınız değeri boş bırakın — o besin baz dozunu korur."
+    },
+    "results": {
+      "title": "Toprak analizine göre ayarlanan doz",
+      "adjustedLine": "Ayarlanan {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "baseLine": "Baz {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Düşük",
+      "medium": "Orta",
+      "high": "Yüksek",
+      "notRated": "Derecelendirilmedi",
+      "acidic": "Asidik",
+      "neutral": "Nötr",
+      "alkaline": "Alkali",
+      "ratingP": "Fosfor",
+      "ratingK": "Potasyum",
+      "ratingN": "Azot (organik karbon yoluyla)",
+      "phLabel": "pH sınıfı",
+      "phFixation": "Alkali toprak (pH 7,5'in üzerinde): fosfor kalsiyum/magnezyum fosfat olarak fikse olabilir. Ekimde tüm P dozunu tohumun yakınına banda verin — yukarıdaki ayarlanan doz aynı kalır.",
+      "buildUp": "+%30 artır",
+      "maintenance": "Koru",
+      "drawdown": "−%25 azalt",
+      "notRatedNote": "Analiz değeri yok — baz doz korundu",
+      "kgUnit": "kg",
+      "bags": "× 50 kg torba",
+      "total": "Toplam gübre",
+      "basisTitle": "Bu rakamlar neden",
+      "basis": [
+        "Dereceler Hindistan toprak analiz laboratuvarı / Toprak Sağlık Kartı sınıflarını izler: P (Olsen) düşük <10, orta 10–25, yüksek >25 mg/kg; K (NH₄OAc) düşük <120, orta 120–280, yüksek >280 kg/ha; organik karbon düşük <0,5, orta 0,5–0,75, yüksek >0,75%.",
+        "ppm ve kg/ha standart pulluk tabanı katsayısı ×2,24 ile dönüştürülür (≈hektar başına 2,24 milyon kg toprak).",
+        "Düşük sınıf besinler +%30 alır (artır), ortalar bazda kalır (koru), yüksekler −%25 (azalt). Bu bantlar yol gösterici planlama tahminleridir, yayımlanmış kritik değerler değildir.",
+        "Organik karbon azot sağlama kapasitesinin göstergesidir, ölçülmüş bir N değeri değildir — çoğu toprak laboratuvarı azot sınıfı bildirmez.",
+        "pH dozu değiştirmez; yalnızca yerleştirme riskini işaretler. Alkali topraklar fosforu fikse eder — banda yerleştirme her zamankinden daha önemlidir."
+      ],
+      "sourceLabel": "Veri kaynağı:",
+      "genericLabel": "Özel baz (yalnızca genel yol gösterici — doğrulanmış öneri değil)",
+      "disclaimer": "Tüm dozlar tahmindir. Gübre uygulamadan önce yerel ziraat mühendisiniz / tarım yayım görevlinizle teyit edin."
+    },
+    "method": {
+      "eyebrow": "Yöntem",
+      "title": "Yöntem, sade bir dille",
+      "desc": "Artır, koru, azalt — toprak laboratuvarlarının sağlık kartlarında kullandığı mantığın aynısı."
+    },
+    "methodFaq": [
+      {
+        "q": "Toprak analizine dayalı gübre dozu nedir?",
+        "a": "Genel bir öneri ortalama bir toprak varsayar. Toprak analizi tarlanızda zaten ne olduğunu söyler: fosfor yüksek çıkarsa P dozunu kısarak para tasarrufu yapabilirsiniz; düşük çıkarsa toprağı zenginleştirmek için artırırsınız. Bu araç, doğrulanmış bir ürün önerisinden başlar ve tam olarak bu mantığı uygular — düşük sınıf besinlere +%30, ortalara baz, yükseklere −%25."
+      },
+      {
+        "q": "Hangi toprak analizi değerlerine ihtiyacım var?",
+        "a": "Alınabilir fosfor (Olsen yöntemi, mg/kg veya ppm), alınabilir potasyum (amonyum asetat yöntemi, kg/ha veya ppm), organik karbon (%) ve pH — standart bir toprak sağlık kartındaki dört değer. P ve K'yi iki birimden biriyle girebilirsiniz; araç standart pulluk tabanı katsayısıyla (×2,24) dönüştürür."
+      },
+      {
+        "q": "Azot neden organik karbondan derecelendiriliyor?",
+        "a": "Rutin toprak laboratuvarları nadiren mineral azot sınıfı bildirir, bu nedenle yayım sistemleri toprağın doğal azot sağlama kapasitesinin göstergesi olarak organik karbonu kullanır: daha fazla organik karbon, sezonda daha fazla mineralleşen azot demektir. Yerleşik bir göstergedir ama ölçülmüş bir N değeri değildir — sonuç öyle etiketlenir."
+      },
+      {
+        "q": "Alkali pH dozumu değiştirir mi?",
+        "a": "Hayır — burada pH hesaplanan dozu asla değiştirmez. pH 7,5'in üzerinde fosfor giderek kalsiyum ve magnezyum fosfatlar olarak çökelir (P fiksasyonu), bu yüzden yerleştirme önemlidir: ekimde tüm fosfor dozunu saçmak yerine tohumun yakınına banda verin. Araç bunu doz değişikliği değil, not olarak işaretler."
+      },
+      {
+        "q": "Özel baz dozu ne zaman kullanmamalıyım?",
+        "a": "Özel baz seçeneği yalnızca genel yol göstericidir — veri tabanımızda doğrulanmış önerisi olmayan ürünler için bir başlangıç noktası. Doğrulanmış bir ürün×bölge dozu varsa her zaman onu kullanın; doğrulanmış rakamlar yayımlanmış kaynağını taşır."
+      }
+    ]
   },
   "footer": {
     "company": "Şirket",
@@ -313,6 +452,7 @@
     "myGarden": "Bahçem",
     "tools": "Araçlar",
     "profitCalculator": "Kâr Hesaplayıcı",
+    "soilTestCalculator": "Toprak Analizi Hesaplayıcı",
     "compare": "Karşılaştır",
     "login": "Giriş yap",
     "account": "Hesap",
@@ -367,7 +507,13 @@
       "plantsTitle": "Her türlü bahçe için bitkiler.",
       "vegetablesTitle": "Sebzeler, tarladan mutfak bahçesine."
     },
-    "subcategoryAll": "Tüm tipler"
+    "subcategoryAll": "Tüm tipler",
+    "filterCountry": "Ülke",
+    "filterRegion": "Bölge",
+    "filterMonth": "Ekim ayı",
+    "anyMonth": "Herhangi bir ay",
+    "allCountries": "Tüm ülkeler",
+    "allRegions": "Tüm bölgeler"
   },
   "calendar": {
     "metaTitle": "Ekim Takvimi — Bu Ay Ne Ekilmeli",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Hasat dönemi",
     "activityLAND_PREPARATION": "Araziyi hazırla",
     "viewGuide": "Yetiştirme kılavuzunu görüntüle",
+    "emptyRegionTitle": "Bu bölge için henüz doğrulanmış ekim bilgisi bulunmamaktadır.",
     "plantingWindow": "Ekim dönemi",
-    "appliesTo": "Şunlar için geçerli",
-    "emptyRegionTitle": "Bu bölge için henüz doğrulanmış ekim bilgisi bulunmamaktadır."
+    "appliesTo": "Şunlar için geçerli"
   },
   "garden": {
     "metaTitle": "Bahçem — Parselleri, Ekimleri ve Gübre Planlarını Takip Edin",
@@ -469,6 +615,11 @@
     "markDone": "Tamamlandı olarak işaretle",
     "reopen": "Yeniden aç",
     "addReminder": "Hatırlatıcı ekle",
+    "generateFertilizerReminders": "Gübre hatırlatıcıları oluştur",
+    "fertilizerReminderNote": "Standart bölünmüş doz uygulamasından önerilen genel zamanlama — parseliniz için ziraat reçetesi değildir.",
+    "suggestedPrefix": "Önerilen",
+    "remindersAdded": "Yaklaşan görevlere {count} gübre hatırlatıcısı eklendi",
+    "remindersAlreadyExist": "Bu ekim için önerilen tüm hatırlatıcılar zaten mevcut",
     "reminderTitle": "Hatırlatıcı",
     "reminderTitlePh": "örn. İkinci urea uygulamasını yap",
     "dueDate": "Bitiş tarihi",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Gübre Kütüphanesi — NPK Bileşimi, Kullanımlar ve Doz Rehberliği",
-    "metaDescription": "Urea, DAP, MOP, SSP, SOP ve daha fazlası için etiket-doğru NPK bileşimleri, faydalar, önlemler ve uygulama rehberliği."
+    "metaDescription": "Urea, DAP, MOP, SSP, SOP ve daha fazlası için etiket-doğru NPK bileşimleri, faydalar, önlemler ve uygulama rehberliği.",
+    "libraryEyebrow": "Gübre kütüphanesi",
+    "libraryTitle": "Torbanın içinde ne olduğunu bilin.",
+    "libraryDesc": "Mineral gübreler tam etiket yüzdeleri taşır — doz hesaplayıcının çalıştığı sayılar. Organik materyaller yayımlanmış yayım kaynaklarından tipik aralıklar taşır, çünkü birbirinin aynı iki parti yoktur.",
+    "tabAll": "Tümü",
+    "tabMineral": "Mineral",
+    "tabOrganic": "Organik",
+    "typeMineral": "Mineral",
+    "typeOrganic": "Organik",
+    "typicalRangeLabel": "Tipik aralık",
+    "organicHubCta": "Organik gübreler nedir? Kılavuzu okuyun →",
+    "detail": {
+      "categoryManure": "Hayvan gübresi",
+      "categoryCompost": "Kompost",
+      "categoryGreenManure": "Yeşil gübre",
+      "caveatTitle": "Neden aralık, sayı değil",
+      "sourceLabel": "Aralık kaynağı"
+    },
+    "organic": {
+      "metaTitle": "Organik Gübreler — Türler, Besin Aralıkları ve Dürüst Sınırlamalar",
+      "metaDescription": "Çiftlik gübresi, kompost, vermikompost ve yeşil gübre: yayım kaynaklarından tipik NPK aralıkları, organiklerin mineral gübrelerden farkı ve gerçek sınırlamaları.",
+      "eyebrow": "Organik gübreler",
+      "title": "Yavaş, değişken — ve bu konuda dürüst.",
+      "intro": "Organik gübreler, ayrışırken besin salan bitki ve hayvan atıklarıdır. Toprağı beslerler ama mineral gübrelere göre seyreltik ve tutarsızdırlar. Bu sayfa, yayımlanmış yayım kaynaklarından tipik besin aralıklarını ve kimsenin atlamaması gereken sınırlamaları verir.",
+      "whatTitle": "Organik gübreler nedir",
+      "whatBody1": "Gübreler, bitki besinlerinin kaynağı olarak kullanılan bitki ve hayvan atıklarıdır; ayrışmadan sonra bu besinleri salarlar (TNAU). En yaygın kullanılan hacimli organik gübreler çiftlik gübresi (FYM), kompost ve yeşil gübredir. İkinci bir grup — yağ küspeleri, kan unu ve kemik unu gibi konsantre organik gübreler — kilogram başına daha fazla besin taşır ama yine de mineral konsantrasyonların çok altındadır.",
+      "whatBody2": "Organiklerin belirleyici özelliği değişkenliktir: iki çiftliğin aynı materyali, hammadde, hazırlık ve depolamaya göre besin içeriğinde birkaç kat farklı olabilir. Bu yüzden bu kütüphane organik materyaller için aralıklar gösterir, asla tekil etiket değerleri değil.",
+      "typesTitle": "Bu kütüphanedeki dört materyal",
+      "typesIntro": "Her kart, yayımlanmış yayım kaynaklarından tipik N–P₂O₅–K₂O yüzde aralığını gösterir. Partiniz farklı olacaktır — bunlar başlangıç noktalarıdır, garanti değil.",
+      "compareTitle": "Organikler mineral gübrelerden nasıl farklıdır",
+      "compareIntro": "Hiçbir taraf 'daima daha iyi' değildir. Farklı işler yaparlar:",
+      "compareRows": [
+        {
+          "aspect": "Besin yoğunluğu",
+          "mineral": "Yüksek ve kesin — üre %46 N'dir, torbada yazar.",
+          "organic": "Düşük ve değişken — çiftlik gübresi kabaca %0,5–1,0 N'dir ve her yığın farklıdır."
+        },
+        {
+          "aspect": "Salınım hızı",
+          "mineral": "Hızlı — besinler suda çözünür ve günler içinde kullanılabilir.",
+          "organic": "Yavaş — önce mikropların mineralleştirmesi gerekir; çiftlik gübresi azotunun yalnızca ~%30'u ilk ürüne ulaşır (TNAU)."
+        },
+        {
+          "aspect": "Doz hassasiyeti",
+          "mineral": "Hassas — hesaplayıcı kilograma kadar doz verebilir.",
+          "organic": "Partinize özel laboratuvar analizi olmadan yaklaşıktır."
+        },
+        {
+          "aspect": "Toprak etkileri",
+          "mineral": "Toprak yapısı veya organik madde üzerinde doğrudan etkisi azdır.",
+          "organic": "Yapıyı, su tutmayı ve mikrobiyal aktiviteyi iyileştirir."
+        },
+        {
+          "aspect": "Lojistik",
+          "mineral": "Konsantre — acre başına birkaç torba.",
+          "organic": "Hacimli — taşımak, sermek ve karıştırmak için hektar başına tonlarca."
+        },
+        {
+          "aspect": "Artık etki",
+          "mineral": "Çoğunlukla sezon içinde alınır veya kaybolur.",
+          "organic": "Uzun — ayrışma sürdükçe sonraki ürünleri besler."
+        }
+      ],
+      "usesTitle": "Organikler nerede mantıklı",
+      "usesIntro": "Uygun kullanımlar, açıkça:",
+      "uses": [
+        "Sezonlar boyunca toprak organik maddesini ve yapısını inşa etmek — en güçlü rolleri.",
+        "Ekim öncesi baz toprak ıslahı, özellikle bozulmuş veya kumlu topraklarda.",
+        "Entegre besin yönetimi: toprak sağlığı için organikler + hassas ürün besleme için mineral gübreler.",
+        "Fidanlıklar, sebzeler ve toprak biyolojisinin en hızlı geri döndüğü yüksek değerli ürünler.",
+        "Dikim öncesi yeşil gübreleme; dhaincha biyolojik olarak fikse edilmiş 130–185 kg N/ha azot ekleyebilir."
+      ],
+      "limitsTitle": "Sınırlamalar — güvenmeden önce okuyun",
+      "limitsIntro": "Organiklerin yapamadıkları:",
+      "limits": [
+        "Düşük besin yoğunluğu: çiftlik gübresiyle 100 kg N/ha'ya ulaşmak için hektar başına 10–20 ton gerekir.",
+        "Değişken bileşim: yayımlanmış aralıklar tek bir materyalde 2–3× açılır; hassas olan yalnızca partinizin laboratuvar analizidir.",
+        "Yavaş salınım: besinler günlerle değil aylarla gelir — sezon ortası eksikliği kurtaramaz.",
+        "Hacim ve işçilik: taşımak, sermek ve karıştırmak için tonlarca, mineral gübre torbalarına karşı.",
+        "Kalite riskleri: iyi kompostlanmamış materyalde yabancı ot tohumları ve patojenler; belediye kompostunda olası kirleticiler.",
+        "Doğrudan ikame değil: 'gübre yerine hayvan gübresi' yalnızca planlı bir besin bütçesinde kısmi ikame olarak işler — asla koşulsuz bir iddia olarak değil."
+      ],
+      "warnTitle": "Hesaplayıcı kullanımı için uyarılar",
+      "warnBody": "Hesaplayıcının organik bölümü, SİZİN girdiğiniz sayılar üzerinde saf aritmetik çalıştırır (laboratuvar raporunuz veya tedarikçi etiketiniz). Partinizin gerçek analizini bilmez ve yavaş salınımı hesaba katamaz — sonucu uygulanan besinlerin üst sınırı olarak kabul edin, bu sezonun ürününe kullanılabilir besinler olarak değil. Hassas doz için gerçek materyalinizin laboratuvar analizini yaptırın.",
+      "exploreCta": "Hesaplayıcının organik bölümünü aç",
+      "detailCta": "Ayrıntıları görüntüle"
+    }
   },
   "chart": {
     "metaTitle": "Gübre Doz Tablosu — Hızlı NPK Referansı",

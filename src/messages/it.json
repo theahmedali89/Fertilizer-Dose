@@ -20,6 +20,7 @@
       "areaPlaceholder": "es. 5",
       "crop": "Coltura",
       "cropHint": "Sono selezionabili solo le colture con raccomandazioni verificate.",
+      "cropSearchPlaceholder": "Digita per cercare le colture…",
       "inReview": "dati in revisione",
       "soil": "Tipo di suolo (facoltativo)",
       "soilHint": "Il tipo di suolo non cambia il calcolo — cambia il consiglio. I suoli sabbiosi disperdono l'azoto più in fretta; i suoli salini richiedono attenzione con il MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Fonte dei dati:",
       "total": "Fertilizzante totale",
       "kgUnit": "kg",
+      "unitToggleLabel": "Unità di visualizzazione",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Solo visualizzazione — il tuo calcolo salvato resta in kg.",
+      "splitTitle": "Programma di dose frazionata",
+      "splitGenericBadge": "Programma generico",
       "recommendedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha consigliati · {region}",
       "soilCustom": "Hai selezionato \"{soil}\". Sui suoli {soilLower}, considera un'analisi del suolo prima di modificare la dose — il calcolo di base sopra resta invariato."
     },
     "title": "Dose di fertilizzante esatta, con il calcolo mostrato.",
+    "soilTestCard": {
+      "eyebrow": "Analisi del suolo?",
+      "title": "Hai i risultati dell’analisi del suolo? Ottieni una dose precisa.",
+      "desc": "Inserisci P e K disponibili, carbonio organico e pH dalla tua scheda di salute del suolo — lo strumento aumenta i nutrienti bassi, mantiene i medi e riduce gli alti.",
+      "cta": "Apri il calcolatore dell’analisi del suolo →"
+    },
     "metaTitle": "Calcolatore dose fertilizzanti — Urea, DAP e MOP per acro/kanal/marla",
     "metaDescription": "Calcola le dosi esatte di urea, DAP e MOP per frumento, riso e mais. Inserisci la superficie in acro, kanal, marla o ettaro — vedi ogni passaggio del calcolo.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Perché alcune colture sono disabilitate?",
         "a": "Una coltura è selezionabile solo quando la sua dose NPK consigliata è verificata rispetto a una fonte pubblicata. Preferiamo disabilitare una coltura piuttosto che inventarne i dati — le colture non verificate sono contrassegnate come \"dati in revisione\" fino a conferma."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Contributo del materiale organico — la tua analisi",
+      "desc": "Inserisci le percentuali di N / P₂O₅ / K₂O dal tuo referto di laboratorio o dall’etichetta del fornitore, più la tua dose di applicazione. È pura aritmetica sui tuoi dati: l’app non ha dati propri sui nutrienti organici.",
+      "materialLabel": "Materiale",
+      "customOption": "Materiale personalizzato — inserirò i miei valori",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Dose di applicazione",
+      "rateUnit": "t/ha",
+      "rangeHint": "Intervallo tipico pubblicato per {name}: {range}. Il tuo lotto può differire — inserisci il tuo valore di laboratorio.",
+      "noRangeHint": "Nessun intervallo pubblicato per questo materiale — inserisci i tuoi valori di laboratorio o etichetta.",
+      "resultsTitle": "Nutrienti distribuiti",
+      "formulaLabel": "Formula",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Inserisci percentuali e una dose qui sopra per vedere il contributo.",
+      "warnTitle": "Leggi questo prima di fidarti dei numeri",
+      "warnBody": "I materiali organici variano da lotto a lotto — materia prima, preparazione e stoccaggio cambiano l’analisi. Gli intervalli pubblicati non sono l’analisi del tuo lotto. L’azoto organico si libera anche lentamente (solo ~30% dell’azoto del letame arriva alla prima coltura, secondo TNAU): considera il risultato come nutrienti distribuiti, non come nutrienti disponibili in questa stagione. Per la precisione, fai analizzare in laboratorio il tuo materiale reale.",
+      "dismiss": "Chiudi",
+      "resultN": "Azoto (N)",
+      "resultP": "Fosfato (P₂O₅)",
+      "resultK": "Potassio (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Passa alla modalità scura",
@@ -94,6 +132,107 @@
     "title": "Domande che gli agricoltori ci fanno",
     "metaTitle": "FAQ — Domande frequenti su Fertilizer Dose",
     "metaDescription": "Risposte sul calcolo della dose di fertilizzante, formule NPK, unità acro/kanal/marla, fonti dei dati e il Dottore delle piante."
+  },
+  "soilTest": {
+    "eyebrow": "Calcolatore analisi del suolo",
+    "title": "Regola la tua dose alla tua analisi del suolo.",
+    "desc": "Inserisci i risultati della tua analisi del suolo — P e K disponibili, carbonio organico e pH — e una dose verificata della coltura verrà regolata verso l’alto o il basso: aumenta i nutrienti bassi, mantieni i medi, riduci gli alti.",
+    "metaTitle": "Calcolatore della dose di fertilizzante basato sull’analisi del suolo — Regola l’NPK alla tua analisi",
+    "metaDescription": "Calcolatore della dose di fertilizzante basato sull’analisi del suolo: inserisci P, K disponibili, carbonio organico e pH per regolare la raccomandazione NPK verificata di qualsiasi coltura — aumenta i nutrienti bassi, riduci gli alti.",
+    "empty": {
+      "title": "La tua dose regolata apparirà qui",
+      "desc": "Scegli una coltura, inserisci i valori dell’analisi del suolo e premi calcola. Ogni passaggio di regolazione viene mostrato."
+    },
+    "form": {
+      "crop": "Coltura",
+      "cropHint": "Si possono selezionare solo colture con raccomandazioni verificate. Scegli «Dose di base personalizzata» per inserire il tuo NPK.",
+      "cropSearchPlaceholder": "Digita per cercare le colture…",
+      "inReview": "dati in revisione",
+      "custom": "Dose di base personalizzata (generica)",
+      "area": "Superficie del terreno",
+      "unit": "Unità",
+      "areaError": "Inserisci una superficie valida maggiore di zero.",
+      "areaLargeError": "Questa superficie sembra insolitamente grande — ricontrolla il valore e l'unità.",
+      "phRangeError": "Il pH del suolo deve essere compreso tra 0 e 14.",
+      "negativeError": "I valori non possono essere negativi — controlla i dati inseriti.",
+      "baseN": "Azoto di base (N)",
+      "baseP": "Fosforo di base (P₂O₅)",
+      "baseK": "Potassio di base (K₂O)",
+      "baseHint": "Solo orientamento generico — non è una raccomandazione verificata. Inserisci kg/ha.",
+      "noVerified": "Non c’è ancora una raccomandazione verificata per {crop} nella tua regione. Inserisci una dose di base personalizzata qui sotto, oppure scegli una coltura verificata.",
+      "phosphorus": "Fosforo disponibile (Olsen P)",
+      "potassium": "Potassio disponibile (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Carbonio organico (%)",
+      "ph": "pH del suolo",
+      "optional": "facoltativo",
+      "nProxyNote": "I laboratori del suolo raramente riportano una classe di azoto, quindi il carbonio organico viene usato come indicatore della capacità del tuo suolo di fornire azoto.",
+      "submit": "Regola la dose",
+      "soilTestHint": "Dalla tua scheda di salute del suolo o dal referto di laboratorio. Lascia vuoto qualsiasi valore che non hai — quel nutriente mantiene la sua dose di base."
+    },
+    "results": {
+      "title": "Dose regolata in base all’analisi del suolo",
+      "adjustedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha regolati · {region}",
+      "baseLine": "Base {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Basso",
+      "medium": "Medio",
+      "high": "Alto",
+      "notRated": "Non classificato",
+      "acidic": "Acido",
+      "neutral": "Neutro",
+      "alkaline": "Alcalino",
+      "ratingP": "Fosforo",
+      "ratingK": "Potassio",
+      "ratingN": "Azoto (via carbonio organico)",
+      "phLabel": "Classe di pH",
+      "phFixation": "Suolo alcalino (pH sopra 7,5): il fosforo può fissarsi come fosfati di calcio/magnesio. Distribuisci a bande l’intera dose di P vicino al seme alla semina — la dose regolata sopra resta invariata.",
+      "buildUp": "+30% aumenta",
+      "maintenance": "Mantieni",
+      "drawdown": "−25% riduci",
+      "notRatedNote": "Nessun valore di analisi — dose di base mantenuta",
+      "kgUnit": "kg",
+      "bags": "× sacchi da 50 kg",
+      "total": "Fertilizzante totale",
+      "basisTitle": "Perché questi numeri",
+      "basis": [
+        "Le classi seguono quelle del laboratorio indiano di analisi del suolo / della scheda di salute del suolo: P (Olsen) basso <10, medio 10–25, alto >25 mg/kg; K (NH₄OAc) basso <120, medio 120–280, alto >280 kg/ha; carbonio organico basso <0,5, medio 0,5–0,75, alto >0,75%.",
+        "ppm e kg/ha vengono convertiti con il fattore standard dello strato arabile ×2,24 (≈2,24 milioni di kg di suolo per ettaro).",
+        "I nutrienti di classe bassa ricevono +30% (aumenta), i medi restano alla base (mantieni), gli alti −25% (riduci). Queste fasce sono stime di pianificazione indicative, non valori critici pubblicati.",
+        "Il carbonio organico è un indicatore della capacità di fornire azoto, non un valore misurato di N — la maggior parte dei laboratori del suolo non riporta una classe di azoto.",
+        "Il pH non cambia la dose; segnala solo un rischio di posizionamento. I suoli alcalini fissano il fosforo — la distribuzione a bande conta più che mai."
+      ],
+      "sourceLabel": "Fonte dei dati:",
+      "genericLabel": "Base personalizzata (solo orientamento generico — non una raccomandazione verificata)",
+      "disclaimer": "Tutte le dosi sono stime. Conferma con il tuo agronomo locale / tecnico di divulgazione agricola prima di applicare il fertilizzante."
+    },
+    "method": {
+      "eyebrow": "Metodo",
+      "title": "Il metodo, in parole semplici",
+      "desc": "Aumenta, mantieni, riduci — la stessa logica che i laboratori del suolo usano sulle schede di salute."
+    },
+    "methodFaq": [
+      {
+        "q": "Cos’è una dose di fertilizzante basata sull’analisi del suolo?",
+        "a": "Una raccomandazione generica presuppone un suolo medio. Un’analisi del suolo ti dice cosa contiene già il tuo campo: se il fosforo risulta alto, puoi ridurre la dose di P e risparmiare; se risulta basso, la aumenti per arricchire il suolo. Questo strumento parte da una raccomandazione verificata della coltura e applica esattamente questa logica: +30% per i nutrienti di classe bassa, base per i medi, −25% per gli alti."
+      },
+      {
+        "q": "Quali valori dell’analisi del suolo mi servono?",
+        "a": "Fosforo disponibile (metodo Olsen, mg/kg o ppm), potassio disponibile (metodo all’acetato di ammonio, kg/ha o ppm), carbonio organico (%) e pH — i quattro valori di una scheda standard di salute del suolo. Puoi inserire P e K in entrambe le unità; lo strumento converte con il fattore standard dello strato arabile (×2,24)."
+      },
+      {
+        "q": "Perché l’azoto viene classificato dal carbonio organico?",
+        "a": "I laboratori del suolo di routine raramente riportano una classe di azoto minerale, quindi i sistemi di divulgazione usano il carbonio organico come indicatore della capacità nativa del suolo di fornire azoto: più carbonio organico significa più azoto mineralizzato durante la stagione. È un indicatore consolidato, ma non un valore misurato di N — il risultato è etichettato come tale."
+      },
+      {
+        "q": "Un pH alcalino cambia la mia dose?",
+        "a": "No — qui il pH non cambia mai la dose calcolata. Sopra pH 7,5 il fosforo precipita sempre più come fosfati di calcio e magnesio (fissazione del P), quindi conta il posizionamento: distribuisci a bande l’intera dose di fosforo vicino al seme alla semina invece di spargerla. Lo strumento lo segnala come nota, non come cambio di dose."
+      },
+      {
+        "q": "Quando non usare la dose di base personalizzata?",
+        "a": "L’opzione di base personalizzata è solo orientamento generico — un punto di partenza per le colture senza raccomandazione verificata nel nostro database. Se esiste una dose verificata coltura×regione, usa sempre quella; i valori verificati riportano la loro fonte pubblicata."
+      }
+    ]
   },
   "footer": {
     "company": "Azienda",
@@ -313,6 +452,7 @@
     "myGarden": "Il mio giardino",
     "tools": "Strumenti",
     "profitCalculator": "Calcolatore del profitto",
+    "soilTestCalculator": "Calcolatore analisi del suolo",
     "compare": "Confronta",
     "login": "Accedi",
     "account": "Account",
@@ -367,7 +507,13 @@
       "plantsTitle": "Piante per ogni tipo di giardino.",
       "vegetablesTitle": "Ortaggi, dal campo all'orto di casa."
     },
-    "subcategoryAll": "Tutti i tipi"
+    "subcategoryAll": "Tutti i tipi",
+    "filterCountry": "Paese",
+    "filterRegion": "Regione",
+    "filterMonth": "Mese di semina",
+    "anyMonth": "Qualsiasi mese",
+    "allCountries": "Tutti i paesi",
+    "allRegions": "Tutte le regioni"
   },
   "calendar": {
     "metaTitle": "Calendario di semina — Cosa coltivare questo mese",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Periodo di raccolta",
     "activityLAND_PREPARATION": "Prepara il terreno",
     "viewGuide": "Vedi la guida di coltivazione",
+    "emptyRegionTitle": "Nessuna informazione di semina verificata disponibile per questa regione.",
     "plantingWindow": "Finestra di semina",
-    "appliesTo": "Si applica a",
-    "emptyRegionTitle": "Nessuna informazione di semina verificata disponibile per questa regione."
+    "appliesTo": "Si applica a"
   },
   "garden": {
     "metaTitle": "Il mio giardino — Tieni traccia di appezzamenti, semine e piani di concimazione",
@@ -469,6 +615,11 @@
     "markDone": "Segna come fatto",
     "reopen": "Riapri",
     "addReminder": "Aggiungi promemoria",
+    "generateFertilizerReminders": "Genera promemoria per il fertilizzante",
+    "fertilizerReminderNote": "Tempistica generica suggerita dalla pratica standard della dose frazionata — non una prescrizione agronomica per il tuo appezzamento.",
+    "suggestedPrefix": "Suggerito",
+    "remindersAdded": "{count} promemoria per il fertilizzante aggiunti alle attività imminenti",
+    "remindersAlreadyExist": "Tutti i promemoria suggeriti esistono già per questa semina",
     "reminderTitle": "Promemoria",
     "reminderTitlePh": "es. Applica la seconda frazione di urea",
     "dueDate": "Data di scadenza",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Biblioteca dei fertilizzanti — Composizione NPK, usi e guide alle dosi",
-    "metaDescription": "Composizioni NPK conformi all'etichetta, benefici, precauzioni e guide all'applicazione per urea, DAP, MOP, SSP, SOP e altro."
+    "metaDescription": "Composizioni NPK conformi all'etichetta, benefici, precauzioni e guide all'applicazione per urea, DAP, MOP, SSP, SOP e altro.",
+    "libraryEyebrow": "Biblioteca dei fertilizzanti",
+    "libraryTitle": "Sappi cosa c’è nel sacco.",
+    "libraryDesc": "I fertilizzanti minerali riportano percentuali esatte in etichetta — i numeri su cui gira il calcolatore della dose. I materiali organici riportano intervalli tipici da fonti divulgative pubblicate, perché non esistono due lotti uguali.",
+    "tabAll": "Tutti",
+    "tabMineral": "Minerale",
+    "tabOrganic": "Organico",
+    "typeMineral": "Minerale",
+    "typeOrganic": "Organico",
+    "typicalRangeLabel": "Intervallo tipico",
+    "organicHubCta": "Cosa sono i fertilizzanti organici? Leggi la guida →",
+    "detail": {
+      "categoryManure": "Letame",
+      "categoryCompost": "Compost",
+      "categoryGreenManure": "Sovescio",
+      "caveatTitle": "Perché un intervallo, non un numero",
+      "sourceLabel": "Fonte dell’intervallo"
+    },
+    "organic": {
+      "metaTitle": "Fertilizzanti organici — Tipi, intervalli di nutrienti e limiti onesti",
+      "metaDescription": "Letame di stalla, compost, vermicompost e sovescio: intervalli tipici di NPK da fonti divulgative, come gli organici differiscono dai fertilizzanti minerali, e i loro veri limiti.",
+      "eyebrow": "Fertilizzanti organici",
+      "title": "Lenti, variabili — e onesti al riguardo.",
+      "intro": "I fertilizzanti organici sono scarti vegetali e animali che rilasciano nutrienti decomponendosi. Costruiscono il suolo, ma sono diluiti e incostanti rispetto ai fertilizzanti minerali. Questa pagina ti dà intervalli tipici di nutrienti da fonti divulgative pubblicate, e i limiti che nessuno dovrebbe saltare.",
+      "whatTitle": "Cosa sono i fertilizzanti organici",
+      "whatBody1": "I letami sono scarti vegetali e animali usati come fonti di nutrienti per le piante; rilasciano questi nutrienti dopo la decomposizione (TNAU). I concimi organici voluminosi più usati sono il letame di stalla (FYM), il compost e il sovescio. Un secondo gruppo — concimi organici concentrati come panelli, farina di sangue e farina d’ossa — porta più nutrienti per chilogrammo, ma resta molto al di sotto delle concentrazioni minerali.",
+      "whatBody2": "Il tratto distintivo degli organici è la variabilità: lo stesso materiale da due aziende può differire di molte volte nel contenuto di nutrienti a seconda di materia prima, preparazione e stoccaggio. Per questo questa biblioteca mostra intervalli, mai singoli valori di etichetta, per i materiali organici.",
+      "typesTitle": "I quattro materiali di questa biblioteca",
+      "typesIntro": "Ogni scheda mostra l’intervallo tipico di percentuale N–P₂O₅–K₂O da fonti divulgative pubblicate. Il tuo lotto differirà — sono punti di partenza, non garanzie.",
+      "compareTitle": "Come gli organici differiscono dai fertilizzanti minerali",
+      "compareIntro": "Nessuna parte è «sempre migliore». Fanno lavori diversi:",
+      "compareRows": [
+        {
+          "aspect": "Densità di nutrienti",
+          "mineral": "Alta ed esatta — l’urea è 46% di N, stampato sul sacco.",
+          "organic": "Bassa e variabile — il letame è circa 0,5–1,0% di N, e ogni cumulo è diverso."
+        },
+        {
+          "aspect": "Velocità di rilascio",
+          "mineral": "Veloce — i nutrienti sono idrosolubili e disponibili in giorni.",
+          "organic": "Lenta — i microbi devono prima mineralizzarli; solo ~30% dell’azoto del letame arriva alla prima coltura (TNAU)."
+        },
+        {
+          "aspect": "Precisione della dose",
+          "mineral": "Precisa — il calcolatore può dosare al chilogrammo.",
+          "organic": "Approssimativa senza un’analisi di laboratorio del tuo lotto specifico."
+        },
+        {
+          "aspect": "Effetti sul suolo",
+          "mineral": "Poco effetto diretto sulla struttura del suolo o sulla sostanza organica.",
+          "organic": "Migliora struttura, ritenzione idrica e attività microbica."
+        },
+        {
+          "aspect": "Logistica",
+          "mineral": "Concentrato — pochi sacchi per acro.",
+          "organic": "Voluminoso — tonnellate per ettaro da muovere, spargere e interrare."
+        },
+        {
+          "aspect": "Effetto residuo",
+          "mineral": "Per lo più assorbito o perso entro la stagione.",
+          "organic": "Lungo — nutre le colture successive mentre la decomposizione continua."
+        }
+      ],
+      "usesTitle": "Dove gli organici hanno senso",
+      "usesIntro": "Usi appropriati, detti chiaramente:",
+      "uses": [
+        "Costruire sostanza organica e struttura del suolo nelle stagioni — il loro ruolo più forte.",
+        "Condizionamento basale del suolo prima della semina, soprattutto su suoli degradati o sabbiosi.",
+        "Gestione integrata dei nutrienti: organici per la salute del suolo più fertilizzanti minerali per una nutrizione precisa della coltura.",
+        "Vivai, ortaggi e colture di alto valore dove la biologia del suolo ripaga più in fretta.",
+        "Sovescio prima del riso trapiantato, dove il dhaincha può aggiungere 130–185 kg N/ha di azoto fissato biologicamente."
+      ],
+      "limitsTitle": "Limiti — da leggere prima di farci affidamento",
+      "limitsIntro": "Cosa gli organici non possono fare:",
+      "limits": [
+        "Bassa densità di nutrienti: per eguagliare 100 kg N/ha con letame servono 10–20 tonnellate per ettaro.",
+        "Composizione variabile: gli intervalli pubblicati coprono 2–3× all’interno di uno stesso materiale; precisa è solo l’analisi di laboratorio del tuo lotto.",
+        "Rilascio lento: i nutrienti arrivano in mesi, non in giorni — non possono salvare una carenza a metà stagione.",
+        "Volume e manodopera: tonnellate da trasportare, spargere e interrare, contro sacchi di fertilizzante minerale.",
+        "Rischi di qualità: semi di infestanti e patogeni nel materiale mal compostato; possibili contaminanti nel compost urbano.",
+        "Non un sostituto diretto: «letame al posto del fertilizzante» funziona solo come sostituzione parziale dentro un bilancio di nutrienti pianificato — mai come affermazione senza qualifiche."
+      ],
+      "warnTitle": "Avvertenze per l’uso del calcolatore",
+      "warnBody": "La sezione organica del calcolatore fa pura aritmetica sui numeri che inserisci TU (il tuo referto di laboratorio o l’etichetta del fornitore). Non conosce l’analisi reale del tuo lotto e non può tenere conto del rilascio lento — considera il risultato come un limite superiore dei nutrienti distribuiti, non dei nutrienti disponibili per la coltura di questa stagione. Per dosi precise, fai analizzare in laboratorio il tuo materiale reale.",
+      "exploreCta": "Apri la sezione organica del calcolatore",
+      "detailCta": "Vedi dettagli"
+    }
   },
   "chart": {
     "metaTitle": "Tabella delle dosi di fertilizzante — Riferimento rapido NPK",

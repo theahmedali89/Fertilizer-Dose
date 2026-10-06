@@ -20,6 +20,7 @@
       "areaPlaceholder": "np. 5",
       "crop": "Uprawa",
       "cropHint": "Do wyboru są tylko uprawy ze zweryfikowanymi zaleceniami.",
+      "cropSearchPlaceholder": "Wpisz, aby wyszukać uprawy…",
       "inReview": "dane w weryfikacji",
       "soil": "Rodzaj gleby (opcjonalnie)",
       "soilHint": "Rodzaj gleby nie zmienia obliczeń — zmienia zalecenia. Gleby piaszczyste szybciej tracą azot; gleby zasolone wymagają ostrożności przy MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Źródło danych:",
       "total": "Nawóz łącznie",
       "kgUnit": "kg",
+      "unitToggleLabel": "Jednostki wyświetlania",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Tylko wyświetlanie — zapisane obliczenie pozostaje w kg.",
+      "splitTitle": "Harmonogram dawki dzielonej",
+      "splitGenericBadge": "Harmonogram ogólny",
       "recommendedLine": "Zalecane {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "Wybrano „{soil}”. Na glebach {soilLower} rozważ badanie gleby przed zmianą dawki — powyższe obliczenie bazowe pozostaje bez zmian."
     },
     "title": "Dokładna dawka nawozu, z pokazanymi obliczeniami.",
+    "soilTestCard": {
+      "eyebrow": "Analiza gleby?",
+      "title": "Masz wyniki analizy gleby? Uzyskaj precyzyjną dawkę.",
+      "desc": "Wpisz dostępne P i K, węgiel organiczny i pH z karty zdrowia gleby — narzędzie podnosi niskie składniki, utrzymuje średnie i obniża wysokie.",
+      "cta": "Otwórz kalkulator analizy gleby →"
+    },
     "metaTitle": "Kalkulator dawki nawozu — mocznik, DAP i MOP na akr/kanal/marla",
     "metaDescription": "Oblicz dokładne dawki mocznika, DAP i MOP dla pszenicy, ryżu i kukurydzy. Podaj powierzchnię w akrach, kanalach, marlach lub hektarach — zobacz każdy krok obliczeń.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Dlaczego niektóre uprawy są wyłączone?",
         "a": "Uprawę można wybrać tylko wtedy, gdy jej zalecana dawka NPK jest zweryfikowana względem opublikowanego źródła. Wolimy wyłączyć uprawę, niż wymyślać jej dane — niezweryfikowane uprawy są oznaczone jako „dane w weryfikacji” do czasu potwierdzenia."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Wkład materiału organicznego — Twoja własna analiza",
+      "desc": "Wpisz procenty N / P₂O₅ / K₂O z raportu laboratoryjnego lub etykiety dostawcy oraz swoją dawkę stosowania. To czysta arytmetyka na Twoich danych: aplikacja nie przechowuje własnych danych o składnikach organicznych.",
+      "materialLabel": "Materiał",
+      "customOption": "Własny materiał — wpiszę własne wartości",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Dawka stosowania",
+      "rateUnit": "t/ha",
+      "rangeHint": "Opublikowany typowy zakres dla {name}: {range}. Twoja partia może się różnić — wpisz swoją wartość laboratoryjną.",
+      "noRangeHint": "Brak opublikowanego zakresu dla tego materiału — wpisz swoje wartości laboratoryjne lub z etykiety.",
+      "resultsTitle": "Zastosowane składniki",
+      "formulaLabel": "Wzór",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Wpisz powyżej procenty i dawkę, aby zobaczyć wkład.",
+      "warnTitle": "Przeczytaj, zanim zaufasz liczbom",
+      "warnBody": "Materiały organiczne różnią się z partii na partię — surowiec, przygotowanie i przechowywanie zmieniają analizę. Opublikowane zakresy to nie analiza Twojej partii. Azot organiczny uwalnia się też powoli (tylko ~30% azotu obornika dociera do pierwszej uprawy, wg TNAU), więc traktuj wynik jako zastosowane składniki, nie składniki dostępne w tym sezonie. Dla precyzji zleć analizę laboratoryjną swojego materiału.",
+      "dismiss": "Zamknij",
+      "resultN": "Azot (N)",
+      "resultP": "Fosforan (P₂O₅)",
+      "resultK": "Potas (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Przełącz na tryb ciemny",
@@ -94,6 +132,107 @@
     "title": "Pytania, które zadają nam rolnicy",
     "metaTitle": "FAQ — odpowiedzi na pytania o dawki nawozów",
     "metaDescription": "Odpowiedzi o obliczaniu dawek nawozów, wzorach NPK, jednostkach akr/kanal/marla, źródłach danych i Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Kalkulator analizy gleby",
+    "title": "Dostosuj swoją dawkę do swojej analizy gleby.",
+    "desc": "Wpisz wyniki analizy gleby — dostępne P i K, węgiel organiczny i pH — a zweryfikowana dawka uprawy zostanie skorygowana w górę lub w dół: podnieś niskie składniki, utrzymaj średnie, obniż wysokie.",
+    "metaTitle": "Kalkulator dawki nawozu na podstawie analizy gleby — dostosuj NPK do swojej analizy",
+    "metaDescription": "Kalkulator dawki nawozu na podstawie analizy gleby: wpisz dostępne P, K, węgiel organiczny i pH, aby dostosować zweryfikowane zalecenie NPK dla dowolnej uprawy — podnieś niskie składniki, obniż wysokie.",
+    "empty": {
+      "title": "Twoja skorygowana dawka pojawi się tutaj",
+      "desc": "Wybierz uprawę, wpisz wartości analizy gleby i naciśnij oblicz. Każdy krok korekty jest pokazany."
+    },
+    "form": {
+      "crop": "Uprawa",
+      "cropHint": "Można wybierać tylko uprawy ze zweryfikowanymi zaleceniami. Wybierz „Własną dawkę bazową”, aby wpisać własne NPK.",
+      "cropSearchPlaceholder": "Wpisz, aby wyszukać uprawy…",
+      "inReview": "dane w weryfikacji",
+      "custom": "Własna dawka bazowa (ogólna)",
+      "area": "Powierzchnia",
+      "unit": "Jednostka",
+      "areaError": "Podaj prawidłową powierzchnię większą od zera.",
+      "areaLargeError": "Ta powierzchnia wygląda na niezwykle dużą — sprawdź wartość i jednostkę.",
+      "phRangeError": "pH gleby musi być między 0 a 14.",
+      "negativeError": "Wartości nie mogą być ujemne — sprawdź wpisane dane.",
+      "baseN": "Azot bazowy (N)",
+      "baseP": "Fosfor bazowy (P₂O₅)",
+      "baseK": "Potas bazowy (K₂O)",
+      "baseHint": "Tylko ogólne wskazówki — to nie jest zweryfikowane zalecenie. Wpisz kg/ha.",
+      "noVerified": "Brak jeszcze zweryfikowanego zalecenia dla {crop} w Twoim regionie. Wpisz własną dawkę bazową poniżej albo wybierz zweryfikowaną uprawę.",
+      "phosphorus": "Fosfor dostępny (Olsen P)",
+      "potassium": "Potas dostępny (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Węgiel organiczny (%)",
+      "ph": "pH gleby",
+      "optional": "opcjonalnie",
+      "nProxyNote": "Laboratoria glebowe rzadko podają klasę azotu, dlatego węgiel organiczny służy jako wskaźnik zdolności Twojej gleby do dostarczania azotu.",
+      "submit": "Dostosuj dawkę",
+      "soilTestHint": "Z karty zdrowia gleby lub raportu laboratoryjnego. Zostaw puste każdą wartość, której nie masz — ten składnik zachowa swoją dawkę bazową."
+    },
+    "results": {
+      "title": "Dawka skorygowana analizą gleby",
+      "adjustedLine": "Skorygowano {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "baseLine": "Baza {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Niski",
+      "medium": "Średni",
+      "high": "Wysoki",
+      "notRated": "Nieoceniony",
+      "acidic": "Kwaśna",
+      "neutral": "Obojętna",
+      "alkaline": "Zasadowa",
+      "ratingP": "Fosfor",
+      "ratingK": "Potas",
+      "ratingN": "Azot (przez węgiel organiczny)",
+      "phLabel": "Klasa pH",
+      "phFixation": "Gleba zasadowa (pH powyżej 7,5): fosfor może zostać unieruchomiony jako fosforany wapnia/magnezu. Podaj całą dawkę P w rzędzie blisko nasion przy siewie — skorygowana dawka powyżej pozostaje bez zmian.",
+      "buildUp": "+30% podnieś",
+      "maintenance": "Utrzymaj",
+      "drawdown": "−25% obniż",
+      "notRatedNote": "Brak wartości analizy — zachowano dawkę bazową",
+      "kgUnit": "kg",
+      "bags": "× worki 50 kg",
+      "total": "Nawóz łącznie",
+      "basisTitle": "Dlaczego te liczby",
+      "basis": [
+        "Klasy odpowiadają indyjskiemu laboratorium analizy gleby / klasom Karty Zdrowia Gleby: P (Olsen) niski <10, średni 10–25, wysoki >25 mg/kg; K (NH₄OAc) niski <120, średni 120–280, wysoki >280 kg/ha; węgiel organiczny niski <0,5, średni 0,5–0,75, wysoki >0,75%.",
+        "ppm i kg/ha przelicza się standardowym współczynnikiem warstwy ornej ×2,24 (≈2,24 mln kg gleby na hektar).",
+        "Składniki niskiej klasy dostają +30% (podnieś), średnie zostają na bazie (utrzymaj), wysokie −25% (obniż). Te przedziały to orientacyjne szacunki planistyczne, nie opublikowane wartości krytyczne.",
+        "Węgiel organiczny to wskaźnik zdolności dostarczania azotu, nie zmierzona wartość N — większość laboratoriów glebowych nie podaje klasy azotu.",
+        "pH nie zmienia dawki; sygnalizuje jedynie ryzyko umiejscowienia. Gleby zasadowe unieruchamiają fosfor — podanie w rzędzie liczy się bardziej niż kiedykolwiek."
+      ],
+      "sourceLabel": "Źródło danych:",
+      "genericLabel": "Własna baza (tylko ogólne wskazówki — nie zweryfikowane zalecenie)",
+      "disclaimer": "Wszystkie dawki są szacunkowe. Potwierdź z lokalnym agronomem / doradcą rolniczym przed zastosowaniem nawozu."
+    },
+    "method": {
+      "eyebrow": "Metoda",
+      "title": "Metoda prostymi słowami",
+      "desc": "Podnieś, utrzymaj, obniż — ta sama logika, którą laboratoria glebowe stosują na kartach zdrowia gleby."
+    },
+    "methodFaq": [
+      {
+        "q": "Czym jest dawka nawozu oparta na analizie gleby?",
+        "a": "Ogólne zalecenie zakłada przeciętną glebę. Analiza gleby mówi, co Twoje pole już zawiera: jeśli fosfor jest wysoki, możesz obniżyć dawkę P i zaoszczędzić pieniądze; jeśli niski — podnieś ją, aby wzbogacić glebę. To narzędzie startuje ze zweryfikowanego zalecenia dla uprawy i stosuje dokładnie tę logikę: +30% dla składników niskiej klasy, baza dla średnich, −25% dla wysokich."
+      },
+      {
+        "q": "Jakich wartości analizy gleby potrzebuję?",
+        "a": "Fosfor dostępny (metoda Olsena, mg/kg lub ppm), potas dostępny (metoda octanu amonu, kg/ha lub ppm), węgiel organiczny (%) i pH — cztery wartości ze standardowej karty zdrowia gleby. P i K możesz wpisać w dowolnej jednostce; narzędzie przeliczy standardowym współczynnikiem warstwy ornej (×2,24)."
+      },
+      {
+        "q": "Dlaczego azot jest oceniany na podstawie węgla organicznego?",
+        "a": "Rutynowe laboratoria glebowe rzadko podają klasę azotu mineralnego, dlatego systemy doradztwa używają węgla organicznego jako wskaźnika naturalnej zdolności gleby do dostarczania azotu: więcej węgla organicznego oznacza więcej azotu zmineralizowanego w sezonie. To ugruntowany wskaźnik, ale nie zmierzona wartość N — wynik jest tak oznaczony."
+      },
+      {
+        "q": "Czy zasadowe pH zmienia moją dawkę?",
+        "a": "Nie — pH nigdy nie zmienia tu obliczonej dawki. Powyżej pH 7,5 fosfor coraz silniej wytrąca się jako fosforany wapnia i magnezu (unieruchomienie P), więc liczy się umiejscowienie: podaj całą dawkę fosforu w rzędzie blisko nasion przy siewie zamiast rozsiewać. Narzędzie oznacza to jako uwagę, nie zmianę dawki."
+      },
+      {
+        "q": "Kiedy nie używać własnej dawki bazowej?",
+        "a": "Opcja własnej dawki bazowej to tylko ogólne wskazówki — punkt startowy dla upraw bez zweryfikowanego zalecenia w naszej bazie. Jeśli istnieje zweryfikowana dawka uprawa×region, zawsze użyj jej; zweryfikowane liczby mają podane opublikowane źródło."
+      }
+    ]
   },
   "footer": {
     "company": "Firma",
@@ -313,6 +452,7 @@
     "myGarden": "Mój ogród",
     "tools": "Narzędzia",
     "profitCalculator": "Kalkulator zysku",
+    "soilTestCalculator": "Kalkulator analizy gleby",
     "compare": "Porównaj",
     "login": "Zaloguj się",
     "account": "Konto",
@@ -367,7 +507,13 @@
       "plantsTitle": "Rośliny do każdego rodzaju ogrodu.",
       "vegetablesTitle": "Warzywa, od pola po ogródek kuchenny."
     },
-    "subcategoryAll": "Wszystkie typy"
+    "subcategoryAll": "Wszystkie typy",
+    "filterCountry": "Kraj",
+    "filterRegion": "Region",
+    "filterMonth": "Miesiąc siewu",
+    "anyMonth": "Dowolny miesiąc",
+    "allCountries": "Wszystkie kraje",
+    "allRegions": "Wszystkie regiony"
   },
   "calendar": {
     "metaTitle": "Kalendarz siewu — co siać w tym miesiącu",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Okres zbiorów",
     "activityLAND_PREPARATION": "Przygotuj glebę",
     "viewGuide": "Zobacz przewodnik uprawy",
+    "emptyRegionTitle": "Brak zweryfikowanych informacji o sadzeniu dla tego regionu.",
     "plantingWindow": "Okno siewu",
-    "appliesTo": "Dotyczy",
-    "emptyRegionTitle": "Brak zweryfikowanych informacji o sadzeniu dla tego regionu."
+    "appliesTo": "Dotyczy"
   },
   "garden": {
     "metaTitle": "Mój ogród — działki, nasadzenia i plany nawożenia",
@@ -469,6 +615,11 @@
     "markDone": "Oznacz jako wykonane",
     "reopen": "Otwórz ponownie",
     "addReminder": "Dodaj przypomnienie",
+    "generateFertilizerReminders": "Utwórz przypomnienia o nawozach",
+    "fertilizerReminderNote": "Sugerowany ogólny termin ze standardowej praktyki dawki dzielonej — nie zalecenie agronomiczne dla Twojej działki.",
+    "suggestedPrefix": "Sugerowane",
+    "remindersAdded": "Dodano {count} przypomnień o nawozach do nadchodzących zadań",
+    "remindersAlreadyExist": "Wszystkie sugerowane przypomnienia już istnieją dla tej uprawy",
     "reminderTitle": "Przypomnienie",
     "reminderTitlePh": "np. Zastosuj drugą dawkę mocznika",
     "dueDate": "Termin",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Biblioteka nawozów — skład NPK, zastosowanie i dawkowanie",
-    "metaDescription": "Zgodne z etykietą składy NPK, korzyści, środki ostrożności i wskazówki stosowania mocznika, DAP, MOP, SSP, SOP i innych."
+    "metaDescription": "Zgodne z etykietą składy NPK, korzyści, środki ostrożności i wskazówki stosowania mocznika, DAP, MOP, SSP, SOP i innych.",
+    "libraryEyebrow": "Biblioteka nawozów",
+    "libraryTitle": "Wiedz, co jest w worku.",
+    "libraryDesc": "Nawozy mineralne mają dokładne procenty na etykiecie — liczby, na których pracuje kalkulator dawek. Materiały organiczne mają typowe zakresy z opublikowanych źródeł doradczych, bo nie ma dwóch identycznych partii.",
+    "tabAll": "Wszystkie",
+    "tabMineral": "Mineralny",
+    "tabOrganic": "Organiczny",
+    "typeMineral": "Mineralny",
+    "typeOrganic": "Organiczny",
+    "typicalRangeLabel": "Typowy zakres",
+    "organicHubCta": "Czym są nawozy organiczne? Przeczytaj przewodnik →",
+    "detail": {
+      "categoryManure": "Obornik",
+      "categoryCompost": "Kompost",
+      "categoryGreenManure": "Nawóz zielony",
+      "caveatTitle": "Dlaczego zakres, a nie liczba",
+      "sourceLabel": "Źródło zakresu"
+    },
+    "organic": {
+      "metaTitle": "Nawozy organiczne — typy, zakresy składników i uczciwe ograniczenia",
+      "metaDescription": "Obornik, kompost, wermikompost i nawóz zielony: typowe zakresy NPK ze źródeł doradczych, czym nawozy organiczne różnią się od mineralnych i ich prawdziwe ograniczenia.",
+      "eyebrow": "Nawozy organiczne",
+      "title": "Wolne, zmienne — i uczciwe w tej sprawie.",
+      "intro": "Nawozy organiczne to odpady roślinne i zwierzęce, które uwalniają składniki podczas rozkładu. Budują glebę, ale są rozcieńczone i niejednolite w porównaniu z nawozami mineralnymi. Ta strona podaje typowe zakresy składników z opublikowanych źródeł doradczych oraz ograniczenia, których nikt nie powinien pomijać.",
+      "whatTitle": "Czym są nawozy organiczne",
+      "whatBody1": "Oborniki to odpady roślinne i zwierzęce używane jako źródła składników pokarmowych roślin; uwalniają te składniki po rozkładzie (TNAU). Najszerzej stosowane masywne nawozy organiczne to obornik bydlęcy (FYM), kompost i nawóz zielony. Druga grupa — skoncentrowane nawozy organiczne, jak wytłoki, mączka krwi i mączka kostna — niesie więcej składników na kilogram, ale wciąż daleko jej do stężeń mineralnych.",
+      "whatBody2": "Cechą definiującą nawozy organiczne jest zmienność: ten sam materiał z dwóch gospodarstw może różnić się zawartością składników kilkukrotnie w zależności od surowca, przygotowania i przechowywania. Dlatego ta biblioteka pokazuje dla materiałów organicznych zakresy, nigdy pojedyncze wartości z etykiety.",
+      "typesTitle": "Cztery materiały tej biblioteki",
+      "typesIntro": "Każda karta pokazuje typowy zakres procentowy N–P₂O₅–K₂O z opublikowanych źródeł doradczych. Twoja partia będzie inna — to punkty startowe, nie gwarancje.",
+      "compareTitle": "Czym nawozy organiczne różnią się od mineralnych",
+      "compareIntro": "Żadna strona nie jest »zawsze lepsza«. Robią różne rzeczy:",
+      "compareRows": [
+        {
+          "aspect": "Gęstość składników",
+          "mineral": "Wysoka i dokładna — mocznik to 46% N, wydrukowane na worku.",
+          "organic": "Niska i zmienna — obornik to ok. 0,5–1,0% N, a każda pryzma inna."
+        },
+        {
+          "aspect": "Tempo uwalniania",
+          "mineral": "Szybkie — składniki są rozpuszczalne w wodzie i dostępne w dni.",
+          "organic": "Wolne — mikroby muszą je najpierw zmineralizować; tylko ~30% azotu obornika dociera do pierwszej uprawy (TNAU)."
+        },
+        {
+          "aspect": "Precyzja dawki",
+          "mineral": "Precyzyjna — kalkulator może dawkować co do kilograma.",
+          "organic": "Przybliżona bez analizy laboratoryjnej Twojej konkretnej partii."
+        },
+        {
+          "aspect": "Wpływ na glebę",
+          "mineral": "Niewielki bezpośredni wpływ na strukturę gleby czy materię organiczną.",
+          "organic": "Poprawia strukturę, pojemność wodną i aktywność mikrobiologiczną."
+        },
+        {
+          "aspect": "Logistyka",
+          "mineral": "Skoncentrowany — kilka worków na akr.",
+          "organic": "Masywny — tony na hektar do przewiezienia, rozsiania i wymieszania."
+        },
+        {
+          "aspect": "Efekt następczy",
+          "mineral": "W większości pobrany lub stracony w sezonie.",
+          "organic": "Długi — żywi następne uprawy, póki trwa rozkład."
+        }
+      ],
+      "usesTitle": "Gdzie nawozy organiczne mają sens",
+      "usesIntro": "Właściwe zastosowania, wprost:",
+      "uses": [
+        "Budowanie materii organicznej i struktury gleby przez sezony — ich najmocniejsza rola.",
+        "Bazowe użyźnianie gleby przed siewem, zwłaszcza na glebach zdegradowanych lub piaszczystych.",
+        "Zintegrowane żywienie roślin: nawozy organiczne dla zdrowia gleby plus nawozy mineralne dla precyzyjnego żywienia uprawy.",
+        "Szkółki, warzywa i uprawy o wysokiej wartości, gdzie biologia gleby zwraca się najszybciej.",
+        "Nawóz zielony przed ryżem sadzonym, gdzie dhaincha może dodać 130–185 kg N/ha azotu związanego biologicznie."
+      ],
+      "limitsTitle": "Ograniczenia — przeczytaj, zanim im zaufasz",
+      "limitsIntro": "Czego nawozy organiczne nie potrafią:",
+      "limits": [
+        "Niska gęstość składników: wyrównanie 100 kg N/ha obornikiem wymaga 10–20 ton na hektar.",
+        "Zmienny skład: opublikowane zakresy rozciągają się 2–3× w obrębie jednego materiału; precyzyjna jest tylko analiza laboratoryjna Twojej partii.",
+        "Powolne uwalnianie: składniki przychodzą miesiącami, nie dniami — nie uratują niedoboru w środku sezonu.",
+        "Masa i praca: tony do przewiezienia, rozsiania i wymieszania, wobec worków nawozu mineralnego.",
+        "Ryzyka jakości: nasiona chwastów i patogeny w słabo skompostowanym materiale; możliwe zanieczyszczenia w kompoście komunalnym.",
+        "Nie bezpośredni zamiennik: »obornik zamiast nawozu« działa tylko jako częściowa substytucja w zaplanowanym budżecie składników — nigdy jako twierdzenie bez zastrzeżeń."
+      ],
+      "warnTitle": "Ostrzeżenia dotyczące korzystania z kalkulatora",
+      "warnBody": "Organiczna sekcja kalkulatora wykonuje czystą arytmetykę na liczbach, które wpisujesz TY (Twój raport laboratoryjny lub etykieta dostawcy). Nie zna rzeczywistej analizy Twojej partii i nie uwzględnia powolnego uwalniania — traktuj wynik jako górną granicę zastosowanych składników, nie składników dostępnych dla uprawy w tym sezonie. Dla precyzyjnego dawkowania zleć analizę laboratoryjną swojego materiału.",
+      "exploreCta": "Otwórz organiczną sekcję kalkulatora",
+      "detailCta": "Zobacz szczegóły"
+    }
   },
   "chart": {
     "metaTitle": "Tabela dawek nawozów — skrócona ściągawka NPK",

@@ -20,6 +20,7 @@
       "areaPlaceholder": "ex.: 5",
       "crop": "Cultura",
       "cropHint": "Apenas culturas com recomendações verificadas podem ser selecionadas.",
+      "cropSearchPlaceholder": "Digite para pesquisar culturas…",
       "inReview": "dados em revisão",
       "soil": "Tipo de solo (opcional)",
       "soilHint": "O tipo de solo não muda a conta — muda o conselho. Solos arenosos perdem nitrogênio mais rápido; solos salinos exigem cuidado com o MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Fonte dos dados:",
       "total": "Fertilizante total",
       "kgUnit": "kg",
+      "unitToggleLabel": "Unidades de exibição",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Apenas exibição — seu cálculo salvo permanece em kg.",
+      "splitTitle": "Cronograma de dose parcelada",
+      "splitGenericBadge": "Cronograma genérico",
       "recommendedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha recomendados · {region}",
       "soilCustom": "Você selecionou \"{soil}\". Em solos {soilLower}, considere fazer uma análise de solo antes de alterar a dose — o cálculo base acima permanece o mesmo."
     },
     "title": "Dose exata de fertilizante, com a conta mostrada.",
+    "soilTestCard": {
+      "eyebrow": "Análise de solo?",
+      "title": "Tem os resultados da análise de solo? Obtenha uma dose precisa.",
+      "desc": "Digite o P e o K disponíveis, o carbono orgânico e o pH do seu cartão de saúde do solo — a ferramenta aumenta os nutrientes baixos, mantém os médios e reduz os altos.",
+      "cta": "Abrir a calculadora de análise de solo →"
+    },
     "metaTitle": "Fertilizer Dose Calculator — Urea, DAP e MOP por Acre/Kanal/Marla",
     "metaDescription": "Calcule doses exatas de urea, DAP e MOP para trigo, arroz e milho. Insira a área em acre, kanal, marla ou hectare — veja cada etapa do cálculo.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Por que algumas culturas estão desativadas?",
         "a": "Uma cultura só pode ser selecionada quando sua dose recomendada de NPK está verificada contra uma fonte publicada. Preferimos desativar uma cultura a inventar seus números — culturas não verificadas são marcadas como \"dados em revisão\" até serem confirmadas."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Contribuição do material orgânico — sua própria análise",
+      "desc": "Digite as porcentagens de N / P₂O₅ / K₂O do seu laudo de laboratório ou rótulo do fornecedor, mais sua taxa de aplicação. Isto é pura aritmética sobre seus dados: o app não tem dados próprios de nutrientes orgânicos.",
+      "materialLabel": "Material",
+      "customOption": "Material personalizado — vou digitar meus próprios valores",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Taxa de aplicação",
+      "rateUnit": "t/ha",
+      "rangeHint": "Faixa típica publicada para {name}: {range}. Seu lote pode diferir — digite seu valor de laboratório.",
+      "noRangeHint": "Sem faixa publicada para este material — digite seus valores de laboratório ou rótulo.",
+      "resultsTitle": "Nutrientes aplicados",
+      "formulaLabel": "Fórmula",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Digite porcentagens e uma taxa acima para ver a contribuição.",
+      "warnTitle": "Leia isto antes de confiar nos números",
+      "warnBody": "Os materiais orgânicos variam de lote para lote — matéria-prima, preparo e armazenamento mudam a análise. As faixas publicadas não são a análise do seu lote. O nitrogênio orgânico também se libera devagar (apenas ~30% do nitrogênio do esterco chega à primeira cultura, segundo a TNAU); trate o resultado como nutrientes aplicados, não como nutrientes disponíveis nesta safra. Para precisão, peça uma análise de laboratório do seu material real.",
+      "dismiss": "Dispensar",
+      "resultN": "Nitrogênio (N)",
+      "resultP": "Fosfato (P₂O₅)",
+      "resultK": "Potássio (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Mudar para o modo escuro",
@@ -94,6 +132,107 @@
     "title": "Perguntas que os agricultores nos fazem",
     "metaTitle": "FAQ — Fertilizer Dose: Perguntas Respondidas",
     "metaDescription": "Respostas sobre cálculo de dose de fertilizante, fórmulas NPK, unidades acre/kanal/marla, fontes de dados e o Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Calculadora de análise de solo",
+    "title": "Ajuste sua dose à sua análise de solo.",
+    "desc": "Digite os resultados da sua análise de solo — P e K disponíveis, carbono orgânico e pH — e uma dose verificada da cultura será ajustada para cima ou para baixo: aumente os nutrientes baixos, mantenha os médios, reduza os altos.",
+    "metaTitle": "Calculadora de Dose de Fertilizante Baseada em Análise de Solo — Ajuste o NPK à sua análise",
+    "metaDescription": "Calculadora de dose de fertilizante baseada em análise de solo: digite P, K disponíveis, carbono orgânico e pH para ajustar a recomendação NPK verificada de qualquer cultura — aumente os nutrientes baixos, reduza os altos.",
+    "empty": {
+      "title": "Sua dose ajustada aparecerá aqui",
+      "desc": "Escolha uma cultura, digite os valores da análise de solo e aperte calcular. Cada etapa do ajuste é mostrada."
+    },
+    "form": {
+      "crop": "Cultura",
+      "cropHint": "Somente culturas com recomendações verificadas podem ser selecionadas. Escolha «Dose base personalizada» para digitar seu próprio NPK.",
+      "cropSearchPlaceholder": "Digite para pesquisar culturas…",
+      "inReview": "dados em revisão",
+      "custom": "Dose base personalizada (genérica)",
+      "area": "Área da terra",
+      "unit": "Unidade",
+      "areaError": "Insira uma área de terra válida maior que zero.",
+      "areaLargeError": "Essa área parece incomumente grande — confira o valor e a unidade.",
+      "phRangeError": "O pH do solo deve estar entre 0 e 14.",
+      "negativeError": "Os valores não podem ser negativos — verifique suas entradas.",
+      "baseN": "Nitrogênio base (N)",
+      "baseP": "Fósforo base (P₂O₅)",
+      "baseK": "Potássio base (K₂O)",
+      "baseHint": "Apenas orientação genérica — não é uma recomendação verificada. Digite kg/ha.",
+      "noVerified": "Ainda não há recomendação verificada para {crop} na sua região. Digite uma dose base personalizada abaixo, ou escolha uma cultura verificada.",
+      "phosphorus": "Fósforo disponível (Olsen P)",
+      "potassium": "Potássio disponível (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Carbono orgânico (%)",
+      "ph": "pH do solo",
+      "optional": "opcional",
+      "nProxyNote": "Laboratórios de solo raramente informam uma classe de nitrogênio, por isso o carbono orgânico é usado como indicador da capacidade do seu solo de fornecer nitrogênio.",
+      "submit": "Ajustar dose",
+      "soilTestHint": "Do seu cartão de saúde do solo ou laudo de laboratório. Deixe em branco qualquer valor que não tenha — esse nutriente mantém sua dose base."
+    },
+    "results": {
+      "title": "Dose ajustada conforme análise de solo",
+      "adjustedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha ajustados · {region}",
+      "baseLine": "Base {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Baixo",
+      "medium": "Médio",
+      "high": "Alto",
+      "notRated": "Não classificado",
+      "acidic": "Ácido",
+      "neutral": "Neutro",
+      "alkaline": "Alcalino",
+      "ratingP": "Fósforo",
+      "ratingK": "Potássio",
+      "ratingN": "Nitrogênio (via carbono orgânico)",
+      "phLabel": "Classe de pH",
+      "phFixation": "Solo alcalino (pH acima de 7,5): o fósforo pode se fixar como fosfatos de cálcio/magnésio. Aplique em faixa toda a dose de P perto da semente na semeadura — a dose ajustada acima não muda.",
+      "buildUp": "+30% aumentar",
+      "maintenance": "Manter",
+      "drawdown": "−25% reduzir",
+      "notRatedNote": "Sem valor de análise — dose base mantida",
+      "kgUnit": "kg",
+      "bags": "× sacos de 50 kg",
+      "total": "Fertilizante total",
+      "basisTitle": "Por que esses números",
+      "basis": [
+        "As classes seguem as do laboratório indiano de análise de solos / cartão de saúde do solo: P (Olsen) baixo <10, médio 10–25, alto >25 mg/kg; K (NH₄OAc) baixo <120, médio 120–280, alto >280 kg/ha; carbono orgânico baixo <0,5, médio 0,5–0,75, alto >0,75%.",
+        "ppm e kg/ha são convertidos com o fator padrão da camada arável ×2,24 (≈2,24 milhões de kg de solo por hectare).",
+        "Nutrientes de classe baixa recebem +30% (aumentar), os médios ficam na base (manter), os altos −25% (reduzir). Essas faixas são estimativas de planejamento orientativas, não valores críticos publicados.",
+        "O carbono orgânico é um indicador da capacidade de fornecer nitrogênio, não um valor medido de N — a maioria dos laboratórios de solo não informa classe de nitrogênio.",
+        "O pH não muda a dose; apenas sinaliza risco de colocação. Solos alcalinos fixam o fósforo — a aplicação em faixa importa mais do que nunca."
+      ],
+      "sourceLabel": "Fonte dos dados:",
+      "genericLabel": "Base personalizada (apenas orientação genérica — não é uma recomendação verificada)",
+      "disclaimer": "Todas as doses são estimativas. Confirme com seu agrônomo local / técnico de extensão agrícola antes de aplicar fertilizante."
+    },
+    "method": {
+      "eyebrow": "Método",
+      "title": "O método, em palavras simples",
+      "desc": "Aumentar, manter, reduzir — a mesma lógica que os laboratórios de solo usam nos cartões de saúde."
+    },
+    "methodFaq": [
+      {
+        "q": "O que é uma dose de fertilizante baseada em análise de solo?",
+        "a": "Uma recomendação genérica assume um solo médio. Uma análise de solo diz o que seu campo já contém: se o fósforo sair alto, você pode cortar a dose de P e economizar dinheiro; se sair baixo, aumenta para enriquecer o solo. Esta ferramenta parte de uma recomendação verificada da cultura e aplica exatamente essa lógica: +30% para nutrientes de classe baixa, base para os médios, −25% para os altos."
+      },
+      {
+        "q": "De quais valores de análise de solo preciso?",
+        "a": "Fósforo disponível (método Olsen, mg/kg ou ppm), potássio disponível (método do acetato de amônio, kg/ha ou ppm), carbono orgânico (%) e pH — os quatro valores de um cartão padrão de saúde do solo. Você pode digitar P e K em qualquer unidade; a ferramenta converte com o fator padrão da camada arável (×2,24)."
+      },
+      {
+        "q": "Por que o nitrogênio é classificado a partir do carbono orgânico?",
+        "a": "Laboratórios de solo de rotina raramente informam uma classe de nitrogênio mineral, por isso os sistemas de extensão usam o carbono orgânico como indicador da capacidade nativa do solo de fornecer nitrogênio: mais carbono orgânico significa mais nitrogênio mineralizado durante a safra. É um indicador bem estabelecido, mas não um valor medido de N — o resultado é rotulado como tal."
+      },
+      {
+        "q": "Um pH alcalino muda minha dose?",
+        "a": "Não — aqui o pH nunca muda a dose calculada. Acima de pH 7,5, o fósforo precipita cada vez mais como fosfatos de cálcio e magnésio (fixação de P), por isso a colocação importa: aplique em faixa toda a dose de fósforo perto da semente na semeadura em vez de distribuir a lanço. A ferramenta sinaliza isso como uma nota, não como mudança de dose."
+      },
+      {
+        "q": "Quando não devo usar a dose base personalizada?",
+        "a": "A opção de base personalizada é apenas orientação genérica — um ponto de partida para culturas sem recomendação verificada em nosso banco de dados. Se existir uma dose verificada cultura×região, use-a sempre; os números verificados trazem sua fonte publicada."
+      }
+    ]
   },
   "footer": {
     "company": "Empresa",
@@ -313,6 +452,7 @@
     "myGarden": "Meu Jardim",
     "tools": "Ferramentas",
     "profitCalculator": "Calculadora de Lucro",
+    "soilTestCalculator": "Calculadora de Análise de Solo",
     "compare": "Comparar",
     "login": "Entrar",
     "account": "Conta",
@@ -367,7 +507,13 @@
       "plantsTitle": "Plantas para todo tipo de jardim.",
       "vegetablesTitle": "Hortaliças, do campo à horta caseira."
     },
-    "subcategoryAll": "Todos os tipos"
+    "subcategoryAll": "Todos os tipos",
+    "filterCountry": "País",
+    "filterRegion": "Região",
+    "filterMonth": "Mês de plantio",
+    "anyMonth": "Qualquer mês",
+    "allCountries": "Todos os países",
+    "allRegions": "Todas as regiões"
   },
   "calendar": {
     "metaTitle": "Calendário de Plantio — O que Plantar Este Mês",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Período de colheita",
     "activityLAND_PREPARATION": "Prepare o solo",
     "viewGuide": "Ver guia de cultivo",
+    "emptyRegionTitle": "Ainda não há informações de plantio verificadas para esta região.",
     "plantingWindow": "Janela de plantio",
-    "appliesTo": "Aplica-se a",
-    "emptyRegionTitle": "Ainda não há informações de plantio verificadas para esta região."
+    "appliesTo": "Aplica-se a"
   },
   "garden": {
     "metaTitle": "Meu Jardim — Acompanhe Talhões, Plantios e Planos de Adubação",
@@ -469,6 +615,11 @@
     "markDone": "Marcar como concluída",
     "reopen": "Reabrir",
     "addReminder": "Adicionar lembrete",
+    "generateFertilizerReminders": "Gerar lembretes de fertilizante",
+    "fertilizerReminderNote": "Época genérica sugerida a partir da prática padrão de dose parcelada — não é uma prescrição agronômica para o seu talhão.",
+    "suggestedPrefix": "Sugerido",
+    "remindersAdded": "{count} lembretes de fertilizante adicionados às próximas tarefas",
+    "remindersAlreadyExist": "Todos os lembretes sugeridos já existem para este plantio",
     "reminderTitle": "Lembrete",
     "reminderTitlePh": "ex.: Aplicar segunda parcela de urea",
     "dueDate": "Data de vencimento",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Biblioteca de Fertilizantes — Composição NPK, Usos e Orientações de Dose",
-    "metaDescription": "Composições NPK fiéis ao rótulo, benefícios, precauções e orientações de aplicação para urea, DAP, MOP, SSP, SOP e mais."
+    "metaDescription": "Composições NPK fiéis ao rótulo, benefícios, precauções e orientações de aplicação para urea, DAP, MOP, SSP, SOP e mais.",
+    "libraryEyebrow": "Biblioteca de fertilizantes",
+    "libraryTitle": "Saiba o que há no saco.",
+    "libraryDesc": "Os fertilizantes minerais trazem porcentagens exatas no rótulo — os números com que a calculadora de doses trabalha. Os materiais orgânicos trazem faixas típicas de fontes de extensão publicadas, porque não há dois lotes iguais.",
+    "tabAll": "Todas",
+    "tabMineral": "Mineral",
+    "tabOrganic": "Orgânico",
+    "typeMineral": "Mineral",
+    "typeOrganic": "Orgânico",
+    "typicalRangeLabel": "Faixa típica",
+    "organicHubCta": "O que são fertilizantes orgânicos? Leia o guia →",
+    "detail": {
+      "categoryManure": "Estrume",
+      "categoryCompost": "Composto",
+      "categoryGreenManure": "Adubação verde",
+      "caveatTitle": "Por que uma faixa, não um número",
+      "sourceLabel": "Fonte da faixa"
+    },
+    "organic": {
+      "metaTitle": "Fertilizantes Orgânicos — Tipos, Faixas de Nutrientes e Limitações Honestas",
+      "metaDescription": "Esterco de curral, composto, vermicomposto e adubação verde: faixas típicas de NPK de fontes de extensão, como os orgânicos diferem dos fertilizantes minerais, e suas limitações reais.",
+      "eyebrow": "Fertilizantes orgânicos",
+      "title": "Lentos, variáveis — e honestos sobre isso.",
+      "intro": "Os fertilizantes orgânicos são resíduos vegetais e animais que liberam nutrientes ao se decompor. Eles constroem o solo, mas são diluídos e inconsistentes comparados aos fertilizantes minerais. Esta página dá faixas típicas de nutrientes de fontes de extensão publicadas, e as limitações que ninguém deveria pular.",
+      "whatTitle": "O que são fertilizantes orgânicos",
+      "whatBody1": "Os estercos são resíduos vegetais e animais usados como fontes de nutrientes para as plantas; eles liberam esses nutrientes após a decomposição (TNAU). Os adubos orgânicos volumosos mais usados são o esterco de curral (FYM), o composto e a adubação verde. Um segundo grupo — adubos orgânicos concentrados como tortas, farinha de sangue e farinha de ossos — carrega mais nutrientes por quilograma, mas ainda fica muito abaixo das concentrações minerais.",
+      "whatBody2": "O traço definidor dos orgânicos é a variabilidade: o mesmo material de duas fazendas pode diferir várias vezes no conteúdo de nutrientes conforme a matéria-prima, o preparo e o armazenamento. Por isso esta biblioteca mostra faixas, nunca valores únicos de rótulo, para os materiais orgânicos.",
+      "typesTitle": "Os quatro materiais desta biblioteca",
+      "typesIntro": "Cada cartão mostra a faixa típica de porcentagem N–P₂O₅–K₂O de fontes de extensão publicadas. Seu lote será diferente — são pontos de partida, não garantias.",
+      "compareTitle": "Como os orgânicos diferem dos fertilizantes minerais",
+      "compareIntro": "Nenhum lado é «sempre melhor». Eles fazem trabalhos diferentes:",
+      "compareRows": [
+        {
+          "aspect": "Densidade de nutrientes",
+          "mineral": "Alta e exata — a ureia é 46% N, impresso no saco.",
+          "organic": "Baixa e variável — o esterco é cerca de 0,5–1,0% N, e cada pilha é diferente."
+        },
+        {
+          "aspect": "Velocidade de liberação",
+          "mineral": "Rápida — os nutrientes são solúveis em água e ficam disponíveis em dias.",
+          "organic": "Lenta — os micróbios precisam mineralizá-los primeiro; apenas ~30% do nitrogênio do esterco chega à primeira cultura (TNAU)."
+        },
+        {
+          "aspect": "Precisão da dose",
+          "mineral": "Precisa — a calculadora pode dosar ao quilograma.",
+          "organic": "Aproximada sem uma análise de laboratório do seu lote específico."
+        },
+        {
+          "aspect": "Efeitos no solo",
+          "mineral": "Pouco efeito direto na estrutura do solo ou na matéria orgânica.",
+          "organic": "Melhora a estrutura, a retenção de água e a atividade microbiana."
+        },
+        {
+          "aspect": "Logística",
+          "mineral": "Concentrado — poucos sacos por acre.",
+          "organic": "Volumoso — toneladas por hectare para mover, espalhar e incorporar."
+        },
+        {
+          "aspect": "Efeito residual",
+          "mineral": "Na maior parte absorvido ou perdido dentro da safra.",
+          "organic": "Longo — alimenta as culturas seguintes enquanto a decomposição continua."
+        }
+      ],
+      "usesTitle": "Onde os orgânicos fazem sentido",
+      "usesIntro": "Usos apropriados, dito claramente:",
+      "uses": [
+        "Construir matéria orgânica e estrutura do solo ao longo das safras — seu papel mais forte.",
+        "Condicionamento basal do solo antes da semeadura, especialmente em solos degradados ou arenosos.",
+        "Manejo integrado de nutrientes: orgânicos para a saúde do solo mais fertilizantes minerais para uma nutrição precisa da cultura.",
+        "Viveiros, hortaliças e culturas de alto valor onde a biologia do solo retorna mais rápido.",
+        "Adubação verde antes do arroz transplantado, onde o dhaincha pode adicionar 130–185 kg N/ha de nitrogênio fixado biologicamente."
+      ],
+      "limitsTitle": "Limitações — leia antes de confiar neles",
+      "limitsIntro": "O que os orgânicos não podem fazer:",
+      "limits": [
+        "Baixa densidade de nutrientes: igualar 100 kg N/ha com esterco exige 10–20 toneladas por hectare.",
+        "Composição variável: as faixas publicadas abrangem 2–3× dentro de um mesmo material; precisa é só a análise de laboratório do seu lote.",
+        "Liberação lenta: os nutrientes chegam em meses, não em dias — não podem salvar uma deficiência no meio da safra.",
+        "Volume e mão de obra: toneladas para transportar, espalhar e incorporar, contra sacos de fertilizante mineral.",
+        "Riscos de qualidade: sementes de plantas daninhas e patógenos em material mal compostado; possíveis contaminantes no composto municipal.",
+        "Não é um substituto direto: «esterco em vez de fertilizante» só funciona como substituição parcial dentro de um orçamento de nutrientes planejado — nunca como afirmação sem ressalvas."
+      ],
+      "warnTitle": "Avisos para o uso da calculadora",
+      "warnBody": "A seção orgânica da calculadora faz pura aritmética com os números que VOCÊ digita (seu laudo de laboratório ou rótulo do fornecedor). Ela não conhece a análise real do seu lote e não pode considerar a liberação lenta — trate o resultado como um limite superior de nutrientes aplicados, não de nutrientes disponíveis para a cultura desta safra. Para dosagem precisa, peça uma análise de laboratório do seu material real.",
+      "exploreCta": "Abrir a seção orgânica da calculadora",
+      "detailCta": "Ver detalhes"
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose Chart — Referência Rápida de NPK",

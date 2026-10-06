@@ -20,6 +20,7 @@
       "areaPlaceholder": "cth. 5",
       "crop": "Tanaman",
       "cropHint": "Hanya tanaman dengan syor yang disahkan boleh dipilih.",
+      "cropSearchPlaceholder": "Taip untuk mencari tanaman…",
       "inReview": "data dalam semakan",
       "soil": "Jenis tanah (pilihan)",
       "soilHint": "Jenis tanah tidak mengubah kiraan — ia mengubah nasihat. Tanah berpasir melarutkan nitrogen lebih cepat; tanah masin perlu berhati-hati dengan MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Sumber data:",
       "total": "Jumlah baja",
       "kgUnit": "kg",
+      "unitToggleLabel": "Unit paparan",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Paparan sahaja — pengiraan tersimpan anda kekal dalam kg.",
+      "splitTitle": "Jadual dos berperingkat",
+      "splitGenericBadge": "Jadual umum",
       "recommendedLine": "Disyorkan {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "Anda memilih \"{soil}\". Pada tanah {soilLower}, pertimbangkan ujian tanah sebelum mengubah dos — pengiraan asas di atas kekal sama."
     },
     "title": "Dos baja yang tepat, lengkap dengan kiraannya.",
+    "soilTestCard": {
+      "eyebrow": "Ujian tanah?",
+      "title": "Ada keputusan ujian tanah? Dapatkan dos yang tepat.",
+      "desc": "Masukkan P dan K tersedia, karbon organik dan pH dari kad kesihatan tanah anda — alat ini menaikkan nutrien rendah, mengekalkan yang sederhana dan menurunkan yang tinggi.",
+      "cta": "Buka kalkulator ujian tanah →"
+    },
     "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
     "metaDescription": "Kira dos Urea, DAP dan MOP yang tepat untuk gandum, padi dan jagung. Masukkan luas dalam acre, kanal, marla atau hectare — lihat setiap langkah pengiraan.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Mengapa sesetengah tanaman tidak boleh dipilih?",
         "a": "Tanaman hanya boleh dipilih jika dos NPK yang disyorkan telah disahkan terhadap sumber yang diterbitkan. Kami lebih rela menyahdayakan tanaman daripada mereka angkanya — tanaman yang belum disahkan ditanda \"data dalam semakan\" sehingga disahkan."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Sumbangan bahan organik — analisis anda sendiri",
+      "desc": "Masukkan peratusan N / P₂O₅ / K₂O daripada laporan makmal atau label pembekal anda, serta kadar aplikasi anda. Ini aritmetik tulen atas input anda: aplikasi ini tidak menyimpan data nutrien organiknya sendiri.",
+      "materialLabel": "Bahan",
+      "customOption": "Bahan tersuai — saya akan masukkan nilai sendiri",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Kadar aplikasi",
+      "rateUnit": "t/ha",
+      "rangeHint": "Julat tipikal yang diterbitkan untuk {name}: {range}. Kelompok anda mungkin berbeza — masukkan nilai makmal anda.",
+      "noRangeHint": "Tiada julat yang diterbitkan untuk bahan ini — masukkan nilai makmal atau label anda.",
+      "resultsTitle": "Nutrien yang digunakan",
+      "formulaLabel": "Formula",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Masukkan peratusan dan kadar di atas untuk melihat sumbangan.",
+      "warnTitle": "Baca ini sebelum mempercayai nombor",
+      "warnBody": "Bahan organik berbeza mengikut kelompok — bahan mentah, penyediaan dan penyimpanan mengubah analisis. Julat yang diterbitkan bukan analisis kelompok anda. Nitrogen organik juga terbebas perlahan-lahan (hanya ~30% nitrogen tahi lembu sampai ke tanaman pertama, menurut TNAU), jadi anggap hasilnya sebagai nutrien yang digunakan, bukan nutrien yang tersedia musim ini. Untuk ketepatan, dapatkan analisis makmal bahan sebenar anda.",
+      "dismiss": "Tutup",
+      "resultN": "Nitrogen (N)",
+      "resultP": "Fosfat (P₂O₅)",
+      "resultK": "Potasyum (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Tukar ke mod gelap",
@@ -94,6 +132,107 @@
     "title": "Soalan yang sering ditanya petani",
     "metaTitle": "FAQ — Soalan & Jawapan Fertilizer Dose",
     "metaDescription": "Jawapan tentang pengiraan dos baja, formula NPK, unit acre/kanal/marla, sumber data dan Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Kalkulator ujian tanah",
+    "title": "Selaraskan dos anda dengan ujian tanah anda.",
+    "desc": "Masukkan keputusan ujian tanah anda — P dan K tersedia, karbon organik dan pH — dan dos tanaman yang disahkan akan diselaraskan naik atau turun: naikkan nutrien rendah, kekalkan yang sederhana, turunkan yang tinggi.",
+    "metaTitle": "Kalkulator Dos Baja Berasaskan Ujian Tanah — Selaraskan NPK dengan Ujian Tanah Anda",
+    "metaDescription": "Kalkulator dos baja berasaskan ujian tanah: masukkan P, K tersedia, karbon organik dan pH untuk melaraskan syor NPK yang disahkan bagi mana-mana tanaman — naikkan nutrien rendah, turunkan yang tinggi.",
+    "empty": {
+      "title": "Dos selaras anda akan muncul di sini",
+      "desc": "Pilih tanaman, masukkan nilai ujian tanah anda, dan tekan kira. Setiap langkah pelarasan ditunjukkan."
+    },
+    "form": {
+      "crop": "Tanaman",
+      "cropHint": "Hanya tanaman dengan syor yang disahkan boleh dipilih. Pilih “Dos asas tersuai” untuk memasukkan NPK anda sendiri.",
+      "cropSearchPlaceholder": "Taip untuk mencari tanaman…",
+      "inReview": "data dalam semakan",
+      "custom": "Dos asas tersuai (umum)",
+      "area": "Luas tanah",
+      "unit": "Unit",
+      "areaError": "Sila masukkan luas tanah yang sah dan lebih besar daripada sifar.",
+      "areaLargeError": "Luas itu kelihatan luar biasa besar — sila semak semula nilai dan unit.",
+      "phRangeError": "pH tanah mestilah antara 0 dan 14.",
+      "negativeError": "Nilai tidak boleh negatif — sila semak entri anda.",
+      "baseN": "Nitrogen asas (N)",
+      "baseP": "Fosforus asas (P₂O₅)",
+      "baseK": "Kalium asas (K₂O)",
+      "baseHint": "Panduan umum sahaja — ini bukan syor yang disahkan. Masukkan kg/ha.",
+      "noVerified": "Tiada syor yang disahkan untuk {crop} di wilayah anda lagi. Masukkan dos asas tersuai di bawah, atau pilih tanaman yang disahkan.",
+      "phosphorus": "Fosforus tersedia (Olsen P)",
+      "potassium": "Kalium tersedia (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Karbon organik (%)",
+      "ph": "pH tanah",
+      "optional": "pilihan",
+      "nProxyNote": "Makmal tanah jarang melaporkan kelas nitrogen, jadi karbon organik digunakan sebagai proksi keupayaan tanah anda membekalkan nitrogen.",
+      "submit": "Selaraskan dos",
+      "soilTestHint": "Daripada kad kesihatan tanah atau laporan makmal anda. Biarkan kosong mana-mana nilai yang tiada — nutrien itu mengekalkan dos asasnya."
+    },
+    "results": {
+      "title": "Dos selaras ujian tanah",
+      "adjustedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha diselaraskan · {region}",
+      "baseLine": "Asas {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Rendah",
+      "medium": "Sederhana",
+      "high": "Tinggi",
+      "notRated": "Tidak dinilai",
+      "acidic": "Berasid",
+      "neutral": "Neutral",
+      "alkaline": "Beralkali",
+      "ratingP": "Fosforus",
+      "ratingK": "Kalium",
+      "ratingN": "Nitrogen (melalui karbon organik)",
+      "phLabel": "Kelas pH",
+      "phFixation": "Tanah beralkali (pH melebihi 7.5): fosforus boleh terikat sebagai kalsium/magnesium fosfat. Letakkan keseluruhan dos P berjalur berhampiran benih semasa menyemai — dos selaras di atas kekal sama.",
+      "buildUp": "+30% naikkan",
+      "maintenance": "Kekalkan",
+      "drawdown": "−25% turunkan",
+      "notRatedNote": "Tiada nilai ujian — dos asas dikekalkan",
+      "kgUnit": "kg",
+      "bags": "× guni 50 kg",
+      "total": "Jumlah baja",
+      "basisTitle": "Mengapa nombor ini",
+      "basis": [
+        "Penarafan mengikut kelas makmal ujian tanah India / Kad Kesihatan Tanah: P (Olsen) rendah <10, sederhana 10–25, tinggi >25 mg/kg; K (NH₄OAc) rendah <120, sederhana 120–280, tinggi >280 kg/ha; karbon organik rendah <0.5, sederhana 0.5–0.75, tinggi >0.75%.",
+        "ppm dan kg/ha ditukar dengan faktor hirisan alur standard ×2.24 (≈2.24 juta kg tanah sehektar).",
+        "Nutrien kelas rendah dapat +30% (naikkan), sederhana kekal pada asas (kekalkan), tinggi −25% (turunkan). Jalur ini anggaran perancangan nasihat, bukan nilai kritikal yang diterbitkan.",
+        "Karbon organik ialah proksi keupayaan membekalkan nitrogen, bukan nilai N yang diukur — kebanyakan makmal tanah tidak melaporkan kelas nitrogen.",
+        "pH tidak mengubah dos; ia hanya menandakan risiko penempatan. Tanah beralkali mengikat fosforus — penempatan berjalur lebih penting dari sebelumnya."
+      ],
+      "sourceLabel": "Sumber data:",
+      "genericLabel": "Asas tersuai (panduan umum sahaja — bukan syor yang disahkan)",
+      "disclaimer": "Semua dos adalah anggaran. Sahkan dengan ahli agronomi tempatan / pegawai pengembangan pertanian anda sebelum menggunakan baja."
+    },
+    "method": {
+      "eyebrow": "Kaedah",
+      "title": "Kaedahnya, dijelaskan dengan mudah",
+      "desc": "Naikkan, kekalkan, turunkan — logik yang sama digunakan makmal tanah pada kad kesihatan."
+    },
+    "methodFaq": [
+      {
+        "q": "Apakah dos baja berasaskan ujian tanah?",
+        "a": "Syor umum mengandaikan tanah purata. Ujian tanah memberitahu apa yang sudah ada di ladang anda: jika fosforus tinggi, anda boleh mengurangkan dos P dan menjimatkan wang; jika rendah, naikkan untuk memulihkan tanah. Alat ini bermula daripada syor tanaman yang disahkan dan menggunakan logik yang sama — +30% untuk nutrien kelas rendah, asas untuk sederhana, −25% untuk tinggi."
+      },
+      {
+        "q": "Nilai ujian tanah apa yang saya perlukan?",
+        "a": "Fosforus tersedia (kaedah Olsen, mg/kg atau ppm), kalium tersedia (kaedah ammonium asetat, kg/ha atau ppm), karbon organik (%), dan pH — empat nilai pada kad kesihatan tanah standard. Anda boleh memasukkan P dan K dalam mana-mana unit; alat ini menukar dengan faktor hirisan alur standard (×2.24)."
+      },
+      {
+        "q": "Mengapa nitrogen dinilai daripada karbon organik?",
+        "a": "Makmal tanah rutin jarang melaporkan kelas nitrogen mineral, jadi sistem pengembangan menggunakan karbon organik sebagai proksi keupayaan asli tanah membekalkan nitrogen: lebih banyak karbon organik bermakna lebih banyak nitrogen termineral sepanjang musim. Ia proksi yang mantap, tetapi bukan nilai N yang diukur — hasilnya dilabel sedemikian."
+      },
+      {
+        "q": "Adakah pH beralkali mengubah dos saya?",
+        "a": "Tidak — pH tidak pernah mengubah dos yang dikira di sini. Di atas pH 7.5, fosforus semakin termendak sebagai kalsium dan magnesium fosfat (pengikatan P), jadi penempatan penting: letakkan keseluruhan dos fosforus berjalur berhampiran benih semasa menyemai dan bukannya menabur. Alat ini menandakannya sebagai nota, bukan perubahan dos."
+      },
+      {
+        "q": "Bilakah saya tidak patut menggunakan dos asas tersuai?",
+        "a": "Pilihan asas tersuai hanyalah panduan umum — titik permulaan untuk tanaman tanpa syor yang disahkan dalam pangkalan data kami. Jika dos tanaman×wilayah yang disahkan wujud, sentiasa gunakannya; angka yang disahkan membawa sumber yang diterbitkan."
+      }
+    ]
   },
   "footer": {
     "company": "Syarikat",
@@ -313,6 +452,7 @@
     "myGarden": "Kebun Saya",
     "tools": "Alatan",
     "profitCalculator": "Kalkulator Keuntungan",
+    "soilTestCalculator": "Kalkulator Ujian Tanah",
     "compare": "Banding",
     "login": "Log masuk",
     "account": "Akaun",
@@ -367,7 +507,13 @@
       "plantsTitle": "Pokok untuk setiap jenis kebun.",
       "vegetablesTitle": "Sayur, dari ladang ke kebun dapur."
     },
-    "subcategoryAll": "Semua jenis"
+    "subcategoryAll": "Semua jenis",
+    "filterCountry": "Negara",
+    "filterRegion": "Wilayah",
+    "filterMonth": "Bulan penanaman",
+    "anyMonth": "Mana-mana bulan",
+    "allCountries": "Semua negara",
+    "allRegions": "Semua wilayah"
   },
   "calendar": {
     "metaTitle": "Kalendar Menanam — Apa yang Ditanam Bulan Ini",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Musim menuai",
     "activityLAND_PREPARATION": "Sediakan tanah",
     "viewGuide": "Lihat panduan penanaman",
+    "emptyRegionTitle": "Tiada maklumat penanaman yang disahkan untuk wilayah ini lagi.",
     "plantingWindow": "Tempoh penanaman",
-    "appliesTo": "Terpakai untuk",
-    "emptyRegionTitle": "Tiada maklumat penanaman yang disahkan untuk wilayah ini lagi."
+    "appliesTo": "Terpakai untuk"
   },
   "garden": {
     "metaTitle": "Kebun Saya — Jejak Petak, Penanaman & Pelan Baja",
@@ -469,6 +615,11 @@
     "markDone": "Tanda selesai",
     "reopen": "Buka semula",
     "addReminder": "Tambah peringatan",
+    "generateFertilizerReminders": "Jana peringatan baja",
+    "fertilizerReminderNote": "Masa umum yang dicadangkan daripada amalan dos berperingkat standard — bukan preskripsi agronomi untuk plot anda.",
+    "suggestedPrefix": "Dicadangkan",
+    "remindersAdded": "{count} peringatan baja ditambah ke tugasan akan datang",
+    "remindersAlreadyExist": "Semua peringatan yang dicadangkan sudah wujud untuk tanaman ini",
     "reminderTitle": "Peringatan",
     "reminderTitlePh": "cth. Beri susulan Urea kedua",
     "dueDate": "Tarikh akhir",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Pustaka Baja — Komposisi NPK, Kegunaan & Panduan Dos",
-    "metaDescription": "Komposisi NPK tepat mengikut label, manfaat, langkah berjaga-jaga dan panduan aplikasi untuk Urea, DAP, MOP, SSP, SOP dan banyak lagi."
+    "metaDescription": "Komposisi NPK tepat mengikut label, manfaat, langkah berjaga-jaga dan panduan aplikasi untuk Urea, DAP, MOP, SSP, SOP dan banyak lagi.",
+    "libraryEyebrow": "Pustaka baja",
+    "libraryTitle": "Ketahui apa dalam guni.",
+    "libraryDesc": "Baja mineral membawa peratusan label yang tepat — nombor yang digunakan kalkulator dos. Bahan organik membawa julat tipikal daripada sumber pengembangan yang diterbitkan, kerana tiada dua kelompok yang sama.",
+    "tabAll": "Semua",
+    "tabMineral": "Mineral",
+    "tabOrganic": "Organik",
+    "typeMineral": "Mineral",
+    "typeOrganic": "Organik",
+    "typicalRangeLabel": "Julat tipikal",
+    "organicHubCta": "Apa itu baja organik? Baca panduan →",
+    "detail": {
+      "categoryManure": "Tahi ternakan",
+      "categoryCompost": "Kompos",
+      "categoryGreenManure": "Baja hijau",
+      "caveatTitle": "Mengapa julat, bukan nombor",
+      "sourceLabel": "Sumber julat"
+    },
+    "organic": {
+      "metaTitle": "Baja Organik — Jenis, Julat Nutrien & Batasan Jujur",
+      "metaDescription": "Tahi lembu, kompos, vermikompos dan baja hijau: julat NPK tipikal daripada sumber pengembangan, bagaimana organik berbeza daripada baja mineral, dan batasan sebenar mereka.",
+      "eyebrow": "Baja organik",
+      "title": "Perlahan, berubah-ubah — dan jujur mengenainya.",
+      "intro": "Baja organik ialah sisa tumbuhan dan haiwan yang membebaskan nutrien semasa mereput. Ia membina tanah, tetapi cair dan tidak konsisten berbanding baja mineral. Halaman ini memberi anda julat nutrien tipikal daripada sumber pengembangan yang diterbitkan, dan batasan yang tiada siapa patut langkau.",
+      "whatTitle": "Apa itu baja organik",
+      "whatBody1": "Tahi ialah sisa tumbuhan dan haiwan yang digunakan sebagai sumber nutrien tumbuhan; ia membebaskan nutrien tersebut selepas pereputan (TNAU). Baja organik pukal yang paling banyak digunakan ialah tahi lembu (FYM), kompos dan baja hijau. Kumpulan kedua — baja organik pekat seperti hampas minyak, tepung darah dan tepung tulang — membawa lebih banyak nutrien per kilogram tetapi masih jauh di bawah kepekatan mineral.",
+      "whatBody2": "Ciri penentu organik ialah kebolehubahan: bahan yang sama dari dua ladang boleh berbeza beberapa kali ganda dalam kandungan nutrien bergantung pada bahan mentah, penyediaan dan penyimpanan. Sebab itu pustaka ini menunjukkan julat, bukan nilai label tunggal, untuk bahan organik.",
+      "typesTitle": "Empat bahan dalam pustaka ini",
+      "typesIntro": "Setiap kad menunjukkan julat peratusan N–P₂O₅–K₂O tipikal daripada sumber pengembangan yang diterbitkan. Kelompok anda akan berbeza — ini titik permulaan, bukan jaminan.",
+      "compareTitle": "Bagaimana organik berbeza daripada baja mineral",
+      "compareIntro": "Tiada pihak yang ‘sentiasa lebih baik’. Tugas mereka berbeza:",
+      "compareRows": [
+        {
+          "aspect": "Ketumpatan nutrien",
+          "mineral": "Tinggi dan tepat — urea ialah 46% N, tercetak pada guni.",
+          "organic": "Rendah dan berubah-ubah — tahi lembu kira-kira 0.5–1.0% N, dan setiap timbunan berbeza."
+        },
+        {
+          "aspect": "Kelajuan pembebasan",
+          "mineral": "Cepat — nutrien larut air dan tersedia dalam beberapa hari.",
+          "organic": "Perlahan — mikrob mesti memineralkannya dahulu; hanya ~30% nitrogen tahi lembu sampai ke tanaman pertama (TNAU)."
+        },
+        {
+          "aspect": "Ketepatan dos",
+          "mineral": "Tepat — kalkulator boleh mendos hingga ke kilogram.",
+          "organic": "Anggaran tanpa analisis makmal kelompok khusus anda."
+        },
+        {
+          "aspect": "Kesan tanah",
+          "mineral": "Sedikit kesan langsung pada struktur tanah atau bahan organik.",
+          "organic": "Memperbaiki struktur, keupayaan menahan air dan aktiviti mikrob."
+        },
+        {
+          "aspect": "Logistik",
+          "mineral": "Pekat — beberapa guni se ekar.",
+          "organic": "Pukal — bertan-tan sehektar untuk dialih, ditabur dan digaul."
+        },
+        {
+          "aspect": "Kesan sisa",
+          "mineral": "Kebanyakannya diserap atau hilang dalam musim.",
+          "organic": "Panjang — memberi makan tanaman berikutnya sementara pereputan berterusan."
+        }
+      ],
+      "usesTitle": "Di mana organik masuk akal",
+      "usesIntro": "Kegunaan yang sesuai, dinyatakan jelas:",
+      "uses": [
+        "Membina bahan organik dan struktur tanah sepanjang musim — peranan terkuat mereka.",
+        "Perapi tanah basal sebelum menyemai, terutama pada tanah rosak atau berpasir.",
+        "Pengurusan nutrien bersepadu: organik untuk kesihatan tanah ditambah baja mineral untuk nutrisi tanaman yang tepat.",
+        "Tapak semaian, sayur-sayuran dan tanaman bernilai tinggi di mana biologi tanah berbalas paling cepat.",
+        "Baja hijau sebelum padi transplant, di mana dhaincha boleh menambah 130–185 kg N/ha nitrogen yang diikat secara biologi."
+      ],
+      "limitsTitle": "Batasan — baca sebelum bergantung padanya",
+      "limitsIntro": "Apa yang organik tidak boleh lakukan:",
+      "limits": [
+        "Ketumpatan nutrien rendah: menyamai 100 kg N/ha dengan tahi lembu memerlukan 10–20 tan sehektar.",
+        "Komposisi berubah-ubah: julat yang diterbitkan menjangkau 2–3× dalam satu bahan; hanya analisis makmal kelompok anda yang tepat.",
+        "Pembebasan perlahan: nutrien tiba dalam bulan, bukan hari — ia tidak dapat menyelamatkan kekurangan pertengahan musim.",
+        "Pukal dan buruh: bertan-tan untuk diangkut, ditabur dan digaul, berbanding guni baja mineral.",
+        "Risiko kualiti: biji rumpai dan patogen dalam bahan yang kurang terkompos; kemungkinan bahan cemar dalam kompos perbandaran.",
+        "Bukan pengganti terus: ‘tahi sebagai ganti baja’ hanya berfungsi sebagai penggantian separa dalam bajet nutrien yang dirancang — bukan sebagai dakwaan tanpa syarat."
+      ],
+      "warnTitle": "Amaran untuk penggunaan kalkulator",
+      "warnBody": "Bahagian organik kalkulator menjalankan aritmetik tulen atas nombor yang ANDA masukkan (laporan makmal atau label pembekal anda). Ia tidak tahu analisis sebenar kelompok anda, dan tidak dapat mengambil kira pembebasan perlahan — anggap hasilnya sebagai had atas nutrien yang digunakan, bukan nutrien yang tersedia untuk tanaman musim ini. Untuk dos yang tepat, dapatkan analisis makmal bahan sebenar anda.",
+      "exploreCta": "Buka bahagian organik kalkulator",
+      "detailCta": "Lihat butiran"
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose — Carta Dos Baja & Rujukan Pantas NPK",

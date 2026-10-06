@@ -20,6 +20,7 @@
       "areaPlaceholder": "t.ex. 5",
       "crop": "Gröda",
       "cropHint": "Endast grödor med verifierade rekommendationer kan väljas.",
+      "cropSearchPlaceholder": "Skriv för att söka grödor…",
       "inReview": "data under granskning",
       "soil": "Jordtyp (valfritt)",
       "soilHint": "Jordtypen ändrar inte beräkningen – den ändrar rådgivningen. Sandjordar läcker kväve snabbare; salthaltiga jordar kräver försiktighet med MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Datakälla:",
       "total": "Total gödsel",
       "kgUnit": "kg",
+      "unitToggleLabel": "Visningsenheter",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Endast visning — din sparade beräkning stannar i kg.",
+      "splitTitle": "Schema för delad dos",
+      "splitGenericBadge": "Generellt schema",
       "recommendedLine": "Rekommenderat {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "Du valde ”{soil}”. På {soilLower}jordar bör du överväga ett jordprov innan du ändrar dosen – grundberäkningen ovan förblir densamma."
     },
     "title": "Exakt gödseldos, med beräkningen visad.",
+    "soilTestCard": {
+      "eyebrow": "Jordanalys?",
+      "title": "Har du jordanalysresultat? Få en precis dos.",
+      "desc": "Ange tillgängligt P och K, organiskt kol och pH från ditt jordhälsokort — verktyget höjer låga näringsämnen, behåller medel och sänker höga.",
+      "cta": "Öppna jordanalysberäknaren →"
+    },
     "metaTitle": "Gödseldosberäknare — Urea, DAP & MOP per Acre/Kanal/Marla",
     "metaDescription": "Beräkna exakta doser av urea, DAP och MOP för vete, ris och majs. Ange areal i acre, kanal, marla eller hektar – se varje beräkningssteg.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Varför är vissa grödor inaktiverade?",
         "a": "En gröda kan bara väljas när dess rekommenderade NPK-dos är verifierad mot en publicerad källa. Vi inaktiverar hellre en gröda än hittar på dess värden – overifierade grödor är märkta ”data under granskning” tills de bekräftats."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Bidrag från organiskt material — din egen analys",
+      "desc": "Ange procentsatserna N / P₂O₅ / K₂O från din laboratorierapport eller leverantörens etikett, plus din spridningsmängd. Det är ren aritmetik på dina indata: appen har inga egna data om organiska näringsämnen.",
+      "materialLabel": "Material",
+      "customOption": "Eget material — jag anger mina egna värden",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Spridningsmängd",
+      "rateUnit": "t/ha",
+      "rangeHint": "Publicerat typiskt intervall för {name}: {range}. Ditt parti kan skilja sig — ange ditt laboratorievärde.",
+      "noRangeHint": "Inget publicerat intervall för detta material — ange dina laboratorie- eller etikettvärden.",
+      "resultsTitle": "Tillförda näringsämnen",
+      "formulaLabel": "Formel",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Ange procentsatser och en giva ovan för att se bidraget.",
+      "warnTitle": "Läs detta innan du litar på siffrorna",
+      "warnBody": "Organiska material varierar från parti till parti — råvara, beredning och lagring ändrar analysen. Publicerade intervall är inte analysen av ditt parti. Organiskt kväve frigörs också långsamt (endast ~30 % av stallgödselns kväve når den första grödan, enligt TNAU), så betrakta resultatet som tillförda näringsämnen, inte som näringsämnen tillgängliga denna säsong. För precision, beställ en laboratorieanalys av ditt faktiska material.",
+      "dismiss": "Stäng",
+      "resultN": "Kväve (N)",
+      "resultP": "Fosfat (P₂O₅)",
+      "resultK": "Kalium (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Växla till mörkt läge",
@@ -94,6 +132,107 @@
     "title": "Frågor som lantbrukare ställer oss",
     "metaTitle": "FAQ — Svar på frågor om gödseldoser",
     "metaDescription": "Svar om beräkning av gödseldoser, NPK-formler, enheterna acre/kanal/marla, datakällor och Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Jordanalysberäknare",
+    "title": "Justera din dos efter din jordanalys.",
+    "desc": "Ange dina jordanalysresultat — tillgängligt P och K, organiskt kol och pH — så justeras en verifierad gröddos uppåt eller nedåt: höj låga näringsämnen, behåll medel, sänk höga.",
+    "metaTitle": "Gödseldosberäknare baserad på jordanalys — Justera NPK efter din jordanalys",
+    "metaDescription": "Gödseldosberäknare baserad på jordanalys: ange tillgängligt P, K, organiskt kol och pH för att justera den verifierade NPK-rekommendationen för valfri gröda — höj låga näringsämnen, sänk höga.",
+    "empty": {
+      "title": "Din justerade dos visas här",
+      "desc": "Välj en gröda, ange dina jordanalysvärden och tryck beräkna. Varje justeringssteg visas."
+    },
+    "form": {
+      "crop": "Gröda",
+      "cropHint": "Endast grödor med verifierade rekommendationer kan väljas. Välj ”Egen basdos” för att ange ditt eget NPK.",
+      "cropSearchPlaceholder": "Skriv för att söka grödor…",
+      "inReview": "data under granskning",
+      "custom": "Egen basdos (generell)",
+      "area": "Areal",
+      "unit": "Enhet",
+      "areaError": "Ange en giltig areal större än noll.",
+      "areaLargeError": "Den arealen ser ovanligt stor ut – kontrollera värdet och enheten.",
+      "phRangeError": "Jordens pH måste vara mellan 0 och 14.",
+      "negativeError": "Värden kan inte vara negativa — kontrollera dina inmatningar.",
+      "baseN": "Baskväve (N)",
+      "baseP": "Basfosfor (P₂O₅)",
+      "baseK": "Baskalium (K₂O)",
+      "baseHint": "Endast generell vägledning — ingen verifierad rekommendation. Ange kg/ha.",
+      "noVerified": "Ingen verifierad rekommendation för {crop} i din region ännu. Ange en egen basdos nedan, eller välj en verifierad gröda.",
+      "phosphorus": "Tillgänglig fosfor (Olsen P)",
+      "potassium": "Tillgängligt kalium (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Organiskt kol (%)",
+      "ph": "Jordens pH",
+      "optional": "valfritt",
+      "nProxyNote": "Jordlaboratorier rapporterar sällan en kväveklass, så organiskt kol används som indikator på din jords förmåga att tillföra kväve.",
+      "submit": "Justera dos",
+      "soilTestHint": "Från ditt jordhälsokort eller laboratorierapport. Lämna tomt varje värde du inte har — det näringsämnet behåller sin basdos."
+    },
+    "results": {
+      "title": "Jordanalysjusterad dos",
+      "adjustedLine": "Justerat {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "baseLine": "Bas {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Låg",
+      "medium": "Medel",
+      "high": "Hög",
+      "notRated": "Ej bedömd",
+      "acidic": "Sur",
+      "neutral": "Neutral",
+      "alkaline": "Alkalisk",
+      "ratingP": "Fosfor",
+      "ratingK": "Kalium",
+      "ratingN": "Kväve (via organiskt kol)",
+      "phLabel": "pH-klass",
+      "phFixation": "Alkalisk jord (pH över 7,5): fosfor kan fixeras som kalcium-/magnesiumfosfater. Lägg hela P-givan i band nära fröet vid sådd — den justerade dosen ovan ändras inte.",
+      "buildUp": "+30 % höj",
+      "maintenance": "Behåll",
+      "drawdown": "−25 % sänk",
+      "notRatedNote": "Inget analysvärde — basdos behållen",
+      "kgUnit": "kg",
+      "bags": "× 50 kg-säckar",
+      "total": "Total gödsel",
+      "basisTitle": "Varför dessa siffror",
+      "basis": [
+        "Klasserna följer det indiska jordlaboratoriets / jordhälsokortets klasser: P (Olsen) låg <10, medel 10–25, hög >25 mg/kg; K (NH₄OAc) låg <120, medel 120–280, hög >280 kg/ha; organiskt kol lågt <0,5, medel 0,5–0,75, högt >0,75 %.",
+        "ppm och kg/ha räknas om med standardfaktorn för matjorden ×2,24 (≈2,24 miljoner kg jord per hektar).",
+        "Näringsämnen i låg klass får +30 % (höj), medel stannar på bas (behåll), höga −25 % (sänk). Dessa band är vägledande planeringsuppskattningar, inte publicerade riktvärden.",
+        "Organiskt kol är en indikator på kvävetillförselförmåga, inget uppmätt N-värde — de flesta jordlaboratorier rapporterar ingen kväveklass.",
+        "pH ändrar inte dosen; det flaggar bara placeringsrisk. Alkaliska jordar fixerar fosfor — bandplacering är viktigare än någonsin."
+      ],
+      "sourceLabel": "Datakälla:",
+      "genericLabel": "Egen bas (endast generell vägledning — ingen verifierad rekommendation)",
+      "disclaimer": "Alla doser är uppskattningar. Bekräfta med din lokala agronom / lantbruksrådgivare innan du gödslar."
+    },
+    "method": {
+      "eyebrow": "Metod",
+      "title": "Metoden, med enkla ord",
+      "desc": "Höj, behåll, sänk — samma logik som jordlaboratorierna använder på hälsokorten."
+    },
+    "methodFaq": [
+      {
+        "q": "Vad är en gödseldos baserad på jordanalys?",
+        "a": "En generell rekommendation utgår från en genomsnittsjord. En jordanalys visar vad ditt fält redan innehåller: är fosfor högt kan du sänka P-dosen och spara pengar; är det lågt höjer du den för att bygga upp jorden. Det här verktyget utgår från en verifierad grödrekommendation och tillämpar exakt den logiken — +30 % för näringsämnen i låg klass, bas för medel, −25 % för höga."
+      },
+      {
+        "q": "Vilka jordanalysvärden behöver jag?",
+        "a": "Tillgänglig fosfor (Olsen-metoden, mg/kg eller ppm), tillgängligt kalium (ammoniumacetat-metoden, kg/ha eller ppm), organiskt kol (%) och pH — de fyra värdena på ett standardjordhälsokort. Du kan ange P och K i endera enheten; verktyget räknar om med standardfaktorn för matjorden (×2,24)."
+      },
+      {
+        "q": "Varför bedöms kväve utifrån organiskt kol?",
+        "a": "Rutinmässiga jordlaboratorier rapporterar sällan en mineralkväveklass, så rådgivningssystemen använder organiskt kol som indikator på jordens naturliga förmåga att tillföra kväve: mer organiskt kol betyder mer mineraliserat kväve under säsongen. Det är en etablerad indikator, men inget uppmätt N-värde — resultatet märks som sådant."
+      },
+      {
+        "q": "Ändrar ett alkaliskt pH min dos?",
+        "a": "Nej — pH ändrar aldrig den beräknade dosen här. Över pH 7,5 fälls fosfor alltmer ut som kalcium- och magnesiumfosfater (P-fixering), så placeringen spelar roll: lägg hela fosforgivan i band nära fröet vid sådd i stället för att sprida den. Verktyget flaggar detta som en notis, inte en dosändring."
+      },
+      {
+        "q": "När ska jag inte använda egen basdos?",
+        "a": "Alternativet egen basdos är endast generell vägledning — en startpunkt för grödor utan verifierad rekommendation i vår databas. Finns en verifierad gröda×region-dos, använd alltid den; verifierade siffror bär sin publicerade källa."
+      }
+    ]
   },
   "footer": {
     "company": "Företaget",
@@ -280,7 +419,14 @@
       "eyebrow": "Såkalender",
       "title": "Vad ska odlas denna månad?",
       "desc": "En regionsanpassad såkalender för din provins – inga generella gissningar. Varje fönster har källa och verifieringsstatus.",
-      "cta": "Öppna såkalendern"
+      "cta": "Öppna såkalendern",
+      "noCountryTitle": "Var odlar du?",
+      "noCountryDesc": "Välj ditt land för att se vad du ska så denna månad — endast verifierade fönster.",
+      "showingFor": "Visar för:",
+      "changeCountry": "Ändra",
+      "viewCalendar": "Visa hela såkalendern",
+      "noItemsTitle": "Inget verifierat för denna månad ännu",
+      "noItemsHint": "Vi har ännu inte verifierat några såfönster för denna region och månad."
     }
   },
   "language": {
@@ -306,6 +452,7 @@
     "myGarden": "Min trädgård",
     "tools": "Verktyg",
     "profitCalculator": "Vinstberäknare",
+    "soilTestCalculator": "Jordanalysberäknare",
     "compare": "Jämför",
     "login": "Logga in",
     "account": "Konto",
@@ -360,7 +507,13 @@
       "plantsTitle": "Växter för varje slags trädgård.",
       "vegetablesTitle": "Grönsaker, från fält till köksträdgård."
     },
-    "subcategoryAll": "Alla typer"
+    "subcategoryAll": "Alla typer",
+    "filterCountry": "Land",
+    "filterRegion": "Region",
+    "filterMonth": "Planteringsmånad",
+    "anyMonth": "Vilken månad som helst",
+    "allCountries": "Alla länder",
+    "allRegions": "Alla regioner"
   },
   "calendar": {
     "metaTitle": "Såkalender — Vad ska odlas denna månad",
@@ -398,7 +551,20 @@
       "hasData": "Sådata tillgängliga",
       "noDataYet": "Data under verifiering",
       "openCalendar": "Öppna såkalendern"
-    }
+    },
+    "catFruit": "Frukter",
+    "catHerb": "Örter",
+    "catFlower": "Blommor",
+    "catOther": "Andra växter",
+    "activitySOW": "Så nu",
+    "activityTRANSPLANT": "Omplantera nu",
+    "activityPLANT": "Plantera nu",
+    "activityHARVEST": "Skördeperiod",
+    "activityLAND_PREPARATION": "Förbered jorden",
+    "viewGuide": "Visa odlingsguiden",
+    "emptyRegionTitle": "Ingen verifierad planteringsinformation finns ännu för denna region.",
+    "plantingWindow": "Planteringsfönster",
+    "appliesTo": "Gäller för"
   },
   "garden": {
     "metaTitle": "Min trädgård — Följ lotter, planteringar & gödslingsplaner",
@@ -449,6 +615,11 @@
     "markDone": "Markera som klar",
     "reopen": "Öppna igen",
     "addReminder": "Lägg till påminnelse",
+    "generateFertilizerReminders": "Skapa gödselpåminnelser",
+    "fertilizerReminderNote": "Föreslagen generell tidpunkt från standardpraxis för delad dos — ingen agronomisk ordination för din odlingslott.",
+    "suggestedPrefix": "Föreslagen",
+    "remindersAdded": "{count} gödselpåminnelser tillagda till kommande uppgifter",
+    "remindersAlreadyExist": "Alla föreslagna påminnelser finns redan för denna odling",
     "reminderTitle": "Påminnelse",
     "reminderTitlePh": "t.ex. Applicera andra ureagivan",
     "dueDate": "Förfallodatum",
@@ -554,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Gödselbibliotek — NPK-sammansättning, användning & dosvägledning",
-    "metaDescription": "Etikettkorrekta NPK-sammansättningar, fördelar, försiktighetsåtgärder och spridningsvägledning för urea, DAP, MOP, SSP, SOP med mera."
+    "metaDescription": "Etikettkorrekta NPK-sammansättningar, fördelar, försiktighetsåtgärder och spridningsvägledning för urea, DAP, MOP, SSP, SOP med mera.",
+    "libraryEyebrow": "Gödselbibliotek",
+    "libraryTitle": "Vet vad som finns i säcken.",
+    "libraryDesc": "Mineralgödsel har exakta etikettprocentsatser — siffrorna som dosberäknaren arbetar med. Organiska material har typiska intervall från publicerade rådgivningskällor, eftersom inga två partier är lika.",
+    "tabAll": "Alla",
+    "tabMineral": "Mineralisk",
+    "tabOrganic": "Organisk",
+    "typeMineral": "Mineralisk",
+    "typeOrganic": "Organisk",
+    "typicalRangeLabel": "Typiskt intervall",
+    "organicHubCta": "Vad är organiska gödselmedel? Läs guiden →",
+    "detail": {
+      "categoryManure": "Stallgödsel",
+      "categoryCompost": "Kompost",
+      "categoryGreenManure": "Gröngödsling",
+      "caveatTitle": "Varför ett intervall, inte ett tal",
+      "sourceLabel": "Källa till intervallet"
+    },
+    "organic": {
+      "metaTitle": "Organiska gödselmedel — Typer, näringsintervall & ärliga begränsningar",
+      "metaDescription": "Stallgödsel, kompost, maskkompost och gröngödsling: typiska NPK-intervall från rådgivningskällor, hur organiskt skiljer sig från mineralgödsel, och deras verkliga begränsningar.",
+      "eyebrow": "Organiska gödselmedel",
+      "title": "Långsamt, varierande — och ärligt med det.",
+      "intro": "Organiska gödselmedel är växt- och djurrester som frigör näringsämnen när de bryts ner. De bygger jorden, men är utspädda och ojämna jämfört med mineralgödsel. Den här sidan ger dig typiska näringsintervall från publicerade rådgivningskällor, och de begränsningar som ingen bör hoppa över.",
+      "whatTitle": "Vad organiska gödselmedel är",
+      "whatBody1": "Gödsel är växt- och djurrester som används som källor till växtnäring; de frigör dessa näringsämnen efter nedbrytning (TNAU). De mest använda skrymmande organiska gödselmedlen är stallgödsel (FYM), kompost och gröngödsling. En andra grupp — koncentrerade organiska gödselmedel som oljekakor, blodmjöl och benmjöl — bär mer näring per kilogram men ligger ändå långt under mineralkoncentrationer.",
+      "whatBody2": "Det definierande draget hos organiskt är variabiliteten: samma material från två gårdar kan skilja sig flera gånger i näringsinnehåll beroende på råvara, beredning och lagring. Därför visar det här biblioteket intervall, aldrig enskilda etikettvärden, för organiska material.",
+      "typesTitle": "De fyra materialen i det här biblioteket",
+      "typesIntro": "Varje kort visar det typiska N–P₂O₅–K₂O-procentintervallet från publicerade rådgivningskällor. Ditt parti kommer att skilja sig — det här är utgångspunkter, inte garantier.",
+      "compareTitle": "Hur organiskt skiljer sig från mineralgödsel",
+      "compareIntro": "Ingen sida är »alltid bättre«. De gör olika jobb:",
+      "compareRows": [
+        {
+          "aspect": "Näringstäthet",
+          "mineral": "Hög och exakt — urea är 46 % N, tryckt på säcken.",
+          "organic": "Låg och varierande — stallgödsel är ungefär 0,5–1,0 % N, och varje stack skiljer sig."
+        },
+        {
+          "aspect": "Frigöringshastighet",
+          "mineral": "Snabb — näringsämnena är vattenlösliga och tillgängliga inom dagar.",
+          "organic": "Långsam — mikroberna måste mineralisera dem först; endast ~30 % av stallgödselns kväve når den första grödan (TNAU)."
+        },
+        {
+          "aspect": "Doseringsprecision",
+          "mineral": "Precis — beräknaren kan dosera ner till kilot.",
+          "organic": "Ungefärlig utan laboratorieanalys av just ditt parti."
+        },
+        {
+          "aspect": "Jordeffekter",
+          "mineral": "Liten direkt effekt på jordstruktur eller organiskt material.",
+          "organic": "Förbättrar struktur, vattenhållande förmåga och mikrobiell aktivitet."
+        },
+        {
+          "aspect": "Logistik",
+          "mineral": "Koncentrerad — några säckar per acre.",
+          "organic": "Skrymmande — ton per hektar att flytta, sprida och mylla ner."
+        },
+        {
+          "aspect": "Efterverkan",
+          "mineral": "Tas mestadels upp eller förloras inom säsongen.",
+          "organic": "Lång — matar efterföljande grödor medan nedbrytningen pågår."
+        }
+      ],
+      "usesTitle": "Där organiskt är vettigt",
+      "usesIntro": "Lämpliga användningar, rakt på sak:",
+      "uses": [
+        "Bygga jordens organiska material och struktur över säsongerna — deras starkaste roll.",
+        "Basjordförbättring före sådd, särskilt på degraderade eller sandiga jordar.",
+        "Integrerad växtnäring: organiskt för jordhälsa plus mineralgödsel för precis grödnäring.",
+        "Plantskolor, grönsaker och högvärdiga grödor där jordbiologin lönar sig snabbast.",
+        "Gröngödsling före planterat ris, där dhaincha kan tillföra 130–185 kg N/ha biologiskt fixerat kväve."
+      ],
+      "limitsTitle": "Begränsningar — läs innan du förlitar dig på dem",
+      "limitsIntro": "Vad organiskt inte kan:",
+      "limits": [
+        "Låg näringstäthet: att matcha 100 kg N/ha med stallgödsel kräver 10–20 ton per hektar.",
+        "Varierande sammansättning: publicerade intervall spänner 2–3× inom ett och samma material; precis är bara laboratorieanalysen av ditt parti.",
+        "Långsam frigörning: näringsämnena kommer över månader, inte dagar — de kan inte rädda en brist mitt i säsongen.",
+        "Volym och arbete: ton att transportera, sprida och mylla ner, mot säckar med mineralgödsel.",
+        "Kvalitetsrisker: ogräsfrön och patogener i dåligt komposterat material; möjliga föroreningar i kommunal kompost.",
+        "Ingen direkt ersättning: »gödsel i stället för gödning« fungerar bara som partiell ersättning inom en planerad näringsbudget — aldrig som ett okvalificerat påstående."
+      ],
+      "warnTitle": "Varningar för användning av beräknaren",
+      "warnBody": "Beräknarens organiska avsnitt kör ren aritmetik på siffror som DU anger (din laboratorierapport eller leverantörens etikett). Det känner inte till ditt partis verkliga analys och kan inte ta hänsyn till långsam frigörning — betrakta resultatet som en övre gräns för tillförda näringsämnen, inte näringsämnen tillgängliga för denna säsongs gröda. För precis dosering, beställ en laboratorieanalys av ditt faktiska material.",
+      "exploreCta": "Öppna beräknarens organiska avsnitt",
+      "detailCta": "Visa detaljer"
+    }
   },
   "chart": {
     "metaTitle": "Gödseldostabell — NPK-snabbreferens",
@@ -579,5 +836,10 @@
     "signOut": "Logga ut",
     "adminLink": "Öppna adminpanelen",
     "gardenNote": "Din trädgård synkas nu till ditt konto när du är inloggad."
+  },
+  "country": {
+    "selectCountry": "Land",
+    "selectRegion": "Region / provins",
+    "selectedCountry": "Valt land"
   }
 }

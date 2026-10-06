@@ -20,6 +20,7 @@
       "areaPlaceholder": "cth. 5",
       "crop": "Tanaman",
       "cropHint": "Hanya tanaman dengan rekomendasi terverifikasi yang bisa dipilih.",
+      "cropSearchPlaceholder": "Ketik untuk mencari tanaman…",
       "inReview": "data sedang ditinjau",
       "soil": "Jenis tanah (opsional)",
       "soilHint": "Jenis tanah tidak mengubah hitungan — tapi mengubah sarannya. Tanah berpasir melarutkan nitrogen lebih cepat; tanah salin perlu hati-hati dengan MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Sumber data:",
       "total": "Total pupuk",
       "kgUnit": "kg",
+      "unitToggleLabel": "Satuan tampilan",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Hanya tampilan — perhitungan tersimpan Anda tetap dalam kg.",
+      "splitTitle": "Jadwal dosis bertahap",
+      "splitGenericBadge": "Jadwal umum",
       "recommendedLine": "Dianjurkan {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "Anda memilih \"{soil}\". Pada tanah {soilLower}, pertimbangkan uji tanah sebelum mengubah dosis — perhitungan dasar di atas tetap sama."
     },
     "title": "Dosis pupuk yang tepat, lengkap dengan hitungannya.",
+    "soilTestCard": {
+      "eyebrow": "Uji tanah?",
+      "title": "Punya hasil uji tanah? Dapatkan dosis yang presisi.",
+      "desc": "Masukkan P dan K tersedia, karbon organik, dan pH dari kartu kesehatan tanah Anda — alat ini menaikkan hara rendah, mempertahankan yang sedang, dan menurunkan yang tinggi.",
+      "cta": "Buka kalkulator uji tanah →"
+    },
     "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
     "metaDescription": "Hitung dosis Urea, DAP, dan MOP yang tepat untuk gandum, padi, dan jagung. Masukkan luas dalam acre, kanal, marla, atau hectare — lihat setiap langkah perhitungan.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Mengapa beberapa tanaman tidak bisa dipilih?",
         "a": "Tanaman hanya bisa dipilih jika dosis NPK yang dianjurkan sudah terverifikasi terhadap sumber yang dipublikasikan. Kami lebih memilih menonaktifkan tanaman daripada mengarang angkanya — tanaman yang belum terverifikasi ditandai \"data sedang ditinjau\" hingga terkonfirmasi."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Kontribusi bahan organik — analisis Anda sendiri",
+      "desc": "Masukkan persentase N / P₂O₅ / K₂O dari laporan lab atau label pemasok Anda, plus takaran aplikasi Anda. Ini aritmetika murni atas input Anda: aplikasi ini tidak menyimpan data hara organiknya sendiri.",
+      "materialLabel": "Bahan",
+      "customOption": "Bahan kustom — saya akan memasukkan nilai sendiri",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Takaran aplikasi",
+      "rateUnit": "t/ha",
+      "rangeHint": "Kisaran umum yang dipublikasikan untuk {name}: {range}. Batch Anda mungkin berbeda — masukkan nilai lab Anda.",
+      "noRangeHint": "Tidak ada kisaran yang dipublikasikan untuk bahan ini — masukkan nilai lab atau label Anda.",
+      "resultsTitle": "Hara yang diaplikasikan",
+      "formulaLabel": "Rumus",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Masukkan persentase dan takaran di atas untuk melihat kontribusi.",
+      "warnTitle": "Baca ini sebelum mempercayai angka-angka",
+      "warnBody": "Bahan organik berbeda-beda tiap batch — bahan baku, penyiapan, dan penyimpanan mengubah analisis. Kisaran yang dipublikasikan bukanlah analisis batch Anda. Nitrogen organik juga terlepas perlahan (hanya ~30% nitrogen pupuk kandang mencapai tanaman pertama, menurut TNAU), jadi anggap hasilnya sebagai hara yang diaplikasikan, bukan hara yang tersedia musim ini. Untuk presisi, mintakan analisis lab bahan aktual Anda.",
+      "dismiss": "Tutup",
+      "resultN": "Nitrogen (N)",
+      "resultP": "Fosfat (P₂O₅)",
+      "resultK": "Kalium (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Beralih ke mode gelap",
@@ -94,6 +132,107 @@
     "title": "Pertanyaan yang sering ditanyakan petani",
     "metaTitle": "FAQ — Pertanyaan & Jawaban Fertilizer Dose",
     "metaDescription": "Jawaban tentang perhitungan dosis pupuk, rumus NPK, satuan acre/kanal/marla, sumber data, dan Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Kalkulator uji tanah",
+    "title": "Sesuaikan dosis Anda dengan uji tanah Anda.",
+    "desc": "Masukkan hasil uji tanah Anda — P dan K tersedia, karbon organik, dan pH — dan dosis tanaman terverifikasi akan disesuaikan naik atau turun: naikkan hara rendah, pertahankan yang sedang, turunkan yang tinggi.",
+    "metaTitle": "Kalkulator Dosis Pupuk Berbasis Uji Tanah — Sesuaikan NPK dengan Uji Tanah Anda",
+    "metaDescription": "Kalkulator dosis pupuk berbasis uji tanah: masukkan P, K tersedia, karbon organik, dan pH untuk menyesuaikan rekomendasi NPK terverifikasi tanaman apa pun — naikkan hara rendah, turunkan yang tinggi.",
+    "empty": {
+      "title": "Dosis yang disesuaikan akan muncul di sini",
+      "desc": "Pilih tanaman, masukkan nilai uji tanah Anda, dan tekan hitung. Setiap langkah penyesuaian ditampilkan."
+    },
+    "form": {
+      "crop": "Tanaman",
+      "cropHint": "Hanya tanaman dengan rekomendasi terverifikasi yang dapat dipilih. Pilih “Dosis dasar kustom” untuk memasukkan NPK Anda sendiri.",
+      "cropSearchPlaceholder": "Ketik untuk mencari tanaman…",
+      "inReview": "data sedang ditinjau",
+      "custom": "Dosis dasar kustom (umum)",
+      "area": "Luas lahan",
+      "unit": "Satuan",
+      "areaError": "Masukkan luas lahan yang valid dan lebih besar dari nol.",
+      "areaLargeError": "Luasnya terlihat sangat besar — mohon periksa kembali nilai dan satuannya.",
+      "phRangeError": "pH tanah harus antara 0 dan 14.",
+      "negativeError": "Nilai tidak boleh negatif — periksa entri Anda.",
+      "baseN": "Nitrogen dasar (N)",
+      "baseP": "Fosfor dasar (P₂O₅)",
+      "baseK": "Kalium dasar (K₂O)",
+      "baseHint": "Hanya panduan umum — ini bukan rekomendasi terverifikasi. Masukkan kg/ha.",
+      "noVerified": "Belum ada rekomendasi terverifikasi untuk {crop} di wilayah Anda. Masukkan dosis dasar kustom di bawah, atau pilih tanaman terverifikasi.",
+      "phosphorus": "Fosfor tersedia (Olsen P)",
+      "potassium": "Kalium tersedia (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Karbon organik (%)",
+      "ph": "pH tanah",
+      "optional": "opsional",
+      "nProxyNote": "Lab tanah jarang melaporkan kelas nitrogen, sehingga karbon organik digunakan sebagai proksi kemampuan tanah Anda memasok nitrogen.",
+      "submit": "Sesuaikan dosis",
+      "soilTestHint": "Dari kartu kesehatan tanah atau laporan lab Anda. Kosongkan nilai yang tidak Anda miliki — hara tersebut mempertahankan dosis dasarnya."
+    },
+    "results": {
+      "title": "Dosis yang disesuaikan uji tanah",
+      "adjustedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha disesuaikan · {region}",
+      "baseLine": "Dasar {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Rendah",
+      "medium": "Sedang",
+      "high": "Tinggi",
+      "notRated": "Tidak dinilai",
+      "acidic": "Masam",
+      "neutral": "Netral",
+      "alkaline": "Alkalis",
+      "ratingP": "Fosfor",
+      "ratingK": "Kalium",
+      "ratingN": "Nitrogen (via karbon organik)",
+      "phLabel": "Kelas pH",
+      "phFixation": "Tanah alkalis (pH di atas 7,5): fosfor dapat terfiksasi sebagai kalsium/magnesium fosfat. Berikan seluruh dosis P berbaris dekat benih saat tanam — dosis yang disesuaikan di atas tetap sama.",
+      "buildUp": "+30% naikkan",
+      "maintenance": "Pertahankan",
+      "drawdown": "−25% turunkan",
+      "notRatedNote": "Tidak ada nilai uji — dosis dasar dipertahankan",
+      "kgUnit": "kg",
+      "bags": "× karung 50 kg",
+      "total": "Total pupuk",
+      "basisTitle": "Mengapa angka-angka ini",
+      "basis": [
+        "Penilaian mengikuti kelas laboratorium uji tanah India / Kartu Kesehatan Tanah: P (Olsen) rendah <10, sedang 10–25, tinggi >25 mg/kg; K (NH₄OAc) rendah <120, sedang 120–280, tinggi >280 kg/ha; karbon organik rendah <0,5, sedang 0,5–0,75, tinggi >0,75%.",
+        "ppm dan kg/ha dikonversi dengan faktor irisan alur standar ×2,24 (≈2,24 juta kg tanah per hektar).",
+        "Hara kelas rendah mendapat +30% (naikkan), sedang tetap pada dasar (pertahankan), tinggi −25% (turunkan). Pita ini adalah estimasi perencanaan bersifat saran, bukan nilai kritis yang dipublikasikan.",
+        "Karbon organik adalah proksi kemampuan memasok nitrogen, bukan nilai N terukur — sebagian besar lab tanah tidak melaporkan kelas nitrogen.",
+        "pH tidak mengubah dosis; hanya menandai risiko penempatan. Tanah alkalis memfiksasi fosfor — penempatan berbaris lebih penting dari sebelumnya."
+      ],
+      "sourceLabel": "Sumber data:",
+      "genericLabel": "Dasar kustom (hanya panduan umum — bukan rekomendasi terverifikasi)",
+      "disclaimer": "Semua dosis adalah estimasi. Konfirmasikan dengan agronomis setempat / petugas penyuluh pertanian Anda sebelum mengaplikasikan pupuk."
+    },
+    "method": {
+      "eyebrow": "Metode",
+      "title": "Metodenya, dijelaskan sederhana",
+      "desc": "Naikkan, pertahankan, turunkan — logika yang sama dipakai lab tanah pada kartu kesehatan."
+    },
+    "methodFaq": [
+      {
+        "q": "Apa itu dosis pupuk berbasis uji tanah?",
+        "a": "Rekomendasi umum mengasumsikan tanah rata-rata. Uji tanah memberi tahu apa yang sudah ada di lahan Anda: jika fosfor tinggi, Anda bisa memangkas dosis P dan menghemat biaya; jika rendah, naikkan untuk membangun kesuburan tanah. Alat ini berangkat dari rekomendasi tanaman terverifikasi dan menerapkan logika yang persis sama — +30% untuk hara kelas rendah, dasar untuk sedang, −25% untuk tinggi."
+      },
+      {
+        "q": "Nilai uji tanah apa yang saya butuhkan?",
+        "a": "Fosfor tersedia (metode Olsen, mg/kg atau ppm), kalium tersedia (metode amonium asetat, kg/ha atau ppm), karbon organik (%), dan pH — empat nilai pada kartu kesehatan tanah standar. Anda dapat memasukkan P dan K dalam salah satu satuan; alat ini mengonversi dengan faktor irisan alur standar (×2,24)."
+      },
+      {
+        "q": "Mengapa nitrogen dinilai dari karbon organik?",
+        "a": "Lab tanah rutin jarang melaporkan kelas nitrogen mineral, sehingga sistem penyuluhan memakai karbon organik sebagai proksi kemampuan asli tanah memasok nitrogen: makin banyak karbon organik, makin banyak nitrogen termineralisasi selama musim. Ini proksi yang mapan, tetapi bukan nilai N terukur — hasilnya diberi label demikian."
+      },
+      {
+        "q": "Apakah pH alkalis mengubah dosis saya?",
+        "a": "Tidak — pH tidak pernah mengubah dosis yang dihitung di sini. Di atas pH 7,5, fosfor makin mengendap sebagai kalsium dan magnesium fosfat (fiksasi P), sehingga penempatan penting: berikan seluruh dosis fosfor berbaris dekat benih saat tanam, bukan disebar. Alat ini menandainya sebagai catatan, bukan perubahan dosis."
+      },
+      {
+        "q": "Kapan saya sebaiknya tidak memakai dosis dasar kustom?",
+        "a": "Opsi dasar kustom hanyalah panduan umum — titik awal untuk tanaman tanpa rekomendasi terverifikasi di basis data kami. Jika ada dosis tanaman×wilayah terverifikasi, selalu gunakan itu; angka terverifikasi menyertakan sumber yang dipublikasikan."
+      }
+    ]
   },
   "footer": {
     "company": "Perusahaan",
@@ -313,6 +452,7 @@
     "myGarden": "Kebunku",
     "tools": "Perkakas",
     "profitCalculator": "Kalkulator Keuntungan",
+    "soilTestCalculator": "Kalkulator Uji Tanah",
     "compare": "Bandingkan",
     "login": "Masuk",
     "account": "Akun",
@@ -367,7 +507,13 @@
       "plantsTitle": "Tanaman untuk setiap jenis kebun.",
       "vegetablesTitle": "Sayuran, dari ladang hingga kebun dapur."
     },
-    "subcategoryAll": "Semua jenis"
+    "subcategoryAll": "Semua jenis",
+    "filterCountry": "Negara",
+    "filterRegion": "Wilayah",
+    "filterMonth": "Bulan tanam",
+    "anyMonth": "Bulan apa pun",
+    "allCountries": "Semua negara",
+    "allRegions": "Semua wilayah"
   },
   "calendar": {
     "metaTitle": "Kalender Tanam — Apa yang Ditanam Bulan Ini",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Masa panen",
     "activityLAND_PREPARATION": "Siapkan lahan",
     "viewGuide": "Lihat panduan budidaya",
+    "emptyRegionTitle": "Belum ada informasi tanam terverifikasi untuk wilayah ini.",
     "plantingWindow": "Jendela tanam",
-    "appliesTo": "Berlaku untuk",
-    "emptyRegionTitle": "Belum ada informasi tanam terverifikasi untuk wilayah ini."
+    "appliesTo": "Berlaku untuk"
   },
   "garden": {
     "metaTitle": "Kebunku — Pantau Petak, Penanaman & Rencana Pupuk",
@@ -469,6 +615,11 @@
     "markDone": "Tandai selesai",
     "reopen": "Buka kembali",
     "addReminder": "Tambah pengingat",
+    "generateFertilizerReminders": "Buat pengingat pupuk",
+    "fertilizerReminderNote": "Waktu umum yang disarankan dari praktik dosis bertahap standar — bukan resep agronomi untuk petak Anda.",
+    "suggestedPrefix": "Disarankan",
+    "remindersAdded": "{count} pengingat pupuk ditambahkan ke tugas mendatang",
+    "remindersAlreadyExist": "Semua pengingat yang disarankan sudah ada untuk penanaman ini",
     "reminderTitle": "Pengingat",
     "reminderTitlePh": "cth. Beri susulan Urea kedua",
     "dueDate": "Tenggat",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Pustaka Pupuk — Komposisi NPK, Kegunaan & Panduan Dosis",
-    "metaDescription": "Komposisi NPK akurat sesuai label, manfaat, tindakan pencegahan, dan panduan aplikasi untuk Urea, DAP, MOP, SSP, SOP, dan lainnya."
+    "metaDescription": "Komposisi NPK akurat sesuai label, manfaat, tindakan pencegahan, dan panduan aplikasi untuk Urea, DAP, MOP, SSP, SOP, dan lainnya.",
+    "libraryEyebrow": "Pustaka pupuk",
+    "libraryTitle": "Ketahui isi karungnya.",
+    "libraryDesc": "Pupuk mineral mencantumkan persentase label yang tepat — angka-angka yang dipakai kalkulator dosis. Bahan organik mencantumkan kisaran umum dari sumber penyuluhan yang dipublikasikan, karena tidak ada dua batch yang sama.",
+    "tabAll": "Semua",
+    "tabMineral": "Mineral",
+    "tabOrganic": "Organik",
+    "typeMineral": "Mineral",
+    "typeOrganic": "Organik",
+    "typicalRangeLabel": "Kisaran umum",
+    "organicHubCta": "Apa itu pupuk organik? Baca panduannya →",
+    "detail": {
+      "categoryManure": "Pupuk kandang",
+      "categoryCompost": "Kompos",
+      "categoryGreenManure": "Pupuk hijau",
+      "caveatTitle": "Mengapa kisaran, bukan angka",
+      "sourceLabel": "Sumber kisaran"
+    },
+    "organic": {
+      "metaTitle": "Pupuk Organik — Jenis, Kisaran Hara & Keterbatasan Jujur",
+      "metaDescription": "Pupuk kandang, kompos, vermikompos, dan pupuk hijau: kisaran NPK umum dari sumber penyuluhan, bagaimana organik berbeda dari pupuk mineral, dan keterbatasan nyatanya.",
+      "eyebrow": "Pupuk organik",
+      "title": "Lambat, berubah-ubah — dan jujur soal itu.",
+      "intro": "Pupuk organik adalah limbah tumbuhan dan hewan yang melepaskan hara saat terurai. Mereka membangun tanah, tetapi encer dan tidak konsisten dibanding pupuk mineral. Halaman ini memberi Anda kisaran hara umum dari sumber penyuluhan yang dipublikasikan, dan keterbatasan yang tak boleh dilewatkan siapa pun.",
+      "whatTitle": "Apa itu pupuk organik",
+      "whatBody1": "Pupuk kandang adalah limbah tumbuhan dan hewan yang dipakai sebagai sumber hara tanaman; mereka melepaskan hara itu setelah penguraian (TNAU). Pupuk organik curah yang paling banyak dipakai adalah pupuk kandang (FYM), kompos, dan pupuk hijau. Kelompok kedua — pupuk organik pekat seperti bungkil, tepung darah, dan tepung tulang — membawa lebih banyak hara per kilogram tetapi masih jauh di bawah konsentrasi mineral.",
+      "whatBody2": "Ciri khas organik adalah keberagaman: bahan yang sama dari dua peternakan bisa berbeda beberapa kali lipat dalam kandungan hara tergantung bahan baku, penyiapan, dan penyimpanan. Karena itu pustaka ini menunjukkan kisaran, bukan nilai label tunggal, untuk bahan organik.",
+      "typesTitle": "Empat bahan di pustaka ini",
+      "typesIntro": "Setiap kartu menunjukkan kisaran persentase N–P₂O₅–K₂O umum dari sumber penyuluhan yang dipublikasikan. Batch Anda akan berbeda — ini titik awal, bukan jaminan.",
+      "compareTitle": "Bagaimana organik berbeda dari pupuk mineral",
+      "compareIntro": "Tidak ada pihak yang ‘selalu lebih baik’. Tugas mereka berbeda:",
+      "compareRows": [
+        {
+          "aspect": "Kepadatan hara",
+          "mineral": "Tinggi dan tepat — urea itu 46% N, tercetak di karung.",
+          "organic": "Rendah dan berubah-ubah — pupuk kandang kira-kira 0,5–1,0% N, dan setiap tumpukan berbeda."
+        },
+        {
+          "aspect": "Kecepatan pelepasan",
+          "mineral": "Cepat — hara larut air dan tersedia dalam hitungan hari.",
+          "organic": "Lambat — mikroba harus memineralkannya dulu; hanya ~30% nitrogen pupuk kandang mencapai tanaman pertama (TNAU)."
+        },
+        {
+          "aspect": "Presisi dosis",
+          "mineral": "Presisi — kalkulator bisa memberi dosis hingga kilogram.",
+          "organic": "Perkiraan tanpa analisis lab batch khusus Anda."
+        },
+        {
+          "aspect": "Efek pada tanah",
+          "mineral": "Sedikit efek langsung pada struktur tanah atau bahan organik.",
+          "organic": "Memperbaiki struktur, daya simpan air, dan aktivitas mikroba."
+        },
+        {
+          "aspect": "Logistik",
+          "mineral": "Pekat — beberapa karung per acre.",
+          "organic": "Curah — berton-ton per hektar untuk dipindah, disebar, dan dicampur."
+        },
+        {
+          "aspect": "Efek residu",
+          "mineral": "Sebagian besar terserap atau hilang dalam semusim.",
+          "organic": "Panjang — memberi makan tanaman berikutnya selama penguraian berlanjut."
+        }
+      ],
+      "usesTitle": "Di mana organik masuk akal",
+      "usesIntro": "Penggunaan yang tepat, dinyatakan lugas:",
+      "uses": [
+        "Membangun bahan organik dan struktur tanah lintas musim — peran terkuat mereka.",
+        "Pembenahan tanah basal sebelum tanam, terutama pada tanah terdegradasi atau berpasir.",
+        "Pengelolaan hara terpadu: organik untuk kesehatan tanah plus pupuk mineral untuk nutrisi tanaman yang presisi.",
+        "Persemaian, sayuran, dan tanaman bernilai tinggi di mana biologi tanah paling cepat terbayar.",
+        "Pupuk hijau sebelum padi tanam-pindah, di mana dhaincha dapat menambah 130–185 kg N/ha nitrogen yang difiksasi secara biologis."
+      ],
+      "limitsTitle": "Keterbatasan — baca sebelum mengandalkannya",
+      "limitsIntro": "Yang tidak bisa dilakukan organik:",
+      "limits": [
+        "Kepadatan hara rendah: menyamai 100 kg N/ha dengan pupuk kandang butuh 10–20 ton per hektar.",
+        "Komposisi berubah-ubah: kisaran yang dipublikasikan merentang 2–3× dalam satu bahan; yang presisi hanyalah analisis lab batch Anda.",
+        "Pelepasan lambat: hara datang dalam hitungan bulan, bukan hari — tidak bisa menyelamatkan defisiensi tengah musim.",
+        "Curah dan tenaga: berton-ton untuk diangkut, disebar, dan dicampur, versus karung pupuk mineral.",
+        "Risiko kualitas: biji gulma dan patogen dalam bahan yang kurang terkomposkan; kemungkinan kontaminan dalam kompos kota.",
+        "Bukan pengganti langsung: ‘pupuk kandang pengganti pupuk’ hanya bekerja sebagai substitusi sebagian dalam anggaran hara terencana — bukan sebagai klaim tanpa syarat."
+      ],
+      "warnTitle": "Peringatan untuk penggunaan kalkulator",
+      "warnBody": "Bagian organik kalkulator menjalankan aritmetika murni atas angka yang ANDA masukkan (laporan lab atau label pemasok Anda). Ia tidak tahu analisis aktual batch Anda, dan tidak dapat memperhitungkan pelepasan lambat — anggap hasilnya sebagai batas atas hara yang diaplikasikan, bukan hara yang tersedia bagi tanaman musim ini. Untuk dosis presisi, mintakan analisis lab bahan aktual Anda.",
+      "exploreCta": "Buka bagian organik kalkulator",
+      "detailCta": "Lihat detail"
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose — Bagan Dosis Pupuk & Referensi Cepat NPK",

@@ -20,6 +20,7 @@
       "areaPlaceholder": "p. ex. 5",
       "crop": "Culture",
       "cropHint": "Seules les cultures avec des recommandations vérifiées sont sélectionnables.",
+      "cropSearchPlaceholder": "Tapez pour rechercher des cultures…",
       "inReview": "données en cours de vérification",
       "soil": "Type de sol (facultatif)",
       "soilHint": "Le type de sol ne change pas le calcul — il change le conseil. Les sols sableux perdent l’azote plus vite par lessivage ; les sols salins exigent de la prudence avec le MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Source des données :",
       "total": "Engrais total",
       "kgUnit": "kg",
+      "unitToggleLabel": "Unités d’affichage",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Affichage uniquement — votre calcul enregistré reste en kg.",
+      "splitTitle": "Calendrier de dose fractionnée",
+      "splitGenericBadge": "Calendrier générique",
       "recommendedLine": "Recommandé : {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "Vous avez sélectionné « {soil} ». Sur les sols {soilLower}, envisagez une analyse de sol avant de modifier la dose — le calcul de base ci-dessus reste inchangé."
     },
     "title": "Dose d’engrais exacte, calculs à l’appui.",
+    "soilTestCard": {
+      "eyebrow": "Analyse de sol ?",
+      "title": "Vous avez vos résultats d’analyse de sol ? Obtenez une dose précise.",
+      "desc": "Saisissez le P et le K disponibles, le carbone organique et le pH de votre carte de santé du sol — l’outil augmente les nutriments faibles, maintient les moyens et réduit les élevés.",
+      "cta": "Ouvrir le calculateur d’analyse de sol →"
+    },
     "metaTitle": "Calculateur de dose d’engrais — Urea, DAP et MOP par acre/kanal/marla",
     "metaDescription": "Calculez les doses exactes d’urea, de DAP et de MOP pour le blé, le riz et le maïs. Saisissez la superficie en acre, kanal, marla ou hectare — voyez chaque étape du calcul.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Pourquoi certaines cultures sont-elles désactivées ?",
         "a": "Une culture n’est sélectionnable que lorsque sa dose de NPK recommandée est vérifiée auprès d’une source publiée. Nous préférons désactiver une culture plutôt qu’inventer ses chiffres — les cultures non vérifiées sont marquées « données en cours de vérification » jusqu’à confirmation."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Apport du matériau organique — votre propre analyse",
+      "desc": "Saisissez les pourcentages N / P₂O₅ / K₂O de votre rapport de laboratoire ou de l’étiquette du fournisseur, plus votre dose d’application. C’est de la pure arithmétique sur vos données : l’app n’a aucune donnée propre sur les nutriments organiques.",
+      "materialLabel": "Matière",
+      "customOption": "Matière personnalisée — je saisirai mes propres valeurs",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Dose d’application",
+      "rateUnit": "t/ha",
+      "rangeHint": "Plage typique publiée pour {name} : {range}. Votre lot peut différer — saisissez votre valeur de laboratoire.",
+      "noRangeHint": "Aucune plage publiée pour cette matière — saisissez vos valeurs de laboratoire ou d’étiquette.",
+      "resultsTitle": "Nutriments apportés",
+      "formulaLabel": "Formule",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Saisissez des pourcentages et une dose ci-dessus pour voir l’apport.",
+      "warnTitle": "Lisez ceci avant de croire les chiffres",
+      "warnBody": "Les matières organiques varient d’un lot à l’autre — la matière première, la préparation et le stockage changent l’analyse. Les plages publiées ne sont pas l’analyse de votre lot. L’azote organique se libère aussi lentement (seulement ~30 % de l’azote du fumier parvient à la première culture, selon TNAU) : considérez le résultat comme des nutriments apportés, pas comme des nutriments disponibles cette campagne. Pour la précision, faites analyser votre matériau réel en laboratoire.",
+      "dismiss": "Ignorer",
+      "resultN": "Azote (N)",
+      "resultP": "Phosphate (P₂O₅)",
+      "resultK": "Potasse (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Passer en mode sombre",
@@ -94,6 +132,107 @@
     "title": "Les questions que les agriculteurs nous posent",
     "metaTitle": "FAQ — Réponses aux questions sur Fertilizer Dose",
     "metaDescription": "Réponses sur le calcul des doses d’engrais, les formules NPK, les unités acre/kanal/marla, les sources de données et le Docteur des plantes."
+  },
+  "soilTest": {
+    "eyebrow": "Calculateur d’analyse de sol",
+    "title": "Ajustez votre dose à votre analyse de sol.",
+    "desc": "Saisissez vos résultats d’analyse de sol — P et K disponibles, carbone organique et pH — et une dose vérifiée de la culture sera ajustée à la hausse ou à la baisse : augmentez les nutriments faibles, maintenez les moyens, réduisez les élevés.",
+    "metaTitle": "Calculateur de dose d’engrais basé sur l’analyse de sol — Ajustez le NPK à votre analyse",
+    "metaDescription": "Calculateur de dose d’engrais basé sur l’analyse de sol : saisissez le P, le K disponibles, le carbone organique et le pH pour ajuster la recommandation NPK vérifiée de n’importe quelle culture — augmentez les nutriments faibles, réduisez les élevés.",
+    "empty": {
+      "title": "Votre dose ajustée apparaîtra ici",
+      "desc": "Choisissez une culture, saisissez vos valeurs d’analyse de sol et lancez le calcul. Chaque étape d’ajustement est affichée."
+    },
+    "form": {
+      "crop": "Culture",
+      "cropHint": "Seules les cultures avec des recommandations vérifiées sont sélectionnables. Choisissez « Dose de base personnalisée » pour saisir votre propre NPK.",
+      "cropSearchPlaceholder": "Tapez pour rechercher des cultures…",
+      "inReview": "données en cours de vérification",
+      "custom": "Dose de base personnalisée (générique)",
+      "area": "Superficie",
+      "unit": "Unité",
+      "areaError": "Veuillez saisir une superficie valide, supérieure à zéro.",
+      "areaLargeError": "Cette superficie semble inhabituellement grande — veuillez vérifier la valeur et l’unité.",
+      "phRangeError": "Le pH du sol doit être compris entre 0 et 14.",
+      "negativeError": "Les valeurs ne peuvent pas être négatives — vérifiez vos saisies.",
+      "baseN": "Azote de base (N)",
+      "baseP": "Phosphore de base (P₂O₅)",
+      "baseK": "Potassium de base (K₂O)",
+      "baseHint": "Orientation générique uniquement — ce n’est pas une recommandation vérifiée. Saisissez en kg/ha.",
+      "noVerified": "Pas encore de recommandation vérifiée pour {crop} dans votre région. Saisissez une dose de base personnalisée ci-dessous, ou choisissez une culture vérifiée.",
+      "phosphorus": "Phosphore disponible (Olsen P)",
+      "potassium": "Potassium disponible (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Carbone organique (%)",
+      "ph": "pH du sol",
+      "optional": "facultatif",
+      "nProxyNote": "Les laboratoires de sols indiquent rarement une classe d’azote, c’est pourquoi le carbone organique sert d’indicateur de la capacité de votre sol à fournir de l’azote.",
+      "submit": "Ajuster la dose",
+      "soilTestHint": "D’après votre carte de santé du sol ou votre rapport de laboratoire. Laissez vide toute valeur que vous n’avez pas — ce nutriment conserve sa dose de base."
+    },
+    "results": {
+      "title": "Dose ajustée selon l’analyse de sol",
+      "adjustedLine": "{n}–{p}–{k} kg N–P₂O₅–K₂O/ha ajustés · {region}",
+      "baseLine": "Base {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Faible",
+      "medium": "Moyen",
+      "high": "Élevé",
+      "notRated": "Non classé",
+      "acidic": "Acide",
+      "neutral": "Neutre",
+      "alkaline": "Alcalin",
+      "ratingP": "Phosphore",
+      "ratingK": "Potassium",
+      "ratingN": "Azote (via carbone organique)",
+      "phLabel": "Classe de pH",
+      "phFixation": "Sol alcalin (pH supérieur à 7,5) : le phosphore peut se fixer sous forme de phosphates de calcium/magnésium. Appliquez en bande toute la dose de P près de la semence au semis — la dose ajustée ci-dessus ne change pas.",
+      "buildUp": "+30 % augmenter",
+      "maintenance": "Maintenir",
+      "drawdown": "−25 % réduire",
+      "notRatedNote": "Pas de valeur d’analyse — dose de base conservée",
+      "kgUnit": "kg",
+      "bags": "sacs de 50 kg",
+      "total": "Engrais total",
+      "basisTitle": "Pourquoi ces chiffres",
+      "basis": [
+        "Les classes suivent celles du laboratoire indien d’analyse des sols / de la carte de santé du sol : P (Olsen) faible <10, moyen 10–25, élevé >25 mg/kg ; K (NH₄OAc) faible <120, moyen 120–280, élevé >280 kg/ha ; carbone organique faible <0,5, moyen 0,5–0,75, élevé >0,75 %.",
+        "ppm et kg/ha sont convertis avec le facteur standard de couche arable ×2,24 (≈2,24 millions de kg de sol par hectare).",
+        "Les nutriments de classe faible reçoivent +30 % (augmenter), les moyens restent à la base (maintenir), les élevés −25 % (réduire). Ces bandes sont des estimations de planification indicatives, pas des valeurs critiques publiées.",
+        "Le carbone organique est un indicateur de la capacité à fournir de l’azote, pas une valeur mesurée de N — la plupart des laboratoires de sols n’indiquent pas de classe d’azote.",
+        "Le pH ne change pas la dose ; il signale seulement un risque de placement. Les sols alcalins fixent le phosphore — le placement en bande compte plus que jamais."
+      ],
+      "sourceLabel": "Source des données :",
+      "genericLabel": "Base personnalisée (orientation générique uniquement — pas une recommandation vérifiée)",
+      "disclaimer": "Toutes les doses sont des estimations. Confirmez auprès de votre agronome local / agent de vulgarisation agricole avant d’appliquer de l’engrais."
+    },
+    "method": {
+      "eyebrow": "Méthode",
+      "title": "La méthode, en termes simples",
+      "desc": "Augmenter, maintenir, réduire — la même logique que les laboratoires de sols utilisent sur les cartes de santé."
+    },
+    "methodFaq": [
+      {
+        "q": "Qu’est-ce qu’une dose d’engrais basée sur l’analyse de sol ?",
+        "a": "Une recommandation générale suppose un sol moyen. Une analyse de sol vous dit ce que votre champ contient déjà : si le phosphore est élevé, vous pouvez réduire la dose de P et économiser de l’argent ; s’il est faible, vous l’augmentez pour enrichir le sol. Cet outil part d’une recommandation vérifiée de la culture et applique exactement cette logique : +30 % pour les nutriments de classe faible, base pour les moyens, −25 % pour les élevés."
+      },
+      {
+        "q": "Quelles valeurs d’analyse de sol me faut-il ?",
+        "a": "Phosphore disponible (méthode Olsen, mg/kg ou ppm), potassium disponible (méthode à l’acétate d’ammonium, kg/ha ou ppm), carbone organique (%) et pH — les quatre valeurs d’une carte standard de santé du sol. Vous pouvez saisir P et K dans l’une ou l’autre unité ; l’outil convertit avec le facteur standard de couche arable (×2,24)."
+      },
+      {
+        "q": "Pourquoi l’azote est-il classé à partir du carbone organique ?",
+        "a": "Les laboratoires de sols de routine indiquent rarement une classe d’azote minéral, c’est pourquoi les systèmes de vulgarisation utilisent le carbone organique comme indicateur de la capacité native du sol à fournir de l’azote : plus de carbone organique signifie plus d’azote minéralisé pendant la campagne. C’est un indicateur bien établi, mais pas une valeur mesurée de N — le résultat est étiqueté comme tel."
+      },
+      {
+        "q": "Un pH alcalin change-t-il ma dose ?",
+        "a": "Non — ici le pH ne change jamais la dose calculée. Au-dessus de pH 7,5, le phosphore précipite de plus en plus sous forme de phosphates de calcium et de magnésium (fixation du P) : le placement compte donc. Appliquez en bande toute la dose de phosphore près de la semence au semis au lieu de l’épandre. L’outil le signale comme une note, pas comme un changement de dose."
+      },
+      {
+        "q": "Quand ne pas utiliser la dose de base personnalisée ?",
+        "a": "L’option de base personnalisée est une orientation générique uniquement — un point de départ pour les cultures sans recommandation vérifiée dans notre base. Si une dose vérifiée culture×région existe, utilisez-la toujours à la place ; les chiffres vérifiés portent leur source publiée."
+      }
+    ]
   },
   "footer": {
     "company": "Société",
@@ -313,6 +452,7 @@
     "myGarden": "Mon jardin",
     "tools": "Outils",
     "profitCalculator": "Calculateur de rentabilité",
+    "soilTestCalculator": "Calculateur d’analyse de sol",
     "compare": "Comparer",
     "login": "Se connecter",
     "account": "Compte",
@@ -367,7 +507,13 @@
       "plantsTitle": "Des plantes pour tous les jardins.",
       "vegetablesTitle": "Des légumes, du champ au potager."
     },
-    "subcategoryAll": "Tous types"
+    "subcategoryAll": "Tous types",
+    "filterCountry": "Pays",
+    "filterRegion": "Région",
+    "filterMonth": "Mois de semis",
+    "anyMonth": "N’importe quel mois",
+    "allCountries": "Tous les pays",
+    "allRegions": "Toutes les régions"
   },
   "calendar": {
     "metaTitle": "Calendrier de semis — Que semer ce mois-ci",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Période de récolte",
     "activityLAND_PREPARATION": "Préparer le sol",
     "viewGuide": "Voir le guide de culture",
+    "emptyRegionTitle": "Aucune information de plantation vérifiée n'est encore disponible pour cette région.",
     "plantingWindow": "Période de semis",
-    "appliesTo": "S'applique à",
-    "emptyRegionTitle": "Aucune information de plantation vérifiée n'est encore disponible pour cette région."
+    "appliesTo": "S'applique à"
   },
   "garden": {
     "metaTitle": "Mon jardin — Suivez parcelles, plantations et plans d’engrais",
@@ -469,6 +615,11 @@
     "markDone": "Marquer comme terminé",
     "reopen": "Rouvrir",
     "addReminder": "Ajouter un rappel",
+    "generateFertilizerReminders": "Générer des rappels d’engrais",
+    "fertilizerReminderNote": "Calendrier générique suggéré selon la pratique standard de dose fractionnée — pas une prescription agronomique pour votre parcelle.",
+    "suggestedPrefix": "Suggéré",
+    "remindersAdded": "{count} rappels d’engrais ajoutés aux tâches à venir",
+    "remindersAlreadyExist": "Tous les rappels suggérés existent déjà pour cette plantation",
     "reminderTitle": "Rappel",
     "reminderTitlePh": "p. ex. Appliquer le deuxième apport d’urea",
     "dueDate": "Date d’échéance",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Bibliothèque d’engrais — Composition NPK, usages et conseils de dosage",
-    "metaDescription": "Compositions NPK conformes à l’étiquette, avantages, précautions et conseils d’application pour l’urea, le DAP, le MOP, le SSP, le SOP et plus encore."
+    "metaDescription": "Compositions NPK conformes à l’étiquette, avantages, précautions et conseils d’application pour l’urea, le DAP, le MOP, le SSP, le SOP et plus encore.",
+    "libraryEyebrow": "Bibliothèque d’engrais",
+    "libraryTitle": "Sachez ce qu’il y a dans le sac.",
+    "libraryDesc": "Les engrais minéraux portent des pourcentages exacts sur l’étiquette — les chiffres sur lesquels tourne le calculateur de dose. Les matières organiques portent des plages typiques issues de sources de vulgarisation publiées, car deux lots ne sont jamais identiques.",
+    "tabAll": "Tous",
+    "tabMineral": "Minéral",
+    "tabOrganic": "Organique",
+    "typeMineral": "Minéral",
+    "typeOrganic": "Organique",
+    "typicalRangeLabel": "Plage typique",
+    "organicHubCta": "Que sont les engrais organiques ? Lisez le guide →",
+    "detail": {
+      "categoryManure": "Fumier",
+      "categoryCompost": "Compost",
+      "categoryGreenManure": "Engrais vert",
+      "caveatTitle": "Pourquoi une plage, pas un nombre",
+      "sourceLabel": "Source de la plage"
+    },
+    "organic": {
+      "metaTitle": "Engrais organiques — Types, plages de nutriments et limites honnêtes",
+      "metaDescription": "Fumier de ferme, compost, vermicompost et engrais vert : plages typiques de NPK issues de sources de vulgarisation, en quoi les organiques diffèrent des engrais minéraux, et leurs vraies limites.",
+      "eyebrow": "Engrais organiques",
+      "title": "Lents, variables — et honnêtes à ce sujet.",
+      "intro": "Les engrais organiques sont des déchets végétaux et animaux qui libèrent des nutriments en se décomposant. Ils construisent le sol, mais ils sont dilués et inconstants comparés aux engrais minéraux. Cette page vous donne des plages typiques de nutriments issues de sources de vulgarisation publiées, et les limites que personne ne devrait sauter.",
+      "whatTitle": "Ce que sont les engrais organiques",
+      "whatBody1": "Les fumiers sont des déchets végétaux et animaux utilisés comme sources de nutriments pour les plantes ; ils libèrent ces nutriments après décomposition (TNAU). Les engrais organiques volumineux les plus utilisés sont le fumier de ferme (FYM), le compost et l’engrais vert. Un second groupe — les engrais organiques concentrés comme les tourteaux, la farine de sang et la farine d’os — porte plus de nutriments au kilogramme, mais reste très en dessous des concentrations minérales.",
+      "whatBody2": "Le trait définissant des organiques est la variabilité : une même matière de deux fermes peut différer de plusieurs fois en teneur en nutriments selon la matière première, la préparation et le stockage. C’est pourquoi cette bibliothèque montre des plages, jamais des valeurs uniques d’étiquette, pour les matières organiques.",
+      "typesTitle": "Les quatre matières de cette bibliothèque",
+      "typesIntro": "Chaque carte montre la plage typique de pourcentage N–P₂O₅–K₂O issue de sources de vulgarisation publiées. Votre lot différera — ce sont des points de départ, pas des garanties.",
+      "compareTitle": "En quoi les organiques diffèrent des engrais minéraux",
+      "compareIntro": "Aucun camp n’est « toujours meilleur ». Ils font des métiers différents :",
+      "compareRows": [
+        {
+          "aspect": "Densité en nutriments",
+          "mineral": "Haute et exacte — l’urée c’est 46 % de N, imprimé sur le sac.",
+          "organic": "Faible et variable — le fumier c’est environ 0,5–1,0 % de N, et chaque tas diffère."
+        },
+        {
+          "aspect": "Vitesse de libération",
+          "mineral": "Rapide — les nutriments sont solubles dans l’eau et disponibles en quelques jours.",
+          "organic": "Lente — les microbes doivent d’abord les minéraliser ; seuls ~30 % de l’azote du fumier parviennent à la première culture (TNAU)."
+        },
+        {
+          "aspect": "Précision du dosage",
+          "mineral": "Précise — le calculateur peut doser au kilogramme.",
+          "organic": "Approximative sans analyse de laboratoire de votre lot précis."
+        },
+        {
+          "aspect": "Effets sur le sol",
+          "mineral": "Peu d’effet direct sur la structure du sol ou la matière organique.",
+          "organic": "Améliore la structure, la rétention d’eau et l’activité microbienne."
+        },
+        {
+          "aspect": "Logistique",
+          "mineral": "Concentré — quelques sacs par acre.",
+          "organic": "Volumineux — des tonnes par hectare à déplacer, épandre et incorporer."
+        },
+        {
+          "aspect": "Effet résiduel",
+          "mineral": "Surtout absorbé ou perdu dans la campagne.",
+          "organic": "Long — nourrit les cultures suivantes à mesure que la décomposition continue."
+        }
+      ],
+      "usesTitle": "Où les organiques ont du sens",
+      "usesIntro": "Usages appropriés, dit clairement :",
+      "uses": [
+        "Construire la matière organique et la structure du sol au fil des campagnes — leur rôle le plus fort.",
+        "Amendement basal du sol avant le semis, surtout sur sols dégradés ou sableux.",
+        "Gestion intégrée des nutriments : des organiques pour la santé du sol plus des engrais minéraux pour une nutrition précise de la culture.",
+        "Pépinières, légumes et cultures à haute valeur où la biologie du sol paie le plus vite.",
+        "Engrais vert avant le riz repiqué, où le dhaincha peut ajouter 130–185 kg N/ha d’azote fixé biologiquement."
+      ],
+      "limitsTitle": "Limites — à lire avant de s’y fier",
+      "limitsIntro": "Ce que les organiques ne peuvent pas faire :",
+      "limits": [
+        "Faible densité en nutriments : égaler 100 kg N/ha avec du fumier demande 10–20 tonnes par hectare.",
+        "Composition variable : les plages publiées s’étendent de 2 à 3× au sein d’une même matière ; seule une analyse de laboratoire de votre lot est précise.",
+        "Libération lente : les nutriments arrivent en mois, pas en jours — ils ne peuvent pas sauver une carence en milieu de campagne.",
+        "Volume et main-d’œuvre : des tonnes à transporter, épandre et incorporer, contre des sacs d’engrais minéral.",
+        "Risques de qualité : graines d’adventices et pathogènes dans le matériau mal composté ; contaminants possibles dans le compost municipal.",
+        "Pas un remplacement direct : « du fumier au lieu d’engrais » ne fonctionne qu’en substitution partielle dans un budget de nutriments planifié — jamais comme affirmation sans nuance."
+      ],
+      "warnTitle": "Avertissements pour l’usage du calculateur",
+      "warnBody": "La section organique du calculateur fait de la pure arithmétique sur les chiffres que VOUS saisissez (votre rapport de laboratoire ou l’étiquette du fournisseur). Elle ne connaît pas l’analyse réelle de votre lot et ne peut pas tenir compte de la libération lente — considérez son résultat comme une borne haute des nutriments apportés, pas des nutriments disponibles pour la culture de cette campagne. Pour un dosage précis, faites analyser votre matériau réel en laboratoire.",
+      "exploreCta": "Ouvrir la section organique du calculateur",
+      "detailCta": "Voir les détails"
+    }
   },
   "chart": {
     "metaTitle": "Tableau des doses d’engrais — Référence NPK rapide",

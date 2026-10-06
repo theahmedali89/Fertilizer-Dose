@@ -20,6 +20,7 @@
       "areaPlaceholder": "z. B. 5",
       "crop": "Kultur",
       "cropHint": "Nur Kulturen mit verifizierten Empfehlungen sind auswählbar.",
+      "cropSearchPlaceholder": "Zum Suchen von Kulturen tippen…",
       "inReview": "Daten in Prüfung",
       "soil": "Bodenart (optional)",
       "soilHint": "Die Bodenart ändert nicht die Berechnung – sie ändert die Beratung. Sandige Böden verlieren Stickstoff schneller; salzhaltige Böden erfordern Vorsicht bei MOP.",
@@ -42,10 +43,23 @@
       "sourceLabel": "Datenquelle:",
       "total": "Gesamtdünger",
       "kgUnit": "kg",
+      "unitToggleLabel": "Anzeigeeinheiten",
+      "unitKg": "kg",
+      "unitLbs": "lbs/acre",
+      "lbsUnit": "lbs/acre",
+      "lbsNote": "Nur Anzeige — Ihre gespeicherte Berechnung bleibt in kg.",
+      "splitTitle": "Zeitplan für geteilte Düngergaben",
+      "splitGenericBadge": "Generischer Zeitplan",
       "recommendedLine": "Empfohlen {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "Sie haben „{soil}“ gewählt. Auf {soilLower}-Böden sollten Sie vor einer Änderung der Dosis eine Bodenuntersuchung in Betracht ziehen – die obige Grundberechnung bleibt gleich."
     },
     "title": "Exakte Düngerdosis, mit offengelegter Berechnung.",
+    "soilTestCard": {
+      "eyebrow": "Bodenuntersuchung?",
+      "title": "Bodenuntersuchungsergebnisse vorhanden? Präzise Dosis erhalten.",
+      "desc": "Geben Sie verfügbares P und K, organischen Kohlenstoff und pH aus Ihrer Bodenuntersuchung ein — das Tool erhöht niedrige Nährstoffe, hält mittlere und senkt hohe.",
+      "cta": "Bodenuntersuchungs-Rechner öffnen →"
+    },
     "metaTitle": "Düngerdosis-Rechner — Urea, DAP & MOP pro Acre/Kanal/Marla",
     "metaDescription": "Berechnen Sie exakte Urea-, DAP- und MOP-Dosen für Weizen, Reis und Mais. Geben Sie die Fläche in Acre, Kanal, Marla oder Hektar ein – sehen Sie jeden Rechenschritt.",
     "methodFaq": [
@@ -61,7 +75,31 @@
         "q": "Warum sind manche Kulturen deaktiviert?",
         "a": "Eine Kultur ist nur auswählbar, wenn ihre empfohlene NPK-Dosis anhand einer veröffentlichten Quelle verifiziert ist. Wir deaktivieren eine Kultur lieber, als ihre Werte zu erfinden – unverifizierte Kulturen sind bis zur Bestätigung als „Daten in Prüfung“ markiert."
       }
-    ]
+    ],
+    "organic": {
+      "title": "Beitrag des organischen Materials — Ihre eigene Analyse",
+      "desc": "Geben Sie die N- / P₂O₅- / K₂O-Prozente aus Ihrem Laborbericht oder dem Lieferantenetikett plus Ihre Ausbringmenge ein. Das ist reine Arithmetik mit Ihren Eingaben: Die App hat keine eigenen Daten zu organischen Nährstoffen.",
+      "materialLabel": "Material",
+      "customOption": "Eigenes Material — ich gebe meine Werte selbst ein",
+      "nLabel": "N %",
+      "pLabel": "P₂O₅ %",
+      "kLabel": "K₂O %",
+      "rateLabel": "Ausbringmenge",
+      "rateUnit": "t/ha",
+      "rangeHint": "Publizierter typischer Bereich für {name}: {range}. Ihre Charge kann abweichen — geben Sie Ihren Laborwert ein.",
+      "noRangeHint": "Kein publizierter Bereich für dieses Material — geben Sie Ihre Labor- oder Etikettwerte ein.",
+      "resultsTitle": "Ausgebrachte Nährstoffe",
+      "formulaLabel": "Formel",
+      "formula": "kg/ha = rate (t/ha) × 1,000 × (percentage ÷ 100)",
+      "perHa": "kg/ha",
+      "enterValues": "Geben Sie oben Prozente und eine Menge ein, um den Beitrag zu sehen.",
+      "warnTitle": "Lesen Sie dies, bevor Sie den Zahlen vertrauen",
+      "warnBody": "Organische Materialien schwanken von Charge zu Charge — Ausgangsstoff, Aufbereitung und Lagerung verändern die Analyse. Publizierte Bereiche sind nicht die Analyse Ihrer Charge. Organischer Stickstoff wird zudem langsam freigesetzt (nur ~30 % des Stallmist-Stickstoffs erreicht die erste Kultur, laut TNAU); betrachten Sie das Ergebnis also als ausgebrachte Nährstoffe, nicht als in dieser Saison verfügbare. Für Präzision lassen Sie Ihr tatsächliches Material im Labor analysieren.",
+      "dismiss": "Schließen",
+      "resultN": "Stickstoff (N)",
+      "resultP": "Phosphat (P₂O₅)",
+      "resultK": "Kali (K₂O)"
+    }
   },
   "common": {
     "themeDark": "Zum Dunkelmodus wechseln",
@@ -94,6 +132,107 @@
     "title": "Fragen, die uns Landwirte stellen",
     "metaTitle": "FAQ — Fragen zur Düngerdosis beantwortet",
     "metaDescription": "Antworten zur Berechnung der Düngerdosis, NPK-Formeln, Acre/Kanal/Marla-Einheiten, Datenquellen und zum Plant Doctor."
+  },
+  "soilTest": {
+    "eyebrow": "Bodenuntersuchungs-Rechner",
+    "title": "Passen Sie Ihre Dosis an Ihre Bodenuntersuchung an.",
+    "desc": "Geben Sie Ihre Bodenuntersuchungsergebnisse ein — verfügbares P und K, organischen Kohlenstoff und pH — und eine verifizierte Kulturdosis wird nach oben oder unten angepasst: niedrige Nährstoffe erhöhen, mittlere halten, hohe senken.",
+    "metaTitle": "Düngerdosis-Rechner nach Bodenuntersuchung — NPK an Ihre Bodenuntersuchung anpassen",
+    "metaDescription": "Düngerdosis-Rechner nach Bodenuntersuchung: Geben Sie verfügbares P, K, organischen Kohlenstoff und pH ein, um die verifizierte NPK-Empfehlung jeder Kultur anzupassen — niedrige Nährstoffe erhöhen, hohe senken.",
+    "empty": {
+      "title": "Ihre angepasste Dosis erscheint hier",
+      "desc": "Wählen Sie eine Kultur, geben Sie Ihre Bodenuntersuchungswerte ein und starten Sie die Berechnung. Jeder Anpassungsschritt wird gezeigt."
+    },
+    "form": {
+      "crop": "Kultur",
+      "cropHint": "Nur Kulturen mit verifizierten Empfehlungen sind wählbar. Wählen Sie „Eigene Basisdosis“, um Ihr eigenes NPK einzugeben.",
+      "cropSearchPlaceholder": "Zum Suchen von Kulturen tippen…",
+      "inReview": "Daten in Prüfung",
+      "custom": "Eigene Basisdosis (generisch)",
+      "area": "Fläche",
+      "unit": "Einheit",
+      "areaError": "Bitte geben Sie eine gültige Fläche größer als null ein.",
+      "areaLargeError": "Diese Fläche erscheint ungewöhnlich groß – bitte prüfen Sie Wert und Einheit.",
+      "phRangeError": "Der Boden-pH muss zwischen 0 und 14 liegen.",
+      "negativeError": "Werte können nicht negativ sein — bitte prüfen Sie Ihre Eingaben.",
+      "baseN": "Basis-Stickstoff (N)",
+      "baseP": "Basis-Phosphor (P₂O₅)",
+      "baseK": "Basis-Kalium (K₂O)",
+      "baseHint": "Nur generische Orientierung — keine verifizierte Empfehlung. In kg/ha eingeben.",
+      "noVerified": "Noch keine verifizierte Empfehlung für {crop} in Ihrer Region. Geben Sie unten eine eigene Basisdosis ein oder wählen Sie eine verifizierte Kultur.",
+      "phosphorus": "Verfügbarer Phosphor (Olsen P)",
+      "potassium": "Verfügbares Kalium (NH₄OAc)",
+      "unitPpm": "ppm (mg/kg)",
+      "unitKgHa": "kg/ha",
+      "organicCarbon": "Organischer Kohlenstoff (%)",
+      "ph": "Boden-pH",
+      "optional": "optional",
+      "nProxyNote": "Bodenlabore melden selten eine Stickstoffklasse, daher dient der organische Kohlenstoff als Indikator für die Stickstoff-Nachlieferungsfähigkeit Ihres Bodens.",
+      "submit": "Dosis anpassen",
+      "soilTestHint": "Aus Ihrer Bodenuntersuchung oder Ihrem Laborbericht. Lassen Sie jeden Wert leer, den Sie nicht haben — dieser Nährstoff behält seine Basisdosis."
+    },
+    "results": {
+      "title": "Nach Bodenuntersuchung angepasste Dosis",
+      "adjustedLine": "Angepasst {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
+      "baseLine": "Basis {n}–{p}–{k} kg N–P₂O₅–K₂O/ha",
+      "low": "Niedrig",
+      "medium": "Mittel",
+      "high": "Hoch",
+      "notRated": "Nicht bewertet",
+      "acidic": "Sauer",
+      "neutral": "Neutral",
+      "alkaline": "Alkalisch",
+      "ratingP": "Phosphor",
+      "ratingK": "Kalium",
+      "ratingN": "Stickstoff (über organischen Kohlenstoff)",
+      "phLabel": "pH-Klasse",
+      "phFixation": "Alkalischer Boden (pH über 7,5): Phosphor kann als Calcium-/Magnesiumphosphate festgelegt werden. Legen Sie die volle P-Gabe zur Aussaat in ein Band nahe beim Saatgut — die angepasste Dosis oben bleibt gleich.",
+      "buildUp": "+30 % erhöhen",
+      "maintenance": "Halten",
+      "drawdown": "−25 % senken",
+      "notRatedNote": "Kein Untersuchungswert — Basisdosis beibehalten",
+      "kgUnit": "kg",
+      "bags": "× 50-kg-Säcke",
+      "total": "Gesamtdünger",
+      "basisTitle": "Warum diese Zahlen",
+      "basis": [
+        "Die Klassen folgen den indischen Bodenlabor- / Untersuchungskarten-Klassen: P (Olsen) niedrig <10, mittel 10–25, hoch >25 mg/kg; K (NH₄OAc) niedrig <120, mittel 120–280, hoch >280 kg/ha; organischer Kohlenstoff niedrig <0,5, mittel 0,5–0,75, hoch >0,75 %.",
+        "ppm und kg/ha werden mit dem Standard-Faktor der Ackerkrume ×2,24 umgerechnet (≈2,24 Mio. kg Boden pro Hektar).",
+        "Nährstoffe niedriger Klasse erhalten +30 % (erhöhen), mittlere bleiben auf Basis (halten), hohe −25 % (senken). Diese Bänder sind beratende Planungsschätzungen, keine publizierten Richtwerte.",
+        "Organischer Kohlenstoff ist ein Indikator der Stickstoff-Nachlieferungsfähigkeit, kein gemessener N-Wert — die meisten Bodenlabore melden keine Stickstoffklasse.",
+        "Der pH ändert die Dosis nicht; er markiert nur ein Platzierungsrisiko. Alkalische Böden legen Phosphor fest — die Bandablage zählt mehr denn je."
+      ],
+      "sourceLabel": "Datenquelle:",
+      "genericLabel": "Eigene Basis (nur generische Orientierung — keine verifizierte Empfehlung)",
+      "disclaimer": "Alle Dosen sind Schätzungen. Bestätigen Sie vor der Düngung mit Ihrem örtlichen Agronomen / Ihrer landwirtschaftlichen Beratungsstelle."
+    },
+    "method": {
+      "eyebrow": "Methode",
+      "title": "Die Methode, in einfachen Worten",
+      "desc": "Erhöhen, halten, senken — dieselbe Logik, die Bodenlabore auf Untersuchungskarten anwenden."
+    },
+    "methodFaq": [
+      {
+        "q": "Was ist eine Düngerdosis nach Bodenuntersuchung?",
+        "a": "Eine Pauschalempfehlung geht von einem Durchschnittsboden aus. Eine Bodenuntersuchung zeigt, was Ihr Feld bereits enthält: Ist Phosphor hoch, können Sie die P-Gabe senken und Geld sparen; ist er niedrig, erhöhen Sie sie, um den Boden aufzubauen. Dieses Tool startet mit einer verifizierten Kulturempfehlung und wendet genau diese Logik an: +30 % für Nährstoffe niedriger Klasse, Basis für mittlere, −25 % für hohe."
+      },
+      {
+        "q": "Welche Bodenuntersuchungswerte brauche ich?",
+        "a": "Verfügbarer Phosphor (Olsen-Methode, mg/kg oder ppm), verfügbares Kalium (Ammoniumacetat-Methode, kg/ha oder ppm), organischer Kohlenstoff (%) und pH — die vier Werte einer Standard-Bodenuntersuchung. P und K können in beiden Einheiten eingegeben werden; das Tool rechnet mit dem Standard-Faktor der Ackerkrume (×2,24) um."
+      },
+      {
+        "q": "Warum wird Stickstoff über den organischen Kohlenstoff bewertet?",
+        "a": "Routinelabore melden selten eine Mineralstickstoffklasse, daher nutzen Beratungssysteme den organischen Kohlenstoff als Indikator für die native Stickstoff-Nachlieferungsfähigkeit: Mehr organischer Kohlenstoff bedeutet mehr mineralisierten Stickstoff während der Saison. Es ist ein etablierter Indikator, aber kein gemessener N-Wert — das Ergebnis ist entsprechend gekennzeichnet."
+      },
+      {
+        "q": "Ändert ein alkalischer pH meine Dosis?",
+        "a": "Nein — der pH ändert hier nie die berechnete Dosis. Oberhalb von pH 7,5 fällt Phosphor zunehmend als Calcium- und Magnesiumphosphate aus (P-Festlegung), daher zählt die Platzierung: Legen Sie die volle Phosphorgabe zur Aussaat in ein Band nahe beim Saatgut statt zu streuen. Das Tool markiert dies als Hinweis, nicht als Dosisänderung."
+      },
+      {
+        "q": "Wann sollte ich die eigene Basisdosis nicht verwenden?",
+        "a": "Die eigene Basisdosis ist nur generische Orientierung — ein Ausgangspunkt für Kulturen ohne verifizierte Empfehlung in unserer Datenbank. Existiert eine verifizierte Kultur×Region-Dosis, verwenden Sie immer diese; verifizierte Werte tragen ihre publizierte Quelle."
+      }
+    ]
   },
   "footer": {
     "company": "Unternehmen",
@@ -313,6 +452,7 @@
     "myGarden": "Mein Garten",
     "tools": "Werkzeuge",
     "profitCalculator": "Gewinnrechner",
+    "soilTestCalculator": "Bodenuntersuchungs-Rechner",
     "compare": "Vergleichen",
     "login": "Anmelden",
     "account": "Konto",
@@ -367,7 +507,13 @@
       "plantsTitle": "Pflanzen für jede Art von Garten.",
       "vegetablesTitle": "Gemüse, vom Feld bis zum Küchengarten."
     },
-    "subcategoryAll": "Alle Typen"
+    "subcategoryAll": "Alle Typen",
+    "filterCountry": "Land",
+    "filterRegion": "Region",
+    "filterMonth": "Aussaatmonat",
+    "anyMonth": "Jeder Monat",
+    "allCountries": "Alle Länder",
+    "allRegions": "Alle Regionen"
   },
   "calendar": {
     "metaTitle": "Aussaatkalender — Was diesen Monat anbauen",
@@ -416,9 +562,9 @@
     "activityHARVEST": "Erntezeit",
     "activityLAND_PREPARATION": "Boden vorbereiten",
     "viewGuide": "Anbauanleitung ansehen",
+    "emptyRegionTitle": "Für diese Region liegen noch keine verifizierten Pflanzinformationen vor.",
     "plantingWindow": "Aussaatfenster",
-    "appliesTo": "Gilt für",
-    "emptyRegionTitle": "Für diese Region liegen noch keine verifizierten Pflanzinformationen vor."
+    "appliesTo": "Gilt für"
   },
   "garden": {
     "metaTitle": "Mein Garten — Parzellen, Pflanzungen & Düngepläne verfolgen",
@@ -469,6 +615,11 @@
     "markDone": "Als erledigt markieren",
     "reopen": "Wieder öffnen",
     "addReminder": "Erinnerung hinzufügen",
+    "generateFertilizerReminders": "Dünger-Erinnerungen erstellen",
+    "fertilizerReminderNote": "Vorgeschlagenes generisches Timing aus der üblichen Praxis geteilter Gaben — keine agronomische Verordnung für Ihre Fläche.",
+    "suggestedPrefix": "Vorgeschlagen",
+    "remindersAdded": "{count} Dünger-Erinnerungen zu anstehenden Aufgaben hinzugefügt",
+    "remindersAlreadyExist": "Alle vorgeschlagenen Erinnerungen existieren bereits für diese Pflanzung",
     "reminderTitle": "Erinnerung",
     "reminderTitlePh": "z. B. Zweite Urea-Teilgabe",
     "dueDate": "Fälligkeitsdatum",
@@ -574,7 +725,93 @@
   },
   "fertilizers": {
     "metaTitle": "Düngerbibliothek — NPK-Zusammensetzung, Verwendung & Dosieranleitung",
-    "metaDescription": "Etikettgenaue NPK-Zusammensetzungen, Vorteile, Vorsichtsmaßnahmen und Anwendungsanleitung für Urea, DAP, MOP, SSP, SOP und mehr."
+    "metaDescription": "Etikettgenaue NPK-Zusammensetzungen, Vorteile, Vorsichtsmaßnahmen und Anwendungsanleitung für Urea, DAP, MOP, SSP, SOP und mehr.",
+    "libraryEyebrow": "Düngerbibliothek",
+    "libraryTitle": "Wissen, was im Sack ist.",
+    "libraryDesc": "Mineraldünger tragen exakte Etikettprozente — die Zahlen, mit denen der Dosisrechner arbeitet. Organische Materialien tragen typische Bereiche aus publizierten Beratungsquellen, denn keine zwei Chargen sind gleich.",
+    "tabAll": "Alle",
+    "tabMineral": "Mineralisch",
+    "tabOrganic": "Organisch",
+    "typeMineral": "Mineralisch",
+    "typeOrganic": "Organisch",
+    "typicalRangeLabel": "Typischer Bereich",
+    "organicHubCta": "Was sind organische Dünger? Anleitung lesen →",
+    "detail": {
+      "categoryManure": "Mist",
+      "categoryCompost": "Kompost",
+      "categoryGreenManure": "Gründüngung",
+      "caveatTitle": "Warum ein Bereich, keine Zahl",
+      "sourceLabel": "Quelle des Bereichs"
+    },
+    "organic": {
+      "metaTitle": "Organische Dünger — Typen, Nährstoffbereiche & ehrliche Grenzen",
+      "metaDescription": "Stallmist, Kompost, Wurmkompost und Gründüngung: typische NPK-Bereiche aus Beratungsquellen, wie sich Organik von Mineraldüngern unterscheidet, und ihre echten Grenzen.",
+      "eyebrow": "Organische Dünger",
+      "title": "Langsam, schwankend — und ehrlich dabei.",
+      "intro": "Organische Dünger sind pflanzliche und tierische Abfälle, die beim Abbau Nährstoffe freisetzen. Sie bauen Boden auf, sind aber verdünnt und unbeständig im Vergleich zu Mineraldüngern. Diese Seite gibt Ihnen typische Nährstoffbereiche aus publizierten Beratungsquellen — und die Einschränkungen, die niemand überspringen sollte.",
+      "whatTitle": "Was organische Dünger sind",
+      "whatBody1": "Miste sind pflanzliche und tierische Abfälle als Quellen für Pflanzennährstoffe; sie setzen diese Nährstoffe nach der Zersetzung frei (TNAU). Die am häufigsten genutzten sperrigen organischen Dünger sind Stallmist (FYM), Kompost und Gründüngung. Eine zweite Gruppe — konzentrierte organische Dünger wie Ölkuchen, Blut- und Knochenmehl — trägt mehr Nährstoffe pro Kilogramm, liegt aber noch weit unter mineralischen Konzentrationen.",
+      "whatBody2": "Das prägende Merkmal von Organik ist die Schwankung: Dasselbe Material von zwei Betrieben kann sich je nach Ausgangsstoff, Aufbereitung und Lagerung im Nährstoffgehalt um ein Mehrfaches unterscheiden. Darum zeigt diese Bibliothek für organische Materialien Bereiche, niemals einzelne Etikettwerte.",
+      "typesTitle": "Die vier Materialien dieser Bibliothek",
+      "typesIntro": "Jede Karte zeigt den typischen N–P₂O₅–K₂O-Prozentbereich aus publizierten Beratungsquellen. Ihre Charge wird abweichen — das sind Ausgangspunkte, keine Garantien.",
+      "compareTitle": "Wie sich Organik von Mineraldüngern unterscheidet",
+      "compareIntro": "Keine Seite ist »immer besser«. Sie leisten verschiedene Arbeit:",
+      "compareRows": [
+        {
+          "aspect": "Nährstoffdichte",
+          "mineral": "Hoch und exakt — Harnstoff hat 46 % N, auf dem Sack gedruckt.",
+          "organic": "Niedrig und schwankend — Stallmist hat grob 0,5–1,0 % N, und jeder Haufen ist anders."
+        },
+        {
+          "aspect": "Freisetzungstempo",
+          "mineral": "Schnell — Nährstoffe sind wasserlöslich und in Tagen verfügbar.",
+          "organic": "Langsam — Mikroben müssen sie erst mineralisieren; nur ~30 % des Stallmist-Stickstoffs erreicht die erste Kultur (TNAU)."
+        },
+        {
+          "aspect": "Dosiergenauigkeit",
+          "mineral": "Präzise — der Rechner kann auf das Kilogramm dosieren.",
+          "organic": "Ungefähr ohne Laboranalyse Ihrer konkreten Charge."
+        },
+        {
+          "aspect": "Bodenwirkung",
+          "mineral": "Wenig direkte Wirkung auf Bodenstruktur oder organische Substanz.",
+          "organic": "Verbessert Struktur, Wasserspeicherung und mikrobielle Aktivität."
+        },
+        {
+          "aspect": "Logistik",
+          "mineral": "Konzentriert — wenige Säcke pro Acre.",
+          "organic": "Sperrig — Tonnen pro Hektar zu bewegen, zu streuen und einzuarbeiten."
+        },
+        {
+          "aspect": "Nachwirkung",
+          "mineral": "Größtenteils aufgenommen oder verloren innerhalb der Saison.",
+          "organic": "Lang — versorgt Folgekulturen, während der Abbau weiterläuft."
+        }
+      ],
+      "usesTitle": "Wo Organik Sinn ergibt",
+      "usesIntro": "Sinnvolle Anwendungen, klar gesagt:",
+      "uses": [
+        "Organische Substanz und Bodenstruktur über Saisons aufbauen — ihre stärkste Rolle.",
+        "Grundlegende Bodenvorbereitung vor der Aussaat, besonders auf degradierten oder sandigen Böden.",
+        "Integriertes Nährstoffmanagement: Organik für Bodengesundheit plus Mineraldünger für präzise Kulturernährung.",
+        "Baumschulen, Gemüse und hochwertige Kulturen, wo sich Bodenbiologie am schnellsten auszahlt.",
+        "Gründüngung vor gepflanztem Reis, wo Dhaincha 130–185 kg N/ha biologisch fixierten Stickstoff beisteuern kann."
+      ],
+      "limitsTitle": "Grenzen — lesen, bevor Sie sich darauf verlassen",
+      "limitsIntro": "Was Organik nicht kann:",
+      "limits": [
+        "Geringe Nährstoffdichte: 100 kg N/ha mit Stallmist zu erreichen braucht 10–20 Tonnen pro Hektar.",
+        "Schwankende Zusammensetzung: Publizierte Bereiche spannen 2–3× innerhalb eines Materials; präzise ist nur eine Laboranalyse Ihrer Charge.",
+        "Langsame Freisetzung: Nährstoffe kommen über Monate, nicht Tage — sie retten keinen Mangel mitten in der Saison.",
+        "Masse und Arbeit: Tonnen zu transportieren, zu streuen und einzuarbeiten, gegenüber Säcken Mineraldünger.",
+        "Qualitätsrisiken: Unkrautsamen und Pathogene in schlecht kompostiertem Material; mögliche Schadstoffe in kommunalem Kompost.",
+        "Kein direkter Ersatz: »Mist statt Dünger« funktioniert nur als Teilaustausch innerhalb eines geplanten Nährstoffbudgets — niemals als uneingeschränkte Behauptung."
+      ],
+      "warnTitle": "Warnhinweise zur Rechnernutzung",
+      "warnBody": "Der organische Bereich des Rechners rechnet pure Arithmetik mit Zahlen, die SIE eingeben (Ihr Laborbericht oder Lieferantenetikett). Er kennt die echte Analyse Ihrer Charge nicht und kann die langsame Freisetzung nicht berücksichtigen — betrachten Sie das Ergebnis als Obergrenze ausgebrachter Nährstoffe, nicht als für die Kultur dieser Saison verfügbare. Für präzise Dosierung lassen Sie Ihr tatsächliches Material im Labor analysieren.",
+      "exploreCta": "Organischen Bereich des Rechners öffnen",
+      "detailCta": "Details ansehen"
+    }
   },
   "chart": {
     "metaTitle": "Düngerdosis-Tabelle — NPK-Kurzreferenz",
