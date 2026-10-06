@@ -1,8 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
-import { CalculatorForm } from "@/components/calculator/CalculatorForm";
+import { SoilTestForm } from "@/components/soilTest/SoilTestForm";
 import { Section } from "@/components/ui/Section";
-import { Card, CardBody } from "@/components/ui/Card";
 import { Accordion } from "@/components/ui/Accordion";
 import { localizedMetadata } from "@/lib/seo";
 import { getCrops } from "@/server/data";
@@ -13,23 +11,23 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "calculator" });
+  const t = await getTranslations({ locale, namespace: "soilTest" });
   return localizedMetadata({
     locale,
-    path: "/calculator",
+    path: "/soil-test-calculator",
     title: t("metaTitle"),
     description: t("metaDescription"),
   });
 }
 
-export default async function CalculatorPage({
+export default async function SoilTestCalculatorPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("calculator");
+  const t = await getTranslations("soilTest");
   const methodFaq = t.raw("methodFaq") as { q: string; a: string }[];
   const crops = await getCrops();
 
@@ -51,27 +49,8 @@ export default async function CalculatorPage({
       </section>
 
       <Section>
-        <CalculatorForm crops={crops} />
+        <SoilTestForm crops={crops} />
       </Section>
-
-      <Section
-        eyebrow={t("soilTestCard.eyebrow")}
-        title={t("soilTestCard.title")}
-      >
-        <Card className="max-w-2xl border-leaf-200 dark:border-leaf-800 bg-leaf-50/60 dark:bg-leaf-950/30">
-          <CardBody className="flex flex-wrap items-center justify-between gap-4">
-            <p className="text-sm text-ink-soft max-w-md leading-relaxed">
-              {t("soilTestCard.desc")}
-            </p>
-            <Link
-              href="/soil-test-calculator"
-              className="inline-flex items-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-5 py-3 text-sm font-bold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors"
-            >
-              {t("soilTestCard.cta")}
-            </Link>
-          </CardBody>
-        </Card>
-       </Section>
 
       <div className="bg-surface border-t border-line">
         <Section
