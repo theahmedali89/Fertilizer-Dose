@@ -147,3 +147,31 @@ export function LanguageList() {
     </div>
   );
 }
+
+/** Compact language dropdown for the mobile drawer — replaces the full 18-item grid. */
+export function DrawerLanguageSelect() {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const switchTo = (code: string) => {
+    if (code === locale) return;
+    setLocaleCookie(code);
+    router.replace(pathname, { locale: code });
+  };
+
+  return (
+    <select
+      value={locale}
+      onChange={(e) => switchTo(e.target.value)}
+      aria-label="Language"
+      className="w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-sm text-ink focus:border-leaf-600 focus:outline-none"
+    >
+      {LOCALES.map((l) => (
+        <option key={l.code} value={l.code}>
+          {l.nativeName} ({l.name})
+        </option>
+      ))}
+    </select>
+  );
+}

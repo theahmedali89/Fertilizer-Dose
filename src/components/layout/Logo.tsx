@@ -23,11 +23,11 @@ export function Logo({ compact = false }: { compact?: boolean }) {
         </svg>
       </span>
       {!compact && (
-        <span className="leading-none">
-          <span className="block font-display font-bold text-xl tracking-tight">
+        <span className="leading-none min-w-0">
+          <span className="block font-display font-bold text-xl tracking-tight whitespace-nowrap">
             Fertilizer<span className="text-leaf-700 dark:text-leaf-400 font-light"> Dose</span>
           </span>
-          <span className="block text-[11px] font-medium text-ink-faint tracking-wide mt-0.5">
+          <span className="hidden sm:block text-[11px] font-medium text-ink-faint tracking-wide mt-0.5">
             Fertilizer Dose Calculator for Crops, Plants &amp; Vegetables
           </span>
         </span>

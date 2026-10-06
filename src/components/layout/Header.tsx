@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
-import { LanguageSwitcher, LanguageList } from "./LanguageSwitcher";
+import { LanguageSwitcher, DrawerLanguageSelect } from "./LanguageSwitcher";
 import { NavDropdown as GrowDropdown } from "./NavDropdown";
 import { AuthButtons } from "@/components/auth/AuthButtons";
 import { cn } from "@/lib/utils";
@@ -276,7 +276,14 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
             })}
           </nav>
           <div className="p-5 border-t border-line space-y-4">
-            <LanguageList />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-bold uppercase tracking-widest text-ink-faint shrink-0">
+                {t("language")}
+              </span>
+              <div className="flex-1 min-w-0">
+                <DrawerLanguageSelect />
+              </div>
+            </div>
             <Link
               href="/calculator"
               onClick={closeDrawer}
