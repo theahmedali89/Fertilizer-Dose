@@ -3,11 +3,23 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { LOCALES } from "@/i18n/routing";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { usePathname, getPathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 function setLocaleCookie(code: string) {
   document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
+}
+
+/**
+ * Navigate to the locale-prefixed URL with a full page load.
+ * (Soft navigation via router.replace was not applying the locale —
+ * the URL stayed put. A full load guarantees the new locale's
+ * messages render. Locale URL architecture is unchanged:
+ * English stays unprefixed, others get /<code>/ prefixes.)
+ */
+function navigateToLocale(pathname: string, code: string) {
+  setLocaleCookie(code);
+  window.location.assign(getPathname({ href: pathname, locale: code }));
 }
 
 /**
@@ -16,7 +28,6 @@ function setLocaleCookie(code: string) {
 export function LanguageSwitcher() {
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
   const t = useTranslations("language");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -39,11 +50,8 @@ export function LanguageSwitcher() {
 
   const switchTo = (code: string) => {
     if (code === locale) return setOpen(false);
-    setLocaleCookie(code);
     setOpen(false);
-    // Canonical next-intl API: unprefixed pathname + target locale.
-    // (usePathname() already strips the locale prefix.)
-    router.replace(pathname, { locale: code });
+    navigateToLocale(pathname, code);
   };
 
   return (
@@ -111,13 +119,11 @@ export function LanguageSwitcher() {
 export function LanguageList() {
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
   const t = useTranslations("language");
 
   const switchTo = (code: string) => {
     if (code === locale) return;
-    setLocaleCookie(code);
-    router.replace(pathname, { locale: code });
+    navigateToLocale(pathname, code);
   };
 
   return (
@@ -152,12 +158,10 @@ export function LanguageList() {
 export function DrawerLanguageSelect() {
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
 
   const switchTo = (code: string) => {
     if (code === locale) return;
-    setLocaleCookie(code);
-    router.replace(pathname, { locale: code });
+    navigateToLocale(pathname, code);
   };
 
   return (
