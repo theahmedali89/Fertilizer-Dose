@@ -107,8 +107,9 @@ export function GardenDashboard() {
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {suggestions.slice(0, 6).map((s) => {
-              const item = getItem(s.itemSlug)!;
-              const plot = plots.find((p) => p.id === s.plotId)!;
+              const item = getItem(s.itemSlug);
+              const plot = plots.find((p) => p.id === s.plotId);
+              if (!item || !plot) return null;
               return (
                 <Card key={`${s.plotId}-${s.itemSlug}`}>
                   <CardBody className="py-4">

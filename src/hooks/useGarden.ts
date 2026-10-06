@@ -3,6 +3,7 @@
 import { useCallback, useSyncExternalStore } from "react";
 import {
   EMPTY_GARDEN,
+  STORAGE_KEY,
   loadGarden,
   saveGarden,
   newId,
@@ -17,6 +18,10 @@ import {
 /* Module-level store so every useGarden() instance shares one subscription. */
 
 const listeners = new Set<() => void>();
+
+/** Cached snapshot for getSnapshot (see below). Invalidated on raw change. */
+let cachedRaw: string | null = null;
+let cachedSnapshot: GardenState | null = null;
 
 function emit() {
   for (const l of listeners) l();
@@ -35,7 +40,15 @@ function subscribe(cb: () => void): () => void {
 }
 
 function getSnapshot(): GardenState {
-  return loadGarden();
+  // Cache by raw localStorage string: useSyncExternalStore requires a stable
+  // snapshot reference, otherwise every render sees a "changed" snapshot and
+  // React re-renders in an infinite loop.
+  if (typeof window === "undefined") return EMPTY_GARDEN;
+  const raw = window.localStorage.getItem(STORAGE_KEY);
+  if (raw === cachedRaw && cachedSnapshot) return cachedSnapshot;
+  cachedRaw = raw;
+  cachedSnapshot = loadGarden();
+  return cachedSnapshot;
 }
 
 function getServerSnapshot(): GardenState {

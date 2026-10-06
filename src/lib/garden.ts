@@ -179,5 +179,5 @@ export function upcomingTasks(state: GardenState, now = new Date()): UpcomingTas
       const due = new Date(reminder.dueDate + "T00:00:00");
       return { reminder, overdue: due < today };
     })
-    .sort((a, b) => a.reminder.dueDate.localeCompare(b.reminder.dueDate));
+    .sort((a, b) => (a.reminder.dueDate ?? "").localeCompare(b.reminder.dueDate ?? ""));
 }
