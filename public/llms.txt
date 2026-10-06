@@ -1,0 +1,46 @@
+# Fertilizer Dose
+
+> Calculate the exact fertilizer dose for crops, plants & vegetables. Real NPK data, acre/kanal/marla/hectare support, AI plant doctor, and region-aware planting calendars for 18 countries.
+
+## About
+
+Fertilizer Dose (fertilizerdose.com) is a free web tool that turns published agronomic recommendations into precise per-acre fertilizer quantities. Every NPK value is sourced and cited — no invented numbers. Unverified data shows "No verified data available yet."
+
+## Key Tools
+
+- **Dose Calculator** (/calculator): Pick your crop, enter land area (acre, kanal, marla, hectare), get exact urea, DAP, MOP quantities plus stage-wise application schedule.
+- **Planting Calendar** (/planting-calendar): Region-aware sowing calendar with activity types (sow, transplant, harvest). Filter by country, region, month, category.
+- **What to Grow This Month**: Homepage widget showing what to plant now based on selected country/region.
+- **Profit Calculator** (/profit-calculator): Estimate crop profitability (user-entered prices/yields — planning estimates only).
+- **Compare** (/compare): Compare fertilizers side by side (user-entered prices).
+- **Plant Doctor** (/plant-doctor): AI-powered plant disease diagnosis from photos.
+- **My Garden** (/my-garden): Track plots, plantings, reminders, saved calculations.
+
+## Coverage
+
+- **18 countries**: Pakistan, India, Bangladesh, United States, Brazil, Indonesia, Australia, China, Türkiye, Malaysia, Japan, South Korea, Spain, France, Germany, Italy, Poland, Russia
+- **Crops**: wheat, rice, maize, cotton, sugarcane, potato, soybean, groundnut, barley, canola, sunflower, jute, mustard, lentil, chickpea, rye, triticale, durum wheat, sugar beet, and more
+- **Vegetables**: tomato, onion, garlic, chili, okra, peas, carrot, spinach, brinjal, cucumber, cauliflower, cabbage, radish, daikon, napa cabbage
+- **Plants**: rose, marigold, money plant, mango, neem, coffee, palm oil, rubber, olive, grape, citrus
+
+## Data Standards
+
+- All fertilizer recommendations cite named sources (government extension, agricultural universities, FAO, peer-reviewed research).
+- Nutrient values in kg N–P₂O₅–K₂O per hectare (oxide basis, explicitly labeled).
+- Imported data enters as draft/under_review; only verified data is published.
+- Gaps are honestly marked — never filled with guesses.
+
+## Languages
+
+Available in 18 languages: English, Urdu, Hindi, Punjabi, Bengali, Arabic, Turkish, French, German, Spanish, Italian, Polish, Russian, Portuguese, Indonesian, Malay, Chinese, Japanese, Korean.
+
+## Technical
+
+- Built with Next.js 15, TypeScript, Tailwind CSS, Prisma + PostgreSQL
+- Light/dark mode, RTL support for Arabic/Urdu
+- Mobile-responsive
+
+## Contact
+
+- Website: https://fertilizerdose.com
+- Email: hello@fertilizerdose.com
