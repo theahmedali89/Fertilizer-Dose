@@ -41,11 +41,19 @@
     },
     "title": "Exact fertilizer dose, with the math shown.",
     "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
-    "metaDescription": "Calculate exact urea, DAP and MOP doses for wheat, rice and maize. Enter area in acre, kanal, marla or hectare — see every calculation step.",
+    "metaDescription": "Calculate exact urea, DAP and MOP doses per acre, kanal, marla or hectare — see how many 50 kg bags you need for wheat, rice, maize and more crops.",
     "methodFaq": [
       {
         "q": "Why is DAP calculated first?",
         "a": "Phosphorus is immobile in soil, so the full P₂O₅ dose must come from DAP at sowing. DAP also contains 18% nitrogen, which counts toward the total nitrogen need — calculating DAP first lets us subtract that nitrogen before computing urea, so you never double-dose nitrogen."
+      },
+      {
+        "q": "How many bags of urea do I need per acre?",
+        "a": "It depends on your crop's nitrogen requirement. For example, wheat needs 124 kg N per hectare (≈50 kg N per acre). Since urea contains 46% nitrogen, that's about 109 kg of urea per acre — roughly 2.2 bags of 50 kg each. Select your crop above and the calculator shows the exact bag count for your area."
+      },
+      {
+        "q": "How many bags of DAP do I need per acre?",
+        "a": "DAP contains 18% nitrogen and 46% P₂O₅. For wheat (62 kg P₂O₅ per hectare ≈ 25 kg per acre), you need about 55 kg of DAP per acre — just over 1 bag of 50 kg. The calculator above computes the precise amount including the nitrogen bonus DAP provides."
       },
       {
         "q": "How are kanal and marla converted?",
@@ -83,6 +91,22 @@
       {
         "a": "Yes — the calculator, libraries and guides are free. An account is only needed for features like saving diagnoses.",
         "q": "Is Fertilizer Dose free to use?"
+      },
+      {
+        "q": "Can I mix urea and DAP together?",
+        "a": "Yes, urea and DAP can be applied together as a basal dose at sowing. DAP provides phosphorus (46% P₂O₅) plus 18% nitrogen, while urea adds more nitrogen (46% N). A common practice is to mix them before broadcasting. However, avoid mixing urea with SSP (single super phosphate) in the same application if the mixture will sit — it can become lumpy. Always check your crop's recommended NPK ratio first."
+      },
+      {
+        "q": "What is basal dose in fertilizer?",
+        "a": "The basal dose is the fertilizer applied at or before sowing/planting, worked into the soil. It typically includes the full phosphorus and potassium requirement plus a portion of nitrogen (usually 1/3 to 1/2). The remaining nitrogen is given as top-dressing later — for example, urea at tillering for wheat. Basal application ensures nutrients are available to young roots from day one."
+      },
+      {
+        "q": "DAP vs SSP — which is better?",
+        "a": "It depends on your soil and crop. DAP (18-46-0) has higher phosphorus concentration (46% P₂O₅), so you need less product per acre — good for transport and handling. SSP (16% P₂O₅) also provides sulphur (~11%) and calcium (~19%), making it better for oilseeds, pulses, and sulphur-deficient soils. DAP is usually cheaper per kg of phosphorus, but SSP adds secondary nutrients. Use our Compare tool to check which is cheaper per kg of P₂O₅ at your local prices."
+      },
+      {
+        "q": "What is soil test based fertilizer dose?",
+        "a": "A soil test measures your soil's existing nitrogen, phosphorus, potassium, pH, and organic matter. Instead of using a blanket recommendation, the fertilizer dose is adjusted — if your soil already has high phosphorus, you apply less P fertilizer. This saves money and prevents over-fertilization. We recommend getting a soil test every 2-3 years through your local agriculture department. Our calculator uses standard recommendations; for soil-test-based precision doses, consult your local soil testing lab with these standard figures as a starting point."
       }
     ],
     "title": "Questions farmers ask us",
