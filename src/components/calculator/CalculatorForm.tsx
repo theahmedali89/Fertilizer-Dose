@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Field, Input, Select } from "@/components/ui/fields";
+import { SearchableSelect } from "@/components/ui/SearchableSelect";
 import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
 import { AREA_UNITS, calculateDose, type CropInfo } from "@/lib/agronomy";
@@ -62,13 +63,19 @@ export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
         <CardBody>
           <form onSubmit={onSubmit} className="space-y-5">
             <Field label={t("form.crop")}>
-              <Select value={cropSlug} onChange={(e) => { setCropSlug(e.target.value); setSubmitted(false); }}>
-                {crops.map((c) => (
-                  <option key={c.slug} value={c.slug} disabled={!c.npk}>
-                    {c.name} {c.npk ? "" : `(${t("form.inReview")})`}
-                  </option>
-                ))}
-              </Select>
+              <SearchableSelect
+                id="crop-select"
+                ariaLabel={t("form.crop")}
+                placeholder={t("form.cropSearchPlaceholder")}
+                value={cropSlug}
+                onChange={(v) => { setCropSlug(v); setSubmitted(false); }}
+                options={crops.map((c) => ({
+                  value: c.slug,
+                  label: c.name,
+                  disabled: !c.npk,
+                  hint: c.npk ? undefined : t("form.inReview"),
+                }))}
+              />
               <p className="mt-1.5 text-xs text-ink-faint">
                 {t("form.cropHint")}
               </p>

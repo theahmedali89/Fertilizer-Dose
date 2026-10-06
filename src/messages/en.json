@@ -13,6 +13,7 @@
       "areaPlaceholder": "e.g. 5",
       "crop": "Crop",
       "cropHint": "Only crops with verified recommendations are selectable.",
+      "cropSearchPlaceholder": "Type to search crops…",
       "inReview": "data in review",
       "soil": "Soil type (optional)",
       "soilHint": "Soil type doesn't change the math — it changes the advice. Sandy soils leach nitrogen faster; saline soils need care with MOP.",
