@@ -24,12 +24,22 @@ export async function generateMetadata({
 
 export default async function BlogPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ page?: string }>;
 }) {
   const { locale } = await params;
+  const sp = await searchParams;
   setRequestLocale(locale);
   const posts = await getPosts();
+
+  const POSTS_PER_PAGE = 12;
+  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+  let page = parseInt(sp.page ?? "", 10);
+  if (!Number.isFinite(page) || page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  const pagePosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
   return (
     <>
       <section className="border-b border-line bg-surface">
@@ -45,7 +55,7 @@ export default async function BlogPage({
       </section>
       <Section>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {posts.map((post) => (
+          {pagePosts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <Card className="h-full overflow-hidden transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
                 {post.image && (
@@ -72,6 +82,37 @@ export default async function BlogPage({
             </Link>
           ))}
         </div>
+        {totalPages > 1 && (
+          <nav className="mt-10 flex items-center justify-center gap-5" aria-label="Blog pages">
+            {page > 1 ? (
+              <Link
+                href={{ pathname: "/blog", query: { page: page - 1 } }}
+                className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-soft hover:border-leaf-600 hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors"
+              >
+                ← Previous
+              </Link>
+            ) : (
+              <span className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-faint opacity-50">
+                ← Previous
+              </span>
+            )}
+            <span className="text-sm text-ink-faint">
+              Page {page} of {totalPages}
+            </span>
+            {page < totalPages ? (
+              <Link
+                href={{ pathname: "/blog", query: { page: page + 1 } }}
+                className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-soft hover:border-leaf-600 hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors"
+              >
+                Next →
+              </Link>
+            ) : (
+              <span className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-faint opacity-50">
+                Next →
+              </span>
+            )}
+          </nav>
+        )}
       </Section>
     </>
   );
