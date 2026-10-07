@@ -3,9 +3,13 @@
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
-import { Field, Input, Textarea, Select } from "@/components/ui/fields";
+import { Field, Input, Textarea } from "@/components/ui/fields";
+import { cn } from "@/lib/utils";
 
 type Mode = "translation" | "data";
+// UI-level submission kinds (data mode). Mapped to DB SuggestionType on submit:
+// OFFICIAL -> DATA_CORRECTION, TAJURBA -> FIELD_EXPERIENCE, REQUEST -> DATA_REQUEST
+type DataKind = "OFFICIAL" | "TAJURBA" | "REQUEST";
 
 const HONEYPOT = "website"; // must stay empty; bots fill it
 
@@ -56,6 +60,80 @@ export function SuggestButton({
   );
 }
 
+/**
+ * "How this works" — transparency box shown at the top of the modal.
+ * Compact 3-step timeline always visible; accept/reject rules + the
+ * farmer-experience disclaimer behind an expander. No legalese.
+ */
+function HowItWorks({ dataMode }: { dataMode: boolean }) {
+  const t = useTranslations("suggestions");
+  const [rulesOpen, setRulesOpen] = useState(false);
+
+  const steps = [
+    { title: t("step1Title"), text: t("step1Text") },
+    { title: t("step2Title"), text: t("step2Text") },
+    { title: t("step3Title"), text: t("step3Approve") + " " + t("step3Reject") },
+  ];
+
+  return (
+    <div className="rounded-xl border border-leaf-200 bg-leaf-50/70 p-4 dark:border-leaf-900 dark:bg-leaf-950/40">
+      <p className="text-sm font-bold text-leaf-900 dark:text-leaf-200 mb-3">
+        {t("howItWorksTitle")}
+      </p>
+      <ol className="space-y-2.5">
+        {steps.map((s) => (
+          <li key={s.title} className="flex gap-2.5 text-[13px] leading-relaxed">
+            <span className="font-bold text-leaf-800 dark:text-leaf-300 shrink-0">
+              {s.title}
+            </span>
+            <span className="text-ink-soft">{s.text}</span>
+          </li>
+        ))}
+      </ol>
+      {dataMode && (
+        <div className="mt-3">
+          <button
+            type="button"
+            onClick={() => setRulesOpen((v) => !v)}
+            aria-expanded={rulesOpen}
+            className="text-[13px] font-semibold text-leaf-800 hover:underline underline-offset-2 dark:text-leaf-300"
+          >
+            {rulesOpen ? "−" : "+"} {t("rulesToggle")}
+          </button>
+          {rulesOpen && (
+            <div className="mt-3 space-y-3 text-[13px] leading-relaxed">
+              <div>
+                <p className="font-bold text-ink mb-1">✓ {t("acceptTitle")}</p>
+                <ul className="list-disc ps-5 space-y-1 text-ink-soft">
+                  <li>{t("accept1")}</li>
+                  <li>{t("accept2")}</li>
+                  <li>{t("accept3")}</li>
+                  <li>{t("accept4")}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold text-ink mb-1">✕ {t("rejectTitle")}</p>
+                <ul className="list-disc ps-5 space-y-1 text-ink-soft">
+                  <li>{t("reject1")}</li>
+                  <li>{t("reject2")}</li>
+                  <li>{t("reject3")}</li>
+                  <li>{t("reject4")}</li>
+                </ul>
+              </div>
+              <div className="rounded-lg bg-harvest-50 border border-harvest-200 p-3 dark:bg-harvest-950/40 dark:border-harvest-800">
+                <p className="font-bold text-harvest-900 dark:text-harvest-200 mb-1">
+                  {t("tajurbaNoteTitle")}
+                </p>
+                <p className="text-ink-soft">{t("tajurbaNote")}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SuggestionModal({
   mode,
   cropSlug,
@@ -72,10 +150,17 @@ function SuggestionModal({
   const [pageUrl] = useState(() =>
     typeof window === "undefined" ? "" : window.location.href
   );
-  const [dataType, setDataType] = useState<"DATA_CORRECTION" | "DATA_REQUEST">("DATA_CORRECTION");
+  const [dataKind, setDataKind] = useState<DataKind>("OFFICIAL");
   const [issueText, setIssueText] = useState("");
   const [submittedText, setSubmittedText] = useState("");
+  // Flexible source: URL or written reference (official corrections).
   const [sourceUrl, setSourceUrl] = useState("");
+  const [sourceText, setSourceText] = useState("");
+  // Field-experience structured fields (tajurba).
+  const [district, setDistrict] = useState("");
+  const [variety, setVariety] = useState("");
+  const [appliedText, setAppliedText] = useState("");
+  const [yieldText, setYieldText] = useState("");
   const [honeypot, setHoneypot] = useState("");
   // Contributor identity (optional) — shown publicly ONLY if approved.
   const [contributorName, setContributorName] = useState("");
@@ -137,14 +222,43 @@ function SuggestionModal({
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    if (submittedText.trim().length < 3) {
+
+    // Map UI kind -> DB type, and validate per-kind requirements.
+    let dbType: "TRANSLATION" | "DATA_CORRECTION" | "DATA_REQUEST" | "FIELD_EXPERIENCE";
+    let finalSubmittedText = submittedText.trim();
+    if (mode === "translation") {
+      dbType = "TRANSLATION";
+    } else if (dataKind === "OFFICIAL") {
+      dbType = "DATA_CORRECTION";
+      if (!sourceUrl.trim() && !sourceText.trim()) {
+        setError(t("errorSourceFlexRequired"));
+        return;
+      }
+    } else if (dataKind === "TAJURBA") {
+      dbType = "FIELD_EXPERIENCE";
+      if (!appliedText.trim()) {
+        setError(t("errorAppliedRequired"));
+        return;
+      }
+      // Compose the free-text body from the structured fields so the admin
+      // queue always has a readable summary even without opening fields.
+      finalSubmittedText = [
+        `Applied: ${appliedText.trim()}`,
+        district.trim() && `District: ${district.trim()}`,
+        variety.trim() && `Variety: ${variety.trim()}`,
+        yieldText.trim() && `Yield: ${yieldText.trim()}`,
+      ]
+        .filter(Boolean)
+        .join("\n");
+    } else {
+      dbType = "DATA_REQUEST";
+    }
+
+    if (finalSubmittedText.length < 3) {
       setError(t("errorTooShort"));
       return;
     }
-    if (mode === "data" && dataType === "DATA_CORRECTION" && !/^https?:\/\//i.test(sourceUrl.trim())) {
-      setError(t("errorSourceRequired"));
-      return;
-    }
+
     setSending(true);
     try {
       // Upload the photo first (if any), then attach its URL to the suggestion.
@@ -164,12 +278,17 @@ function SuggestionModal({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          type: mode === "translation" ? "TRANSLATION" : dataType,
+          type: dbType,
           locale: mode === "translation" ? locale : null,
           pageUrl: pageUrl || null,
           issueText: issueText.trim() || null,
-          submittedText: submittedText.trim(),
+          submittedText: finalSubmittedText,
           sourceUrl: sourceUrl.trim() || null,
+          sourceText: sourceText.trim() || null,
+          district: district.trim() || null,
+          variety: variety.trim() || null,
+          appliedText: appliedText.trim() || null,
+          yieldText: yieldText.trim() || null,
           cropSlug: cropSlug ?? null,
           contributorName: contributorName.trim() || null,
           contributorImage,
@@ -189,6 +308,24 @@ function SuggestionModal({
       setSending(false);
     }
   };
+
+  const kindOptions: { v: DataKind; label: string; desc: string }[] = [
+    {
+      v: "OFFICIAL",
+      label: t("dataTypeOfficial"),
+      desc: t("accept1"),
+    },
+    {
+      v: "TAJURBA",
+      label: t("dataTypeTajurba"),
+      desc: t("tajurbaNoteTitle") + " — " + t("accept4"),
+    },
+    {
+      v: "REQUEST",
+      label: t("dataTypeRequest"),
+      desc: t("dataRequest"),
+    },
+  ];
 
   return (
     <div
@@ -224,53 +361,136 @@ function SuggestionModal({
           </div>
         ) : (
           <form onSubmit={submit} className="p-5 space-y-4">
+            <HowItWorks dataMode={mode === "data"} />
+
             {mode === "data" ? (
               <>
                 <p className="text-sm text-ink-soft leading-relaxed">
                   {t("dataIntro", { crop: cropName ?? "" })}
                 </p>
-                <Field label={t("dataTypeLabel")}>
-                  <Select value={dataType} onChange={(e) => setDataType(e.target.value as typeof dataType)}>
-                    <option value="DATA_CORRECTION">{t("dataCorrection")}</option>
-                    <option value="DATA_REQUEST">{t("dataRequest")}</option>
-                  </Select>
-                </Field>
+                <div role="radiogroup" aria-label={t("dataTypeLabel")} className="grid gap-2">
+                  {kindOptions.map((o) => {
+                    const active = dataKind === o.v;
+                    return (
+                      <label
+                        key={o.v}
+                        className={cn(
+                          "flex cursor-pointer items-start gap-3 rounded-xl border p-3.5 transition-colors",
+                          active
+                            ? "border-leaf-600 bg-leaf-50 dark:bg-leaf-950/50"
+                            : "border-line hover:border-leaf-400"
+                        )}
+                      >
+                        <input
+                          type="radio"
+                          name="suggestion-kind"
+                          value={o.v}
+                          checked={active}
+                          onChange={() => setDataKind(o.v)}
+                          className="mt-1 accent-leaf-700"
+                        />
+                        <span>
+                          <span className="block text-sm font-semibold">{o.label}</span>
+                          <span className="block text-xs text-ink-faint mt-0.5 leading-relaxed">
+                            {o.desc}
+                          </span>
+                        </span>
+                      </label>
+                    );
+                  })}
+                </div>
               </>
             ) : (
               <p className="text-sm text-ink-soft leading-relaxed">{t("translationIntro")}</p>
             )}
 
-            <Field label={t("whatsWrong")}>
-              <Textarea
-                value={issueText}
-                onChange={(e) => setIssueText(e.target.value)}
-                placeholder={t("whatsWrongPlaceholder")}
-                rows={2}
-              />
-            </Field>
-            <Field label={t("yourSuggestion")}>
-              <Textarea
-                value={submittedText}
-                onChange={(e) => setSubmittedText(e.target.value)}
-                placeholder={t("yourSuggestionPlaceholder")}
-                rows={4}
-                required
-              />
-            </Field>
+            {/* OFFICIAL + REQUEST + TRANSLATION: free-text fields */}
+            {(mode === "translation" || dataKind !== "TAJURBA") && (
+              <>
+                <Field label={t("whatsWrong")}>
+                  <Textarea
+                    value={issueText}
+                    onChange={(e) => setIssueText(e.target.value)}
+                    placeholder={t("whatsWrongPlaceholder")}
+                    rows={2}
+                  />
+                </Field>
+                <Field label={t("yourSuggestion")}>
+                  <Textarea
+                    value={submittedText}
+                    onChange={(e) => setSubmittedText(e.target.value)}
+                    placeholder={t("yourSuggestionPlaceholder")}
+                    rows={4}
+                    required
+                  />
+                </Field>
+              </>
+            )}
 
-            {mode === "data" && (
-              <Field
-                label={`${t("sourceUrl")}${dataType === "DATA_CORRECTION" ? " *" : ""}`}
-                hint={t("sourceHint")}
-              >
-                <Input
-                  type="url"
-                  value={sourceUrl}
-                  onChange={(e) => setSourceUrl(e.target.value)}
-                  placeholder="https://…"
-                  required={dataType === "DATA_CORRECTION"}
-                />
-              </Field>
+            {/* OFFICIAL: flexible source — URL or written reference */}
+            {mode === "data" && dataKind === "OFFICIAL" && (
+              <>
+                <Field label={t("sourceLabelFlex")} hint={t("sourceHintFlex")}>
+                  <Input
+                    type="text"
+                    value={sourceUrl}
+                    onChange={(e) => setSourceUrl(e.target.value)}
+                    placeholder="https://…"
+                    inputMode="url"
+                  />
+                </Field>
+                <Field label={t("sourceTextLabel")}>
+                  <Input
+                    type="text"
+                    value={sourceText}
+                    onChange={(e) => setSourceText(e.target.value)}
+                    placeholder={t("sourcePlaceholderFlex")}
+                    maxLength={1000}
+                  />
+                </Field>
+              </>
+            )}
+
+            {/* TAJURBA: structured field-experience report */}
+            {mode === "data" && dataKind === "TAJURBA" && (
+              <div className="space-y-4 rounded-xl border border-line bg-surface-2/50 p-4">
+                <p className="text-sm text-ink-soft leading-relaxed">{t("tajurbaIntro")}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Field label={t("districtLabel")}>
+                    <Input
+                      value={district}
+                      onChange={(e) => setDistrict(e.target.value)}
+                      placeholder={t("districtPlaceholder")}
+                      maxLength={120}
+                    />
+                  </Field>
+                  <Field label={t("varietyLabel")}>
+                    <Input
+                      value={variety}
+                      onChange={(e) => setVariety(e.target.value)}
+                      placeholder={t("varietyPlaceholder")}
+                      maxLength={120}
+                    />
+                  </Field>
+                </div>
+                <Field label={t("appliedLabel")}>
+                  <Textarea
+                    value={appliedText}
+                    onChange={(e) => setAppliedText(e.target.value)}
+                    placeholder={t("appliedPlaceholder")}
+                    rows={3}
+                    required
+                  />
+                </Field>
+                <Field label={t("yieldLabel")}>
+                  <Input
+                    value={yieldText}
+                    onChange={(e) => setYieldText(e.target.value)}
+                    placeholder={t("yieldPlaceholder")}
+                    maxLength={500}
+                  />
+                </Field>
+              </div>
             )}
 
             {/* Contributor identity — optional, public only if approved */}

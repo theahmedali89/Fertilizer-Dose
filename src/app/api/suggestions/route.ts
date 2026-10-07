@@ -3,7 +3,7 @@ import { z } from "zod";
 import { db, isDbConfigured } from "@/lib/db";
 import { rateLimit } from "@/server/rate-limit";
 
-const TYPES = ["TRANSLATION", "DATA_CORRECTION", "DATA_REQUEST"] as const;
+const TYPES = ["TRANSLATION", "DATA_CORRECTION", "DATA_REQUEST", "FIELD_EXPERIENCE"] as const;
 
 const bodySchema = z.object({
   type: z.enum(TYPES),
@@ -13,6 +13,12 @@ const bodySchema = z.object({
   issueText: z.string().trim().max(2000).optional().nullable(),
   submittedText: z.string().trim().min(3).max(5000),
   sourceUrl: z.string().trim().max(1000).optional().nullable(),
+  sourceText: z.string().trim().max(1000).optional().nullable(),
+  // Field-experience report fields (FIELD_EXPERIENCE only)
+  district: z.string().trim().max(120).optional().nullable(),
+  variety: z.string().trim().max(120).optional().nullable(),
+  appliedText: z.string().trim().max(2000).optional().nullable(),
+  yieldText: z.string().trim().max(500).optional().nullable(),
   cropSlug: z.string().trim().max(120).optional().nullable(),
   // Contributor identity (optional — shown publicly ONLY after admin approval)
   contributorName: z.string().trim().max(80).optional().nullable(),
@@ -27,13 +33,21 @@ const bodySchema = z.object({
   // Honeypot — real users never fill this; bots do.
   website: z.string().max(200).optional().nullable(),
 }).superRefine((v, ctx) => {
-  // DATA_CORRECTION must cite an official source — no source, no submission.
+  // DATA_CORRECTION must cite a source — a link OR a written reference
+  // (e.g. "PAU Package of Practices 2024, p.23"). One of them is required.
   if (v.type === "DATA_CORRECTION") {
     const u = (v.sourceUrl ?? "").trim();
-    if (!u) {
-      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sourceUrl"], message: "A source URL is required for data corrections." });
-    } else if (!/^https?:\/\//i.test(u)) {
+    const st = (v.sourceText ?? "").trim();
+    if (!u && !st) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sourceUrl"], message: "A source is required for data corrections: a link or a written reference." });
+    } else if (u && !/^https?:\/\//i.test(u)) {
       ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sourceUrl"], message: "Source URL must start with http(s)://" });
+    }
+  }
+  // FIELD_EXPERIENCE must say what was actually applied.
+  if (v.type === "FIELD_EXPERIENCE") {
+    if (!(v.appliedText ?? "").trim()) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["appliedText"], message: "Please tell us what you applied." });
     }
   }
 });
@@ -111,6 +125,11 @@ export async function POST(req: NextRequest) {
         issueText: v.issueText?.trim() || null,
         submittedText: v.submittedText.trim(),
         sourceUrl: v.sourceUrl?.trim() || null,
+        sourceText: v.sourceText?.trim() || null,
+        district: v.district?.trim() || null,
+        variety: v.variety?.trim() || null,
+        appliedText: v.appliedText?.trim() || null,
+        yieldText: v.yieldText?.trim() || null,
         cropSlug: v.cropSlug?.trim() || null,
         contributorName: v.contributorName?.trim() || null,
         contributorImage: v.contributorImage?.trim() || null,

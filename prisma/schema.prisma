@@ -509,6 +509,7 @@ enum SuggestionType {
   TRANSLATION
   DATA_CORRECTION
   DATA_REQUEST
+  FIELD_EXPERIENCE // farmer's own field report — community tier only, NEVER a calculator source
 }
 
 enum SuggestionStatus {
@@ -526,7 +527,13 @@ model UserSuggestion {
   fieldKey         String?          // translation key / field reference
   issueText        String?          @db.Text // "what's wrong" description
   submittedText    String           @db.Text // the suggested correction / request
-  sourceUrl        String?          // REQUIRED for DATA_CORRECTION (official source)
+  sourceUrl        String?          // official link (one of sourceUrl/sourceText required for DATA_CORRECTION)
+  sourceText       String?          // written reference, e.g. "PAU Package of Practices 2024, p.23"
+  // Field-experience report (FIELD_EXPERIENCE only) — community tier, unverified
+  district         String?          // farmer's district/area
+  variety          String?          // crop variety, if known
+  appliedText      String?          @db.Text // what the farmer applied, e.g. "2 bags DAP + 1 bag urea per acre"
+  yieldText        String?          // result/yield, optional
   cropSlug         String?          // crop/vegetable/plant the suggestion is about
   // Contributor identity (optional, shown publicly ONLY after admin approval)
   contributorName  String?          // display name, provided voluntarily

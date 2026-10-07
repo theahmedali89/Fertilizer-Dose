@@ -7,6 +7,7 @@ const TYPE_LABELS: Record<string, string> = {
   TRANSLATION: "Translation",
   DATA_CORRECTION: "Data correction",
   DATA_REQUEST: "Data request",
+  FIELD_EXPERIENCE: "Field experience (community — never a calculator source)",
 };
 
 /**
@@ -16,6 +17,8 @@ const TYPE_LABELS: Record<string, string> = {
  * - TRANSLATION: admin copies the suggested text into locale files manually.
  * - DATA_*: admin verifies the cited source and enters data via the normal
  *   research flow (standing data gates apply).
+ * - FIELD_EXPERIENCE: community tier only — approved reports surface in the
+ *   community section marked unverified; NEVER a calculator source.
  */
 export default async function SuggestionsAdmin({
   params,
@@ -128,12 +131,39 @@ export default async function SuggestionsAdmin({
                 {s.submittedText}
               </div>
               {s.sourceUrl && (
-                <p className="text-xs mb-3 break-all">
+                <p className="text-xs mb-2 break-all">
                   <span className="font-semibold">Source: </span>
                   <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-leaf-700 hover:underline underline-offset-2 dark:text-leaf-300">
                     {s.sourceUrl}
                   </a>
                 </p>
+              )}
+              {s.sourceText && (
+                <p className="text-xs mb-2">
+                  <span className="font-semibold">Source (written): </span>
+                  <span className="text-ink-soft">{s.sourceText}</span>
+                </p>
+              )}
+              {(s.district || s.variety || s.appliedText || s.yieldText) && (
+                <div className="rounded-xl border border-harvest-200 bg-harvest-50 dark:border-harvest-800 dark:bg-harvest-950/40 p-3.5 mb-2 text-sm">
+                  <p className="font-semibold text-xs uppercase tracking-widest text-harvest-900 dark:text-harvest-200 mb-2">
+                    Field report — community tier, unverified
+                  </p>
+                  <dl className="space-y-1 text-[13px]">
+                    {s.district && (
+                      <div className="flex gap-2"><dt className="font-semibold shrink-0">District:</dt><dd className="text-ink-soft">{s.district}</dd></div>
+                    )}
+                    {s.variety && (
+                      <div className="flex gap-2"><dt className="font-semibold shrink-0">Variety:</dt><dd className="text-ink-soft">{s.variety}</dd></div>
+                    )}
+                    {s.appliedText && (
+                      <div className="flex gap-2"><dt className="font-semibold shrink-0">Applied:</dt><dd className="text-ink-soft whitespace-pre-wrap">{s.appliedText}</dd></div>
+                    )}
+                    {s.yieldText && (
+                      <div className="flex gap-2"><dt className="font-semibold shrink-0">Yield:</dt><dd className="text-ink-soft">{s.yieldText}</dd></div>
+                    )}
+                  </dl>
+                </div>
               )}
 
               <SuggestionActions id={s.id} status={s.status} />

@@ -16,7 +16,9 @@ export async function ContributorStrip({ cropSlug }: { cropSlug: string }) {
       where: {
         cropSlug,
         status: "APPROVED",
-        type: { in: ["DATA_CORRECTION", "DATA_REQUEST"] },
+        // Field-experience contributors earn their place here too — their
+        // approved reports appear in the community section (unverified tier).
+        type: { in: ["DATA_CORRECTION", "DATA_REQUEST", "FIELD_EXPERIENCE"] },
         contributorName: { not: null },
       },
       select: { contributorName: true, contributorImage: true, contributorToken: true },
