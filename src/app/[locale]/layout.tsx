@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
 import { CountrySelector } from "@/components/layout/CountrySelector";
 import { Footer } from "@/components/layout/Footer";
+import { TranslationNotice } from "@/components/TranslationNotice";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -105,6 +106,7 @@ export default async function LocaleLayout({
               Skip to content
             </a>
             <Header countrySelector={<CountrySelector />} />
+            {locale !== "en" && <TranslationNotice />}
             <main id="main-content">
               <div className="field-texture" aria-hidden="true" />
               {children}
