@@ -53,6 +53,12 @@
       "desc": "Enter available P and K, organic carbon and pH from your soil health card — the tool builds up low nutrients, maintains medium ones, and draws down high ones.",
       "cta": "Open the soil-test calculator →"
     },
+    "plantDoseCard": {
+      "eyebrow": "Potted plants?",
+      "title": "Dosing fertilizer for houseplants and container plants.",
+      "desc": "Mix water-soluble fertilizer by ppm — grams per litre and per pot — with extension-based feeding rates for gentle, regular and heavy feeders.",
+      "cta": "Open the plant dose calculator →"
+    },
     "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
     "metaDescription": "Calculate exact urea, DAP and MOP doses per acre, kanal, marla or hectare — see how many 50 kg bags you need for wheat, rice, maize and more crops.",
     "methodFaq": [
@@ -248,6 +254,110 @@
       {
         "q": "When should I not use the custom base dose?",
         "a": "The custom base option is generic guidance only — a starting point for crops with no verified recommendation in our database. If a verified crop×region dose exists, always use that instead; verified figures carry their published source."
+      }
+    ]
+  },
+  "plantDose": {
+    "eyebrow": "Home gardening tool",
+    "title": "How to Dose Fertilizer for Plants",
+    "desc": "A free plant dose calculator for potted and garden plants: mix the right amount of water-soluble fertilizer per litre of water, based on university extension feeding rates.",
+    "faqTitle": "Plant fertilizer dosing — FAQs",
+    "metaTitle": "How to Dose Fertilizer for Plants — Plant Dose Calculator",
+    "metaDescription": "Learn how to dose fertilizer for plants with our free calculator. Get the right fertilizer dose for potted plants in grams per litre — extension-based feeding rates for houseplants and container plants.",
+    "form": {
+      "grade": "Fertilizer grade (N-P-K)",
+      "gradeHint": "The three numbers printed on the bag, e.g. 20-20-20.",
+      "custom": "Custom grade…",
+      "nitrogen": "N %",
+      "phosphorus": "P₂O₅ %",
+      "potash": "K₂O %",
+      "strength": "Feeding strength",
+      "strengthHint": "Target nitrogen concentration in the watering solution. Presets use the conservative end of published extension ranges.",
+      "customPpm": "Custom ppm…",
+      "targetPpm": "Target nitrogen (ppm)",
+      "targetPpmHint": "Milligrams of nitrogen per litre of water. Most houseplants do well at 100–150 ppm; never exceed 300 ppm without a specific recommendation.",
+      "presetSource": "Source: {source}",
+      "litres": "Water to prepare (litres)",
+      "litresHint": "Size of your watering can or tank.",
+      "potSize": "Pot size (for per-pot dose)",
+      "potSizeHint": "Approximate soil volume of a standard nursery pot.",
+      "potOption": "{cm} cm pot",
+      "customGradeLabel": "{n}-{p}-{k}",
+      "submit": "Calculate plant dose"
+    },
+    "presets": {
+      "gentle": {
+        "label": "Gentle — {ppm} ppm N (houseplants, slow growers)"
+      },
+      "regular": {
+        "label": "Regular — {ppm} ppm N (most container plants)"
+      },
+      "heavy": {
+        "label": "Heavy — {ppm} ppm N (vigorous, heavy feeders)"
+      }
+    },
+    "results": {
+      "title": "Your plant dose",
+      "guidanceBadge": "General guidance",
+      "perLitre": "Dissolve per litre",
+      "total": "Total for {litres} L",
+      "totalHint": "Stir until fully dissolved; use within a day.",
+      "perPot": "Per {cm} cm pot",
+      "perPotHint": "Approximate — pot volumes vary by manufacturer.",
+      "kitchenApprox": "{tsp} — a guide, not a measure; weigh for accuracy.",
+      "quarterTsp": "About ¼ tsp per litre",
+      "oneTsp": "About 1 tsp per litre",
+      "manyTsp": "About {n} tsp per litre",
+      "burnTitle": "Avoid fertilizer burn",
+      "burnBody": "More is not better: excess salts burn roots and leaf edges. Start at the gentle rate for new or stressed plants, water the pot first if the medium is bone dry, and always let excess solution drain away. If a product label gives a different rate, follow the label.",
+      "formulaNote": "Math: {grade} at {ppm} ppm N → grams per litre = {ppm} ÷ (%N × 10).",
+      "invalid": "Please check your inputs: nitrogen % must be 1–60, target 1–1000 ppm, and water above 0 litres."
+    },
+    "method": {
+      "eyebrow": "How it works",
+      "title": "Dosing by ppm, the way growers do it",
+      "desc": "Commercial growers don't guess spoonfuls — they mix fertilizer to a target nutrient concentration in parts per million (ppm). This calculator brings the same method to home gardeners.",
+      "steps": [
+        {
+          "t": "Pick your fertilizer grade",
+          "d": "Read the N-P-K numbers off the bag, e.g. 20-20-20, or enter a custom grade."
+        },
+        {
+          "t": "Choose a feeding strength",
+          "d": "Houseplants and slow growers thrive on gentle rates (~100 ppm N); most container plants on regular rates (~150 ppm N); vigorous heavy feeders can take ~200 ppm N."
+        },
+        {
+          "t": "Mix and water normally",
+          "d": "Dissolve the calculated grams in your watering can and water as usual, letting excess drain. Feed every watering at these rates, or half as often at double strength — never both."
+        }
+      ]
+    },
+    "sources": {
+      "eyebrow": "Sources",
+      "title": "Where the feeding rates come from",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): bedding plants 200–250 ppm N constant feed; slow-growing types 100–150 ppm N until established.",
+        "Michigan State University Extension (E2186): container-grown plants — slow-release fertilizer plus supplemental liquid feed at 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": the g/L = ppm ÷ (%N × 10) formula and worked 200 ppm N example."
+      ],
+      "note": "Presets use the low end of each published range, the conservative choice for home light levels. Always follow your product's label and your local extension service's advice."
+    },
+    "faq": [
+      {
+        "q": "How much fertilizer do potted plants need?",
+        "a": "Most potted plants do well with a watering solution of 100–150 ppm nitrogen — roughly 0.5–1 g of 20-20-20 per litre of water. Heavy feeders like vigorous flowering annuals can take up to 200 ppm. Start gentle; you can always increase next time."
+      },
+      {
+        "q": "Can I just use a spoon instead of weighing?",
+        "a": "A level teaspoon of granular fertilizer is roughly 5–6 g, but density varies by product, so spoons are only a rough guide. For small pots and seedlings, a cheap gram scale is far more reliable — a 50% spoon error is easy and enough to burn roots."
+      },
+      {
+        "q": "Should I fertilize every time I water?",
+        "a": "At the gentle and regular rates above, yes — that is how commercial growers do it (\"fertigate\"). The alternative is feeding half as often at double strength. Don't do both: pick one schedule and watch the plants."
+      },
+      {
+        "q": "What are the signs of too much fertilizer?",
+        "a": "Brown, crispy leaf edges, wilting despite wet soil, and a white crust on the medium surface. If you see these, flush the pot with plain water until it runs freely from the drainage holes, and skip the next feeding."
       }
     ]
   },
@@ -474,7 +584,8 @@
     "login": "Log in",
     "account": "Account",
     "admin": "Admin",
-    "logout": "Log out"
+    "logout": "Log out",
+    "plantDoseCalculator": "Plant Dose Calculator"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
@@ -530,7 +641,12 @@
     "filterMonth": "Planting month",
     "anyMonth": "Any month",
     "allCountries": "All countries",
-    "allRegions": "All regions"
+    "allRegions": "All regions",
+    "plantDoseCard": {
+      "title": "How much fertilizer does a potted plant need?",
+      "desc": "Mix water-soluble fertilizer by ppm — grams per litre and per pot — with extension-based feeding rates.",
+      "cta": "Open the plant dose calculator →"
+    }
   },
   "calendar": {
     "metaTitle": "Planting Calendar — What to Grow This Month",

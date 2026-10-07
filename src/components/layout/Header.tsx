@@ -36,6 +36,7 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
   const TOOL_LINKS = [
     { href: "/calculator", label: t("calculator") },
     { href: "/soil-test-calculator", label: t("soilTestCalculator") },
+    { href: "/plant-dose-calculator", label: t("plantDoseCalculator") },
     { href: "/profit-calculator", label: t("profitCalculator") },
     { href: "/compare", label: t("compare") },
   ];

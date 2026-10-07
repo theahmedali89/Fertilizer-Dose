@@ -76,6 +76,25 @@ export default async function CalculatorPage({
         </Card>
       </Section>
 
+      <Section
+        eyebrow={t("plantDoseCard.eyebrow")}
+        title={t("plantDoseCard.title")}
+      >
+        <Card className="max-w-2xl border-leaf-200 dark:border-leaf-800 bg-leaf-50/60 dark:bg-leaf-950/30">
+          <CardBody className="flex flex-wrap items-center justify-between gap-4">
+            <p className="text-sm text-ink-soft max-w-md leading-relaxed">
+              {t("plantDoseCard.desc")}
+            </p>
+            <Link
+              href="/plant-dose-calculator"
+              className="inline-flex items-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-5 py-3 text-sm font-bold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors"
+            >
+              {t("plantDoseCard.cta")}
+            </Link>
+          </CardBody>
+        </Card>
+      </Section>
+
       <div className="bg-surface border-t border-line">
         <Section
           eyebrow={t("method.eyebrow")}

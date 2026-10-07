@@ -1,5 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Link from "next/link";
 import { Section } from "@/components/ui/Section";
+import { Card, CardBody } from "@/components/ui/Card";
 import { GrowingIndex } from "./GrowingIndex";
 import {
   CATEGORY_META,
@@ -52,6 +54,27 @@ export async function GrowingIndexPage({
           </p>
         </div>
       </section>
+
+      {category === "plant" && (
+        <Section>
+          <Card className="border-leaf-200 dark:border-leaf-800 bg-leaf-50/60 dark:bg-leaf-950/30">
+            <CardBody className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p className="font-semibold">{t("plantDoseCard.title")}</p>
+                <p className="mt-1 text-sm text-ink-soft max-w-xl leading-relaxed">
+                  {t("plantDoseCard.desc")}
+                </p>
+              </div>
+              <Link
+                href="/plant-dose-calculator"
+                className="inline-flex items-center gap-2 rounded-xl bg-leaf-700 dark:bg-leaf-600 px-5 py-3 text-sm font-bold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors"
+              >
+                {t("plantDoseCard.cta")}
+              </Link>
+            </CardBody>
+          </Card>
+        </Section>
+      )}
 
       <Section>
         <GrowingIndex

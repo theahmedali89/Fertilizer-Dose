@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/planting-calendar/india", priority: 0.6, changeFrequency: "monthly" as const },
     { path: "/my-garden", priority: 0.6, changeFrequency: "weekly" as const },
     { path: "/profit-calculator", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/plant-dose-calculator", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/compare", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" as const },
     { path: "/fertilizer-dose-chart", priority: 0.7, changeFrequency: "monthly" as const },
