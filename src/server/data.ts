@@ -231,7 +231,14 @@ export async function getPost(slug: string): Promise<BlogPost | undefined> {
 export async function getCrops(): Promise<CropInfo[]> {
   return tryDb(async () => {
     const items = await getGrowingItems();
-    const crops = items.filter((i) => i.category === "crop");
+    // Field crops + orchard/fruit plants (citrus, grape, olive…): in PK/IN
+    // these are field-scale acreage crops, so the dose calculator covers them.
+    // They keep their "plant" taxonomy (plants section unaffected); only the
+    // calculator's selectable list is widened. Items without verified NPK
+    // stay locked (disabled) via the CalculatorForm's !c.npk check.
+    const crops = items.filter(
+      (i) => i.category === "crop" || (i.category === "plant" && i.plantSubcategory === "fruit")
+    );
     if (!crops.length) return STATIC_CROPS;
 
     // Get verified fertilizer recommendations to populate NPK data.
