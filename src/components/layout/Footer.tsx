@@ -39,6 +39,7 @@ export function Footer() {
       title: t("company"),
       links: [
         { href: "/about", label: t("links.about") },
+        { href: "/contributors", label: t("links.contributors") },
         { href: "/contact", label: t("links.contact") },
         { href: "/privacy", label: t("links.privacy") },
         { href: "/terms", label: t("links.terms") },

@@ -14,6 +14,16 @@ const bodySchema = z.object({
   submittedText: z.string().trim().min(3).max(5000),
   sourceUrl: z.string().trim().max(1000).optional().nullable(),
   cropSlug: z.string().trim().max(120).optional().nullable(),
+  // Contributor identity (optional — shown publicly ONLY after admin approval)
+  contributorName: z.string().trim().max(80).optional().nullable(),
+  contributorImage: z
+    .string()
+    .trim()
+    .max(300)
+    .regex(/^\/uploads\/contributors\/[a-f0-9]{32}\.(jpg|png|webp|gif)$/, "Invalid image reference.")
+    .optional()
+    .nullable(),
+  contributorToken: z.string().trim().max(100).optional().nullable(),
   // Honeypot — real users never fill this; bots do.
   website: z.string().max(200).optional().nullable(),
 }).superRefine((v, ctx) => {
@@ -78,6 +88,20 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    // Trusted-tier fast-track: contributors with 5+ approved suggestions get
+    // priority queue placement. Queue prioritization only — approval standards
+    // are unchanged.
+    let priority = false;
+    const token = v.contributorToken?.trim() || null;
+    if (token) {
+      try {
+        const c = await db.contributor.findUnique({ where: { token }, select: { approvedCount: true } });
+        if (c && c.approvedCount >= 5) priority = true;
+      } catch {
+        /* contributor lookup failure must not block the suggestion */
+      }
+    }
+
     await db.userSuggestion.create({
       data: {
         type: v.type,
@@ -88,6 +112,10 @@ export async function POST(req: NextRequest) {
         submittedText: v.submittedText.trim(),
         sourceUrl: v.sourceUrl?.trim() || null,
         cropSlug: v.cropSlug?.trim() || null,
+        contributorName: v.contributorName?.trim() || null,
+        contributorImage: v.contributorImage?.trim() || null,
+        contributorToken: token,
+        priority,
         // status defaults to PENDING — never set anything else here.
       },
     });

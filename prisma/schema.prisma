@@ -518,18 +518,41 @@ enum SuggestionStatus {
 }
 
 model UserSuggestion {
-  id            String           @id @default(cuid())
-  type          SuggestionType
-  status        SuggestionStatus @default(PENDING)
-  locale        String?          // translation locale, e.g. "ur"
-  pageUrl       String?          // page the suggestion refers to
-  fieldKey      String?          // translation key / field reference
-  issueText     String?          @db.Text // "what's wrong" description
-  submittedText String           @db.Text // the suggested correction / request
-  sourceUrl     String?          // REQUIRED for DATA_CORRECTION (official source)
-  cropSlug      String?          // crop/vegetable/plant the suggestion is about
-  createdAt     DateTime         @default(now())
+  id               String           @id @default(cuid())
+  type             SuggestionType
+  status           SuggestionStatus @default(PENDING)
+  locale           String?          // translation locale, e.g. "ur"
+  pageUrl          String?          // page the suggestion refers to
+  fieldKey         String?          // translation key / field reference
+  issueText        String?          @db.Text // "what's wrong" description
+  submittedText    String           @db.Text // the suggested correction / request
+  sourceUrl        String?          // REQUIRED for DATA_CORRECTION (official source)
+  cropSlug         String?          // crop/vegetable/plant the suggestion is about
+  // Contributor identity (optional, shown publicly ONLY after admin approval)
+  contributorName  String?          // display name, provided voluntarily
+  contributorImage String?          // /uploads/contributors/<hash>.<ext>
+  contributorToken String?          // anonymous stable token (localStorage) for badge counting
+  priority         Boolean          @default(false) // fast-track: trusted-tier contributor
+  createdAt        DateTime         @default(now())
 
   @@index([status])
   @@index([type, status])
+  @@index([contributorToken])
+  @@index([cropSlug, status])
+}
+
+// Non-monetary contributor rewards for the crowd-sourced suggestion system.
+// One row per anonymous contributor token. approvedCount counts APPROVED
+// suggestions only; levels are computed from it (see src/lib/contributors.ts).
+// A contributor's name/photo appears publicly ONLY via approved suggestions.
+model Contributor {
+  id            String   @id @default(cuid())
+  token         String   @unique // anonymous token from the submitter's browser
+  name          String?  // latest display name provided
+  imageUrl      String?  // latest photo path provided
+  approvedCount Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([approvedCount])
 }

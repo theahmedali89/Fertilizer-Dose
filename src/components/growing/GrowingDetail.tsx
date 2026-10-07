@@ -11,6 +11,7 @@ import {
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 import { SuggestButton } from "@/components/suggestions/SuggestButton";
+import { ContributorStrip } from "@/components/suggestions/ContributorStrip";
 
 function NoData({ title, hint }: { title: string; hint: string }) {
   return (
@@ -148,6 +149,9 @@ export async function GrowingDetail({
                 )}
               </CardBody>
             </Card>
+
+            {/* Community contributors — approved suggestions only */}
+            <ContributorStrip cropSlug={item.slug} />
 
             {/* Growing conditions */}
             {hasConditions && (

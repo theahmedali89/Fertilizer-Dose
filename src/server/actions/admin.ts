@@ -456,11 +456,53 @@ export async function setUserRole(userId: string, role: "USER" | "EDITOR" | "ADM
 /* ── User suggestions (crowd-sourced review queue) ── */
 
 /**
+ * Sync the Contributor aggregate when a suggestion's review status changes.
+ * - PENDING/REJECTED → APPROVED: create-or-update the contributor row,
+ *   increment approvedCount, refresh name/photo from the latest submission.
+ * - APPROVED → REJECTED: decrement (keeps counts honest).
+ * Only suggestions carrying a contributorToken are tracked — anonymous
+ * submissions without a token simply don't earn badges.
+ */
+async function syncContributorOnStatusChange(
+  prev: "PENDING" | "APPROVED" | "REJECTED",
+  next: "APPROVED" | "REJECTED",
+  s: { contributorToken: string | null; contributorName: string | null; contributorImage: string | null }
+) {
+  const token = s.contributorToken?.trim();
+  if (!token) return;
+  try {
+    if (next === "APPROVED" && prev !== "APPROVED") {
+      await db.contributor.upsert({
+        where: { token },
+        create: {
+          token,
+          name: s.contributorName,
+          imageUrl: s.contributorImage,
+          approvedCount: 1,
+        },
+        update: {
+          name: s.contributorName ?? undefined,
+          imageUrl: s.contributorImage ?? undefined,
+          approvedCount: { increment: 1 },
+        },
+      });
+    } else if (next === "REJECTED" && prev === "APPROVED") {
+      const c = await db.contributor.findUnique({ where: { token }, select: { approvedCount: true } });
+      if (c && c.approvedCount > 0) {
+        await db.contributor.update({ where: { token }, data: { approvedCount: { decrement: 1 } } });
+      }
+    }
+  } catch {
+    // Contributor sync must never break the review action itself.
+  }
+}
+
+/**
  * Approve or reject a user suggestion.
  * SAFETY: approving does NOT publish anything automatically.
  * - TRANSLATION: admin copies the suggested text into locale files manually.
  * - DATA_*: admin verifies and enters data through the normal research flow.
- * This action only flips the review status.
+ * This action only flips the review status (+ updates contributor badges).
  */
 export async function setSuggestionStatus(
   id: string,
@@ -468,7 +510,13 @@ export async function setSuggestionStatus(
 ): Promise<ActionResult> {
   await guard();
   try {
+    const prev = await db.userSuggestion.findUnique({
+      where: { id },
+      select: { status: true, contributorToken: true, contributorName: true, contributorImage: true },
+    });
+    if (!prev) return fail("Suggestion not found.");
     await db.userSuggestion.update({ where: { id }, data: { status } });
+    await syncContributorOnStatusChange(prev.status, status, prev);
   } catch {
     return fail("Could not update suggestion status.");
   }
@@ -479,7 +527,15 @@ export async function setSuggestionStatus(
 export async function deleteSuggestion(id: string): Promise<ActionResult> {
   await guard();
   try {
-    await db.userSuggestion.delete({ where: { id } });
+    const prev = await db.userSuggestion.findUnique({
+      where: { id },
+      select: { status: true, contributorToken: true, contributorName: true, contributorImage: true },
+    });
+    if (prev) {
+      // Deleting an approved suggestion revokes its badge credit.
+      await syncContributorOnStatusChange(prev.status, "REJECTED", prev);
+      await db.userSuggestion.delete({ where: { id } });
+    }
   } catch {
     return fail("Could not delete suggestion.");
   }

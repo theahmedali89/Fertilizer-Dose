@@ -33,7 +33,8 @@ export default async function SuggestionsAdmin({
     ? await db.userSuggestion
         .findMany({
           where: filter ? { status: filter as "APPROVED" | "REJECTED" } : undefined,
-          orderBy: [{ status: "asc" }, { createdAt: "desc" }],
+          // Priority (trusted-tier contributors) first, then pending-first.
+          orderBy: [{ priority: "desc" }, { status: "asc" }, { createdAt: "desc" }],
         })
         .catch(() => [])
     : [];
@@ -87,6 +88,20 @@ export default async function SuggestionsAdmin({
                   {TYPE_LABELS[s.type] ?? s.type}
                 </span>
                 <StatusBadge status={s.status} />
+                {s.priority && s.status === "PENDING" && (
+                  <span className="inline-flex items-center rounded-full bg-harvest-100 dark:bg-harvest-950/60 border border-harvest-300 dark:border-harvest-800 px-2.5 py-0.5 text-xs font-bold text-harvest-900 dark:text-harvest-200">
+                    ⚡ Priority review
+                  </span>
+                )}
+                {s.contributorName && (
+                  <span className="inline-flex items-center gap-1.5 text-xs text-ink-soft">
+                    {s.contributorImage && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={s.contributorImage} alt="" className="h-5 w-5 rounded-full object-cover border border-line" />
+                    )}
+                    by {s.contributorName}
+                  </span>
+                )}
                 {s.locale && (
                   <span className="text-xs text-ink-faint">locale: {s.locale}</span>
                 )}

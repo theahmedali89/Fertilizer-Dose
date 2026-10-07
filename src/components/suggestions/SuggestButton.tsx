@@ -77,9 +77,50 @@ function SuggestionModal({
   const [submittedText, setSubmittedText] = useState("");
   const [sourceUrl, setSourceUrl] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  // Contributor identity (optional) — shown publicly ONLY if approved.
+  const [contributorName, setContributorName] = useState("");
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [imageError, setImageError] = useState("");
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+
+  // Anonymous stable token so approved suggestions can be counted toward
+  // badges without requiring login. Created once, kept in this browser.
+  const [contributorToken] = useState(() => {
+    if (typeof window === "undefined") return "";
+    try {
+      let tok = window.localStorage.getItem("fd-contributor-token");
+      if (!tok) {
+        tok = `c_${Math.random().toString(36).slice(2)}${Date.now().toString(36)}`;
+        window.localStorage.setItem("fd-contributor-token", tok);
+      }
+      return tok;
+    } catch {
+      return "";
+    }
+  });
+
+  const onImageChange = (f: File | null) => {
+    setImageError("");
+    if (imagePreview) URL.revokeObjectURL(imagePreview);
+    if (!f) {
+      setImageFile(null);
+      setImagePreview(null);
+      return;
+    }
+    if (!/^image\/(jpeg|png|webp|gif)$/.test(f.type)) {
+      setImageError(t("imageTypeError"));
+      return;
+    }
+    if (f.size > 2 * 1024 * 1024) {
+      setImageError(t("imageSizeError"));
+      return;
+    }
+    setImageFile(f);
+    setImagePreview(URL.createObjectURL(f));
+  };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -106,6 +147,19 @@ function SuggestionModal({
     }
     setSending(true);
     try {
+      // Upload the photo first (if any), then attach its URL to the suggestion.
+      let contributorImage: string | null = null;
+      if (imageFile) {
+        const fd = new FormData();
+        fd.append("image", imageFile);
+        const up = await fetch("/api/suggestions/upload", { method: "POST", body: fd });
+        const upBody = await up.json().catch(() => ({}));
+        if (!up.ok || !upBody.url) {
+          setError(upBody.error ?? t("imageUploadError"));
+          return;
+        }
+        contributorImage = upBody.url;
+      }
       const res = await fetch("/api/suggestions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -117,6 +171,9 @@ function SuggestionModal({
           submittedText: submittedText.trim(),
           sourceUrl: sourceUrl.trim() || null,
           cropSlug: cropSlug ?? null,
+          contributorName: contributorName.trim() || null,
+          contributorImage,
+          contributorToken: contributorToken || null,
           [HONEYPOT]: honeypot,
         }),
       });
@@ -215,6 +272,58 @@ function SuggestionModal({
                 />
               </Field>
             )}
+
+            {/* Contributor identity — optional, public only if approved */}
+            <div className="rounded-xl border border-line bg-surface-2/60 p-4 space-y-3">
+              <p className="text-sm font-semibold">{t("creditTitle")}</p>
+              <Field label={t("yourName")}>
+                <Input
+                  value={contributorName}
+                  onChange={(e) => setContributorName(e.target.value)}
+                  placeholder={t("yourNamePlaceholder")}
+                  maxLength={80}
+                />
+              </Field>
+              <Field label={t("yourPhoto")} hint={t("photoHint")}>
+                <div className="flex items-center gap-3">
+                  {imagePreview ? (
+                    <img
+                      src={imagePreview}
+                      alt=""
+                      className="h-14 w-14 rounded-full object-cover border border-line"
+                    />
+                  ) : (
+                    <span className="grid h-14 w-14 place-items-center rounded-full border border-dashed border-line text-xl text-ink-faint" aria-hidden>
+                      👤
+                    </span>
+                  )}
+                  <label className="cursor-pointer rounded-xl border border-line bg-surface px-4 py-2 text-sm font-semibold text-ink-soft hover:bg-surface-2">
+                    {imageFile ? t("changePhoto") : t("choosePhoto")}
+                    <input
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp,image/gif"
+                      className="hidden"
+                      onChange={(e) => onImageChange(e.target.files?.[0] ?? null)}
+                    />
+                  </label>
+                  {imageFile && (
+                    <button
+                      type="button"
+                      onClick={() => onImageChange(null)}
+                      className="text-sm text-ink-faint hover:text-ink underline underline-offset-2"
+                    >
+                      {t("removePhoto")}
+                    </button>
+                  )}
+                </div>
+                {imageError && (
+                  <p role="alert" className="text-xs font-medium text-red-700 dark:text-red-400 mt-1.5">
+                    {imageError}
+                  </p>
+                )}
+              </Field>
+              <p className="text-xs text-ink-faint leading-relaxed">{t("consentNote")}</p>
+            </div>
 
             {/* Honeypot — hidden from real users */}
             <input
