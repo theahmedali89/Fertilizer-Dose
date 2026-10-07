@@ -17,6 +17,7 @@ import { seedBatch3 } from "./seed-batch3";
 import { seedBatch4 } from "./seed-batch4";
 import { seedBatch5 } from "./seed-batch5";
 import { seedBatch6 } from "./seed-batch6";
+import { seedBatch7 } from "./seed-batch7";
 import { seedTranslations } from "./seed-translations";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
@@ -274,6 +275,9 @@ async function main() {
 
   // ── Batch 6 agricultural data (canola/sugar-beet/jute/durum-wheat/coffee × IN/PK) — idempotent, approved 2026-10-06 ──
   await seedBatch6(db);
+
+  // ── Batch 7: held-record resolutions + rye/triticale/rubber/oil-palm — idempotent, approved 2026-10-07 ──
+  await seedBatch7(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
