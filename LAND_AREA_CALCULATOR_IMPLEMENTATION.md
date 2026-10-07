@@ -78,3 +78,30 @@ No DB model was needed (universal constants + 2 verified regional units live in 
 4. **No separate `/land-area-converter` page** — converter is a mode on the main page (avoids thin duplicate per the anti-cannibalization rule).
 5. **Translations**: `landArea` namespace is English-only; 17 locales fall back to English until professional review.
 6. **No DB migration** — nothing to apply on deploy; purely additive code.
+
+## 9. Phase E — Map Area Calculator (implemented 2026-10-07)
+
+**Status:** Complete. Ahmed approved ("yeh tamam kaam start kr do", 2026-10-07).
+**Route:** `/map-area-calculator` (top-level, per Ahmed — no `/tools/` folder).
+
+**Library choice: Leaflet + OpenStreetMap** (free, no API keys, no billing).
+- Rejected Google Maps (billing account required, affiliation/terms risk).
+- Leaflet CSS + JS load ONLY when the user clicks "Start Measuring" (`next/dynamic` ssr:false → `MapView`); nothing map-related touches initial page load.
+- OSM standard tiles with required attribution rendered on-map.
+- Draggable markers via `L.marker` + `divIcon` (no image assets — default Leaflet PNGs break under bundlers).
+- Touch-friendly: tap places points, drag edits, numbered chips remove points.
+
+**Geodesic math (`src/lib/geoArea.ts`, pure + dependency-free):**
+- Spherical-excess polygon area (Chamberlain & Duquette): `A = |R²/2 · Σ(λ₂−λ₁)(2+sinφ₁+sinφ₂)|`, IUGG mean radius 6371008.8 m.
+- Never naive flat-pixel/planar geometry (longitude degrees shrink with latitude).
+- Tests (`scripts/geo-area-tests.ts`): **14 passed, 0 failed** — 1-ha square at equator ≈ 10,000 m²; same square at 45°N ≈ 10,000 m² (the regression test proving latitude-independence); right triangle ≈ 5,000 m²; perimeter ≈ 400 m; winding-order invariance; degenerate/invalid inputs → null.
+
+**Interactions:** click/tap place points · drag to edit · undo last · clear all · remove per-point chips · geolocate (centers map ONLY — never becomes a boundary point) · live area + equivalents (m², acres, hectares, Kanal/Marla when country=PK, via existing `equivalentAreas`).
+
+**Transfer:** "Use This Area" → `/land-area-calculator?area=<sqm>&unit=sqm`; a dismissible `MapTransferBanner` there offers onward transfer to `/calculator` and `/profit-calculator` (validated pre-fill pattern). Only the area number travels — coordinates never leave the device, never in URLs.
+
+**Honesty:** "Estimate" badge everywhere; precision note (not survey-grade; legal boundaries need a qualified surveyor); privacy note; explicit "not Google Maps, no affiliation" copy on-page and in FAQ.
+
+**SEO:** title "Free Acreage Calculator Map — Measure Land Area on Map"; 5 genuine FAQs; sitemap entry; hreflang; RelatedTools now 8 tools (grid adjusted to 4 cols); header Tools dropdown entry; English-only `mapArea` namespace (other locales fall back).
+
+**Remaining limitation:** DB-backed suggestion rendering for related pages couldn't be smoke-tested locally (no localhost DB) — exercises live on deploy.

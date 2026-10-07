@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LandAreaForm } from "@/components/landArea/LandAreaForm";
+import { MapTransferBanner } from "@/components/mapArea/MapTransferBanner";
 import { RelatedTools } from "@/components/tools/RelatedTools";
 import { Section } from "@/components/ui/Section";
 import { Accordion } from "@/components/ui/Accordion";
@@ -50,6 +52,9 @@ export default async function LandAreaCalculatorPage({
       </section>
 
       <Section>
+        <Suspense fallback={null}>
+          <MapTransferBanner />
+        </Suspense>
         <LandAreaForm />
       </Section>
 

@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/profit-calculator", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/plant-dose-calculator", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/land-area-calculator", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/map-area-calculator", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/kitchen-garden", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/compare", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" as const },

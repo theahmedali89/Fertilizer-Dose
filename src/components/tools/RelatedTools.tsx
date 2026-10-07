@@ -1,5 +1,5 @@
 /**
- * RelatedTools — shared cross-linking card for all seven agricultural tools.
+ * RelatedTools — shared cross-linking card for all eight agricultural tools.
  * Ahmed's explicit order: every tool page links to the other tools.
  * Compact, tasteful, one section per tool page. The current page is shown
  * as non-clickable (aria-current) to avoid a self-link.
@@ -14,6 +14,7 @@ const TOOLS = [
   { href: "/soil-test-calculator", navKey: "soilTestCalculator" },
   { href: "/plant-dose-calculator", navKey: "plantDoseCalculator" },
   { href: "/land-area-calculator", navKey: "landAreaCalculator" },
+  { href: "/map-area-calculator", navKey: "mapAreaCalculator" },
   { href: "/kitchen-garden", navKey: "kitchenGarden" },
   { href: "/profit-calculator", navKey: "profitCalculator" },
   { href: "/compare", navKey: "compare" },
@@ -25,7 +26,7 @@ export function RelatedTools({ current }: { current: string }) {
   return (
     <div className="bg-surface border-t border-line">
       <Section eyebrow={t("relatedTitle")}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {TOOLS.map((tool) => {
             const isCurrent = tool.href === current;
             const label = tNav(tool.navKey);
