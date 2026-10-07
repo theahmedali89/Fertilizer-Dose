@@ -528,7 +528,7 @@
         }
       ],
       "subtitle": "Fertilizer Dose turns published agronomic recommendations into precise per-acre, per-kanal and per-marla fertilizer doses — with real data, every calculation shown, and nothing invented.",
-      "tagline": "Fertilizer dose, done right",
+      "tagline": "How to dose fertilizer for plants & crops, done right",
       "title": "Know exactly how much <em>fertilizer</em> your crop needs."
     },
     "tools": {
@@ -631,6 +631,7 @@
     "calculateDose": "Calculate Dose",
     "calculator": "Dose Calculator",
     "closeMenu": "Close menu",
+    "country": "Country",
     "crops": "Crops",
     "faq": "FAQ",
     "fertilizers": "Fertilizers",

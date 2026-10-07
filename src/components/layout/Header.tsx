@@ -131,8 +131,10 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
               })}
             </nav>
             <div className="flex items-center gap-2.5">
-              {countrySelector}
-              <LanguageSwitcher />
+              <div className="hidden lg:block">{countrySelector}</div>
+              <div className="hidden lg:block">
+                <LanguageSwitcher />
+              </div>
               <ThemeToggle />
               <AuthButtons />
               <Link
@@ -282,6 +284,12 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
             })}
           </nav>
           <div className="p-5 border-t border-line space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-bold uppercase tracking-widest text-ink-faint shrink-0">
+                {t("country")}
+              </span>
+              <div className="flex-1 min-w-0">{countrySelector}</div>
+            </div>
             <div className="flex items-center gap-3">
               <span className="text-xs font-bold uppercase tracking-widest text-ink-faint shrink-0">
                 {tLang("label")}

@@ -22,11 +22,10 @@ export function localizedMetadata({
 }): Metadata {
   const canonical = `${siteConfig.url}${localizePath(path, locale)}`;
   // UI chrome is translated for all 18 locales, but long-form data content
-  // (fertilizer/crop descriptions etc.) is still English-only. Until data
-  // content is translated per-locale, keep non-English variants out of the
-  // index to avoid thin/duplicate content. Revisit per-locale when data
-  // translations ship.
-  const indexable = locale === "en";
+  // Non-English locales are machine-translated drafts with a visible
+  // disclaimer banner. Per Ahmed's directive 2026-10-07 they are indexable
+  // so the app can earn traffic from those countries; quality risk accepted.
+  const indexable = true;
   return {
     // Absolute title: includes the brand suffix here because a child string
     // title would otherwise discard the layout's template on merge.

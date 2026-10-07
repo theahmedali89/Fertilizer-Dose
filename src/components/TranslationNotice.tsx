@@ -36,7 +36,7 @@ export function TranslationNotice() {
   return (
     <div
       role="note"
-      className="border-b border-harvest-200 bg-harvest-50 px-4 py-2 text-center text-xs text-harvest-900 dark:border-harvest-800 dark:bg-harvest-950/40 dark:text-harvest-200"
+      className="border-b border-line bg-surface-2/70 px-4 py-1.5 text-center text-[11px] text-ink-soft dark:bg-surface-2/40"
     >
       <span>
         This page is automatically translated and under review — the English
@@ -49,7 +49,7 @@ export function TranslationNotice() {
         type="button"
         onClick={dismiss}
         aria-label="Dismiss translation notice"
-        className="ml-3 rounded px-1.5 py-0.5 font-semibold hover:bg-harvest-100 dark:hover:bg-harvest-900"
+        className="ml-2 rounded px-1 py-0.5 font-semibold text-ink-faint hover:bg-surface hover:text-ink"
       >
         ✕
       </button>
