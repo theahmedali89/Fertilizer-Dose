@@ -1,28 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 const KEY = "fd-translation-notice-dismissed";
 
-function initiallyVisible(): boolean {
+const emptySubscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
+function readDismissed(): boolean {
   if (typeof window === "undefined") return false;
   try {
-    return !window.localStorage.getItem(KEY);
+    return !!window.localStorage.getItem(KEY);
   } catch {
-    return true;
+    return false;
   }
 }
 
 /**
  * Shown on non-English locales only. The 17 non-English locales are
- * machine-translated drafts (professional review pending, pages noindexed).
+ * machine-translated drafts (professional review pending).
  * This honest banner tells the reader exactly that.
+ *
+ * Rendered client-side after mount (useSyncExternalStore) so SSR HTML
+ * matches hydration output — no mismatch flash.
  */
 export function TranslationNotice() {
-  const [visible, setVisible] = useState(initiallyVisible);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    getClientSnapshot,
+    getServerSnapshot
+  );
+  const [dismissed, setDismissed] = useState(readDismissed);
 
-  if (!visible) return null;
+  if (!mounted || dismissed) return null;
 
   const dismiss = () => {
     try {
@@ -30,7 +42,7 @@ export function TranslationNotice() {
     } catch {
       /* storage unavailable — just hide for this visit */
     }
-    setVisible(false);
+    setDismissed(true);
   };
 
   return (
