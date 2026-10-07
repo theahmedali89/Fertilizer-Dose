@@ -702,6 +702,8 @@ const vegetables: GrowingItem[] = [
   vegetable("napa-cabbage", "Napa Cabbage", "", "Brassica rapa subsp. pekinensis"),
   vegetable("radish", "Radish", "", "Raphanus sativus"),
   vegetable("daikon", "Daikon (Japanese Radish)", "", "Raphanus sativus var. longipinnatus"),
+  vegetable("potato", "Potato", "آلو", "Solanum tuberosum"),
+  vegetable("cabbage-chinese", "Chinese Cabbage", "", "Brassica rapa subsp. pekinensis"),
 ];
 
 /* ---------------- Plants (identity + subcategory — agronomics not yet verified) ---------------- */

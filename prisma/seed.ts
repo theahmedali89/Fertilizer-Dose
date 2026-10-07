@@ -19,6 +19,7 @@ import { seedBatch5 } from "./seed-batch5";
 import { seedBatch6 } from "./seed-batch6";
 import { seedBatch7 } from "./seed-batch7";
 import { seedBatch8 } from "./seed-batch8";
+import { seedVegplant } from "./seed-vegplant";
 import { seedTranslations } from "./seed-translations";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
@@ -282,6 +283,9 @@ async function main() {
 
   // ── Batch 8: citrus/grape/olive × PK/IN — idempotent, approved 2026-10-07 ("yes populate kro 8 bach") ──
   await seedBatch8(db);
+
+  // ── Vegetable planting windows (17 countries) — idempotent, approved 2026-10-07 ("han kro") ──
+  await seedVegplant(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
