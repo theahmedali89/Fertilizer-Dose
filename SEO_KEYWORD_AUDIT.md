@@ -24,7 +24,12 @@
 | 11 | Crop: soybean/groundnut | fertilizer dose for soybean per acre | groundnut fertilizer dose | Informational | `/crops/soybean`, `/crops/groundnut` | ⚠️ Live but noindex (identity-only, no verified dose) | None | Keep noindex until verified dose data lands; then flip `indexable` |
 | 12 | Products | dap dose per acre, urea dose per acre | dap vs urea, mop dose per acre, how much urea per acre, how much dap per acre, potash fertilizer dose, urea fertilizer for wheat, dap fertilizer for rice | Transactional/Informational | `/fertilizers/dap`, `/fertilizers/urea`, `/fertilizers/mop` … | ✅ Live | None — one page per fertilizer | Keep. Dose-per-acre intent also served contextually by `/calculator` |
 | 13 | Micronutrients | boron fertilizer dose per acre | zinc sulphate dose, micronutrient deficiency | Informational | `/guides/boron-fertilizer-dose` | ❌ Missing | None yet | **Content backlog:** blog-first, then guides |
-| 14 | Organic | organic fertilizer for plants | organic khad, compost vs chemical fertilizer | Informational | `/guides/organic-fertilizers` | ❌ Missing | None yet | **Content backlog:** blog-first, then guides |
+| 14 | Organic | organic fertilizer for plants | organic khad, compost vs chemical fertilizer | Informational | `/fertilizers/organic` (hub) + `/blog/organic-fertilizers-for-plants` | ✅ Live (2026-10-06/07) | None — hub = directory, blog = guide; distinct titles | Keep. Hub targets material/directory intent; blog targets guide intent |
+| 23 | Organic hub | organic fertilizer | organic fertilizers, natural fertilizer, jaivik khad | Informational | `/fertilizers/organic` | ✅ Live | **Avoided:** no separate `/organic-fertilizer` singular page — one canonical hub | Keep single hub |
+| 24 | Organic material | farmyard manure npk | fym npk content, gobar khad npk, farmyard manure composition | Informational | `/fertilizers/farmyard-manure` | ✅ Live | None — one page per material | Keep. Page shows TNAU/FAO typical ranges, never fixed values |
+| 25 | Organic compare | vermicompost vs chemical fertilizer | organic vs chemical fertilizer, compost vs urea | Commercial investigation | `/compare` (Organic vs mineral tab) + `/blog/organic-vs-chemical-fertilizer-pros-cons` | ✅ Live | None — tool = interactive comparison; blog = prose | Keep distinct |
+| 26 | Organic per-crop | organic fertilizer for wheat | organic fertilizer for rice, organic manure for crops | Informational | Crop pages (`/crops/*` "Organic fertilizer options" card) | ✅ Live (generic guidance only) | None — no per-crop organic dose pages (no verified data) | Keep generic; do NOT build per-crop organic dose pages until verified data exists |
+| 27 | Organic calculator | organic fertilizer calculator | manure calculator, how much manure per acre | Transactional | `/calculator` (Mode A organic section: user-entered analysis + lab record + top-up offset) | ✅ Live | None — single canonical tool | Keep. Mode B (auto DB dosing) deliberately NOT built — zero verified organic nutrient data |
 | 15 | Prices | npk fertilizer price in pakistan | urea price today, dap rate | Transactional (price check) | — | ❌ Deliberately unserved | N/A | **Do NOT build** a static price page (would require fabricated or stale prices). Intent served honestly by `/compare` with user-entered prices |
 | 16 | Regional | khad dose per acre, fertilizer dose in punjab | — | Local informational | `/planting-calendar/pakistan`, `/planting-calendar/india` | ⚠️ Partial | None | Calendar pages cover sowing intent; dose-by-region guides are a content backlog item |
 | 17 | FAQ/homepage | what is fertilizer, fertilizer dose per acre | npk meaning, what is dap, how much fertilizer does wheat need, when should i apply fertilizer, what fertilizer is best for my crop, how much npk does my crop need | Informational | `/` + `/faq` | ✅ Live | Low — homepage targets brand + core tool; `/faq` targets question intents | Keep distinct: homepage = tool/brand, FAQ = questions |
@@ -87,6 +92,9 @@
 | `/compare` vs `/fertilizers/*` for "dap vs urea" | `/compare` = price-per-nutrient tool; fertilizer pages = product guides. Distinct. ✅ |
 | `/planting-calendar` vs `/crops/*` for "when to sow wheat" | Calendar = month×region lookup; crop page = full growing guide. Cross-linked, not duplicated. ✅ |
 | Homepage vs `/calculator` for "fertilizer dose calculator" | Homepage title no longer targets the exact calculator phrase verbatim. ✅ |
+| `/fertilizers/organic` vs `/blog/organic-fertilizers-for-plants` for "organic fertilizer" queries | Hub = material directory (transactional/directory intent); blog = guide (informational). Distinct titles/descriptions. ✅ |
+| `/compare` organic tab vs `/fertilizers/organic` | Compare = interactive cost/nutrient tool; hub = educational directory. Cross-linked, not duplicated. ✅ |
+| Per-crop "organic fertilizer for X" | Served by the generic "Organic fertilizer options" card on crop pages — NO per-crop organic dose pages built (would be thin/fabricated without verified data). ✅ |
 
 ---
 
@@ -95,7 +103,7 @@
 1. `npk fertilizer calculation formula` — guide
 2. `how to calculate fertilizer dose per acre` — guide
 3. `boron fertilizer dose per acre` (+ zinc) — guide
-4. `organic fertilizer for plants` — guide
+4. `organic fertilizer for plants` — guide ✅ DONE (blog live 2026-10-06; hub `/fertilizers/organic` live)
 5. Region-specific dose guides (Punjab/Sindh) — guides, only with provincial sources
 6. Flip `indexable` on soybean/groundnut/vegetables/plants pages as verified data lands
 7. Per-locale translation → lift the noindex gate locale by locale
