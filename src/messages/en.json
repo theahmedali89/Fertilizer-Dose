@@ -449,7 +449,8 @@
       "plantingCalendar": "Planting Calendar",
       "myGarden": "My Garden",
       "profitCalculator": "Profit Calculator",
-      "compare": "Compare"
+      "compare": "Compare",
+      "improveTranslation": "Improve this translation"
     },
     "rights": "All rights reserved.",
     "tagline": "Exact fertilizer doses from real agronomic data — for wheat, rice, maize and more. Built for farmers across Pakistan & India.",
@@ -1385,5 +1386,30 @@
         "a": "In your browser's My Garden (local storage) when you press “Save plan to My Garden”, just like saved plots from the Land Area Calculator. Sign in to sync it across devices."
       }
     ]
+  },
+  "suggestions": {
+    "improveTranslation": "Improve this translation",
+    "suggestData": "Suggest data correction",
+    "translationIntro": "Spotted a bad translation on this page? Tell us what's wrong and how it should read. A reviewer will check it.",
+    "dataIntro": "Know the official fertilizer dose for {crop}? Share it here with an official source (agriculture department, university, research journal). Our team verifies every submission before it goes live.",
+    "dataTypeLabel": "Suggestion type",
+    "dataCorrection": "Correct existing data",
+    "dataRequest": "Request data for this crop",
+    "whatsWrong": "What's wrong? (optional)",
+    "whatsWrongPlaceholder": "e.g. This sentence is unclear…",
+    "yourSuggestion": "Your suggestion",
+    "yourSuggestionPlaceholder": "Write the corrected text or describe the dose…",
+    "sourceUrl": "Source URL",
+    "sourceHint": "Official sources only: agriculture departments, universities, research journals. Random blogs and converter sites are not accepted.",
+    "reviewNote": "All suggestions go to a human review queue. Nothing is published automatically.",
+    "submit": "Send suggestion",
+    "sending": "Sending…",
+    "cancel": "Cancel",
+    "close": "Close",
+    "thanks": "Thank you!",
+    "thanksDetail": "Your suggestion was received and will be reviewed by our team.",
+    "errorTooShort": "Please write a little more detail.",
+    "errorSourceRequired": "A source URL (http/https) is required for data corrections.",
+    "errorGeneric": "Could not send. Please try again."
   }
 }

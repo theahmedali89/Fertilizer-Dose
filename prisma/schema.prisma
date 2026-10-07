@@ -497,3 +497,39 @@ model Diagnosis {
 
   @@index([userId])
 }
+
+// ── Crowd-sourced suggestions ──────────────────────────────────────
+// SAFETY: user submissions NEVER auto-publish. Everything lands here as
+// PENDING and reaches the site only after explicit admin review.
+// - TRANSLATION: wording fixes for machine-translated drafts (safe to review/apply manually).
+// - DATA_CORRECTION / DATA_REQUEST: agronomic data suggestions — require an
+//   official sourceUrl and admin verification before ANY data change.
+
+enum SuggestionType {
+  TRANSLATION
+  DATA_CORRECTION
+  DATA_REQUEST
+}
+
+enum SuggestionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model UserSuggestion {
+  id            String           @id @default(cuid())
+  type          SuggestionType
+  status        SuggestionStatus @default(PENDING)
+  locale        String?          // translation locale, e.g. "ur"
+  pageUrl       String?          // page the suggestion refers to
+  fieldKey      String?          // translation key / field reference
+  issueText     String?          @db.Text // "what's wrong" description
+  submittedText String           @db.Text // the suggested correction / request
+  sourceUrl     String?          // REQUIRED for DATA_CORRECTION (official source)
+  cropSlug      String?          // crop/vegetable/plant the suggestion is about
+  createdAt     DateTime         @default(now())
+
+  @@index([status])
+  @@index([type, status])
+}

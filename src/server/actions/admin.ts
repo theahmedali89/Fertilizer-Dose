@@ -452,3 +452,37 @@ export async function setUserRole(userId: string, role: "USER" | "EDITOR" | "ADM
   revalidateAdmin();
   return { ok: true };
 }
+
+/* ── User suggestions (crowd-sourced review queue) ── */
+
+/**
+ * Approve or reject a user suggestion.
+ * SAFETY: approving does NOT publish anything automatically.
+ * - TRANSLATION: admin copies the suggested text into locale files manually.
+ * - DATA_*: admin verifies and enters data through the normal research flow.
+ * This action only flips the review status.
+ */
+export async function setSuggestionStatus(
+  id: string,
+  status: "APPROVED" | "REJECTED"
+): Promise<ActionResult> {
+  await guard();
+  try {
+    await db.userSuggestion.update({ where: { id }, data: { status } });
+  } catch {
+    return fail("Could not update suggestion status.");
+  }
+  revalidateAdmin();
+  return { ok: true };
+}
+
+export async function deleteSuggestion(id: string): Promise<ActionResult> {
+  await guard();
+  try {
+    await db.userSuggestion.delete({ where: { id } });
+  } catch {
+    return fail("Could not delete suggestion.");
+  }
+  revalidateAdmin();
+  return { ok: true };
+}

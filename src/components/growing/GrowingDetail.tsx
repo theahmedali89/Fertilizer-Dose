@@ -10,6 +10,7 @@ import {
 } from "@/lib/growing";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
+import { SuggestButton } from "@/components/suggestions/SuggestButton";
 
 function NoData({ title, hint }: { title: string; hint: string }) {
   return (
@@ -123,6 +124,9 @@ export async function GrowingDetail({
                     {item.npkSource && (
                       <p className="mt-3 text-xs text-ink-faint">Source: {item.npkSource}</p>
                     )}
+                    <div className="mt-3">
+                      <SuggestButton mode="data" cropSlug={item.slug} cropName={item.name} />
+                    </div>
                     <div className="mt-4">
                       <Link
                         href="/calculator"
@@ -135,6 +139,9 @@ export async function GrowingDetail({
                 ) : item.category === "crop" ? (
                   <div className="rounded-xl border border-harvest-200 dark:border-harvest-800 bg-harvest-100 dark:bg-harvest-950/40 p-4 text-sm text-ink-soft">
                     {t("inReviewNotice", { name: item.name })}
+                    <div className="mt-3">
+                      <SuggestButton mode="data" cropSlug={item.slug} cropName={item.name} />
+                    </div>
                   </div>
                 ) : (
                   <NoData title={t("noData")} hint={t("noDataHint")} />

@@ -1,0 +1,99 @@
+import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { db, isDbConfigured } from "@/lib/db";
+import { rateLimit } from "@/server/rate-limit";
+
+const TYPES = ["TRANSLATION", "DATA_CORRECTION", "DATA_REQUEST"] as const;
+
+const bodySchema = z.object({
+  type: z.enum(TYPES),
+  locale: z.string().trim().max(10).optional().nullable(),
+  pageUrl: z.string().trim().max(500).optional().nullable(),
+  fieldKey: z.string().trim().max(200).optional().nullable(),
+  issueText: z.string().trim().max(2000).optional().nullable(),
+  submittedText: z.string().trim().min(3).max(5000),
+  sourceUrl: z.string().trim().max(1000).optional().nullable(),
+  cropSlug: z.string().trim().max(120).optional().nullable(),
+  // Honeypot — real users never fill this; bots do.
+  website: z.string().max(200).optional().nullable(),
+}).superRefine((v, ctx) => {
+  // DATA_CORRECTION must cite an official source — no source, no submission.
+  if (v.type === "DATA_CORRECTION") {
+    const u = (v.sourceUrl ?? "").trim();
+    if (!u) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sourceUrl"], message: "A source URL is required for data corrections." });
+    } else if (!/^https?:\/\//i.test(u)) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["sourceUrl"], message: "Source URL must start with http(s)://" });
+    }
+  }
+});
+
+function clientKey(req: NextRequest): string {
+  const fwd = req.headers.get("x-forwarded-for");
+  return (fwd?.split(",")[0] ?? "unknown").trim();
+}
+
+/**
+ * Crowd-sourced suggestion intake.
+ * - Rate-limited: 10 submissions / hour per IP (no login required).
+ * - Honeypot rejects bots silently (returns 201 to avoid tipping them off).
+ * - SAFETY: submissions land in UserSuggestion as PENDING. Nothing here
+ *   writes to GrowingItem, FertilizerRecommendation, locale files, or any
+ *   other live table — admin review is the only path to publication.
+ */
+export async function POST(req: NextRequest) {
+  const limit = rateLimit(`suggestions:${clientKey(req)}`, 10, 60 * 60 * 1000);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Too many suggestions. Please wait a while and try again." },
+      { status: 429, headers: { "Retry-After": String(Math.ceil(limit.retryAfterMs / 1000)) } }
+    );
+  }
+
+  let json: unknown;
+  try {
+    json = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid request." }, { status: 400 });
+  }
+
+  const parsed = bodySchema.safeParse(json);
+  if (!parsed.success) {
+    const fields = [...new Set(parsed.error.issues.map((i) => String(i.path[0] ?? "field")))];
+    return NextResponse.json(
+      { error: `Please check these fields: ${fields.join(", ")}.` },
+      { status: 400 }
+    );
+  }
+
+  const v = parsed.data;
+
+  // Honeypot: pretend success so bots learn nothing.
+  if (v.website && v.website.trim() !== "") {
+    return NextResponse.json({ ok: true }, { status: 201 });
+  }
+
+  if (!isDbConfigured()) {
+    return NextResponse.json({ error: "Suggestions are temporarily unavailable." }, { status: 503 });
+  }
+
+  try {
+    await db.userSuggestion.create({
+      data: {
+        type: v.type,
+        locale: v.locale?.trim() || null,
+        pageUrl: v.pageUrl?.trim() || null,
+        fieldKey: v.fieldKey?.trim() || null,
+        issueText: v.issueText?.trim() || null,
+        submittedText: v.submittedText.trim(),
+        sourceUrl: v.sourceUrl?.trim() || null,
+        cropSlug: v.cropSlug?.trim() || null,
+        // status defaults to PENDING — never set anything else here.
+      },
+    });
+  } catch {
+    return NextResponse.json({ error: "Could not save your suggestion. Please try again." }, { status: 500 });
+  }
+
+  return NextResponse.json({ ok: true }, { status: 201 });
+}

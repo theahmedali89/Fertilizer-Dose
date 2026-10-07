@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/config/site";
 import { Logo } from "./Logo";
+import { SuggestButton } from "@/components/suggestions/SuggestButton";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -82,9 +83,12 @@ export function Footer() {
           <p className="text-xs text-ink-faint">
             © {year} {siteConfig.name}. {t("rights")}
           </p>
-          <p className="text-xs text-ink-faint">
-            {siteConfig.urduFooterLine}
-          </p>
+          <div className="flex items-center gap-4">
+            <SuggestButton mode="translation" label={t("links.improveTranslation")} />
+            <p className="text-xs text-ink-faint">
+              {siteConfig.urduFooterLine}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
