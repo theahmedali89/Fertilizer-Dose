@@ -618,6 +618,42 @@ export const POSTS: BlogPost[] = [
       "Do organic fertilizers change soil pH? Well-rotted organics have a mild buffering effect and generally nudge very acidic or alkaline soils toward neutral over time — but they are not a substitute for proper soil amendments where pH is severely off.",
       "Bottom line: organic fertilizers trade precision for soil-building — slow, bulky and variable, but unmatched for soil structure and biology. Use them for baseline fertility, get the manure tested if you want to count its contribution, and top up the exact shortfall with chemical fertilizers — Fertilizer Dose's calculator works out the top-up for your crop and region."
     ]
+  },
+  {
+    "slug": "how-to-dose-fertilizer-for-plants",
+    "title": "How to Dose Fertilizer for Plants: Pots, Garden Beds and Watering Cans",
+    "category": "Guides",
+    "date": "2026-10-07",
+    "readMinutes": 9,
+    "image": "/blog/how-to-dose-fertilizer-for-plants.webp",
+    "excerpt": "How much fertilizer per plant, in grams — not guesses. Learn the ppm method professionals use to dose fertilizer for potted plants, then let our free calculator do the math.",
+    "body": [
+      "How much fertilizer does one potted plant actually need? A spoonful? A pinch? The honest answer is that neither spoons nor pinches are a dose — a dose is a weight, and for plants it is measured in grams per litre of water. Professional growers don't guess; they feed at a target concentration, usually 100–200 parts per million (ppm) of nitrogen, and calculate the grams from the fertilizer's grade. This guide teaches you that exact method, and our /plant-dose-calculator applies it for you automatically.",
+      "## What dosing means for plants",
+      "Field crops are dosed per acre, but nobody thinks in acres for a balcony. For potted and garden plants, the dose is a concentration: how much fertilizer is dissolved in each litre of water you apply. That is why labels and extension guides talk in ppm — parts per million. One ppm equals one milligram per litre (1 ppm = 1 mg/L), so 150 ppm of nitrogen means 150 mg of nitrogen in every litre of your watering can. Once you think in concentration, the question 'how much fertilizer per plant' becomes 'how many grams per litre', and that has an exact answer.",
+      "This concentration approach is also why the same bag feeds a windowsill herb and a nursery bed: you mix one strength of solution and simply water each plant with the amount of water it would normally get. The plant's share of fertilizer follows its share of water — no separate per-plant arithmetic needed.",
+      "## The one formula you need",
+      "Here is the entire calculation: grams of fertilizer per litre = target ppm of nitrogen ÷ (nitrogen % in the fertilizer × 10). That is it. The logic is simple: 1 ppm is 1 mg/L, and a fertilizer that is 20% nitrogen delivers 20 × 10 = 200 mg of nitrogen per gram per litre. Dividing your target by that number gives the grams.",
+      "### Worked example step by step",
+      "Worked example: you want a 150 ppm nitrogen feed and your fertilizer is 20-20-20 (20% nitrogen). Grams per litre = 150 ÷ (20 × 10) = 150 ÷ 200 = 0.75 g per litre. For a 5-litre watering can, that is 3.75 g — about two-thirds of a level teaspoon. A second check with a different grade: 200 ppm with 20-10-20 gives 200 ÷ 200 = 1 g per litre, which matches the worked example in Virginia Tech's greenhouse crops guide. Weigh it on a small kitchen scale rather than eyeballing spoons; spoons vary, grams don't.",
+      "## How strong should the feed be",
+      "The target ppm is where plant type matters, and here we follow published extension guidance rather than inventing numbers. The University of Massachusetts Extension advises 100–150 ppm nitrogen for small, slow-growing types and 200–250 ppm for bedding plants on constant feed. Michigan State University Extension publication E2186 recommends supplemental liquid fertilization at 150–200 ppm nitrogen for container plants. Our /plant-dose-calculator uses the conservative bottom of each of these bands — 100 ppm for gentle feeders, 150 ppm for regular container plants, 200 ppm for heavy feeders — because it is always safer to start weak and increase than to burn roots and retreat.",
+      "These are general guidance ranges, not prescriptions for a specific species. Orchids, succulents and seedlings typically want the gentle end; fast-growing vegetables and bedding flowers tolerate the heavy end. When in doubt, start at 100 ppm for two weeks and watch the new growth — deep green and steady means the dose is right.",
+      "## Dosing per pot and per bed",
+      "For pots, mix the solution at your target grams per litre and water normally — each pot gets its usual drink, now carrying fertilizer. As a rough orientation, standard nursery pots hold approximately 0.5 L (10 cm pot), 1.6 L (15 cm), 4 L (20 cm), 7.5 L (25 cm) and 11 L (30 cm) of mix; these are approximate volumes, and the plant drinks only a fraction at each watering. For garden beds, the same solution works: apply it with a watering can at the bed's normal watering volume. If you prefer dry granular feeding for beds, scatter evenly and water in immediately — never leave granules sitting on dry soil or against stems.",
+      "A practical note on spoons: a level teaspoon of crystalline fertilizer weighs roughly 6 g and a tablespoon roughly 17 g, but granule size and density vary by product, so treat these as rough equivalents only. A cheap digital scale (about the price of one bag of fertilizer) is the single best purchase a home gardener can make for accurate dosing.",
+      "## Fertilizer burn: the warning that matters most",
+      "Overdosing does not make plants grow faster — it injures them. Excess fertilizer salts pull water out of roots by osmosis, causing leaf-edge browning, wilting despite wet soil, and a white crust on the soil surface. Seedlings and young transplants burn first. If you suspect burn, leach the pot with several volumes of plain water, hold off on feeding for two weeks, and resume at half strength. Prevention is simpler: dose by calculation, water the soil before feeding (never fertilize a dry pot), and keep granules off foliage.",
+      "## Four mistakes everyone makes",
+      "First, the more-is-better fallacy: doubling the dose does not double growth — it doubles salt stress. Second, feeding dormant plants: most houseplants rest in winter; feeding a resting plant is like serving dinner to someone asleep. Cut back or stop when growth stops. Third, fertilizing dry soil: salts concentrate in dry mix and scorch roots — water with plain water first, then feed. Fourth, guessing instead of weighing: 'a pinch' can be 1 g or 4 g depending on the hand. The formula above takes thirty seconds with a scale and removes all four mistakes at once.",
+      "## Frequently asked questions",
+      "How do I dose fertilizer for potted plants without a scale? Use the formula to get grams per litre, then convert with the rough equivalents (about 6 g per level teaspoon). This is approximate — fine for established plants at gentle strength, risky for seedlings, where a scale is worth it.",
+      "How often should I fertilize houseplants? Every 1–2 weeks during active growth at 100–150 ppm nitrogen is the standard extension pattern; reduce or stop in winter dormancy. Constant weak feeding beats occasional strong feeding.",
+      "Can I use urea or DAP for potted plants? You can, but they are single-nutrient and easy to overdose in pots — urea is 46% nitrogen, so 150 ppm needs only about 0.33 g per litre. Balanced water-soluble grades like 20-20-20 are more forgiving for beginners.",
+      "Do organic fertilizers need dosing too? Less precisely — compost and vermicompost release nutrients slowly and rarely burn. A 3–5 cm layer worked into the topsoil is the standard practice; see our guide on organic fertilizers for plants for the details.",
+      "Why are my plant's leaf tips brown after fertilizing? Classic mild fertilizer burn from too strong a solution or feeding dry soil. Leach with plain water and resume at half the previous strength.",
+      "Bottom line: dosing fertilizer for plants is one formula — grams per litre equals target ppm divided by (nitrogen % × 10) — applied at an extension-backed strength of 100–200 ppm nitrogen, weighed not guessed, and never on dry or dormant plants. Run your numbers through our /plant-dose-calculator and you will never pinch-and-pray again."
+    ]
   }
 ];
 
