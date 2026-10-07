@@ -240,28 +240,28 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
 
             <div className="grid grid-cols-2 gap-3">
               <Field label={`${t("form.phosphorus")} (${t("form.optional")})`} hint={t("form.soilTestHint")}>
-                <div className="flex gap-2">
+                <div className="flex flex-col gap-2 min-[480px]:flex-row">
                   <Input
                     type="number" min="0" step="any" inputMode="decimal"
                     value={pVal}
                     onChange={(e) => { setPVal(e.target.value); setSubmitted(false); }}
                     placeholder="—"
                   />
-                  <Select value={pUnit} onChange={(e) => setPUnit(e.target.value as SoilUnit)} className="w-28 shrink-0">
+                  <Select value={pUnit} onChange={(e) => setPUnit(e.target.value as SoilUnit)} className="w-full min-[480px]:w-28 min-[480px]:shrink-0">
                     <option value="ppm">{t("form.unitPpm")}</option>
                     <option value="kgHa">{t("form.unitKgHa")}</option>
                   </Select>
                 </div>
               </Field>
               <Field label={`${t("form.potassium")} (${t("form.optional")})`}>
-                <div className="flex gap-2">
+                <div className="flex flex-col gap-2 min-[480px]:flex-row">
                   <Input
                     type="number" min="0" step="any" inputMode="decimal"
                     value={kVal}
                     onChange={(e) => { setKVal(e.target.value); setSubmitted(false); }}
                     placeholder="—"
                   />
-                  <Select value={kUnit} onChange={(e) => setKUnit(e.target.value as SoilUnit)} className="w-28 shrink-0">
+                  <Select value={kUnit} onChange={(e) => setKUnit(e.target.value as SoilUnit)} className="w-full min-[480px]:w-28 min-[480px]:shrink-0">
                     <option value="ppm">{t("form.unitPpm")}</option>
                     <option value="kgHa">{t("form.unitKgHa")}</option>
                   </Select>
