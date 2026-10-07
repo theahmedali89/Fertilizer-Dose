@@ -239,9 +239,20 @@ export function MapView({ country, onArea }: MapViewProps) {
       </div>
 
       {geoError && (
-        <p role="alert" className="text-sm text-red-700 dark:text-red-400">
-          {t("geoDenied")}
-        </p>
+        <div
+          role="status"
+          className="flex items-start justify-between gap-3 rounded-xl border border-line bg-surface-2/70 px-4 py-2.5 text-sm text-ink-soft"
+        >
+          <p>{t("geoDenied")}</p>
+          <button
+            type="button"
+            onClick={() => setGeoError(false)}
+            aria-label={t("dismissHint")}
+            className="shrink-0 rounded px-1.5 py-0.5 font-semibold text-ink-faint hover:bg-surface hover:text-ink"
+          >
+            ✕
+          </button>
+        </div>
       )}
 
       {points.length > 0 && (
