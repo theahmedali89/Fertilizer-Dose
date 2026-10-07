@@ -105,7 +105,31 @@
       "dismiss": "Dismiss",
       "resultN": "Nitrogen (N)",
       "resultP": "Phosphate (P₂O₅)",
-      "resultK": "Potash (K₂O)"
+      "resultK": "Potash (K₂O)",
+      "labTitle": "Your lab analysis (optional)",
+      "labDesc": "If you had your material tested, record the lab details here for transparency. The calculation uses only the percentages you enter above.",
+      "labNameLabel": "Laboratory / source",
+      "labNamePlaceholder": "e.g. District soil lab, Lahore",
+      "labDateLabel": "Analysis date",
+      "moistureLabel": "Moisture %",
+      "moistureHint": "If reported — informational only, not used in the math.",
+      "topupTitle": "Offset against mineral fertilizer",
+      "topupDesc": "Enter your crop's nutrient need (kg N–P₂O₅–K₂O per hectare, e.g. from the calculator above or your extension recommendation) to see how much mineral fertilizer is still required after this organic application.",
+      "baseNLabel": "Crop need — N (kg/ha)",
+      "basePLabel": "Crop need — P₂O₅ (kg/ha)",
+      "baseKLabel": "Crop need — K₂O (kg/ha)",
+      "topupResultsTitle": "Mineral top-up still needed",
+      "topupN": "Nitrogen (N)",
+      "topupP": "Phosphate (P₂O₅)",
+      "topupK": "Potash (K₂O)",
+      "topupNote": "This is the MAXIMUM offset. Organic nitrogen mineralizes slowly — only a fraction (around 30% of FYM nitrogen, per TNAU) is available to the first crop — so in practice you may still need more mineral nitrogen than shown. Treat this as planning guidance, not a prescription.",
+      "formulaOffsetLabel": "Formula",
+      "formulaOffset": "top-up = max(0, crop need − organic applied)",
+      "enterBase": "Enter at least one crop-need value above to see the remaining mineral top-up.",
+      "analysisSummary": "Analysis N {n}% / P₂O₅ {p}% / K₂O {k}% → supplies N {nKg} / P₂O₅ {pKg} / K₂O {kKg} kg/ha.",
+      "noLabRecord": "No lab record entered — user-entered values, unverified.",
+      "topupSummary": "Mineral top-up remaining: N {n} / P₂O₅ {p} / K₂O {k} kg/ha (maximum offset; slow release not accounted).",
+      "saveDisclaimer": "User-entered organic application. Nutrient figures are arithmetic on user inputs, not lab-verified by the app."
     }
   },
   "common": {
@@ -816,7 +840,8 @@
     "backToGarden": "Back to My Garden",
     "saveCalculation": "Save to My Garden",
     "savedToGarden": "Saved to My Garden",
-    "viewGarden": "View My Garden"
+    "viewGarden": "View My Garden",
+    "organicApplicationLabel": "Organic manure application"
   },
   "tools": {
     "profit": {
@@ -1006,7 +1031,9 @@
       "warnBody": "The calculator's organic section runs pure arithmetic on numbers YOU enter (your lab report or supplier label). It does not know your batch's real analysis, and it cannot account for slow release — treat its output as an upper bound on nutrients applied, not nutrients available to this season's crop. For precision dosing, get a lab analysis of your actual material.",
       "exploreCta": "Open the calculator's organic section",
       "detailCta": "View details"
-    }
+    },
+    "searchPlaceholder": "Search fertilizers…",
+    "searchNoResults": "No fertilizers match your search."
   },
   "chart": {
     "metaTitle": "Fertilizer Dose Chart — Quick NPK Reference",
