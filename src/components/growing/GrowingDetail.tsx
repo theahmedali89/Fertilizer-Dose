@@ -277,6 +277,31 @@ export async function GrowingDetail({
               </CardBody>
             </Card>
 
+            {/* Organic options — generic guidance only: no crop-specific
+                verified organic dose exists for any crop, so this section
+                never invents one. Content-gated by the honest-data rule. */}
+            <Card>
+              <CardBody>
+                <h2 className="font-display text-xl font-semibold mb-3">
+                  {t("organicOptions")}
+                </h2>
+                <p className="text-sm text-ink-soft leading-relaxed">
+                  {t("organicOptionsBody", { name: item.name })}
+                </p>
+                <p className="mt-2 text-xs text-ink-faint leading-relaxed">
+                  {t("organicOptionsNote")}
+                </p>
+                <p className="mt-3 text-sm">
+                  <Link
+                    href="/fertilizers/organic"
+                    className="font-semibold text-leaf-700 dark:text-leaf-300 hover:underline"
+                  >
+                    {t("organicOptionsCta")} →
+                  </Link>
+                </p>
+              </CardBody>
+            </Card>
+
             {/* References */}
             {(item.sources.length > 0 || item.lastReviewed) && (
               <Card>

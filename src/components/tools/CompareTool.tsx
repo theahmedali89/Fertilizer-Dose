@@ -6,11 +6,11 @@ import { Link } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Field, Input } from "@/components/ui/fields";
-import { FERTILIZERS } from "@/lib/agronomy";
+import { FERTILIZERS, ORGANIC_FERTILIZERS } from "@/lib/agronomy";
 import { getItemsByCategory } from "@/lib/growing";
 import { cn } from "@/lib/utils";
 
-type Tab = "fertilizers" | "crops";
+type Tab = "fertilizers" | "crops" | "organic";
 
 interface FertPrice {
   bagPrice: string;
@@ -28,6 +28,12 @@ export function CompareTool() {
   const [selected, setSelected] = useState<string[]>(["urea", "dap", "mop"]);
   const [prices, setPrices] = useState<Record<string, FertPrice>>({});
   const [cropSlugs, setCropSlugs] = useState<string[]>(["wheat", "rice", "maize"]);
+  const [orgSlug, setOrgSlug] = useState(ORGANIC_FERTILIZERS[0].slug);
+  const [minSlug, setMinSlug] = useState("urea");
+  const [orgPrice, setOrgPrice] = useState("");
+  const [orgKg, setOrgKg] = useState("1000");
+  const [minPrice, setMinPrice] = useState("");
+  const [minKg, setMinKg] = useState("50");
 
   const crops = useMemo(() => getItemsByCategory("crop"), []);
 
@@ -65,6 +71,26 @@ export function CompareTool() {
     return { rows, minN: min((r) => r.perN), minP: min((r) => r.perP), minK: min((r) => r.perK) };
   }, [selected, prices]);
 
+  // ── Organic vs mineral: cost per kg of nitrogen, honest ranges ──
+  // Organic nutrient content is a TYPICAL RANGE (never a fixed label value),
+  // so the organic side is always shown as a range; the mineral side is fixed.
+  const orgVsMin = useMemo(() => {
+    const org = ORGANIC_FERTILIZERS.find((f) => f.slug === orgSlug);
+    const min = FERTILIZERS.find((f) => f.slug === minSlug);
+    const oP = parseFloat(orgPrice);
+    const oK = parseFloat(orgKg) || 1000;
+    const mP = parseFloat(minPrice);
+    const mK = parseFloat(minKg) || 50;
+    if (!org || !min) return null;
+    const minPerN = mP > 0 ? perKgNutrient(mP, mK, min.n ?? 0) : null;
+    const oLo = oP > 0 && org.nMax ? perKgNutrient(oP, oK, org.nMax) : null; // richest end → cheapest
+    const oHi = oP > 0 && org.nMin ? perKgNutrient(oP, oK, org.nMin) : null; // leanest end → priciest
+    const minBulk = min.n ? 100 / min.n : null; // kg mineral per 1 kg N
+    const orgBulkLo = org.nMax ? 100 / org.nMax : null;
+    const orgBulkHi = org.nMin ? 100 / org.nMin : null;
+    return { org, min, minPerN, oLo, oHi, minBulk, orgBulkLo, orgBulkHi };
+  }, [orgSlug, minSlug, orgPrice, orgKg, minPrice, minKg]);
+
   const setPrice = (slug: string, patch: Partial<FertPrice>) =>
     setPrices((ps) => {
       const prev = ps[slug] ?? { bagPrice: "", bagKg: "50" };
@@ -74,8 +100,14 @@ export function CompareTool() {
   return (
     <div>
       {/* Tabs */}
-      <div className="flex gap-1.5 mb-6" role="tablist">
-        {(["fertilizers", "crops"] as Tab[]).map((tb) => (
+      <div className="flex flex-wrap gap-1.5 mb-6" role="tablist">
+        {(
+          [
+            ["fertilizers", t("tabFertilizers")],
+            ["crops", t("tabCrops")],
+            ["organic", t("tabOrganic")],
+          ] as [Tab, string][]
+        ).map(([tb, label]) => (
           <button
             key={tb}
             role="tab"
@@ -88,7 +120,7 @@ export function CompareTool() {
                 : "border border-line text-ink-soft hover:border-leaf-600"
             )}
           >
-            {t(tb === "fertilizers" ? "tabFertilizers" : "tabCrops")}
+            {label}
           </button>
         ))}
       </div>
@@ -278,6 +310,146 @@ export function CompareTool() {
               })}
             </div>
           )}
+        </div>
+      )}
+
+      {tab === "organic" && orgVsMin && (
+        <div className="space-y-5">
+          <Card>
+            <CardBody className="space-y-4">
+              <p className="text-xs text-ink-soft leading-relaxed">{t("organicIntro")}</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="rounded-xl border border-line p-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-ink-faint mb-2.5">
+                    {t("organicMaterial")}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {ORGANIC_FERTILIZERS.map((f) => (
+                      <button
+                        key={f.slug}
+                        onClick={() => setOrgSlug(f.slug)}
+                        aria-pressed={orgSlug === f.slug}
+                        className={cn(
+                          "rounded-full px-4 py-2 text-sm font-medium border transition-colors",
+                          orgSlug === f.slug
+                            ? "bg-leaf-700 dark:bg-leaf-600 text-white border-transparent"
+                            : "border-line text-ink-soft hover:border-leaf-600"
+                        )}
+                      >
+                        {f.name}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-xs text-ink-faint">
+                    {t("typicalRange", {
+                      nMin: orgVsMin.org.nMin ?? "–",
+                      nMax: orgVsMin.org.nMax ?? "–",
+                    })}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mt-3">
+                    <Field label={t("pricePerUnit")}>
+                      <Input
+                        type="number" min="0" step="any" inputMode="decimal" placeholder="0"
+                        value={orgPrice}
+                        onChange={(e) => setOrgPrice(e.target.value)}
+                      />
+                    </Field>
+                    <Field label={t("unitSize", { unit: "kg" })}>
+                      <Input
+                        type="number" min="0" step="any" inputMode="decimal" placeholder="1000"
+                        value={orgKg}
+                        onChange={(e) => setOrgKg(e.target.value)}
+                      />
+                    </Field>
+                  </div>
+                </div>
+                <div className="rounded-xl border border-line p-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-ink-faint mb-2.5">
+                    {t("mineralFertilizer")}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {FERTILIZERS.map((f) => (
+                      <button
+                        key={f.slug}
+                        onClick={() => setMinSlug(f.slug)}
+                        aria-pressed={minSlug === f.slug}
+                        className={cn(
+                          "rounded-full px-4 py-2 text-sm font-medium border transition-colors",
+                          minSlug === f.slug
+                            ? "bg-leaf-700 dark:bg-leaf-600 text-white border-transparent"
+                            : "border-line text-ink-soft hover:border-leaf-600"
+                        )}
+                      >
+                        {f.name}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-xs text-ink-faint">
+                    N {orgVsMin.min.n}% · {t("fixedLabel")}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mt-3">
+                    <Field label={t("pricePerUnit")}>
+                      <Input
+                        type="number" min="0" step="any" inputMode="decimal" placeholder="0"
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(e.target.value)}
+                      />
+                    </Field>
+                    <Field label={t("unitSize", { unit: "kg" })}>
+                      <Input
+                        type="number" min="0" step="any" inputMode="decimal" placeholder="50"
+                        value={minKg}
+                        onChange={(e) => setMinKg(e.target.value)}
+                      />
+                    </Field>
+                  </div>
+                </div>
+              </div>
+            </CardBody>
+          </Card>
+
+          <Card>
+            <CardBody>
+              <h3 className="font-display text-lg font-semibold mb-4">{t("costPerKgN")}</h3>
+              <dl className="grid sm:grid-cols-2 gap-4">
+                <div className="rounded-xl border border-line bg-surface-2 p-4">
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-ink-faint">
+                    {orgVsMin.min.name}
+                  </dt>
+                  <dd className="mt-1 text-2xl font-bold text-leaf-700 dark:text-leaf-300">
+                    {orgVsMin.minPerN !== null ? orgVsMin.minPerN.toFixed(1) : t("na")}
+                  </dd>
+                  <dd className="mt-1 text-xs text-ink-faint">
+                    {t("perKgNFixed", { kg: orgVsMin.minBulk !== null ? orgVsMin.minBulk.toFixed(2) : t("na") })}
+                  </dd>
+                </div>
+                <div className="rounded-xl border border-line bg-surface-2 p-4">
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-ink-faint">
+                    {orgVsMin.org.name}
+                  </dt>
+                  <dd className="mt-1 text-2xl font-bold text-leaf-700 dark:text-leaf-300">
+                    {orgVsMin.oLo !== null && orgVsMin.oHi !== null
+                      ? `${orgVsMin.oLo.toFixed(1)} – ${orgVsMin.oHi.toFixed(1)}`
+                      : t("na")}
+                  </dd>
+                  <dd className="mt-1 text-xs text-ink-faint">
+                    {t("perKgNRange", {
+                      lo: orgVsMin.orgBulkLo !== null ? orgVsMin.orgBulkLo.toFixed(0) : t("na"),
+                      hi: orgVsMin.orgBulkHi !== null ? orgVsMin.orgBulkHi.toFixed(0) : t("na"),
+                    })}
+                  </dd>
+                </div>
+              </dl>
+              <div className="mt-4 rounded-xl border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 px-4 py-3">
+                <p className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                  {t("organicHonesty")}
+                </p>
+              </div>
+              <Link href="/fertilizers/organic" className="mt-3 inline-block text-xs font-semibold text-leaf-700 dark:text-leaf-300 hover:underline">
+                {t("viewOrganicHub")} →
+              </Link>
+            </CardBody>
+          </Card>
         </div>
       )}
     </div>
