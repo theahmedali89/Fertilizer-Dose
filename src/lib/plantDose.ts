@@ -148,3 +148,79 @@ export function gramsPerPot(gramsPerL: number, potLitres: number): number {
 export function kitchenHint(gramsPerL: number): { tsp: number; tbsp: number } {
   return { tsp: gramsPerL / 6, tbsp: gramsPerL / 17 };
 }
+
+/* ── GARDEN BED MODE ── */
+
+/** Square feet per square metre (exact definition). */
+export const SQFT_PER_M2 = 10.7639;
+
+/**
+ * Water volume (litres) held by a garden bed: area × root-zone depth.
+ * The depth is USER-ENTERED — the UI labels it explicitly as the assumed
+ * root-zone depth (a common working value for vegetable beds is 15–20 cm,
+ * but the user must confirm/adjust it; nothing is silently assumed).
+ */
+export function bedLitres(areaM2: number, depthCm: number): number {
+  if (areaM2 <= 0 || depthCm <= 0) return 0;
+  return areaM2 * (depthCm / 100) * 1000;
+}
+
+/* ── LIQUID CONCENTRATES ── */
+
+/**
+ * Millilitres of liquid concentrate per litre of water.
+ * Density (g/ml) is USER-ENTERED from the product label — never assumed,
+ * because liquid fertilizer densities vary widely (~1.1–1.4 g/ml is common
+ * but the label is the only valid source).
+ * Formula: ml/L = (g/L) ÷ density.
+ */
+export function mlPerLitre(gramsPerL: number, densityGperMl: number): number {
+  if (densityGperMl <= 0) return 0;
+  return gramsPerL / densityGperMl;
+}
+
+/** Total millilitres of concentrate for a tank of `litres` litres. */
+export function totalMl(mlPerL: number, litres: number): number {
+  return mlPerL * litres;
+}
+
+/* ── FEEDING SCHEDULE ── */
+
+/** Feeding-interval presets (weeks between applications). */
+export interface FeedInterval {
+  id: string;
+  weeks: number;
+}
+
+export const FEED_INTERVALS: FeedInterval[] = [
+  { id: "w1", weeks: 1 },
+  { id: "w2", weeks: 2 },
+  { id: "w4", weeks: 4 },
+];
+
+/** ISO date (yyyy-mm-dd) `days` after `iso`. */
+function addDaysISO(iso: string, days: number): string {
+  const d = new Date(iso + "T00:00:00");
+  d.setDate(d.getDate() + days);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+/**
+ * Next `count` feeding dates at `intervalWeeks` from `startISO`.
+ * Pure date arithmetic — the schedule is a planning aid, not an
+ * agronomic prescription; the UI labels every reminder "Suggested".
+ */
+export function feedingDates(
+  startISO: string,
+  intervalWeeks: number,
+  count: number
+): string[] {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(startISO) || intervalWeeks <= 0 || count <= 0)
+    return [];
+  return Array.from({ length: count }, (_, i) =>
+    addDaysISO(startISO, i * intervalWeeks * 7)
+  );
+}

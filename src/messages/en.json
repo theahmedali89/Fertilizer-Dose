@@ -283,7 +283,39 @@
       "potSizeHint": "Approximate soil volume of a standard nursery pot.",
       "potOption": "{cm} cm pot",
       "customGradeLabel": "{n}-{p}-{k}",
-      "submit": "Calculate plant dose"
+      "submit": "Calculate plant dose",
+      "mode": "Dose for",
+      "modeCan": "Watering can / pots",
+      "modeCanHint": "Mix fertilizer into water: grams per litre, total for your can, and per-pot dose.",
+      "modeBed": "Garden bed",
+      "modeBedHint": "Dose for a garden bed by area: bed volume comes from your area × root-zone depth.",
+      "productForm": "Product form",
+      "solid": "Solid (powder / granules)",
+      "liquid": "Liquid concentrate",
+      "density": "Density (g/ml)",
+      "densityHint": "From your product label — e.g. 1.2. Never assumed: liquid densities vary widely.",
+      "nutrient": "Target nutrient",
+      "nutrientHint": "Feeding presets are published for nitrogen. For phosphate or potash, enter your own target.",
+      "nutrientN": "Nitrogen (N)",
+      "nutrientP": "Phosphate (P₂O₅)",
+      "nutrientK": "Potash (K₂O)",
+      "targetPpmPK": "Target {nutrient} (ppm)",
+      "pkCustomNote": "No extension feeding preset exists for phosphate/potash at home-garden scale — enter your own target concentration. The same ppm math applies.",
+      "bedArea": "Bed area",
+      "bedAreaHint": "Length × width of the bed.",
+      "areaM2": "m²",
+      "areaFt2": "ft²",
+      "bedDepth": "Root-zone depth (cm)",
+      "bedDepthHint": "Assumed depth the dose mixes into — 15–20 cm is typical for vegetable beds. Adjust to your bed.",
+      "frequency": "Feeding frequency",
+      "interval1": "Every week",
+      "interval2": "Every 2 weeks",
+      "interval4": "Every 4 weeks",
+      "startDate": "First feeding",
+      "scheduleTitle": "Suggested: Feed plants ({ppm} ppm {nutrient})",
+      "addToGarden": "Add schedule to My Garden",
+      "addedToGarden": "Added — see My Garden → Reminders.",
+      "gardenHint": "Reminders are generic timing suggestions, not prescriptions. Skip a feeding if plants look stressed."
     },
     "presets": {
       "gentle": {
@@ -310,8 +342,18 @@
       "manyTsp": "About {n} tsp per litre",
       "burnTitle": "Avoid fertilizer burn",
       "burnBody": "More is not better: excess salts burn roots and leaf edges. Start at the gentle rate for new or stressed plants, water the pot first if the medium is bone dry, and always let excess solution drain away. If a product label gives a different rate, follow the label.",
-      "formulaNote": "Math: {grade} at {ppm} ppm N → grams per litre = {ppm} ÷ (%N × 10).",
-      "invalid": "Please check your inputs: nitrogen % must be 1–60, target 1–1000 ppm, and water above 0 litres."
+      "formulaNote": "Math: {grade} at {ppm} ppm {nutrient} → grams per litre = {ppm} ÷ (%{nutrient} × 10).",
+      "invalid": "Please check your inputs: nutrient % must be 1–60, target 1–1000 ppm, water/area/depth above 0, and density above 0 for liquids.",
+      "perLitreMl": "Millilitres per litre",
+      "mlPerL": "ml/L",
+      "bedVolume": "Bed water volume",
+      "bedVolumeHint": "{area} {unit} × {depth} cm root zone.",
+      "perBed": "Total for the bed",
+      "perBedHint": "Mix into irrigation water applied evenly over the bed.",
+      "scheduleTitle": "Feeding schedule (next 6)",
+      "scheduleHint": "Based on your chosen frequency. These are planning aids — adjust to how plants respond.",
+      "formulaNoteLiquid": "Math: {grade} at {ppm} ppm {nutrient} → grams per litre = {ppm} ÷ (%{nutrient} × 10), then ÷ {density} g/ml density = ml per litre.",
+      "formulaNoteBed": "Bed volume = area × {depth} cm depth."
     },
     "method": {
       "eyebrow": "How it works",
@@ -587,7 +629,8 @@
     "logout": "Log out",
     "plantDoseCalculator": "Plant Dose Calculator",
     "landAreaCalculator": "Land Area Calculator",
-    "kitchenGarden": "Kitchen Garden Planner"
+    "kitchenGarden": "Kitchen Garden Planner",
+    "mapAreaCalculator": "Map Area Calculator"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
@@ -648,7 +691,11 @@
       "title": "How much fertilizer does a potted plant need?",
       "desc": "Mix water-soluble fertilizer by ppm — grams per litre and per pot — with extension-based feeding rates.",
       "cta": "Open the plant dose calculator →"
-    }
+    },
+    "organicOptions": "Organic fertilizer options",
+    "organicOptionsBody": "Well-rotted farmyard manure, compost or vermicompost can be used as a basal soil conditioner for {name} — they build soil structure and release nutrients slowly over the season. Because organic nutrient content varies by source, top up the precise nutrient need with mineral fertilizer calculated for your crop and region.",
+    "organicOptionsNote": "No crop-specific verified organic dose exists for this crop — the guidance above is general practice, not a measured recommendation. Get your material lab-tested for precision planning.",
+    "organicOptionsCta": "Explore organic fertilizers"
   },
   "calendar": {
     "metaTitle": "Planting Calendar — What to Grow This Month",
@@ -851,7 +898,20 @@
       "noDoseData": "Dose under review — not guessed",
       "viewGuide": "Open crop guide",
       "priceDisclaimerTitle": "Price disclaimer",
-      "priceDisclaimer": "Fertilizer prices change often and vary by region, dealer and bag size. We do not publish or verify market prices — every price on this page is entered by you. Always confirm current rates with your local dealer before buying."
+      "priceDisclaimer": "Fertilizer prices change often and vary by region, dealer and bag size. We do not publish or verify market prices — every price on this page is entered by you. Always confirm current rates with your local dealer before buying.",
+      "tabOrganic": "Organic vs mineral",
+      "organicIntro": "Compare an organic material against a mineral fertilizer on cost per kilogram of nitrogen — using your own local prices. Organic nutrient content is always a typical range, never a fixed label value.",
+      "organicMaterial": "Organic material",
+      "mineralFertilizer": "Mineral fertilizer",
+      "typicalRange": "Typical N range: {nMin}–{nMax}%",
+      "fixedLabel": "fixed label value",
+      "pricePerUnit": "Price",
+      "unitSize": "Pack size ({unit})",
+      "costPerKgN": "Cost per kg of nitrogen",
+      "perKgNFixed": "{kg} kg supplies 1 kg N — exact, from the bag label.",
+      "perKgNRange": "{lo}–{hi} kg supplies 1 kg N — typical range, your heap will differ.",
+      "organicHonesty": "Honest comparison rules: organic nitrogen releases slowly — only a fraction (roughly a third for farmyard manure) feeds the first crop, the rest feeds later seasons. Organics also build soil structure that bagged fertilizer cannot. Price per kg of N is only one side of the decision; get a lab analysis of your material for precision planning.",
+      "viewOrganicHub": "Organic fertilizer hub"
     }
   },
   "blog": {
@@ -1135,6 +1195,94 @@
       }
     ],
     "relatedTitle": "Related agricultural tools",
+    "relatedCurrent": "You are here"
+  },
+  "mapArea": {
+    "eyebrow": "Agricultural Tools",
+    "title": "Map Area Calculator — Measure Land Area on the Map",
+    "desc": "Draw your field boundary on a free map and get its area instantly — in acres, hectares, square meters, and regional units. No account, no fees.",
+    "metaTitle": "Free Acreage Calculator Map — Measure Land Area on Map",
+    "metaDescription": "Free map area calculator: draw your field boundary on the map and measure land area in acres, hectares, m², Kanal and Marla. No sign-up needed.",
+    "gateDescription": "Choose your country so regional units (like Kanal and Marla in Pakistan) are shown, then open the interactive map. Tapping places boundary points — drag them to adjust.",
+    "countryLabel": "Country",
+    "countryHint": "Country only decides which regional units are shown. It never changes the map or your language.",
+    "countries": {
+      "PK": "Pakistan",
+      "IN": "India",
+      "BD": "Bangladesh",
+      "CN": "China",
+      "US": "United States",
+      "BR": "Brazil",
+      "ID": "Indonesia",
+      "TR": "Türkiye",
+      "MY": "Malaysia",
+      "JP": "Japan",
+      "KR": "South Korea",
+      "ES": "Spain",
+      "FR": "France",
+      "DE": "Germany",
+      "IT": "Italy",
+      "PL": "Poland",
+      "RU": "Russia",
+      "AU": "Australia",
+      "INTL": "International / Other"
+    },
+    "openMap": "Start Measuring on Map",
+    "freeNote": "Free forever — map data by OpenStreetMap contributors.",
+    "mapAriaLabel": "Interactive map for drawing a field boundary",
+    "loadingMap": "Loading map…",
+    "undoPoint": "Undo point",
+    "clearAll": "Clear all",
+    "myLocation": "Center on my location",
+    "locating": "Locating…",
+    "geoDenied": "Location access was denied or unavailable — you can still navigate the map manually.",
+    "pointsCount": "{count, plural, one {# point} other {# points}}",
+    "boundaryPoints": "Boundary points",
+    "removePoint": "Remove point {index}",
+    "tapHint": "Tap a numbered point to remove it, or drag any point to move it.",
+    "resultTitle": "Measured area",
+    "estimateBadge": "Estimate",
+    "perimeter": "Perimeter",
+    "precisionNote": "Useful estimate based on the points you placed — not survey-grade. Legal or official boundaries need a qualified local surveyor.",
+    "useThisArea": "Use This Area in Land Area Calculator",
+    "privacyNote": "Your boundary stays on this device. Only the area number is transferred — never your coordinates.",
+    "howTitle": "How map measurement works",
+    "howSteps": [
+      "Open the map and find your field — search is not needed; pan and zoom to it, or center on your location.",
+      "Tap the map to place boundary points around the field. Drag any point to adjust it; tap a numbered point to remove it.",
+      "With 3 or more points the area is calculated with geodesic (earth-curvature-correct) math — the same for any latitude.",
+      "Use the area in the Land Area Calculator, then in the Fertilizer Dose or Profit Calculator."
+    ],
+    "mapNoteTitle": "About the map",
+    "mapNoteBody": "The map uses OpenStreetMap, a free community-built world map — it is not Google Maps, and this tool has no affiliation with Google. Tiles load only while you measure.",
+    "faqTitle": "FAQs",
+    "faq": [
+      {
+        "q": "How does the map area calculator work?",
+        "a": "Tap the map to drop boundary points around your field. Once you have at least 3 points, the tool computes the enclosed area using geodesic mathematics that accounts for the earth's curvature — accurate at any latitude, unlike flat-screen measuring."
+      },
+      {
+        "q": "Is the measured area survey-grade accurate?",
+        "a": "No. It is a useful estimate based on where you place the points and the map imagery alignment. For legal disputes, land records, or official transactions, hire a qualified local surveyor."
+      },
+      {
+        "q": "Does this use Google Maps?",
+        "a": "No. The map is powered by OpenStreetMap, a free and open community map. There is no Google Maps integration and no affiliation with Google."
+      },
+      {
+        "q": "Can I use the measured area for fertilizer calculation?",
+        "a": "Yes — the “Use This Area” button sends the measured area to the Land Area Calculator, from where it flows into the Fertilizer Dose Calculator and Profit Calculator. Area alone never produces a fertilizer recommendation; a verified crop and region are still required."
+      },
+      {
+        "q": "Is my location or field boundary saved or shared?",
+        "a": "No. Boundary points live only in your browser's memory while you measure. Only the final area number is transferred between tools — your coordinates are never saved publicly, put in shareable links, or sent to our servers."
+      }
+    ],
+    "bannerTitle": "Measured on the map",
+    "bannerFertilizer": "Calculate Fertilizer Dose",
+    "bannerProfit": "Estimate Profit",
+    "bannerDismiss": "Dismiss",
+    "relatedTitle": "Related tools",
     "relatedCurrent": "You are here"
   },
   "kitchenGarden": {
