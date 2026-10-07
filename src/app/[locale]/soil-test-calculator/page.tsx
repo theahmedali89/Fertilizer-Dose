@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Accordion } from "@/components/ui/Accordion";
 import { localizedMetadata } from "@/lib/seo";
 import { getCrops } from "@/server/data";
+import { RelatedTools } from "@/components/tools/RelatedTools";
 
 export async function generateMetadata({
   params,
@@ -63,6 +64,8 @@ export default async function SoilTestCalculatorPage({
           </div>
         </Section>
       </div>
+
+      <RelatedTools current="/soil-test-calculator" />
     </>
   );
 }

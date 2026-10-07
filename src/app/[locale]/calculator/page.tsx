@@ -7,6 +7,7 @@ import { Card, CardBody } from "@/components/ui/Card";
 import { Accordion } from "@/components/ui/Accordion";
 import { localizedMetadata } from "@/lib/seo";
 import { getCrops } from "@/server/data";
+import { RelatedTools } from "@/components/tools/RelatedTools";
 
 export async function generateMetadata({
   params,
@@ -25,10 +26,13 @@ export async function generateMetadata({
 
 export default async function CalculatorPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ area?: string; unit?: string }>;
 }) {
   const { locale } = await params;
+  const sp = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations("calculator");
   const methodFaq = t.raw("methodFaq") as { q: string; a: string }[];
@@ -52,7 +56,7 @@ export default async function CalculatorPage({
       </section>
 
       <Section>
-        <CalculatorForm crops={crops} />
+        <CalculatorForm crops={crops} initialArea={sp.area} initialUnit={sp.unit} />
         {/* Mode A — user-entered organic analysis (pure arithmetic on user inputs) */}
         <OrganicDoseSection />
       </Section>
@@ -106,6 +110,8 @@ export default async function CalculatorPage({
           </div>
         </Section>
       </div>
+
+      <RelatedTools current="/calculator" />
     </>
   );
 }

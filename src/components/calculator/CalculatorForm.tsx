@@ -21,12 +21,18 @@ const SOILS = [
   "Saline / salt-affected",
 ];
 
-export function CalculatorForm({ crops }: { crops: CropInfo[] }) {
+export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: CropInfo[]; initialArea?: string; initialUnit?: string }) {
   const t = useTranslations("calculator");
   const verified = crops.filter((c) => c.npk);
   const [cropSlug, setCropSlug] = useState(verified[0].slug);
-  const [area, setArea] = useState("5");
-  const [unit, setUnit] = useState("acre");
+  // Land Area Calculator integration: pre-fill from ?area=&unit= (validated).
+  const [area, setArea] = useState(() => {
+    const v = parseFloat(initialArea ?? "");
+    return Number.isFinite(v) && v > 0 ? String(v) : "5";
+  });
+  const [unit, setUnit] = useState(() => {
+    return AREA_UNITS.some((u) => u.id === initialUnit) ? (initialUnit as string) : "acre";
+  });
   const [soil, setSoil] = useState(SOILS[0]);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");

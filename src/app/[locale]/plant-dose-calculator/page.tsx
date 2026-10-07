@@ -3,6 +3,7 @@ import { PlantDoseForm } from "@/components/plantDose/PlantDoseForm";
 import { Section } from "@/components/ui/Section";
 import { Accordion } from "@/components/ui/Accordion";
 import { localizedMetadata } from "@/lib/seo";
+import { RelatedTools } from "@/components/tools/RelatedTools";
 
 export async function generateMetadata({
   params,
@@ -95,6 +96,8 @@ export default async function PlantDoseCalculatorPage({
           </div>
         </Section>
       </div>
+
+      <RelatedTools current="/plant-dose-calculator" />
     </>
   );
 }

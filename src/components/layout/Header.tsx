@@ -37,6 +37,7 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
     { href: "/calculator", label: t("calculator") },
     { href: "/soil-test-calculator", label: t("soilTestCalculator") },
     { href: "/plant-dose-calculator", label: t("plantDoseCalculator") },
+    { href: "/land-area-calculator", label: t("landAreaCalculator") },
     { href: "/profit-calculator", label: t("profitCalculator") },
     { href: "/compare", label: t("compare") },
   ];

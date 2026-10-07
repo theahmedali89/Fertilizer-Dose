@@ -585,7 +585,8 @@
     "account": "Account",
     "admin": "Admin",
     "logout": "Log out",
-    "plantDoseCalculator": "Plant Dose Calculator"
+    "plantDoseCalculator": "Plant Dose Calculator",
+    "landAreaCalculator": "Land Area Calculator"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
@@ -974,5 +975,165 @@
     "selectCountry": "Country",
     "selectRegion": "Region / province",
     "selectedCountry": "Selected country"
+  },
+  "landArea": {
+    "eyebrow": "Free agricultural tool",
+    "title": "Land Area Calculator for Agricultural Land",
+    "desc": "Measure farm land, plots and fields — then convert between acres, hectares, square feet and verified regional units. Use your result directly in the fertilizer dose calculator.",
+    "metaTitle": "Land Area Calculator – Agricultural Land & Field Measurement",
+    "metaDescription": "Free land area calculator for agricultural land and plots. Calculate area from dimensions, 4 sides or irregular shapes; convert acres, hectares, square feet, kanal and marla.",
+    "country": "Country",
+    "region": "Province / Region",
+    "modeLabel": "Calculation mode",
+    "modes": {
+      "rect": "Length × Width",
+      "fourSides": "4 Sides",
+      "irregular": "Irregular",
+      "converter": "Converter"
+    },
+    "length": "Length",
+    "width": "Width",
+    "side": "Side {n}",
+    "sideUnit": "Unit for all sides",
+    "diagonalOptional": "Diagonal (optional, for exact result)",
+    "diagonalPlaceholder": "Leave empty for estimate",
+    "fourSideExplainer": "Enter the four sides in order around the plot. For an irregular four-sided plot, four side lengths alone cannot give the exact area — add a diagonal measurement for an exact result.",
+    "noDiagonalWarning": "No diagonal entered: the result below will be a clearly-labeled approximation, not an exact area.",
+    "sectionName": "Section name",
+    "shape": "Shape",
+    "dimensions": "Dimensions",
+    "unit": "Unit",
+    "dimPlaceholder": "Value {n}",
+    "shapes": {
+      "rectangle": "Rectangle",
+      "square": "Square",
+      "triangle": "Triangle",
+      "trapezoid": "Trapezoid"
+    },
+    "shapeHint": {
+      "rectangle": "Two values: length, width.",
+      "square": "One value: side length.",
+      "triangle": "Two values: base, height.",
+      "trapezoid": "Three values: the two parallel sides, then height."
+    },
+    "addSection": "Add section",
+    "remove": "Remove",
+    "value": "Value",
+    "fromUnit": "From unit",
+    "calculate": "Calculate area",
+    "totalArea": "Total land area",
+    "approximate": "Approximate",
+    "approxWarning": "Approximation only: four side lengths alone cannot determine the exact area of an irregular plot. This estimate assumes the plot is close to rectangular. For an exact result, measure a diagonal as well.",
+    "equivalents": "Equivalent in other units",
+    "howCalculated": "How this was calculated",
+    "precisionNote": "Results are rounded to sensible decimals. Tape-measure inputs cannot give survey-grade precision — for legal boundaries consult a qualified surveyor or official land record.",
+    "nextActions": "Use this area",
+    "useInFertilizer": "Use in Fertilizer Calculator",
+    "estimateProfit": "Estimate Profit for This Land",
+    "savePlot": "Save This Plot",
+    "planKitchenGarden": "Plan a Kitchen Garden",
+    "plotSaved": "Plot saved to My Garden.",
+    "openMyGarden": "Open My Garden",
+    "noFertilizerNote": "Land area alone never determines fertilizer dose — the Fertilizer Calculator still needs your crop and a verified recommendation.",
+    "savedPlotName": "Measured plot ({date})",
+    "savedPlotNote": "Measured with the Land Area Calculator ({sqm}).",
+    "noRegionalUnits": "Verified regional land units are not currently available for this country — universal units are shown. We never invent local conversions.",
+    "pkUnitNote": "Kanal and Marla use the Punjab revenue standard (1 kanal = 20 marla = 5,445 sq ft). Some housing schemes use 250 or 225 sq ft marla — check your local documents for transactions.",
+    "method": {
+      "quadDiag": "Quadrilateral from sides {a}, {b}, {c}, {d} with diagonal {diag} ({unit}): split into two triangles, each solved exactly with Heron's formula, then summed.",
+      "quadApprox": "Quadrilateral from sides {a}, {b}, {c}, {d} ({unit}): ((a+c)/2) × ((b+d)/2) — approximation, assumes near-rectangular plot."
+    },
+    "errors": {
+      "enterDimensions": "Please enter both length and width.",
+      "enterSides": "Please enter all four side lengths.",
+      "enterValue": "Please enter a value to convert.",
+      "invalid": "These measurements cannot form a valid shape. Please check your numbers."
+    },
+    "guide": {
+      "eyebrow": "How it works",
+      "title": "Measure land the honest way",
+      "formulasTitle": "Land area formulas",
+      "formulas": [
+        {
+          "name": "Rectangle",
+          "formula": "Area = length × width",
+          "example": "100 m × 50 m = 5,000 m²"
+        },
+        {
+          "name": "Square",
+          "formula": "Area = side²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Triangle",
+          "formula": "Area = ½ × base × height",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapezoid",
+          "formula": "Area = ((side A + side B) / 2) × height",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1,500 m²"
+        },
+        {
+          "name": "Four sides + diagonal",
+          "formula": "Split into two triangles along the diagonal; solve each with Heron's formula and add",
+          "example": "Exact — no approximation"
+        }
+      ],
+      "sqftTitle": "How to calculate land area in square feet",
+      "sqftBody": "If your dimensions are in feet, multiply: area in square feet = length in feet × width in feet. Example: 100 ft × 50 ft = 5,000 sq ft. Divide by 43,560 for acres, or by 9 for square yards. For irregular plots, divide the land into rectangles and triangles, calculate each, and add them — or measure a diagonal and use the 4-side mode above.",
+      "fourSideTitle": "Why four sides alone are not enough",
+      "fourSideBody": "A quadrilateral can flex: the same four side lengths can enclose different areas depending on the angles. That is why no honest calculator gives an 'exact' area from sides alone. Measure one diagonal (corner to opposite corner) and the plot becomes two triangles — each with an exact area. Without a diagonal, only a labeled approximation is possible.",
+      "irregularTitle": "How to measure irregular land",
+      "irregularBody": "Walk the field and divide it into simple shapes — rectangles, triangles, trapezoids. Measure each, calculate separately, and add the areas. The Irregular mode above does exactly this: add a section per part of your field and it totals them for you.",
+      "conversionTitle": "Land area conversion table",
+      "conversionNote": "Exact definitions. Regional units appear only where verified.",
+      "sourcesTitle": "Sources & methodology",
+      "sourcesBody": "Universal units use exact SI and imperial definitions (1 acre = 4,046.8564224 m²; 1 hectare = 10,000 m²). Kanal and Marla use the Punjab revenue standard: 1 karam = 5.5 ft, 1 marla = 9 sq karam = 272.25 sq ft, 1 kanal = 20 marla = 5,445 sq ft. All calculations run in square meters internally and convert once to the display unit — no chained rounding."
+    },
+    "faq": [
+      {
+        "q": "How do I calculate land area?",
+        "a": "Measure length and width in the same unit and multiply: area = length × width. For odd shapes, split the land into rectangles and triangles, calculate each, and add them up."
+      },
+      {
+        "q": "How do I calculate agricultural land area?",
+        "a": "Use the same geometry, then convert to the unit your region uses — acres, hectares, or local units like kanal and marla in Pakistan. This calculator converts automatically and can send the result straight to the Fertilizer Dose Calculator."
+      },
+      {
+        "q": "How do I calculate land area in square feet?",
+        "a": "Multiply length in feet by width in feet: 100 ft × 50 ft = 5,000 sq ft. One acre is 43,560 sq ft."
+      },
+      {
+        "q": "Can four side lengths calculate an irregular plot exactly?",
+        "a": "No. Four sides alone cannot fix a quadrilateral's area — the shape can flex. Measure a diagonal as well and the plot splits into two exactly-solvable triangles. Without it, only a labeled approximation is possible."
+      },
+      {
+        "q": "How do I convert acres to hectares?",
+        "a": "Multiply acres by 0.404686. One hectare equals 2.471 acres. Use the Converter mode above for any unit pair."
+      },
+      {
+        "q": "What is the difference between an acre and a hectare?",
+        "a": "A hectare (10,000 m²) is about 2.47 times larger than an acre (4,047 m²). Hectares are standard in most countries; acres are common in Pakistan, India, Bangladesh and the US."
+      },
+      {
+        "q": "Can I calculate irregular field area?",
+        "a": "Yes — use the Irregular mode: divide your field into rectangles, squares, triangles or trapezoids, enter each section, and the calculator totals them."
+      },
+      {
+        "q": "Why do some traditional land units vary by region?",
+        "a": "Units like bigha, marla and kanal grew out of local revenue systems, so their size differs by province and convention. We only offer a regional unit where its conversion is verified — for example the Punjab revenue standard for kanal/marla — and we label the standard used."
+      },
+      {
+        "q": "Can I use the calculated area in the Fertilizer Dose Calculator?",
+        "a": "Yes. Tap 'Use in Fertilizer Calculator' and your area, unit, country and region transfer automatically — no re-typing. You still pick your crop there, because area alone never determines fertilizer dose."
+      },
+      {
+        "q": "Is this a legal land survey?",
+        "a": "No. This tool gives useful estimates from your own measurements for farming decisions. Legal boundaries, disputes and official records need a qualified surveyor or the land revenue authority."
+      }
+    ],
+    "relatedTitle": "Related agricultural tools",
+    "relatedCurrent": "You are here"
   }
 }

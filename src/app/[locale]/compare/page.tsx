@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Section } from "@/components/ui/Section";
 import { CompareTool } from "@/components/tools/CompareTool";
 import { localizedMetadata } from "@/lib/seo";
+import { RelatedTools } from "@/components/tools/RelatedTools";
 
 export async function generateMetadata({
   params,
@@ -47,6 +48,8 @@ export default async function ComparePage({
       <Section>
         <CompareTool />
       </Section>
+
+      <RelatedTools current="/compare" />
     </>
   );
 }

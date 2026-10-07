@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Section } from "@/components/ui/Section";
 import { ProfitCalculator } from "@/components/tools/ProfitCalculator";
 import { localizedMetadata } from "@/lib/seo";
+import { RelatedTools } from "@/components/tools/RelatedTools";
 
 export async function generateMetadata({
   params,
@@ -20,10 +21,13 @@ export async function generateMetadata({
 
 export default async function ProfitCalculatorPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ area?: string; unit?: string }>;
 }) {
   const { locale } = await params;
+  const sp = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations("tools.profit");
 
@@ -45,8 +49,10 @@ export default async function ProfitCalculatorPage({
       </section>
 
       <Section>
-        <ProfitCalculator />
+        <ProfitCalculator initialArea={sp.area} initialUnit={sp.unit} />
       </Section>
+
+      <RelatedTools current="/profit-calculator" />
     </>
   );
 }
