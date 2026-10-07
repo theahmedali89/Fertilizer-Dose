@@ -228,10 +228,12 @@ export function LandAreaForm() {
   };
 
   const planKitchenGarden = () => {
-    // No dedicated Kitchen Gardening page exists in the app yet — the honest
-    // fallback is My Garden, where the saved plot can be planned further.
+    // Dedicated Kitchen Gardening page exists — transfer the measured area
+    // (as m²) and keep the saved plot for continuity in My Garden.
+    if (!result) return;
     savePlot();
-    router.push("/my-garden");
+    const rounded = Math.round(result.sqm * 100) / 100;
+    router.push(`/kitchen-garden?area=${rounded}&unit=sqm`);
   };
 
   const primaryUnit = result ? bestDisplayUnit(result.sqm, country) : "sqm";

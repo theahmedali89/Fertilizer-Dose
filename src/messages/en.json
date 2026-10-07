@@ -586,7 +586,8 @@
     "admin": "Admin",
     "logout": "Log out",
     "plantDoseCalculator": "Plant Dose Calculator",
-    "landAreaCalculator": "Land Area Calculator"
+    "landAreaCalculator": "Land Area Calculator",
+    "kitchenGarden": "Kitchen Garden Planner"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
@@ -1135,5 +1136,78 @@
     ],
     "relatedTitle": "Related agricultural tools",
     "relatedCurrent": "You are here"
+  },
+  "kitchenGarden": {
+    "eyebrow": "Kitchen garden planner",
+    "title": "What to Grow This Month",
+    "metaTitle": "Kitchen Garden Planner — What to Grow This Month",
+    "metaDescription": "Plan a home kitchen garden: enter your plot size, pick your month, region and sunlight, and get vegetable and herb suggestions from verified planting windows — never guessed.",
+    "desc": "Tell us your plot size, region and planting month. We suggest only vegetables and herbs with verified planting windows for that month — no invented varieties, no guessed calendars.",
+    "plotTitle": "Your plot & conditions",
+    "area": "Plot area",
+    "areaUnit": "Area unit",
+    "unitSqm": "Square meters (m²)",
+    "unitSqft": "Square feet (ft²)",
+    "country": "Country",
+    "region": "Region",
+    "month": "Planting month",
+    "sunlight": "Sunlight",
+    "sunlightAny": "Any",
+    "sunlightFull": "Full sun",
+    "sunlightPartial": "Partial shade",
+    "sunlightShade": "Shade",
+    "suggestionsTitle": "What you can plant",
+    "suggestionsCount": "{n, plural, =0 {No options} one {# option} other {# options}} for {month} in {region}",
+    "selectHint": "Tick the crops you want to grow to build your plan below.",
+    "verified": "Verified",
+    "published": "Published",
+    "source": "Source",
+    "plantingWindow": "Planting window",
+    "activitySOW": "Sow",
+    "activityTRANSPLANT": "Transplant",
+    "activityPLANT": "Plant",
+    "emptyTitle": "No verified planting data for this selection",
+    "emptyBody": "We have no verified vegetable or herb planting windows for {region} in {month} yet. We never guess — try a different month or region, or browse the full planting calendar as more regional data gets verified.",
+    "sunlightGapNote": "Sunlight needs are not recorded for these crops yet, so your sunlight preference could not be applied as a filter. All month-appropriate options are shown.",
+    "categoryVegetable": "Vegetable",
+    "categoryHerb": "Herb",
+    "planTitle": "Your garden plan",
+    "planCrop": "Crop",
+    "planShare": "Share of plot (%)",
+    "planArea": "Area",
+    "shareTotal": "Shares add up to {total}% — they should total 100%.",
+    "bedTitle": "Simple layout estimate",
+    "bedWidth": "Bed width (m)",
+    "pathWidth": "Path width (m)",
+    "bedAssumptionNote": "Layout math only: with {bedWidth} m-wide beds and {pathWidth} m paths, about {pct}% of your plot is plantable bed area — roughly {bedMeters} m of bed length. Bed width and path width are your own adjustable assumptions, not crop guidance.",
+    "spacingNote": "Row and plant spacing is not verified for these crops yet — check your local agricultural extension guidance before finalizing spacing.",
+    "savePlan": "Save plan to My Garden",
+    "saved": "Plan saved to My Garden.",
+    "openMyGarden": "Open My Garden",
+    "savedPlotName": "Kitchen garden — {date}",
+    "savedPlotNote": "{sqm} m² kitchen garden plan for {month}, {region}; {count} crop(s) selected.",
+    "faqTitle": "Kitchen gardening FAQs",
+    "faq": [
+      {
+        "q": "What can I plant in a small kitchen garden this month?",
+        "a": "It depends on your region and the month. Enter your plot details above and the planner lists only vegetables and herbs with verified planting windows for your selection — with the source named on every suggestion."
+      },
+      {
+        "q": "Does the planner tell me how far apart to plant?",
+        "a": "Not yet. Row and plant spacing has not been verified for these crops in our data, so the planner says so honestly instead of inventing numbers. Check your local agricultural extension guidance for spacing."
+      },
+      {
+        "q": "How is this different from the planting calendar?",
+        "a": "The planting calendar shows every verified window for a region and month, including field crops. This planner narrows it to vegetables and herbs suitable for a home garden, adds your plot size and sunlight, and turns the picks into a simple layout plan you can save to My Garden."
+      },
+      {
+        "q": "Can I use my land area measurement here?",
+        "a": "Yes. The Land Area Calculator's “Plan a Kitchen Garden” button sends your measured area straight into this planner."
+      },
+      {
+        "q": "Where is my plan stored?",
+        "a": "In your browser's My Garden (local storage) when you press “Save plan to My Garden”, just like saved plots from the Land Area Calculator. Sign in to sync it across devices."
+      }
+    ]
   }
 }
