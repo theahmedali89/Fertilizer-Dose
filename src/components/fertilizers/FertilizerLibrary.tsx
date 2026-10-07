@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { Input } from "@/components/ui/fields";
 import type { FertilizerInfo } from "@/lib/agronomy";
 
 type Tab = "all" | "mineral" | "organic";
@@ -37,10 +38,23 @@ function NpkLine({ f }: { f: FertilizerInfo }) {
 export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo[] }) {
   const t = useTranslations("fertilizers");
   const [tab, setTab] = useState<Tab>("all");
+  const [query, setQuery] = useState("");
 
   const minerals = fertilizers.filter((f) => f.fertilizerType !== "organic");
   const organics = fertilizers.filter((f) => f.fertilizerType === "organic");
-  const shown = tab === "all" ? fertilizers : tab === "mineral" ? minerals : organics;
+  const tabbed = tab === "all" ? fertilizers : tab === "mineral" ? minerals : organics;
+  // Phase 5b — client-side name search so the organic materials are
+  // discoverable by name (e.g. "vermicompost", "fym", "khad").
+  const shown = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return tabbed;
+    return tabbed.filter(
+      (f) =>
+        f.name.toLowerCase().includes(q) ||
+        f.slug.toLowerCase().includes(q) ||
+        (f.urdu ?? "").includes(query.trim())
+    );
+  }, [tabbed, query]);
 
   const tabs: { key: Tab; label: string; count: number }[] = [
     { key: "all", label: t("tabAll"), count: fertilizers.length },
@@ -78,6 +92,19 @@ export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo
         </div>
       )}
 
+      <div className="mb-6 max-w-md">
+        <Input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={t("searchPlaceholder")}
+          aria-label={t("searchPlaceholder")}
+        />
+      </div>
+
+      {shown.length === 0 ? (
+        <p className="text-sm text-ink-faint py-8 text-center">{t("searchNoResults")}</p>
+      ) : (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {shown.map((f) => (
           <Link key={f.slug} href={`/fertilizers/${f.slug}`} className="group">
@@ -97,6 +124,7 @@ export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo
           </Link>
         ))}
       </div>
+      )}
     </div>
   );
 }

@@ -196,6 +196,14 @@ export function GardenDashboard() {
           <ul className="space-y-2.5">
             {calculations.map((c) => {
               const item = getItem(c.cropSlug);
+              // Phase 5a — organic applications are saved with a marker slug
+              // (not a growing item), so they get their own display label.
+              const displayName =
+                c.cropSlug === "organic-application"
+                  ? t("organicApplicationLabel")
+                  : item
+                    ? item.name
+                    : c.cropSlug;
               return (
                 <li key={c.id}>
                   <Card>
@@ -203,7 +211,7 @@ export function GardenDashboard() {
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <p className="font-semibold text-[15px]">
-                            {item ? item.name : c.cropSlug} · {c.area} <span className="capitalize font-normal text-ink-faint">{c.unit}</span>
+                            {displayName} · {c.area} <span className="capitalize font-normal text-ink-faint">{c.unit}</span>
                           </p>
                           <p className="text-sm text-ink-soft mt-1">
                             {c.products.map((p) => `${p.product}: ${p.kg} kg`).join(" · ")}
