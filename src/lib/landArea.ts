@@ -63,6 +63,8 @@ export interface AreaUnit {
   kind: "universal" | "regional";
   /** ISO country code when kind === "regional" */
   country?: string;
+  /** state/province the unit applies to, e.g. "Uttar Pradesh" (regional only) */
+  region?: string;
   /** which convention, e.g. "Punjab revenue standard" */
   standard?: string;
   verified: boolean;
@@ -99,6 +101,221 @@ export const AREA_UNITS: AreaUnit[] = [
     standard: "Punjab revenue standard (1 kanal = 20 marla = 5,445 sq ft)",
     verified: true,
     source: "Punjab Board of Revenue convention (1 kanal = 20 marla)",
+  },
+  // ── India: STATE-SPECIFIC units (no universal Bigha). ─────────────────
+  // Uttar Pradesh — pucca/revenue standard (Ilahi-gaz system).
+  {
+    id: "bigha-up", label: "Bigha (UP)", symbol: "bigha", toSqM: 2529.285264,
+    kind: "regional", country: "IN", region: "Uttar Pradesh",
+    standard: "UP revenue (pucca) standard — 3025 sq yd (60×60 Ilahi guz); 1 bigha = 20 biswa",
+    verified: true,
+    source: "Rowlett 'How Many?' gazetteer, citing Prinsep 1834 / Wilson 1855",
+  },
+  {
+    id: "biswa-up", label: "Biswa (UP)", symbol: "biswa", toSqM: 126.464263,
+    kind: "regional", country: "IN", region: "Uttar Pradesh",
+    standard: "1/20 bigha = 151.25 sq yd = 1361.25 sq ft",
+    verified: true,
+    source: "PLRonline revenue terminology; Rowlett (derived)",
+  },
+  {
+    id: "biswansi-up", label: "Biswansi (UP)", symbol: "biswansi", toSqM: 6.323213,
+    kind: "regional", country: "IN", region: "Uttar Pradesh",
+    standard: "1/20 biswa = 68.0625 sq ft",
+    verified: true,
+    source: "PLRonline revenue terminology; Rowlett (derived)",
+  },
+  // Bihar — Patna survey standard.
+  {
+    id: "bigha-br", label: "Bigha (Bihar)", symbol: "bigha", toSqM: 2529.285264,
+    kind: "regional", country: "IN", region: "Bihar",
+    standard: "Patna survey standard — 3025 sq yd; 1 bigha = 20 katha",
+    verified: true,
+    source: "Rowlett gazetteer, citing Prinsep 1834",
+  },
+  {
+    id: "katha-br", label: "Katha (Bihar)", symbol: "katha", toSqM: 126.464263,
+    kind: "regional", country: "IN", region: "Bihar",
+    standard: "1/20 bigha = 1361.25 sq ft; 1 katha = 20 dhur",
+    verified: true,
+    source: "Rowlett gazetteer",
+  },
+  {
+    id: "dhur-br", label: "Dhur (Bihar)", symbol: "dhur", toSqM: 6.323213,
+    kind: "regional", country: "IN", region: "Bihar",
+    standard: "1/20 katha = 68.0625 sq ft; 1 dhur = 20 dhurki",
+    verified: true,
+    source: "Rowlett gazetteer",
+  },
+  {
+    id: "dhurki-br", label: "Dhurki (Bihar)", symbol: "dhurki", toSqM: 0.316161,
+    kind: "regional", country: "IN", region: "Bihar",
+    standard: "1/20 dhur = 3.403125 sq ft",
+    verified: true,
+    source: "Rowlett gazetteer (derived)",
+  },
+  // West Bengal — colonial Bengal standard (shared with Bangladesh).
+  {
+    id: "bigha-wb", label: "Bigha (WB)", symbol: "bigha", toSqM: 1337.803776,
+    kind: "regional", country: "IN", region: "West Bengal",
+    standard: "Colonial Bengal standard — 1600 sq yd = 14,400 sq ft; 1 bigha = 20 katha = 33 decimal",
+    verified: true,
+    source: "Rowlett gazetteer; Asutosh College (Univ. of Calcutta) study material",
+  },
+  {
+    id: "katha-wb", label: "Katha (WB)", symbol: "katha", toSqM: 66.890189,
+    kind: "regional", country: "IN", region: "West Bengal",
+    standard: "1/20 bigha = 720 sq ft; 1 katha = 16 chhatak",
+    verified: true,
+    source: "Rowlett gazetteer; Asutosh College study material",
+  },
+  {
+    id: "chhatak-wb", label: "Chhatak (WB)", symbol: "chhatak", toSqM: 4.180637,
+    kind: "regional", country: "IN", region: "West Bengal",
+    standard: "1/16 katha = 45 sq ft",
+    verified: true,
+    source: "Asutosh College (Univ. of Calcutta) study material",
+  },
+  {
+    id: "decimal-wb", label: "Decimal (WB)", symbol: "decimal", toSqM: 40.468564,
+    kind: "regional", country: "IN", region: "West Bengal",
+    standard: "1/100 acre = 435.6 sq ft (also used in Bihar)",
+    verified: true,
+    source: "Asutosh College study material; GOI NIC LRISD (Jharkhand dismil = 40.46 sq m)",
+  },
+  // Haryana — post-settlement standard (GOI NIC LRISD).
+  {
+    id: "kanal-hr", label: "Kanal (Haryana)", symbol: "kanal", toSqM: 505.857053,
+    kind: "regional", country: "IN", region: "Haryana",
+    standard: "Post-settlement standard — 605 sq yd = 5,445 sq ft; 1 kanal = 20 marla; 8 kanal = 1 acre",
+    verified: true,
+    source: "GOI NIC LRISD 'Standard Classification for AREA UNIT/EXTENT' Table 2.7.3",
+  },
+  {
+    id: "marla-hr", label: "Marla (Haryana)", symbol: "marla", toSqM: 25.292853,
+    kind: "regional", country: "IN", region: "Haryana",
+    standard: "1/20 kanal = 272.25 sq ft = 9 sarsahi",
+    verified: true,
+    source: "GOI NIC LRISD Table 2.7.3",
+  },
+  {
+    id: "sarsahi-hr", label: "Sarsahi (Haryana)", symbol: "sarsahi", toSqM: 2.810317,
+    kind: "regional", country: "IN", region: "Haryana",
+    standard: "1 karam² (66-inch karam) = 30.25 sq ft; 9 sarsahi = 1 marla",
+    verified: true,
+    source: "GOI NIC LRISD Table 2.7.3",
+  },
+  // Rajasthan — jarib systems (GOI NIC LRISD).
+  {
+    id: "bigha-rj-pucca", label: "Bigha (Rajasthan, pucca)", symbol: "bigha", toSqM: 2529.285264,
+    kind: "regional", country: "IN", region: "Rajasthan",
+    standard: "Shahjahani jarib (165 ft)² = 27,225 sq ft; 1 bigha = 20 biswansi",
+    verified: true,
+    source: "GOI NIC LRISD Table 2.7.3",
+  },
+  {
+    id: "bigha-rj-kachha", label: "Bigha (Rajasthan, kachha)", symbol: "bigha", toSqM: 1618.742569,
+    kind: "regional", country: "IN", region: "Rajasthan",
+    standard: "Gantari jarib (132 ft)² = 17,424 sq ft",
+    verified: true,
+    source: "GOI NIC LRISD Table 2.7.3; Rowlett (1618.7 sq m)",
+  },
+  {
+    id: "biswansi-rj", label: "Biswansi (Rajasthan)", symbol: "biswansi", toSqM: 126.464263,
+    kind: "regional", country: "IN", region: "Rajasthan",
+    standard: "1/20 bigha = 1361.25 sq ft",
+    verified: true,
+    source: "GOI NIC LRISD Table 2.7.3",
+  },
+  // ── Bangladesh: national general standard = colonial Bengal system. ──
+  {
+    id: "bigha-bd", label: "Bigha", symbol: "bigha", toSqM: 1337.803776,
+    kind: "regional", country: "BD",
+    standard: "General standard — 20 katha = 1600 sq yd = 14,400 sq ft = 33 decimal (district variants exist)",
+    verified: true,
+    source: "Rowlett gazetteer (district table)",
+  },
+  {
+    id: "katha-bd", label: "Katha", symbol: "katha", toSqM: 66.890189,
+    kind: "regional", country: "BD",
+    standard: "1/20 bigha = 720 sq ft = 1.65 decimal",
+    verified: true,
+    source: "Rowlett gazetteer",
+  },
+  {
+    id: "chhatak-bd", label: "Chhatak", symbol: "chhatak", toSqM: 4.180637,
+    kind: "regional", country: "BD",
+    standard: "1/16 katha = 45 sq ft (Bengal system)",
+    verified: true,
+    source: "Asutosh College study material (Bengal system)",
+  },
+  {
+    id: "decimal-bd", label: "Decimal (shotangsho)", symbol: "decimal", toSqM: 40.468564,
+    kind: "regional", country: "BD",
+    standard: "1/100 acre = 435.6 sq ft",
+    verified: true,
+    source: "Asutosh College study material",
+  },
+  // ── Brazil: alqueire regional variants (still in rural/commercial use). ─
+  {
+    id: "alqueire-paulista", label: "Alqueire paulista", symbol: "alq.", toSqM: 24200,
+    kind: "regional", country: "BR", region: "São Paulo, Paraná",
+    standard: "Alqueire paulista = 24,200 m²",
+    verified: true,
+    source: "Brazilian rural land-use reference (see research-landunits/west.md)",
+  },
+  {
+    id: "alqueire-mineiro", label: "Alqueire mineiro", symbol: "alq.", toSqM: 48400,
+    kind: "regional", country: "BR", region: "Minas Gerais, Goiás, Rio de Janeiro",
+    standard: "Alqueire mineiro/goiano = 48,400 m²",
+    verified: true,
+    source: "Brazilian rural land-use reference (see research-landunits/west.md)",
+  },
+  {
+    id: "alqueire-baiano", label: "Alqueire baiano", symbol: "alq.", toSqM: 96800,
+    kind: "regional", country: "BR", region: "Bahia",
+    standard: "Alqueire baiano = 96,800 m²",
+    verified: true,
+    source: "Brazilian rural land-use reference (see research-landunits/west.md)",
+  },
+  {
+    id: "alqueire-norte", label: "Alqueire do norte", symbol: "alq.", toSqM: 27225,
+    kind: "regional", country: "BR", region: "Northern Brazil",
+    standard: "Alqueire do norte = 27,225 m² (dictionary value preferred)",
+    verified: true,
+    source: "Brazilian dictionary reference (see research-landunits/west.md)",
+  },
+  // ── Türkiye ───────────────────────────────────────────────────────────
+  {
+    id: "donum-tr", label: "Dönüm", symbol: "dönüm", toSqM: 1000,
+    kind: "regional", country: "TR",
+    standard: "Legal dönüm = 1,000 m² = 1 dekar = 10 ar (NOT the old Ottoman dönüm of 918.393 m²)",
+    verified: true,
+    source: "Turkish law of 11 June 1945 (Topraklandırma Kanunu)",
+  },
+  // ── Japan ─────────────────────────────────────────────────────────────
+  {
+    id: "tsubo-jp", label: "Tsubo (坪)", symbol: "坪", toSqM: 3.3057851239669,
+    kind: "regional", country: "JP",
+    standard: "Exact 400/121 m²; restricted-use unit — permitted for land/building transactions only",
+    verified: true,
+    source: "Japanese Measurement Act, official English translation (japaneselawtranslation.go.jp)",
+  },
+  // ── South Korea ───────────────────────────────────────────────────────
+  {
+    id: "pyeong-kr", label: "Pyeong (평)", symbol: "평", toSqM: 3.3057851239669,
+    kind: "regional", country: "KR",
+    standard: "Exact 400/121 m²; commercial use banned since 1 July 2007 (informal use continues)",
+    verified: true,
+    source: "Korean Measures Act, KLRI official English translation; KoreaScience journal",
+  },
+  // ── Russia ────────────────────────────────────────────────────────────
+  {
+    id: "sotka-ru", label: "Sotka (сотка)", symbol: "сотка", toSqM: 100,
+    kind: "regional", country: "RU",
+    standard: "Colloquial name for the metric are (100 m²); not a separate standard",
+    verified: true,
+    source: "Russian land-use reference (see research-landunits/west.md)",
   },
 ];
 
