@@ -133,6 +133,46 @@ const cropItems: GrowingItem[] = CROPS.map((c: CropInfo) => ({
 
 /* ---------------- New crops (basic identity only — in review) ---------------- */
 
+/**
+ * Identity-only field crop (no verified agronomics yet).
+ * For crops that have (or will have) FertilizerRecommendation rows but no
+ * verified static agronomic profile. Never invent agronomics here.
+ */
+function fieldCrop(
+  slug: string,
+  name: string,
+  urdu: string,
+  scientificName: string | null
+): GrowingItem {
+  return {
+    slug,
+    name,
+    urdu,
+    scientificName,
+    category: "crop",
+    plantSubcategory: null,
+    season: null,
+    seasonDetail: null,
+    sowingMonths: null, // covered by the planting calendar, never invented
+    harvestPeriod: null,
+    soil: null,
+    water: null,
+    sunlight: null,
+    climate: null,
+    regions: [],
+    stages: [],
+    deficiencies: [],
+    problems: [],
+    npk: null,
+    npkSource: null,
+    region: "",
+    sources: [],
+    lastReviewed: null,
+    verificationStatus: "under_review",
+    indexable: false,
+  };
+}
+
 const newCrops: GrowingItem[] = [
   {
     slug: "soybean",
@@ -647,6 +687,17 @@ const newCrops: GrowingItem[] = [
     verificationStatus: "under_review",
     indexable: false,
   },
+  // ── Global crop-dose program (2026-10-08): identity only; agronomics live
+  // in FertilizerRecommendation rows, never invented here ──
+  fieldCrop("beans", "Beans", "لوبیا", "Phaseolus vulgaris"),
+  fieldCrop("sweet-potato", "Sweet Potato", "شکرقندی", "Ipomoea batatas"),
+  fieldCrop("cassava", "Cassava", "", "Manihot esculenta"),
+  fieldCrop("sesame", "Sesame", "تل", "Sesamum indicum"),
+  fieldCrop("buckwheat", "Buckwheat", "", "Fagopyrum esculentum"),
+  fieldCrop("coconut", "Coconut", "ناریل", "Cocos nucifera"),
+  fieldCrop("oats", "Oats", "جئی", "Avena sativa"),
+  fieldCrop("millet", "Millet", "", null), // generic — taxonomy ambiguous, left null
+  fieldCrop("sorghum", "Sorghum", "جوار", "Sorghum bicolor"),
 ];
 
 /* ---------------- Vegetables (identity only — agronomics not yet verified) ---------------- */

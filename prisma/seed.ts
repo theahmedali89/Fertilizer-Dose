@@ -19,6 +19,7 @@ import { seedBatch5 } from "./seed-batch5";
 import { seedBatch6 } from "./seed-batch6";
 import { seedBatch7 } from "./seed-batch7";
 import { seedBatch8 } from "./seed-batch8";
+import { seedCropdose } from "./seed-cropdose";
 import { seedVegplant } from "./seed-vegplant";
 import { seedTranslations } from "./seed-translations";
 
@@ -286,6 +287,10 @@ async function main() {
 
   // ── Vegetable planting windows (17 countries) — idempotent, approved 2026-10-07 ("han kro") ──
   await seedVegplant(db);
+
+  // ── Global crop NPK dose recommendations (15 countries) — idempotent, approved 2026-10-08
+  // ("jese e research ho ap populate b kr dena" — auto-populate when research completes) ──
+  await seedCropdose(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
