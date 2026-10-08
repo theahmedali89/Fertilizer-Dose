@@ -19,7 +19,9 @@
       "soil": "Soil type (optional)",
       "soilHint": "Soil type doesn't change the math — it changes the advice. Sandy soils leach nitrogen faster; saline soils need care with MOP.",
       "submit": "Calculate dose",
-      "unit": "Unit"
+      "unit": "Unit",
+      "rangeHint": "Dose range",
+      "rangeBadge": "Range"
     },
     "method": {
       "desc": "No black box. This is the same DAP-first procedure taught in agronomy courses.",
@@ -45,7 +47,9 @@
       "splitTitle": "Split-dose schedule",
       "splitGenericBadge": "Generic schedule",
       "recommendedLine": "Recommended {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
-      "soilCustom": "You selected \"{soil}\". On {soilLower} soils, consider a soil test before changing the dose — the base calculation above stays the same."
+      "soilCustom": "You selected \"{soil}\". On {soilLower} soils, consider a soil test before changing the dose — the base calculation above stays the same.",
+      "recommendedRangeLine": "Recommended dose range: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Pick within the range based on your soil test.",
+      "rangeSaveNote": "Saving to My Garden is available for exact doses. For ranges, note your chosen value within the range."
     },
     "title": "Exact fertilizer dose, with the math shown.",
     "soilTestCard": {
@@ -218,7 +222,8 @@
       "optional": "optional",
       "nProxyNote": "Soil labs rarely report a nitrogen class, so organic carbon is used as the proxy for your soil's nitrogen-supplying capacity.",
       "submit": "Adjust dose",
-      "soilTestHint": "From your soil health card or lab report. Leave blank any value you don't have — that nutrient keeps its base dose."
+      "soilTestHint": "From your soil health card or lab report. Leave blank any value you don't have — that nutrient keeps its base dose.",
+      "rangeHint": "Dose range"
     },
     "results": {
       "title": "Soil-test adjusted dose",
@@ -253,7 +258,9 @@
       ],
       "sourceLabel": "Data source:",
       "genericLabel": "Custom base (generic guidance only — not a verified recommendation)",
-      "disclaimer": "All doses are estimates. Confirm with your local agronomist / agriculture extension officer before applying fertilizer."
+      "disclaimer": "All doses are estimates. Confirm with your local agronomist / agriculture extension officer before applying fertilizer.",
+      "baseRangeLine": "Base dose range: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Adjusted dose range: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Method",

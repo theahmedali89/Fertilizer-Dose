@@ -247,7 +247,13 @@ export async function getCrops(): Promise<CropInfo[]> {
     // Two tiers per Ahmed's 2026-10-08 directive: verified/published records
     // win; under_review records also unlock crops but are badged as such in
     // the UI and NEVER presented as verified.
-    let recMap = new Map<string, { n: number | null; p: number | null; k: number | null; source: string; underReview: boolean }>();
+    let recMap = new Map<string, {
+      n: number | null; p: number | null; k: number | null;
+      nMin: number | null; nMax: number | null;
+      pMin: number | null; pMax: number | null;
+      kMin: number | null; kMax: number | null;
+      source: string; underReview: boolean
+    }>();
     try {
       // Try to get selected country; default to PK if unavailable
       const { getSelectedCountryCode } = await import("@/server/country");
@@ -272,6 +278,9 @@ export async function getCrops(): Promise<CropInfo[]> {
           const slug = r.item.slug;
           const entry = {
             n: r.n, p: r.p2o5, k: r.k2o,
+            nMin: r.nMin, nMax: r.nMax,
+            pMin: r.p2o5Min, pMax: r.p2o5Max,
+            kMin: r.k2oMin, kMax: r.k2oMax,
             source: r.source.organization ? `${r.source.organization} — ${r.source.title}` : r.source.title,
             underReview,
           };
@@ -306,11 +315,30 @@ export async function getCrops(): Promise<CropInfo[]> {
     // Map GrowingItem → CropInfo shape used by the calculator engine.
     return crops.map((c) => {
       const rec = recMap.get(c.slug);
-      // Use recommendation NPK if it has a numeric N; ranged/formula records
-      // keep n null and the crop stays locked (range display is future work).
-      const npk = rec && rec.n != null
-        ? { n: rec.n, p: rec.p ?? 0, k: rec.k ?? 0 }
-        : c.npk;
+      // Point dose: recommendation with numeric N, else legacy flat field.
+      // Ranged dose (global batch): any min/max present with N data — the
+      // range UI takes over and npk stays null (never a midpoint).
+      let npk = c.npk;
+      let npkRange: { n: [number, number]; p: [number, number]; k: [number, number] } | null = null;
+      if (rec) {
+        const nLo = rec.nMin ?? rec.n;
+        const nHi = rec.nMax ?? rec.n;
+        const pLo = rec.pMin ?? rec.p;
+        const pHi = rec.pMax ?? rec.p;
+        const kLo = rec.kMin ?? rec.k;
+        const kHi = rec.kMax ?? rec.k;
+        const isRanged = nLo !== nHi || pLo !== pHi || kLo !== kHi;
+        if (isRanged && nLo != null && nHi != null) {
+          npk = null;
+          npkRange = {
+            n: [nLo, nHi],
+            p: [pLo ?? 0, pHi ?? 0],
+            k: [kLo ?? 0, kHi ?? 0],
+          };
+        } else if (rec.n != null) {
+          npk = { n: rec.n, p: rec.p ?? 0, k: rec.k ?? 0 };
+        }
+      }
       const npkSource = rec ? rec.source : c.npkSource;
       return {
         slug: c.slug, name: c.name, urdu: c.urdu ?? "",
@@ -318,7 +346,7 @@ export async function getCrops(): Promise<CropInfo[]> {
         soil: c.soil ?? "", water: c.water ?? "",
         stages: c.stages.map((s) => ({ name: s.name, timing: s.timing, note: s.note })),
         problems: c.problems ?? [],
-        npk, npkSource,
+        npk, npkRange, npkSource,
         underReview: rec ? rec.underReview : false,
         region: c.region ?? "",
       };

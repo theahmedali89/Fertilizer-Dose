@@ -354,10 +354,19 @@ export async function seedCropdose(db: PrismaClient): Promise<void> {
       select: { id: true },
     });
     if (existing) {
-      // Refresh verificationStatus only (batch-8 pattern) — never clobber admin edits.
+      // Refresh verificationStatus + range columns (batch-8 pattern) —
+      // never clobber admin edits to other fields.
       await db.fertilizerRecommendation.update({
         where: { id: existing.id },
-        data: { verificationStatus: vs(status) },
+        data: {
+          verificationStatus: vs(status),
+          nMin: r.n_min,
+          nMax: r.n_max,
+          p2o5Min: r.p2o5_min,
+          p2o5Max: r.p2o5_max,
+          k2oMin: r.k2o_min,
+          k2oMax: r.k2o_max,
+        },
       });
       skipped++;
       continue;
@@ -375,6 +384,13 @@ export async function seedCropdose(db: PrismaClient): Promise<void> {
         n,
         p2o5: pointValue(r.p2o5_min, r.p2o5_max),
         k2o: pointValue(r.k2o_min, r.k2o_max),
+        // Source-faithful ranges; point nutrients store min == max.
+        nMin: r.n_min,
+        nMax: r.n_max,
+        p2o5Min: r.p2o5_min,
+        p2o5Max: r.p2o5_max,
+        k2oMin: r.k2o_min,
+        k2oMax: r.k2o_max,
         nutrientBasis: "P2O5_K2O",
         micronutrients: null,
         applicationTiming: null,

@@ -382,6 +382,13 @@ export interface CropInfo {
   problems: string[];
   /** Recommended N–P2O5–K2O in kg/ha. null = under review, never invented. */
   npk: { n: number; p: number; k: number } | null;
+  /**
+   * Ranged dose in kg/ha (source-faithful min–max). Set when the recommendation
+   * has any ranged nutrient; point nutrients use [v, v]; missing P/K use [0, 0]
+   * (matches the point-dose convention). null = no range data.
+   * A crop is selectable when npk OR npkRange is set.
+   */
+  npkRange: { n: [number, number]; p: [number, number]; k: [number, number] } | null;
   npkSource: string | null;
   /** True when the dose comes from an under_review recommendation — UI must badge it. */
   underReview: boolean;
@@ -404,6 +411,7 @@ export const CROPS: CropInfo[] = [
     ],
     problems: ["Aphids", "Rust (yellow/brown)", "Termites in light soils", "Lodging from excess nitrogen"],
     npk: { n: 124, p: 62, k: 0 },
+    npkRange: null,
     npkSource: "PAU Package of Practices for Crops of Punjab, Rabi 2025–26 (IN-Punjab; K soil-test-based, no blanket K dose)",
     region: "Punjab, India (PAU)",
     underReview: false,
@@ -423,6 +431,7 @@ export const CROPS: CropInfo[] = [
     ],
     problems: ["Stem borer", "Leaf folder", "Bacterial leaf blight", "Zinc deficiency (khaira disease)"],
     npk: { n: 104, p: 30, k: 30 },
+    npkRange: null,
     npkSource: "PAU Package of Practices for Crops of Punjab, Kharif 2026 (IN-Punjab; P/K only on deficiency)",
     region: "Punjab, India (PAU)",
     underReview: false,
@@ -442,6 +451,7 @@ export const CROPS: CropInfo[] = [
     ],
     problems: ["Fall armyworm", "Stem borer", "Waterlogging", "Zinc deficiency"],
     npk: { n: 124, p: 60, k: 30 },
+    npkRange: null,
     npkSource: "PAU Package of Practices for Crops of Punjab, Kharif 2026 (IN-Punjab; K conditional)",
     region: "Punjab, India (PAU)",
     underReview: false,
@@ -461,6 +471,7 @@ export const CROPS: CropInfo[] = [
     ],
     problems: ["Whitefly", "Pink bollworm", "Cotton leaf curl virus", "Thrips"],
     npk: null,
+    npkRange: null,
     npkSource: null,
     region: "Punjab PK / Sindh",
     underReview: false,
@@ -480,6 +491,7 @@ export const CROPS: CropInfo[] = [
     ],
     problems: ["Sugarcane borer", "Red rot", "Whip smut", "Waterlogging"],
     npk: null,
+    npkRange: null,
     npkSource: null,
     region: "Punjab PK / UP India",
     underReview: false,
@@ -498,6 +510,7 @@ export const CROPS: CropInfo[] = [
     ],
     problems: ["Late blight", "Aphids", "Cutworms", "Hollow heart from uneven water"],
     npk: null,
+    npkRange: null,
     npkSource: null,
     region: "Punjab PK / UP India",
     underReview: false,
@@ -528,6 +541,12 @@ export interface DoseLine {
   kg: number;
   bags: number; // 50 kg bags
   purpose: string;
+  /**
+   * Range ends — set when the dose is a range. Display as "kg–kgMax".
+   * Absent for exact doses.
+   */
+  kgMax?: number;
+  bagsMax?: number;
 }
 
 export interface DoseResult {
@@ -538,8 +557,12 @@ export interface DoseResult {
   lines: DoseLine[];
   steps: string[];
   totalKg: number;
+  /** Range end for the total (kg). Set when isRange. */
+  totalKgMax?: number;
   source: string;
   region: string;
+  /** True when amounts are ranges (range in → range out, never midpoints). */
+  isRange: boolean;
 }
 
 const BAG_KG = 50;
@@ -591,6 +614,108 @@ export function calculateDose(
     totalKg: r1(dapKg + ureaKg + mopKg),
     source: crop.npkSource ?? "",
     region: crop.region,
+    isRange: false,
+  };
+}
+
+/** Format a [min, max] pair: single value when min == max, else "min–max". */
+export function fmtRange(lo: number, hi: number): string {
+  const a = r1(lo);
+  const b = r1(hi);
+  return a === b ? `${a}` : `${a}–${b}`;
+}
+
+/**
+ * Range-dose calculator: honest interval arithmetic over a ranged NPK
+ * recommendation (DAP-first, same industry practice as calculateDose).
+ *
+ * - DAP/ha range from the P range; its nitrogen contribution likewise ranges.
+ * - Urea nitrogen need = N range minus DAP's nitrogen range:
+ *   min urea-N = nLo − max N from DAP; max urea-N = nHi − min N from DAP.
+ *   Negative lower ends clamp to 0 (you cannot apply negative fertilizer).
+ * - MOP/ha range from the K range.
+ * Range in → range out. No midpoints are ever presented as exact.
+ */
+export function calculateDoseRange(
+  crop: CropInfo,
+  area: number,
+  unitId: string
+): DoseResult | null {
+  if (!crop.npkRange || area <= 0) return null;
+  const unit = AREA_UNITS.find((u) => u.id === unitId) ?? AREA_UNITS[0];
+  const areaHa = area * unit.toHectare;
+  const {
+    n: [nLo, nHi],
+    p: [pLo, pHi],
+    k: [kLo, kHi],
+  } = crop.npkRange;
+
+  const dapLo = (pLo * 100) / 46;
+  const dapHi = (pHi * 100) / 46;
+  const nDapLo = dapLo * 0.18;
+  const nDapHi = dapHi * 0.18;
+  const ureaNLo = Math.max(0, nLo - nDapHi);
+  const ureaNHi = Math.max(0, nHi - nDapLo);
+  const ureaLo = (ureaNLo * 100) / 46;
+  const ureaHi = (ureaNHi * 100) / 46;
+  const mopLo = (kLo * 100) / 60;
+  const mopHi = (kHi * 100) / 60;
+
+  const dapKgLo = r1(dapLo * areaHa);
+  const dapKgHi = r1(dapHi * areaHa);
+  const ureaKgLo = r1(ureaLo * areaHa);
+  const ureaKgHi = r1(ureaHi * areaHa);
+  const mopKgLo = r1(mopLo * areaHa);
+  const mopKgHi = r1(mopHi * areaHa);
+
+  const lines: DoseLine[] = [
+    {
+      product: "DAP",
+      kg: dapKgLo,
+      kgMax: dapKgHi,
+      bags: r1(dapKgLo / BAG_KG),
+      bagsMax: r1(dapKgHi / BAG_KG),
+      purpose: `Full phosphorus (${fmtRange(pLo, pHi)} kg P₂O₅/ha) + ${fmtRange(nDapLo * areaHa, nDapHi * areaHa)} kg nitrogen as bonus`,
+    },
+    {
+      product: "Urea",
+      kg: ureaKgLo,
+      kgMax: ureaKgHi,
+      bags: r1(ureaKgLo / BAG_KG),
+      bagsMax: r1(ureaKgHi / BAG_KG),
+      purpose: `Remaining nitrogen after DAP's contribution`,
+    },
+    {
+      product: "MOP",
+      kg: mopKgLo,
+      kgMax: mopKgHi,
+      bags: r1(mopKgLo / BAG_KG),
+      bagsMax: r1(mopKgHi / BAG_KG),
+      purpose: `Full potassium (${fmtRange(kLo, kHi)} kg K₂O/ha)`,
+    },
+  ];
+
+  const steps = [
+    `Recommended dose range for ${crop.name}: N ${fmtRange(nLo, nHi)} – P₂O₅ ${fmtRange(pLo, pHi)} – K₂O ${fmtRange(kLo, kHi)} kg/ha (${crop.region}). Pick within the range based on your soil test and field history.`,
+    `${area} ${area === 1 ? unit.label : unit.plural} = ${areaHa >= 0.01 ? r1(areaHa * 100) / 100 : areaHa.toFixed(4)} hectare.`,
+    `Phosphorus first: DAP is 46% P₂O₅, so P₂O₅ ${fmtRange(pLo, pHi)} → DAP ${fmtRange(dapLo, dapHi)} kg/ha.`,
+    `That DAP also supplies ${fmtRange(nDapLo, nDapHi)} kg nitrogen/ha (18% of DAP).`,
+    `Remaining nitrogen: N ${fmtRange(nLo, nHi)} minus DAP's nitrogen → urea ${fmtRange(ureaLo, ureaHi)} kg/ha.`,
+    `Potassium: MOP is 60% K₂O, so K₂O ${fmtRange(kLo, kHi)} → MOP ${fmtRange(mopLo, mopHi)} kg/ha.`,
+  ];
+
+  return {
+    cropName: crop.name,
+    area,
+    unitLabel: area === 1 ? unit.label : unit.plural,
+    areaHa,
+    lines,
+    steps,
+    totalKg: r1(dapKgLo + ureaKgLo + mopKgLo),
+    totalKgMax: r1(dapKgHi + ureaKgHi + mopKgHi),
+    source: crop.npkSource ?? "",
+    region: crop.region,
+    isRange: true,
   };
 }
 

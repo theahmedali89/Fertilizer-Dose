@@ -303,6 +303,15 @@ model FertilizerRecommendation {
   n                  Float? // kg N / ha (elemental)
   p2o5               Float? // kg P2O5 / ha (oxide basis)
   k2o                Float? // kg K2O / ha (oxide basis)
+  // Source-faithful ranges (global crop-dose batch). Point nutrients store
+  // min == max; null = no range data (older batches). The calculator renders
+  // ranges honestly and never collapses them to midpoints.
+  nMin               Float?
+  nMax               Float?
+  p2o5Min            Float?
+  p2o5Max            Float?
+  k2oMin             Float?
+  k2oMax             Float?
   nutrientBasis      String             @default("P2O5_K2O")
   micronutrients     String?            @db.Text
   applicationTiming  String?            @db.Text

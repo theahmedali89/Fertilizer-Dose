@@ -23,6 +23,8 @@
 export interface SplitProduct {
   product: string;
   kg: number;
+  /** Range end — set when the source dose is a range. Splits stay linear. */
+  kgMax?: number;
 }
 
 export interface SplitStage {
@@ -71,38 +73,60 @@ function isNCarrier(name: string): boolean {
 }
 
 /**
- * Build a split schedule from calculator dose lines ({ product, kg }).
+ * Build a split schedule from calculator dose lines ({ product, kg, kgMax? }).
  * - P/K carriers (DAP, SSP, MOP): full basal — immobile nutrients, and DAP's
  *   nitrogen is never re-split (standard practice: DAP is always basal).
  * - Urea: split per the cereal / non-cereal pattern.
  * - Anything unrecognized goes basal — we never invent a schedule for it.
+ * - Range ends split linearly with the same fractions (range in → range out).
  */
 export function planSplitDose(
   cropSlug: string,
-  lines: { product: string; kg: number }[],
+  lines: { product: string; kg: number; kgMax?: number }[],
 ): SplitPlan {
   const threeWay = THREE_WAY_N_SPLIT.has(cropSlug);
   const basal: SplitProduct[] = [];
   const mid: SplitProduct[] = [];
   const late: SplitProduct[] = [];
 
+  // Push a (possibly ranged) amount into a stage bucket.
+  const push = (
+    bucket: SplitProduct[],
+    product: string,
+    kg: number,
+    kgMax?: number,
+  ) => {
+    bucket.push(
+      kgMax != null
+        ? { product, kg: round1(kg), kgMax: round1(kgMax) }
+        : { product, kg: round1(kg) },
+    );
+  };
+  // Split a (possibly ranged) amount by a fraction, keeping both ends.
+  const frac = (kg: number, kgMax: number | undefined, f: number): [number, number | undefined] => [
+    kg * f,
+    kgMax != null ? kgMax * f : undefined,
+  ];
+
   for (const l of lines) {
     const kg = round1(l.kg);
+    const kgMax = l.kgMax != null ? round1(l.kgMax) : undefined;
     if (isPCarrier(l.product) || isKCarrier(l.product)) {
-      basal.push({ product: l.product, kg });
+      push(basal, l.product, kg, kgMax);
     } else if (isNCarrier(l.product)) {
       if (threeWay) {
-        const third = round1(kg / 3);
-        basal.push({ product: l.product, kg: third });
-        mid.push({ product: l.product, kg: third });
-        late.push({ product: l.product, kg: round1(kg - third * 2) });
+        const [t, tMax] = frac(kg, kgMax, 1 / 3);
+        push(basal, l.product, t, tMax);
+        push(mid, l.product, t, tMax);
+        const [last, lastMax] = frac(kg, kgMax, 1);
+        push(late, l.product, round1(last - t * 2), lastMax != null && tMax != null ? round1(lastMax - tMax * 2) : undefined);
       } else {
-        const half = round1(kg / 2);
-        basal.push({ product: l.product, kg: half });
-        mid.push({ product: l.product, kg: round1(kg - half) });
+        const [half, halfMax] = frac(kg, kgMax, 1 / 2);
+        push(basal, l.product, half, halfMax);
+        push(mid, l.product, round1(kg - half), kgMax != null && halfMax != null ? round1(kgMax - halfMax) : undefined);
       }
     } else {
-      basal.push({ product: l.product, kg });
+      push(basal, l.product, kg, kgMax);
     }
   }
 

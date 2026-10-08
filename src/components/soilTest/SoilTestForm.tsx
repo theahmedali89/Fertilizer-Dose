@@ -10,6 +10,8 @@ import { Badge } from "@/components/ui/Badge";
 import {
   AREA_UNITS,
   calculateDose,
+  calculateDoseRange,
+  fmtRange,
   type CropInfo,
 } from "@/lib/agronomy";
 import {
@@ -39,9 +41,9 @@ function ratingVariant(rating: NutrientRating | null): "verified" | "review" | "
 
 export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
   const t = useTranslations("soilTest");
-  const verified = crops.filter((c) => c.npk);
+  const selectable = crops.filter((c) => c.npk || c.npkRange);
 
-  const [cropSlug, setCropSlug] = useState(verified[0]?.slug ?? CUSTOM);
+  const [cropSlug, setCropSlug] = useState(selectable[0]?.slug ?? CUSTOM);
   const [area, setArea] = useState("5");
   const [unit, setUnit] = useState("acre");
   const [pVal, setPVal] = useState("");
@@ -58,9 +60,10 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
 
   const isCustomPicked = cropSlug === CUSTOM;
   const crop = crops.find((c) => c.slug === cropSlug);
-  // Honest fallback: a crop with no verified recommendation behaves like
-  // the custom base-dose path, clearly labeled as generic guidance.
-  const isCustom = isCustomPicked || !crop?.npk;
+  // Honest fallback: a crop with no recommendation (point or range) behaves
+  // like the custom base-dose path, clearly labeled as generic guidance.
+  const isCustom = isCustomPicked || (!crop?.npk && !crop?.npkRange);
+  const isRangeCrop = !isCustom && !!crop?.npkRange;
 
   const result = useMemo(() => {
     if (!submitted) return null;
@@ -68,8 +71,14 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
     if (a === null || a <= 0) return null;
 
     let base: { n: number; p: number; k: number } | null = null;
+    let baseHi: { n: number; p: number; k: number } | null = null;
     if (!isCustom && crop?.npk) {
       base = { n: crop.npk.n, p: crop.npk.p, k: crop.npk.k };
+    } else if (isRangeCrop && crop.npkRange) {
+      // Range crop: evaluate the soil test at both range ends. The adjustment
+      // is linear in the base, so the adjusted range stays honest.
+      base = { n: crop.npkRange.n[0], p: crop.npkRange.p[0], k: crop.npkRange.k[0] };
+      baseHi = { n: crop.npkRange.n[1], p: crop.npkRange.p[1], k: crop.npkRange.k[1] };
     } else {
       const n = toNum(baseN) ?? 0;
       const p = toNum(baseP) ?? 0;
@@ -83,6 +92,7 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
     const phVal = toNum(ph);
 
     const evalOut = evaluateSoilTest(base, { pMgKg, kKgHa, ocPct, ph: phVal });
+    const evalOutHi = baseHi ? evaluateSoilTest(baseHi, { pMgKg, kKgHa, ocPct, ph: phVal }) : null;
 
     const synthetic: CropInfo = {
       slug: `soil-test-${cropSlug}`,
@@ -94,21 +104,31 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
       water: "",
       stages: [],
       problems: [],
-      npk: {
-        n: evalOut.n.adjustedKgHa,
-        p: evalOut.p.adjustedKgHa,
-        k: evalOut.k.adjustedKgHa,
-      },
+      npk: baseHi
+        ? null
+        : {
+            n: evalOut.n.adjustedKgHa,
+            p: evalOut.p.adjustedKgHa,
+            k: evalOut.k.adjustedKgHa,
+          },
+      npkRange:
+        baseHi && evalOutHi
+          ? {
+              n: [evalOut.n.adjustedKgHa, evalOutHi.n.adjustedKgHa],
+              p: [evalOut.p.adjustedKgHa, evalOutHi.p.adjustedKgHa],
+              k: [evalOut.k.adjustedKgHa, evalOutHi.k.adjustedKgHa],
+            }
+          : null,
       npkSource: isCustom
         ? t("results.genericLabel")
         : (crop?.npkSource ?? ""),
-      underReview: false,
+      underReview: isCustom ? false : (crop?.underReview ?? false),
       region: isCustom ? t("results.genericLabel") : (crop?.region ?? ""),
     };
 
-    const dose = calculateDose(synthetic, a, unit);
-    return { evalOut, dose, base };
-  }, [submitted, area, unit, cropSlug, crop, isCustom, pVal, pUnit, kVal, kUnit, oc, ph, baseN, baseP, baseK, t]);
+    const dose = baseHi ? calculateDoseRange(synthetic, a, unit) : calculateDose(synthetic, a, unit);
+    return { evalOut, evalOutHi, dose, base, baseHi };
+  }, [submitted, area, unit, cropSlug, crop, isCustom, isRangeCrop, pVal, pUnit, kVal, kUnit, oc, ph, baseN, baseP, baseK, t]);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -168,12 +188,19 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
                 onChange={(v) => { setCropSlug(v); setSubmitted(false); }}
                 options={[
                   { value: CUSTOM, label: t("form.custom") },
-                  ...crops.map((c) => ({
-                    value: c.slug,
-                    label: c.name,
-                    disabled: !c.npk,
-                    hint: c.npk ? (c.underReview ? t("form.underReviewBadge") : undefined) : t("form.inReview"),
-                  })),
+                  ...crops.map((c) => {
+                    const unlocked = !!(c.npk || c.npkRange);
+                    const hints = [
+                      c.underReview ? t("form.underReviewBadge") : null,
+                      c.npkRange ? t("form.rangeHint") : null,
+                    ].filter(Boolean);
+                    return {
+                      value: c.slug,
+                      label: c.name,
+                      disabled: !unlocked,
+                      hint: unlocked ? (hints.length ? hints.join(" · ") : undefined) : t("form.inReview"),
+                    };
+                  }),
                 ]}
               />
               <p className="mt-1.5 text-xs text-ink-faint">
@@ -183,7 +210,7 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
 
             {isCustom && (
               <div className="rounded-xl border border-harvest-200 dark:border-harvest-800 bg-harvest-50 dark:bg-harvest-950/30 p-4">
-                {crop && !crop.npk && !isCustomPicked && (
+                {crop && !crop.npk && !crop.npkRange && !isCustomPicked && (
                   <p className="text-xs font-medium text-harvest-800 dark:text-harvest-300 mb-3">
                     {t("form.noVerified", { crop: crop.name })}
                   </p>
@@ -330,19 +357,32 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
                   {t("results.title")}
                 </h3>
                 <p className="text-sm text-ink-faint mt-1">
-                  {t("results.baseLine", {
-                    n: r1(result.base.n),
-                    p: r1(result.base.p),
-                    k: r1(result.base.k),
-                  })}
+                  {result.baseHi
+                    ? t("results.baseRangeLine", {
+                        n: fmtRange(result.base.n, result.baseHi.n),
+                        p: fmtRange(result.base.p, result.baseHi.p),
+                        k: fmtRange(result.base.k, result.baseHi.k),
+                      })
+                    : t("results.baseLine", {
+                        n: r1(result.base.n),
+                        p: r1(result.base.p),
+                        k: r1(result.base.k),
+                      })}
                 </p>
                 <p className="mt-2 text-base font-semibold text-leaf-800 dark:text-leaf-300">
-                  {t("results.adjustedLine", {
-                    n: r1(result.evalOut.n.adjustedKgHa),
-                    p: r1(result.evalOut.p.adjustedKgHa),
-                    k: r1(result.evalOut.k.adjustedKgHa),
-                    region: result.dose.region,
-                  })}
+                  {result.evalOutHi
+                    ? t("results.adjustedRangeLine", {
+                        n: fmtRange(result.evalOut.n.adjustedKgHa, result.evalOutHi.n.adjustedKgHa),
+                        p: fmtRange(result.evalOut.p.adjustedKgHa, result.evalOutHi.p.adjustedKgHa),
+                        k: fmtRange(result.evalOut.k.adjustedKgHa, result.evalOutHi.k.adjustedKgHa),
+                        region: result.dose.region,
+                      })
+                    : t("results.adjustedLine", {
+                        n: r1(result.evalOut.n.adjustedKgHa),
+                        p: r1(result.evalOut.p.adjustedKgHa),
+                        k: r1(result.evalOut.k.adjustedKgHa),
+                        region: result.dose.region,
+                      })}
                 </p>
 
                 {/* Rating badges */}
@@ -373,17 +413,17 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
                 <div className="mt-4 grid sm:grid-cols-3 gap-3">
                   {(
                     [
-                      { label: "N", adj: result.evalOut.n },
-                      { label: "P₂O₅", adj: result.evalOut.p },
-                      { label: "K₂O", adj: result.evalOut.k },
+                      { label: "N", adj: result.evalOut.n, adjHi: result.evalOutHi?.n ?? null },
+                      { label: "P₂O₅", adj: result.evalOut.p, adjHi: result.evalOutHi?.p ?? null },
+                      { label: "K₂O", adj: result.evalOut.k, adjHi: result.evalOutHi?.k ?? null },
                     ] as const
-                  ).map(({ label, adj }) => (
+                  ).map(({ label, adj, adjHi }) => (
                     <div key={label} className="rounded-xl border border-line bg-surface-2 p-4">
                       <p className="text-xs font-bold uppercase tracking-wider text-ink-faint">{label}</p>
                       <p className="mt-1 text-sm">
-                        <span className="text-ink-faint line-through">{r1(adj.baseKgHa)}</span>
+                        <span className="text-ink-faint line-through">{adjHi ? fmtRange(adj.baseKgHa, adjHi.baseKgHa) : r1(adj.baseKgHa)}</span>
                         <span className="mx-1.5 text-ink-faint">→</span>
-                        <span className="font-display text-2xl font-semibold">{r1(adj.adjustedKgHa)}</span>
+                        <span className="font-display text-2xl font-semibold">{adjHi ? fmtRange(adj.adjustedKgHa, adjHi.adjustedKgHa) : r1(adj.adjustedKgHa)}</span>
                         <span className="text-xs text-ink-faint"> {t("results.kgUnit")}/ha</span>
                       </p>
                       <p className="text-xs text-ink-soft mt-1.5">
@@ -399,16 +439,16 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
                     <div key={l.product} className="rounded-xl border border-line bg-surface-2 p-4">
                       <p className="text-xs font-bold uppercase tracking-wider text-ink-faint">{l.product}</p>
                       <p className="mt-1 font-display text-3xl font-semibold">
-                        {l.kg}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.kgUnit")}</span>
+                        {l.kgMax != null ? `${l.kg}–${l.kgMax}` : l.kg}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.kgUnit")}</span>
                       </p>
-                      <p className="text-xs text-ink-faint mt-0.5">≈ {l.bags} {t("results.bags")}</p>
+                      <p className="text-xs text-ink-faint mt-0.5">≈ {l.bagsMax != null ? `${l.bags}–${l.bagsMax}` : l.bags} {t("results.bags")}</p>
                       <p className="text-xs text-ink-soft mt-2 leading-relaxed">{l.purpose}</p>
                     </div>
                   ))}
                 </div>
                 <div className="mt-4 flex items-center justify-between rounded-xl bg-leaf-100 dark:bg-leaf-950 px-4 py-3">
                   <span className="text-sm font-semibold">{t("results.total")}</span>
-                  <span className="font-display text-xl font-semibold">{result.dose.totalKg} {t("results.kgUnit")}</span>
+                  <span className="font-display text-xl font-semibold">{result.dose.totalKgMax != null ? `${result.dose.totalKg}–${result.dose.totalKgMax}` : result.dose.totalKg} {t("results.kgUnit")}</span>
                 </div>
               </CardBody>
             </Card>

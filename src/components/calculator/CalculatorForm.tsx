@@ -8,7 +8,7 @@ import { Field, Input, Select } from "@/components/ui/fields";
 import { SearchableSelect } from "@/components/ui/SearchableSelect";
 import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
-import { AREA_UNITS, calculateDose, type CropInfo } from "@/lib/agronomy";
+import { AREA_UNITS, calculateDose, calculateDoseRange, fmtRange, type CropInfo } from "@/lib/agronomy";
 import { SaveCalcButton } from "@/components/garden/SaveCalcButton";
 import { planSplitDose } from "@/lib/splitDose";
 
@@ -23,8 +23,10 @@ const SOILS = [
 
 export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: CropInfo[]; initialArea?: string; initialUnit?: string }) {
   const t = useTranslations("calculator");
-  const verified = crops.filter((c) => c.npk);
-  const [cropSlug, setCropSlug] = useState(verified[0].slug);
+  // Selectable = point dose OR ranged dose. Ranged crops unlock with the
+  // range UI (range in → range out); formula/null-N crops stay locked.
+  const selectable = crops.filter((c) => c.npk || c.npkRange);
+  const [cropSlug, setCropSlug] = useState(selectable[0].slug);
   // Land Area Calculator integration: pre-fill from ?area=&unit= (validated).
   const [area, setArea] = useState(() => {
     const v = parseFloat(initialArea ?? "");
@@ -45,7 +47,7 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
     if (!submitted) return null;
     const a = parseFloat(area);
     if (!a || a <= 0) return null;
-    return calculateDose(crop, a, unit);
+    return crop.npkRange ? calculateDoseRange(crop, a, unit) : calculateDose(crop, a, unit);
   }, [submitted, area, crop, unit]);
 
   // 10a — generic split-dose schedule derived from the calculated lines
@@ -63,6 +65,14 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
     if (!result || result.areaHa <= 0) return 0;
     return Math.round(((kg / result.areaHa) * 0.892) * 10) / 10;
   };
+
+  // Range display helpers: "x" for exact, "x–y" for ranges.
+  const rangeKg = (l: { kg: number; kgMax?: number }): string =>
+    l.kgMax != null ? `${l.kg}–${l.kgMax}` : `${l.kg}`;
+  const rangeBags = (l: { bags: number; bagsMax?: number }): string =>
+    l.bagsMax != null ? `${l.bags}–${l.bagsMax}` : `${l.bags}`;
+  const rangeLbs = (l: { kg: number; kgMax?: number }): string =>
+    l.kgMax != null ? `${lbsPerAcre(l.kg)}–${lbsPerAcre(l.kgMax)}` : `${lbsPerAcre(l.kg)}`;
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,16 +104,28 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                 placeholder={t("form.cropSearchPlaceholder")}
                 value={cropSlug}
                 onChange={(v) => { setCropSlug(v); setSubmitted(false); }}
-                options={crops.map((c) => ({
-                  value: c.slug,
-                  label: c.name,
-                  disabled: !c.npk,
-                  hint: c.npk ? (c.underReview ? t("form.underReviewBadge") : undefined) : t("form.inReview"),
-                }))}
+                options={crops.map((c) => {
+                  const unlocked = !!(c.npk || c.npkRange);
+                  const hints = [
+                    c.underReview ? t("form.underReviewBadge") : null,
+                    c.npkRange ? t("form.rangeHint") : null,
+                  ].filter(Boolean);
+                  return {
+                    value: c.slug,
+                    label: c.name,
+                    disabled: !unlocked,
+                    hint: unlocked ? (hints.length ? hints.join(" · ") : undefined) : t("form.inReview"),
+                  };
+                })}
               />
-              {crop.underReview && (
-                <div className="mt-1.5">
-                  <Badge variant="review">{t("form.underReviewBadge")}</Badge>
+              {(crop.underReview || crop.npkRange) && (
+                <div className="mt-1.5 flex flex-wrap gap-1.5">
+                  {crop.underReview && (
+                    <Badge variant="review">{t("form.underReviewBadge")}</Badge>
+                  )}
+                  {crop.npkRange && (
+                    <Badge>{t("form.rangeBadge")}</Badge>
+                  )}
                 </div>
               )}
               <p className="mt-1.5 text-xs text-ink-faint">
@@ -209,21 +231,34 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                         {t("results.unitLbs")}
                       </button>
                     </div>
-                    <SaveCalcButton
-                      cropSlug={crop.slug}
-                      area={result.area}
-                      unit={unit}
-                      products={result.lines}
-                    />
+                    {result.isRange ? (
+                      <span className="text-xs text-ink-faint max-w-[240px] leading-relaxed">
+                        {t("results.rangeSaveNote")}
+                      </span>
+                    ) : (
+                      <SaveCalcButton
+                        cropSlug={crop.slug}
+                        area={result.area}
+                        unit={unit}
+                        products={result.lines}
+                      />
+                    )}
                   </div>
                 </div>
                 <p className="text-sm text-ink-faint">
-                  {t("results.recommendedLine", {
-                    n: crop.npk!.n,
-                    p: crop.npk!.p,
-                    k: crop.npk!.k,
-                    region: result.region,
-                  })}
+                  {result.isRange && crop.npkRange
+                    ? t("results.recommendedRangeLine", {
+                        n: fmtRange(crop.npkRange.n[0], crop.npkRange.n[1]),
+                        p: fmtRange(crop.npkRange.p[0], crop.npkRange.p[1]),
+                        k: fmtRange(crop.npkRange.k[0], crop.npkRange.k[1]),
+                        region: result.region,
+                      })
+                    : t("results.recommendedLine", {
+                        n: crop.npk!.n,
+                        p: crop.npk!.p,
+                        k: crop.npk!.k,
+                        region: result.region,
+                      })}
                 </p>
                 <div className="mt-5 grid sm:grid-cols-3 gap-3">
                   {result.lines.map((l) => (
@@ -232,14 +267,14 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                       {displayUnit === "kg" ? (
                         <>
                           <p className="mt-1 font-display text-3xl font-semibold">
-                            {l.kg}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.kgUnit")}</span>
+                            {rangeKg(l)}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.kgUnit")}</span>
                           </p>
-                          <p className="text-xs text-ink-faint mt-0.5">≈ {l.bags} {t("results.bags")}</p>
+                          <p className="text-xs text-ink-faint mt-0.5">≈ {rangeBags(l)} {t("results.bags")}</p>
                         </>
                       ) : (
                         <>
                           <p className="mt-1 font-display text-3xl font-semibold">
-                            {lbsPerAcre(l.kg)}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.lbsUnit")}</span>
+                            {rangeLbs(l)}<span className="text-base font-sans font-normal text-ink-faint"> {t("results.lbsUnit")}</span>
                           </p>
                           <p className="text-xs text-ink-faint mt-0.5">{t("results.lbsNote")}</p>
                         </>
@@ -252,8 +287,8 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                   <span className="text-sm font-semibold">{t("results.total")}</span>
                   <span className="font-display text-xl font-semibold">
                     {displayUnit === "kg"
-                      ? <>{result.totalKg} {t("results.kgUnit")}</>
-                      : <>{lbsPerAcre(result.totalKg)} {t("results.lbsUnit")}</>}
+                      ? <>{result.totalKgMax != null ? `${result.totalKg}–${result.totalKgMax}` : result.totalKg} {t("results.kgUnit")}</>
+                      : <>{result.totalKgMax != null ? `${lbsPerAcre(result.totalKg)}–${lbsPerAcre(result.totalKgMax)}` : lbsPerAcre(result.totalKg)} {t("results.lbsUnit")}</>}
                   </span>
                 </div>
               </CardBody>
@@ -323,8 +358,8 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                                 <span className="font-medium text-ink">{p.product}</span>
                                 {" — "}
                                 {displayUnit === "kg"
-                                  ? <>{p.kg} {t("results.kgUnit")}</>
-                                  : <>{lbsPerAcre(p.kg)} {t("results.lbsUnit")}</>}
+                                  ? <>{rangeKg(p)} {t("results.kgUnit")}</>
+                                  : <>{rangeLbs(p)} {t("results.lbsUnit")}</>}
                               </li>
                             ))}
                           </ul>
