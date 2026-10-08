@@ -98,9 +98,14 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                   value: c.slug,
                   label: c.name,
                   disabled: !c.npk,
-                  hint: c.npk ? undefined : t("form.inReview"),
+                  hint: c.npk ? (c.underReview ? t("form.underReviewBadge") : undefined) : t("form.inReview"),
                 }))}
               />
+              {crop.underReview && (
+                <div className="mt-1.5">
+                  <Badge variant="review">{t("form.underReviewBadge")}</Badge>
+                </div>
+              )}
               <p className="mt-1.5 text-xs text-ink-faint">
                 {t("form.cropHint")}
               </p>
@@ -172,6 +177,9 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-1">
                   <h3 className="font-display text-2xl font-semibold">
                     {result.cropName} — {result.area} {result.unitLabel}
+                    {crop.underReview && (
+                      <Badge variant="review" className="ml-2 align-middle">{t("form.underReviewBadge")}</Badge>
+                    )}
                   </h3>
                   <div className="flex items-center gap-2">
                     {/* 10c — display-only kg/lbs toggle */}

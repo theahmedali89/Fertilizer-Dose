@@ -2,9 +2,11 @@
  * Kitchen Garden Planner — interactive planner UI.
  *
  * DATA-INTEGRITY POLICY (binding):
- * - Suggestions are server-fetched from verified PlantingWindow rows only
+ * - Suggestions are server-fetched from PlantingWindow rows
  *   (see src/server/kitchenGarden.ts). This component never invents crops,
  *   windows, or spacing.
+ * - Per Ahmed's 2026-10-08 directive, under_review windows are shown too —
+ *   always with a visible "Under Review" badge, never as verified.
  * - Layout math is pure arithmetic on the user's own inputs (plot area,
  *   adjustable bed/path widths). Spacing guidance is explicitly marked as
  *   not verified.
@@ -352,7 +354,11 @@ export function KitchenGardenPlanner({
                         <p className="text-xs italic text-ink-faint mt-0.5">{s.scientificName}</p>
                       )}
                       <div className="flex flex-wrap gap-1.5 mt-2">
-                        <Badge variant="verified">{t("verified")}</Badge>
+                        {s.verificationStatus === "under_review" ? (
+                          <Badge variant="review">{t("underReview")}</Badge>
+                        ) : (
+                          <Badge variant="verified">{t("verified")}</Badge>
+                        )}
                         <Badge variant="neutral">{activityLabel(s.activityType)}</Badge>
                         <Badge variant="neutral">
                           {s.category === "herb" ? t("categoryHerb") : t("categoryVegetable")}
@@ -408,7 +414,12 @@ export function KitchenGardenPlanner({
                     const shareSqm = areaSqm > 0 ? (areaSqm * share) / 100 : 0;
                     return (
                       <tr key={s.windowId}>
-                        <td className="px-4 py-3 font-medium">{s.itemName}</td>
+                        <td className="px-4 py-3 font-medium">
+                          {s.itemName}
+                          {s.verificationStatus === "under_review" && (
+                            <Badge variant="review" className="ml-2">{t("underReview")}</Badge>
+                          )}
+                        </td>
                         <td className="px-4 py-3 text-ink-soft">{windowLabelText(s, locale)}</td>
                         <td className="px-4 py-3">
                           <Input

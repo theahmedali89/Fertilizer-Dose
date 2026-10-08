@@ -4,8 +4,10 @@
  * DATA-INTEGRITY POLICY (binding):
  * - Suggestions come ONLY from PlantingWindow rows in the database, joined to
  *   their GrowingItem (category restricted to vegetable | herb).
- * - Only windows with verificationStatus "verified" or "published" are
- *   suggested. Under-review rows are never presented as recommendations.
+ * - Windows with verificationStatus "verified" or "published" are suggested
+ *   as-is. Per Ahmed's 2026-10-08 directive, "under_review" windows are ALSO
+ *   shown — but NEVER presented as verified: the UI must render a visible
+ *   "Under Review" badge on them (see KitchenGardenPlanner).
  * - Activity is restricted to SOW | TRANSPLANT | PLANT — harvest/land-prep
  *   windows are not planting suggestions.
  * - When the DB isn't configured (static build), there are no verified
@@ -94,7 +96,7 @@ export async function getKitchenGardenSuggestions(opts: {
       where: {
         region: { slug: regionSlug },
         item: { category: { in: ["vegetable", "herb"] } },
-        verificationStatus: { in: ["verified", "published"] },
+        verificationStatus: { in: ["verified", "published", "under_review"] },
         activityType: { in: ["SOW", "TRANSPLANT", "PLANT"] },
       },
       include: {

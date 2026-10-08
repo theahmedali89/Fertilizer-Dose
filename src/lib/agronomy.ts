@@ -383,6 +383,8 @@ export interface CropInfo {
   /** Recommended N–P2O5–K2O in kg/ha. null = under review, never invented. */
   npk: { n: number; p: number; k: number } | null;
   npkSource: string | null;
+  /** True when the dose comes from an under_review recommendation — UI must badge it. */
+  underReview: boolean;
   region: string;
 }
 
@@ -404,6 +406,7 @@ export const CROPS: CropInfo[] = [
     npk: { n: 124, p: 62, k: 0 },
     npkSource: "PAU Package of Practices for Crops of Punjab, Rabi 2025–26 (IN-Punjab; K soil-test-based, no blanket K dose)",
     region: "Punjab, India (PAU)",
+    underReview: false,
   },
   {
     slug: "rice",
@@ -422,6 +425,7 @@ export const CROPS: CropInfo[] = [
     npk: { n: 104, p: 30, k: 30 },
     npkSource: "PAU Package of Practices for Crops of Punjab, Kharif 2026 (IN-Punjab; P/K only on deficiency)",
     region: "Punjab, India (PAU)",
+    underReview: false,
   },
   {
     slug: "maize",
@@ -440,6 +444,7 @@ export const CROPS: CropInfo[] = [
     npk: { n: 124, p: 60, k: 30 },
     npkSource: "PAU Package of Practices for Crops of Punjab, Kharif 2026 (IN-Punjab; K conditional)",
     region: "Punjab, India (PAU)",
+    underReview: false,
   },
   {
     slug: "cotton",
@@ -458,6 +463,7 @@ export const CROPS: CropInfo[] = [
     npk: null,
     npkSource: null,
     region: "Punjab PK / Sindh",
+    underReview: false,
   },
   {
     slug: "sugarcane",
@@ -476,6 +482,7 @@ export const CROPS: CropInfo[] = [
     npk: null,
     npkSource: null,
     region: "Punjab PK / UP India",
+    underReview: false,
   },
   {
     slug: "potato",
@@ -493,6 +500,7 @@ export const CROPS: CropInfo[] = [
     npk: null,
     npkSource: null,
     region: "Punjab PK / UP India",
+    underReview: false,
   },
 ];
 

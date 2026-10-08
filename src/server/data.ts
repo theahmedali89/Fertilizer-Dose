@@ -234,17 +234,20 @@ export async function getCrops(): Promise<CropInfo[]> {
     // Field crops + orchard/fruit plants (citrus, grape, olive…): in PK/IN
     // these are field-scale acreage crops, so the dose calculator covers them.
     // They keep their "plant" taxonomy (plants section unaffected); only the
-    // calculator's selectable list is widened. Items without verified NPK
+    // calculator's selectable list is widened. Items without any numeric NPK
     // stay locked (disabled) via the CalculatorForm's !c.npk check.
     const crops = items.filter(
       (i) => i.category === "crop" || (i.category === "plant" && i.plantSubcategory === "fruit")
     );
     if (!crops.length) return STATIC_CROPS;
 
-    // Get verified fertilizer recommendations to populate NPK data.
-    // The calculator uses GrowingItem.npk (legacy flat field), but verified
+    // Get fertilizer recommendations to populate NPK data.
+    // The calculator uses GrowingItem.npk (legacy flat field), but real
     // data lives in FertilizerRecommendation. Merge them here.
-    let recMap = new Map<string, { n: number | null; p: number | null; k: number | null; source: string }>();
+    // Two tiers per Ahmed's 2026-10-08 directive: verified/published records
+    // win; under_review records also unlock crops but are badged as such in
+    // the UI and NEVER presented as verified.
+    let recMap = new Map<string, { n: number | null; p: number | null; k: number | null; source: string; underReview: boolean }>();
     try {
       // Try to get selected country; default to PK if unavailable
       const { getSelectedCountryCode } = await import("@/server/country");
@@ -254,7 +257,7 @@ export async function getCrops(): Promise<CropInfo[]> {
         const recs = await db.fertilizerRecommendation.findMany({
           where: {
             countryId: country.id,
-            verificationStatus: { in: ["verified", "published"] },
+            verificationStatus: { in: ["verified", "published", "under_review"] },
           },
           include: {
             item: { select: { slug: true } },
@@ -265,25 +268,35 @@ export async function getCrops(): Promise<CropInfo[]> {
         });
         // Track which crops already have their primary record picked.
         const primaryPicked = new Set<string>();
-        for (const r of recs) {
+        const place = (r: (typeof recs)[number], underReview: boolean) => {
           const slug = r.item.slug;
           const entry = {
             n: r.n, p: r.p2o5, k: r.k2o,
             source: r.source.organization ? `${r.source.organization} — ${r.source.title}` : r.source.title,
+            underReview,
           };
           if (!recMap.has(slug)) {
             recMap.set(slug, entry);
             if (r.isPrimary) primaryPicked.add(slug);
-          } else if (r.isPrimary && !primaryPicked.has(slug)) {
+          } else if (!underReview && r.isPrimary && !primaryPicked.has(slug)) {
             // A primary (official package-of-practices) record replaces a
             // non-primary one; the first primary per crop wins.
             recMap.set(slug, entry);
             primaryPicked.add(slug);
-          } else if (!primaryPicked.has(slug) && r.regionId) {
+          } else if (!underReview && !primaryPicked.has(slug) && r.regionId) {
             // No primary for this crop: legacy behavior — prefer
             // region-specific over country-wide. (Batches 1-4: unchanged.)
             recMap.set(slug, entry);
           }
+          // under_review records never displace an existing (verified) entry.
+        };
+        // Tier 1: verified/published. Tier 2: under_review fills only slugs
+        // that have no verified record at all.
+        for (const r of recs) {
+          if (r.verificationStatus !== "under_review") place(r, false);
+        }
+        for (const r of recs) {
+          if (r.verificationStatus === "under_review") place(r, true);
         }
       }
     } catch {
@@ -293,7 +306,8 @@ export async function getCrops(): Promise<CropInfo[]> {
     // Map GrowingItem → CropInfo shape used by the calculator engine.
     return crops.map((c) => {
       const rec = recMap.get(c.slug);
-      // Use verified recommendation NPK if available, else fall back to legacy flat field
+      // Use recommendation NPK if it has a numeric N; ranged/formula records
+      // keep n null and the crop stays locked (range display is future work).
       const npk = rec && rec.n != null
         ? { n: rec.n, p: rec.p ?? 0, k: rec.k ?? 0 }
         : c.npk;
@@ -305,6 +319,7 @@ export async function getCrops(): Promise<CropInfo[]> {
         stages: c.stages.map((s) => ({ name: s.name, timing: s.timing, note: s.note })),
         problems: c.problems ?? [],
         npk, npkSource,
+        underReview: rec ? rec.underReview : false,
         region: c.region ?? "",
       };
     });

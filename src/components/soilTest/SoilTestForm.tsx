@@ -102,6 +102,7 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
       npkSource: isCustom
         ? t("results.genericLabel")
         : (crop?.npkSource ?? ""),
+      underReview: false,
       region: isCustom ? t("results.genericLabel") : (crop?.region ?? ""),
     };
 
@@ -171,7 +172,7 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
                     value: c.slug,
                     label: c.name,
                     disabled: !c.npk,
-                    hint: c.npk ? undefined : t("form.inReview"),
+                    hint: c.npk ? (c.underReview ? t("form.underReviewBadge") : undefined) : t("form.inReview"),
                   })),
                 ]}
               />
