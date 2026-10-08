@@ -25,14 +25,22 @@ function NoData({ title, hint }: { title: string; hint: string }) {
 export async function GrowingDetail({
   item,
   related,
+  localName,
 }: {
   item: GrowingItem;
   related: GrowingItem[];
+  /** Translated name for the active non-English locale (null → English). */
+  localName?: string | null;
 }) {
   const t = await getTranslations("growing");
   const meta = CATEGORY_META[item.category];
   const s = t.raw("sections") as Record<string, string>;
   const hasNpk = !!item.npk;
+  // Bilingual heading: translated name primary on non-English locales,
+  // English kept as faint secondary; Urdu shown only when it adds something.
+  const displayName = localName || item.name;
+  const showEnglishSecondary = !!localName && localName !== item.name;
+  const showUrdu = !!item.urdu && item.urdu !== displayName;
 
   const conditionRows: [string, string | null][] = [
     [s.soil, item.soil],
@@ -69,11 +77,17 @@ export async function GrowingDetail({
           </nav>
           <div className="flex flex-wrap items-center gap-3">
             <h1 className="font-display text-4xl sm:text-5xl font-semibold">
-              {item.name}{" "}
-              {item.urdu && (
-                <span className="text-2xl font-sans font-normal text-ink-faint" lang="ur">
-                  {item.urdu}
+              {displayName}{" "}
+              {showEnglishSecondary ? (
+                <span className="text-2xl font-sans font-normal text-ink-faint" lang="en">
+                  {item.name}
                 </span>
+              ) : (
+                showUrdu && (
+                  <span className="text-2xl font-sans font-normal text-ink-faint" lang="ur">
+                    {item.urdu}
+                  </span>
+                )
               )}
             </h1>
             {item.verificationStatus === "verified" ? (

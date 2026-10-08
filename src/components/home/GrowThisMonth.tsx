@@ -49,7 +49,7 @@ export async function GrowThisMonth({ locale }: { locale: string }) {
   const month = new Date().getMonth() + 1;
 
   const hits = regionSlug
-    ? await getPlantingByMonth({ regionSlug, month, limit: 6 })
+    ? await getPlantingByMonth({ regionSlug, month, limit: 6, locale })
     : [];
 
   const activityLabel: Record<PlantingHit["activityType"], string> = {

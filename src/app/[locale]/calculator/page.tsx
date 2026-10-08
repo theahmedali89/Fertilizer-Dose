@@ -36,7 +36,7 @@ export default async function CalculatorPage({
   setRequestLocale(locale);
   const t = await getTranslations("calculator");
   const methodFaq = t.raw("methodFaq") as { q: string; a: string }[];
-  const crops = await getCrops();
+  const crops = await getCrops(locale);
 
   return (
     <>

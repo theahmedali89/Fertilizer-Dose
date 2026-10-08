@@ -137,6 +137,8 @@ export interface PlantingHit {
   windowId: string;
   itemSlug: string;
   itemName: string;
+  /** Translated name for the active non-English locale (null → English). */
+  localName: string | null;
   itemUrdu: string | null;
   scientificName: string | null;
   category: string;
@@ -194,6 +196,7 @@ function staticHits(regionSlug: string, month: number, category: string, limit?:
       windowId: `${w.itemSlug}-${w.startMonth}`,
       itemSlug: item.slug,
       itemName: item.name,
+      localName: null,
       itemUrdu: item.urdu,
       scientificName: item.scientificName,
       category: item.category,
@@ -221,8 +224,9 @@ export async function getPlantingByMonth(opts: {
   month: number;
   category?: string;
   limit?: number;
+  locale?: string;
 }): Promise<PlantingHit[]> {
-  const { regionSlug, month, category = "all", limit } = opts;
+  const { regionSlug, month, category = "all", limit, locale } = opts;
   // Static fallback when the database isn't configured (dev / build without DB).
   if (!isDbConfigured()) return staticHits(regionSlug, month, category, limit);
   const rows = await tryDb(async () => {
@@ -249,6 +253,15 @@ export async function getPlantingByMonth(opts: {
   }, []);
 
   const hits: PlantingHit[] = [];
+  const nameMap =
+    locale && locale !== "en"
+      ? await import("@/server/i18n-names").then((m) =>
+          m.getTranslatedItemNames(
+            [...new Set(rows.map((w) => w.item.slug))],
+            locale
+          )
+        )
+      : new Map<string, string>();
   for (const w of rows) {
     if (!monthInWindow(month, w.startMonth, w.endMonth)) continue;
     if (!categoryMatchesFilter(w.item.category, category)) continue;
@@ -257,6 +270,7 @@ export async function getPlantingByMonth(opts: {
       windowId: w.id,
       itemSlug: w.item.slug,
       itemName: w.item.name,
+      localName: nameMap.get(w.item.slug) ?? null,
       itemUrdu: w.item.urdu,
       scientificName: w.item.scientificName,
       category: w.item.category,

@@ -83,7 +83,7 @@ export default async function PlantingCalendarPage({
   const category: CalendarCategory = VALID_CATEGORIES.includes(rawCat) ? rawCat : "all";
 
   const hits = regionSlug
-    ? await getPlantingByMonth({ regionSlug, month, category })
+    ? await getPlantingByMonth({ regionSlug, month, category, locale })
     : [];
 
   const regionsByCountry: Record<string, RegionInfo[]> = {};

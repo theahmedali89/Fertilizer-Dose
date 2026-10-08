@@ -89,7 +89,7 @@ export default async function KitchenGardenPage({
     : "sqm";
 
   const suggestions = regionSlug
-    ? await getKitchenGardenSuggestions({ regionSlug, month, sunlight })
+    ? await getKitchenGardenSuggestions({ regionSlug, month, sunlight, locale })
     : [];
 
   const regionsByCountry: Record<string, RegionInfo[]> = {};

@@ -347,7 +347,7 @@ export function KitchenGardenPlanner({
                     />
                     <div className="min-w-0">
                       <p className="font-semibold text-ink leading-snug">
-                        {s.itemName}
+                        {s.localName ?? s.itemName}
                         {s.itemUrdu && <span className="font-normal text-ink-soft"> · {s.itemUrdu}</span>}
                       </p>
                       {s.scientificName && (
@@ -415,7 +415,7 @@ export function KitchenGardenPlanner({
                     return (
                       <tr key={s.windowId}>
                         <td className="px-4 py-3 font-medium">
-                          {s.itemName}
+                          {s.localName ?? s.itemName}
                           {s.verificationStatus === "under_review" && (
                             <Badge variant="review" className="ml-2">{t("underReview")}</Badge>
                           )}

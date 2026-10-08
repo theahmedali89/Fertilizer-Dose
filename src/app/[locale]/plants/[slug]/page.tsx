@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { localizedMetadata } from "@/lib/seo";
 import { GrowingDetail } from "@/components/growing/GrowingDetail";
 import { getGrowingItem, getGrowingByCategory } from "@/server/data";
+import { getTranslatedItemNames } from "@/server/i18n-names";
 
 export async function generateStaticParams() {
   const items = await getGrowingByCategory("plant");
@@ -39,5 +40,6 @@ export default async function PlantDetail({
   const item = await getGrowingItem(slug);
   if (!item || item.category !== "plant") notFound();
   const related = (await getGrowingByCategory("plant")).filter((i) => i.slug !== slug);
-  return <GrowingDetail item={item} related={related} />;
+  const names = await getTranslatedItemNames([slug], locale);
+  return <GrowingDetail item={item} related={related} localName={names.get(slug) ?? null} />;
 }

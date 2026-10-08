@@ -196,7 +196,7 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
                     ].filter(Boolean);
                     return {
                       value: c.slug,
-                      label: c.name,
+                      label: c.localName ?? c.name,
                       disabled: !unlocked,
                       hint: unlocked ? (hints.length ? hints.join(" · ") : undefined) : t("form.inReview"),
                     };
@@ -212,7 +212,7 @@ export function SoilTestForm({ crops }: { crops: CropInfo[] }) {
               <div className="rounded-xl border border-harvest-200 dark:border-harvest-800 bg-harvest-50 dark:bg-harvest-950/30 p-4">
                 {crop && !crop.npk && !crop.npkRange && !isCustomPicked && (
                   <p className="text-xs font-medium text-harvest-800 dark:text-harvest-300 mb-3">
-                    {t("form.noVerified", { crop: crop.name })}
+                    {t("form.noVerified", { crop: crop.localName ?? crop.name })}
                   </p>
                 )}
                 <p className="text-xs font-bold uppercase tracking-wider text-harvest-800 dark:text-harvest-300 mb-2">

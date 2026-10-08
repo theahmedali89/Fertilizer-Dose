@@ -112,7 +112,7 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                   ].filter(Boolean);
                   return {
                     value: c.slug,
-                    label: c.name,
+                    label: c.localName ?? c.name,
                     disabled: !unlocked,
                     hint: unlocked ? (hints.length ? hints.join(" · ") : undefined) : t("form.inReview"),
                   };

@@ -30,7 +30,7 @@ export default async function SoilTestCalculatorPage({
   setRequestLocale(locale);
   const t = await getTranslations("soilTest");
   const methodFaq = t.raw("methodFaq") as { q: string; a: string }[];
-  const crops = await getCrops();
+  const crops = await getCrops(locale);
 
   return (
     <>

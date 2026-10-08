@@ -65,7 +65,7 @@ export function PlantingHitCard({
                 href={`${base}/${hit.itemSlug}`}
                 className="hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors"
               >
-                {hit.itemName}
+                {hit.localName ?? hit.itemName}
               </Link>{" "}
               {hit.itemUrdu && (
                 <span className="text-sm font-sans font-normal text-ink-faint" lang="ur">

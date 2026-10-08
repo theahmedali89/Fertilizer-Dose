@@ -392,6 +392,8 @@ export interface CropInfo {
   npkSource: string | null;
   /** True when the dose comes from an under_review recommendation — UI must badge it. */
   underReview: boolean;
+  /** Translated name for the active non-English locale (null/undefined → English). */
+  localName?: string | null;
   region: string;
 }
 
@@ -605,7 +607,7 @@ export function calculateDose(
   ];
 
   return {
-    cropName: crop.name,
+    cropName: crop.localName ?? crop.name,
     area,
     unitLabel: area === 1 ? unit.label : unit.plural,
     areaHa,
@@ -705,7 +707,7 @@ export function calculateDoseRange(
   ];
 
   return {
-    cropName: crop.name,
+    cropName: crop.localName ?? crop.name,
     area,
     unitLabel: area === 1 ? unit.label : unit.plural,
     areaHa,

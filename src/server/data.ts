@@ -228,7 +228,7 @@ export async function getPost(slug: string): Promise<BlogPost | undefined> {
 
 /* ── Calculator crops (dose data) ── */
 
-export async function getCrops(): Promise<CropInfo[]> {
+export async function getCrops(locale?: string): Promise<CropInfo[]> {
   return tryDb(async () => {
     const items = await getGrowingItems();
     // Field crops + orchard/fruit plants (citrus, grape, olive…): in PK/IN
@@ -313,6 +313,16 @@ export async function getCrops(): Promise<CropInfo[]> {
     }
 
     // Map GrowingItem → CropInfo shape used by the calculator engine.
+    // Attach translated names for non-English locales (English stays canonical).
+    const nameMap =
+      locale && locale !== "en"
+        ? await import("@/server/i18n-names").then((m) =>
+            m.getTranslatedItemNames(
+              crops.map((c) => c.slug),
+              locale
+            )
+          )
+        : new Map<string, string>();
     return crops.map((c) => {
       const rec = recMap.get(c.slug);
       // Point dose: recommendation with numeric N, else legacy flat field.
@@ -342,6 +352,7 @@ export async function getCrops(): Promise<CropInfo[]> {
       const npkSource = rec ? rec.source : c.npkSource;
       return {
         slug: c.slug, name: c.name, urdu: c.urdu ?? "",
+        localName: nameMap.get(c.slug) ?? null,
         season: c.season ?? "", seasonDetail: c.seasonDetail ?? "",
         soil: c.soil ?? "", water: c.water ?? "",
         stages: c.stages.map((s) => ({ name: s.name, timing: s.timing, note: s.note })),

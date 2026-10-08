@@ -24,6 +24,8 @@ export interface KitchenGardenSuggestion {
   windowId: string;
   itemSlug: string;
   itemName: string;
+  /** Translated name for the active non-English locale (null → English). */
+  localName: string | null;
   itemUrdu: string | null;
   scientificName: string | null;
   category: "vegetable" | "herb";
@@ -66,8 +68,9 @@ export async function getKitchenGardenSuggestions(opts: {
   month: number;
   sunlight?: SunlightPref;
   limit?: number;
+  locale?: string;
 }): Promise<KitchenGardenSuggestion[]> {
-  const { regionSlug, month, sunlight = "any", limit } = opts;
+  const { regionSlug, month, sunlight = "any", limit, locale } = opts;
   // Static fallback: the static seed set has no verified vegetable/herb
   // windows, so the honest answer is "no verified data yet".
   if (!isDbConfigured()) return [];
@@ -124,6 +127,15 @@ export async function getKitchenGardenSuggestions(opts: {
   }
 
   const out: KitchenGardenSuggestion[] = [];
+  const nameMap =
+    locale && locale !== "en"
+      ? await import("@/server/i18n-names").then((m) =>
+          m.getTranslatedItemNames(
+            [...new Set(rows.map((w) => w.item.slug))],
+            locale
+          )
+        )
+      : new Map<string, string>();
   for (const w of rows) {
     if (!monthInWindow(month, w.startMonth, w.endMonth)) continue;
     if (!sunlightMatches(w.item.sunlight, sunlight)) continue;
@@ -132,6 +144,7 @@ export async function getKitchenGardenSuggestions(opts: {
       windowId: w.id,
       itemSlug: w.item.slug,
       itemName: w.item.name,
+      localName: nameMap.get(w.item.slug) ?? null,
       itemUrdu: w.item.urdu,
       scientificName: w.item.scientificName,
       category: w.item.category as "vegetable" | "herb",
