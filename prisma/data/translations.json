@@ -4175,5 +4175,905 @@
     "locale": "ko",
     "name": "님나무",
     "localName": "님"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "ur",
+    "name": "لوبیا"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "ur",
+    "name": "شکرقندی"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "ur",
+    "name": "کاساوا"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "ur",
+    "name": "تل"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "ur",
+    "name": "بکویٹ"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "ur",
+    "name": "ناریل"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "ur",
+    "name": "جئی"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "ur",
+    "name": "باجرہ"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "ur",
+    "name": "جوار"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "ur",
+    "name": "چینی بند گوبھی"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "hi",
+    "name": "लोबिया"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "hi",
+    "name": "शकरकंद"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "hi",
+    "name": "कसावा"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "hi",
+    "name": "तिल"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "hi",
+    "name": "कुट्टू"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "hi",
+    "name": "नारियल"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "hi",
+    "name": "जई"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "hi",
+    "name": "बाजरा"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "hi",
+    "name": "ज्वार"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "hi",
+    "name": "चीनी पत्ता गोभी"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "pa",
+    "name": "ਲੋਬੀਆ"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "pa",
+    "name": "ਸ਼ਕਰਕੰਦੀ"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "pa",
+    "name": "ਕਸਾਵਾ"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "pa",
+    "name": "ਤਿਲ"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "pa",
+    "name": "ਬਕਵੀਟ"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "pa",
+    "name": "ਨਾਰੀਅਲ"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "pa",
+    "name": "ਜਈ"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "pa",
+    "name": "ਬਾਜਰਾ"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "pa",
+    "name": "ਜਵਾਰ"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "pa",
+    "name": "ਚੀਨੀ ਪੱਤਾ ਗੋਭੀ"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "bn",
+    "name": "সিম"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "bn",
+    "name": "মিষ্টি আলু"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "bn",
+    "name": "কাসাভা"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "bn",
+    "name": "তিল"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "bn",
+    "name": "বাকহুইট"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "bn",
+    "name": "নারকেল"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "bn",
+    "name": "ওটস"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "bn",
+    "name": "বাজরা"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "bn",
+    "name": "জোয়ার"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "bn",
+    "name": "চাইনিজ বাঁধাকপি"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "ar",
+    "name": "فاصولياء"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "ar",
+    "name": "بطاطا حلوة"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "ar",
+    "name": "كاسافا"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "ar",
+    "name": "سمسم"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "ar",
+    "name": "حنطة سوداء"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "ar",
+    "name": "جوز الهند"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "ar",
+    "name": "شوفان"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "ar",
+    "name": "دخن"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "ar",
+    "name": "ذرة رفيعة"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "ar",
+    "name": "ملفوف صيني"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "es",
+    "name": "frijoles"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "es",
+    "name": "batata"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "es",
+    "name": "yuca"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "es",
+    "name": "sésamo"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "es",
+    "name": "trigo sarraceno"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "es",
+    "name": "coco"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "es",
+    "name": "avena"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "es",
+    "name": "mijo"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "es",
+    "name": "sorgo"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "es",
+    "name": "col china"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "fr",
+    "name": "haricots"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "fr",
+    "name": "patate douce"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "fr",
+    "name": "manioc"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "fr",
+    "name": "sésame"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "fr",
+    "name": "sarrasin"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "fr",
+    "name": "noix de coco"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "fr",
+    "name": "avoine"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "fr",
+    "name": "millet"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "fr",
+    "name": "sorgho"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "fr",
+    "name": "chou chinois"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "de",
+    "name": "Bohnen"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "de",
+    "name": "Süßkartoffel"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "de",
+    "name": "Maniok"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "de",
+    "name": "Sesam"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "de",
+    "name": "Buchweizen"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "de",
+    "name": "Kokosnuss"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "de",
+    "name": "Hafer"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "de",
+    "name": "Hirse"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "de",
+    "name": "Sorghum"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "de",
+    "name": "Chinakohl"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "it",
+    "name": "fagioli"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "it",
+    "name": "patata dolce"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "it",
+    "name": "manioca"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "it",
+    "name": "sesamo"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "it",
+    "name": "grano saraceno"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "it",
+    "name": "noce di cocco"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "it",
+    "name": "avena"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "it",
+    "name": "miglio"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "it",
+    "name": "sorgo"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "it",
+    "name": "cavolo cinese"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "pt",
+    "name": "feijão"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "pt",
+    "name": "batata-doce"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "pt",
+    "name": "mandioca"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "pt",
+    "name": "gergelim"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "pt",
+    "name": "trigo-sarraceno"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "pt",
+    "name": "coco"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "pt",
+    "name": "aveia"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "pt",
+    "name": "milheto"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "pt",
+    "name": "sorgo"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "pt",
+    "name": "couve-chinesa"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "ru",
+    "name": "фасоль"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "ru",
+    "name": "батат"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "ru",
+    "name": "кассава"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "ru",
+    "name": "кунжут"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "ru",
+    "name": "гречиха"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "ru",
+    "name": "кокос"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "ru",
+    "name": "овёс"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "ru",
+    "name": "просо"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "ru",
+    "name": "сорго"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "ru",
+    "name": "китайская капуста"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "tr",
+    "name": "fasulye"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "tr",
+    "name": "tatlı patates"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "tr",
+    "name": "manyok"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "tr",
+    "name": "susam"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "tr",
+    "name": "karabuğday"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "tr",
+    "name": "hindistan cevizi"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "tr",
+    "name": "yulaf"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "tr",
+    "name": "darı"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "tr",
+    "name": "sorgum"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "tr",
+    "name": "Çin lahanası"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "pl",
+    "name": "fasola"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "pl",
+    "name": "batat"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "pl",
+    "name": "maniok"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "pl",
+    "name": "sezam"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "pl",
+    "name": "gryka"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "pl",
+    "name": "kokos"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "pl",
+    "name": "owies"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "pl",
+    "name": "proso"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "pl",
+    "name": "sorgo"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "pl",
+    "name": "kapusta chińska"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "id",
+    "name": "kacang"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "id",
+    "name": "ubi jalar"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "id",
+    "name": "singkong"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "id",
+    "name": "wijen"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "id",
+    "name": "buckwheat"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "id",
+    "name": "kelapa"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "id",
+    "name": "oat"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "id",
+    "name": "jawawut"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "id",
+    "name": "sorgum"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "id",
+    "name": "sawi putih"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "ms",
+    "name": "kacang"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "ms",
+    "name": "ubi keledek"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "ms",
+    "name": "ubi kayu"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "ms",
+    "name": "bijan"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "ms",
+    "name": "buckwheat"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "ms",
+    "name": "kelapa"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "ms",
+    "name": "oat"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "ms",
+    "name": "sekoi"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "ms",
+    "name": "sorgum"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "ms",
+    "name": "kobis cina"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "ja",
+    "name": "豆"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "ja",
+    "name": "さつまいも"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "ja",
+    "name": "キャッサバ"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "ja",
+    "name": "ごま"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "ja",
+    "name": "そば"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "ja",
+    "name": "ココナッツ"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "ja",
+    "name": "オーツ麦"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "ja",
+    "name": "きび"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "ja",
+    "name": "モロコシ"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "ja",
+    "name": "白菜"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "ko",
+    "name": "콩"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "ko",
+    "name": "고구마"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "ko",
+    "name": "카사바"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "ko",
+    "name": "참깨"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "ko",
+    "name": "메밀"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "ko",
+    "name": "코코넛"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "ko",
+    "name": "귀리"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "ko",
+    "name": "기장"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "ko",
+    "name": "수수"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "ko",
+    "name": "배추"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "zh",
+    "name": "菜豆"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "zh",
+    "name": "红薯"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "zh",
+    "name": "木薯"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "zh",
+    "name": "芝麻"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "zh",
+    "name": "荞麦"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "zh",
+    "name": "椰子"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "zh",
+    "name": "燕麦"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "zh",
+    "name": "小米"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "zh",
+    "name": "高粱"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "zh",
+    "name": "大白菜"
   }
 ]
