@@ -9,3 +9,9 @@
 ## 2. Logo tagline showing in Urdu — FIXED 2026-10-05
 - **Symptom tha:** Logo ke saath tagline Urdu mein aa rahi thi.
 - **Fix:** Tagline ab English hai: "Fertilizer Dose Calculator for Crops, Plants & Vegetables". `urduTagline` config se remove kar di gayi.
+
+## 3. Duplicate `potato` slug in seed code (vegetable definition shadowed) — OPEN, save-only
+- **Masla:** `src/lib/growing.ts` mein `potato` slug do jagah defined hai — ek field-crop ke tor par (`CROPS` via `src/lib/agronomy.ts:502`) aur ek vegetable ke tor par (commit dcd8752, `vegetable("potato", "Potato", "آلو", ...)`).
+- **Asar:** Base seed insert-if-missing hai aur `GROWING_ITEMS` mein crops pehle aate hain, is liye DB mein sirf crop-potato banta hai; vegetable wali definition kabhi insert nahi hoti. Nateeja: `/vegetables/potato` live par 404 deta hai (verified 2026-10-08). Vegetables index aur sitemap DB-driven hain is liye wahan se koi dead link nahi hai; `/crops/potato` par bilingual H1 ("आलू Potato") aur planting windows theek kaam karte hain. User-facing nuqsan zero hai.
+- **Fix nahi kiya gaya** (Ahmed ki save-only directive): taxonomy ka faisla — potato crop rahe ya vegetable — Ahmed ka hai. Agar kabhi full reseed hua to crop-potato hi jeetega (seed order).
+- **Note:** dcd8752 ki report mein "2 new: potato, cabbage-chinese" likha tha — potato asal mein new nahi tha, pehle se crop ke tor par maujood tha.
