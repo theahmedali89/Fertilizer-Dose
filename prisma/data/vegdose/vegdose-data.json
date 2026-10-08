@@ -1,0 +1,4526 @@
+{
+ "phase": "A+B+C+D (complete)",
+ "date": "2026-10-08",
+ "approvedBy": "Ahmed (2026-10-08)",
+ "type": "RESEARCH ONLY - no DB writes, no code changes",
+ "countries": [
+  "PK",
+  "IN",
+  "BD",
+  "ID",
+  "MY",
+  "BR",
+  "US",
+  "AU",
+  "ES",
+  "IT",
+  "PL",
+  "CN",
+  "DE",
+  "FR",
+  "JP",
+  "KR",
+  "TR"
+ ],
+ "itemSlugs": [
+  "tomato",
+  "onion",
+  "potato",
+  "okra",
+  "spinach",
+  "carrot",
+  "cauliflower",
+  "chili",
+  "brinjal",
+  "cabbage",
+  "radish",
+  "peas",
+  "garlic",
+  "cabbage-chinese"
+ ],
+ "records": [
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "tomato",
+   "n": 148.3,
+   "p2o5": 61.8,
+   "k2o": 61.8,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "25 kg N basal + 35 kg N top-dress = 60/acre",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "onion",
+   "n": 98.8,
+   "p2o5": 49.4,
+   "k2o": 49.4,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "40/20/20 per acre; kharif and rabi identical",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "potato",
+   "n": 185.3,
+   "p2o5": 61.8,
+   "k2o": 61.8,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "75/25/25 per acre",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "okra",
+   "n": 89.0,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "36 kg N/acre only; P/K not stated by PAU",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "spinach",
+   "n": 86.5,
+   "p2o5": 29.7,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "35 N + 12 P2O5/acre; K not stated",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "carrot",
+   "n": 61.8,
+   "p2o5": 29.7,
+   "k2o": 74.1,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "25/12/30 per acre",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "cauliflower",
+   "n": 123.6,
+   "p2o5": 61.8,
+   "k2o": 61.8,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "50/25/25 per acre, all varieties",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "chili",
+   "n": 61.8,
+   "p2o5": 29.7,
+   "k2o": 29.7,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "25/12/12 per acre",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "brinjal",
+   "n": 123.6,
+   "p2o5": 61.8,
+   "k2o": 29.7,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "25 N basal + 25 N after 2nd picking = 50/acre",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "cabbage",
+   "n": 123.6,
+   "p2o5": 61.8,
+   "k2o": 61.8,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "Same as cauliflower per PAU",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "radish",
+   "n": 61.8,
+   "p2o5": 29.7,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "25 N + 12 P2O5/acre; K not stated",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "peas",
+   "n": 49.4,
+   "p2o5": 61.8,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "20 N + 25 P2O5/acre; K not stated",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "garlic",
+   "n": 123.6,
+   "p2o5": 61.8,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "50 N + 25 P2O5/acre; K not stated",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "cabbage-chinese",
+   "n": 123.6,
+   "p2o5": 61.8,
+   "k2o": 61.8,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "50/25/25 per acre",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-punjab",
+   "itemSlug": "chili",
+   "n": 135.9,
+   "p2o5": 29.7,
+   "k2o": 29.7,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "variant-ambiguous"
+   ],
+   "source": {
+    "organization": "Punjab Agricultural University (PAU), Ludhiana",
+    "title": "Package of Practices for Cultivation of Vegetables (2021)",
+    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
+    "year": "2021"
+   },
+   "notes": "Hybrid variant: '30 kg N/acre to hybrid chilli' - ambiguous whether additional to base 25; recorded as 55/acre total",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "tomato",
+   "n": 150,
+   "p2o5": 100,
+   "k2o": 50,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Varieties: basal 75:100:50 + 75 N top 30 DAP",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "tomato",
+   "n": 200,
+   "p2o5": 250,
+   "k2o": 250,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [
+    "variant-hybrid"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Hybrids: basal 50:250:100 + 150 N + 150 K in 3 splits",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "brinjal",
+   "n": 100,
+   "p2o5": 50,
+   "k2o": 30,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Varieties: basal 50:50:30 + 50 N 30 DAP",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "brinjal",
+   "n": 200,
+   "p2o5": 150,
+   "k2o": 100,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [
+    "variant-hybrid"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Hybrids: basal 100:150:100 + 100 N 30 DAP",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "chili",
+   "n": 60,
+   "p2o5": 60,
+   "k2o": 30,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Basal 30:60:30 + 30 N splits 30/60/90 DAP",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "chili",
+   "n": 120,
+   "p2o5": 80,
+   "k2o": 80,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "variant-ambiguous"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "2nd entry; context suggests hybrid - flagged",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "okra",
+   "n": 40,
+   "p2o5": 50,
+   "k2o": 30,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Basal N20/P50/K30 + 20 N top 30 DAS; top-dress via secondary copy",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "onion",
+   "n": 150,
+   "p2o5": 60,
+   "k2o": 108,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Small/multiplier onion: 150:60:108 basal+top",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "onion",
+   "n": 100,
+   "p2o5": 150,
+   "k2o": 75,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Big/Bellary: basal N50/P150/K75 + 50 N top; via secondary copy",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "peas",
+   "n": 120,
+   "p2o5": 80,
+   "k2o": 70,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Basal 60:80:70 + 60 N top",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "cabbage",
+   "n": 135,
+   "p2o5": 135,
+   "k2o": 135,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Hills: basal 90:90:90 + 45:45:45 top 30-45 DAP",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "cabbage",
+   "n": 100,
+   "p2o5": 125,
+   "k2o": 25,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand",
+    "variant"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Plains variant via secondary copy",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "cauliflower",
+   "n": 135,
+   "p2o5": 135,
+   "k2o": 135,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Basal 90:90:90 + 45:45:45 top",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "itemSlug": "cauliflower",
+   "n": 100,
+   "p2o5": 100,
+   "k2o": 50,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "variant-ambiguous"
+   ],
+   "source": {
+    "organization": "TNAU / Directorate of Horticulture & Plantation Crops, Tamil Nadu",
+    "title": "Crop Production Guide - Horticulture Crops (2020)",
+    "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
+    "year": "2020"
+   },
+   "notes": "Alt entry, variety context unclear",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-national",
+   "itemSlug": "brinjal",
+   "n": 180,
+   "p2o5": 80,
+   "k2o": 80,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "variant-hybrid",
+    "secondhand"
+   ],
+   "source": {
+    "organization": "ICAR-IIVR, Varanasi",
+    "title": "Vegetable Variety - A Ready Reckoner (via secondary copy)",
+    "url": "https://www.scribd.com/document/397793132",
+    "year": "n.d."
+   },
+   "notes": "Hybrid-specific from variety reckoner, not a generic national dose",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "potato",
+   "n": 115.0,
+   "p2o5": 69.0,
+   "k2o": 150.0,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "Urea 250, TSP 150, MOP 250 kg/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "tomato",
+   "n": 81.4,
+   "p2o5": 69.0,
+   "k2o": 48.6,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "Cowdung 10t + urea 177, TSP 150, MoP 81",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "onion",
+   "n": 110.4,
+   "p2o5": 119.6,
+   "k2o": 90.0,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "Cowdung 5t + urea 240, TSP 260, MOP 150",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "peas",
+   "n": 13.8,
+   "p2o5": 36.8,
+   "k2o": 24.0,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "Cowdung 5t + urea 30, TSP 80, MoP 40",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "okra",
+   "n": 69.0,
+   "p2o5": 46.0,
+   "k2o": 90.0,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "Urea 150, TSP 100, MoP 150",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "brinjal",
+   "n": 172.5,
+   "p2o5": 69.0,
+   "k2o": 150.0,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "Urea 375, TSP 150, MOP 250 + manure",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "cauliflower",
+   "n": 120,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "secondhand"
+   ],
+   "source": {
+    "organization": "BARI / BARC (via peer-reviewed citing papers)",
+    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
+    "url": "",
+    "year": "2019"
+   },
+   "notes": "N120 stated; P/K basis ambiguous (elemental vs oxide) - left null",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "tomato",
+   "n": 224.2,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N 200 lb/ac fixed",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "onion",
+   "n": 168.1,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "Bulb onion; N 150 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": 67.3,
+   "k2o": 168.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N is yield-goal formula 67-250 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "okra",
+   "n": 134.5,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N 120 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "spinach",
+   "n": 100.9,
+   "p2o5": 89.7,
+   "k2o": 89.7,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N 90 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "carrot",
+   "n": 196.2,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N 175 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "cauliflower",
+   "n": 196.2,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "proxy"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "Broccoli row used as proxy",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "chili",
+   "n": 224.2,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "proxy"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "Sweet/specialty pepper row as proxy",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "brinjal",
+   "n": 224.2,
+   "p2o5": 112.1,
+   "k2o": 145.7,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "proxy"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "Eggplant row",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N is plant-population formula",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "radish",
+   "n": 100.9,
+   "p2o5": 89.7,
+   "k2o": 89.7,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "N 90 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "peas",
+   "n": 67.3,
+   "p2o5": 67.3,
+   "k2o": 67.3,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "Southern peas; N 60 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southeast",
+   "itemSlug": "cabbage-chinese",
+   "n": 196.2,
+   "p2o5": 112.1,
+   "k2o": 112.1,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "proxy"
+   ],
+   "source": {
+    "organization": "University of Florida IFAS",
+    "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
+    "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
+    "year": "2021"
+   },
+   "notes": "'Collard and Chinese Cabbage' row",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100.9-123.3"
+   },
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Fresh-market: preplant 30 lb N/ac, P 0-240, K 0-300 (soil test), sidedress 2x30-40 lb N; total N 90-110 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Bulb onion mineral soil: total N 190 lb/ac (213.0); preplant 70 lb N + P2O5 0-250 + K2O 0-250",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "78.5-140.1"
+   },
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Total N 70-125 lb/ac; preplant 25 lb N + <=150 P2O5 + <=100 K2O (soil test)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "112.1-168.1"
+   },
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Preplant K2O 50-400; starter 0-30 N/0-150 P2O5/0-200 K2O; sidedress 2x50-75 lb N; total N 100-150 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "okra",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Preplant 40 lb N, P2O5 0-200, K2O 0-300; sidedress 40 lb N; total N 80 lb/ac (89.7)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Preplant 40-60 lb N, P2O5 0-150, K2O 0-200; total N up to 170 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Preplant 60 lb N, P2O5 0-160, K2O 0-200; total N fresh 100 (112.1)/processing 120 (134.5) lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Total N 50 lb/ac (56.0); P/K per soil test",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Cole crops: preplant 50-60 lb N, P2O5 25-200, K2O 0-250 (soil test)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Same cole-crop table as cabbage",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "44.8-67.3"
+   },
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "high",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Preplant 20-40 lb N, P2O5 0-100, K2O 0-100; total N 40-60 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "112.1-134.5"
+   },
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "ranged",
+    "proxy"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Pepper row (proxy): preplant 30 lb N, P2O5 0-240, K2O 0-300; total N 100-120 lb/ac",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-corn-belt",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "P2O5/K2O per soil test; see notes for rates",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "proxy"
+   ],
+   "source": {
+    "organization": "Midwest land-grant extensions (IN/IL/IA/KS/MI/MN/MO/NE/OH/WI)",
+    "title": "Midwest Vegetable Production Guide for Commercial Growers (2023)",
+    "url": "https://mwveguide.org/uploads/pdfs/2023-MW-Veg-Guide-full-draft-20221020.pdf",
+    "year": "2023"
+   },
+   "notes": "Eggplant row (proxy), same fruiting-vegetable table",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-southern-plains",
+   "itemSlug": "tomato",
+   "n": 168.1,
+   "p2o5": 112.1,
+   "k2o": 89.7,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "oxide-basis-unconfirmed"
+   ],
+   "source": {
+    "organization": "Texas A&M AgriLife (Joe Masabni)",
+    "title": "Tomato fertilizer guidance (AgriLife Today)",
+    "url": "https://agrilifetoday.tamu.edu/",
+    "year": "n.d."
+   },
+   "notes": "150 lb N, 100 lb P, 80 lb K per acre; oxide basis unconfirmed - recorded per US convention",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "garlic",
+   "n": 80,
+   "p2o5": 200,
+   "k2o": 60,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Alho",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "potato",
+   "n": 190,
+   "p2o5": 300,
+   "k2o": 220,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Batata",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "brinjal",
+   "n": 100,
+   "p2o5": 160,
+   "k2o": 120,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Berinjela",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "onion",
+   "n": 120,
+   "p2o5": 220,
+   "k2o": 120,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Cebola",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "carrot",
+   "n": 120,
+   "p2o5": 240,
+   "k2o": 240,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Cenoura; media texture x media availability",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "cauliflower",
+   "n": 150,
+   "p2o5": 240,
+   "k2o": 180,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Couve-flor",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "chili",
+   "n": 150,
+   "p2o5": 240,
+   "k2o": 180,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "proxy"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Pimentao (bell pepper) chapter as proxy",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "okra",
+   "n": 120,
+   "p2o5": 160,
+   "k2o": 180,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Quiabo",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "cabbage",
+   "n": 150,
+   "p2o5": 300,
+   "k2o": 180,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Repolho",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": 400,
+   "k2o": 150,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "high",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Tomate rasteiro (processing): N 120/100/80/50 by yield tier",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": 800,
+   "k2o": 600,
+   "ranges": {},
+   "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
+    "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
+    "url": "https://d3db4b6121.cbaul-cdnwnd.com",
+    "year": "1999"
+   },
+   "notes": "Tomate tutorado (staked fresh): high-yield system, N 400/300/200/100 - not field-average",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "70-120"
+   },
+   "formula": "P2O5 320/180/100/60, K2O 120/80/50/30 by P-resin/K soil tiers",
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "formula",
+    "greenhouse"
+   ],
+   "source": {
+    "organization": "Instituto Agronomico de Campinas (IAC)",
+    "title": "Calagem e Adubacao para Hortalicas sob Cultivo Protegido (2015)",
+    "url": "https://codeagro.agricultura.sp.gov.br/arquivos/hortalimento/Calagem_e_adubacao_para_hortalicas_201588bf89e2deb32d9ac52a0ac416664009.pdf",
+    "year": "2015"
+   },
+   "notes": "Leafy group, greenhouse booklet: plantio N 30-40, P2O5/K2O by soil tiers; cobertura N 40-80; total N 70-120",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-national",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-140",
+    "p2o5": "50.4-59.6",
+    "k2o": "180.7"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "nutrient-budget"
+   ],
+   "source": {
+    "organization": "Hort Innovation Australia",
+    "title": "Nutrient Management for Onions in Australia v2 (2023)",
+    "url": "https://soilwealth.com.au/wp-content/uploads/2024/02/Onion-Nutr-Guide_V2-230627-.pdf",
+    "year": "2023"
+   },
+   "notes": "Total supply 120-140 N, 22-26 elemental P, 150 elemental K/ha (soil+fertiliser); crop-requirement budget, not applied dose",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-wa",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "p2o5": "316.2-366.6",
+    "k2o": "195.1-265.0"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "nutrient-budget"
+   ],
+   "source": {
+    "organization": "WA Department of Agriculture",
+    "title": "Farmnote 94/90: Carrot nutrition and irrigation",
+    "url": "https://ausveg.com.au/app/data/technical-insights/docs/TL4.pdf",
+    "year": "2005"
+   },
+   "notes": "Elemental totals by variety/season (1990-era WA sands); worked example winter Nandor 197 N/145 P/163 K",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-nsw",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": 103.1,
+   "k2o": null,
+   "ranges": {
+    "n": "60-80",
+    "p2o5": "103.1-194.7",
+    "k2o": "60.2-96.4"
+   },
+   "formula": "P rate by soil-P class; K guidance sandy soils only",
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "formula"
+   ],
+   "source": {
+    "organization": "NSW Department of Primary Industries",
+    "title": "Primefact 259: Growing garlic in NSW (2nd ed.)",
+    "url": "http://www.dpi.nsw.gov.au/__data/assets/pdf_file/0005/97709/growing-garlic-in-NSW.pdf",
+    "year": "2012"
+   },
+   "notes": "Medium-P soils: 45 kg elemental P + 60-80 kg N/ha; low-P soils ~85 kg P; K only for sandy soils",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-kalimantan",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": 276,
+   "k2o": 120,
+   "ranges": {
+    "n": "105-115"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "BPTP Kalimantan Selatan (Balitbangtan)",
+    "title": "Brosur Tomat",
+    "url": "repository.pertanian.go.id (bitstream)",
+    "year": "n.d."
+   },
+   "notes": "250 kg ZA or 125 kg urea + 300 TSP + 100 KCl/ha; N 105-115 ranged; P unusually high - flagged",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "onion",
+   "n": 250,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "p2o5": "100-120",
+    "k2o": "100-120"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "conflict"
+   ],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Balitsa via UGM PETLAP: N 250 total (80+85+85); P2O5 100-120, K2O 100-120 ranged. CONFLICT with journal citation",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "150-200",
+    "p2o5": "70-90",
+    "k2o": "50-100"
+   },
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "ranged",
+    "conflict",
+    "secondhand"
+   ],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Journal citing Sumarni & Hidayat 2005: N 150-200, P2O5 70-90, K2O 50-100. Secondhand. CONFLICT",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "70-150",
+    "p2o5": "150-200",
+    "k2o": "100-200"
+   },
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Balitsa 1999: N 70-150, P2O5 150-200, K2O 100-200. Old - verify before use",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "cabbage",
+   "n": 99,
+   "p2o5": 90,
+   "k2o": 120,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Urea 100 + ZA 250 + SP-36 250 + KCl 200 kg/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "cauliflower",
+   "n": 99,
+   "p2o5": 90,
+   "k2o": 120,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Same recipe as cabbage (kubis bunga)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "carrot",
+   "n": 46,
+   "p2o5": 46,
+   "k2o": 18,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Urea 100 + TSP 100 + KCl 30 kg/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "staged"
+   ],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Staged recipe, no single total; alt NPK 12:24:12 @500 kg/ha on clay-loam",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-java",
+   "itemSlug": "garlic",
+   "n": 200,
+   "p2o5": 180,
+   "k2o": 60,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BRMP Banten (Kementan)",
+    "title": "Garlic publication (PDF)",
+    "url": "https://banten.brmp.pertanian.go.id/storage/assets/uploads/publikasi/wizMWtiytQFbLvnJkeMpXgeBhORSc3ast3GE9EHE.pdf",
+    "year": "n.d."
+   },
+   "notes": "Direct: 200 N, 180 P2O5, 60 K2O, 142 S/ha. High P flagged as stated",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "spinach",
+   "n": 120,
+   "p2o5": 90,
+   "k2o": 50,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Direct statement",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "cabbage-chinese",
+   "n": 99,
+   "p2o5": 90,
+   "k2o": 120,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "Same recipe as cabbage (petsai)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "chili",
+   "n": 151,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "partial",
+    "thirdhand"
+   ],
+   "source": {
+    "organization": "Balitsa / Kementan (via repository.pertanian.go.id)",
+    "title": "Prima Tani vegetable guides / PETLAP (2007)",
+    "url": "https://repository.pertanian.go.id",
+    "year": "2007"
+   },
+   "notes": "N 151 kg/ha dry land; P/K not given. Thirdhand via thesis citing Nurtika & Suwandi 1992",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "MY",
+   "regionSlug": "my-peninsular",
+   "itemSlug": "okra",
+   "n": 120,
+   "p2o5": 120,
+   "k2o": 170,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "conflict"
+   ],
+   "source": {
+    "organization": "Jabatan Pertanian Malaysia",
+    "title": "Panduan Menanam Bendi / Sabah bendi financial model",
+    "url": "https://doa.sarawak.gov.my/web/subpage/webpage_view/111",
+    "year": "n.d."
+   },
+   "notes": "1 t/ha NPK Blue Special 12:12:17:2. CONFLICT with Sabah",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "MY",
+   "regionSlug": "my-sabah",
+   "itemSlug": "okra",
+   "n": 219,
+   "p2o5": 219,
+   "k2o": 279,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "conflict",
+    "financial-model"
+   ],
+   "source": {
+    "organization": "Jabatan Pertanian Malaysia",
+    "title": "Panduan Menanam Bendi / Sabah bendi financial model",
+    "url": "https://doa.sarawak.gov.my/web/subpage/webpage_view/111",
+    "year": "n.d."
+   },
+   "notes": "NPK Hijau 0.5t + NPK Biru 1.2t/ha from financial model - not agronomic rec. CONFLICT",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-south",
+   "itemSlug": "cabbage-chinese",
+   "n": 270,
+   "p2o5": 88.5,
+   "k2o": 211.5,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Fujian Quality & Technical Supervision Bureau",
+    "title": "Major vegetable NPK fertilization technical specification DB35/T 1526-2015",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_98554479300EEA4920250706.pdf",
+    "year": "2015"
+   },
+   "notes": "Dabaicai: economic rate at medium fertility, N 18.0/P2O5 5.9/K2O 14.1 kg/667m2 x15",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-yangtze",
+   "itemSlug": "cabbage",
+   "n": 295.5,
+   "p2o5": 94.5,
+   "k2o": 223.5,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Fujian Quality & Technical Supervision Bureau",
+    "title": "Major vegetable NPK fertilization technical specification DB35/T 1526-2015",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_98554479300EEA4920250706.pdf",
+    "year": "2015"
+   },
+   "notes": "Jieqiu ganlan: N 19.7/P2O5 6.3/K2O 14.9 kg/667m2 x15",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-yangtze",
+   "itemSlug": "cauliflower",
+   "n": 256.5,
+   "p2o5": 87,
+   "k2o": 202.5,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Fujian Quality & Technical Supervision Bureau",
+    "title": "Major vegetable NPK fertilization technical specification DB35/T 1526-2015",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_98554479300EEA4920250706.pdf",
+    "year": "2015"
+   },
+   "notes": "Huayecai: N 17.1/P2O5 5.8/K2O 13.5 kg/667m2 x15",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-yangtze",
+   "itemSlug": "tomato",
+   "n": 648,
+   "p2o5": 512,
+   "k2o": 461,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "greenhouse",
+    "outlier-high"
+   ],
+   "source": {
+    "organization": "Anhui Quality & Technical Supervision Bureau",
+    "title": "Protected tomato NPK reduction technical regulation DB34/T 1426-2011",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_4598F96F6AB7ED8B20250628.pdf",
+    "year": "2011"
+   },
+   "notes": "Protected-cultivation greenhouse tomato (Chaohu Lake); 'reduced' rate = 75% of conventional. Values very high - greenhouse multi-harvest context",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-yangtze",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "184.4-209",
+    "p2o5": "52.7-65.4",
+    "k2o": "187.5-217.5"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "Chongqing Market Supervision Bureau",
+    "title": "Potato fertilizer-saving cultivation technical regulation DB50/T 1467-2023",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_B7F3AE2DC85800A320250812.pdf",
+    "year": "2023"
+   },
+   "notes": "Monoculture total nutrients 30+-1.5 kg/667m2 at 3:1:3; detailed ranges per ha in ranges",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-south",
+   "itemSlug": "carrot",
+   "n": 330,
+   "p2o5": 116.25,
+   "k2o": 330,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "municipal"
+   ],
+   "source": {
+    "organization": "Xiamen Market Supervision Bureau",
+    "title": "Carrot cultivation technical regulation DB3502/T 002-2022 (municipal)",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_B19F6211D8C57B6D20250706.pdf",
+    "year": "2022"
+   },
+   "notes": "Municipal-level standard (below provincial bar - flagged). Totals per 667m2: N 22, P2O5 7.75, K2O 22 x15",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-northeast",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": 33.75,
+   "k2o": 33.75,
+   "ranges": {
+    "n": "82-96"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [
+    "ranged",
+    "greenhouse"
+   ],
+   "source": {
+    "organization": "Jilin Market Supervision Department",
+    "title": "Spinach production technical regulation DB22/T 3186-2020",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_C9157302EC3B12D920250810.pdf",
+    "year": "2020"
+   },
+   "notes": "Facility spinach; N 82-96/ha ranged",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-yangtze",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "172.5-238.5",
+    "p2o5": "124.5-166.5",
+    "k2o": "201-256.5"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "greenhouse"
+   ],
+   "source": {
+    "organization": "Anhui Market Supervision Bureau",
+    "title": "Facility pepper fertilizer-saving technical regulation DB34/T 3789-2021",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_AD42D1E13A67962120250628.pdf",
+    "year": "2021"
+   },
+   "notes": "Greenhouse pepper by target yield; full span per ha in ranges",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-ncp",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "390-420",
+    "p2o5": "135-150",
+    "k2o": "165-180"
+   },
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "ranged",
+    "municipal"
+   ],
+   "source": {
+    "organization": "Zhengzhou Market Supervision Bureau",
+    "title": "Garlic fertilization technical regulation DB4101/T 19-2021 (municipal)",
+    "url": "https://bzw.kqqw.com/BBBW/BZXZ_0FB155702453717220250804.pdf",
+    "year": "2021"
+   },
+   "notes": "Municipal-level (flagged). Per ha: N 390-420, P2O5 135-150, K2O 165-180",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "tomato",
+   "n": 325,
+   "p2o5": 406,
+   "k2o": 304,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Rain-shelter summer-autumn, target 10,000 kg/10a",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "brinjal",
+   "n": 383,
+   "p2o5": 432,
+   "k2o": 309,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Open-field summer-autumn nasu, 4,000 kg/10a",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "chili",
+   "n": 344,
+   "p2o5": 342,
+   "k2o": 283,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "proxy"
+   ],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Source crop piman (sweet/bell pepper) - flagged",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "cabbage",
+   "n": 241,
+   "p2o5": 278,
+   "k2o": 195,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [
+    "conflict"
+   ],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Yamagata 4,000 kg/10a. CONFLICT with Gifu",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "cabbage-chinese",
+   "n": 251,
+   "p2o5": 292,
+   "k2o": 229,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Hakusai 8,000 kg/10a",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "spinach",
+   "n": 100,
+   "p2o5": 273,
+   "k2o": 88,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Horenso; high P flagged as stated",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "onion",
+   "n": 294,
+   "p2o5": 386,
+   "k2o": 278,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Tamanegi autumn planting 5,000 kg/10a",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "radish",
+   "n": 200,
+   "p2o5": 258,
+   "k2o": 183,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Daikon open-field 5,000 kg/10a",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-tohoku",
+   "itemSlug": "carrot",
+   "n": 230,
+   "p2o5": 284,
+   "k2o": 221,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Yamagata Prefecture Agriculture Dept",
+    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
+    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
+    "year": "2019"
+   },
+   "notes": "Ninjin 3,000 kg/10a",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-chubu",
+   "itemSlug": "cabbage",
+   "n": 211,
+   "p2o5": 180,
+   "k2o": 216,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [
+    "conflict"
+   ],
+   "source": {
+    "organization": "Gifu Prefecture (via MAFF sehi-kijun database)",
+    "title": "Cabbage fertilization standard (winter-spring, flatland)",
+    "url": "http://www.maff.go.jp/j/seisan/kankyo/hozen_type/h_sehi_kizyun/pdf/05220120kyabetu.pdf",
+    "year": "n.d."
+   },
+   "notes": "Winter-spring flatland; summer-autumn highland variant N250/P230/K250 noted. CONFLICT with Yamagata",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "KR",
+   "regionSlug": "kr-national",
+   "itemSlug": "tomato",
+   "n": 204,
+   "p2o5": 103,
+   "k2o": 122,
+   "ranges": {},
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "secondhand",
+    "greenhouse"
+   ],
+   "source": {
+    "organization": "RDA Korea (cited via KCI journal paper)",
+    "title": "Facility tomato standard fertilization rate",
+    "url": "https://db.koreascholar.com/Search/Result?field=k&query=tomato%20growth",
+    "year": "2023"
+   },
+   "notes": "Facility tomato; secondhand citation of RDA standard via journal paper",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "KR",
+   "regionSlug": "kr-gangwon",
+   "itemSlug": "chili",
+   "n": 190,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": null,
+   "confidence": "low",
+   "flags": [
+    "partial"
+   ],
+   "source": {
+    "organization": "Gangwon Agricultural Research & Extension Services",
+    "title": "Card news: proper fertilizer rates via Heuktoram",
+    "url": "https://www.ares.gangwon.kr/egf/bp/common/front/28782/download",
+    "year": "n.d."
+   },
+   "notes": "N 19 kg/10a from educational card news; P/K not given; not a formal standard table",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "tomato",
+   "n": 230,
+   "p2o5": 150,
+   "k2o": 250,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Pomodoro da mensa c.p. 2024, greenhouse 90-140 t/ha",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "onion",
+   "n": 130,
+   "p2o5": 85,
+   "k2o": 150,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Cipolla 2026, 36-54 t/ha; alta prod N 180",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "potato",
+   "n": 190,
+   "p2o5": 110,
+   "k2o": 270,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Patata 2024, 40-55 t/ha",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "carrot",
+   "n": 120,
+   "p2o5": 150,
+   "k2o": 200,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Carota 2025/2026, 40-60 t/ha",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "cauliflower",
+   "n": 150,
+   "p2o5": 80,
+   "k2o": 150,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Cavolfiore pieno campo 2025; alta N 180",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "cabbage",
+   "n": 150,
+   "p2o5": 80,
+   "k2o": 150,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Cavolo cappuccio 2025",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "peas",
+   "n": 50,
+   "p2o5": 100,
+   "k2o": 70,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Pisello 2026, 5-7 t/ha",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "chili",
+   "n": 160,
+   "p2o5": 75,
+   "k2o": 250,
+   "ranges": {},
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "proxy"
+   ],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Peperone (sweet bell pepper) as proxy for peperoncino",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "brinjal",
+   "n": 250,
+   "p2o5": 150,
+   "k2o": 250,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Melanzana 2026 pieno campo; serra N 300/P 200",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "spinach",
+   "n": 150,
+   "p2o5": 50,
+   "k2o": 100,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Spinacio 2024",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "itemSlug": "radish",
+   "n": 80,
+   "p2o5": 60,
+   "k2o": 90,
+   "ranges": {},
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Regione Emilia-Romagna",
+    "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
+    "url": "https://agricoltura.regione.emilia-romagna.it/",
+    "year": "2024/2025/2026"
+   },
+   "notes": "Ravanello 2024, 25-35 t/ha",
+   "suggestedStatus": "verified"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "cauliflower",
+   "n": 300,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N at 350 dt/ha; P2O5 class C 35-25, K2O class C 130-90 (LKSH); Nmin 300",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N: Frischmarkt 260 (700 dt/ha) / Industrie 320 (1000 dt/ha) - kept separate; P2O5/K2O class C ranges in LKSH",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "cabbage-chinese",
+   "n": 210,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N at 700 dt/ha; P2O5 class C 60-40, K2O 215-150; Nmin 250",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N: Bund 115 / Industrie 165 / Wasch 125 (dt/ha levels); P2O5/K2O class C ranges",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N: Bund 210 / Trocken 155; P/K no per-crop official table - GAP",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "spinach",
+   "n": 190,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N Blatt Standard 190 (250 dt/ha); Hack 205; P/K GAP",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "garlic",
+   "n": 120,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N Trocken 120 (140 dt/ha); P/K GAP",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "radish",
+   "n": 110,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N Radies 110 (300 dt/ha); Rettich deutsch 175 noted; P/K GAP",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "peas",
+   "n": 85,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap",
+    "proxy"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N Gemüseerbse 85 (80 dt/ha); P/K via LWK 'Leguminosen' group row (low confidence proxy): P2O5 80-50, K2O 170-110",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "itemSlug": "potato",
+   "n": 180,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "N is a DüV legal maximum (Bedarfswert), not a trial-optimal dose; P/K by Gehaltsklasse where available",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "LVG Heidelberg / DüV Anlage 4",
+    "title": "DüV-Merkblatt N-DBE 06_2023 (N-Bedarfswerte Gemüse)",
+    "url": "https://lvg.landwirtschaft-bw.de/site/pbs-bw-rebrush2024/get/documents_E-1774831899/MLR.LEL/PB5Documents/lvg/Versuchswesen/Wasserschutz/Duengeverordnung/Merkblaetter-und-Arbeitshilfen/LVG_DueV-Merkblatt_N-DBE__06_2023.pdf",
+    "year": "2023"
+   },
+   "notes": "N at 450 dt/ha; P/K LWK Niedersachsen 'Rüben, Kartoffeln' class C ranges (de-lower-saxony)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 1.5 (plein champ) / 2.1 (sous abri); rdt ref 175 t/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 2.0; oignon",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 2.8; pomme de terre primeur 30-40 t/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 1.2; carotte racine 60-65 t/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 3.7; epinard feuilles industrie 20-30 t/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 2.5 (ete/automne) / 4.3 (hiver)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 3.3; piment",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 1.4; aubergine fruit 100-130 t/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 9.8; pois potager grain 6.5 t/ha",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 12.6; ail tete - %MS/teneur ambiguity flagged, re-verify before population",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
+   "confidence": "medium",
+   "flags": [
+    "formula"
+   ],
+   "source": {
+    "organization": "Ministère de l'Agriculture (France)",
+    "title": "Exportations d'azote par les productions végétales (HVE reference table)",
+    "url": "https://agriculture.gouv.fr/telecharger/133334",
+    "year": "2026"
+   },
+   "notes": "Teneur N: 1.2; radis",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "200-240",
+    "p2o5": "65-90",
+    "k2o": "300-330"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Invernadero: N 380-410, P2O5 160-180, K2O 600-700",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "170-190",
+    "p2o5": "60-100",
+    "k2o": "200-250"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Cebolla",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "290-330",
+    "p2o5": "90-120",
+    "k2o": "320-400"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Berenjena; invernadero N 370-390",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "220-280",
+    "p2o5": "80-100",
+    "k2o": "300-340"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Pimiento (sweet pepper; picante not separated)",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "230-250",
+    "p2o5": "65-75",
+    "k2o": "290-320"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Col",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "cabbage-chinese",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "220-260",
+    "p2o5": "70-90",
+    "k2o": "230-360"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Col china",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "260-300",
+    "p2o5": "70-90",
+    "k2o": "300-360"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Coliflor",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "140-160",
+    "p2o5": "40-50",
+    "k2o": "180-220"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Espinaca",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-130",
+    "p2o5": "40-60",
+    "k2o": "90-140"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Guisante",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-100",
+    "p2o5": "30-40",
+    "k2o": "90-110"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Rabano",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "170-210",
+    "p2o5": "70-85",
+    "k2o": "300-450"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged"
+   ],
+   "source": {
+    "organization": "IVIA / MARM",
+    "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
+    "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
+    "year": "2010"
+   },
+   "notes": "Zanahoria",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "tomato",
+   "n": 180,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Pomidor",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "onion",
+   "n": 200,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Cebula",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "potato",
+   "n": 180,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Ziemniak pozny 180 / wczesny 90",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "spinach",
+   "n": 150,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Szpinak",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "carrot",
+   "n": 200,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Marchew",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "cauliflower",
+   "n": 350,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Kalafior",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "chili",
+   "n": 300,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Papryka",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "brinjal",
+   "n": 180,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Oberzyna",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "cabbage",
+   "n": 300,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Kapusta",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "radish",
+   "n": 140,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Rzodkiew 140 / rzodkiewka 100",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "peas",
+   "n": 30,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Grochy: 30 mineral / 50 natural",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "garlic",
+   "n": 120,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {},
+   "formula": "Max effective N from all sources; reduce 20% on very light / 10% on light soils",
+   "confidence": "medium",
+   "flags": [
+    "regulatory-cap"
+   ],
+   "source": {
+    "organization": "Rada Ministrów (Poland)",
+    "title": "Program azotanowy, Dziennik Ustaw, Zał. 9 Tab. 14 (max effective N)",
+    "url": "https://www.gov.pl/attachment/fe4985a9-5ca0-4e3c-be45-cd9174619cb4",
+    "year": "n.d."
+   },
+   "notes": "Czosnek",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "200-300"
+   },
+   "formula": null,
+   "confidence": "medium",
+   "flags": [
+    "ranged",
+    "conflict"
+   ],
+   "source": {
+    "organization": "InHort Skierniewice",
+    "title": "Opracowanie zaleceń nawożenia kapusta (2020)",
+    "url": "https://www.inhort.pl/files/program_wieloletni/PW_2015_2020_IO/spr_2020/3.2_oferta_wdr_Opracowanie_zalecen_kapusta_2020.pdf",
+    "year": "2020"
+   },
+   "notes": "InHort 2020 trial: highest yields at N 300 and at compost 35t + 150 N; kept alongside legal cap",
+   "suggestedStatus": "under_review"
+  },
+  {
+   "country": "TR",
+   "regionSlug": "tr-thrace",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-180",
+    "p2o5": "80-120"
+   },
+   "formula": "Soil-analysis-class tables per province",
+   "confidence": "medium",
+   "flags": [
+    "formula",
+    "ranged"
+   ],
+   "source": {
+    "organization": "T.C. Tarım ve Orman Bakanlığı (Tekirdağ)",
+    "title": "Gübreleme Rehberi (Tekirdağ, 2018)",
+    "url": "https://tekirdag.tarimorman.gov.tr/Lists/Duyuru/Attachments/216/TEKI%CC%87RDAG%CC%86_GU%CC%88BRE%20REHBERI%CC%87.pdf",
+    "year": "2018"
+   },
+   "notes": "Patates (sulu): N 180-120 by organic-matter class; P2O5 120-80 by Olsen-P class; K2O not extracted",
+   "suggestedStatus": "under_review"
+  }
+ ],
+ "gaps": [
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "items": [
+    "chili",
+    "spinach",
+    "carrot",
+    "cabbage",
+    "radish",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No BARI/FRG citation found in accessible literature"
+  },
+  {
+   "country": "PK",
+   "regionSlug": "pk-punjab",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No citable online official vegetable NPK recommendation (AARI/PARC/Punjab Dept)"
+  },
+  {
+   "country": "PK",
+   "regionSlug": "pk-sindh",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "Same as pk-punjab"
+  },
+  {
+   "country": "PK",
+   "regionSlug": "pk-kpk",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "Same as pk-punjab"
+  },
+  {
+   "country": "PK",
+   "regionSlug": "pk-balochistan",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "Same as pk-punjab"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-national",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "IIVR publishes variety-specific reckoners, no single national vegetable dose chart"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-mp",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-mh",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-gj",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-ap",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-rj",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-ka",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-wb",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-tn",
+   "items": [
+    "carrot",
+    "radish",
+    "potato",
+    "garlic",
+    "spinach",
+    "cabbage-chinese"
+   ],
+   "reason": "Not in TNAU CPG vegetable chapters"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-southeast",
+   "items": [
+    "radish",
+    "peas",
+    "cabbage-chinese"
+   ],
+   "reason": "Only thesis/trial rates or no official table"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-cerrado",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "Embrapa Hortalicas docs exist; infoteca PDF server timed out"
+  },
+  {
+   "country": "BR",
+   "regionSlug": "br-south",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No official institute table located"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-national",
+   "items": [
+    "tomato",
+    "potato",
+    "okra",
+    "spinach",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "cabbage-chinese"
+   ],
+   "reason": "No official AU dose tables at source bar"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-vic",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No state-specific records"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-qld",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No state-specific records"
+  },
+  {
+   "country": "AU",
+   "regionSlug": "au-sa",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No state-specific records"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-great-plains",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "No dedicated official vegetable-dose guide"
+  },
+  {
+   "country": "US",
+   "regionSlug": "us-pnw",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "OSU onion guide exists but not extracted this phase"
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "items": [
+    "okra",
+    "radish",
+    "peas"
+   ],
+   "reason": "No official Balitsa/Kementan dose found"
+  },
+  {
+   "country": "MY",
+   "regionSlug": "my-peninsular",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "Equatorial agencies publish little; below-bar leads only"
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-national",
+   "items": [
+    "onion",
+    "okra",
+    "brinjal",
+    "radish",
+    "peas"
+   ],
+   "reason": "No official DB standard with NPK rates found"
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-national",
+   "items": [
+    "potato",
+    "okra",
+    "cauliflower",
+    "peas",
+    "garlic"
+   ],
+   "reason": "No prefectural standard extracted (Hokkaido potato page 403)"
+  },
+  {
+   "country": "KR",
+   "regionSlug": "kr-national",
+   "items": [
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "RDA rates behind interactive Heuktoram prescription system; no citable static tables"
+  },
+  {
+   "country": "IT",
+   "regionSlug": "it-emilia-romagna",
+   "items": [
+    "garlic",
+    "okra",
+    "cabbage-chinese"
+   ],
+   "reason": "Not covered by ER disciplinari"
+  },
+  {
+   "country": "DE",
+   "regionSlug": "de-national",
+   "items": [
+    "tomato",
+    "okra",
+    "chili",
+    "brinjal"
+   ],
+   "reason": "No official per-crop dose tables (minor/greenhouse crops)"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "items": [
+    "cabbage",
+    "cabbage-chinese",
+    "okra"
+   ],
+   "reason": "Not in HVE teneur table"
+  },
+  {
+   "country": "FR",
+   "regionSlug": "fr-national",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "P/K: COMIFER PK grids cover grandes cultures only - no official per-vegetable P2O5/K2O table"
+  },
+  {
+   "country": "ES",
+   "regionSlug": "es-national",
+   "items": [
+    "potato",
+    "garlic",
+    "okra"
+   ],
+   "reason": "No MARM/IVIA dose table found"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "items": [
+    "okra",
+    "cabbage-chinese"
+   ],
+   "reason": "Not listed"
+  },
+  {
+   "country": "PL",
+   "regionSlug": "pl-national",
+   "items": [
+    "tomato",
+    "onion",
+    "potato",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "P/K: IUNG Tabela 5 covers field crops only"
+  },
+  {
+   "country": "TR",
+   "regionSlug": "tr-thrace",
+   "items": [
+    "tomato",
+    "onion",
+    "okra",
+    "spinach",
+    "carrot",
+    "cauliflower",
+    "chili",
+    "brinjal",
+    "cabbage",
+    "radish",
+    "peas",
+    "garlic",
+    "cabbage-chinese"
+   ],
+   "reason": "Only soil-class method; no per-crop numeric doses (TAGEM trial literature needed)"
+  }
+ ]
+}
