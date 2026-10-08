@@ -1,12 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
-import { mkdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { put } from "@vercel/blob";
 import { rateLimit } from "@/server/rate-limit";
 
 const MAX_BYTES = 2 * 1024 * 1024; // 2 MB
-const UPLOAD_DIR = join(process.cwd(), "public", "uploads", "contributors");
-const URL_PREFIX = "/uploads/contributors/";
 
 // Magic-byte signatures we accept (never trust the client-sent MIME alone).
 const SIGNATURES: Array<{ ext: string; test: (b: Buffer) => boolean }> = [
@@ -71,14 +68,14 @@ function clientKey(req: NextRequest): string {
 }
 
 /**
- * Contributor photo upload.
+ * Contributor photo upload → Vercel Blob (persistent; survives redeploys).
  * - Same rate limit as suggestions (10/hour per IP), no login required.
  * - Validates magic bytes + 2 MB cap; strips JPEG EXIF (GPS etc.).
- * - Stores under public/uploads/contributors/<random-hex>.<ext>; the URL is
+ * - Stores as contributors/<random-hex>.<ext> with public access; the URL is
  *   returned and must be attached to a suggestion — the photo is shown
  *   publicly ONLY after an admin approves that suggestion.
- * - NOTE: serverless runtimes (Vercel) have an ephemeral filesystem — uploads
- *   work on a persistent host; on Vercel consider Vercel Blob later.
+ * - Requires BLOB_READ_WRITE_TOKEN (auto-added when the Blob store is
+ *   connected to the project in the Vercel dashboard).
  */
 export async function POST(req: NextRequest) {
   const limit = rateLimit(`suggestion-upload:${clientKey(req)}`, 10, 60 * 60 * 1000);
@@ -112,14 +109,16 @@ export async function POST(req: NextRequest) {
   }
 
   const clean = sig.ext === "jpg" ? stripJpegExif(buf) : buf;
-  const name = `${randomBytes(16).toString("hex")}.${sig.ext}`;
+  const name = `contributors/${randomBytes(16).toString("hex")}.${sig.ext}`;
+  const contentType = sig.ext === "jpg" ? "image/jpeg" : `image/${sig.ext}`;
 
+  let url: string;
   try {
-    await mkdir(UPLOAD_DIR, { recursive: true });
-    await writeFile(join(UPLOAD_DIR, name), clean, { mode: 0o644 });
+    const blob = await put(name, clean, { access: "public", contentType });
+    url = blob.url;
   } catch {
     return NextResponse.json({ error: "Could not store the image. Try without a photo." }, { status: 503 });
   }
 
-  return NextResponse.json({ url: `${URL_PREFIX}${name}` }, { status: 201 });
+  return NextResponse.json({ url }, { status: 201 });
 }

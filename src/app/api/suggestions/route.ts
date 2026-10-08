@@ -26,7 +26,10 @@ const bodySchema = z.object({
     .string()
     .trim()
     .max(300)
-    .regex(/^\/uploads\/contributors\/[a-f0-9]{32}\.(jpg|png|webp|gif)$/, "Invalid image reference.")
+    .regex(
+      /^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\/contributors\/[a-f0-9]{32}\.(jpg|png|webp|gif)$/,
+      "Invalid image reference."
+    )
     .optional()
     .nullable(),
   contributorToken: z.string().trim().max(100).optional().nullable(),
