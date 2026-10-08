@@ -7,8 +7,9 @@
  *   calendar track owns sowing data).
  * - New `-national` regions (au/de/es/fr/id/kr/pl) are created — the research
  *   is country-level and attaching it to a sub-region would misattribute it.
- * - All 14 vegetable items already exist (potato + cabbage-chinese from the
- *   veg-planting batch; rest pre-existing).
+ * - All 14 vegetable items resolve in the DB (potato resolves to the single
+ *   crop-category item per the 2026-10-08 taxonomy fix; cabbage-chinese from
+ *   the veg-planting batch; rest pre-existing).
  *
  * NO-POPULATE (report "Population concerns" §7, binding) — 5 records stay
  * out, documented: BD cauliflower (P/K basis unresolved), DE peas (P/K

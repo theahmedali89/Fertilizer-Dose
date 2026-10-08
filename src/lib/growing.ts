@@ -753,9 +753,14 @@ const vegetables: GrowingItem[] = [
   vegetable("napa-cabbage", "Napa Cabbage", "", "Brassica rapa subsp. pekinensis"),
   vegetable("radish", "Radish", "", "Raphanus sativus"),
   vegetable("daikon", "Daikon (Japanese Radish)", "", "Raphanus sativus var. longipinnatus"),
-  vegetable("potato", "Potato", "آلو", "Solanum tuberosum"),
   vegetable("cabbage-chinese", "Chinese Cabbage", "", "Brassica rapa subsp. pekinensis"),
 ];
+// NOTE (taxonomy decision, Ahmed-approved fix 2026-10-08): potato is maintained
+// as a SINGLE item under category "crop" (slug "potato", verified dose data,
+// /crops/potato live). The former duplicate vegetable("potato", ...) definition
+// was removed — it was shadowed by insert-if-missing seed order and could never
+// materialize. Vegetable planting windows and veg NPK doses with itemSlug
+// "potato" resolve to the crop item; /vegetables/potato 404s by design.
 
 /* ---------------- Plants (identity + subcategory — agronomics not yet verified) ---------------- */
 
