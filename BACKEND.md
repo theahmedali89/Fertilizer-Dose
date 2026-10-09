@@ -41,6 +41,9 @@ Open `/signup` — the first account becomes ADMIN. Manage content at `/admin`.
 1. Import the GitHub repo (`theahmedali89/Fertilizer-Dose`)
 2. Add environment variables: `DATABASE_URL`, `AUTH_SECRET`, `GEMINI_API_KEY`
 3. Deploy — no build config changes needed
+   (since 2026-10-09, `vercel-build` is `prisma generate && next build` only:
+   migrate/seed no longer run during builds, after a build failed on P1001
+   when the DB was unreachable from the build environment)
 4. After first deploy, run migrations once against the production DB:
    `DATABASE_URL="<prod-url>" npx prisma migrate deploy && DATABASE_URL="<prod-url>" npx prisma db seed`
 
