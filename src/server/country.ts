@@ -38,11 +38,41 @@ export interface RegionInfo {
 const STATIC_COUNTRIES: CountryInfo[] = [
   { code: "PK", name: "Pakistan", slug: "pakistan", defaultUnit: "acre" },
   { code: "IN", name: "India", slug: "india", defaultUnit: "acre" },
+  { code: "BD", name: "Bangladesh", slug: "bangladesh", defaultUnit: "acre" },
+  { code: "US", name: "United States", slug: "united-states", defaultUnit: "acre" },
+  { code: "BR", name: "Brazil", slug: "brazil", defaultUnit: "hectare" },
+  { code: "AU", name: "Australia", slug: "australia", defaultUnit: "hectare" },
+  { code: "ID", name: "Indonesia", slug: "indonesia", defaultUnit: "hectare" },
+  { code: "MY", name: "Malaysia", slug: "malaysia", defaultUnit: "hectare" },
+  { code: "DE", name: "Germany", slug: "germany", defaultUnit: "hectare" },
+  { code: "FR", name: "France", slug: "france", defaultUnit: "hectare" },
+  { code: "ES", name: "Spain", slug: "spain", defaultUnit: "hectare" },
+  { code: "IT", name: "Italy", slug: "italy", defaultUnit: "hectare" },
+  { code: "PL", name: "Poland", slug: "poland", defaultUnit: "hectare" },
+  { code: "CN", name: "China", slug: "china", defaultUnit: "hectare" },
+  { code: "JP", name: "Japan", slug: "japan", defaultUnit: "hectare" },
+  { code: "KR", name: "South Korea", slug: "south-korea", defaultUnit: "hectare" },
+  { code: "TR", name: "Türkiye", slug: "turkiye", defaultUnit: "hectare" },
 ];
 
 const LEGACY_COUNTRY_TO_CODE: Record<string, string> = {
   pakistan: "PK",
   india: "IN",
+  bangladesh: "BD",
+  "united-states": "US",
+  brazil: "BR",
+  australia: "AU",
+  indonesia: "ID",
+  malaysia: "MY",
+  germany: "DE",
+  france: "FR",
+  spain: "ES",
+  italy: "IT",
+  poland: "PL",
+  china: "CN",
+  japan: "JP",
+  "south-korea": "KR",
+  turkiye: "TR",
 };
 
 async function tryDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {

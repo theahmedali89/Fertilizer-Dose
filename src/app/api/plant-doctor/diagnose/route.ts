@@ -104,7 +104,22 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ ok: true, result });
   } catch (e) {
-    console.error("[plant-doctor]", (e as Error).message);
+    const msg = (e as Error).message;
+    console.error("[plant-doctor]", msg);
+    // Surface actionable categories instead of one generic message.
+    // (Never leaks the API key or raw upstream text to the client.)
+    if (/429/.test(msg)) {
+      return NextResponse.json(
+        { error: "The AI service is busy right now. Please wait a few minutes and try again." },
+        { status: 503 }
+      );
+    }
+    if (/401|403/.test(msg)) {
+      return NextResponse.json(
+        { error: "The AI service is not configured correctly. Please try again later." },
+        { status: 502 }
+      );
+    }
     return NextResponse.json(
       { error: "Diagnosis failed. Please try again in a moment." },
       { status: 502 }
