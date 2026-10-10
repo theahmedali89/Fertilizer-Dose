@@ -120,6 +120,13 @@ export async function POST(req: NextRequest) {
         { status: 502 }
       );
     }
+    if (/404/.test(msg)) {
+      // Retired/unavailable model id — retrying won't help; needs a model update.
+      return NextResponse.json(
+        { error: "The AI service is temporarily unavailable. Please try again later." },
+        { status: 502 }
+      );
+    }
     return NextResponse.json(
       { error: "Diagnosis failed. Please try again in a moment." },
       { status: 502 }

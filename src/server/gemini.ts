@@ -18,7 +18,10 @@ export type DiagnosisResult = {
   disclaimer: string;
 };
 
-const MODEL = process.env.GEMINI_MODEL ?? "gemini-2.0-flash";
+// Google shut down gemini-2.0-flash on 2026-06-01 (official deprecation table:
+// https://ai.google.dev/gemini-api/docs/deprecations). gemini-3.6-flash is the
+// recommended replacement; override per-deploy with GEMINI_MODEL if needed.
+const MODEL = process.env.GEMINI_MODEL ?? "gemini-3.6-flash";
 
 const SYSTEM_PROMPT = `You are an expert plant pathologist advising smallholder farmers in Pakistan and India.
 Analyze the plant photo and the farmer's symptom description.
