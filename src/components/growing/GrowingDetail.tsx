@@ -38,9 +38,10 @@ export async function GrowingDetail({
   const hasNpk = !!item.npk;
   // Bilingual heading: translated name primary on non-English locales,
   // English kept as faint secondary; Urdu shown only when it adds something.
+  // English locale stays English-only (no Urdu secondary).
   const displayName = localName || item.name;
   const showEnglishSecondary = !!localName && localName !== item.name;
-  const showUrdu = !!item.urdu && item.urdu !== displayName;
+  const showUrdu = !!localName && !!item.urdu && item.urdu !== displayName;
 
   const conditionRows: [string, string | null][] = [
     [s.soil, item.soil],

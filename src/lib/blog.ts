@@ -111,7 +111,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     "body": [
-      "The organic vs chemical fertilizer debate usually gets framed as a fight, with one side cast as the villain. That framing helps nobody. Chemical fertilizers like urea and DAP supply nutrients in exact, fast-acting forms, while organic sources like farmyard manure and compost supply nutrients slowly along with organic matter. Both have genuine strengths and genuine drawbacks, and most experienced farmers end up using a mix rather than picking a team.",
+      "The difference between organic fertilizer and chemical fertilizer is usually framed as a fight, with one side cast as the villain. That framing helps nobody. Chemical fertilizers like urea and DAP supply nutrients in exact, fast-acting forms, while organic sources like farmyard manure and compost supply nutrients slowly along with organic matter. Both have genuine strengths and genuine drawbacks, and most experienced farmers end up using a mix rather than picking a team.",
       "## What is the difference between chemical and organic fertilizer?",
       "What is the difference between chemical and organic fertilizer? The core difference is form and speed. Chemical fertilizers supply nutrients as concentrated mineral salts that dissolve and become plant-available within days, with exact, guaranteed analysis on every bag. Organic fertilizers supply nutrients locked inside carbon-rich material that soil microbes must break down first, releasing nutrition slowly over weeks and months, with variable and usually low nutrient content. In short: chemical fertilizer vs organic fertilizer is precision and speed against soil-building and steadiness. The sections below compare them honestly, strength against strength.",
       "## Chemical fertilizer strengths",
@@ -382,7 +382,7 @@ export const POSTS: BlogPost[] = [
     ],
     "category": "Crop Nutrition",
     "date": "2026-10-06",
-    "excerpt": "Stunted plants with dark, bluish-green leaves and purple discoloration are the hallmark of phosphorus shortage in rice. Because phosphorus barely moves in soil, placement and timing matter more than the product you choose.",
+    "excerpt": "Stunted plants with dark, bluish-green leaves and purple discoloration are the classic phosphorus deficiency symptoms in rice. Because phosphorus barely moves in soil, placement and timing matter more than the product you choose.",
     "image": "/blog/phosphorus-deficiency-symptoms-rice.webp",
     "readMinutes": 9,
     "slug": "phosphorus-deficiency-symptoms-rice",
@@ -428,7 +428,7 @@ export const POSTS: BlogPost[] = [
     "readMinutes": 7,
     "image": "/blog/npk-19-19-19-guide.webp",
     "body": [
-      "What is NPK 19-19-19 used for? It is a balanced complex fertilizer used when a crop needs nitrogen, phosphorus, and potassium in roughly equal amounts — one bag that feeds the plant all three primary nutrients at once. The numbers mean 19 percent nitrogen (N), 19 percent phosphate (P2O5), and 19 percent potash (K2O) by weight, so every 100 kg of the fertilizer carries 19 kg of each nutrient, 57 kg of plant food in total. It is the general-purpose workhorse of the fertilizer world: vegetables, fruits, flowers, and field crops at planting time.",
+      "What is NPK 19-19-19 (sometimes written 19+19+19) used for? It is a balanced complex fertilizer used when a crop needs nitrogen, phosphorus, and potassium in roughly equal amounts — one bag that feeds the plant all three primary nutrients at once. The numbers mean 19 percent nitrogen (N), 19 percent phosphate (P2O5), and 19 percent potash (K2O) by weight, so every 100 kg of the fertilizer carries 19 kg of each nutrient, 57 kg of plant food in total. It is the general-purpose workhorse of the fertilizer world: vegetables, fruits, flowers, and field crops at planting time.",
       "## How to read the grade",
       "To read the grade, remember the fixed order: the three numbers always stand for N, then P2O5, then K2O, always as percentages by weight. So 19-19-19 is 19% N, 19% P2O5, 19% K2O. The remaining 43% is carrier material that holds the granule together and helps it spread evenly — every fertilizer has it, and it is not a filler scam, just chemistry. Once you can read any grade this way, you can compare any two fertilizers on the only basis that matters: cost per kilogram of actual nutrient.",
       "## Complex versus straight fertilizers",
@@ -547,7 +547,7 @@ export const POSTS: BlogPost[] = [
     "image": "/blog/urea-vs-dap-which-to-buy.webp",
     "excerpt": "Stop comparing bag prices. On urea vs DAP, here is how to decide which to buy: cost per kilo of actual nutrient, and when paying DAP prices is a waste.",
     "body": [
-      "On the question of urea vs DAP, which to buy comes down to one rule: buy the nutrient you need, not the cheaper bag. Need phosphorus at sowing, buy DAP. Need only nitrogen for top-dressing, buy urea, because it is the cheaper nitrogen. And never compare bag prices; compare the price per kilogram of actual nutrient. That single habit will save you money every season.",
+      "On the question of urea vs DAP — the difference between DAP and urea that confuses most buyers — which to buy comes down to one rule: buy the nutrient you need, not the cheaper bag. If you came here searching for urea vs dap fertilizer, here is the short version before the detail: need phosphorus at sowing, buy DAP. Need only nitrogen for top-dressing, buy urea, because it is the cheaper nitrogen. And never compare bag prices; compare the price per kilogram of actual nutrient. That single habit will save you money every season.",
       "## Compare nutrients, not bags",
       "The trap almost everyone falls into is comparing the price of a urea bag with the price of a DAP bag. That comparison is meaningless, because the bags contain different nutrients in different amounts. It is like comparing the price of two sacks without checking how much grain is inside each.",
       "Here is the method. Price per kilogram of nutrient equals the bag price divided by the kilograms of that nutrient in the bag. Urea is 46-0-0, so a fifty-kilogram bag holds twenty-three kilograms of nitrogen. DAP is 18-46-0, so a fifty-kilogram bag holds twenty-three kilograms of phosphate plus nine kilograms of nitrogen. Take your local dealer's price today, do the division, and you have the true cost of each nutrient. Fertilizer prices vary by region, season, and subsidy, so always use today's local price, but the method never changes.",

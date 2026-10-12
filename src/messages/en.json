@@ -293,7 +293,7 @@
   "plantDose": {
     "eyebrow": "Home gardening tool",
     "title": "How to Dose Fertilizer for Plants",
-    "desc": "A free plant dose calculator for potted and garden plants: mix the right amount of water-soluble fertilizer per litre of water, based on university extension feeding rates.",
+    "desc": "A free calculator for dosing plants in pots and gardens: mix the right amount of water-soluble fertilizer per litre of water, based on university extension feeding rates.",
     "faqTitle": "Plant fertilizer dosing — FAQs",
     "metaTitle": "How to Dose Fertilizer for Plants — Plant Dose Calculator",
     "metaDescription": "Learn how to dose fertilizer for plants with our free calculator. Get the right fertilizer dose for potted plants in grams per litre — extension-based feeding rates for houseplants and container plants.",
@@ -1198,7 +1198,11 @@
       },
       {
         "q": "How do I calculate agricultural land area?",
-        "a": "Use the same geometry, then convert to the unit your region uses — acres, hectares, or local units like kanal and marla in Pakistan. This calculator converts automatically and can send the result straight to the Fertilizer Dose Calculator."
+        "a": "Use the same geometry, then convert to the unit your region uses — acres, hectares, or local units like kanal and marla in Pakistan. This agricultural land area calculator converts automatically and can send the result straight to the Fertilizer Dose Calculator."
+      },
+      {
+        "q": "How many acres is this plot?",
+        "a": "Enter your plot's length and width above and read the acre figure from the results — no manual math. If you measured in feet, the calculator converts square feet to acres automatically (43,560 sq ft = 1 acre)."
       },
       {
         "q": "How do I calculate land area in square feet?",

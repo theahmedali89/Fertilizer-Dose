@@ -9,9 +9,10 @@ export interface LocaleMeta {
   dir: "ltr" | "rtl";
 }
 
-/** 18 required locales. English is default and unprefixed in URLs. */
+/** 19 required locales. English is default and unprefixed in URLs. */
 export const LOCALES: LocaleMeta[] = [
   { code: "en", name: "English", nativeName: "English", dir: "ltr" },
+  { code: "ur", name: "Urdu", nativeName: "اردو", dir: "rtl" },
   { code: "hi", name: "Hindi", nativeName: "हिन्दी", dir: "ltr" },
   { code: "es", name: "Spanish", nativeName: "Español", dir: "ltr" },
   { code: "ru", name: "Russian", nativeName: "Русский", dir: "ltr" },

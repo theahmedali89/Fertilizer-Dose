@@ -78,7 +78,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
       "Works across cereals, cotton, sugarcane, maize and vegetables",
     ],
     precautions: [
-      "Nitrogen can volatilize as ammonia if urea sits on dry soil surface — irrigate or incorporate after application",
+      "Nitrogen can volatilize as ammonia if urea sits on the ground surface — on hot, windy days losses start within hours, so irrigate or incorporate within a day of application",
       "Avoid mixing with superphosphate in the same application heap for long storage",
       "Do not exceed the recommended dose: excess nitrogen causes lodging and delays maturity",
     ],
@@ -119,7 +119,7 @@ export const FERTILIZERS: FertilizerInfo[] = [
     k: 60,
     tagline: "The economical potassium source for most field crops.",
     description:
-      "MOP (potassium chloride) supplies 60% potash (K₂O). Potassium regulates water use, strengthens stems, and improves grain filling and disease resistance. It is the cheapest potassium source per unit of K₂O for cereals, cotton and sugarcane.",
+      "MOP fertilizer (potassium chloride, also spelled mop fertiliser) supplies 60% potash (K₂O). Potassium regulates water use, strengthens stems, and improves grain filling and disease resistance. It is the cheapest potassium source per unit of K₂O for cereals, cotton and sugarcane.",
     benefits: [
       "Highest K₂O concentration among potash fertilizers",
       "Improves lodging resistance and grain quality",

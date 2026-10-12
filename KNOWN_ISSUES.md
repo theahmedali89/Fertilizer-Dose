@@ -28,3 +28,15 @@
 - **Fix (Ahmed ki approval par, 2026-10-09):** Catch block ab error ki category batata hai — 429 (busy, thori dair baad try karein), 401/403 (configuration masla), baqi generic. Agli failure par message se wajah pata chalegi.
 - **Note:** Asal wajah (key/quota/transient) ke liye Vercel logs dekhne honge — code mein koi deterministic bug nahi mila.
 - **Note:** GEMINI_API_KEY 2026-10-06 ko working confirm hua tha.
+
+## 6. Dark-mode toggle accessible name never updates — FIXED 2026-10-12
+- **Symptom:** Toggle button ki accessible name hamesha "Switch to dark mode" rehti hai, jabke dark mode active ho to "Switch to light mode" honi chahiye. Icon theek hai (dark me sun icon), sirf label ghalat hai. Screen-reader users mutasir hote hain.
+- **Fix (Ahmed ki approval par, 2026-10-12):** ThemeToggle ab DOM se ground truth parhta hai (`document.documentElement.classList.contains('dark')` via useSyncExternalStore + MutationObserver) — `resolvedTheme` hydration timing issue khatam. `aria-label`/`title` hamesha sahi: dark me 'Switch to light mode', light me 'Switch to dark mode'.
+
+## 7. Urdu language switcher me nahi — FIXED 2026-10-12
+- **Symptom:** 18 languages offered hain (English, Hindi, Spanish, ...), lekin Urdu nahi — jabke Pakistan primary market hai.
+- **Fix (Ahmed ki approval par, 2026-10-12):** Urdu ko LOCALES me add kiya (19 locales). `src/messages/ur.json` me 558 keys ka Urdu tarjuma (Hindi ke barabar coverage). RTL support pehle se tha (`dir: 'rtl'`).
+
+## 8. English locale me crop cards par native names — FIXED 2026-10-12
+- **Symptom:** English UI me crop cards "Wheat گندم", "Rice (Paddy) چاول / دھان" dikhate hain — untidy lagta hai.
+- **Fix (Ahmed ki approval par, 2026-10-12):** GrowingCard aur GrowingDetail ab English locale (`en`) me sirf English naam dikhate hain. Urdu secondary name sirf non-English locales me.

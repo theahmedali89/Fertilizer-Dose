@@ -234,6 +234,7 @@ export function GrowingIndex({
               item={item}
               verifiedLabel={t("verifiedBadge")}
               inReviewLabel={t("inReviewBadge")}
+              locale={locale}
             />
           ))}
         </div>

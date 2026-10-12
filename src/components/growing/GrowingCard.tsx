@@ -13,10 +13,12 @@ export function GrowingCard({
   item,
   verifiedLabel,
   inReviewLabel,
+  locale,
 }: {
   item: GrowingItem;
   verifiedLabel: string;
   inReviewLabel: string;
+  locale: string;
 }) {
   const hasNpk = !!item.npk;
   return (
@@ -26,7 +28,7 @@ export function GrowingCard({
           <div className="flex items-start justify-between gap-3">
             <h2 className="font-display text-xl font-semibold group-hover:text-leaf-700 dark:group-hover:text-leaf-300 transition-colors">
               {item.name}{" "}
-              {item.urdu && (
+              {locale !== "en" && item.urdu && (
                 <span className="text-sm font-sans font-normal text-ink-faint" lang="ur">
                   {item.urdu}
                 </span>
