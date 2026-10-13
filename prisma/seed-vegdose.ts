@@ -23,6 +23,10 @@
  * min/max columns carry the source-faithful range — never midpoints.
  * Formula records: formula text goes to applicationMethod, N stays null.
  *
+ * OPTIONAL FIELDS (2026-10-13): `micronutrients`, `applicationMethod`,
+ * `applicationTiming` — when present in JSON they are stored verbatim;
+ * applicationMethod falls back to the generated doseContext text otherwise.
+ *
  * STATUS: JSON `suggestedStatus` verified → verified; everything else →
  * under_review. Never upgraded on import.
  *
@@ -57,6 +61,9 @@ interface VegDoseRecord {
   confidence: string;
   flags: string[];
   suggestedStatus: string; // "verified" | "under_review"
+  micronutrients?: string | null; // e.g. "Boron (Borax): 10-12 kg/ha"
+  applicationMethod?: string | null; // full method text (Ahmed-supplied); falls back to doseContext
+  applicationTiming?: string | null; // split schedule text
   source: {
     organization: string;
     title: string;
@@ -473,9 +480,9 @@ export async function seedVegdose(db: PrismaClient): Promise<void> {
         k2oMin: kT.min,
         k2oMax: kT.max,
         nutrientBasis: "P2O5_K2O",
-        micronutrients: null,
-        applicationTiming: null,
-        applicationMethod: doseContext(r),
+        micronutrients: r.micronutrients ?? null,
+        applicationTiming: r.applicationTiming ?? null,
+        applicationMethod: r.applicationMethod ?? doseContext(r),
         sourceId,
         verificationStatus: status,
         isPrimary: false,
