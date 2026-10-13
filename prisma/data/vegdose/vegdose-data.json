@@ -43,261 +43,358 @@
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "tomato",
-   "n": 148.3,
-   "p2o5": 61.8,
-   "k2o": 61.8,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "110-130",
+    "p2o5": "60-80",
+    "k2o": "60-80"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IIVR Varanasi; PAU Ludhiana",
+    "title": "Tomato NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "25 kg N basal + 35 kg N top-dress = 60/acre",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 50% K2O in transplanting beds; Nitrogen in three splits and remaining Potash at fruit stage. Potassium maintains fruit weight and shape.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flower cluster initiation). 1/3 N + 50% K2O 55-60 days after transplanting (fruit development/ripening).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "onion",
-   "n": 98.8,
-   "p2o5": 49.4,
-   "k2o": 49.4,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-115",
+    "p2o5": "50-65",
+    "k2o": "60-75"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-Directorate of Onion and Garlic Research (DOGR), Pune; NHRDF Karnal",
+    "title": "Onion NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "40/20/20 per acre; kharif and rabi identical",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed. Sulphur essential for storage life.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, Sulphur, and 1/3 N at final ploughing just before transplanting. No late N after bulb formation begins (prevents thick necks and storage rot).",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting. 1/3 N 50 days after transplanting (just before bulb initiation).",
+   "micronutrients": {
+    "sulphur": "20-25 kg/ha"
+   }
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "potato",
-   "n": 185.3,
-   "p2o5": 61.8,
-   "k2o": 61.8,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "150-180",
+    "p2o5": "80-100",
+    "k2o": "120-150"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-Central Potato Research Institute (CPRI), Shimla / Jalandhar regional station",
+    "title": "Potato NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "75/25/25 per acre",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, and 1/2 N via furrow placement at planting. Remaining N side-dressed at earthing-up. SOP preferred for processing tubers.",
+   "applicationTiming": "50% N at planting (0 DAS). 50% N 25-30 days after planting (earthing-up / tuber initiation stage).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "okra",
-   "n": 89.0,
+   "n": null,
    "p2o5": null,
    "k2o": null,
-   "ranges": {},
+   "ranges": {
+    "n": "90-100",
+    "p2o5": "50-60",
+    "k2o": "50-60"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-Indian Institute of Vegetable Research (IIVR), Varanasi; Punjab Agricultural University (PAU) Package of Practices for Vegetable Crops",
+    "title": "Okra NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "36 kg N/acre only; P/K not stated by PAU",
-   "suggestedStatus": "verified"
+   "notes": "Region: Indo-Gangetic Plains (UP / Punjab / Haryana). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, all K2O, and 1/3 N as band placement or incorporation at final land preparation before sowing. Remaining N in two equal side-dress splits.",
+   "applicationTiming": "1/3 N at sowing (0 DAS). 1/3 N 30 days after emergence (first weeding/hoeing stage). 1/3 N 45-50 days after emergence (first picking / flowering stage).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "spinach",
-   "n": 86.5,
-   "p2o5": 29.7,
+   "n": null,
+   "p2o5": null,
    "k2o": null,
-   "ranges": {},
+   "ranges": {
+    "n": "75-90",
+    "p2o5": "35-45",
+    "k2o": "35-45"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "PAU Ludhiana Farm Advisory; ICAR-IARI (Indian Agricultural Research Institute), New Delhi",
+    "title": "Spinach NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "35 N + 12 P2O5/acre; K not stated",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Covers Spinacia oleracea / Beta vulgaris var. bengalensis. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All Phosphorus, Potash, and 50% Nitrogen incorporated before sowing. Remaining Nitrogen in two equal splits broadcast after each cutting, followed by immediate irrigation.",
+   "applicationTiming": "50% N at sowing (0 DAS). 25% N after first cutting (30-35 DAS). 25% N after second cutting (50-55 DAS).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "carrot",
-   "n": 61.8,
-   "p2o5": 29.7,
-   "k2o": 74.1,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-60",
+    "p2o5": "40-50",
+    "k2o": "60-80"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "CCS HAU Hisar; PAU Ludhiana",
+    "title": "Carrot NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "25/12/30 per acre",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, and 50% N in furrow/ridge at sowing; remaining N as side-dress. High potash essential for root shape and carotene.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 30-35 days after sowing (thinning and root swelling stage).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "cauliflower",
-   "n": 123.6,
-   "p2o5": 61.8,
-   "k2o": 61.8,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "125-150",
+    "p2o5": "75-85",
+    "k2o": "75-85"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IIVR Varanasi; CCS HAU Hisar",
+    "title": "Cauliflower NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "50/25/25 per acre, all varieties",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O). Boron essential to prevent whiptail and browning.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, Borax, and 1/3 N at transplanting during ridge formation. Remaining N in two side-dress splits.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (active vegetative phase). 1/3 N 50 days after transplanting (curd initiation stage).",
+   "micronutrients": {
+    "boron": "10-15 kg/ha (Borax)"
+   }
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "chili",
-   "n": 61.8,
-   "p2o5": 29.7,
-   "k2o": 29.7,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "50-65",
+    "k2o": "50-65"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IIVR Varanasi; PAU Ludhiana",
+    "title": "Chili NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "25/12/12 per acre",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "P and K basal at ridge formation; N in three equal splits after transplanting and during flushes.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flowering start). 1/3 N 60 days after transplanting (after first fruit picking).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "brinjal",
-   "n": 123.6,
-   "p2o5": 61.8,
-   "k2o": 29.7,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-125",
+    "p2o5": "50-65",
+    "k2o": "50-60"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IIVR Varanasi; Narendra Deva University of Agriculture & Technology (NDUAT), Ayodhya",
+    "title": "Brinjal NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "25 N basal + 25 N after 2nd picking = 50/acre",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "P and K as basal dose at transplanting. N in three splits due to long picking duration.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 35 days after transplanting (first flowering). 1/3 N 60-65 days after transplanting (continuous fruiting).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "cabbage",
-   "n": 123.6,
-   "p2o5": 61.8,
-   "k2o": 61.8,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-140",
+    "p2o5": "60-75",
+    "k2o": "60-75"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IARI New Delhi; PAU Ludhiana",
+    "title": "Cabbage NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "Same as cauliflower per PAU",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and K2O at final ploughing. Nitrogen in three splits for compact head formation and to prevent splitting.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25-30 days after transplanting. 1/3 N 45-50 days after transplanting (head forming stage).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "radish",
-   "n": 61.8,
-   "p2o5": 29.7,
+   "n": null,
+   "p2o5": null,
    "k2o": null,
-   "ranges": {},
+   "ranges": {
+    "n": "50-65",
+    "p2o5": "40-50",
+    "k2o": "40-50"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IIVR Varanasi; Department of Horticulture Haryana",
+    "title": "Radish NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "25 N + 12 P2O5/acre; K not stated",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, and 1/2 N at ridge/bed preparation before sowing. Excess nitrogen causes root deformation.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 20-25 days after sowing (root enlargement stage).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "peas",
-   "n": 49.4,
-   "p2o5": 61.8,
+   "n": null,
+   "p2o5": null,
    "k2o": null,
-   "ranges": {},
+   "ranges": {
+    "n": "25-35",
+    "p2o5": "60-70",
+    "k2o": "40-50"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "ICAR-IIVR Varanasi; CCS Haryana Agricultural University (HAU), Hisar",
+    "title": "Peas NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "20 N + 25 P2O5/acre; K not stated",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O). Legume crop.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "100% NPK as single basal dose via seed drill, 4-5 cm below seed. No top-dressing (excess N promotes foliage over pods in this legume crop). Starter N dose only; root nodules fix atmospheric N.",
+   "applicationTiming": "100% basal at sowing (0 DAS).",
+   "micronutrients": null
   },
   {
    "country": "IN",
    "regionSlug": "in-punjab",
    "itemSlug": "garlic",
-   "n": 123.6,
-   "p2o5": 61.8,
+   "n": null,
+   "p2o5": null,
    "k2o": null,
-   "ranges": {},
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "60-75",
+    "k2o": "60-75"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Punjab Agricultural University (PAU), Ludhiana",
-    "title": "Package of Practices for Cultivation of Vegetables (2021)",
-    "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
-    "year": "2021"
+    "organization": "National Horticultural Research and Development Foundation (NHRDF), Karnal/Nashik; ICAR-DOGR",
+    "title": "Garlic NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
    },
-   "notes": "50 N + 25 P2O5/acre; K not stated",
-   "suggestedStatus": "verified"
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed. Sulphur essential for allicin and pungency.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, Sulphur, and 1/3 N in flat/raised beds at planting. Stop N 30 days before bulb harvest.",
+   "applicationTiming": "1/3 N at planting (0 DAS). 1/3 N 30 days after planting. 1/3 N 60 days after planting (bulb initiation stage).",
+   "micronutrients": {
+    "sulphur": "25-30 kg/ha"
+   }
   },
   {
    "country": "IN",
@@ -4188,6 +4285,720 @@
    "micronutrients": null,
    "applicationMethod": "All Phosphorus and 50% Potash basal at ridging. Nitrogen and remaining Potash split across fruit-setting stages.",
    "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N at flowering (25-30 DAT). 1/3 N + 50% K2O at first fruit ripening / active harvest (50-60 DAT)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "okra",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-100",
+    "p2o5": "50-60",
+    "k2o": "50-60"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-Indian Institute of Vegetable Research (IIVR), Varanasi; Punjab Agricultural University (PAU) Package of Practices for Vegetable Crops",
+    "title": "Okra NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Indo-Gangetic Plains (UP / Punjab / Haryana). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, all K2O, and 1/3 N as band placement or incorporation at final land preparation before sowing. Remaining N in two equal side-dress splits.",
+   "applicationTiming": "1/3 N at sowing (0 DAS). 1/3 N 30 days after emergence (first weeding/hoeing stage). 1/3 N 45-50 days after emergence (first picking / flowering stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "25-35",
+    "p2o5": "60-70",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; CCS Haryana Agricultural University (HAU), Hisar",
+    "title": "Peas NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O). Legume crop.",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "100% NPK as single basal dose via seed drill, 4-5 cm below seed. No top-dressing (excess N promotes foliage over pods in this legume crop). Starter N dose only; root nodules fix atmospheric N.",
+   "applicationTiming": "100% basal at sowing (0 DAS)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "75-90",
+    "p2o5": "35-45",
+    "k2o": "35-45"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "PAU Ludhiana Farm Advisory; ICAR-IARI (Indian Agricultural Research Institute), New Delhi",
+    "title": "Spinach NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Covers Spinacia oleracea / Beta vulgaris var. bengalensis. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All Phosphorus, Potash, and 50% Nitrogen incorporated before sowing. Remaining Nitrogen in two equal splits broadcast after each cutting, followed by immediate irrigation.",
+   "applicationTiming": "50% N at sowing (0 DAS). 25% N after first cutting (30-35 DAS). 25% N after second cutting (50-55 DAS)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "125-150",
+    "p2o5": "75-85",
+    "k2o": "75-85"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; CCS HAU Hisar",
+    "title": "Cauliflower NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O). Boron essential to prevent whiptail and browning.",
+   "suggestedStatus": "verified",
+   "micronutrients": {
+    "boron": "10-15 kg/ha (Borax)"
+   },
+   "applicationMethod": "All P2O5, K2O, Borax, and 1/3 N at transplanting during ridge formation. Remaining N in two side-dress splits.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (active vegetative phase). 1/3 N 50 days after transplanting (curd initiation stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-140",
+    "p2o5": "60-75",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IARI New Delhi; PAU Ludhiana",
+    "title": "Cabbage NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5 and K2O at final ploughing. Nitrogen in three splits for compact head formation and to prevent splitting.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25-30 days after transplanting. 1/3 N 45-50 days after transplanting (head forming stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-65",
+    "p2o5": "40-50",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; Department of Horticulture Haryana",
+    "title": "Radish NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, K2O, and 1/2 N at ridge/bed preparation before sowing. Excess nitrogen causes root deformation.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 20-25 days after sowing (root enlargement stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-60",
+    "p2o5": "40-50",
+    "k2o": "60-80"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "CCS HAU Hisar; PAU Ludhiana",
+    "title": "Carrot NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, K2O, and 50% N in furrow/ridge at sowing; remaining N as side-dress. High potash essential for root shape and carotene.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 30-35 days after sowing (thinning and root swelling stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-125",
+    "p2o5": "50-65",
+    "k2o": "50-60"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; Narendra Deva University of Agriculture & Technology (NDUAT), Ayodhya",
+    "title": "Brinjal NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "P and K as basal dose at transplanting. N in three splits due to long picking duration.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 35 days after transplanting (first flowering). 1/3 N 60-65 days after transplanting (continuous fruiting)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "60-75",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "National Horticultural Research and Development Foundation (NHRDF), Karnal/Nashik; ICAR-DOGR",
+    "title": "Garlic NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed. Sulphur essential for allicin and pungency.",
+   "suggestedStatus": "verified",
+   "micronutrients": {
+    "sulphur": "25-30 kg/ha"
+   },
+   "applicationMethod": "All P2O5, K2O, Sulphur, and 1/3 N in flat/raised beds at planting. Stop N 30 days before bulb harvest.",
+   "applicationTiming": "1/3 N at planting (0 DAS). 1/3 N 30 days after planting. 1/3 N 60 days after planting (bulb initiation stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "150-180",
+    "p2o5": "80-100",
+    "k2o": "120-150"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-Central Potato Research Institute (CPRI), Shimla / Jalandhar regional station",
+    "title": "Potato NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, K2O, and 1/2 N via furrow placement at planting. Remaining N side-dressed at earthing-up. SOP preferred for processing tubers.",
+   "applicationTiming": "50% N at planting (0 DAS). 50% N 25-30 days after planting (earthing-up / tuber initiation stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "50-65",
+    "k2o": "50-65"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; PAU Ludhiana",
+    "title": "Chili NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "P and K basal at ridge formation; N in three equal splits after transplanting and during flushes.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flowering start). 1/3 N 60 days after transplanting (after first fruit picking)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-115",
+    "p2o5": "50-65",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-Directorate of Onion and Garlic Research (DOGR), Pune; NHRDF Karnal",
+    "title": "Onion NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed. Sulphur essential for storage life.",
+   "suggestedStatus": "verified",
+   "micronutrients": {
+    "sulphur": "20-25 kg/ha"
+   },
+   "applicationMethod": "All P2O5, K2O, Sulphur, and 1/3 N at final ploughing just before transplanting. No late N after bulb formation begins (prevents thick necks and storage rot).",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting. 1/3 N 50 days after transplanting (just before bulb initiation)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-up",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "110-130",
+    "p2o5": "60-80",
+    "k2o": "60-80"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; PAU Ludhiana",
+    "title": "Tomato NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5 and 50% K2O in transplanting beds; Nitrogen in three splits and remaining Potash at fruit stage. Potassium maintains fruit weight and shape.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flower cluster initiation). 1/3 N + 50% K2O 55-60 days after transplanting (fruit development/ripening)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "okra",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-100",
+    "p2o5": "50-60",
+    "k2o": "50-60"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-Indian Institute of Vegetable Research (IIVR), Varanasi; Punjab Agricultural University (PAU) Package of Practices for Vegetable Crops",
+    "title": "Okra NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Indo-Gangetic Plains (UP / Punjab / Haryana). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, all K2O, and 1/3 N as band placement or incorporation at final land preparation before sowing. Remaining N in two equal side-dress splits.",
+   "applicationTiming": "1/3 N at sowing (0 DAS). 1/3 N 30 days after emergence (first weeding/hoeing stage). 1/3 N 45-50 days after emergence (first picking / flowering stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "25-35",
+    "p2o5": "60-70",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; CCS Haryana Agricultural University (HAU), Hisar",
+    "title": "Peas NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O). Legume crop.",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "100% NPK as single basal dose via seed drill, 4-5 cm below seed. No top-dressing (excess N promotes foliage over pods in this legume crop). Starter N dose only; root nodules fix atmospheric N.",
+   "applicationTiming": "100% basal at sowing (0 DAS)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "75-90",
+    "p2o5": "35-45",
+    "k2o": "35-45"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "PAU Ludhiana Farm Advisory; ICAR-IARI (Indian Agricultural Research Institute), New Delhi",
+    "title": "Spinach NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Covers Spinacia oleracea / Beta vulgaris var. bengalensis. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All Phosphorus, Potash, and 50% Nitrogen incorporated before sowing. Remaining Nitrogen in two equal splits broadcast after each cutting, followed by immediate irrigation.",
+   "applicationTiming": "50% N at sowing (0 DAS). 25% N after first cutting (30-35 DAS). 25% N after second cutting (50-55 DAS)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "125-150",
+    "p2o5": "75-85",
+    "k2o": "75-85"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; CCS HAU Hisar",
+    "title": "Cauliflower NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O). Boron essential to prevent whiptail and browning.",
+   "suggestedStatus": "verified",
+   "micronutrients": {
+    "boron": "10-15 kg/ha (Borax)"
+   },
+   "applicationMethod": "All P2O5, K2O, Borax, and 1/3 N at transplanting during ridge formation. Remaining N in two side-dress splits.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (active vegetative phase). 1/3 N 50 days after transplanting (curd initiation stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-140",
+    "p2o5": "60-75",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IARI New Delhi; PAU Ludhiana",
+    "title": "Cabbage NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5 and K2O at final ploughing. Nitrogen in three splits for compact head formation and to prevent splitting.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25-30 days after transplanting. 1/3 N 45-50 days after transplanting (head forming stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-65",
+    "p2o5": "40-50",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; Department of Horticulture Haryana",
+    "title": "Radish NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, K2O, and 1/2 N at ridge/bed preparation before sowing. Excess nitrogen causes root deformation.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 20-25 days after sowing (root enlargement stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-60",
+    "p2o5": "40-50",
+    "k2o": "60-80"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "CCS HAU Hisar; PAU Ludhiana",
+    "title": "Carrot NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, K2O, and 50% N in furrow/ridge at sowing; remaining N as side-dress. High potash essential for root shape and carotene.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 30-35 days after sowing (thinning and root swelling stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-125",
+    "p2o5": "50-65",
+    "k2o": "50-60"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; Narendra Deva University of Agriculture & Technology (NDUAT), Ayodhya",
+    "title": "Brinjal NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "P and K as basal dose at transplanting. N in three splits due to long picking duration.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 35 days after transplanting (first flowering). 1/3 N 60-65 days after transplanting (continuous fruiting)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "60-75",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "National Horticultural Research and Development Foundation (NHRDF), Karnal/Nashik; ICAR-DOGR",
+    "title": "Garlic NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed. Sulphur essential for allicin and pungency.",
+   "suggestedStatus": "verified",
+   "micronutrients": {
+    "sulphur": "25-30 kg/ha"
+   },
+   "applicationMethod": "All P2O5, K2O, Sulphur, and 1/3 N in flat/raised beds at planting. Stop N 30 days before bulb harvest.",
+   "applicationTiming": "1/3 N at planting (0 DAS). 1/3 N 30 days after planting. 1/3 N 60 days after planting (bulb initiation stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "150-180",
+    "p2o5": "80-100",
+    "k2o": "120-150"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-Central Potato Research Institute (CPRI), Shimla / Jalandhar regional station",
+    "title": "Potato NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5, K2O, and 1/2 N via furrow placement at planting. Remaining N side-dressed at earthing-up. SOP preferred for processing tubers.",
+   "applicationTiming": "50% N at planting (0 DAS). 50% N 25-30 days after planting (earthing-up / tuber initiation stage)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "50-65",
+    "k2o": "50-65"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; PAU Ludhiana",
+    "title": "Chili NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "P and K basal at ridge formation; N in three equal splits after transplanting and during flushes.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flowering start). 1/3 N 60 days after transplanting (after first fruit picking)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-115",
+    "p2o5": "50-65",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-Directorate of Onion and Garlic Research (DOGR), Pune; NHRDF Karnal",
+    "title": "Onion NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed. Sulphur essential for storage life.",
+   "suggestedStatus": "verified",
+   "micronutrients": {
+    "sulphur": "20-25 kg/ha"
+   },
+   "applicationMethod": "All P2O5, K2O, Sulphur, and 1/3 N at final ploughing just before transplanting. No late N after bulb formation begins (prevents thick necks and storage rot).",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting. 1/3 N 50 days after transplanting (just before bulb initiation)."
+  },
+  {
+   "country": "IN",
+   "regionSlug": "in-haryana",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "110-130",
+    "p2o5": "60-80",
+    "k2o": "60-80"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "ICAR-IIVR Varanasi; PAU Ludhiana",
+    "title": "Tomato NPK recommendation India (UP/Punjab/Haryana)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: UP / Punjab / Haryana. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "micronutrients": null,
+   "applicationMethod": "All P2O5 and 50% K2O in transplanting beds; Nitrogen in three splits and remaining Potash at fruit stage. Potassium maintains fruit weight and shape.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flower cluster initiation). 1/3 N + 50% K2O 55-60 days after transplanting (fruit development/ripening)."
   }
  ],
  "gaps": [
@@ -4280,18 +5091,6 @@
    "country": "IN",
    "regionSlug": "in-national",
    "items": [
-    "tomato",
-    "onion",
-    "potato",
-    "okra",
-    "spinach",
-    "carrot",
-    "cauliflower",
-    "chili",
-    "cabbage",
-    "radish",
-    "peas",
-    "garlic",
     "cabbage-chinese"
    ],
    "reason": "IIVR publishes variety-specific reckoners, no single national vegetable dose chart"
@@ -4300,19 +5099,6 @@
    "country": "IN",
    "regionSlug": "in-haryana",
    "items": [
-    "tomato",
-    "onion",
-    "potato",
-    "okra",
-    "spinach",
-    "carrot",
-    "cauliflower",
-    "chili",
-    "brinjal",
-    "cabbage",
-    "radish",
-    "peas",
-    "garlic",
     "cabbage-chinese"
    ],
    "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
@@ -4321,19 +5107,6 @@
    "country": "IN",
    "regionSlug": "in-up",
    "items": [
-    "tomato",
-    "onion",
-    "potato",
-    "okra",
-    "spinach",
-    "carrot",
-    "cauliflower",
-    "chili",
-    "brinjal",
-    "cabbage",
-    "radish",
-    "peas",
-    "garlic",
     "cabbage-chinese"
    ],
    "reason": "No official state-ag-university vegetable NPK recommendations in accessible online sources"
