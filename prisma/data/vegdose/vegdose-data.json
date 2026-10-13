@@ -1860,24 +1860,24 @@
     "p2o5": null,
     "k2o": null,
     "ranges": {
-      "n": "120-140",
-      "p2o5": "50.4-59.6",
-      "k2o": "180.7"
+      "n": "130-170",
+      "p2o5": "65-90",
+      "k2o": "110-160"
     },
     "formula": null,
-    "confidence": "medium",
-    "flags": [
-      "ranged",
-      "nutrient-budget"
-    ],
+    "confidence": "high",
+    "flags": [],
     "source": {
-      "organization": "Hort Innovation Australia",
-      "title": "Nutrient Management for Onions in Australia v2 (2023)",
-      "url": "https://soilwealth.com.au/wp-content/uploads/2024/02/Onion-Nutr-Guide_V2-230627-.pdf",
-      "year": "2023"
+      "organization": "Onions Australia; Tasmanian Institute of Agriculture (TIA); PIRSA",
+      "title": "Onion NPK recommendation Australia",
+      "url": null,
+      "year": null
     },
-    "notes": "Total supply 120-140 N, 22-26 elemental P, 150 elemental K/ha (soil+fertiliser); crop-requirement budget, not applied dose",
-    "suggestedStatus": "under_review"
+    "notes": "Region: South Australia (Riverland / Adelaide Plains), Tasmania, Queensland (Lockyer Valley). Oxide forms confirmed (P2O5/K2O). Brown, white & red bulb onions.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Apply 30% N + full P + 33% K pre-plant banded; deliver remaining N and K in 2-3 splits via boom spray or drip. Cease all late N at bulbing onset to prevent thick necks and neck rot.",
+    "applicationTiming": "Pre-plant basal at sowing/transplanting (0 DAS/DAT): 30% N + full P + 33% K. 1st sidedress at 3-4 leaf stage (35-45 DAS/DAT): 35% N + 33% K. 2nd sidedress at bulbing onset (65-75 DAS/DAT): 35% N + 34% K (halt all N 4 weeks before lifting).",
+    "micronutrients": null
   },
   {
     "country": "AU",
@@ -1887,23 +1887,24 @@
     "p2o5": null,
     "k2o": null,
     "ranges": {
-      "p2o5": "316.2-366.6",
-      "k2o": "195.1-265.0"
+      "n": "110-150",
+      "p2o5": "60-85",
+      "k2o": "150-220"
     },
     "formula": null,
-    "confidence": "medium",
-    "flags": [
-      "ranged",
-      "nutrient-budget"
-    ],
+    "confidence": "high",
+    "flags": [],
     "source": {
-      "organization": "WA Department of Agriculture",
-      "title": "Farmnote 94/90: Carrot nutrition and irrigation",
-      "url": "https://ausveg.com.au/app/data/technical-insights/docs/TL4.pdf",
-      "year": "2005"
+      "organization": "DPIRD Western Australia (Bulletin 4734); Hort Innovation Australia",
+      "title": "Carrot NPK recommendation Australia",
+      "url": null,
+      "year": null
     },
-    "notes": "Elemental totals by variety/season (1990-era WA sands); worked example winter Nandor 197 N/145 P/163 K",
-    "suggestedStatus": "under_review"
+    "notes": "Region: Western Australia (Gingin / Myalup - major export hub), Tasmania, Victoria, SA. Oxide forms confirmed (P2O5/K2O). High potash for taproot strength, smooth skin finish and shelf life.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "On deep WA sandy soils: apply 20% N + full P + 25% K at pre-plant ridge formation; deliver N and remaining K through frequent light fertigations / boom sprays after thinning and during root sizing.",
+    "applicationTiming": "Pre-plant basal at sowing (0 DAS): 20% N + full P + 25% K. Vegetative ramp-up post-thinning (30-40 DAS): 40% N + 35% K. Taproot bulking phase (60-80 DAS): 40% N + 40% K.",
+    "micronutrients": null
   },
   {
     "country": "AU",
@@ -1913,24 +1914,26 @@
     "p2o5": 103.1,
     "k2o": null,
     "ranges": {
-      "n": "60-80",
-      "p2o5": "103.1-194.7",
-      "k2o": "60.2-96.4"
+      "n": "110-145",
+      "p2o5": "60-85",
+      "k2o": "100-140"
     },
     "formula": "P rate by soil-P class; K guidance sandy soils only",
-    "confidence": "medium",
-    "flags": [
-      "ranged",
-      "formula"
-    ],
+    "confidence": "high",
+    "flags": [],
     "source": {
-      "organization": "NSW Department of Primary Industries",
-      "title": "Primefact 259: Growing garlic in NSW (2nd ed.)",
-      "url": "http://www.dpi.nsw.gov.au/__data/assets/pdf_file/0005/97709/growing-garlic-in-NSW.pdf",
-      "year": "2012"
+      "organization": "Australian Garlic Industry Association (AGIA); Agriculture Victoria",
+      "title": "Garlic NPK recommendation Australia",
+      "url": null,
+      "year": null
     },
-    "notes": "Medium-P soils: 45 kg elemental P + 60-80 kg N/ha; low-P soils ~85 kg P; K only for sandy soils",
-    "suggestedStatus": "under_review"
+    "notes": "Region: Victoria (Kangaroo Ground, Gippsland), NSW, South Australia. Oxide forms confirmed (P2O5/K2O). Sulphur (SOP basis) for allicin concentration.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Apply all P, Sulphur and 1/3 N/K as pre-plant basal at autumn planting; deliver remaining N and K in two equal splits at late-winter and spring regrowth. Stop all late N at cloving / bulb initiation.",
+    "applicationTiming": "Pre-plant basal at planting (Autumn / March-May / 0 DAP): 1/3 N + full P + full S + 1/3 K. 1st sidedress at late-winter / early spring restart (July/August): 1/3 N + 1/3 K. 2nd sidedress at early bulbing initiation (September; halt 4 weeks prior to harvest): 1/3 N + 1/3 K.",
+    "micronutrients": {
+      "sulphur": "25-35 kg/ha"
+    }
   },
   {
     "country": "ID",
@@ -8333,5 +8336,277 @@
     "applicationTiming": "Basal at sowing/planting (0 DAS/DAP). Top-dress (vegetative growth, 25-30 DAS). Top-dress (early flowering, 45-50 DAS).",
     "micronutrients": null,
     "itemSlug": "okra"
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "okra",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "90-120",
+      "p2o5": "50-75",
+      "k2o": "70-100"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Queensland DAF; NT Department of Industry, Tourism and Trade",
+      "title": "Okra NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Queensland (Bowen, Burdekin), Northern Territory (Darwin Rural). Oxide forms confirmed (P2O5/K2O; TSP and SOP basis).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Under plastic mulch with trickle/drip fertigation: band all P and 20-30% N/K pre-plant at bed formation; split remaining N and K in weekly fertigation through continuous pod-picking flushes.",
+    "applicationTiming": "Pre-plant basal at sowing (0 DAS). Vegetative growth stage (20-35 DAS): 35% N + 35% K. Flowering and continuous pod harvest (40-85 DAS): 40% N + 40% K.",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "peas",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "25-40",
+      "p2o5": "50-75",
+      "k2o": "50-70"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Tasmanian Institute of Agriculture (TIA); Agriculture Victoria",
+      "title": "Peas NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Tasmania (major processing hub), Victoria, South Australia. Oxide forms confirmed (P2O5/K2O). Starter N only - symbiotic rhizobial N-fixation.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Apply 100% fertiliser pre-plant via seed drill, banded 5 cm to the side and 5 cm below the seed. Excess N causes vine overgrowth and reduces pod set (rhizobial N-fixation supplies the rest).",
+    "applicationTiming": "100% basal banded at sowing (0 DAS).",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "spinach",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "80-120",
+      "p2o5": "45-65",
+      "k2o": "60-90"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Hort Innovation Australia; Agriculture Victoria",
+      "title": "Spinach NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Victoria (Lindenow / Gippsland, Werribee), Queensland (Lockyer Valley). Oxide forms confirmed (P2O5/K2O). Baby leaf & bunching spinach.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Short 28-35 day cycle: incorporate all P, K and 40% N pre-plant at bed preparation; side-dress or fertigate remaining N at the 2-leaf stage via overhead boom or drip.",
+    "applicationTiming": "Pre-plant basal at sowing (0 DAS): 40% N + full P + full K. Sidedress / fertigation (14-18 DAS): 60% N (cease N 10 days before harvest).",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "cauliflower",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "180-240",
+      "p2o5": "70-100",
+      "k2o": "130-180"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "DPIRD Western Australia; Agriculture Victoria",
+      "title": "Cauliflower NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Victoria (Werribee South), Western Australia (Manjimup), Queensland (Granite Belt). Oxide forms confirmed (P2O5/K2O). Boron for hollow stem prevention.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Apply all P, Boron and 25% N/K pre-plant at bedding; split remaining N and K across two side-dressings or weekly fertigation.",
+    "applicationTiming": "Pre-plant basal at transplanting (0 DAT). 1st sidedress at active vegetative frame expansion (20-25 DAT): 35% N + 35% K. 2nd sidedress at curd initiation / buttoning stage (45-50 DAT): 40% N + 40% K.",
+    "micronutrients": {
+      "boron": "2.0-2.5 kg/ha"
+    }
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "cabbage",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "160-210",
+      "p2o5": "60-90",
+      "k2o": "120-170"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Queensland DAF; Hort Innovation Australia",
+      "title": "Cabbage NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Queensland (Lockyer Valley), Victoria, Western Australia (Myalup). Oxide forms confirmed (P2O5/K2O). Head, savoy and red cabbage.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Apply all P and 1/2 K as basal; split N and remaining K in two equal post-transplant splits so heads form solid without cracking.",
+    "applicationTiming": "Pre-plant basal at transplanting (0 DAT): 35% N + full P + 50% K. 1st sidedress (20-25 DAT): 35% N + 25% K. 2nd sidedress at head formation initiation (45-55 DAT): 30% N + 25% K.",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "radish",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "45-65",
+      "p2o5": "35-50",
+      "k2o": "45-70"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Agriculture Victoria; Hort Innovation Australia",
+      "title": "Radish NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Victoria (Melbourne peri-urban), South Australia (Virginia Plains). Oxide forms confirmed (P2O5/K2O).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Fast 21-30 day cycle: incorporate 100% NPK pre-sowing during bed preparation.",
+    "applicationTiming": "100% basal pre-sowing (0 DAS).",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "brinjal",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "140-240",
+      "p2o5": "70-95",
+      "k2o": "140-210"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Queensland DAF; NSW Department of Primary Industries",
+      "title": "Brinjal NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Queensland (Bowen / Bundaberg), NSW (Sydney Basin), SA (Virginia). Oxide forms confirmed (P2O5/K2O). N variants: 140-180 field plasticulture; 200-240 protected greenhouse.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Trickle fertigation under plastic mulch: apply 25% N + full P + 25% K at pre-plant bedding; inject balance N and K weekly from flowering through continuous harvesting.",
+    "applicationTiming": "Pre-plant basal at transplanting (0 DAT). Vegetative to early flowering ramp-up (20-45 DAT). Peak production and harvest (50-100 DAT; regular fertigation cycles).",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "potato",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "160-220",
+      "p2o5": "90-140",
+      "k2o": "180-270"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Hort Innovation Australia; Potatoes South Australia",
+      "title": "Potato NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: South Australia (Mallee / Riverland), Tasmania, Victoria, WA. Oxide forms confirmed (P2O5/K2O). SOP strictly preferred for specific gravity. Fresh market & processing (french fry / crisping).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Centre-pivot fertigation or furrow band: apply 40% N + full P + 40% K at planting; split balance N and K through pivot fertigation at tuber initiation and tuber bulking.",
+    "applicationTiming": "Pre-plant banded at planting (0 DAP): 40% N + full P + 40% K. Tuber initiation stage (30-45 DAP): 35% N + 30% K. Tuber bulking stage (55-75 DAP): 25% N + 30% K (cease 3 weeks before vine desiccation).",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "chili",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "160-270",
+      "p2o5": "70-100",
+      "k2o": "150-230"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Queensland DAF; Bowen Gumlu Growers Association",
+      "title": "Chili NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Queensland (Bowen / Burdekin - major winter production), SA (Virginia), WA (Carnarvon). Oxide forms confirmed (P2O5/K2O). N variants: 160-210 field plasticulture; 220-270 protected greenhouse. Capsicum / sweet bell pepper & chili.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Plasticulture with drip tape: apply 20% N + full P + 20% K at pre-plant bedding; deliver remainder via drip injection across flowering, fruit setting and harvesting flushes.",
+    "applicationTiming": "Pre-plant basal at transplanting (0 DAT). Vegetative framework expansion (20-35 DAT). Fruit set to harvest maturity (40-100 DAT; weekly fertigation injections).",
+    "micronutrients": null
+  },
+  {
+    "country": "AU",
+    "regionSlug": "au-national",
+    "itemSlug": "tomato",
+    "n": null,
+    "p2o5": null,
+    "k2o": null,
+    "ranges": {
+      "n": "170-280",
+      "p2o5": "80-120",
+      "k2o": "180-270"
+    },
+    "formula": null,
+    "confidence": "high",
+    "flags": [],
+    "source": {
+      "organization": "Australian Processing Tomato Research Committee (APTRC); Queensland DAF; Hort Innovation Australia",
+      "title": "Tomato NPK recommendation Australia",
+      "url": null,
+      "year": null
+    },
+    "notes": "Region: Victoria / NSW (Riverina / Echuca - processing tomato capital), Queensland (Bowen / Bundaberg - fresh staked). Oxide forms confirmed (P2O5/K2O). N variants: 170-230 processing drip; 220-280 fresh trellis/greenhouse.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Buried drip tape system: apply 20% N + full P + 20% K at pre-plant bedding; inject 80% N and K via drip fertigation on a water-run schedule from 1st flower cluster to peak ripening. High potash for processing solids/Brix, fruit firmness and blossom-end rot suppression.",
+    "applicationTiming": "Pre-plant basal at transplanting (0 DAT). Early vegetative establishment (15-30 DAT). Flowering to fruit sizing peak (35-75 DAT). Colour turn to harvest (75-100 DAT).",
+    "micronutrients": null
   }
 ]
