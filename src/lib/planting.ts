@@ -19,7 +19,7 @@ import type { SourceRef, GrowingCategory } from "./growing";
 
 export interface Region {
   id: string; // e.g. "pk-punjab"
-  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain";
+  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain" | "china";
   countryName: string;
   name: string;
 }
@@ -66,13 +66,16 @@ export const REGIONS: Region[] = [
   { id: "es-murcia", country: "spain", countryName: "Spain", name: "Murcia" },
   { id: "es-aragon", country: "spain", countryName: "Spain", name: "Aragón" },
   { id: "es-castilla", country: "spain", countryName: "Spain", name: "Castilla-La Mancha" },
+  { id: "cn-northeast", country: "china", countryName: "China", name: "Northeast China" },
+  { id: "cn-ncp", country: "china", countryName: "China", name: "North China Plain" },
+  { id: "cn-yangtze", country: "china", countryName: "China", name: "Yangtze River Basin" },
 ];
 
 export function getRegion(id: string): Region | undefined {
   return REGIONS.find((r) => r.id === id);
 }
 
-export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain"): Region[] {
+export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain" | "china"): Region[] {
   return REGIONS.filter((r) => r.country === country);
 }
 
@@ -812,6 +815,129 @@ function spainVegWindows(): PlantingWindow[] {
   return out;
 }
 
+// ── China vegetable planting windows (institutional, verified) ──
+// Source: MARA (Ministry of Agriculture and Rural Affairs — 农业农村部),
+// CAAS Institute of Vegetables and Flowers (IVF-CAAS),
+// Shandong Academy of Agricultural Sciences (SAAS),
+// Hubei Academy of Agricultural Sciences (HBAAS).
+// Three macro-regions: Northeast (东北一季作区), North China Plain / Huang-Huai-Hai
+// (黄淮海及华北平原区), Yangtze River Basin (长江中下游及西南流域).
+// Supplied by Ahmed 2026-10-13 as verified institutional guidance.
+
+const chinaVegSource = (region: Region): SourceRef => ({
+  organization: "MARA; CAAS (IVF); SAAS; HBAAS",
+  title: "Vegetable planting windows — China",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const CHINA_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (秋葵 / 黄秋葵) — direct seeded, spring-sown summer harvest —
+  { regions: ["cn-yangtze"], itemSlug: "okra", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Yangtze Basin direct sowing: Mar 20 – Apr 15.", seasonName: "露地春播夏季采收" },
+  { regions: ["cn-ncp"], itemSlug: "okra", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "North China Plain direct sowing: Apr 10 – May 5.", seasonName: "露地春播夏季采收" },
+  { regions: ["cn-northeast"], itemSlug: "okra", activityType: "SOW", startMonth: 5, endMonth: 5, notes: "Northeast direct sowing (short frost-free season): May 5 – May 25.", seasonName: "露地春播夏季采收" },
+  // — 2. Peas (豌豆 / 荷兰豆) — direct drill/dibble —
+  { regions: ["cn-yangtze"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Yangtze Basin overwintering direct sowing: Oct 20 – Nov 15.", seasonName: "长江流域越冬栽培" },
+  { regions: ["cn-ncp"], itemSlug: "peas", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "North China Plain spring direct sowing: Mar 1 – Mar 25.", seasonName: "北方春季露地" },
+  { regions: ["cn-northeast"], itemSlug: "peas", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Northeast spring direct sowing: Apr 15 – May 5.", seasonName: "北方春季露地" },
+  // — 3. Spinach (菠菜) — direct broadcast/drill, multi-crop —
+  { regions: ["cn-yangtze"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Yangtze Basin autumn direct sowing: Sep 15 – Nov 10.", seasonName: "秋茬" },
+  { regions: ["cn-yangtze"], itemSlug: "spinach", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Yangtze Basin spring direct sowing: Feb – Mar.", seasonName: "春菠菜" },
+  { regions: ["cn-ncp"], itemSlug: "spinach", activityType: "SOW", startMonth: 8, endMonth: 10, notes: "North China Plain autumn/winter direct sowing: Aug 25 – Oct 10.", seasonName: "秋茬/越冬茬" },
+  { regions: ["cn-northeast"], itemSlug: "spinach", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Northeast spring direct sowing: Apr 15 – May 10.", seasonName: "春菠菜" },
+  { regions: ["cn-northeast"], itemSlug: "spinach", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "Northeast autumn direct sowing: Aug 1 – Aug 20.", seasonName: "秋茬" },
+  // — 4. Cauliflower (花椰菜 / 花菜) — nursery + transplant, autumn main —
+  { regions: ["cn-yangtze"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 7, endMonth: 7, notes: "Yangtze Basin autumn/winter nursery sowing: Jul 5 – Jul 30.", seasonName: "秋花菜主产区" },
+  { regions: ["cn-ncp"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "North China Plain autumn nursery sowing: Jun 20 – Jul 15.", seasonName: "秋花菜主产区" },
+  { regions: ["cn-northeast"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 5, endMonth: 5, notes: "Northeast summer/autumn nursery sowing: May 1 – May 25.", seasonName: "秋花菜主产区" },
+  { regions: ["cn-yangtze"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 8, endMonth: 8, notes: "Yangtze Basin transplanting: Aug 10 – Aug 30.", seasonName: "秋花菜主产区" },
+  { regions: ["cn-ncp"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "North China Plain transplanting: Jul 25 – Aug 15.", seasonName: "秋花菜主产区" },
+  { regions: ["cn-northeast"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 6, endMonth: 6, notes: "Northeast transplanting: Jun 5 – Jun 25.", seasonName: "秋花菜主产区" },
+  // — 5. Cabbage (甘蓝 / 包菜) — spring + autumn + highland —
+  { regions: ["cn-ncp"], itemSlug: "cabbage", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "North China Plain spring nursery sowing (hotbed): Jan 10 – Feb 5.", seasonName: "春甘蓝" },
+  { regions: ["cn-ncp"], itemSlug: "cabbage", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "North China Plain autumn nursery sowing: Jun 20 – Jul 15.", seasonName: "秋冬甘蓝" },
+  { regions: ["cn-northeast"], itemSlug: "cabbage", activityType: "SOW", startMonth: 4, endMonth: 4, notes: "Northeast summer/autumn nursery sowing: Apr 5 – Apr 30.", seasonName: "夏秋甘蓝" },
+  { regions: ["cn-yangtze"], itemSlug: "cabbage", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Yangtze Basin autumn/winter nursery sowing: Jul 15 – Aug 10.", seasonName: "秋冬甘蓝" },
+  { regions: ["cn-ncp"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "North China Plain spring transplanting: Mar 25 – Apr 15.", seasonName: "春甘蓝" },
+  { regions: ["cn-ncp"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "North China Plain autumn transplanting: Jul 25 – Aug 10.", seasonName: "秋冬甘蓝" },
+  { regions: ["cn-northeast"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Northeast transplanting: May 20 – Jun 10.", seasonName: "夏秋甘蓝" },
+  { regions: ["cn-yangtze"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Yangtze Basin transplanting: Aug 20 – Sep 10.", seasonName: "秋冬甘蓝" },
+  // — 6. Radish (萝卜 / 大白萝卜) — direct seeded on high ridges, autumn main —
+  { regions: ["cn-ncp"], itemSlug: "radish", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "North China Plain autumn main direct sowing (起垄点播): Jul 25 – Aug 15.", seasonName: "秋萝卜大宗生产" },
+  { regions: ["cn-yangtze"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Yangtze Basin autumn/winter direct sowing: Aug 20 – Sep 20.", seasonName: "秋萝卜大宗生产" },
+  { regions: ["cn-northeast"], itemSlug: "radish", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Northeast summer direct sowing: Jun 15 – Jul 10.", seasonName: "秋萝卜大宗生产" },
+  // — 7. Carrot (胡萝卜) — direct seeded, summer sown autumn harvest —
+  { regions: ["cn-ncp"], itemSlug: "carrot", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "North China Plain autumn main direct sowing: Jul 15 – Aug 5.", seasonName: "夏播秋收主力茬口" },
+  { regions: ["cn-yangtze"], itemSlug: "carrot", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "Yangtze Basin autumn direct sowing: Aug 5 – Aug 30.", seasonName: "夏播秋收主力茬口" },
+  { regions: ["cn-northeast"], itemSlug: "carrot", activityType: "SOW", startMonth: 6, endMonth: 6, notes: "Northeast summer direct sowing: Jun 1 – Jun 25.", seasonName: "夏播秋收主力茬口" },
+  // — 8. Brinjal (茄子) — nursery + transplant, post-frost —
+  { regions: ["cn-yangtze"], itemSlug: "brinjal", activityType: "SOW", startMonth: 12, endMonth: 1, notes: "Yangtze Basin nursery sowing (protected): Dec 15 – Jan 20.", seasonName: "露地春茄子" },
+  { regions: ["cn-ncp"], itemSlug: "brinjal", activityType: "SOW", startMonth: 2, endMonth: 2, notes: "North China Plain nursery sowing (hotbed/plug): Feb 1 – Feb 25.", seasonName: "露地春茄子" },
+  { regions: ["cn-northeast"], itemSlug: "brinjal", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Northeast nursery sowing (greenhouse): Mar 10 – Apr 5.", seasonName: "露地春茄子" },
+  { regions: ["cn-yangtze"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Yangtze Basin transplanting: Mar 25 – Apr 15.", seasonName: "露地春茄子" },
+  { regions: ["cn-ncp"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "North China Plain transplanting: Apr 20 – May 10.", seasonName: "露地春茄子" },
+  { regions: ["cn-northeast"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Northeast transplanting: May 20 – Jun 5.", seasonName: "露地春茄子" },
+  // — 9. Garlic (大蒜) — direct clove dibbling —
+  { regions: ["cn-ncp"], itemSlug: "garlic", activityType: "PLANT", startMonth: 9, endMonth: 10, notes: "North China Plain clove dibbling under mulch (瓣植覆膜): Sep 25 – Oct 15.", seasonName: "秋播地膜覆盖大蒜" },
+  { regions: ["cn-yangtze"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 10, notes: "Yangtze Basin clove dibbling: Oct 5 – Oct 25.", seasonName: "秋播地膜覆盖大蒜" },
+  { regions: ["cn-northeast"], itemSlug: "garlic", activityType: "PLANT", startMonth: 4, endMonth: 4, notes: "Northeast spring clove planting: Apr 5 – Apr 25.", seasonName: "春蒜" },
+  // — 10. Potato (马铃薯 / 土豆) — tubers in furrows —
+  { regions: ["cn-ncp"], itemSlug: "potato", activityType: "PLANT", startMonth: 2, endMonth: 3, notes: "North China Plain spring double-crop: Feb 15 – Mar 10.", seasonName: "中原二季作区 (Spring)" },
+  { regions: ["cn-ncp"], itemSlug: "potato", activityType: "PLANT", startMonth: 8, endMonth: 8, notes: "North China Plain autumn double-crop: Aug 5 – Aug 20.", seasonName: "中原二季作区 (Autumn)" },
+  { regions: ["cn-yangtze"], itemSlug: "potato", activityType: "PLANT", startMonth: 12, endMonth: 1, notes: "Yangtze Basin winter/spring planting: Dec 15 – Jan 20.", seasonName: "长江流域冬作" },
+  { regions: ["cn-northeast"], itemSlug: "potato", activityType: "PLANT", startMonth: 4, endMonth: 5, notes: "Northeast single-crop planting: Apr 20 – May 15.", seasonName: "北方一季作区" },
+  // — 11. Peppers (辣椒 / 甜椒 → chili) — nursery + transplant —
+  { regions: ["cn-yangtze"], itemSlug: "chili", activityType: "SOW", startMonth: 12, endMonth: 1, notes: "Yangtze Basin nursery sowing (heated): Dec 20 – Jan 25.", seasonName: "露地春椒" },
+  { regions: ["cn-ncp"], itemSlug: "chili", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "North China Plain nursery sowing (plug tray): Feb 5 – Mar 1.", seasonName: "露地春椒" },
+  { regions: ["cn-northeast"], itemSlug: "chili", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Northeast nursery sowing (greenhouse): Mar 5 – Mar 30.", seasonName: "露地春椒" },
+  { regions: ["cn-yangtze"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 4, endMonth: 4, notes: "Yangtze Basin transplanting: Apr 5 – Apr 25.", seasonName: "露地春椒" },
+  { regions: ["cn-ncp"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "North China Plain transplanting: Apr 25 – May 15.", seasonName: "露地春椒" },
+  { regions: ["cn-northeast"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Northeast transplanting: May 20 – Jun 5.", seasonName: "露地春椒" },
+  // — 12. Onion (洋葱) — nursery + transplant —
+  { regions: ["cn-ncp"], itemSlug: "onion", activityType: "SOW", startMonth: 9, endMonth: 9, notes: "North China Plain overwintering nursery sowing: Sep 1 – Sep 15.", seasonName: "黄淮海秋播越冬洋葱" },
+  { regions: ["cn-yangtze"], itemSlug: "onion", activityType: "SOW", startMonth: 9, endMonth: 9, notes: "Yangtze Basin nursery sowing: Sep 10 – Sep 25.", seasonName: "长江流域" },
+  { regions: ["cn-northeast"], itemSlug: "onion", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Northeast/Gansu spring nursery sowing: Feb 15 – Mar 5.", seasonName: "北方春定植洋葱" },
+  { regions: ["cn-ncp"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 10, endMonth: 11, notes: "North China Plain transplanting: Oct 25 – Nov 10.", seasonName: "黄淮海秋播越冬洋葱" },
+  { regions: ["cn-yangtze"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 11, endMonth: 11, notes: "Yangtze Basin transplanting: Nov 5 – Nov 25.", seasonName: "长江流域" },
+  { regions: ["cn-northeast"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Northeast transplanting: Apr 20 – May 10.", seasonName: "北方春定植洋葱" },
+  // — 13. Tomato (番茄) — open-field spring tomato —
+  { regions: ["cn-yangtze"], itemSlug: "tomato", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Yangtze Basin nursery sowing: Jan 5 – Feb 5.", seasonName: "露地春番茄" },
+  { regions: ["cn-ncp"], itemSlug: "tomato", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "North China Plain nursery sowing (plug): Feb 15 – Mar 10.", seasonName: "露地春番茄" },
+  { regions: ["cn-northeast"], itemSlug: "tomato", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Northeast/Xinjiang nursery sowing (field processing): Mar 25 – Apr 20.", seasonName: "新疆/东北大田加工番茄" },
+  { regions: ["cn-yangtze"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Yangtze Basin transplanting: Mar 25 – Apr 20.", seasonName: "露地春番茄" },
+  { regions: ["cn-ncp"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "North China Plain transplanting: Apr 20 – May 10.", seasonName: "露地春番茄" },
+  { regions: ["cn-northeast"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Northeast transplanting: May 15 – Jun 5.", seasonName: "新疆/东北大田加工番茄" },
+  // — 14. Chinese Cabbage (大白菜) — autumn storage national baseline —
+  { regions: ["cn-ncp"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "North China Plain autumn main direct sowing (立秋前后): Aug 1 – Aug 15.", seasonName: "秋大白菜全国大宗生产" },
+  { regions: ["cn-yangtze"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Yangtze Basin autumn/winter direct sowing: Aug 20 – Sep 10.", seasonName: "秋大白菜全国大宗生产" },
+  { regions: ["cn-northeast"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 7, endMonth: 7, notes: "Northeast autumn storage direct sowing: Jul 15 – Jul 30.", seasonName: "秋大白菜全国大宗生产" },
+  { regions: ["cn-ncp"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 8, endMonth: 8, notes: "North China Plain transplanting (if plug): Aug 15 – Aug 25.", seasonName: "秋大白菜全国大宗生产" },
+];
+
+function chinaVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of CHINA_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: chinaVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
 /**
 
  * Seeds derived strictly from the crop library's published seasonDetail lines:
@@ -853,6 +979,8 @@ export const PLANTING_WINDOWS: PlantingWindow[] = [
   ...japanVegWindows(),
   ...pakistanVegWindows(),
   ...spainVegWindows(),
+  // — China vegetable windows (MARA / CAAS / SAAS / HBAAS, verified) —
+  ...chinaVegWindows(),
 ];
 
 /** True if `month` (1–12) falls inside a possibly year-crossing window. */
