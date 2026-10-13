@@ -39,7 +39,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "postinstall": "prisma generate",
-    "vercel-build": "prisma generate && (tsx prisma/seed.ts || echo SEED_FAILED_CONTINUE) && next build"
+    "vercel-build": "prisma generate && (prisma migrate deploy || echo MIGRATE_FAILED_CONTINUE) && (tsx prisma/seed.ts || echo SEED_FAILED_CONTINUE) && next build"
   },
   "version": "0.1.0",
   "prisma": {
