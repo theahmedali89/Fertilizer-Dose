@@ -23,6 +23,20 @@ import { seedCropdose } from "./seed-cropdose";
 import { seedPk25 } from "./seed-pk25";
 import { seedIn21 } from "./seed-in21";
 import { seedBd17 } from "./seed-bd17";
+import { seedFr11 } from "./seed-fr11";
+import { seedEs12 } from "./seed-es12";
+import { seedIt12 } from "./seed-it12";
+import { seedId12 } from "./seed-id12";
+import { seedMy10 } from "./seed-my10";
+import { seedDe11 } from "./seed-de11";
+import { seedUs12 } from "./seed-us12";
+import { seedBr11 } from "./seed-br11";
+import { seedAu12 } from "./seed-au12";
+import { seedPl10 } from "./seed-pl10";
+import { seedCn15 } from "./seed-cn15";
+import { seedJp10 } from "./seed-jp10";
+import { seedKr09 } from "./seed-kr09";
+import { seedTr15 } from "./seed-tr15";
 import { seedVegplant } from "./seed-vegplant";
 import { seedVegdose } from "./seed-vegdose";
 import { seedTranslations } from "./seed-translations";
@@ -307,6 +321,48 @@ async function main() {
 
   // ── Bangladesh 17-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
   await seedBd17(db);
+
+  // ── France 11-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedFr11(db);
+
+  // ── Spain 12-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedEs12(db);
+
+  // ── Italy 12-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedIt12(db);
+
+  // ── Indonesia 12-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedId12(db);
+
+  // ── Malaysia 10-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedMy10(db);
+
+  // ── Germany 11-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedDe11(db);
+
+  // ── United States 12-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedUs12(db);
+
+  // ── Brazil 11-crop NPK dose recommendations (12 records) — idempotent, user-supplied 2026-10-13 ──
+  await seedBr11(db);
+
+  // ── Australia 12-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedAu12(db);
+
+  // ── Poland 10-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedPl10(db);
+
+  // ── China 15-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedCn15(db);
+
+  // ── Japan 10-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedJp10(db);
+
+  // ── South Korea 9-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedKr09(db);
+
+  // ── Türkiye 15-crop NPK dose recommendations (19 records) — idempotent, user-supplied 2026-10-13 ──
+  await seedTr15(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
