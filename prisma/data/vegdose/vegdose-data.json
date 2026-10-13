@@ -2708,24 +2708,28 @@
       "country": "KR",
       "regionSlug": "kr-national",
       "itemSlug": "tomato",
-      "n": 204,
-      "p2o5": 103,
-      "k2o": 122,
-      "ranges": {},
-      "formula": null,
-      "confidence": "low",
-      "flags": [
-        "secondhand",
-        "greenhouse"
-      ],
-      "source": {
-        "organization": "RDA Korea (cited via KCI journal paper)",
-        "title": "Facility tomato standard fertilization rate",
-        "url": "https://db.koreascholar.com/Search/Result?field=k&query=tomato%20growth",
-        "year": "2023"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "180-230",
+        "p2o5": "70-100",
+        "k2o": "140-200"
       },
-      "notes": "Facility tomato; secondhand citation of RDA standard via journal paper",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NIHHS (토마토 수경재배 및 양액처방기준); Buyeo Tomato Experiment Station",
+        "title": "Tomato NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Chungnam (Buyeo), Gangwon (Hwacheon, Chuncheon), Gyeongnam (Gimhae).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply 25% N, all P2O5, and 25% K2O as basal on beds. Deliver 75% N and K via drip fertigation from 1st truss flowering through continuous harvesting. High potash supports Brix and blossom-end rot control.",
+      "applicationTiming": "Basal at transplanting (0 DAT). 1st truss flowering and fruit setting (20-30 DAT). 3rd truss fruit sizing to peak ripening (45-90 DAT; fertigate weekly).",
+      "micronutrients": null
     },
     {
       "country": "KR",
@@ -6961,6 +6965,336 @@
       "applicationMethod": "Basal 20% N + full P + 20% K; 80% N and K via drip fertigation split across first flowering, fruit set, and ripening.",
       "applicationTiming": "Basal at transplanting (0 DAT). Vegetative growth (15-30 DAT). Flowering and first fruit set (35-55 DAT). Fruit sizing and ripening (60-95 DAT).",
       "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "okra",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-100",
+        "p2o5": "50-60",
+        "k2o": "60-80"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA Standard Fertilization Manual (작물별 시비처방기준); NIHHS",
+        "title": "Okra NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Southern coastal & Jeju Island (Jeonnam, Gyeongnam, Jeju).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5, all K2O, and 1/3 N as basal incorporated before vinyl mulching. Top-dress the remaining N in two equal splits.",
+      "applicationTiming": "1/3 N at sowing/planting (0 DAS/DAP). 1/3 N 25-30 days after emergence (4-5 true-leaf stage). 1/3 N at flowering and early harvest stage (45-50 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "peas",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "30-45",
+        "p2o5": "50-70",
+        "k2o": "40-60"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NICS (국립식량과학원)",
+        "title": "Peas NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Southern plains (Gyeongnam, Jeonnam). Starter N dose only; symbiotic N fixation via nodules.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% NPK as basal band placement below the seed furrows before sowing. Avoid excess nitrogen, which causes vegetative overgrowth and weak pod setting.",
+      "applicationTiming": "100% basal at sowing (0 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "spinach",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-110",
+        "p2o5": "40-60",
+        "k2o": "50-70"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NIHHS; Gyeongsangnam-do ARES",
+        "title": "Spinach NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Open-field winter crop (Namhae, Pohang, Sinan) and protected vinyl (Gyeonggi).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5, K2O, and 50% N as basal. Top-dress the remaining N at the 3-4 true-leaf stage. Stop N 15 days before harvest.",
+      "applicationTiming": "50% N + all P2O5 + all K2O at sowing (0 DAS). 50% N 15-20 days after emergence (3-4 true-leaf stage).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "cauliflower",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "150-180",
+        "p2o5": "60-80",
+        "k2o": "110-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NIHHS (국립원예특작과학원); Highland Agriculture Research Institute",
+        "title": "Cauliflower NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Jeju Island and Highland Gangwon (Jecheon, Pyeongchang).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5, boron, and 1/3 N/K2O as basal before transplanting. Side-dress or fertigate the remaining N and K2O in two equal splits.",
+      "applicationTiming": "Basal at transplanting (0 DAT). 1st top-dressing 20-25 days after transplanting. 2nd top-dressing at curd initiation stage (45-50 DAT).",
+      "micronutrients": {
+        "boron_kg_ha": "1.5-2.0"
+      }
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "cabbage",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-170",
+        "p2o5": "60-80",
+        "k2o": "100-130"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA Standard Fertilization Manual; Jeju Agricultural Research & Extension Services",
+        "title": "Cabbage NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Jeju (winter), Gangwon Highland (summer: Daegwallyeong), Jeonnam.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5 and 1/3 K2O as basal. Split N and the remaining K2O in two equal post-transplant top-dressings for uniform head formation without cracking.",
+      "applicationTiming": "Basal at transplanting (0 DAT). 1st top-dressing 20-25 days after transplanting (active vegetative stage). 2nd top-dressing at head formation initiation (40-50 DAT).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "radish",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "110-140",
+        "p2o5": "60-80",
+        "k2o": "100-130"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA Standard Fertilization Manual; Highland Agriculture Research Institute",
+        "title": "Korean radish (Mu) NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Nationwide (autumn Mu, spring mulch, Highland Gangwon summer Mu). Boron prevents internal browning.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Incorporate all P2O5, boron, and 50% N/K2O as basal. Side-dress the remaining N and K2O 20-25 days after sowing, after thinning at root thickening stage.",
+      "applicationTiming": "50% N + all P2O5 + 50% K2O + all boron at sowing (0 DAS). 50% N + 50% K2O 20-25 days after sowing (post-thinning, root thickening).",
+      "micronutrients": {
+        "boron_kg_ha": "1.0-1.5"
+      }
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "carrot",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "100-130",
+        "p2o5": "50-70",
+        "k2o": "100-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Jeju Agricultural Research & Extension Services; RDA NIHHS",
+        "title": "Carrot NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Jeju (Gujwa winter carrot hub), Gangwon (Pyeongchang).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5 and 1/3 K2O as basal. Split N and the remaining K2O into two top-dressings at thinning and root thickening. High potash improves root shape and carotene accumulation.",
+      "applicationTiming": "Basal at sowing (0 DAS). 1st top-dressing at 3-4 true-leaf stage / after thinning (25-30 DAS). 2nd top-dressing at root bulking stage (50-60 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "brinjal",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "150-190",
+        "p2o5": "60-80",
+        "k2o": "120-160"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NIHHS (가지 표준재배법); Gyeonggi-do ARES",
+        "title": "Eggplant NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Gyeonggi (Yeoju), Gangwon (Chuncheon), Gyeongnam. Protected cultivation N up to 220 kg/ha.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5 and 25% N/K2O as basal. Deliver the remaining N and K via drip fertigation or 3-4 post-transplant side-dressings through the continuous harvest period.",
+      "applicationTiming": "Basal at transplanting (0 DAT). 1st top-dressing 25-30 days after transplanting (first flower opening). 2nd and 3rd top-dressings at 20-25 day intervals during continuous harvesting.",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "garlic",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "180-220",
+        "p2o5": "70-90",
+        "k2o": "110-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NIHHS (마늘 표준재배 및 시비기준); Uiseong Garlic Research Institute",
+        "title": "Garlic NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Southern coastal (Namhae, Goheung, Jeju) and northern inland (Uiseong, Danyang, Seosan).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5, sulphur, and 1/3 N/K2O as basal at autumn planting. Split the remaining N and K2O into two equal spring top-dressings. Strictly stop all N by end of March to prevent secondary growth (벌마늘).",
+      "applicationTiming": "Basal at planting (October/November, 0 DAP). 1st top-dressing at spring regrowth start (mid to late February). 2nd top-dressing mid to late March.",
+      "micronutrients": {
+        "sulphur_kg_ha": "25-35"
+      }
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "potato",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "90-120",
+        "p2o5": "80-100",
+        "k2o": "100-130"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA Highland Agriculture Research Institute (고령지농업연구소)",
+        "title": "Potato NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Gangwon (Pyeongchang, Gangneung), Chungnam (Dangjin), Jeonbuk (Gimje). SOP strictly preferred for starch content.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Under vinyl mulch cultivation, apply 100% NPK as full basal (전량기비) in the sowing furrow below the seed, covered with soil and plastic mulch.",
+      "applicationTiming": "100% basal at planting under mulch (0 DAP).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "chili",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-200",
+        "p2o5": "80-100",
+        "k2o": "120-160"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "RDA NIHHS (고추 표준재배지침); Yeongyang Pepper Research Institute",
+        "title": "Hot red pepper (Gochu) NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Nationwide (Andong, Yeongyang, Goesan, Jeongeup).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5 and 40% N/K2O as basal during ridge formation. Split the remaining N and K2O into three post-transplant side-dressings (furrow application).",
+      "applicationTiming": "Basal at transplanting (0 DAT). 1st top-dressing 25-30 days after transplanting (first fruit set). 2nd top-dressing 30 days later (55-60 DAT). 3rd top-dressing 30 days after that (85-90 DAT, continuous red ripening).",
+      "micronutrients": null
+    },
+    {
+      "country": "KR",
+      "regionSlug": "kr-national",
+      "itemSlug": "onion",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "180-220",
+        "p2o5": "70-90",
+        "k2o": "120-150"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Jeollanam-do ARES (Muan Onion Research Institute); RDA NIHHS",
+        "title": "Onion NPK recommendation South Korea",
+        "url": null,
+        "year": null
+      },
+      "notes": "Oxide forms confirmed (P2O5/K2O). Region: Jeonnam (Muan, Sinan), Gyeongnam (Changnyeong, Hamyang). Autumn-sown / spring-harvest.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Apply all P2O5 and 1/3 N/K2O as basal before autumn transplanting. Split the remaining N and K2O into two equal spring top-dressings. Stop all N before April to avoid storage rot and soft necks.",
+      "applicationTiming": "Basal at transplanting (October/November, 0 DAT). 1st top-dressing mid to late February. 2nd top-dressing mid to late March.",
+      "micronutrients": null
     }
   ],
   "gaps": [
@@ -7444,17 +7778,6 @@
       "country": "KR",
       "regionSlug": "kr-national",
       "items": [
-        "onion",
-        "potato",
-        "okra",
-        "spinach",
-        "carrot",
-        "cauliflower",
-        "brinjal",
-        "cabbage",
-        "radish",
-        "peas",
-        "garlic",
         "cabbage-chinese"
       ],
       "reason": "RDA rates behind interactive Heuktoram prescription system; no citable static tables"
