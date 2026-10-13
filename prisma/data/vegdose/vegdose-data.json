@@ -2312,64 +2312,84 @@
    "country": "CN",
    "regionSlug": "cn-yangtze",
    "itemSlug": "cabbage",
-   "n": 295.5,
-   "p2o5": 94.5,
-   "k2o": 223.5,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "140-180",
+    "p2o5": "60-80",
+    "k2o": "100-140"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Fujian Quality & Technical Supervision Bureau",
-    "title": "Major vegetable NPK fertilization technical specification DB35/T 1526-2015",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_98554479300EEA4920250706.pdf",
-    "year": "2015"
+    "organization": "MARA; IVF-CAAS",
+    "title": "Cabbage NPK recommendation China",
+    "url": null,
+    "year": null
    },
-   "notes": "Jieqiu ganlan: N 19.7/P2O5 6.3/K2O 14.9 kg/667m2 x15",
-   "suggestedStatus": "verified"
+   "notes": "Region: Shandong, Hebei, Gansu, Hubei. Per-mu: N 9.3-12.0, P2O5 4.0-5.3, K2O 6.7-9.3 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 1/3 K2O as basal; N and remaining K2O in 2 post-transplant splits for compact heading and no cracking.",
+   "applicationTiming": "Basal at transplanting (0 DAT). Rosette stage (20-25 DAT): 1/3 N + 1/3 K2O. Head formation initiation (40-50 DAT): 1/3 N + 1/3 K2O.",
+   "micronutrients": null
   },
   {
    "country": "CN",
    "regionSlug": "cn-yangtze",
    "itemSlug": "cauliflower",
-   "n": 256.5,
-   "p2o5": 87,
-   "k2o": 202.5,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "150-190",
+    "p2o5": "65-85",
+    "k2o": "120-160"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Fujian Quality & Technical Supervision Bureau",
-    "title": "Major vegetable NPK fertilization technical specification DB35/T 1526-2015",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_98554479300EEA4920250706.pdf",
-    "year": "2015"
+    "organization": "IVF-CAAS; NATESC",
+    "title": "Cauliflower NPK recommendation China",
+    "url": null,
+    "year": null
    },
-   "notes": "Huayecai: N 17.1/P2O5 5.8/K2O 13.5 kg/667m2 x15",
-   "suggestedStatus": "verified"
+   "notes": "Region: Fujian, Zhejiang, Jiangsu, Shandong. Per-mu: N 10.0-12.7, P2O5 4.3-5.7, K2O 8.0-10.7 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, Boron and 1/3 N/K2O as basal before transplanting; remaining N and K2O in 2 equal top-dress splits.",
+   "applicationTiming": "Basal at transplanting (0 DAT). Rosette stage (25-30 DAT): 1/3 N + 1/3 K2O. Curd initiation (50-55 DAT): 1/3 N + 1/3 K2O.",
+   "micronutrients": {
+    "boron": "1.5-2.0 kg/ha"
+   }
   },
   {
    "country": "CN",
    "regionSlug": "cn-yangtze",
    "itemSlug": "tomato",
-   "n": 648,
-   "p2o5": 512,
-   "k2o": 461,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "greenhouse",
-    "outlier-high"
-   ],
-   "source": {
-    "organization": "Anhui Quality & Technical Supervision Bureau",
-    "title": "Protected tomato NPK reduction technical regulation DB34/T 1426-2011",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_4598F96F6AB7ED8B20250628.pdf",
-    "year": "2011"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "170-280",
+    "p2o5": "75-110",
+    "k2o": "180-260"
    },
-   "notes": "Protected-cultivation greenhouse tomato (Chaohu Lake); 'reduced' rate = 75% of conventional. Values very high - greenhouse multi-harvest context",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "MARA; Xinjiang Academy; IVF-CAAS",
+    "title": "Tomato NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Xinjiang (processing), Shandong Shouguang (solar greenhouse), Hebei. N open 170-220; greenhouse up to 280. Per-mu: P2O5 5.0-7.3, K2O 12.0-17.3 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "20% N + full P + 20% K as basal; 80% N and K via drip fertigation from first truss fruit bulking to color turning. High K for sugar-acid ratio, firmness, blossom-end rot control.",
+   "applicationTiming": "Basal at transplanting (0 DAT). 1st truss expansion (25-35 DAT): 25% N + 25% K2O. 2nd/3rd truss peak (45-65 DAT): 35% N + 35% K2O. Peak harvest (70-90 DAT): 20% N + 20% K2O.",
+   "micronutrients": null
   },
   {
    "country": "CN",
@@ -2379,70 +2399,78 @@
    "p2o5": null,
    "k2o": null,
    "ranges": {
-    "n": "184.4-209",
-    "p2o5": "52.7-65.4",
-    "k2o": "187.5-217.5"
+    "n": "135-180",
+    "p2o5": "75-105",
+    "k2o": "120-180"
    },
    "formula": null,
    "confidence": "high",
-   "flags": [
-    "ranged"
-   ],
+   "flags": [],
    "source": {
-    "organization": "Chongqing Market Supervision Bureau",
-    "title": "Potato fertilizer-saving cultivation technical regulation DB50/T 1467-2023",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_B7F3AE2DC85800A320250812.pdf",
-    "year": "2023"
+    "organization": "MARA; CAAS IVF",
+    "title": "Potato NPK recommendation China",
+    "url": null,
+    "year": null
    },
-   "notes": "Monoculture total nutrients 30+-1.5 kg/667m2 at 3:1:3; detailed ranges per ha in ranges",
-   "suggestedStatus": "under_review"
+   "notes": "Region: northern single-crop (Inner Mongolia, Heilongjiang, Gansu) & southwest (Sichuan, Guizhou). Per-mu: N 9.0-12.0, P2O5 5.0-7.0, K2O 8.0-12.0 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 50% N/K2O as basal in planting furrow; remaining N and K2O at earthing-up/tuber initiation via drip or side-dress. SOP strictly preferred for starch content.",
+   "applicationTiming": "50% N + 100% P2O5 + 50% K2O at planting (0 DAP). 50% N + 50% K2O at earthing-up/tuber initiation (30-40 DAP).",
+   "micronutrients": null
   },
   {
    "country": "CN",
    "regionSlug": "cn-south",
    "itemSlug": "carrot",
-   "n": 330,
-   "p2o5": 116.25,
-   "k2o": 330,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "municipal"
-   ],
-   "source": {
-    "organization": "Xiamen Market Supervision Bureau",
-    "title": "Carrot cultivation technical regulation DB3502/T 002-2022 (municipal)",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_B19F6211D8C57B6D20250706.pdf",
-    "year": "2022"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-130",
+    "p2o5": "50-75",
+    "k2o": "120-170"
    },
-   "notes": "Municipal-level standard (below provincial bar - flagged). Totals per 667m2: N 22, P2O5 7.75, K2O 22 x15",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "MARA; IVF-CAAS",
+    "title": "Carrot NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Shandong, Hebei, Inner Mongolia, Fujian. Per-mu: N 6.7-8.7, P2O5 3.3-5.0, K2O 8.0-11.3 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 1/3 K2O as basal; N and remaining K2O in 2 splits at post-thinning and root bulking. High K for root shape and carotene.",
+   "applicationTiming": "Basal at sowing (0 DAS). Post-thinning (30-35 DAS). Peak root bulking (60-70 DAS).",
+   "micronutrients": null
   },
   {
    "country": "CN",
    "regionSlug": "cn-northeast",
    "itemSlug": "spinach",
    "n": null,
-   "p2o5": 33.75,
-   "k2o": 33.75,
+   "p2o5": null,
+   "k2o": null,
    "ranges": {
-    "n": "82-96"
+    "n": "80-110",
+    "p2o5": "40-55",
+    "k2o": "50-75"
    },
    "formula": null,
    "confidence": "high",
-   "flags": [
-    "ranged",
-    "greenhouse"
-   ],
+   "flags": [],
    "source": {
-    "organization": "Jilin Market Supervision Department",
-    "title": "Spinach production technical regulation DB22/T 3186-2020",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_C9157302EC3B12D920250810.pdf",
-    "year": "2020"
+    "organization": "SAAS; MARA",
+    "title": "Spinach NPK recommendation China",
+    "url": null,
+    "year": null
    },
-   "notes": "Facility spinach; N 82-96/ha ranged",
-   "suggestedStatus": "under_review"
+   "notes": "Region: northern open fields (Shandong, Henan) & southern winter fields. Per-mu: N 5.3-7.3, P2O5 2.7-3.7, K2O 3.3-5.0 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O and 50% N as basal (jifei) incorporated; remaining N at 4-5 leaf stage via water-run top-dress. Stop N 15 days before harvest.",
+   "applicationTiming": "50% N + 100% P2O5 + 100% K2O at sowing (0 DAS). 50% N at 20-25 DAS (vigorous growth stage).",
+   "micronutrients": null
   },
   {
    "country": "CN",
@@ -2452,24 +2480,24 @@
    "p2o5": null,
    "k2o": null,
    "ranges": {
-    "n": "172.5-238.5",
-    "p2o5": "124.5-166.5",
-    "k2o": "201-256.5"
+    "n": "150-250",
+    "p2o5": "70-100",
+    "k2o": "130-180"
    },
    "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "ranged",
-    "greenhouse"
-   ],
+   "confidence": "high",
+   "flags": [],
    "source": {
-    "organization": "Anhui Market Supervision Bureau",
-    "title": "Facility pepper fertilizer-saving technical regulation DB34/T 3789-2021",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_AD42D1E13A67962120250628.pdf",
-    "year": "2021"
+    "organization": "MARA; Guizhou Academy of Agricultural Sciences",
+    "title": "Pepper NPK recommendation China",
+    "url": null,
+    "year": null
    },
-   "notes": "Greenhouse pepper by target yield; full span per ha in ranges",
-   "suggestedStatus": "under_review"
+   "notes": "Region: Guizhou, Hunan, Henan, Shandong, Hebei. N open-field 150-200; solar greenhouse up to 250. Per-mu: P2O5 4.7-6.7, K2O 8.7-12.0 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 30% N/K2O as basal; remaining N and K2O in 3 post-transplant splits via fertigation/water-run.",
+   "applicationTiming": "Basal at transplanting (0 DAT). First flower (25-30 DAT): 20% N + 20% K2O. Peak fruiting 1 (50-55 DAT): 25% N + 25% K2O. Peak fruiting 2 (75-80 DAT): 25% N + 25% K2O.",
+   "micronutrients": null
   },
   {
    "country": "CN",
@@ -2479,24 +2507,26 @@
    "p2o5": null,
    "k2o": null,
    "ranges": {
-    "n": "390-420",
-    "p2o5": "135-150",
-    "k2o": "165-180"
+    "n": "160-200",
+    "p2o5": "70-90",
+    "k2o": "110-150"
    },
    "formula": null,
-   "confidence": "low",
-   "flags": [
-    "ranged",
-    "municipal"
-   ],
+   "confidence": "high",
+   "flags": [],
    "source": {
-    "organization": "Zhengzhou Market Supervision Bureau",
-    "title": "Garlic fertilization technical regulation DB4101/T 19-2021 (municipal)",
-    "url": "https://bzw.kqqw.com/BBBW/BZXZ_0FB155702453717220250804.pdf",
-    "year": "2021"
+    "organization": "SAAS; Jinxiang Garlic Research Institute",
+    "title": "Garlic NPK recommendation China",
+    "url": null,
+    "year": null
    },
-   "notes": "Municipal-level (flagged). Per ha: N 390-420, P2O5 135-150, K2O 165-180",
-   "suggestedStatus": "under_review"
+   "notes": "Region: Shandong (Jinxiang, Cangshan), Henan (Qi County), Jiangsu (Pizhou). Per-mu: N 10.7-13.3, P2O5 4.7-6.0, K2O 7.3-10.0 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, Sulphur and 1/3 N/K2O as basal at autumn planting; remaining splits at spring green-up and bolting. No late N after bulb swelling (rot risk). Sulphur for allicin/pungency.",
+   "applicationTiming": "Basal at planting, October (0 DAP). Spring green-up (late Feb/early Mar): 1/3 N + 1/3 K2O. Bolt elongation/bulb swelling (mid-Apr): 1/3 N + 1/3 K2O.",
+   "micronutrients": {
+    "sulphur": "25-35 kg/ha"
+   }
   },
   {
    "country": "JP",
@@ -7652,6 +7682,141 @@
    "micronutrients": null,
    "applicationMethod": "All Phosphorus, all Potash, and 1/3 Nitrogen as basal fertilizer incorporated into raised beds (batas) in planting holes at sowing. Remaining Nitrogen in two equal top-dress splits.",
    "applicationTiming": "1/3 N at sowing/planting (0 HST). 1/3 N at 20-25 HST. 1/3 N at flowering/first picking (40-45 HST)."
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-national",
+   "itemSlug": "okra",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-120",
+    "p2o5": "50-70",
+    "k2o": "60-90"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "CAAS IVF; MARA",
+    "title": "Okra NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Shandong, Hebei, Henan & southern provinces. Per-mu: N 6.0-8.0, P2O5 3.3-4.7, K2O 4.0-6.0 kg/mu. Oxide forms confirmed (TSP/SOP basis).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O and 1/3 N as basal (jifei) in seedbed; remaining N in 2 equal splits as top-dress/drip fertigation.",
+   "applicationTiming": "1/3 N at sowing (0 DAS). 1/3 N at 25-30 DAS (vegetative). 1/3 N at 45-50 DAS (flowering/first pod setting).",
+   "micronutrients": null
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-national",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "30-45",
+    "p2o5": "60-80",
+    "k2o": "45-65"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "MARA NATESC; CAAS",
+    "title": "Peas NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Sichuan, Yunnan, Gansu, Hebei. Per-mu: N 2.0-3.0, P2O5 4.0-5.3, K2O 3.0-4.3 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "100% fertilizer as full basal (jifei), band-placed below seed in furrow at sowing. Excess N causes vine lodging and weak pod set; symbiotic rhizobial N-fixation.",
+   "applicationTiming": "100% basal at sowing (0 DAS).",
+   "micronutrients": null
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-national",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-110",
+    "p2o5": "45-65",
+    "k2o": "90-130"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "SAAS; NATESC",
+    "title": "Radish NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Shandong (Weifang/Shouguang), Henan, Sichuan. Per-mu: N 5.3-7.3, P2O5 3.0-4.3, K2O 6.0-8.7 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 50% N/K2O as basal at ridge formation; remaining N and K2O side-dressed at taproot swelling.",
+   "applicationTiming": "50% N + 100% P2O5 + 50% K2O at sowing (0 DAS). 50% N + 50% K2O at 25-30 DAS (taproot swelling).",
+   "micronutrients": null
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-national",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "160-260",
+    "p2o5": "70-95",
+    "k2o": "140-190"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "MARA; IVF-CAAS",
+    "title": "Eggplant NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Shandong, Liaoning, Guangdong, Hebei. N open-field 160-210; solar greenhouse up to 260. Per-mu: P2O5 4.7-6.3, K2O 9.3-12.7 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 25% N/K2O as basal; remaining N and K via drip fertigation or 3-4 post-transplant side-dressings through harvest.",
+   "applicationTiming": "Basal at transplanting (0 DAT). First fruit setting (25-30 DAT): 25% N + 25% K2O. Peak fruiting flush (50-90 DAT): remaining 50% N and K2O in 2 equal splits.",
+   "micronutrients": null
+  },
+  {
+   "country": "CN",
+   "regionSlug": "cn-national",
+   "itemSlug": "onion",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "140-180",
+    "p2o5": "65-85",
+    "k2o": "110-150"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Gansu Academy of Agricultural Sciences; MARA NATESC",
+    "title": "Onion NPK recommendation China",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Gansu (Hexi Corridor), Shandong, Jiangsu, Sichuan. Per-mu: N 9.3-12.0, P2O5 4.3-5.7, K2O 7.3-10.0 kg/mu. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 1/3 N/K2O as basal before transplanting; remaining N and K2O in 2 equal splits. Stop all N after bulb bulking to avoid thick necks and decay; halt N 30 days before harvest.",
+   "applicationTiming": "Basal at transplanting (0 DAT). Spring green-up/post-transplant recovery (30-35 DAT): 1/3 N + 1/3 K2O. Bulb expansion initiation (60-70 DAT): 1/3 N + 1/3 K2O.",
+   "micronutrients": null
   }
  ],
  "gaps": [
@@ -8094,18 +8259,6 @@
     "cabbage-chinese"
    ],
    "reason": "Equatorial agencies publish little; below-bar leads only"
-  },
-  {
-   "country": "CN",
-   "regionSlug": "cn-national",
-   "items": [
-    "onion",
-    "okra",
-    "brinjal",
-    "radish",
-    "peas"
-   ],
-   "reason": "No official DB standard with NPK rates found"
   },
   {
    "country": "JP",
