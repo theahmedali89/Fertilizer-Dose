@@ -20,6 +20,7 @@ import { seedBatch6 } from "./seed-batch6";
 import { seedBatch7 } from "./seed-batch7";
 import { seedBatch8 } from "./seed-batch8";
 import { seedCropdose } from "./seed-cropdose";
+import { seedPk25 } from "./seed-pk25";
 import { seedVegplant } from "./seed-vegplant";
 import { seedVegdose } from "./seed-vegdose";
 import { seedTranslations } from "./seed-translations";
@@ -295,6 +296,9 @@ async function main() {
 
   // ── Vegetable NPK dose recommendations (16 countries) — idempotent, approved 2026-10-08 ("yes kro") ──
   await seedVegdose(db);
+
+  // ── Pakistan 25-crop NPK dose recommendations — idempotent, user-supplied 2026-10-13 ──
+  await seedPk25(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
