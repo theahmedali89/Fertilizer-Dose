@@ -29,6 +29,12 @@ const VERDICT_STYLE: Record<Verdict, { ring: string; bg: string; badge: string; 
     badge: "bg-red-600 text-white",
     icon: "❌",
   },
+  unknown: {
+    ring: "border-slate-300 dark:border-slate-600",
+    bg: "bg-slate-50 dark:bg-slate-900/40",
+    badge: "bg-slate-500 text-white",
+    icon: "❓",
+  },
 };
 
 function Select({

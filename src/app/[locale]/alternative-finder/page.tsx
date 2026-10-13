@@ -41,6 +41,11 @@ export default async function AlternativeFinderPage({
             the closest nutrient-equivalent combinations from products that are
             usually available.
           </p>
+          <div className="mt-6 max-w-2xl rounded-xl border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
+            <p className="text-sm leading-relaxed text-amber-800 dark:text-amber-300">
+              <strong>⚠️ Important:</strong> Nutrient-equivalent math does not prove chemical compatibility, salt-index safety, or timing suitability. Confirm any substitution with your local agronomist before applying.
+            </p>
+          </div>
         </div>
       </section>
 

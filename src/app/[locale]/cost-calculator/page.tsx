@@ -41,6 +41,11 @@ export default async function CostCalculatorPage({
             reveal its true cost per kg of nutrient, benchmarked against
             standard DAP, Urea, SOP and MOP.
           </p>
+          <div className="mt-6 max-w-2xl rounded-xl border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
+            <p className="text-sm leading-relaxed text-amber-800 dark:text-amber-300">
+              <strong>⚠️ Note:</strong> Reference prices are illustrative and editable — not live market prices. Use your area&apos;s actual rates for accurate comparison.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -25,6 +25,7 @@
       "targetYieldUnitAcre": "t/acre",
       "targetYieldPlaceholder": "e.g. 5",
       "targetYieldHint": "Scales the dose to your yield goal — capped at 2× the base dose.",
+      "targetYieldWarning": "This is an estimate only. Actual fertilizer need depends on soil test, variety, and field conditions. Scaling beyond 2× is not agronomically valid.",
       "yieldError": "Please enter a valid target yield greater than zero.",
       "rangeHint": "Dose range",
       "rangeBadge": "Range"

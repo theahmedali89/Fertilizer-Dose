@@ -2,7 +2,7 @@
 // Real agronomic tank-mix compatibility rules for common fertilizers.
 // Keyed by unordered pair "aId|bId" (alphabetical order).
 
-export type Verdict = "safe" | "caution" | "danger";
+export type Verdict = "safe" | "caution" | "danger" | "unknown";
 
 export interface Fertilizer {
   id: string;
@@ -35,13 +35,15 @@ function pair(a: string, b: string): string {
   return [a, b].sort().join("|");
 }
 
-// Default rule when no specific entry exists
-const DEFAULT_SAFE: Rule = {
-  verdict: "safe",
-  title: "Likely compatible",
+// Default rule when no specific entry exists — NEVER "safe".
+// Unknown combinations must not be presented as compatible.
+const DEFAULT_UNKNOWN: Rule = {
+  verdict: "unknown",
+  title: "UNKNOWN — Not verified",
   explanation:
-    "No known adverse reaction between these two in a tank mix. Still, do a small jar test first: mix a little of both in water, wait 15 minutes, and check for heat, gas, curdling, or sediment before filling the whole tank.",
-  instead: "",
+    "Is combination ka koi verified compatibility data nahi hai. Ise 'safe' mat samjho. Mix karne se pehle fertilizer label ki instructions follow karo, ya jar test karo: thodi miqdar pani me milao, 15 minute wait karo, aur heat, gas, dahi-jaisi phat-ti ya sediment check karo. Jab tak sure na ho, mix mat karo.",
+  instead:
+    "Agar dono fertilizers zaroori hain to unhe alag-alag apply karo — ya pehle chhote scale par jar test karke tasdeeq karo.",
 };
 
 const RULES: Record<string, Rule> = {
@@ -197,7 +199,7 @@ export function checkCompatibility(aId: string, bId: string): Rule {
       instead: "",
     };
   }
-  return RULES[pair(aId, bId)] ?? DEFAULT_SAFE;
+  return RULES[pair(aId, bId)] ?? DEFAULT_UNKNOWN;
 }
 
 export function fertilizerName(id: string): string {
