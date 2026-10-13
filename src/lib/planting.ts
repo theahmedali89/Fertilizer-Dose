@@ -16,7 +16,7 @@ import type { SourceRef, GrowingCategory } from "./growing";
 
 export interface Region {
   id: string; // e.g. "pk-punjab"
-  country: "pakistan" | "india";
+  country: "pakistan" | "india" | "malaysia" | "south_korea";
   countryName: string;
   name: string;
 }
@@ -49,13 +49,18 @@ export const REGIONS: Region[] = [
   { id: "in-haryana", country: "india", countryName: "India", name: "Haryana" },
   { id: "in-up", country: "india", countryName: "India", name: "Uttar Pradesh" },
   { id: "in-tn", country: "india", countryName: "India", name: "Tamil Nadu" },
+  { id: "my-peninsular", country: "malaysia", countryName: "Malaysia", name: "Peninsular Malaysia" },
+  { id: "my-sabah", country: "malaysia", countryName: "Malaysia", name: "Sabah" },
+  { id: "my-cameron", country: "malaysia", countryName: "Malaysia", name: "Cameron Highlands" },
+  { id: "kr-gyeonggi", country: "south_korea", countryName: "South Korea", name: "Gyeonggi" },
+  { id: "kr-gangwon", country: "south_korea", countryName: "South Korea", name: "Gangwon Highlands" },
 ];
 
 export function getRegion(id: string): Region | undefined {
   return REGIONS.find((r) => r.id === id);
 }
 
-export function regionsByCountry(country: "pakistan" | "india"): Region[] {
+export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea"): Region[] {
   return REGIONS.filter((r) => r.country === country);
 }
 
@@ -192,6 +197,200 @@ function indiaVegWindows(): PlantingWindow[] {
   return out;
 }
 
+// ── Malaysia vegetable planting windows (institutional, verified) ──
+// Source: MARDI (Institut Penyelidikan dan Kemajuan Pertanian Malaysia),
+// Jabatan Pertanian Malaysia (DOA), Jabatan Pertanian Sabah.
+// Two zones: Lowland (Tanah Rendah — Peninsular & Sabah) and Highland
+// (Tanah Tinggi — Cameron Highlands & Kundasang). Supplied by Ahmed 2026-10-13.
+
+interface ZonedVegWindowSpec extends VegWindowSpec {
+  regions: string[];
+}
+
+const malaysiaVegSource = (region: Region): SourceRef => ({
+  organization: "MARDI; Jabatan Pertanian Malaysia (DOA); Jabatan Pertanian Sabah",
+  title: "Vegetable planting windows — Malaysia",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const MALAYSIA_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (Bendi) — direct seeded, Lowland —
+  { regions: ["my-peninsular", "my-sabah"], itemSlug: "okra", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Cycle 1 direct sowing (lubang tanaman): Feb – Mar.", seasonName: "Lowland (Tanah Rendah)" },
+  { regions: ["my-peninsular", "my-sabah"], itemSlug: "okra", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Cycle 2 direct sowing (lubang tanaman): Jul – Aug.", seasonName: "Lowland (Tanah Rendah)" },
+  // — 2. Peas (Kacang Pis/Manis) — direct seeded on trellises, Highland —
+  { regions: ["my-cameron"], itemSlug: "peas", activityType: "SOW", startMonth: 1, endMonth: 3, notes: "Cycle 1 direct sowing on trellises: Jan – Mar.", seasonName: "Highland (Cameron Highlands)" },
+  { regions: ["my-cameron"], itemSlug: "peas", activityType: "SOW", startMonth: 7, endMonth: 9, notes: "Cycle 2 direct sowing on trellises: Jul – Sep.", seasonName: "Highland (Cameron Highlands)" },
+  // — 3. Spinach (Bayam) — year-round continuous sowing, Lowland —
+  { regions: ["my-peninsular", "my-sabah"], itemSlug: "spinach", activityType: "SOW", startMonth: 1, endMonth: 12, notes: "Year-round: continuous sowing every 3–4 weeks, direct broadcast/line on raised beds.", seasonName: "Lowland (all seasons)" },
+  // — 4. Cauliflower (Kobis Bunga) —
+  { regions: ["my-cameron"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 2, endMonth: 4, notes: "Highland nursery sowing (peak cycle): Feb – Apr.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 8, endMonth: 10, notes: "Highland nursery sowing (peak cycle): Aug – Oct.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-peninsular"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 10, endMonth: 12, notes: "Lowland F1 hybrid nursery sowing: Oct – Dec.", seasonName: "Sub-tropical lowlands" },
+  { regions: ["my-peninsular"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 11, endMonth: 1, notes: "Lowland transplanting: Nov – Jan.", seasonName: "Sub-tropical lowlands" },
+  // — 5. Cabbage (Kobis Bulat) — Highland —
+  { regions: ["my-cameron"], itemSlug: "cabbage", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Cycle 1 nursery sowing: Jan – Feb.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "cabbage", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Cycle 2 nursery sowing: Jul – Aug.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "Cycle 1 transplanting (25–28 days after nursery): Feb – Mar.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Cycle 2 transplanting (25–28 days after nursery): Aug – Sep.", seasonName: "Highland (Tanah Tinggi)" },
+  // — 6. Radish (Lobak Putih) — direct seeded on beds —
+  { regions: ["my-cameron", "my-peninsular"], itemSlug: "radish", activityType: "SOW", startMonth: 2, endMonth: 4, notes: "Cycle 1 direct sowing on beds (batas): Feb – Apr.", seasonName: "Highland & selected lowlands" },
+  { regions: ["my-cameron", "my-peninsular"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 10, notes: "Cycle 2 direct sowing on beds (batas): Aug – Oct.", seasonName: "Highland & selected lowlands" },
+  // — 7. Carrot (Lobak Merah) — direct seeded, Highland exclusive —
+  { regions: ["my-cameron"], itemSlug: "carrot", activityType: "SOW", startMonth: 1, endMonth: 3, notes: "Cycle 1 direct sowing in fine tilth beds: Jan – Mar.", seasonName: "Highland exclusive" },
+  { regions: ["my-cameron"], itemSlug: "carrot", activityType: "SOW", startMonth: 7, endMonth: 9, notes: "Cycle 2 direct sowing in fine tilth beds: Jul – Sep.", seasonName: "Highland exclusive" },
+  // — 8. Brinjal (Terung) — Lowland —
+  { regions: ["my-peninsular"], itemSlug: "brinjal", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Cycle 1 nursery sowing: Jan – Feb.", seasonName: "Lowland (fertigasi/open field)" },
+  { regions: ["my-peninsular"], itemSlug: "brinjal", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Cycle 2 nursery sowing: Jun – Jul.", seasonName: "Lowland (fertigasi/open field)" },
+  { regions: ["my-peninsular"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "Cycle 1 transplanting (25–30 DAT): Feb – Mar.", seasonName: "Lowland (fertigasi/open field)" },
+  { regions: ["my-peninsular"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Cycle 2 transplanting: Jul – Aug.", seasonName: "Lowland (fertigasi/open field)" },
+  // — 9. Garlic (Bawang Putih) — direct cloves, Highland microclimate —
+  { regions: ["my-cameron"], itemSlug: "garlic", activityType: "PLANT", startMonth: 9, endMonth: 11, notes: "Direct planted cloves: Sep – Nov.", seasonName: "Highland microclimate" },
+  // — 10. Potato (Ubi Kentang) — tubers in deep furrows, Highland —
+  { regions: ["my-cameron"], itemSlug: "potato", activityType: "PLANT", startMonth: 1, endMonth: 3, notes: "Main season: seed tubers planted in deep furrows, Jan – Mar.", seasonName: "Highland (Kundasang & Cameron)" },
+  { regions: ["my-cameron"], itemSlug: "potato", activityType: "PLANT", startMonth: 7, endMonth: 8, notes: "Off-season: seed tubers planted in deep furrows, Jul – Aug.", seasonName: "Highland (Kundasang & Cameron)" },
+  // — 11. Chili (Cili Merah/Kulai) — Lowland —
+  { regions: ["my-peninsular"], itemSlug: "chili", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Cycle 1 semaian (nursery): Jan – Feb.", seasonName: "Lowland (Tanah Rendah)" },
+  { regions: ["my-peninsular"], itemSlug: "chili", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Cycle 2 semaian (nursery): Jun – Jul.", seasonName: "Lowland (Tanah Rendah)" },
+  { regions: ["my-peninsular"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "Cycle 1 transplanting (3–4 weeks nursery): Feb – Mar.", seasonName: "Lowland (Tanah Rendah)" },
+  { regions: ["my-peninsular"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Cycle 2 transplanting: Jul – Aug.", seasonName: "Lowland (Tanah Rendah)" },
+  // — 12. Shallot/Onion (Bawang Merah) — direct planting, Lowland dry seasons —
+  { regions: ["my-peninsular", "my-sabah"], itemSlug: "shallot", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Dry season 1 direct planting (umbisi)/TSS nursery: Jan – Feb.", seasonName: "Lowland dry season" },
+  { regions: ["my-peninsular", "my-sabah"], itemSlug: "shallot", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Dry season 2 direct planting (umbisi)/TSS nursery: Jun – Jul.", seasonName: "Lowland dry season" },
+  // — 13. Tomato —
+  { regions: ["my-cameron"], itemSlug: "tomato", activityType: "SOW", startMonth: 1, endMonth: 3, notes: "Highland nursery sowing (peak): Jan – Mar.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "tomato", activityType: "SOW", startMonth: 6, endMonth: 8, notes: "Highland nursery sowing (peak): Jun – Aug.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 2, endMonth: 4, notes: "Highland transplanting (25–30 days after nursery): Feb – Apr.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 7, endMonth: 9, notes: "Highland transplanting (25–30 days after nursery): Jul – Sep.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-peninsular"], itemSlug: "tomato", activityType: "SOW", startMonth: 5, endMonth: 7, notes: "Lowland fertigasi nursery sowing: May – Jul.", seasonName: "Lowland rain-shelter fertigation" },
+  { regions: ["my-peninsular"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 6, endMonth: 8, notes: "Lowland transplanting: Jun – Aug.", seasonName: "Lowland rain-shelter fertigation" },
+  // — 14. Chinese Cabbage (Sawi Putih/Kobis Cina) —
+  { regions: ["my-cameron"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 1, endMonth: 12, notes: "Highland year-round nursery sowing.", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-cameron"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 1, endMonth: 12, notes: "Highland year-round transplanting (20–25 days after nursery).", seasonName: "Highland (Tanah Tinggi)" },
+  { regions: ["my-peninsular"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Lowland nursery sowing (cooler months): Sep – Nov.", seasonName: "Lowland cooler months" },
+  { regions: ["my-peninsular"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 10, endMonth: 12, notes: "Lowland transplanting (20–25 days after nursery): Oct – Dec.", seasonName: "Lowland cooler months" },
+];
+
+function malaysiaVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of MALAYSIA_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: malaysiaVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
+// ── South Korea vegetable planting windows (institutional, verified) ──
+// Source: RDA (Rural Development Administration — 농촌진흥청),
+// National Institute of Horticultural and Herbal Science (NIHHS),
+// Gangwon Highland Agriculture Research Institute.
+// Systems: Spring (봄재배), Highland Summer (고랭지 하계재배),
+// Autumn/Kimchi Season (가을 김장재배). Supplied by Ahmed 2026-10-13.
+
+const koreaVegSource = (region: Region): SourceRef => ({
+  organization: "RDA (Rural Development Administration); NIHHS; Gangwon Highland Agriculture Research Institute",
+  title: "Vegetable planting windows — South Korea",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const KOREA_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (오크라) — summer open-field, Jeju & southern coast —
+  { regions: ["kr-gyeonggi"], itemSlug: "okra", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Nursery/direct sowing: Apr 15 – May 10.", seasonName: "Summer open-field" },
+  { regions: ["kr-gyeonggi"], itemSlug: "okra", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting: May 15 – May 30.", seasonName: "Summer open-field" },
+  // — 2. Peas (완두) — spring plains & overwintered south —
+  { regions: ["kr-gyeonggi"], itemSlug: "peas", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Spring (plains) direct sowing under mulch: Mar 5 – Mar 25.", seasonName: "Spring (봄재배)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Autumn (south) direct sowing under mulch: Oct 15 – Nov 5.", seasonName: "Overwintered south" },
+  // — 3. Spinach (시금치) — spring open-field & winter outdoor —
+  { regions: ["kr-gyeonggi"], itemSlug: "spinach", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring direct drill/broadcast: Mar 10 – Apr 15.", seasonName: "Spring open-field" },
+  { regions: ["kr-gyeonggi"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "Autumn/winter (Namhae) direct drill/broadcast: Sep 15 – Oct 20.", seasonName: "Winter outdoor (노지 월동)" },
+  // — 4. Cauliflower (콜리플라워) — spring tunnel & autumn open-field —
+  { regions: ["kr-gyeonggi"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Spring nursery sowing: Feb 15 – Mar 10.", seasonName: "Spring plastic tunnel" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 7, endMonth: 7, notes: "Autumn nursery sowing: Jul 10 – Jul 30.", seasonName: "Autumn open-field" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Spring transplanting: Mar 25 – Apr 15.", seasonName: "Spring plastic tunnel" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 8, endMonth: 8, notes: "Autumn transplanting: Aug 10 – Aug 25.", seasonName: "Autumn open-field" },
+  // — 5. Cabbage (양배추) — spring, highland summer, autumn —
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage", activityType: "SOW", startMonth: 2, endMonth: 2, notes: "Spring nursery sowing: Feb 1 – Feb 25.", seasonName: "Spring (봄재배)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage", activityType: "SOW", startMonth: 7, endMonth: 7, notes: "Autumn nursery sowing: Jul 5 – Jul 25.", seasonName: "Autumn (가을재배)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Spring transplanting: Mar 20 – Apr 10.", seasonName: "Spring (봄재배)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 8, endMonth: 8, notes: "Autumn transplanting: Aug 5 – Aug 20.", seasonName: "Autumn (가을재배)" },
+  { regions: ["kr-gangwon"], itemSlug: "cabbage", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Gangwon highland summer nursery sowing: Apr 15 – May 15.", seasonName: "Highland summer (고랭지 하계재배)" },
+  { regions: ["kr-gangwon"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Gangwon highland summer transplanting: May 20 – Jun 15.", seasonName: "Highland summer (고랭지 하계재배)" },
+  // — 6. Radish (무 Korean Daikon) — direct seeded under vinyl mulch —
+  { regions: ["kr-gyeonggi"], itemSlug: "radish", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring mulch direct sowing: Mar 25 – Apr 20.", seasonName: "Spring tunnel (봄터널)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "Autumn kimchi radish (김장무) direct sowing: Aug 15 – Aug 30.", seasonName: "Autumn kimchi (peak)" },
+  { regions: ["kr-gangwon"], itemSlug: "radish", activityType: "SOW", startMonth: 5, endMonth: 6, notes: "Gangwon highland direct sowing: May 15 – Jun 20.", seasonName: "Highland summer radish" },
+  // — 7. Carrot (당근) — direct seeded on high ridges —
+  { regions: ["kr-gyeonggi"], itemSlug: "carrot", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring inland direct sowing on high ridges: Mar 15 – Apr 10.", seasonName: "Spring inland" },
+  { regions: ["kr-gangwon"], itemSlug: "carrot", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Autumn/Jeju winter carrot direct sowing: Jul 25 – Aug 20.", seasonName: "Autumn Jeju winter (제주 당근)" },
+  // — 8. Brinjal (가지) — open-field summer / vinyl house —
+  { regions: ["kr-gyeonggi"], itemSlug: "brinjal", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Nursery sowing in heat bed: Feb 15 – Mar 10.", seasonName: "Open field / vinyl house" },
+  { regions: ["kr-gyeonggi"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Transplanting after late frost risk: Apr 25 – May 15.", seasonName: "Open field / vinyl house" },
+  // — 9. Garlic (마늘) — overwintering crop, direct cloves under black vinyl —
+  { regions: ["kr-gyeonggi"], itemSlug: "garlic", activityType: "PLANT", startMonth: 9, endMonth: 10, notes: "Warm-type (Namdo/Daeseo, south) cloves planted under black vinyl: Sep 20 – Oct 15.", seasonName: "Overwintering (월동재배)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 11, notes: "Cold-type (Hanji, inland/Uiseong) cloves planted under black vinyl: Oct 15 – Nov 10.", seasonName: "Overwintering (월동재배)" },
+  // — 10. Potato (감자) — tubers under mulch —
+  { regions: ["kr-gyeonggi"], itemSlug: "potato", activityType: "PLANT", startMonth: 2, endMonth: 3, notes: "Spring mulch (Superior) seed tubers planted directly: Feb 20 – Mar 20.", seasonName: "Spring plains (봄재배)" },
+  { regions: ["kr-gangwon"], itemSlug: "potato", activityType: "PLANT", startMonth: 4, endMonth: 5, notes: "Gangwon highland (Daegwallyeong) seed tubers planted: Apr 20 – May 10.", seasonName: "Highland (고랭지재배)" },
+  // — 11. Chili (고추 red pepper) — main outdoor season —
+  { regions: ["kr-gyeonggi"], itemSlug: "chili", activityType: "SOW", startMonth: 2, endMonth: 2, notes: "Nursery sowing in heating glasshouse: Feb 5 – Feb 25.", seasonName: "Main outdoor (노지 정식)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting after late spring freeze: May 1 – May 15.", seasonName: "Main outdoor (노지 정식)" },
+  // — 12. Onion (양파) — autumn-transplanted overwintering —
+  { regions: ["kr-gyeonggi"], itemSlug: "onion", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Nursery bed sowing: Aug 25 – Sep 10.", seasonName: "Autumn-transplanted overwintering (가을정식)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 10, endMonth: 11, notes: "Transplanting: Oct 20 – Nov 10.", seasonName: "Autumn-transplanted overwintering (가을정식)" },
+  // — 13. Tomato (토마토) — protected greenhouse & Gangwon highland —
+  { regions: ["kr-gyeonggi"], itemSlug: "tomato", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Spring house nursery sowing: Jan 10 – Feb 10.", seasonName: "Protected greenhouse" },
+  { regions: ["kr-gyeonggi"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Spring transplanting: Mar 15 – Apr 5.", seasonName: "Protected greenhouse" },
+  { regions: ["kr-gangwon"], itemSlug: "tomato", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Summer highland nursery sowing: Mar 15 – Apr 10.", seasonName: "Gangwon highland" },
+  { regions: ["kr-gangwon"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Summer highland transplanting: May 5 – May 25.", seasonName: "Gangwon highland" },
+  // — 14. Chinese Cabbage (배추 kimchi baechu) — spring, highland, autumn kimchi —
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Spring nursery sowing: Mar 1 – Mar 25.", seasonName: "Spring (봄배추)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "Autumn kimchi (김장배추) nursery sowing: Aug 10 – Aug 25.", seasonName: "Autumn kimchi (major baseline)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 4, endMonth: 4, notes: "Spring transplanting: Apr 5 – Apr 25.", seasonName: "Spring (봄배추)" },
+  { regions: ["kr-gyeonggi"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Autumn kimchi transplanting: Aug 25 – Sep 10.", seasonName: "Autumn kimchi (major baseline)" },
+  { regions: ["kr-gangwon"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 5, endMonth: 6, notes: "Gangwon highland nursery sowing: May 20 – Jun 20.", seasonName: "Highland (고랭지 배추)" },
+  { regions: ["kr-gangwon"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 6, endMonth: 7, notes: "Gangwon highland transplanting: Jun 20 – Jul 15.", seasonName: "Highland (고랭지 배추)" },
+];
+
+function koreaVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of KOREA_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: koreaVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
 /**
  * Seeds derived strictly from the crop library's published seasonDetail lines:
  * wheat "Sow late October – November; harvest March – April" · rice "Transplant
@@ -222,6 +421,10 @@ export const PLANTING_WINDOWS: PlantingWindow[] = [
   window("in-punjab", "sugarcane", 2, 3, null, "Spring planting."),
   // — India vegetable windows (ICAR-IIVR / PAU / HAU / TNAU, verified) —
   ...indiaVegWindows(),
+  // — Malaysia vegetable windows (MARDI / DOA / Sabah, verified) —
+  ...malaysiaVegWindows(),
+  // — South Korea vegetable windows (RDA / NIHHS / Gangwon, verified) —
+  ...koreaVegWindows(),
 ];
 
 /** True if `month` (1–12) falls inside a possibly year-crossing window. */
