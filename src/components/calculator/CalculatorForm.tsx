@@ -36,7 +36,7 @@ export function CalculatorForm({ crops, initialArea, initialUnit, initialCrop }:
   // Land Area Calculator integration: pre-fill from ?area=&unit= (validated).
   const [area, setArea] = useState(() => {
     const v = parseFloat(initialArea ?? "");
-    return Number.isFinite(v) && v > 0 ? String(v) : "5";
+    return Number.isFinite(v) && v > 0 ? String(v) : "1";
   });
   const [unit, setUnit] = useState(() => {
     return AREA_UNITS.some((u) => u.id === initialUnit) ? (initialUnit as string) : "acre";
