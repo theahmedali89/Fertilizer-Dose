@@ -3367,20 +3367,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "160-270",
+   "p2o5": "70-100",
+   "k2o": "180-260"
   },
-  "notes": "Teneur N: 1.5 (plein champ) / 2.1 (sous abri); rdt ref 175 t/ha",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; SONITO (Societe Nationale Interprofessionnelle de la Tomate)",
+   "title": "Tomato NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: PACA / Vallee du Rhone, Nouvelle-Aquitaine (Marmande - frais), Sud-Ouest (industrie). France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O). N variants: 160-210 open field industry; 220-270 under shelter (sous abri hors-sol/sol frais).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply 20% N + full P + 20% K as basal (au fond); inject 80% N and K via fertigation weekly from 1st-truss flowering through fruit enlargement and ripening (maturation). High potash for Brix, fruit firmness and blossom-end rot (necrose apicale) control.",
+  "applicationTiming": "Fumure de fond at transplanting (0 DAT). Rooting and 1st-truss flowering (15-30 DAT). Fruit enlargement and full harvest (35-95 DAT).",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3389,20 +3394,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "110-150",
+   "p2o5": "50-75",
+   "k2o": "100-140"
   },
-  "notes": "Teneur N: 2.0; oignon",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; Chambre d'Agriculture du Loiret",
+   "title": "Onion NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Centre-Val de Loire (Beauce), Grand Est (Champagne), Nouvelle-Aquitaine. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply 30% N + full P + 33% K2O as basal (fumure de fond); split the remaining N and K2O in two fractions. Stop all late N once bulbification begins to prevent thick necks (collets epais) and storage rots (pourritures de conservation).",
+  "applicationTiming": "Fumure de fond at sowing/transplanting (0 DAS/DAT): 30% N + 100% P2O5 + 33% K2O. 1st top-dress (3-4 leaf stage, 30-35 DAS/DAT): 35% N + 33% K2O. 2nd top-dress (bulbification onset, 55-65 DAS/DAT; halt all N 30 days before harvest): 35% N + 34% K2O.",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3411,20 +3421,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "130-180",
+   "p2o5": "80-120",
+   "k2o": "180-260"
   },
-  "notes": "Teneur N: 2.8; pomme de terre primeur 30-40 t/ha",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "ARVALIS - Institut du vegetal; COMIFER",
+   "title": "Potato NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Hauts-de-France, Picardie, Champagne-Ardenne. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5 and 50% N/K2O at ridge planting (plantation/buttage); apply the remaining N and K2O at earthing-up / tuber initiation. Sulfate de potasse strictly preferred to preserve dry matter (matiere seche). N per COMIFER bilan previsionnel method.",
+  "applicationTiming": "Fumure de fond at planting (0 DAP): 50% N + 100% P2O5 + 50% K2O. Top-dress at earthing-up / tuber initiation (25-35 DAP): 50% N + 50% K2O.",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3433,20 +3448,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "100-135",
+   "p2o5": "50-75",
+   "k2o": "130-190"
   },
-  "notes": "Teneur N: 1.2; carotte racine 60-65 t/ha",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; Chambre d'Agriculture Nouvelle-Aquitaine",
+   "title": "Carrot NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Nouvelle-Aquitaine (Landes sand belt), Normandie (Creances), Bretagne. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5 and 1/2 K2O at ridge formation (confection des buttes); split N and the remaining K2O at thinning (eclaircissage) and root bulking (grossissement). N is capped to prevent forking, cavity spot and root splitting; high potash for root skin finish and storage quality.",
+  "applicationTiming": "Fumure de fond at sowing (0 DAS): 35% N + 100% P2O5 + 50% K2O. 1st top-dress (3-4 leaf stage, 30-35 DAS): 35% N + 25% K2O. 2nd top-dress (root bulking / grossissement racinaire, 60-70 DAS): 30% N + 25% K2O.",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3455,20 +3475,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "90-120",
+   "p2o5": "40-60",
+   "k2o": "70-100"
   },
-  "notes": "Teneur N: 3.7; epinard feuilles industrie 20-30 t/ha",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "Chambre d'Agriculture de Bretagne; CTIFL",
+   "title": "Spinach NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Bretagne (Finistere, Morbihan), Hauts-de-France. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5, K2O and 50% N in seedbed preparation; top-dress the remaining N at the 4-5 leaf stage (apport de couverture). N threshold strictly regulated per COMIFER to avoid petiole nitrate accumulation.",
+  "applicationTiming": "Fumure de fond at sowing (0 DAS): 50% N + 100% P2O5 + 100% K2O. Top-dress (18-22 DAS): 50% N (halt at least 15 days before cutting).",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3477,20 +3502,27 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "180-230",
+   "p2o5": "60-90",
+   "k2o": "130-180"
   },
-  "notes": "Teneur N: 2.5 (ete/automne) / 4.3 (hiver)",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "Chambre d'Agriculture de Bretagne; CTIFL",
+   "title": "Cauliflower NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Bretagne (Ceinture Doree: Saint-Pol-de-Leon / Paimpol), Normandie. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5, Boron and 1/3 N/K2O before transplanting (fumure de fond); split the remaining N and K2O in two top-dress applications. Boron prevents hollow stem (moelle creuse).",
+  "applicationTiming": "Fumure de fond (0 DAT): 1/3 N + 100% P2O5 + 1/3 K2O. 1st top-dress (rosette stage, 25-30 DAT): 1/3 N + 1/3 K2O. 2nd top-dress (curd induction / initiation de la pomme, 50-55 DAT): 1/3 N + 1/3 K2O.",
+  "micronutrients": {
+   "boron": "1.5-2.5 kg/ha"
+  }
  },
  {
   "country": "FR",
@@ -3499,20 +3531,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "140-230",
+   "p2o5": "65-90",
+   "k2o": "150-220"
   },
-  "notes": "Teneur N: 3.3; piment",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; Syndicat du Piment d'Espelette AOP",
+   "title": "Pepper NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: PACA (Vaucluse, Bouches-du-Rhone), Nouvelle-Aquitaine (Pyrenees-Atlantiques / Espelette). France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O). N variants: 140-190 open field (plein champ); 190-230 under greenhouse (sous serre).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply 20% N + full P + 20% K as basal (fumure de fond); inject the remaining N and K via drip fertigation (goutte-a-goutte) at flowering (floraison), fruit setting (nouaison) and fruit enlargement. Capsicum annuum - sweet pepper / Espelette chili.",
+  "applicationTiming": "Fumure de fond at transplanting (0 DAT). Early vegetative phase (15-35 DAT). Flowering, fruit setting and maturation (40-100 DAT).",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3521,20 +3558,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "150-240",
+   "p2o5": "65-90",
+   "k2o": "150-220"
   },
-  "notes": "Teneur N: 1.4; aubergine fruit 100-130 t/ha",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; Chambre d'Agriculture PACA",
+   "title": "Eggplant NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: PACA (Avignon, Cavaillon), Vallee du Rhone, Nouvelle-Aquitaine. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O). N variants: 150-190 open field; 200-240 under shelter (sous abri/serres).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Drip fertigation model: 20% N + full P + 20% K as basal (fumure de fond); inject the remaining N and K weekly via drip fertigation during flowering and fruit enlargement. Aubergine (Solanum melongena).",
+  "applicationTiming": "Fumure de fond at transplanting (0 DAT). Vegetative growth (20-40 DAT). Flowering and continuous harvest (45-100 DAT; regular applications).",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3543,20 +3585,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "20-35",
+   "p2o5": "50-70",
+   "k2o": "60-80"
   },
-  "notes": "Teneur N: 9.8; pois potager grain 6.5 t/ha",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "COMIFER; UNIP / Terres Inovia",
+   "title": "Peas NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Hauts-de-France (canning/freezing hub), Bretagne, Centre-Val de Loire. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply 100% fertilizer as fumure de fond localized near the seed furrow before sowing. Per COMIFER legume guidelines, excess N causes vegetative overgrowth and lodging (verse); starter N only (symbiotic rhizobial fixation).",
+  "applicationTiming": "100% basal pre-sowing (0 DAS / au semis).",
+  "micronutrients": null
  },
  {
   "country": "FR",
@@ -3565,20 +3612,27 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "100-130",
+   "p2o5": "60-80",
+   "k2o": "90-130"
   },
-  "notes": "Teneur N: 12.6; ail tete - %MS/teneur ambiguity flagged, re-verify before population",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "Qualite Ail Sud-Ouest; Chambre d'Agriculture du Tarn (Ail Rose de Lautrec IGP); CTIFL",
+   "title": "Garlic NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Occitanie (Lautrec, Cadours, Lomagne), Rhone-Alpes (Drome). France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5, Sulphur and 1/3 N/K2O at autumn/winter planting; apply the remaining N and K2O in two equal splits at spring restart (sortie d'hiver). Stop all late N once bulb enlargement begins. Sulphur is crucial for allicin concentration.",
+  "applicationTiming": "Fumure de fond at planting (October/November / 0 DAP). 1st top-dress (vegetative restart, late February / early March): 1/3 N + 1/3 K2O. 2nd top-dress (bulblet emission, mid-April; halt all N 30 days before harvest): 1/3 N + 1/3 K2O.",
+  "micronutrients": {
+   "sulphur": "25-35 kg/ha"
+  }
  },
  {
   "country": "FR",
@@ -3587,20 +3641,25 @@
   "n": null,
   "p2o5": null,
   "k2o": null,
-  "ranges": {},
-  "formula": "Dose N (kg/ha) = [rendement objectif (t/ha) x teneur N (kg/t)] - fournitures du sol - N organiques, / coeff. utilisation (bilan previsionnel; cf. grilles GREN / Azofert)",
-  "confidence": "medium",
-  "flags": [
-   "formula"
-  ],
-  "source": {
-   "organization": "Ministère de l'Agriculture (France)",
-   "title": "Exportations d'azote par les productions végétales (HVE reference table)",
-   "url": "https://agriculture.gouv.fr/telecharger/133334",
-   "year": "2026"
+  "ranges": {
+   "n": "40-65",
+   "p2o5": "30-45",
+   "k2o": "50-70"
   },
-  "notes": "Teneur N: 1.2; radis",
-  "suggestedStatus": "under_review"
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; Chambre d'Agriculture Pays de la Loire",
+   "title": "Radish NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Pays de la Loire (Bassin Nantais), Nouvelle-Aquitaine. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Short cycle (20-30 days): incorporate 100% NPK into the seedbed before sowing (fumure de fond / avant semis).",
+  "applicationTiming": "100% basal pre-sowing (0 DAS / avant semis).",
+  "micronutrients": null
  },
  {
   "country": "ES",
@@ -8128,6 +8187,60 @@
   "suggestedStatus": "verified",
   "applicationMethod": "Apply 20% N + full P2O5 + 20% K2O as basal (Grundduengung); inject 80% of N and K via drip fertigation in weekly balanced cycles from the 1st truss through fruit growth and ripening.",
   "applicationTiming": "Basal at transplanting (0 DAT). Establishment and 1st truss flowering (15-30 DAT). Fruit load and ripening (35-100 DAT; regular fertigation cycles).",
+  "micronutrients": null
+ },
+ {
+  "country": "FR",
+  "regionSlug": "fr-national",
+  "itemSlug": "okra",
+  "n": null,
+  "p2o5": null,
+  "k2o": null,
+  "ranges": {
+   "n": "80-110",
+   "p2o5": "50-70",
+   "k2o": "70-100"
+  },
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "CTIFL; Chambre d'Agriculture PACA",
+   "title": "Okra NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Sud-Est / PACA (Provence-Alpes-Cote d'Azur) and protected tunnels. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5 and 25% N/K2O as fumure de fond (basal) incorporated under plastic mulch/drip; split the remaining N and K2O in fertigated fractions during vegetative expansion and continuous harvesting.",
+  "applicationTiming": "Fumure de fond at sowing/transplanting (0 DAS/DAT). Fraction 1: vegetative growth (20-35 DAT). Fraction 2: flowering and successive harvests (40-85 DAT).",
+  "micronutrients": null
+ },
+ {
+  "country": "FR",
+  "regionSlug": "fr-national",
+  "itemSlug": "cabbage",
+  "n": null,
+  "p2o5": null,
+  "k2o": null,
+  "ranges": {
+   "n": "160-210",
+   "p2o5": "55-80",
+   "k2o": "120-170"
+  },
+  "formula": null,
+  "confidence": "high",
+  "flags": [],
+  "source": {
+   "organization": "Chambre d'Agriculture d'Alsace; COMIFER",
+   "title": "Cabbage NPK recommendation France",
+   "url": null,
+   "year": null
+  },
+  "notes": "Region: Grand Est (Alsace - choucroute production), Hauts-de-France, Bretagne. France: N values are total crop nutritional target doses (COMIFER bilan previsionnel X kg/ha); soil mineral reserve (Ri / reliquat azote sortie hiver) must be subtracted per COMIFER/Nitrates Directive. Oxide forms confirmed (P2O5/K2O).",
+  "suggestedStatus": "verified",
+  "applicationMethod": "Apply all P2O5 and 1/2 K2O as basal (fumure de fond); split N and the remaining K2O in two post-transplant applications so heading (pommaison) is dense and splitting (eclatement) is avoided.",
+  "applicationTiming": "Fumure de fond (0 DAT): 40% N + 100% P2O5 + 50% K2O. 1st top-dress (vegetative recovery, 20-25 DAT): 30% N + 25% K2O. 2nd top-dress (heading initiation / debut pommaison, 45-55 DAT): 30% N + 25% K2O.",
   "micronutrients": null
  }
 ]
