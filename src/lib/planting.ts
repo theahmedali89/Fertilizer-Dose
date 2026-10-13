@@ -4,7 +4,9 @@
  * DATA-INTEGRITY POLICY (binding):
  * - Planting windows are seeded ONLY from the app's existing published crop
  *   guidance (seasonDetail strings) or from institutional guidance supplied by
- *   Ahmed (ICAR-IIVR / PAU / HAU / TNAU vegetable windows). Nothing is invented.
+ *   Ahmed (ICAR-IIVR / PAU / HAU / TNAU vegetable windows; MARDI Malaysia;
+ *   RDA South Korea; Tarım Bakanlığı/BATEM Türkiye; MAFF/NARO Japan).
+ *   Nothing is invented.
  * - Every window carries a SourceRef + verificationStatus. Seeds derived from
  *   editorial summaries are marked "under_review" until checked against a named
  *   provincial publication; institutional guidance supplied by Ahmed is marked
@@ -16,7 +18,7 @@ import type { SourceRef, GrowingCategory } from "./growing";
 
 export interface Region {
   id: string; // e.g. "pk-punjab"
-  country: "pakistan" | "india" | "malaysia" | "south_korea";
+  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan";
   countryName: string;
   name: string;
 }
@@ -54,13 +56,18 @@ export const REGIONS: Region[] = [
   { id: "my-cameron", country: "malaysia", countryName: "Malaysia", name: "Cameron Highlands" },
   { id: "kr-gyeonggi", country: "south_korea", countryName: "South Korea", name: "Gyeonggi" },
   { id: "kr-gangwon", country: "south_korea", countryName: "South Korea", name: "Gangwon Highlands" },
+  { id: "tr-coastal", country: "turkiye", countryName: "Türkiye", name: "Mediterranean/Aegean Coast" },
+  { id: "tr-central", country: "turkiye", countryName: "Türkiye", name: "Central Anatolia" },
+  { id: "jp-hokkaido", country: "japan", countryName: "Japan", name: "Hokkaido" },
+  { id: "jp-tohoku", country: "japan", countryName: "Japan", name: "Tohoku" },
+  { id: "jp-kanto", country: "japan", countryName: "Japan", name: "Kanto/Kyushu" },
 ];
 
 export function getRegion(id: string): Region | undefined {
   return REGIONS.find((r) => r.id === id);
 }
 
-export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea"): Region[] {
+export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan"): Region[] {
   return REGIONS.filter((r) => r.country === country);
 }
 
@@ -391,7 +398,194 @@ function koreaVegWindows(): PlantingWindow[] {
   return out;
 }
 
+// ── Türkiye vegetable planting windows (institutional, verified) ──
+// Source: T.C. Tarım ve Orman Bakanlığı (Sebze Yetiştiriciliği Kılavuzları),
+// BATEM (Batı Akdeniz Tarımsal Araştırma Enstitüsü, Antalya),
+// Atatürk Bahçe Kültürleri Merkez Araştırma Enstitüsü (Yalova).
+// Two systems: Coastal Belt (Sahil Kuşağı — Mediterranean/Aegean: Antalya,
+// Mersin, İzmir) and Central Anatolia (İç Anadolu — Ankara, Konya, Niğde).
+// Supplied by Ahmed 2026-10-13.
+
+const turkiyeVegSource = (region: Region): SourceRef => ({
+  organization: "T.C. Tarım ve Orman Bakanlığı; BATEM Antalya; Atatürk Bahçe Kültürleri Yalova",
+  title: "Vegetable planting windows — Türkiye",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const TURKIYE_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (Bamya) — direct seeded — (chili slug map: n/a) —
+  { regions: ["tr-coastal"], itemSlug: "okra", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Aegean/Marmara direct sowing (doğrudan tohuma ekim): Apr 15 – May 20.", seasonName: "Açık Tarla (Spring/Summer)" },
+  { regions: ["tr-coastal"], itemSlug: "okra", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Mediterranean early direct sowing: Mar 20 – Apr 15.", seasonName: "Açık Tarla (Early Spring)" },
+  // — 2. Peas (Bezelye) — direct seeded —
+  { regions: ["tr-coastal"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Coastal winter direct sowing (Akdeniz/Ege): Oct 15 – Nov 30.", seasonName: "Kışlık Sahil" },
+  { regions: ["tr-central"], itemSlug: "peas", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Central Anatolia spring direct sowing (İç Anadolu): Mar 1 – Apr 10.", seasonName: "İlkbahar İç Bölge" },
+  // — 3. Spinach (Ispanak) — direct seeded —
+  { regions: ["tr-coastal", "tr-central"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "Autumn/winter direct broadcast/drill: Sep 1 – Oct 20.", seasonName: "Sonbahar/Kış" },
+  { regions: ["tr-coastal", "tr-central"], itemSlug: "spinach", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Spring direct broadcast/drill: Feb 15 – Mar 20.", seasonName: "Erken İlkbahar" },
+  // — 4. Cauliflower (Karnabahar) —
+  { regions: ["tr-coastal"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Coastal (Akdeniz/Ege) nursery sowing: Jun 15 – Jul 20.", seasonName: "Güzlük ve Kışlık" },
+  { regions: ["tr-central"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 5, endMonth: 6, notes: "Marmara/Central nursery sowing: May 15 – Jun 15.", seasonName: "Güzlük ve Kışlık" },
+  { regions: ["tr-coastal"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Coastal transplanting (dikim): Aug 1 – Sep 10.", seasonName: "Güzlük ve Kışlık" },
+  { regions: ["tr-central"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 6, endMonth: 7, notes: "Central transplanting (dikim): Jun 25 – Jul 25.", seasonName: "Güzlük ve Kışlık" },
+  // — 5. Cabbage (Lahana) —
+  { regions: ["tr-central"], itemSlug: "cabbage", activityType: "SOW", startMonth: 5, endMonth: 6, notes: "Autumn/winter (güzlük) nursery sowing: May 20 – Jun 25.", seasonName: "Ana Sezon (Bafra, Niğde)" },
+  { regions: ["tr-central"], itemSlug: "cabbage", activityType: "SOW", startMonth: 2, endMonth: 2, notes: "Spring (ilkbaharlık) nursery sowing: Feb 1 – Feb 25.", seasonName: "İlkbahar" },
+  { regions: ["tr-central"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Autumn/winter transplanting: Jul 1 – Aug 10.", seasonName: "Ana Sezon (Bafra, Niğde)" },
+  { regions: ["tr-central"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Spring transplanting: Mar 15 – Apr 5.", seasonName: "İlkbahar" },
+  // — 6. Radish (Turp) — direct seeded on ridges —
+  { regions: ["tr-coastal", "tr-central"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 10, notes: "Autumn/winter (Kadirli/Osmaniye) direct sowing on ridges: Aug 20 – Oct 15.", seasonName: "Ana Hasat Dönemi (Sonbahar/Kış)" },
+  { regions: ["tr-coastal", "tr-central"], itemSlug: "radish", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring direct sowing on ridges: Mar 1 – Apr 15.", seasonName: "Spring" },
+  // — 7. Carrot (Havuç) — direct seeded on ridges —
+  { regions: ["tr-central"], itemSlug: "carrot", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Main crop (Konya/Kaşınhanı) direct sowing on ridges: Apr 10 – May 25.", seasonName: "Yazlık Havuç" },
+  { regions: ["tr-central"], itemSlug: "carrot", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Autumn crop (Beypazarı) direct sowing on ridges: Jun 15 – Jul 15.", seasonName: "Kışlık Depoluk Havuç" },
+  // — 8. Brinjal (Patlıcan) —
+  { regions: ["tr-coastal"], itemSlug: "brinjal", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Coastal early open-field nursery: Jan 15 – Feb 15.", seasonName: "Açık Tarla (Post-frost)" },
+  { regions: ["tr-central"], itemSlug: "brinjal", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Central/inland nursery: Feb 25 – Mar 20.", seasonName: "Açık Tarla (Post-frost)" },
+  { regions: ["tr-coastal"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Coastal transplanting (dikim): Mar 25 – Apr 20.", seasonName: "Açık Tarla (Post-frost)" },
+  { regions: ["tr-central"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Central transplanting (dikim): May 5 – May 25.", seasonName: "Açık Tarla (Post-frost)" },
+  // — 9. Garlic (Sarımsak) — direct clove planting —
+  { regions: ["tr-central"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 11, notes: "Winter garlic (Kastamonu Taşköprü) clove planting (diş ekimi): Oct 15 – Nov 20.", seasonName: "Kışlık Dikim (Preferred)" },
+  { regions: ["tr-central"], itemSlug: "garlic", activityType: "PLANT", startMonth: 2, endMonth: 3, notes: "Spring clove planting: Feb 15 – Mar 15.", seasonName: "İlkbahar" },
+  // — 10. Potato (Patates) — seed tubers on ridges —
+  { regions: ["tr-coastal"], itemSlug: "potato", activityType: "PLANT", startMonth: 12, endMonth: 1, notes: "Early coastal (Ödemiş/Adana) tuber planting: Dec 15 – Jan 25.", seasonName: "Turfanda (Early)" },
+  { regions: ["tr-central"], itemSlug: "potato", activityType: "PLANT", startMonth: 4, endMonth: 5, notes: "Main central (Niğde/Nevşehir/Konya) tuber planting: Apr 10 – May 10.", seasonName: "Ana Ürün (Main)" },
+  // — 11. Peppers → chili (Biber: Sivri, Kapya, Dolma) —
+  { regions: ["tr-coastal"], itemSlug: "chili", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Coastal nursery (fide): Jan 20 – Feb 20.", seasonName: "Açık Tarla Yazlık" },
+  { regions: ["tr-central"], itemSlug: "chili", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Central/inland nursery (fide): Mar 1 – Mar 25.", seasonName: "Açık Tarla Yazlık" },
+  { regions: ["tr-coastal"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 4, endMonth: 4, notes: "Coastal transplanting: Apr 5 – Apr 25.", seasonName: "Açık Tarla Yazlık" },
+  { regions: ["tr-central"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Central transplanting: May 10 – May 30.", seasonName: "Açık Tarla Yazlık" },
+  // — 12. Onion (Kuru Soğan) —
+  { regions: ["tr-central"], itemSlug: "onion", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Direct seed (Polatlı/Amasya): Mar 1 – Apr 10.", seasonName: "Ana Mahsul (Main Long-Day Bulb)" },
+  { regions: ["tr-central"], itemSlug: "onion", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Sets/arpacık planting: Feb 15 – Mar 20.", seasonName: "Ana Mahsul (Main Long-Day Bulb)" },
+  // — 13. Tomato (Domates: salçalık & sofralık) —
+  { regions: ["tr-coastal"], itemSlug: "tomato", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Processing (Bursa/Manisa/Salihli) nursery: Feb 15 – Mar 10.", seasonName: "Sanayi Domatesi" },
+  { regions: ["tr-central"], itemSlug: "tomato", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Central open-field nursery: Mar 10 – Apr 5.", seasonName: "Açık Tarla Sofralık" },
+  { regions: ["tr-coastal"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Processing transplanting: Apr 15 – May 10.", seasonName: "Sanayi Domatesi" },
+  { regions: ["tr-central"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Central transplanting: May 10 – May 31.", seasonName: "Açık Tarla Sofralık" },
+  // — 14. Chinese cabbage (Çin/ Pekin Lahanası) —
+  { regions: ["tr-central"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "Nursery/direct sowing: Aug 1 – Aug 25.", seasonName: "Sonbahar Dönemi (Autumn)" },
+  { regions: ["tr-central"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 9, endMonth: 9, notes: "Transplanting: Sep 1 – Sep 20.", seasonName: "Sonbahar Dönemi (Autumn)" },
+];
+
+function turkiyeVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of TURKIYE_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: turkiyeVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
+// ── Japan vegetable planting windows (institutional, verified) ──
+// Source: MAFF (農林水産省 都道府県施肥・栽培指針), NARO
+// (農業・食品産業技術総合研究機構), Hokkaido Research Organization (HRO),
+// Chiba & Gunma Agricultural Experiment Stations.
+// Regimes: Hokkaido & Tohoku (cold single-season/highland summer) and
+// Kanto/Tokai/Kyushu (warm temperate double-cropping: spring + autumn/winter).
+// Supplied by Ahmed 2026-10-13.
+
+const japanVegSource = (region: Region): SourceRef => ({
+  organization: "MAFF; NARO; Hokkaido Research Organization; Chiba & Gunma Ag. Experiment Stations",
+  title: "Vegetable planting windows — Japan",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const JAPAN_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (オクラ) — warm temperate (Kyushu, Kochi, Kanto) —
+  { regions: ["jp-kanto"], itemSlug: "okra", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Pot nursery/direct sowing: Apr 10 – May 5.", seasonName: "Warm temperate" },
+  { regions: ["jp-kanto"], itemSlug: "okra", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting: May 10 – May 31 (post-frost).", seasonName: "Warm temperate" },
+  // — 2. Peas (エンドウ/サヤエンドウ) — direct seeded under mulch —
+  { regions: ["jp-kanto"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Overwintering (Kanto/Kyushu) direct sowing under mulch: Oct 20 – Nov 10.", seasonName: "秋まき越冬栽培" },
+  { regions: ["jp-hokkaido"], itemSlug: "peas", activityType: "SOW", startMonth: 4, endMonth: 4, notes: "Spring sown (Tohoku/Hokkaido) direct sowing under mulch: Apr 5 – Apr 25.", seasonName: "春まき寒冷地" },
+  // — 3. Spinach (ホウレンソウ) — direct drill —
+  { regions: ["jp-kanto"], itemSlug: "spinach", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring (春まき) direct drill in beds: Mar 15 – Apr 20.", seasonName: "春どり露地" },
+  { regions: ["jp-kanto"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "Autumn/winter (秋・冬まき, Kanto) direct drill in beds: Sep 15 – Oct 25.", seasonName: "秋冬どり露地" },
+  // — 4. Cauliflower (カリフラワー) —
+  { regions: ["jp-kanto"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Autumn harvest (秋どり) nursery sowing: Jun 25 – Jul 15.", seasonName: "一般地 秋どり露地" },
+  { regions: ["jp-kanto"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 12, endMonth: 1, notes: "Spring harvest (春どり) tunnel nursery sowing: Dec 15 – Jan 15.", seasonName: "温暖地 春どり" },
+  { regions: ["jp-kanto"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Autumn transplanting: Jul 25 – Aug 15.", seasonName: "一般地 秋どり露地" },
+  { regions: ["jp-kanto"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "Spring transplanting: Feb 20 – Mar 15.", seasonName: "温暖地 春どり" },
+  // — 5. Cabbage (キャベツ) —
+  { regions: ["jp-tohoku"], itemSlug: "cabbage", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring sown/highland summer (Tsumagoi) nursery: Mar 25 – Apr 25.", seasonName: "群馬嬬恋 高原夏秋キャベツ" },
+  { regions: ["jp-kanto"], itemSlug: "cabbage", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Autumn sown/winter (Aichi/Chiba) nursery: Jul 15 – Aug 10.", seasonName: "暖地 冬キャベツ" },
+  { regions: ["jp-tohoku"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Highland transplanting: May 10 – Jun 5.", seasonName: "群馬嬬恋 高原夏秋キャベツ" },
+  { regions: ["jp-kanto"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Winter transplanting: Aug 20 – Sep 10.", seasonName: "暖地 冬キャベツ" },
+  // — 6. Radish (ダイコン) — direct seeded on high ridges —
+  { regions: ["jp-kanto"], itemSlug: "radish", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Spring (春どり) direct sowing on high ridges (高畝): Mar 20 – Apr 15.", seasonName: "春どり" },
+  { regions: ["jp-kanto"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Autumn/winter main (秋冬どり, Miura/Chiba) direct sowing: Aug 25 – Sep 20.", seasonName: "秋まき秋冬どり" },
+  // — 7. Carrot (ニンジン) — direct seeded —
+  { regions: ["jp-kanto"], itemSlug: "carrot", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Spring (春まき) tunnel direct sowing in fine tilth beds: Feb 20 – Mar 20.", seasonName: "春まきトンネル" },
+  { regions: ["jp-kanto"], itemSlug: "carrot", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Autumn/winter (秋冬まき, Tomisato) direct sowing: Jul 10 – Aug 5.", seasonName: "夏まき秋冬どり" },
+  // — 8. Brinjal (ナス) —
+  { regions: ["jp-kanto"], itemSlug: "brinjal", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Heated nursery sowing: Feb 15 – Mar 10.", seasonName: "夏秋どり露地" },
+  { regions: ["jp-kanto"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting: May 1 – May 20 (frost-free).", seasonName: "夏秋どり露地" },
+  // — 9. Garlic (ニンニク, Fukuchi White) — direct clove planting —
+  { regions: ["jp-tohoku"], itemSlug: "garlic", activityType: "PLANT", startMonth: 9, endMonth: 10, notes: "Aomori/Tohoku autumn clove planting (1片植え): Sep 15 – Oct 10.", seasonName: "青森寒冷地 秋植え" },
+  { regions: ["jp-kanto"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 10, notes: "Warm south clove planting: Oct 5 – Oct 30.", seasonName: "温暖地 秋植え" },
+  // — 10. Potato (バレイショ/ジャガイモ) — tubers on ridges —
+  { regions: ["jp-hokkaido"], itemSlug: "potato", activityType: "PLANT", startMonth: 4, endMonth: 5, notes: "Hokkaido spring (Tokachi/Yotei) tuber planting on ridges: Apr 20 – May 15.", seasonName: "北海道春植え" },
+  { regions: ["jp-kanto"], itemSlug: "potato", activityType: "PLANT", startMonth: 2, endMonth: 2, notes: "Warm double-crop (Nagasaki/Kagoshima) tuber planting: Feb 1 – Feb 25.", seasonName: "暖地春作" },
+  // — 11. Peppers → chili (ピーマン, sweet pepper) —
+  { regions: ["jp-kanto"], itemSlug: "chili", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Greenhouse nursery sowing: Feb 15 – Mar 15.", seasonName: "露地・雨よけ夏秋どり" },
+  { regions: ["jp-kanto"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting: May 5 – May 25.", seasonName: "露地・雨よけ夏秋どり" },
+  // — 12. Onion (タマネギ) —
+  { regions: ["jp-hokkaido"], itemSlug: "onion", activityType: "SOW", startMonth: 2, endMonth: 2, notes: "Hokkaido spring sown (Kitami) nursery: Feb 1 – Feb 20.", seasonName: "北海道春まき" },
+  { regions: ["jp-kanto"], itemSlug: "onion", activityType: "SOW", startMonth: 9, endMonth: 9, notes: "Honshu/Awaji autumn sown nursery: Sep 5 – Sep 20.", seasonName: "本州秋まき越冬" },
+  { regions: ["jp-hokkaido"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Hokkaido transplanting: Apr 20 – May 10.", seasonName: "北海道春まき" },
+  { regions: ["jp-kanto"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 11, endMonth: 11, notes: "Awaji/Honshu transplanting: Nov 5 – Nov 25.", seasonName: "本州秋まき越冬" },
+  // — 13. Tomato (トマト) — open field / rain-shelter —
+  { regions: ["jp-tohoku"], itemSlug: "tomato", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Nursery sowing: Mar 1 – Mar 25.", seasonName: "夏秋露地・雨よけ" },
+  { regions: ["jp-tohoku"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting: May 10 – May 30.", seasonName: "夏秋露地・雨よけ" },
+  // — 14. Chinese cabbage (ハクサイ) —
+  { regions: ["jp-tohoku"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 5, endMonth: 5, notes: "Highland summer (Nagano/Gunma) nursery: May 1 – May 25.", seasonName: "高原夏どり" },
+  { regions: ["jp-kanto"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 8, endMonth: 8, notes: "Autumn/winter main (Ibaraki/Tohoku) nursery: Aug 10 – Aug 30.", seasonName: "秋冬どり露地" },
+  { regions: ["jp-tohoku"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 6, endMonth: 6, notes: "Highland transplanting: Jun 1 – Jun 20.", seasonName: "高原夏どり" },
+  { regions: ["jp-kanto"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 9, endMonth: 9, notes: "Autumn transplanting: Sep 1 – Sep 20.", seasonName: "秋冬どり露地" },
+];
+
+function japanVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of JAPAN_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: japanVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
 /**
+
  * Seeds derived strictly from the crop library's published seasonDetail lines:
  * wheat "Sow late October – November; harvest March – April" · rice "Transplant
  * June – July; harvest October – November" · maize "Sow June – July (kharif) or
@@ -425,6 +619,10 @@ export const PLANTING_WINDOWS: PlantingWindow[] = [
   ...malaysiaVegWindows(),
   // — South Korea vegetable windows (RDA / NIHHS / Gangwon, verified) —
   ...koreaVegWindows(),
+  // — Türkiye vegetable windows (Tarım Bakanlığı / BATEM / Yalova, verified) —
+  ...turkiyeVegWindows(),
+  // — Japan vegetable windows (MAFF / NARO / HRO, verified) —
+  ...japanVegWindows(),
 ];
 
 /** True if `month` (1–12) falls inside a possibly year-crossing window. */
