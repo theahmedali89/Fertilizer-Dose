@@ -288,6 +288,8 @@ const COUNTRIES: { code: string; name: string; slug: string; defaultUnit: string
   { code: "JP", name: "Japan", slug: "japan", defaultUnit: "hectare" },
   { code: "KR", name: "South Korea", slug: "south-korea", defaultUnit: "hectare" },
   { code: "TR", name: "Türkiye", slug: "turkiye", defaultUnit: "hectare" },
+  { code: "PK", name: "Pakistan", slug: "pakistan", defaultUnit: "acre" },
+  { code: "NG", name: "Nigeria", slug: "nigeria", defaultUnit: "hectare" },
 ];
 
 // National regions missing from earlier seeds — created here (country-level
@@ -300,6 +302,7 @@ const NATIONAL_REGIONS: { slug: string; name: string; countryCode: string; legac
   { slug: "id-national", name: "Indonesia (national)", countryCode: "ID", legacy: "indonesia" },
   { slug: "kr-national", name: "South Korea (national)", countryCode: "KR", legacy: "south-korea" },
   { slug: "pl-national", name: "Poland (national)", countryCode: "PL", legacy: "poland" },
+  { slug: "ng-national", name: "Nigeria (national)", countryCode: "NG", legacy: "nigeria" },
 ];
 
 // ── Main entry ───────────────────────────────────────────────────────────
