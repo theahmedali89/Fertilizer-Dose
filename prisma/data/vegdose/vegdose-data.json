@@ -6580,6 +6580,387 @@
       "micronutrients": {
         "sulphur": "20-30 kg/ha"
       }
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "okra",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-100",
+        "p2o5": "50-65",
+        "k2o": "60-80"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "BATEM Antalya; Atatürk Horticultural Central Research Institute, Yalova",
+        "title": "Okra NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Aegean, Marmara & Mediterranean. Decare values: N 8-10, P2O5 5-6.5, K2O 6-8 kg/da. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, all K2O, and 1/3 N as basal (taban gubresi) incorporated into the seedbed before sowing; remaining N in two equal top-dress splits.",
+      "applicationTiming": "1/3 N at sowing (0 DAS). 1/3 N 20-25 days after emergence (hoeing stage). 1/3 N at first flowering / pod initiation (40-45 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "peas",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "25-40",
+        "p2o5": "50-70",
+        "k2o": "40-60"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "TAGEM; Ege University, Faculty of Agriculture",
+        "title": "Peas NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Starter N dose only; symbiotic nitrogen fixation via root nodules. Region: Marmara, Aegean & Mediterranean.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% fertilizer as basal band placement below seed furrows at sowing.",
+      "applicationTiming": "100% basal at sowing (0 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "spinach",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-110",
+        "p2o5": "40-60",
+        "k2o": "50-70"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "T.C. Tarim ve Orman Bakanligi; BATEM Antalya",
+        "title": "Spinach NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Aegean, Marmara, Central Anatolia. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, and 50% N as basal; remaining N top-dressed at 4-5 leaf stage. Stop N 15 days before harvest.",
+      "applicationTiming": "50% N + all P2O5 + all K2O at sowing (0 DAS). 50% N 20-25 days after emergence (rapid vegetative growth; stop N 15 days before harvest).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "cauliflower",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "150-190",
+        "p2o5": "60-85",
+        "k2o": "120-160"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "Atatürk Horticultural Central Research Institute, Yalova; TAGEM",
+        "title": "Cauliflower NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Aegean, Marmara, Mediterranean. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, boron, and 1/3 N/K2O as basal before transplanting; remaining N and K2O in two equal splits via fertigation or sidedress.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Top-dress 25-30 days after planting (vegetative growth). Top-dress at curd formation start (50-60 DAT).",
+      "micronutrients": {
+        "boron": "1.5-2.0 kg/ha"
+      }
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "cabbage",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-170",
+        "p2o5": "55-80",
+        "k2o": "100-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "TAGEM; Samsun Black Sea Agricultural Research Institute",
+        "title": "Cabbage NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Central Anatolia, Black Sea, Marmara. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O as basal; N and remaining K2O in two equal post-transplant splits for a compact head and no cracking.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Top-dress 25 days after planting. Top-dress at head formation (45-55 DAT).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "radish",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "40-60",
+        "p2o5": "30-50",
+        "k2o": "40-60"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "East Mediterranean Agricultural Research Institute, Adana; TAGEM",
+        "title": "Radish NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Mediterranean (Osmaniye/Kadirli), Aegean. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% fertilizer as basal incorporated into soil before sowing (short 25-35 day root crop).",
+      "applicationTiming": "100% basal pre-sowing (0 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "carrot",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "110-145",
+        "p2o5": "60-85",
+        "k2o": "130-180"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "Selçuk University; TTAE Ankara",
+        "title": "Carrot NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Central Anatolia (Konya), Ankara. High potash prevents root cracking and improves color. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O as basal; N and remaining K2O in two splits at thinning and root bulking.",
+      "applicationTiming": "Basal at sowing (0 DAS). Top-dress after thinning (30-35 DAS). Top-dress at root bulking (60-75 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "brinjal",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-250",
+        "p2o5": "60-90",
+        "k2o": "140-200"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "BATEM Antalya; TAGEM",
+        "title": "Eggplant NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "N: 140-180 kg/ha open field; up to 250 kg/ha greenhouse (sera). Region: Mediterranean (Antalya), Aegean, Sanliurfa. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Greenhouse/drip fertigation: basal 15-20% N + full P + 20% K; remaining N and K injected weekly via fertigation during flowering and harvest.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Vegetative growth start (20-40 DAT). Flowering and continuous harvest period (45-100 DAT).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "garlic",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "100-130",
+        "p2o5": "60-80",
+        "k2o": "80-120"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "Kastamonu University; TAGEM",
+        "title": "Garlic NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Black Sea (Taskopru), Aegean, Southeast. Sulphur for allicin aroma. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, sulphur, and 1/3 N as basal; remaining N in two spring splits. Stop N 30 days before bulb formation.",
+      "applicationTiming": "Basal at planting (Oct/Nov, 0 DAP). Top-dress at spring vegetative restart (early March). Top-dress pre-bulb formation (mid-April; stop 30 days before harvest).",
+      "micronutrients": {
+        "sulphur": "20-30 kg/ha"
+      }
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "potato",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-220",
+        "p2o5": "90-130",
+        "k2o": "180-260"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "Potato Research Institute, Nigde; TAGEM",
+        "title": "Potato NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Central Anatolia (Nigde, Nevsehir, Kayseri, Konya), Aegean. SOP (potassium sulphate) strictly preferred. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 50% N + 50% K2O in planting furrows as basal; remaining N and K2O at earthing-up / hilling (tuber initiation) via hilling or fertigation.",
+      "applicationTiming": "50% N + all P2O5 + 50% K2O at planting (0 DAP). 50% N + 50% K2O at earthing-up / tuber formation (30-40 DAP).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "chili",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "150-210",
+        "p2o5": "70-100",
+        "k2o": "150-230"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "BATEM Antalya; Atatürk Horticultural Central Research Institute, Yalova",
+        "title": "Pepper NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Covers sivri, kapya, dolmalik, carliston types. Region: Mediterranean (Antalya), Aegean, Marmara. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Basal 20% N + full P + 20% K; remaining N and K via drip fertigation balanced across flowering, fruit set, and harvest.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Rooting and early vegetative growth (15-35 DAT). Flowering, fruit growth and harvest (40-110 DAT).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "onion",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "110-150",
+        "p2o5": "60-85",
+        "k2o": "100-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "Polatli Commodity Exchange; TTAE Ankara",
+        "title": "Onion NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Central Anatolia (Ankara/Polatli), Central Black Sea (Amasya). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, 1/3 K2O, and 20% N as basal; remaining N and K2O in 2-3 top-dressings. Stop N completely at bulbing to prevent thick necks and rot.",
+      "applicationTiming": "Basal at sowing/transplanting (0 DAS/DAT). Top-dress at 3-4 leaf stage (30-35 DAS/DAT). Top-dress at bulb initiation (60-70 DAS/DAT; stop all N 30 days before harvest).",
+      "micronutrients": null
+    },
+    {
+      "country": "TR",
+      "regionSlug": "tr-thrace",
+      "itemSlug": "tomato",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "180-280",
+        "p2o5": "80-120",
+        "k2o": "200-300"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [
+        "ranged"
+      ],
+      "source": {
+        "organization": "BATEM Antalya; ETAE Izmir; SALDER",
+        "title": "Tomato NPK recommendation, Turkiye",
+        "url": null,
+        "year": null
+      },
+      "notes": "N: 180-240 kg/ha processing tomato; 220-280 kg/ha greenhouse. High potash for Brix and fruit firmness. Region: Mediterranean (Antalya), Marmara/Aegean. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Basal 20% N + full P + 20% K; 80% N and K via drip fertigation split across first flowering, fruit set, and ripening.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Vegetative growth (15-30 DAT). Flowering and first fruit set (35-55 DAT). Fruit sizing and ripening (60-95 DAT).",
+      "micronutrients": null
     }
   ],
   "gaps": [
@@ -7162,18 +7543,6 @@
       "country": "TR",
       "regionSlug": "tr-thrace",
       "items": [
-        "tomato",
-        "onion",
-        "okra",
-        "spinach",
-        "carrot",
-        "cauliflower",
-        "chili",
-        "brinjal",
-        "cabbage",
-        "radish",
-        "peas",
-        "garlic",
         "cabbage-chinese"
       ],
       "reason": "Only soil-class method; no per-crop numeric doses (TAGEM trial literature needed)"
