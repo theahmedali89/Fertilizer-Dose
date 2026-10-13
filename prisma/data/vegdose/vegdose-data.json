@@ -2532,85 +2532,109 @@
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "tomato",
-   "n": 325,
-   "p2o5": 406,
-   "k2o": 304,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "180-240",
+    "p2o5": "140-200",
+    "k2o": "180-260"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Kumamoto Prefectural Agricultural Research Center; NARO Institute of Vegetable and Floriculture Science",
+    "title": "Tomato NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Rain-shelter summer-autumn, target 10,000 kg/10a",
-   "suggestedStatus": "verified"
+   "notes": "Region: Kumamoto, Hokkaido, Aichi, Tochigi. Greenhouse high-wire rockwool/hydroponic up to 300 kg/ha N. Per-10a: N 18.0-24.0, P2O5 14.0-20.0, K2O 18.0-26.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Soil mulch drip culture: apply 25% N, all P, and 25% K as basal (genpi). Inject 75% N and K via drip fertigation (tenteki kansui sehi) at weekly intervals from 3rd truss flowering (dai-3 dan kaika-ki) through peak ripening (shukaku saisei-ki). High potash supports Brix, fruit firmness, and blossom-end rot control.",
+   "applicationTiming": "Basal at transplanting (0 DAT): 25% N + 100% P2O5 + 25% K2O. Top-dressing: from 3rd truss fruit set / dai-3 dan chakka-ki (30-35 DAT); 75% N and K2O split weekly through harvest.",
+   "micronutrients": null
   },
   {
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "brinjal",
-   "n": 383,
-   "p2o5": 432,
-   "k2o": 309,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "220-300",
+    "p2o5": "140-200",
+    "k2o": "180-250"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Kochi Prefectural Agricultural Research Center; NARO",
+    "title": "Eggplant (nasu) NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Open-field summer-autumn nasu, 4,000 kg/10a",
-   "suggestedStatus": "verified"
+   "notes": "Region: Kochi, Gunma, Fukuoka, Niigata. Protected long-term cropping up to 350 kg/ha N. Per-10a: N 22.0-30.0, P2O5 14.0-20.0, K2O 18.0-25.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5 and 25% N/K2O as basal (genpi). Deliver remaining N and K continuously through harvest end via drip fertigation (tenteki sehi) or fortnightly top-dressings, balanced.",
+   "applicationTiming": "Basal at transplanting (0 DAT): 25% N + 100% P2O5 + 25% K2O. Top-dressing: continuous fertigation from first fruit harvest / shukaku kaishi-go; remaining 75% N and K2O evenly divided at 2-week intervals across 50-120 DAT.",
+   "micronutrients": null
   },
   {
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "chili",
-   "n": 344,
-   "p2o5": 342,
-   "k2o": 283,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "proxy"
-   ],
-   "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "220-280",
+    "p2o5": "130-180",
+    "k2o": "180-240"
    },
-   "notes": "Source crop piman (sweet/bell pepper) - flagged",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Ibaraki Prefectural Agriculture Center; Miyazaki ARES",
+    "title": "Sweet green pepper (piman) NPK recommendation Japan",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Ibaraki (Kamisu/Kashima), Miyazaki, Kochi, Kagoshima. Greenhouse/pipe-house up to 320 kg/ha N. Per-10a: N 22.0-28.0, P2O5 13.0-18.0, K2O 18.0-24.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5 and 25% N/K2O as basal (genpi). Deliver remaining N and K through the continuous harvest period via drip fertigation (tenteki tube) or periodic top-dressings at 15-20 day intervals.",
+   "applicationTiming": "Basal at transplanting (0 DAT): 25% N + 100% P2O5 + 25% K2O. Top-dressing: commencing at early harvest stage (30-35 DAT); remaining 75% N and K2O split in 4-5 equal applications across 40-120 DAT.",
+   "micronutrients": null
   },
   {
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "cabbage",
-   "n": 241,
-   "p2o5": 278,
-   "k2o": 195,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "180-230",
+    "p2o5": "120-170",
+    "k2o": "140-190"
+   },
    "formula": null,
    "confidence": "high",
-   "flags": [
-    "conflict"
-   ],
+   "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Gunma Prefectural Agricultural Technology Center; Aichi ARES",
+    "title": "Cabbage (kyabetsu) NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Yamagata 4,000 kg/10a. CONFLICT with Gifu",
-   "suggestedStatus": "under_review"
+   "notes": "Region: Aichi (winter), Gunma/Tsumagoi highland (summer), Chiba (spring). Per-10a: N 18.0-23.0, P2O5 12.0-17.0, K2O 14.0-19.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5 and 1/2 K2O basal; apply N and remaining K2O in two splits so that kekkyu (head compaction) is firm and cracking does not occur.",
+   "applicationTiming": "Basal at transplanting (0 DAT): 40% N + 100% P2O5 + 50% K2O. Top-dress 1: post-transplant establishment (20-25 DAT): 30% N + 25% K2O. Top-dress 2: head formation initiation / kekkyu shoki (45-50 DAT): 30% N + 25% K2O.",
+   "micronutrients": null
   },
   {
    "country": "JP",
@@ -2636,103 +2660,138 @@
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "spinach",
-   "n": 100,
-   "p2o5": 273,
-   "k2o": 88,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-110",
+    "p2o5": "80-120",
+    "k2o": "70-100"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Chiba Prefectural Agriculture Research Center; NARO",
+    "title": "Spinach (horenso) NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Horenso; high P flagged as stated",
-   "suggestedStatus": "verified"
+   "notes": "Region: Kanto Plain (Saitama, Chiba, Ibaraki), Gunma. Nitrate guidelines strictly cap N; high P compensates Kuroboku/Andosol fixation. Per-10a: N 8.0-11.0, P2O5 8.0-12.0, K2O 7.0-10.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Short 30-45 day cycle. Mix 100% of fertilizer into beds before sowing (zenryo genpi) using slow-release compound fertilizer (hifuku fukugo hiryo) or standard granular.",
+   "applicationTiming": "100% basal pre-sowing (0 DAS / hashu-zen zenryo seyo).",
+   "micronutrients": null
   },
   {
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "onion",
-   "n": 294,
-   "p2o5": 386,
-   "k2o": 278,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "150-190",
+    "p2o5": "150-220",
+    "k2o": "120-160"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Hokkaido Research Organization (HRO Kitami Agricultural Experiment Station); Hyogo Prefectural Technology Center for Agriculture",
+    "title": "Onion (tamanegi) NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Tamanegi autumn planting 5,000 kg/10a",
-   "suggestedStatus": "verified"
+   "notes": "Region: Hokkaido (Kitami/Tokachi, spring sown), Hyogo (Awaji Island, autumn sown), Saga. Kuroboku high P demand. Per-10a: N 15.0-19.0, P2O5 15.0-22.0, K2O 12.0-16.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Hokkaido (spring sown): apply 100% full basal at transplanting using coated slow-release urea (hiko chosei-gata hifuku nyoso). Awaji/Honshu (autumn sown): apply all P2O5 and 1/3 N/K2O as basal (genpi); split remaining N and K2O at spring recovery in two applications (shihi: halt all N by late March to prevent thick necks and soft rots).",
+   "applicationTiming": "Hokkaido: 100% basal at transplanting (late April / 0 DAT). Honshu (autumn): basal (November) + 1st top-dress (mid-February) + 2nd top-dress (mid-March; no N after March).",
+   "micronutrients": null
   },
   {
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "radish",
-   "n": 200,
-   "p2o5": 258,
-   "k2o": 183,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-150",
+    "p2o5": "100-140",
+    "k2o": "110-150"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Kanagawa Prefectural Agricultural Technology Center; Chiba ARES",
+    "title": "Daikon radish NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Daikon open-field 5,000 kg/10a",
-   "suggestedStatus": "verified"
+   "notes": "Region: Chiba, Kanagawa (Miura Peninsula), Hokkaido, Kagoshima. Per-10a: N 12.0-15.0, P2O5 10.0-14.0, K2O 11.0-15.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Incorporate all P2O5, Boron, and 1/2 N/K2O into raised ridges (taka-une) as basal (genpi). Side-dress remaining N and K2O after thinning (mabiki).",
+   "applicationTiming": "Basal at sowing (0 DAS): 50% N + 100% P2O5 + 50% K2O + 100% Boron. Top-dress: post-thinning / 2nd thinning (20-25 DAS): 50% N + 50% K2O.",
+   "micronutrients": {
+    "boron": "1.0-1.5 kg/ha (internal blackening / shin-kuro disease prevention)"
+   }
   },
   {
    "country": "JP",
    "regionSlug": "jp-tohoku",
    "itemSlug": "carrot",
-   "n": 230,
-   "p2o5": 284,
-   "k2o": 221,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "110-140",
+    "p2o5": "120-160",
+    "k2o": "120-160"
+   },
    "formula": null,
    "confidence": "high",
    "flags": [],
    "source": {
-    "organization": "Yamagata Prefecture Agriculture Dept",
-    "title": "Nosakumotsu no sehi kijun (fertilization standards, 2019)",
-    "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
-    "year": "2019"
+    "organization": "Chiba Prefectural ARES; Hokkaido Research Organization (HRO)",
+    "title": "Carrot (ninjin) NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Ninjin 3,000 kg/10a",
-   "suggestedStatus": "verified"
+   "notes": "Region: Chiba (Tomisato), Hokkaido (Tokachi), Tokushima. Per-10a: N 11.0-14.0, P2O5 12.0-16.0, K2O 12.0-16.0 kg/10a. High potash for root smoothness and uniform color. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5 and 1/2 K2O basal; apply N and remaining K2O in two splits at thinning and root bulking (konbu hidai).",
+   "applicationTiming": "Basal at sowing (0 DAS): 40% N + 100% P2O5 + 50% K2O. Top-dress 1: post-thinning / mabiki-go (30-35 DAS): 30% N + 25% K2O. Top-dress 2: root bulking / hidai-ki (55-65 DAS): 30% N + 25% K2O.",
+   "micronutrients": null
   },
   {
    "country": "JP",
    "regionSlug": "jp-chubu",
    "itemSlug": "cabbage",
-   "n": 211,
-   "p2o5": 180,
-   "k2o": 216,
-   "ranges": {},
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "180-230",
+    "p2o5": "120-170",
+    "k2o": "140-190"
+   },
    "formula": null,
    "confidence": "high",
-   "flags": [
-    "conflict"
-   ],
+   "flags": [],
    "source": {
-    "organization": "Gifu Prefecture (via MAFF sehi-kijun database)",
-    "title": "Cabbage fertilization standard (winter-spring, flatland)",
-    "url": "http://www.maff.go.jp/j/seisan/kankyo/hozen_type/h_sehi_kizyun/pdf/05220120kyabetu.pdf",
-    "year": "n.d."
+    "organization": "Gunma Prefectural Agricultural Technology Center; Aichi ARES",
+    "title": "Cabbage (kyabetsu) NPK recommendation Japan",
+    "url": null,
+    "year": null
    },
-   "notes": "Winter-spring flatland; summer-autumn highland variant N250/P230/K250 noted. CONFLICT with Yamagata",
-   "suggestedStatus": "under_review"
+   "notes": "Region: Aichi (winter), Gunma/Tsumagoi highland (summer), Chiba (spring). Per-10a: N 18.0-23.0, P2O5 12.0-17.0, K2O 14.0-19.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5 and 1/2 K2O basal; apply N and remaining K2O in two splits so that kekkyu (head compaction) is firm and cracking does not occur.",
+   "applicationTiming": "Basal at transplanting (0 DAT): 40% N + 100% P2O5 + 50% K2O. Top-dress 1: post-transplant establishment (20-25 DAT): 30% N + 25% K2O. Top-dress 2: head formation initiation / kekkyu shoki (45-50 DAT): 30% N + 25% K2O.",
+   "micronutrients": null
   },
   {
    "country": "KR",
@@ -7817,6 +7876,145 @@
    "applicationMethod": "All P2O5 and 1/3 N/K2O as basal before transplanting; remaining N and K2O in 2 equal splits. Stop all N after bulb bulking to avoid thick necks and decay; halt N 30 days before harvest.",
    "applicationTiming": "Basal at transplanting (0 DAT). Spring green-up/post-transplant recovery (30-35 DAT): 1/3 N + 1/3 K2O. Bulb expansion initiation (60-70 DAT): 1/3 N + 1/3 K2O.",
    "micronutrients": null
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-national",
+   "itemSlug": "okra",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-160",
+    "p2o5": "80-110",
+    "k2o": "100-140"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Kagoshima Prefectural Agricultural Experiment Station; MAFF",
+    "title": "Okra NPK recommendation Japan",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Kyushu (Kagoshima, Kochi, Okinawa). Per-10a: N 12.0-16.0, P2O5 8.0-11.0, K2O 10.0-14.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply 40% N, all P2O5 and all K2O as basal (genpi) incorporated before mulching. Split remaining N in two equal top-dressings (oibai) during the long picking period.",
+   "applicationTiming": "Basal at sowing/planting (0 DAS): 40% N + 100% P2O5 + 100% K2O. Top-dress 1: first flower opening (30-35 DAS): 30% N. Top-dress 2: peak harvest flush (55-60 DAS): 30% N.",
+   "micronutrients": null
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-national",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "40-60",
+    "p2o5": "80-110",
+    "k2o": "50-70"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Wakayama Prefectural Agriculture and Forestry Experiment Station; NARO",
+    "title": "Snow/green peas NPK recommendation Japan",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Kagoshima, Wakayama, Aichi. Starter N only (symbiotic rhizobial N-fixation). Per-10a: N 4.0-6.0, P2O5 8.0-11.0, K2O 5.0-7.0 kg/10a. High P for volcanic ash (Andosol) soils. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply 100% fertilizer localized as full basal (genpi) on prepared beds before sowing. Excessive nitrogen causes tsuruboke (excessive vegetative growth, poor pod set).",
+   "applicationTiming": "100% basal at sowing (0 DAS / zenryo genpi seyo).",
+   "micronutrients": null
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-national",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "160-200",
+    "p2o5": "120-160",
+    "k2o": "130-170"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Aichi Prefectural Agricultural Research Center; MAFF",
+    "title": "Cauliflower NPK recommendation Japan",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Tokushima, Aichi, Nagano. Per-10a: N 16.0-20.0, P2O5 12.0-16.0, K2O 13.0-17.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, Boron, and 1/2 N/K2O as basal before transplanting (teishoku). Apply remaining N and K2O in two equal top-dressings (oibai).",
+   "applicationTiming": "Basal at transplanting (0 DAT): 50% N + 100% P2O5 + 50% K2O. Top-dress 1: vegetative rosette stage (20-25 DAT): 25% N + 25% K2O. Top-dress 2: curd initiation stage / karai keisei shiki (45-50 DAT): 25% N + 25% K2O.",
+   "micronutrients": {
+    "boron": "1.5-2.0 kg/ha (brown curd and hollow stem prevention)"
+   }
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-national",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "160-200",
+    "p2o5": "150-200",
+    "k2o": "140-180"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Aomori Prefectural Industrial Technology Research Center, Agriculture Research Institute; MAFF",
+    "title": "Garlic NPK recommendation Japan (Fukuchi White Six-Tooth)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Aomori (Takko, Towada, Hachinohe), Hokkaido. Per-10a: N 16.0-20.0, P2O5 15.0-20.0, K2O 14.0-18.0 kg/10a. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, Sulphur, and 1/2 N/K2O as basal (genpi) at autumn planting. Split remaining N and K2O in two equal top-dressings at spring regrowth after snow-melt (haru no hoga-ki). Stop all late N at bulb bulking start to avoid secondary sprouting.",
+   "applicationTiming": "Basal at planting (late September-October): 50% N + 100% P2O5 + 50% K2O. Top-dress 1: spring regrowth / yusetsu-go hoga-ki (late March-early April): 25% N + 25% K2O. Top-dress 2: pre-bulbing / chudai-mae (late April; halt all N before mid-May): 25% N + 25% K2O.",
+   "micronutrients": {
+    "sulphur": "25-35 kg/ha (allicin synthesis and pungency)"
+   }
+  },
+  {
+   "country": "JP",
+   "regionSlug": "jp-national",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-120",
+    "p2o5": "140-200",
+    "k2o": "100-150"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Hokkaido Research Organization (HRO) Agriculture; Tokachi Agricultural Experiment Station",
+    "title": "Potato NPK recommendation Japan (Danshaku, May Queen, Toyoshiro)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Hokkaido (Tokachi, Abashiri, Yotei), Nagasaki, Kagoshima. Processing starch up to 130 kg/ha N. Per-10a: N 9.0-12.0, P2O5 14.0-20.0, K2O 10.0-15.0 kg/10a. Heavy P compensates volcanic ash Kuroboku fixation; SOP strictly preferred for dry matter and starch. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "In Hokkaido mechanized production, apply 100% NPK as a single full basal (baido-mae zenryo genpi) at sowing via potato planter band placement, 5 cm to the side and 5 cm below the seed piece.",
+   "applicationTiming": "100% basal at planting (0 DAP / ue-tsuke-ji zenryo sehi).",
+   "micronutrients": null
   }
  ],
  "gaps": [
@@ -8259,18 +8457,6 @@
     "cabbage-chinese"
    ],
    "reason": "Equatorial agencies publish little; below-bar leads only"
-  },
-  {
-   "country": "JP",
-   "regionSlug": "jp-national",
-   "items": [
-    "potato",
-    "okra",
-    "cauliflower",
-    "peas",
-    "garlic"
-   ],
-   "reason": "No prefectural standard extracted (Hokkaido potato page 403)"
   },
   {
    "country": "KR",

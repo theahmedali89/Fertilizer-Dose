@@ -304,6 +304,7 @@ const NATIONAL_REGIONS: { slug: string; name: string; countryCode: string; legac
   { slug: "pl-national", name: "Poland (national)", countryCode: "PL", legacy: "poland" },
   { slug: "ng-national", name: "Nigeria (national)", countryCode: "NG", legacy: "nigeria" },
   { slug: "cn-national", name: "China (national)", countryCode: "CN", legacy: "china" },
+  { slug: "jp-national", name: "Japan (national)", countryCode: "JP", legacy: "japan" },
   { slug: "us-california", name: "California (USA)", countryCode: "US", legacy: "united-states" },
 ];
 
