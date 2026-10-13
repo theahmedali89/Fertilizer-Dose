@@ -51,15 +51,19 @@
       "growthStage": "at sowing (4-6 t/ha target)",
       "itemSlug": "maize",
       "k2o": 40,
-      "n": 40,
+      "n": 70,
       "notes": "Raij et al. 1996 via Embrapa. N 30-50 in furrow; P/K by soil test x yield target.",
       "p2o5": 60,
       "regionSlug": "br-cerrado",
-      "soilContext": "Medium soil P/K",
+      "soilContext": "Medium soil P (resin-P 16-40 mg/dm3) / Medium soil K (exch-K 1.6-3.0 mmolc/dm3). Target yield 4-6 t/ha.",
       "sourceKey": "embrapa-visao-agricola",
       "variety": "first crop (milho verão/safra)",
-      "verificationStatus": "under_review",
-      "verificationNote": "P=60 uses the 2nd P-class column (7-15 mg/dm3) while K=40 uses the 3rd K-class column (1.5-3.0 mmolc/dm3) for 'Medium soil P/K' in Raij et al. 1996 (4-6 t/ha); research does not define medium->column mapping and the choice is internally inconsistent. Confirm which soil-P/K class is meant before verifying."
+      "verificationStatus": "verified",
+      "nMin": 60,
+      "nMax": 80,
+      "applicationMethod": "Basal/semeadura: band placement in furrow 5cm to side and 5cm below seed at planting (20 kg N + all P2O5 60 kg/ha + all K2O 40 kg/ha) to avoid salt burn. Top-dress/cobertura: remaining 40-60 kg N as surface side-dress with light inter-cultivation. Note: 40 kg N dose only for fields with previous legume crop.",
+      "applicationTiming": "At planting (0 DAE): 20 kg N + all P2O5 + all K2O. Top-dress: remaining 40-60 kg N at 30-35 DAE (V4-V6 leaf stage, knee-high), before row closure.",
+      "isPrimary": true
     },
     {
       "countryCode": "BR",

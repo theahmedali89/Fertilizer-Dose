@@ -65,6 +65,12 @@ interface BatchRecommendation {
   n: number | null;
   p2o5: number | null;
   k2o: number | null;
+  nMin?: number | null;
+  nMax?: number | null;
+  p2o5Min?: number | null;
+  p2o5Max?: number | null;
+  k2oMin?: number | null;
+  k2oMax?: number | null;
   micronutrients?: string | null;
   applicationTiming?: string | null;
   applicationMethod?: string | null;
@@ -226,6 +232,9 @@ export async function seedBatch5(db: PrismaClient): Promise<void> {
         irrigationContext: r.irrigationContext ?? null,
         growthStage,
         n: r.n, p2o5: r.p2o5, k2o: r.k2o,
+        nMin: r.nMin ?? null, nMax: r.nMax ?? null,
+        p2o5Min: r.p2o5Min ?? null, p2o5Max: r.p2o5Max ?? null,
+        k2oMin: r.k2oMin ?? null, k2oMax: r.k2oMax ?? null,
         nutrientBasis: "P2O5_K2O",
         micronutrients: r.micronutrients ?? null,
         applicationTiming: r.applicationTiming ?? null,

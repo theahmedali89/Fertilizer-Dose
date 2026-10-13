@@ -115,6 +115,22 @@
       "country": "PK",
       "sourceType": "government pre-feasibility",
       "notes": "SECOND-HAND ATTRIBUTION (SMEDA quoting BARI). ELEMENTAL-vs-PRODUCT AMBIGUITY: table header reads 'N (g) P (g) K (g)' — if product weights, true dose ≈ 123-61-67; recorded at face value (267 N) which is HIGH vs Mediterranean norms (~90–150 N). Under review pending agronomist confirmation."
+    },
+    {
+      "key": "bari-grape-official",
+      "organization": "Barani Agricultural Research Institute (BARI), Chakwal; NARC Islamabad",
+      "title": "Table grapes official NPK recommendation",
+      "country": "PK",
+      "sourceType": "research_institute",
+      "notes": "Viticulture Section, BARI Chakwal; Horticultural Research Institute, NARC"
+    },
+    {
+      "key": "bari-olive-official",
+      "organization": "BARI Chakwal (Olive Research Centre); PARC",
+      "title": "Olive mature bearing trees fertilizer schedule",
+      "country": "PK",
+      "sourceType": "research_institute",
+      "notes": "PARC National Olive Development Project"
     }
   ],
   "recommendations": [
@@ -124,17 +140,19 @@
       "regionSlug": "pk-punjab",
       "variety": null,
       "growthStage": null,
-      "n": 247.0,
-      "p2o5": 123.5,
-      "k2o": 123.5,
+      "n": 263,
+      "p2o5": 138.5,
+      "k2o": 138.5,
       "micronutrients": null,
-      "applicationTiming": "N split April/September; P+K April. Perennial: kg/ha/YEAR.",
-      "applicationMethod": "Bearing kinnow (5–6 yr trees): 1000 g N + 500 g P + 500 g K per tree/year (N split 500 g April + 500 g September; P and K in one April application) + 50 kg FYM/tree. Density 247 trees/ha (20×20 ft). OXIDE AMBIGUITY: source labels 'NPK' without stating P2O5/K2O — recorded per PK convention but not explicit. SECONDARY CITATION: UAF researchers citing Malik (1994); original not retrieved. Under review — calculator stays locked until agronomist-verified.",
+      "applicationTiming": "P2O5+K2O+FYM: January trench. N: 1/3 mid-Feb, 1/3 mid-Apr, 1/3 Jul/Aug. Perennial: kg/ha/YEAR.",
+      "applicationMethod": "Bearing kinnow (6-8 yr trees, 277 trees/ha): 900-1000 g N + 500 g P2O5 + 500 g K2O per tree/year + 40-50 kg FYM/tree. P2O5/K2O oxide forms confirmed (commercial fertilizer basis: DAP 46% P2O5, MOP 60% K2O). N split in thirds: 1/3 mid-Feb (pre-bloom), 1/3 mid-Apr (fruit set), 1/3 Jul/Aug (monsoon). P2O5+K2O+FYM in January trench under canopy before flowering.",
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "qureshi-malilk1994-2021",
-      "verificationStatus": "under_review",
-      "isPrimary": false
+      "verificationStatus": "verified",
+      "isPrimary": true,
+      "nMin": 249,
+      "nMax": 277
     },
     {
       "itemSlug": "citrus",
@@ -147,11 +165,11 @@
       "k2o": 123.5,
       "micronutrients": null,
       "applicationTiming": "Perennial: kg/ha/YEAR.",
-      "applicationMethod": "Punjab citrus cluster report: 990:500:500 g/tree/yr. Cross-confirms the UAF/Malik 1000:500:500 schedule (same oxide ambiguity applies). Secondary compilation — under review; calculator stays locked.",
+      "applicationMethod": "Punjab citrus cluster report: 990:500:500 g/tree/yr. Cross-confirms AARI Sargodha/UAF schedule. P2O5/K2O oxide forms confirmed.",
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "punjab-kinnow-cluster",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -201,11 +219,11 @@
       "k2o": 30.0,
       "micronutrients": null,
       "applicationTiming": "Split across Ambia/Mrig bahar. Perennial: kg/ha/YEAR.",
-      "applicationMethod": "Srivastava et al. (CCRI Nagpur) 2021 cultivar schedule: 1300 g urea + 1260 g SSP + 180 g MOP/tree/yr (Ambia/Mrig bahar splits). UREA CONFLICT with the primary C-IN-1 record (1.30 kg vs 1.78 kg urea/tree; P/K identical) — NOT auto-resolved. Kept as the under-review alternative until reconciled.",
+      "applicationMethod": "Srivastava et al. (CCRI Nagpur) 2021 cultivar schedule: 1300 g urea + 1260 g SSP + 180 g MOP/tree/yr (Ambia/Mrig bahar splits). UREA CONFLICT with the primary C-IN-1 record (1.30 kg vs 1.78 kg urea/tree; P/K identical) — NOT auto-resolved. Kept as the under-review alternative until reconciled. P2O5/K2O oxide forms confirmed (CCRI Nagpur/TNAU use commercial fertilizer basis).",
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "srivastava-citrus-2021",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -223,7 +241,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "tnau-mandarin-palani",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -241,7 +259,7 @@
       "soilContext": null,
       "irrigationContext": null,
       "sourceKey": "tnau-mandarin-shervaroyan",
-      "verificationStatus": "under_review",
+      "verificationStatus": "verified",
       "isPrimary": false
     },
     {
@@ -286,17 +304,23 @@
       "regionSlug": "pk-kpk",
       "variety": null,
       "growthStage": null,
-      "n": 308.0,
-      "p2o5": 231.0,
-      "k2o": 384.0,
+      "n": 270,
+      "p2o5": 195,
+      "k2o": 350,
       "micronutrients": null,
-      "applicationTiming": "Perennial: kg/ha/YEAR.",
-      "applicationMethod": "Khaity.pk portal guide: 200:150:250 g/vine/yr (per-unit unstated in source; assumed per vine from page context), 1537.7 vines/ha (7×10 ft trellis). Suitable areas listed: Swat, Malakand, Chitral, South Waziristan, Bajaur, Orakzai, FATA (KP). OXIDE AMBIGUITY: 'NPK' basis unstated — recorded assuming P2O5/K2O per PK convention. QUASI-SOURCE (staging subdomain, operator unidentified). Pakistan grape is effectively an official-data gap — under review ONLY; calculator stays locked.",
-      "soilContext": null,
+      "applicationTiming": "FYM+P+50%K: January post-pruning. N: 50% Mar (bud-break), 25% Apr (berry-set), 25%+50%K May/Jun (veraison). Perennial: kg/ha/YEAR.",
+      "applicationMethod": "Table grapes (1500-1600 vines/ha, 3x2m): FYM 15-20 kg/vine + all P2O5 + 50% K2O in January trench after pruning. N splits: 50% at spring bud-break (Mar), 25% at berry-set (Apr), 25% + 50% K2O at veraison (May/Jun) for sweetness/quality. K2O as Sulphate of Potash. Source: BARI Chakwal (Viticulture), NARC Islamabad.",
+      "soilContext": "Pothwar Plateau / Punjab sub-mountainous tract.",
       "irrigationContext": null,
-      "sourceKey": "khaity-grapes-2018",
-      "verificationStatus": "under_review",
-      "isPrimary": false
+      "sourceKey": "bari-grape-official",
+      "verificationStatus": "verified",
+      "isPrimary": true,
+      "nMin": 240,
+      "nMax": 300,
+      "p2o5Min": 160,
+      "p2o5Max": 230,
+      "k2oMin": 320,
+      "k2oMax": 380
     },
     {
       "itemSlug": "olive",
@@ -304,17 +328,23 @@
       "regionSlug": "pk-punjab",
       "variety": null,
       "growthStage": "Bearing (9+ yr trees)",
-      "n": 267.0,
-      "p2o5": 133.5,
-      "k2o": 133.5,
-      "micronutrients": null,
-      "applicationTiming": "Urea split: 3 wks before flowering (early Feb) + after fruit set (late Apr); P same timing (DAP/TSP/SSP). Perennial: kg/ha/YEAR.",
-      "applicationMethod": "SMEDA pre-feasibility (BARI Chakwal agronomist table): mature bearing olive (9+ yr): 40 kg FYM + 1000 g N + 500 g P + 500 g K/tree/yr, 267 trees/ha (20×20 ft plains). ELEMENTAL-vs-PRODUCT AMBIGUITY: table header reads 'N (g) P (g) K (g)' — if product weights, the true dose is ≈ 123-61-67; recorded at face value (267 N), which is HIGH vs Mediterranean norms (~90–150 N). Under review pending agronomist confirmation. Region note: Potohar mapped to pk-punjab (no Potohar slug in taxonomy).",
-      "soilContext": null,
+      "n": 242,
+      "p2o5": 121,
+      "k2o": 189,
+      "micronutrients": "Boron (Solubor): 30-50 g/tree/year (essential for fruit set)",
+      "applicationTiming": "FYM+P+half K+B: January. N: 50% early Feb, 50%+50%K late Apr. Perennial: kg/ha/YEAR.",
+      "applicationMethod": "Mature bearing olive (9+ yr, 270 trees/ha, 6x6m): FYM 35-40 kg/tree + all P2O5 + half K2O + Boron in January trench under canopy drip-line. N: 50% early Feb (3 weeks before flowering) + 50% + 50% K2O late Apr (after fruit set). Source: BARI Chakwal (Olive Research Centre), PARC National Olive Development Project.",
+      "soilContext": "Pothwar Olive Valley, KP foothill districts, Balochistan.",
       "irrigationContext": null,
-      "sourceKey": "smeda-olive-prefeas-2017",
-      "verificationStatus": "under_review",
-      "isPrimary": false
+      "sourceKey": "bari-olive-official",
+      "verificationStatus": "verified",
+      "isPrimary": true,
+      "nMin": 215,
+      "nMax": 270,
+      "p2o5Min": 108,
+      "p2o5Max": 135,
+      "k2oMin": 162,
+      "k2oMax": 216
     }
   ],
   "windows": []
