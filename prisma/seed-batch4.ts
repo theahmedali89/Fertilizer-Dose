@@ -189,14 +189,14 @@ export async function seedBatch4(db: PrismaClient): Promise<void> {
       const variety = r.variety ?? null;
       const soilContext = r.soilContext ?? null;
       const existing = await db.fertilizerRecommendation.findFirst({
-        where: { growingItemId: itemId, countryId, regionId, growthStage, variety, soilContext, sourceId },
+        where: { growingItemId: itemId, countryId, regionId, growthStage, variety, soilContext },
         select: { id: true },
       });
       if (existing) {
         // Update verification status for existing records (verification pass)
         await db.fertilizerRecommendation.update({
           where: { id: existing.id },
-          data: { verificationStatus: vs(r.verificationStatus) },
+          data: { verificationStatus: vs(r.verificationStatus), sourceId },
         });
         recSkipped++;
         continue;

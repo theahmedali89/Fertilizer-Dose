@@ -183,7 +183,6 @@ export async function seedIn21(db: PrismaClient): Promise<void> {
         growthStage: null,
         soilContext: null,
         irrigationContext: r.irrigationContext,
-        sourceId,
       },
       select: { id: true },
     });

@@ -161,7 +161,7 @@ export async function seedBatch8(db: PrismaClient): Promise<void> {
     const variety = r.variety ?? null;
     const soilContext = r.soilContext ?? null;
     const existing = await db.fertilizerRecommendation.findFirst({
-      where: { growingItemId: itemId, countryId: recCountryId, regionId, growthStage, variety, soilContext, sourceId },
+      where: { growingItemId: itemId, countryId: recCountryId, regionId, growthStage, variety, soilContext },
       select: { id: true },
     });
     if (existing) {
@@ -173,6 +173,7 @@ export async function seedBatch8(db: PrismaClient): Promise<void> {
         where: { id: existing.id },
         data: {
           verificationStatus: vs(r.verificationStatus),
+          sourceId,
           ...(r.isPrimary === true ? { isPrimary: true } : {}),
         },
       });

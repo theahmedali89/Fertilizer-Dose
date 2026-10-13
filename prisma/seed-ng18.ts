@@ -189,7 +189,6 @@ export async function seedNg18(db: PrismaClient): Promise<void> {
         growthStage: null,
         soilContext: r.soilContext,
         irrigationContext: r.irrigationContext,
-        sourceId,
       },
       select: { id: true },
     });

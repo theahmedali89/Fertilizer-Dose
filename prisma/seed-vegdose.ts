@@ -437,6 +437,9 @@ export async function seedVegdose(db: PrismaClient): Promise<void> {
     const kT = nutrient(r.k2o, r.ranges?.k2o, "K₂O", warnings);
 
     const existing = await db.fertilizerRecommendation.findFirst({
+      // Match WITHOUT sourceId: if the same item/country/region/variant arrives
+      // with a new source (e.g. re-verified data), update the existing row
+      // instead of creating a duplicate. Source changes are not variants.
       where: {
         growingItemId: itemId,
         countryId,
@@ -445,22 +448,29 @@ export async function seedVegdose(db: PrismaClient): Promise<void> {
         growthStage: null,
         soilContext: v.soilContext,
         irrigationContext: v.irrigationContext,
-        sourceId,
       },
       select: { id: true },
     });
     if (existing) {
-      // Refresh verificationStatus + range columns — never clobber admin edits.
+      // Refresh verificationStatus + ranges + source — never clobber admin
+      // edits to isPrimary or other non-seed fields.
       await db.fertilizerRecommendation.update({
         where: { id: existing.id },
         data: {
           verificationStatus: status,
+          sourceId,
+          n: nT.point,
+          p2o5: pT.point,
+          k2o: kT.point,
           nMin: nT.min,
           nMax: nT.max,
           p2o5Min: pT.min,
           p2o5Max: pT.max,
           k2oMin: kT.min,
           k2oMax: kT.max,
+          micronutrients: r.micronutrients ?? null,
+          applicationTiming: r.applicationTiming ?? null,
+          applicationMethod: r.applicationMethod ?? doseContext(r),
         },
       });
       skipped++;
