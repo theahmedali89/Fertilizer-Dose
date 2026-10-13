@@ -37,6 +37,7 @@ import { seedCn15 } from "./seed-cn15";
 import { seedJp10 } from "./seed-jp10";
 import { seedKr09 } from "./seed-kr09";
 import { seedTr15 } from "./seed-tr15";
+import { seedNg18 } from "./seed-ng18";
 import { seedVegplant } from "./seed-vegplant";
 import { seedVegdose } from "./seed-vegdose";
 import { seedTranslations } from "./seed-translations";
@@ -363,6 +364,9 @@ async function main() {
 
   // ── Türkiye 15-crop NPK dose recommendations (19 records) — idempotent, user-supplied 2026-10-13 ──
   await seedTr15(db);
+
+  // ── Nigeria 17-crop NPK dose recommendations (19 records, new country) — idempotent, user-supplied 2026-10-13 ──
+  await seedNg18(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);

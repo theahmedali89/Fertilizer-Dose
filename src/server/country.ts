@@ -53,6 +53,7 @@ const STATIC_COUNTRIES: CountryInfo[] = [
   { code: "JP", name: "Japan", slug: "japan", defaultUnit: "hectare" },
   { code: "KR", name: "South Korea", slug: "south-korea", defaultUnit: "hectare" },
   { code: "TR", name: "Türkiye", slug: "turkiye", defaultUnit: "hectare" },
+  { code: "NG", name: "Nigeria", slug: "nigeria", defaultUnit: "hectare" },
 ];
 
 const LEGACY_COUNTRY_TO_CODE: Record<string, string> = {
@@ -73,6 +74,7 @@ const LEGACY_COUNTRY_TO_CODE: Record<string, string> = {
   japan: "JP",
   "south-korea": "KR",
   turkiye: "TR",
+  nigeria: "NG",
 };
 
 async function tryDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
