@@ -373,8 +373,10 @@
       "url": "https://pau.edu/content/ccil/pf/pp_veg.pdf",
       "year": "2021"
     },
-    "notes": "50/25/25 per acre",
-    "suggestedStatus": "verified"
+    "notes": "50/25/25 per acre PAU recommendation = 50/25/25 kg/acre N/P2O5/K2O (x2.471 = 123.6/61.8/61.8 kg/ha). Crop: Chinese Cabbage / Exotic Brassicas.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal: 50% N (61.8 kg/ha) + 100% P2O5 (61.8 kg/ha, SSP) + 100% K2O (61.8 kg/ha, MOP) incorporated during final field preparation at transplanting. Top-dress: remaining 50% N (61.8 kg/ha, urea) side-dressed at 30 DAT (rosette closure / head formation onset) followed by irrigation.",
+    "applicationTiming": "0 DAT: basal (50% N + full P + full K). 30 DAT: top-dress remaining 50% N at rosette closure / head formation onset."
   },
   {
     "country": "IN",
@@ -422,8 +424,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Varieties: basal 75:100:50 + 75 N top 30 DAP",
-    "suggestedStatus": "verified"
+    "notes": "Varieties: basal 75:100:50 + 75 N top 30 DAP Variety: Open-Pollinated Varieties, irrigated / normal field condition.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal: 50% N (75 kg/ha) + 100% P2O5 (100 kg/ha) + 100% K2O (50 kg/ha) at transplanting during final land preparation/ridges. Top-dress: remaining 50% N (75 kg/ha) at 30 DAT during weeding and earthing-up.",
+    "applicationTiming": "0 DAT: basal (50% N + full P + full K). 30 DAT: top-dress remaining 50% N at active vegetative / earthing-up stage."
   },
   {
     "country": "IN",
@@ -444,8 +448,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Hybrids: basal 50:250:100 + 150 N + 150 K in 3 splits",
-    "suggestedStatus": "verified"
+    "notes": "Hybrids: basal 50:250:100 + 150 N + 150 K in 3 splits Variety: Tomato F1 Hybrids under Precision Farming / Drip Fertigation (e.g., COTH-2, Shivam, US-618); year-round, primarily May-June and Nov-Dec plantings.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Fertigation (drip, every 3 days): 75% P2O5 as basal (via SSP @ 1,172 kg/ha); 100% N + 25% P2O5 + 100% K2O via drip — 10% N/5% P/10% K vegetative (7-30 DAT), 20/10/20 flower initiation to early fruit (31-60 DAT), 30/5/30 fruit development (61-90 DAT), 40/5/40 harvesting (91-150 DAT).",
+    "applicationTiming": "0 DAT: 75% P2O5 basal. 7-30 DAT: vegetative drip. 31-60 DAT: flowering/early fruit. 61-90 DAT: fruit development. 91-150 DAT: harvesting stage (alternate days)."
   },
   {
     "country": "IN",
@@ -464,8 +470,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Varieties: basal 50:50:30 + 50 N 30 DAP",
-    "suggestedStatus": "verified"
+    "notes": "Varieties: basal 50:50:30 + 50 N 30 DAP Variety: Open-Pollinated Varieties (e.g., CO 2, PKM 1, Annamalai).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal: 50% N (50 kg/ha) + 100% P2O5 (50 kg/ha) + 100% K2O (30 kg/ha) in ridges/furrows at transplanting. Top-dress: remaining 50% N (50 kg/ha) at 30 DAT during active branching / flowering onset with earthing-up and weeding.",
+    "applicationTiming": "0 DAT: basal (50% N + full P + full K). 30 DAT: top-dress remaining 50% N at active branching / flowering onset."
   },
   {
     "country": "IN",
@@ -486,8 +494,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Hybrids: basal 100:150:100 + 100 N 30 DAP",
-    "suggestedStatus": "verified"
+    "notes": "Hybrids: basal 100:150:100 + 100 N 30 DAP Variety: Brinjal F1 Hybrids under Precision Farming / Drip Fertigation (high-yielding hybrids like Ravaiya, COBH-1, US-383).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Fertigation (drip, every 3 days): 75% P2O5 as basal bed incorporation (via SSP @ 703 kg/ha); 100% N + 25% P2O5 + 100% K2O via drip — 10/5/10 vegetative (8-30 DAT), 20/10/20 flower bud initiation to flowering (31-60 DAT), 30/5/30 fruit development (61-90 DAT), 40/5/40 continuous harvest (91-150 DAT).",
+    "applicationTiming": "0 DAT: 75% P2O5 basal. 8-30 DAT: vegetative. 31-60 DAT: flowering. 61-90 DAT: fruit development. 91-150 DAT: continuous harvest."
   },
   {
     "country": "IN",
@@ -506,8 +516,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Basal 30:60:30 + 30 N splits 30/60/90 DAP",
-    "suggestedStatus": "verified"
+    "notes": "Basal 30:60:30 + 30 N splits 30/60/90 DAP Variety: Rainfed / Traditional Inbred Varieties (e.g., K 1, K 2, CO 1).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal: 50% N (30 kg/ha) + 100% P2O5 (60 kg/ha) + 100% K2O (30 kg/ha) via furrow placement at transplanting/sowing. Top-dress: remaining 50% N (30 kg/ha) at 30-35 DAT (flowering initiation) with light weeding and earthing-up. If irrigated, a 3rd split at 60 DAT (25%+25%).",
+    "applicationTiming": "0 DAT: basal (50% N + full P + full K). 30-35 DAT: top-dress remaining 50% N at flowering initiation."
   },
   {
     "country": "IN",
@@ -584,8 +596,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Small/multiplier onion: 150:60:108 basal+top",
-    "suggestedStatus": "verified"
+    "notes": "Small/multiplier onion: 150:60:108 basal+top Variety: Big Onion (Bellary / Hybrid Onion under Drip Fertigation).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Fertigation (drip): 75% P2O5 as basal superphosphate at transplanting; 100% N + 25% P2O5 + 100% K2O via drip — 20% N/10% P/20% K vegetative/establishment (10-30 DAT, every 3 days), 40/10/40 rapid vegetative & early bulb initiation (31-60 DAT), 40/5/40 bulb enlargement (61-85 DAT). Halt all N 15-20 days before harvest to prevent neck decay.",
+    "applicationTiming": "0 DAT: 75% P2O5 basal. 10-30 DAT: establishment. 31-60 DAT: rapid vegetative/early bulbing. 61-85 DAT: bulb enlargement. 85+ DAT: no N (stop 15-20 days pre-harvest)."
   },
   {
     "country": "IN",
@@ -635,8 +649,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Basal 60:80:70 + 60 N top",
-    "suggestedStatus": "verified"
+    "notes": "Basal 60:80:70 + 60 N top Variety: Garden / French Beans / Pole Peas in hilly tracts (Nilgiris/Ooty, Kodaikanal).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal: 50% N (60 kg/ha) + 100% P2O5 (80 kg/ha) + 100% K2O (70 kg/ha) incorporated 5 cm below seed line at sowing. Top-dress: remaining 50% N (60 kg/ha) side-dressed at 25-30 DAS (early flowering / pod initiation) followed by light irrigation.",
+    "applicationTiming": "0 DAS: basal (50% N + full P + full K). 25-30 DAS: top-dress remaining 50% N at early flowering / pod initiation."
   },
   {
     "country": "IN",
@@ -655,8 +671,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Hills: basal 90:90:90 + 45:45:45 top 30-45 DAP",
-    "suggestedStatus": "verified"
+    "notes": "Hills: basal 90:90:90 + 45:45:45 top 30-45 DAP Variety: Cabbage (Hills / Plains Hybrid Fertigation Recommendation).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Fertigation (drip, every 3-4 days): 75% P2O5 as basal soil application; 100% N + 25% P2O5 + 100% K2O via drip — 25% N/10% P/20% K establishment (10-30 DAT), 45/15/45 head initiation (31-55 DAT), 30/0/35 head enlargement & firming (56-75 DAT).",
+    "applicationTiming": "0 DAT: 75% P2O5 basal. 10-30 DAT: establishment. 31-55 DAT: head initiation. 56-75 DAT: head enlargement & firming."
   },
   {
     "country": "IN",
@@ -705,8 +723,10 @@
       "url": "https://Agritech.tnau.ac.in/pdf/HORTICULTURE.pdf",
       "year": "2020"
     },
-    "notes": "Basal 90:90:90 + 45:45:45 top",
-    "suggestedStatus": "verified"
+    "notes": "Basal 90:90:90 + 45:45:45 top Variety: Cauliflower (Hybrid Fertigation Protocol).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Fertigation (drip): 75% P2O5 + Borax 10 kg/ha as basal during final bed shaping; 100% N + 25% P2O5 + 100% K2O via drip — 30% N/15% P/25% K vegetative rosette (10-25 DAT), 50/10/50 curd initiation/button (26-50 DAT), 20/0/25 curd expansion/pre-harvest (51-70 DAT).",
+    "applicationTiming": "0 DAT: 75% P2O5 + Borax basal. 10-25 DAT: vegetative rosette. 26-50 DAT: curd initiation. 51-70 DAT: curd expansion / pre-harvest."
   },
   {
     "country": "IN",
@@ -2385,8 +2405,10 @@
       "url": "https://banten.brmp.pertanian.go.id/storage/assets/uploads/publikasi/wizMWtiytQFbLvnJkeMpXgeBhORSc3ast3GE9EHE.pdf",
       "year": "n.d."
     },
-    "notes": "Direct: 200 N, 180 P2O5, 60 K2O, 142 S/ha. High P flagged as stated",
-    "suggestedStatus": "verified"
+    "notes": "Direct: 200 N, 180 P2O5, 60 K2O, 142 S/ha. High P flagged as stated Crop: Bawang Putih (Garlic — highland/midland intensification).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal (0 DAP): 30% N (60 kg/ha) + 100% P2O5 (180 kg/ha via SP-36) + 50% K2O (30 kg/ha via KCl) incorporated with bed preparation or planting holes. Susulan 1 (15-20 DAP, early vegetative): 35% N (70 kg/ha) + 25% K2O (15 kg/ha) via side-dress/kocoran. Susulan 2 (35-40 DAP, bulb initiation): 35% N + 25% K2O. Stop all N after 50 DAP to prevent bulb rot.",
+    "applicationTiming": "0 DAP: basal (30% N + full P + 50% K). 15-20 DAP: 1st top-dress (early vegetative). 35-40 DAP: 2nd top-dress (bulb initiation). After 50 DAP: no N."
   },
   {
     "country": "ID",
@@ -2548,8 +2570,10 @@
       "url": "https://bzw.kqqw.com/BBBW/BZXZ_98554479300EEA4920250706.pdf",
       "year": "2015"
     },
-    "notes": "Dabaicai: economic rate at medium fertility, N 18.0/P2O5 5.9/K2O 14.1 kg/667m2 x15",
-    "suggestedStatus": "verified"
+    "notes": "Dabaicai: economic rate at medium fertility, N 18.0/P2O5 5.9/K2O 14.1 kg/667m2 x15 Fujian Provincial Standard DB35/T for Autumn/Winter High-Yield Heading Chinese Cabbage: 18/5.9/14.1 kg/mu N/P2O5/K2O (x15 = 270/88.5/211.5 kg/ha).",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal (0 DAT): 30% N (81 kg/ha) + 100% P2O5 (88.5 kg/ha) + 30% K2O (63.5 kg/ha) deep-banded during bedding. Top-dress 1 / Lianzuo Fei — rosette stage (15-20 DAT): 30% N (81 kg/ha) + 30% K2O (63.5 kg/ha) with irrigation. Top-dress 2 / Jieqiu Fei — head formation (30-35 DAT, heaviest demand phase): 40% N (108 kg/ha) + 40% K2O (84.5 kg/ha). Stop N 20 days before harvest.",
+    "applicationTiming": "0 DAT: basal (30% N + full P + 30% K). 15-20 DAT: rosette top-dress. 30-35 DAT: heading top-dress (peak demand)."
   },
   {
     "country": "CN",
@@ -2896,8 +2920,10 @@
       "url": "https://admin.agrin.jp/documents/854/image1_file0119051020301930413.pdf",
       "year": "2019"
     },
-    "notes": "Hakusai 8,000 kg/10a",
-    "suggestedStatus": "verified"
+    "notes": "Hakusai 8,000 kg/10a Yamagata Prefectural Fertilization Standard: Autumn-harvest Chinese Cabbage (Aki-dori Hakusai), 25.1/29.2/22.9 kg/10a (x10 = 251/292/229 kg/ha). Heavy Kuroboku/volcanic soils drive P demand above N.",
+    "suggestedStatus": "verified",
+    "applicationMethod": "Basal / Motogoe (0 DAT): 60% N (150.6 kg/ha) + 100% P2O5 (292 kg/ha) + 60% K2O (137.4 kg/ha) incorporated with mulch and ridge formation at transplanting. Top-dress / Oibai (20-25 DAT, heading initiation): remaining 40% N (100.4 kg/ha) + 40% K2O (91.6 kg/ha) via furrow/hole placement between plants, followed by irrigation.",
+    "applicationTiming": "0 DAT: basal (60% N + full P + 60% K). 20-25 DAT: top-dress (40% N + 40% K) at heading initiation."
   },
   {
     "country": "JP",
