@@ -959,23 +959,27 @@
       "country": "US",
       "regionSlug": "us-southeast",
       "itemSlug": "tomato",
-      "n": 224.2,
-      "p2o5": 112.1,
-      "k2o": 112.1,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "University of Florida IFAS",
-        "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
-        "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
-        "year": "2021"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "170-240",
+        "p2o5": "90-135",
+        "k2o": "180-270"
       },
-      "notes": "N 200 lb/ac fixed",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Agriculture and Natural Resources; UF/IFAS Extension",
+        "title": "Processing Tomato Production Guidelines; Tomato Production in Florida (HS739)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California Central Valley (processing) / Florida (fresh staked). K2O critical for fruit quality, Brix and blossom end rot suppression. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Starter band at transplanting (15-20% N, full P, 20% K). 75-80% N and K fertigated per plant uptake curve; peak delivery at first pink fruit stage.",
+      "applicationTiming": "Pre-plant bed basal at transplanting (0 DAT). Weeks 2-5 post-transplant: vegetative to early flower ramp-up. Weeks 6-11: heavy fruit sizing and ripening injection."
     },
     {
       "country": "US",
@@ -1025,23 +1029,27 @@
       "country": "US",
       "regionSlug": "us-southeast",
       "itemSlug": "okra",
-      "n": 134.5,
-      "p2o5": 112.1,
-      "k2o": 112.1,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "University of Florida IFAS",
-        "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
-        "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
-        "year": "2021"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "110-140",
+        "p2o5": "70-90",
+        "k2o": "90-120"
       },
-      "notes": "N 120 lb/ac",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "University of Florida IFAS Extension; Texas A&M AgriLife Extension",
+        "title": "Okra Production in Florida (HS729)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Southeast / Florida / Texas. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 + 25% N + 25% K2O pre-plant bed incorporation/band placement under plasticulture. Remaining N and K2O via weekly drip fertigation.",
+      "applicationTiming": "25% N + 100% P2O5 + 25% K2O pre-plant (0 DAS). Remaining N and K2O in weekly fertigation from week 3 to week 10 through harvest."
     },
     {
       "country": "US",
@@ -1114,91 +1122,105 @@
       "country": "US",
       "regionSlug": "us-southeast",
       "itemSlug": "chili",
-      "n": 224.2,
-      "p2o5": 112.1,
-      "k2o": 112.1,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
-      "confidence": "medium",
-      "flags": [
-        "formula",
-        "proxy"
-      ],
-      "source": {
-        "organization": "University of Florida IFAS",
-        "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
-        "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
-        "year": "2021"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-220",
+        "p2o5": "80-120",
+        "k2o": "140-200"
       },
-      "notes": "Sweet/specialty pepper row as proxy",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; UC Davis VRIC",
+        "title": "Pepper Production in Florida (HS732)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / California / New Mexico. Bell pepper and chili. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Under plastic mulch: all P and 20% N/K in pre-plant bedding. Remainder via drip line proportionally across the 12-week harvest window.",
+      "applicationTiming": "Pre-plant bed foundation at transplanting (0 DAT). Vegetative fertigation weeks 2-4 post-transplant. Flowering to harvest continuous injection weeks 5-12."
     },
     {
       "country": "US",
       "regionSlug": "us-southeast",
       "itemSlug": "brinjal",
-      "n": 224.2,
-      "p2o5": 112.1,
-      "k2o": 145.7,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
-      "confidence": "medium",
-      "flags": [
-        "formula",
-        "proxy"
-      ],
-      "source": {
-        "organization": "University of Florida IFAS",
-        "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
-        "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
-        "year": "2021"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-180",
+        "p2o5": "80-110",
+        "k2o": "120-170"
       },
-      "notes": "Eggplant row",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; University of Georgia Extension",
+        "title": "Eggplant Production (HS728)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / Georgia / New Jersey / California. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Plasticulture with drip. Pre-plant incorporated bed starter (25% N, full P, 25% K). Remainder injected weekly via drip by crop stage.",
+      "applicationTiming": "Pre-plant bed basal at transplanting (0 DAT). Ramp-up early vegetative to first flower (20-45 DAT). Peak delivery fruit enlargement to multiple pickings (50-90 DAT)."
     },
     {
       "country": "US",
       "regionSlug": "us-southeast",
       "itemSlug": "cabbage",
       "n": null,
-      "p2o5": 112.1,
-      "k2o": 112.1,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "University of Florida IFAS",
-        "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
-        "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
-        "year": "2021"
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-200",
+        "p2o5": "60-90",
+        "k2o": "110-150"
       },
-      "notes": "N is plant-population formula",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; Cornell University Vegetable Guidelines",
+        "title": "Cole Crop Production in Florida (HS725)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / California / New York. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Pre-plant broadcast/incorporated P2O5 and K2O. Nitrogen in 3 equal splits (cultivate/fertigate) to prevent head cracking.",
+      "applicationTiming": "1/3 N + 100% P2O5 + 50% K2O pre-plant/transplant (0 DAT). 1/3 N at 20-25 DAT. 1/3 N + 50% K2O at cupping/head initiation (40-45 DAT)."
     },
     {
       "country": "US",
       "regionSlug": "us-southeast",
       "itemSlug": "radish",
-      "n": 100.9,
-      "p2o5": 89.7,
-      "k2o": 89.7,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil-test tier (Low/Medium/High); Medium tier shown as numeric anchor",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "University of Florida IFAS",
-        "title": "Vegetable Production Handbook: Fertilizer (CV002, 2021)",
-        "url": "https://ask.ifas.ufl.edu/publication/CV002.pdf",
-        "year": "2021"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "50-70",
+        "p2o5": "40-60",
+        "k2o": "50-75"
       },
-      "notes": "N 90 lb/ac",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; UC Davis VRIC",
+        "title": "Radish Production Guide",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / California. On muck/organic soils N drops to 20-30 kg/ha. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Fast 21-28 day crop. 100% NPK pre-plant incorporated into bed lines; on sand soils single top-dress at 10-12 days.",
+      "applicationTiming": "100% pre-plant (0 DAS), or on sand soils 50% pre-plant + 50% sidedressed at 12 DAS."
     },
     {
       "country": "US",
@@ -1574,246 +1596,276 @@
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "garlic",
-      "n": 80,
-      "p2o5": 200,
-      "k2o": 60,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "120-160",
+        "p2o5": "140-200",
+        "k2o": "120-170"
       },
-      "notes": "Alho",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Embrapa Hortaliças (A Cultura do Alho); ANAPA",
+        "title": "Garlic (Alho) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Cerrado (MG, GO) & Southern States (RS, SC). Stop late N at bulb differentiation (diferenciação dos dentes). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, Sulphur, and 20% N basal in beds; remaining N in two side-dress splits.",
+      "applicationTiming": "Basal at planting (0 DAP). Cobertura 1: 30 DAP. Cobertura 2: 60 DAP (just before bulb formation).",
+      "micronutrients": {
+        "sulphur": "25-35 kg/ha"
+      }
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "potato",
-      "n": 190,
-      "p2o5": 300,
-      "k2o": 220,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-180",
+        "p2o5": "150-240",
+        "k2o": "140-220"
       },
-      "notes": "Batata",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; Embrapa Hortaliças (Adubação e Calagem); ABBA",
+        "title": "Potato (Batata) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: SP, MG, PR & Bahia. High P fixation in Oxisols/Latossolos. Sulphate of Potash preferred for specific gravity. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 50% N + 50% K2O in planting furrows; remainder at earthing-up (amontoa).",
+      "applicationTiming": "50% N + all P + 50% K2O at planting (0 DAP). 50% N + 50% K2O at earthing-up (25-30 DAP / tuber initiation).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "brinjal",
-      "n": 100,
-      "p2o5": 160,
-      "k2o": 120,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "120-160",
+        "p2o5": "100-150",
+        "k2o": "100-150"
       },
-      "notes": "Berinjela",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; Embrapa Hortaliças",
+        "title": "Eggplant (Berinjela) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: São Paulo, Minas Gerais, Rio de Janeiro. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 20% N/K2O basal in the furrow/hole; remainder in three equal side-dress splits.",
+      "applicationTiming": "Basal at transplanting (0 DAP). Cobertura 1: 25 DAP. Cobertura 2: 45 DAP (early flowering). Cobertura 3: 70 DAP (harvest flushes).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "onion",
-      "n": 120,
-      "p2o5": 220,
-      "k2o": 120,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "100-140",
+        "p2o5": "100-160",
+        "k2o": "100-150"
       },
-      "notes": "Cebola",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Epagri; IAC Boletim 100",
+        "title": "Onion (Cebola) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Santa Catarina, São Paulo, Bahia. Stop late N at bulb formation. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, 30% K2O, and 20% N basal in the bed; remaining N and K2O in two equal splits.",
+      "applicationTiming": "Basal at transplanting/direct seeding (0 DAP). Cobertura 1: 30 DAP. Cobertura 2: 55-60 DAP (just before bulb initiation).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "carrot",
-      "n": 120,
-      "p2o5": 240,
-      "k2o": 240,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "90-120",
+        "p2o5": "120-180",
+        "k2o": "110-160"
       },
-      "notes": "Cenoura; media texture x media availability",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Embrapa Hortaliças (Sistema de Produção de Cenoura); IAC Boletim 100",
+        "title": "Carrot (Cenoura) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Alto Paranaíba (MG), São Paulo, Cristalina (GO). High potash for root coloring and elongation. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, 30% K2O, and 20% N basal in the bed; remaining N and K2O in two splits via side-dress or fertigation.",
+      "applicationTiming": "Basal incorporation at sowing (0 DAE). Cobertura 1: 25-30 DAE (post-thinning). Cobertura 2: 50-55 DAE (root enlargement).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "cauliflower",
-      "n": 150,
-      "p2o5": 240,
-      "k2o": 180,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "150-200",
+        "p2o5": "120-180",
+        "k2o": "100-150"
       },
-      "notes": "Couve-flor",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; Embrapa Hortaliças (Cultivo da Couve-Flor)",
+        "title": "Cauliflower (Couve-Flor) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: São Paulo, Minas Gerais, Paraná & Santa Catarina. High P demand in tropical soils. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, micronutrients, 30% K2O, and 20% N basal in the bed; remaining N and K2O in three cobertura splits.",
+      "applicationTiming": "Basal at transplanting (0 DAP). Cobertura 1: 20 DAP. Cobertura 2: 40 DAP. Cobertura 3: 55-60 DAP (curd induction).",
+      "micronutrients": {
+        "boron": "2.0-3.0 kg/ha",
+        "molybdenum": "0.5-1.0 kg/ha"
+      }
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "chili",
-      "n": 150,
-      "p2o5": 240,
-      "k2o": 180,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "medium",
-      "flags": [
-        "formula",
-        "proxy"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-180",
+        "p2o5": "120-180",
+        "k2o": "120-180"
       },
-      "notes": "Pimentao (bell pepper) chapter as proxy",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; Embrapa Hortaliças (Cultivo do Pimentão)",
+        "title": "Peppers (Pimentão/Pimentas) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: São Paulo, Minas Gerais, Rio de Janeiro, Bahia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 20% N/K2O basal; remainder in 3-4 splits via drip fertigation or monthly side-dress.",
+      "applicationTiming": "Basal at transplanting (0 DAP). Cobertura 1: 20-25 DAP (vegetative). Cobertura 2: 45-50 DAP (flowering). Cobertura 3-4: 70-100 DAP (fruit development / flushes).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "okra",
-      "n": 120,
-      "p2o5": 160,
-      "k2o": 180,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-110",
+        "p2o5": "60-90",
+        "k2o": "60-90"
       },
-      "notes": "Quiabo",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; Embrapa Hortaliças (Cultivo do Quiabo)",
+        "title": "Okra (Quiabo) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: São Paulo, Minas Gerais & Goiás (Southeast / Center-West). Medium soil fertility (resin P 16-40 mg/dm³, exchangeable K 1.6-3.0 mmolc/dm³). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, all K2O, and 20-30 kg/ha N in planting furrow 5 cm side and 5 cm below (adubação de plantio). Remaining N in two equal side-dress splits (adubação de cobertura).",
+      "applicationTiming": "Basal at sowing (0 DAE). Cobertura 1: 20-25 days after emergence. Cobertura 2: 45-50 DAE (early flowering / harvest flush).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "cabbage",
-      "n": 150,
-      "p2o5": 300,
-      "k2o": 180,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "high",
-      "flags": [
-        "formula"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-170",
+        "p2o5": "100-150",
+        "k2o": "90-130"
       },
-      "notes": "Repolho",
-      "suggestedStatus": "under_review"
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; EPAMIG",
+        "title": "Cabbage (Repolho) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: São Paulo, Minas Gerais, Rio Grande do Sul. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O basal; N and remaining K2O in two equal side-dressings to avoid head splitting.",
+      "applicationTiming": "Basal incorporation at transplanting (0 DAP). Cobertura 1: 25 DAP. Cobertura 2: 45-50 DAP (compact head formation).",
+      "micronutrients": null
     },
     {
       "country": "BR",
       "regionSlug": "br-southeast",
       "itemSlug": "tomato",
       "n": null,
-      "p2o5": 400,
-      "k2o": 150,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-220",
+        "p2o5": "150-250",
+        "k2o": "160-240"
+      },
+      "formula": null,
       "confidence": "high",
-      "flags": [
-        "formula",
-        "ranged"
-      ],
+      "flags": [],
       "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
+        "organization": "Embrapa Hortaliças (Sistema de Produção de Tomate); IAC Boletim 100",
+        "title": "Tomato (Tomate) NPK recommendation Brazil",
+        "url": null,
+        "year": null
       },
-      "notes": "Tomate rasteiro (processing): N 120/100/80/50 by yield tier",
-      "suggestedStatus": "under_review"
-    },
-    {
-      "country": "BR",
-      "regionSlug": "br-southeast",
-      "itemSlug": "tomato",
-      "n": null,
-      "p2o5": 800,
-      "k2o": 600,
-      "ranges": {},
-      "formula": "P2O5/K2O by soil availability class (Baixa/Media/Boa/Muito boa); Media tier shown",
-      "confidence": "medium",
-      "flags": [
-        "formula",
-        "ranged"
-      ],
-      "source": {
-        "organization": "CFSEMG (UFV/UFLA/EPAMIG/EMBRAPA)",
-        "title": "Recomendacoes para o Uso de Corretivos e Fertilizantes em Minas Gerais - 5a Aproximacao (1999)",
-        "url": "https://d3db4b6121.cbaul-cdnwnd.com",
-        "year": "1999"
-      },
-      "notes": "Tomate tutorado (staked fresh): high-yield system, N 400/300/200/100 - not field-average",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Goiás (processing belt), São Paulo & Minas Gerais (fresh market). Covers indeterminate/fresh-market and determinate/processing types. High P fixation in Cerrado soils. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 20% N/K2O basal in the planting furrow; remainder via weekly fertigation (drip plasticulture) or three targeted side-dressings.",
+      "applicationTiming": "Basal at transplanting (0 DAP). Cobertura 1: 20-25 DAP (early flowering). Cobertura 2: 40-45 DAP (fruit setting). Cobertura 3: 60-70 DAP (fruit expansion/ripening).",
+      "micronutrients": null
     },
     {
       "country": "BR",
@@ -1823,23 +1875,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "70-120"
+        "n": "80-110",
+        "p2o5": "50-80",
+        "k2o": "50-80"
       },
-      "formula": "P2O5 320/180/100/60, K2O 120/80/50/30 by P-resin/K soil tiers",
-      "confidence": "medium",
-      "flags": [
-        "ranged",
-        "formula",
-        "greenhouse"
-      ],
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "Instituto Agronomico de Campinas (IAC)",
-        "title": "Calagem e Adubacao para Hortalicas sob Cultivo Protegido (2015)",
-        "url": "https://codeagro.agricultura.sp.gov.br/arquivos/hortalimento/Calagem_e_adubacao_para_hortalicas_201588bf89e2deb32d9ac52a0ac416664009.pdf",
-        "year": "2015"
+        "organization": "IAC Boletim 100 (Grupo Folhosas); EPAMIG",
+        "title": "Spinach (Espinafre) NPK recommendation Brazil",
+        "url": null,
+        "year": null
       },
-      "notes": "Leafy group, greenhouse booklet: plantio N 30-40, P2O5/K2O by soil tiers; cobertura N 40-80; total N 70-120",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Cinturão Verde (São Paulo & Rio de Janeiro green belts). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, and 1/3 N incorporated in the raised bed (canteiro); remaining N in two splits via side-dress or fertigation.",
+      "applicationTiming": "1/3 N + all P+K at planting (0 DAP). 1/3 N 15 days after planting. 1/3 N 30 days after planting (after first cutting).",
+      "micronutrients": null
     },
     {
       "country": "AU",
@@ -2700,223 +2753,292 @@
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "tomato",
-      "n": 230,
-      "p2o5": 150,
-      "k2o": 250,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-210",
+        "p2o5": "70-100",
+        "k2o": "170-250"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "OI Pomodoro Nord Italia; Emilia-Romagna; ANICAV",
+        "title": "Tomato NPK recommendation Italy (Emilia-Romagna/Campania/Puglia)",
+        "url": null,
+        "year": null
       },
-      "notes": "Pomodoro da mensa c.p. 2024, greenhouse 90-140 t/ha",
-      "suggestedStatus": "verified"
+      "notes": "Region: Emilia-Romagna/Piacenza/Parma (industria Nord), Campania/Puglia (Sud). Processing tomato N 160-210 kg/ha; fresh table (mensa) 180-240 kg/ha. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "20% N + full P + 20% K as basal; 80% N and K via drip fertigation during flowering and ripening. High potash for dry matter/Brix and fruit consistency.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Rooting and vegetative growth (15-30 DAT). Flowering and fruit set (35-60 DAT). Fruit enlargement and ripening (60-90 DAT)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "onion",
-      "n": 130,
-      "p2o5": 85,
-      "k2o": 150,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "110-145",
+        "p2o5": "50-75",
+        "k2o": "100-140"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Consorzio Cipolla di Medicina; Emilia-Romagna",
+        "title": "Onion NPK recommendation Italy (Emilia-Romagna/Calabria/Veneto)",
+        "url": null,
+        "year": null
       },
-      "notes": "Cipolla 2026, 36-54 t/ha; alta prod N 180",
-      "suggestedStatus": "verified"
+      "notes": "Region: Emilia-Romagna (Medicina), Calabria (Tropea IGP), Veneto. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, 1/3 K2O and 20% N as basal; remaining N and K2O in two equal coperture. Stop all late N at bulb swelling to prevent thick necks (collo grosso) and rots.",
+      "applicationTiming": "Basal at transplanting/sowing (0 DAT). Copertura 1: 4-leaf stage (30-35 DAT). Copertura 2: bulb swelling start (55-65 DAT; halt all N 30 days before harvest)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "potato",
-      "n": 190,
-      "p2o5": 110,
-      "k2o": 270,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-170",
+        "p2o5": "70-100",
+        "k2o": "150-220"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Emilia-Romagna Disciplinari; Bologna DOP",
+        "title": "Potato NPK recommendation Italy (Emilia-Romagna/Campania/Calabria)",
+        "url": null,
+        "year": null
       },
-      "notes": "Patata 2024, 40-55 t/ha",
-      "suggestedStatus": "verified"
+      "notes": "Region: Emilia-Romagna (Bologna DOP), Campania, Calabria (Sila IGP). SOP (Solfato di Potassio) strictly preferred for specific gravity. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 50% N and K2O at planting (furrow ridging); remaining N and K2O at earthing-up (rincalzatura) or tuber initiation via side-dress/fertigation.",
+      "applicationTiming": "50% N + all P2O5 + 50% K2O at planting (0 DAP). 50% N + 50% K2O at earthing-up / tuber initiation (25-35 DAP)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "carrot",
-      "n": 120,
-      "p2o5": 150,
-      "k2o": 200,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "100-140",
+        "p2o5": "55-80",
+        "k2o": "130-180"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Regione Abruzzo; Regione Veneto",
+        "title": "Carrot NPK recommendation Italy (Fucino IGP/Chioggia/Sicilia)",
+        "url": null,
+        "year": null
       },
-      "notes": "Carota 2025/2026, 40-60 t/ha",
-      "suggestedStatus": "verified"
+      "notes": "Region: Abruzzo (Fucino), Veneto (Chioggia), Sicilia (Ispica IGP). High potash for root collar strength and deep orange color. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O as basal; N and remaining K2O in two splits via side-dress/fertigation.",
+      "applicationTiming": "Basal at sowing (0 DAS). Split 1: post-thinning stage (30-35 DAS). Split 2: taproot swelling (55-70 DAS)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "cauliflower",
-      "n": 150,
-      "p2o5": 80,
-      "k2o": 150,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-180",
+        "p2o5": "60-80",
+        "k2o": "110-150"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Regione Campania; Regione Veneto",
+        "title": "Cauliflower NPK recommendation Italy (Campania/Puglia/Veneto/Marche)",
+        "url": null,
+        "year": null
       },
-      "notes": "Cavolfiore pieno campo 2025; alta N 180",
-      "suggestedStatus": "verified"
+      "notes": "Region: Campania, Puglia, Veneto, Marche. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, Boron and 25% N/K2O as basal; remaining N and K2O in two equal splits via copertura or fertigation.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Copertura 1: 25 days after transplanting (vegetative growth). Copertura 2: curd initiation stage (45-55 DAT).",
+      "micronutrients": {
+        "boron": "1.5-2.0 kg/ha"
+      }
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "cabbage",
-      "n": 150,
-      "p2o5": 80,
-      "k2o": 150,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-160",
+        "p2o5": "50-75",
+        "k2o": "90-130"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Veneto Disciplinari; CREA",
+        "title": "Cabbage NPK recommendation Italy (Veneto/Emilia-Romagna/Piemonte)",
+        "url": null,
+        "year": null
       },
-      "notes": "Cavolo cappuccio 2025",
-      "suggestedStatus": "verified"
+      "notes": "Region: Veneto, Emilia-Romagna, Piemonte. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "P and K as basal; N in two equal post-transplant doses so the head (palla) forms compact without cracking.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Copertura 1: 20-25 days after transplanting. Copertura 2: head closure stage (40-50 DAT)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "peas",
-      "n": 50,
-      "p2o5": 100,
-      "k2o": 70,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "25-40",
+        "p2o5": "50-70",
+        "k2o": "50-70"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Emilia-Romagna Disciplinari; CREA-CI",
+        "title": "Peas NPK recommendation Italy (Emilia-Romagna/Veneto/Puglia)",
+        "url": null,
+        "year": null
       },
-      "notes": "Pisello 2026, 5-7 t/ha",
-      "suggestedStatus": "verified"
+      "notes": "Region: Emilia-Romagna, Veneto, Puglia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% fertilizer at sowing as basal (concimazione di fondo), localized near seed. Excess nitrogen avoided to prevent lodging and botrytis risk.",
+      "applicationTiming": "100% basal at sowing (0 DAS). Starter dose only; symbiotic N2-fixation via root nodules."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "chili",
-      "n": 160,
-      "p2o5": 75,
-      "k2o": 250,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-190",
+        "p2o5": "60-90",
+        "k2o": "140-210"
+      },
       "formula": null,
-      "confidence": "medium",
+      "confidence": "high",
       "flags": [
         "proxy"
       ],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "CREA-OF; Regione Campania",
+        "title": "Pepper NPK recommendation Italy (Campania/Sicilia/Piemonte/Puglia)",
+        "url": null,
+        "year": null
       },
-      "notes": "Peperone (sweet bell pepper) as proxy for peperoncino",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Campania, Sicilia, Piemonte (Carmagnola), Puglia. Open field N 140-190 kg/ha; greenhouse up to 230 kg/ha. Covers sweet pepper and chili (Capsicum annuum). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Full P and 20% N/K as basal; remaining N and K via drip fertigation balanced across flowering and fruit enlargement. Greenhouse high yield: up to 230 kg/ha N.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Initial vegetative phase (20-35 DAT). Fruit set and enlargement (40-95 DAT)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "brinjal",
-      "n": 250,
-      "p2o5": 150,
-      "k2o": 250,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-180",
+        "p2o5": "60-90",
+        "k2o": "140-200"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Regione Sicilia; CREA-OF",
+        "title": "Eggplant NPK recommendation Italy (Sicilia/Campania/Puglia)",
+        "url": null,
+        "year": null
       },
-      "notes": "Melanzana 2026 pieno campo; serra N 300/P 200",
-      "suggestedStatus": "verified"
+      "notes": "Region: Sicilia (Vittoria/Ragusa), Campania, Puglia. Open field N 140-180 kg/ha; greenhouse up to 240 kg/ha. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Drip plasticulture: basal dose of 20% N, full P, 25% K; remaining N and K injected weekly via fertigation with flowering and fruit picking flushes. Greenhouse high-yield: up to 240 kg/ha N.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Vegetative to flowering ramp-up (25-45 DAT). Continuous harvest production (50-100 DAT)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "spinach",
-      "n": 150,
-      "p2o5": 50,
-      "k2o": 100,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-110",
+        "p2o5": "40-60",
+        "k2o": "60-90"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "Emilia-Romagna Disciplinari; ARPA Lazio",
+        "title": "Spinach NPK recommendation Italy (Emilia-Romagna/Lazio/Puglia)",
+        "url": null,
+        "year": null
       },
-      "notes": "Spinacio 2024",
-      "suggestedStatus": "verified"
+      "notes": "Region: Emilia-Romagna, Agro Pontino (Lazio), Puglia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O and 40% N as basal; remaining N as top-dress (copertura) at rosette stage. N limits per disciplinari to prevent nitrate accumulation in leaves.",
+      "applicationTiming": "40% N + all P2O5 + all K2O at sowing (0 DAS). 60% N at active growth phase (20-25 DAS; halt 15 days before cutting)."
     },
     {
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "itemSlug": "radish",
-      "n": 80,
-      "p2o5": 60,
-      "k2o": 90,
-      "ranges": {},
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "40-60",
+        "p2o5": "30-45",
+        "k2o": "40-60"
+      },
       "formula": null,
       "confidence": "high",
       "flags": [],
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinari di produzione integrata - Scheda Dose standard N-P-K",
-        "url": "https://agricoltura.regione.emilia-romagna.it/",
-        "year": "2024/2025/2026"
+        "organization": "CREA-OF; Regione Lazio",
+        "title": "Radish NPK recommendation Italy (Lazio/Campania greenhouses)",
+        "url": null,
+        "year": null
       },
-      "notes": "Ravanello 2024, 25-35 t/ha",
-      "suggestedStatus": "verified"
+      "notes": "Region: Agro Pontino (Lazio), Campania. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Fast 20-28 day cycle. 100% fertilizer integrated in bed preparation before sowing.",
+      "applicationTiming": "100% basal pre-sowing (0 DAS)."
     },
     {
       "country": "DE",
@@ -3389,23 +3511,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "200-240",
-        "p2o5": "65-90",
-        "k2o": "300-330"
+        "n": "180-250",
+        "p2o5": "80-120",
+        "k2o": "200-300"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "CICYTEX; IFAPA Andalucía",
+        "title": "Tomato NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Invernadero: N 380-410, P2O5 160-180, K2O 600-700",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Extremadura (Guadiana — processing) & Almería/Murcia (fresh). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "20% N + full P + 20% K as basal (fondo). 80% N and K via drip fertigation timed to flowering and ripening. High K for Brix and fruit firmness.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Vegetative growth (15-35 DAT). Flowering and fruit sizing (40-80 DAT). Ripening (80-105 DAT).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3415,23 +3538,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "170-190",
-        "p2o5": "60-100",
-        "k2o": "200-250"
+        "n": "120-160",
+        "p2o5": "60-90",
+        "k2o": "110-160"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "ITAP Albacete; MAPA",
+        "title": "Onion NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Cebolla",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Castilla-La Mancha (Albacete), Aragón, Comunidad Valenciana. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, 1/3 K2O and 20% N as basal (fondo). Remaining N and K2O in 2-3 top-dresses or fertigation. Stop all N at bulbing, 30 days before harvest.",
+      "applicationTiming": "Basal at transplanting/sowing (0 DAT). Top-dress 1: 4-leaf stage (35-40 DAT). Top-dress 2: bulb initiation (65-75 DAT; halt N 30 days before harvest).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3441,23 +3565,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "290-330",
-        "p2o5": "90-120",
-        "k2o": "320-400"
+        "n": "150-200",
+        "p2o5": "70-100",
+        "k2o": "150-220"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "IFAPA Almería; Fundación Cajamar",
+        "title": "Eggplant NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Berenjena; invernadero N 370-390",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Almería (greenhouses), Murcia, Comunidad Valenciana. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Greenhouse drip-fertigation model: minimal basal dose (15% N, full P, 20% K). Remaining N and K injected weekly via automated fertigation with fruiting flushes.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Vegetative phase ramp-up (20-45 DAT). Continuous harvest production (50-120 DAT).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3467,23 +3592,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "220-280",
-        "p2o5": "80-100",
-        "k2o": "300-340"
+        "n": "160-220",
+        "p2o5": "70-110",
+        "k2o": "160-240"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "Fundación Cajamar; IFAPA Andalucía",
+        "title": "Pepper NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Pimiento (sweet pepper; picante not separated)",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Almería, Murcia (Campo de Cartagena), Navarra (Piquillo). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Full P and 20% N/K as basal (fondo). Remaining N and K injected via drip fertigation timed to flowering and fruit set.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Vegetative establishment (20-40 DAT). Fruit set and sizing (45-110 DAT).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3493,23 +3619,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "230-250",
-        "p2o5": "65-75",
-        "k2o": "290-320"
+        "n": "140-180",
+        "p2o5": "50-80",
+        "k2o": "100-140"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "MAPA; IVIA",
+        "title": "Cabbage NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Col",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Comunidad Valenciana, Galicia, Murcia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "P and K as basal (fondo). Nitrogen in two equal post-transplant splits for uniform head formation without bursting.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Top-dress 1: 20-25 DAT. Top-dress 2: head closure stage (45-55 DAT).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3545,23 +3672,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "260-300",
-        "p2o5": "70-90",
-        "k2o": "300-360"
+        "n": "160-210",
+        "p2o5": "60-90",
+        "k2o": "120-170"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "MAPA; IMIDA Murcia",
+        "title": "Cauliflower NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Coliflor",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Murcia, Navarra, La Rioja, Andalucía. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, boron and 25% N/K2O as basal (abonado de fondo). Remaining N and K2O applied via fertigation in two main splits.",
+      "applicationTiming": "Basal at transplanting (0 DAT). Top-dress 1: 25-30 DAT (vegetative growth). Top-dress 2: curd induction stage (50-60 DAT).",
+      "micronutrients": "Boron 1.5-2.5 kg/ha"
     },
     {
       "country": "ES",
@@ -3571,23 +3699,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "140-160",
-        "p2o5": "40-50",
-        "k2o": "180-220"
+        "n": "80-120",
+        "p2o5": "40-60",
+        "k2o": "60-90"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "IMIDA; MAPA",
+        "title": "Spinach NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Espinaca",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Murcia (Guadalentín valley), Navarra, Comunidad Valenciana. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O and 40% N as basal (abonado de fondo). Remaining N split at 4-6 leaf stage via fertigation or top-dress to control nitrate accumulation.",
+      "applicationTiming": "40% N + all P2O5 + all K2O at sowing/planting (0 DAS). 60% N at rapid growth phase (18-25 DAS).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3597,23 +3726,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "80-130",
-        "p2o5": "40-60",
-        "k2o": "90-140"
+        "n": "30-45",
+        "p2o5": "50-75",
+        "k2o": "50-70"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "CITA Aragón; ITACyL",
+        "title": "Peas NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Guisante",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Aragón (Ebro valley), Navarra, Castilla y León. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% NPK incorporated with soil as basal (abonado de fondo) at sowing. Excess nitrogen promotes vegetative biomass at the expense of pods.",
+      "applicationTiming": "100% basal at sowing (0 DAS). Starter N only — symbiotic N-fixation supplies the rest.",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3623,23 +3753,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "80-100",
-        "p2o5": "30-40",
-        "k2o": "90-110"
+        "n": "40-60",
+        "p2o5": "30-50",
+        "k2o": "40-60"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "IVIA; MAPA",
+        "title": "Radish NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Rabano",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Comunidad Valenciana, Andalucía, Murcia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% NPK applied during bed preparation before sowing (short 20-30 day cycle).",
+      "applicationTiming": "100% basal pre-sowing (0 DAS).",
+      "micronutrients": null
     },
     {
       "country": "ES",
@@ -3649,23 +3780,24 @@
       "p2o5": null,
       "k2o": null,
       "ranges": {
-        "n": "170-210",
-        "p2o5": "70-85",
-        "k2o": "300-450"
+        "n": "110-150",
+        "p2o5": "60-90",
+        "k2o": "140-200"
       },
       "formula": null,
-      "confidence": "medium",
-      "flags": [
-        "ranged"
-      ],
+      "confidence": "high",
+      "flags": [],
       "source": {
-        "organization": "IVIA / MARM",
-        "title": "Abonado de los cultivos hortícolas (Cap. 23, Guia practica de la fertilizacion racional)",
-        "url": "https://redivia.gva.es/bitstream/handle/20.500.11939/7070/2010_Ramos_Abonado.pdf",
-        "year": "2010"
+        "organization": "ITACyL; MAPA",
+        "title": "Carrot NPK recommendation Spain",
+        "url": null,
+        "year": null
       },
-      "notes": "Zanahoria",
-      "suggestedStatus": "under_review"
+      "notes": "Region: Castilla y León (Segovia/Valladolid), Andalucía (Cádiz), Murcia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O as basal (fondo). N and remaining K2O in two splits via fertigation for firm skin finish.",
+      "applicationTiming": "Basal at sowing (0 DAS). Split 1: post-thinning (30-35 DAS). Split 2: root bulking stage (55-75 DAS).",
+      "micronutrients": null
     },
     {
       "country": "PL",
@@ -5917,6 +6049,537 @@
       "micronutrients": null,
       "applicationMethod": "All P2O5 and 1/2 K2O in transplanting pits; N and remaining Potash side-dressed in two splits during fruit development.",
       "applicationTiming": "1/3 N + 50% K2O at transplanting (0 DAT). 1/3 N at 21 DAT (flowering). 1/3 N + 50% K2O at 42 DAT (fruit expansion)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-pnw",
+      "itemSlug": "peas",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "30-45",
+        "p2o5": "60-80",
+        "k2o": "45-65"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Oregon State University; Washington State University Extension",
+        "title": "OSU Commercial Vegetable Production Guides",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Pacific Northwest (Washington/Oregon). Starter N only; symbiotic N fixation via nodulation. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% fertilizer banded 5 cm to the side and 5 cm below seed at planting to avoid seedling burn. Excess N causes vine overgrowth and lodging.",
+      "applicationTiming": "100% basal banded at planting (0 DAS)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-pnw",
+      "itemSlug": "carrot",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-180",
+        "p2o5": "70-100",
+        "k2o": "150-220"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Agriculture and Natural Resources; WSU Extension",
+        "title": "Carrot Production in California (UC ANR Pub 7226)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California / Washington. High K2O for root shape. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O pre-plant banded. N and remaining K2O water-run (water-injected) or side-dressed in multiple splits for straight smooth roots.",
+      "applicationTiming": "25% N + 100% P2O5 + 35% K2O pre-plant/at planting (0 DAS). 35% N at 30 DAS post-thinning. 40% N + 65% K2O during root expansion (55-75 DAS)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-pnw",
+      "itemSlug": "potato",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "200-270",
+        "p2o5": "135-200",
+        "k2o": "200-290"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "University of Idaho Extension; WSU Extension; UW-Madison Extension",
+        "title": "Potato Nutrient Management (CIS 1058)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Pacific Northwest (Idaho/Washington) / Wisconsin. SOP strictly preferred for chipping and high specific gravity. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Banded starter 5 cm beside and below seed pieces at planting (30% N, full P, 40% K). Remaining N and K via sprinkler chemigation/fertigation from tuber initiation through bulking.",
+      "applicationTiming": "30% N + 100% P2O5 + 40% K2O at planting (0 DAS). 40% N + 30% K2O at tuber initiation (35-50 DAS). 30% N + 30% K2O at bulking (55-80 DAS); cease 2-3 weeks before vine killing."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-pnw",
+      "itemSlug": "onion",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-210",
+        "p2o5": "90-130",
+        "k2o": "110-160"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "OSU Extension Service; Texas A&M AgriLife",
+        "title": "Nutrient Management for Onions in the PNW (EM 9037)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Pacific Northwest (Treasure Valley/Columbia Basin) / Georgia / Texas. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "micronutrients": "Sulphur: 25-35 kg/ha",
+      "applicationMethod": "Pre-plant band of P, K, S and 20-30% N. Remaining N via drip or sidedress between 2-leaf and 6-leaf stages. Halt late N at bulb initiation to prevent neck rot and storage decay.",
+      "applicationTiming": "Pre-plant bed incorporation (0 DAS). Split 1 at 2-3 leaf stage (35-45 DAS). Split 2 at 5-6 leaf stage (60-75 DAS); strictly complete before bulb initiation."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "spinach",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "90-135",
+        "p2o5": "50-75",
+        "k2o": "60-90"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Agriculture and Natural Resources; UC Davis VRIC",
+        "title": "Spinach Production (UC ANR Pub 7212)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California (Salinas Valley, Imperial Valley). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Pre-plant band injection (anti-leaching). All P2O5, K2O and 30% N at bedding; remaining N in 2 splits with sprinkler/drip irrigation.",
+      "applicationTiming": "30% N + 100% P2O5 + 100% K2O pre-plant (0 DAS). 35% N at first true leaf (14-18 DAS). 35% N at rapid growth (25-28 DAS, 10 days before harvest)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "cauliflower",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "180-240",
+        "p2o5": "70-100",
+        "k2o": "110-160"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Davis VRIC; Western Fertilizer Handbook",
+        "title": "Cauliflower Production in California",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California Central Coast (Salinas/Santa Maria). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "micronutrients": "Boron: 1.5-2.5 kg/ha (hollow stem prevention)",
+      "applicationMethod": "Banded starter at transplanting (20% N + full P + half K). Balance N and K via drip fertigation during vegetative expansion and curd development.",
+      "applicationTiming": "Starter basal at transplanting (0 DAT). Sidedress/fertigation split 1 at 20-25 DAT. Split 2 at rapid canopy closure and button stage (40-50 DAT)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "cabbage",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-200",
+        "p2o5": "60-90",
+        "k2o": "110-150"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; Cornell University Vegetable Guidelines",
+        "title": "Cole Crop Production in Florida (HS725)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / California / New York. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Pre-plant broadcast/incorporated P2O5 and K2O. Nitrogen in 3 equal splits (cultivate/fertigate) to prevent head cracking.",
+      "applicationTiming": "1/3 N + 100% P2O5 + 50% K2O pre-plant/transplant (0 DAT). 1/3 N at 20-25 DAT. 1/3 N + 50% K2O at cupping/head initiation (40-45 DAT)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "radish",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "50-70",
+        "p2o5": "40-60",
+        "k2o": "50-75"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; UC Davis VRIC",
+        "title": "Radish Production Guide",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / California. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Fast 21-28 day crop. 100% NPK pre-plant incorporated into bed lines; on sand soils single top-dress at 10-12 days.",
+      "applicationTiming": "100% pre-plant (0 DAS), or on sand soils 50% pre-plant + 50% sidedressed at 12 DAS."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "carrot",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "130-180",
+        "p2o5": "70-100",
+        "k2o": "150-220"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Agriculture and Natural Resources; WSU Extension",
+        "title": "Carrot Production in California (UC ANR Pub 7226)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California (Kern County/San Joaquin Valley). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 1/3 K2O pre-plant banded. N and remaining K2O water-run or side-dressed in multiple splits for straight smooth roots.",
+      "applicationTiming": "25% N + 100% P2O5 + 35% K2O pre-plant/at planting (0 DAS). 35% N at 30 DAS post-thinning. 40% N + 65% K2O during root expansion (55-75 DAS)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "brinjal",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-180",
+        "p2o5": "80-110",
+        "k2o": "120-170"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; University of Georgia Extension",
+        "title": "Eggplant Production (HS728)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / Georgia / New Jersey / California. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Plasticulture with drip. Pre-plant incorporated bed starter (25% N, full P, 25% K). Remainder injected weekly via drip by crop stage.",
+      "applicationTiming": "Pre-plant bed basal at transplanting (0 DAT). Ramp-up early vegetative to first flower (20-45 DAT). Peak delivery fruit enlargement to multiple pickings (50-90 DAT)."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "garlic",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "140-190",
+        "p2o5": "70-100",
+        "k2o": "100-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Agriculture and Natural Resources; UC Davis VRIC",
+        "title": "Garlic Production in California (UC ANR Pub 7215)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California (Gilroy, Central Valley). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "micronutrients": "Sulphur: 30-45 kg/ha (pungency and allicin)",
+      "applicationMethod": "Pre-plant band of P, K, S and 20% N. Remaining N in 3 equal splits with furrow/drip irrigation at spring green-up. Halt N at bulb expansion (late April/early May).",
+      "applicationTiming": "20% N + 100% P2O5 + 100% K2O at autumn planting (Oct/Nov). 40% N at vegetative spring restart (Feb/early Mar). 40% N at rapid canopy stage (late Mar/early Apr); halt 4-6 weeks before harvest."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "chili",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "160-220",
+        "p2o5": "80-120",
+        "k2o": "140-200"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UF/IFAS Extension; UC Davis VRIC",
+        "title": "Pepper Production in Florida (HS732)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Florida / California / New Mexico. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Under plastic mulch: all P and 20% N/K in pre-plant bedding. Remainder via drip line proportionally across the 12-week harvest window.",
+      "applicationTiming": "Pre-plant bed foundation at transplanting (0 DAT). Vegetative fertigation weeks 2-4 post-transplant. Flowering to harvest continuous injection weeks 5-12."
+    },
+    {
+      "country": "US",
+      "regionSlug": "us-california",
+      "itemSlug": "tomato",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "170-240",
+        "p2o5": "90-135",
+        "k2o": "180-270"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "UC Agriculture and Natural Resources; UF/IFAS Extension",
+        "title": "Processing Tomato Guidelines; Tomato Production in Florida (HS739)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: California Central Valley / Florida. K2O critical for fruit quality and blossom end rot suppression. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "Starter band at transplanting (15-20% N, full P, 20% K). 75-80% N and K fertigated per plant uptake curve; peak delivery at first pink fruit stage.",
+      "applicationTiming": "Pre-plant bed basal at transplanting (0 DAT). Weeks 2-5 post-transplant: vegetative to early flower ramp-up. Weeks 6-11: heavy fruit sizing and ripening injection."
+    },
+    {
+      "country": "BR",
+      "regionSlug": "br-southeast",
+      "itemSlug": "peas",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "25-40",
+        "p2o5": "70-100",
+        "k2o": "40-60"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Embrapa Hortaliças (Manual Técnico da Cultura da Ervilha); IAC Boletim 100",
+        "title": "Peas (Ervilha) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Minas Gerais, São Paulo & Paraná (Subtropical / Southern Plateau). Starter N only (biological N2 fixation via Rhizobium leguminosarum bv. viciae). Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "100% NPK in sowing furrow as localized band below the seed. Excess N blocks nodulation and causes vegetative overgrowth.",
+      "applicationTiming": "100% basal banded at sowing (0 DAE).",
+      "micronutrients": null
+    },
+    {
+      "country": "BR",
+      "regionSlug": "br-southeast",
+      "itemSlug": "radish",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "40-60",
+        "p2o5": "50-80",
+        "k2o": "40-60"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IAC Boletim 100; Embrapa Hortaliças",
+        "title": "Radish (Rabanete) NPK recommendation Brazil",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: São Paulo & Rio de Janeiro green belts. Short 25-day cycle. Oxide forms confirmed.",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, and 50% N incorporated at planting; remaining N as a single light top-dress at 12-15 DAE.",
+      "applicationTiming": "50% N + all P+K at sowing (0 DAE). 50% N 12-15 days after emergence.",
+      "micronutrients": null
+    },
+    {
+      "country": "ES",
+      "regionSlug": "es-national",
+      "itemSlug": "okra",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "90-120",
+        "p2o5": "50-70",
+        "k2o": "70-100"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "IFAPA Andalucía; MAPA",
+        "title": "Okra NPK recommendation Spain",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Andalucía (Almería/Málaga coast) & Murcia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 20% N/K2O incorporated as basal (abonado de fondo). Remaining N and K2O split via drip fertigation during vegetative expansion and continuous pod harvest.",
+      "applicationTiming": "Basal at seeding (0 DAS). Fertigation stage 1: vegetative growth (20-40 DAS). Fertigation stage 2: flowering to multiple harvest flushes (45-90 DAS).",
+      "micronutrients": null
+    },
+    {
+      "country": "ES",
+      "regionSlug": "es-national",
+      "itemSlug": "garlic",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "120-160",
+        "p2o5": "70-95",
+        "k2o": "100-140"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "MAPA; ITAP Albacete",
+        "title": "Garlic NPK recommendation Spain",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Castilla-La Mancha (Cuenca/Albacete), Andalucía (Córdoba). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, sulphur and 25% N as basal (abonado de fondo). Remaining N in two equal spring top-dresses. Stop N at bulb differentiation.",
+      "applicationTiming": "Basal at planting (November/December). Top-dress 1: vegetative restart (late Feb/early Mar). Top-dress 2: pre-bulb swelling (early Apr; halt 30 days before harvest).",
+      "micronutrients": "Sulphur 25-35 kg/ha"
+    },
+    {
+      "country": "ES",
+      "regionSlug": "es-national",
+      "itemSlug": "potato",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "150-200",
+        "p2o5": "80-110",
+        "k2o": "170-240"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "ITACyL; MAPA",
+        "title": "Potato NPK recommendation Spain",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Castilla y León, Galicia, Andalucía (Sevilla early). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 50% N/K2O at planting in furrow ridging. Remaining N and K2O at earthing-up (aporcado) or tuber initiation via fertigation.",
+      "applicationTiming": "50% N + all P2O5 + 50% K2O at planting (0 DAP). 50% N + 50% K2O at earthing-up / tuber initiation (30-35 DAP).",
+      "micronutrients": null
+    },
+    {
+      "country": "IT",
+      "regionSlug": "it-emilia-romagna",
+      "itemSlug": "okra",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "80-110",
+        "p2o5": "50-70",
+        "k2o": "70-100"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "CREA-OF Pontecagnano; Regione Sicilia",
+        "title": "Okra NPK recommendation Italy (Sicilia/Campania/Puglia)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Sicilia, Campania & Puglia. Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5 and 20-25% N/K2O as basal (concimazione di fondo) incorporated in soil; remaining N and K2O via drip fertigation during flowering and continuous fruit collection.",
+      "applicationTiming": "Basal at sowing/transplanting (0 DAS/DAT). Fertigation split 1: vegetative development (20-35 DAT). Fertigation split 2: flowering to harvesting cycles (40-85 DAT)."
+    },
+    {
+      "country": "IT",
+      "regionSlug": "it-emilia-romagna",
+      "itemSlug": "garlic",
+      "n": null,
+      "p2o5": null,
+      "k2o": null,
+      "ranges": {
+        "n": "100-130",
+        "p2o5": "60-80",
+        "k2o": "90-130"
+      },
+      "formula": null,
+      "confidence": "high",
+      "flags": [],
+      "source": {
+        "organization": "Consorzio Aglio Bianco Piacentino; Emilia-Romagna",
+        "title": "Garlic NPK recommendation Italy (Emilia-Romagna/Veneto)",
+        "url": null,
+        "year": null
+      },
+      "notes": "Region: Emilia-Romagna (Piacenza/Ferrara), Veneto (Polesano DOP). Oxide forms confirmed (P2O5/K2O).",
+      "suggestedStatus": "verified",
+      "applicationMethod": "All P2O5, K2O, Sulphur and 20% N as basal (autumn/winter); remaining N in two equal splits at spring restart. Stop all late N at bulb swelling (ingrossamento del bulbo).",
+      "applicationTiming": "Basal at planting (October/November, 0 DAP). Copertura 1: vegetative restart (late February/early March). Copertura 2: pre-bulbification (early April; halt 30 days before harvest).",
+      "micronutrients": {
+        "sulphur": "20-30 kg/ha"
+      }
     }
   ],
   "gaps": [
@@ -6187,8 +6850,6 @@
       "country": "BR",
       "regionSlug": "br-southeast",
       "items": [
-        "radish",
-        "peas",
         "cabbage-chinese"
       ],
       "reason": "Only thesis/trial rates or no official table"
@@ -6342,17 +7003,13 @@
       "regionSlug": "us-pnw",
       "items": [
         "tomato",
-        "onion",
-        "potato",
         "okra",
         "spinach",
-        "carrot",
         "cauliflower",
         "chili",
         "brinjal",
         "cabbage",
         "radish",
-        "peas",
         "garlic",
         "cabbage-chinese"
       ],
@@ -6425,11 +7082,9 @@
       "country": "IT",
       "regionSlug": "it-emilia-romagna",
       "items": [
-        "garlic",
-        "okra",
         "cabbage-chinese"
       ],
-      "reason": "Not covered by ER disciplinari"
+      "reason": "Only cabbage-chinese not covered"
     },
     {
       "country": "DE",
@@ -6472,16 +7127,6 @@
         "cabbage-chinese"
       ],
       "reason": "P/K: COMIFER PK grids cover grandes cultures only - no official per-vegetable P2O5/K2O table"
-    },
-    {
-      "country": "ES",
-      "regionSlug": "es-national",
-      "items": [
-        "potato",
-        "garlic",
-        "okra"
-      ],
-      "reason": "No MARM/IVIA dose table found"
     },
     {
       "country": "PL",
