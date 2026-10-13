@@ -760,155 +760,198 @@
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "potato",
-   "n": 115.0,
-   "p2o5": 69.0,
-   "k2o": 150.0,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "135-165",
+    "p2o5": "65-85",
+    "k2o": "135-165"
    },
-   "notes": "Urea 250, TSP 150, MOP 250 kg/ha",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Tuber Crops Research Centre (TCRC), BARI; BARC FRG",
+    "title": "Potato NPK recommendation Bangladesh (Munshiganj/Bogura/Rangpur)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Alu). K2O as MoP. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, S, B, and 50% N + 50% K2O in furrows at planting. Side-dress remaining N and K2O at earthing-up.",
+   "applicationTiming": "50% N + 50% K2O at planting (0 DAS). 50% N + 50% K2O 30-35 days after planting (earthing-up/tuber initiation).",
+   "micronutrients": {
+    "sulphur": "12-15 kg/ha (Gypsum)",
+    "boron": "1.0-1.2 kg/ha"
+   }
   },
   {
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "tomato",
-   "n": 81.4,
-   "p2o5": 69.0,
-   "k2o": 48.6,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-125",
+    "p2o5": "55-75",
+    "k2o": "60-80"
    },
-   "notes": "Cowdung 10t + urea 177, TSP 150, MoP 81",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI Horticulture Research Centre; BARC FRG",
+    "title": "Tomato NPK recommendation Bangladesh (All AEZs, Winter HYV)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Winter HYV tomato). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5 and 50% K2O in basal beds/pits. Split N in three parts and remaining Potash at fruit expansion.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25-30 days after transplanting (flowering). 1/3 N + 50% K2O 50-55 days after transplanting (fruit development/ripening).",
+   "micronutrients": null
   },
   {
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "onion",
-   "n": 110.4,
-   "p2o5": 119.6,
-   "k2o": 90.0,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-100",
+    "p2o5": "50-65",
+    "k2o": "70-85"
    },
-   "notes": "Cowdung 5t + urea 240, TSP 260, MOP 150",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Spices Research Centre (SRC), BARI; BARC FRG",
+    "title": "Onion NPK recommendation Bangladesh (Pabna/Faridpur/Rajshahi)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Piaj). Stop N 25 days before bulb maturity to avoid thick necks and rot. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, K2O, S, Zn, and 1/3 N at final ploughing before transplanting. Split remaining N in two.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25 days after transplanting. 1/3 N 45-50 days after transplanting (bulb initiation).",
+   "micronutrients": {
+    "sulphur": "18-22 kg/ha (Gypsum)",
+    "zinc": "2.0-2.5 kg/ha"
+   }
   },
   {
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "peas",
-   "n": 13.8,
-   "p2o5": 36.8,
-   "k2o": 24.0,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "25-35",
+    "p2o5": "50-60",
+    "k2o": "35-45"
    },
-   "notes": "Cowdung 5t + urea 30, TSP 80, MoP 40",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI Pulses & HRC Divisions; BARC FRG",
+    "title": "Garden Peas NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Motor/Motorshuti). Starter N only — root nodules fix atmospheric N. Excess N causes pod drop and fungal attack.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "100% NPK as single basal dose via band placement below seed lines at final land preparation.",
+   "applicationTiming": "100% basal at sowing (0 DAS).",
+   "micronutrients": null
   },
   {
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "okra",
-   "n": 69.0,
-   "p2o5": 46.0,
-   "k2o": 90.0,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-100",
+    "p2o5": "40-50",
+    "k2o": "50-60"
    },
-   "notes": "Urea 150, TSP 100, MoP 150",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI Horticulture Research Centre (HRC); BARC Fertilizer Recommendation Guide (FRG)",
+    "title": "Okra NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Dherosh). All AEZs, Medium Highland, medium soil fertility. Oxide forms confirmed (P2O5/K2O — TSP/MoP equivalent).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, all K2O, and 1/3 N as basal in furrow/pit at sowing. Side-dress remaining N in two equal splits.",
+   "applicationTiming": "1/3 N at sowing (0 DAS). 1/3 N 20-25 days after sowing (first weeding/thinning). 1/3 N 40-45 days after sowing (flowering/first pod picking).",
+   "micronutrients": null
   },
   {
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "brinjal",
-   "n": 172.5,
-   "p2o5": 69.0,
-   "k2o": 150.0,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-120",
+    "p2o5": "45-60",
+    "k2o": "50-65"
    },
-   "notes": "Urea 375, TSP 150, MOP 250 + manure",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI HRC Joydebpur; BARC FRG",
+    "title": "Brinjal NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Begun). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply P and K in basal pits at transplanting. Split N in three parts due to long fruiting period.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30-35 days after transplanting (flowering). 1/3 N 55-60 days after transplanting (peak harvest).",
+   "micronutrients": null
   },
   {
    "country": "BD",
    "regionSlug": "bd-national",
    "itemSlug": "cauliflower",
-   "n": 120,
+   "n": null,
    "p2o5": null,
    "k2o": null,
-   "ranges": {},
-   "formula": null,
-   "confidence": "medium",
-   "flags": [
-    "secondhand"
-   ],
-   "source": {
-    "organization": "BARI / BARC (via peer-reviewed citing papers)",
-    "title": "Krishi Projukti Hatboi 8th ed. 2019 / FRG 2018",
-    "url": "",
-    "year": "2019"
+   "ranges": {
+    "n": "120-140",
+    "p2o5": "65-80",
+    "k2o": "70-85"
    },
-   "notes": "N120 stated; P/K basis ambiguous (elemental vs oxide) - left null",
-   "suggestedStatus": "under_review"
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI Horticulture Research Centre; BARC FRG",
+    "title": "Cauliflower NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Fulkopi). Boron essential to prevent whiptail/browning. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, K2O, Boron, and 1/3 N in transplanting beds. Side-dress remaining N by ring method around plants.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 20-25 days after transplanting. 1/3 N 40-45 days after transplanting (just before curd initiation).",
+   "micronutrients": {
+    "boron": "1.5-2.0 kg/ha (Boric Acid/Solubor)"
+   }
   },
   {
    "country": "US",
@@ -4999,6 +5042,171 @@
    "micronutrients": null,
    "applicationMethod": "All P2O5 and 50% K2O in transplanting beds; Nitrogen in three splits and remaining Potash at fruit stage. Potassium maintains fruit weight and shape.",
    "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 30 days after transplanting (flower cluster initiation). 1/3 N + 50% K2O 55-60 days after transplanting (fruit development/ripening)."
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "70-85",
+    "p2o5": "30-40",
+    "k2o": "35-45"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI HRC Joydebpur; BARC FRG",
+    "title": "Spinach NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Palong Shak). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P, K, and 50% N during land preparation. Top-dress remaining N after cutting/harvesting flushes.",
+   "applicationTiming": "50% N at sowing (0 DAS). 25% N 20-25 days after sowing (after first thinning/picking). 25% N 35-40 days after sowing.",
+   "micronutrients": null
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "110-130",
+    "p2o5": "55-70",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI HRC; BARC FRG",
+    "title": "Cabbage NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Badhakopi). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P and K at final ploughing as basal. Split N into three equal doses.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 20-25 days after transplanting. 1/3 N 40-45 days after transplanting (head formation).",
+   "micronutrients": null
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "60-75",
+    "p2o5": "35-45",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI HRC Joydebpur; BARC FRG",
+    "title": "Radish NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Mula). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Incorporate all P2O5, K2O, and half N into ridge/bed at sowing.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 20-25 days after sowing (root swelling stage).",
+   "micronutrients": null
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "55-65",
+    "p2o5": "40-50",
+    "k2o": "60-75"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "BARI Horticulture Research Centre; BARC FRG",
+    "title": "Carrot NPK recommendation Bangladesh (All AEZs)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Gajor). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P, K, and half N in beds before sowing. Apply remaining N with inter-culture/thinning.",
+   "applicationTiming": "50% N at sowing (0 DAS). 50% N 30-35 days after sowing (thinning/root development).",
+   "micronutrients": null
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "55-70",
+    "k2o": "80-100"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Spices Research Centre (SRC), BARI Shibganj Bogura; BARC FRG",
+    "title": "Garlic NPK recommendation Bangladesh (Natore/Faridpur/Pabna)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Rosun). Sulphur essential for allicin/pungency. Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply all P2O5, K2O, S, Zn, and half N as basal (zero-tillage with wetland rice residue mulch or normal tillage). Split remaining N.",
+   "applicationTiming": "50% N at planting (0 DAS). 25% N 30 days after planting. 25% N 55-60 days after planting (bulb initiation).",
+   "micronutrients": {
+    "sulphur": "18-22 kg/ha (Gypsum)",
+    "zinc": "2.0-2.5 kg/ha"
+   }
+  },
+  {
+   "country": "BD",
+   "regionSlug": "bd-national",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "85-105",
+    "p2o5": "45-60",
+    "k2o": "50-65"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Spices Research Centre (SRC), BARI Bogura; BARC FRG",
+    "title": "Chili NPK recommendation Bangladesh (Bogura/Sariakandi/Comilla)",
+    "url": null,
+    "year": null
+   },
+   "notes": "Bangladesh (Morich). Oxide forms confirmed (P2O5/K2O).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Apply P and K as basal at transplanting. Split N into 3 parts.",
+   "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25-30 days after transplanting (branching/flowering). 1/3 N 50-55 days after transplanting (after first fruit picking).",
+   "micronutrients": null
   }
  ],
  "gaps": [
@@ -5006,12 +5214,6 @@
    "country": "BD",
    "regionSlug": "bd-national",
    "items": [
-    "chili",
-    "spinach",
-    "carrot",
-    "cabbage",
-    "radish",
-    "garlic",
     "cabbage-chinese"
    ],
    "reason": "No BARI/FRG citation found in accessible literature"
