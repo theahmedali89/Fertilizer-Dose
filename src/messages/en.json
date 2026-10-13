@@ -68,7 +68,10 @@
       "tipSspTitle": "SSP — apply basal",
       "tipSspBody": "Apply basal at land preparation and mix into the soil. SSP is slow-release, so early incorporation pays off.",
       "tipGeneralTitle": "Fertigation protocol",
-      "tipGeneralBody": "Open the drum valve only after 1–1.5 kanal of water has entered the field (not at the start) for uniform distribution."
+      "tipGeneralBody": "Open the drum valve only after 1–1.5 kanal of water has entered the field (not at the start) for uniform distribution.",
+      "shareButton": "Share on WhatsApp",
+      "shareCopy": "Copy",
+      "shareCopied": "Copied!"
     },
     "title": "Exact fertilizer dose, with the math shown.",
     "soilTestCard": {
@@ -480,7 +483,10 @@
       "profitCalculator": "Profit Calculator",
       "compare": "Compare",
       "improveTranslation": "Improve this translation",
-      "deficiencyChecker": "Deficiency Checker"
+      "deficiencyChecker": "Deficiency Checker",
+      "tankMixChecker": "Tank-Mix Checker",
+      "costCalculator": "Cost Calculator",
+      "alternativeFinder": "Alternative Finder"
     },
     "rights": "All rights reserved.",
     "tagline": "Exact fertilizer doses from real agronomic data — for wheat, rice, maize and more. Built for farmers across Pakistan & India.",
@@ -687,7 +693,10 @@
     "landAreaCalculator": "Land Area Calculator",
     "kitchenGarden": "Kitchen Garden Planner",
     "mapAreaCalculator": "Map Area Calculator",
-    "deficiencyChecker": "Deficiency Checker"
+    "deficiencyChecker": "Deficiency Checker",
+    "tankMixChecker": "Tank-Mix Checker",
+    "costCalculator": "Cost Calculator",
+    "alternativeFinder": "Alternative Finder"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",

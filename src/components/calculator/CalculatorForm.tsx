@@ -162,6 +162,80 @@ export function CalculatorForm({ crops, initialArea, initialUnit, initialCrop }:
   }, [result, t]);
 
   /**
+   * WhatsApp share — builds a compact, forward-friendly schedule card.
+   * The message stays in English so the brand format is identical everywhere
+   * it gets forwarded.
+   */
+  const shareMessage = useMemo(() => {
+    if (!result) return "";
+    const divider = "━━━━━━━━━━━━";
+    const bagLines = result.lines
+      .map((l) => {
+        const b = rangeBags(l);
+        return `${l.product}: ${b} ${b === "1" ? "bag" : "bags"}`;
+      })
+      .join("\n");
+    const stageLines = crop.stages
+      .map((st) => `\u2022 ${st.timing}: ${st.note || st.name}`)
+      .join("\n");
+    return [
+      "\u{1F331} FertDose - Fertilizer Schedule",
+      `Crop: ${result.cropName} (${result.region})`,
+      `Area: ${result.area} ${result.unitLabel}`,
+      divider,
+      bagLines,
+      divider,
+      "\u{1F4C5} Stage-wise:",
+      stageLines,
+      divider,
+      "Calculated at fertdose.com",
+    ].join("\n");
+  }, [result, crop.stages, result?.cropName, result?.region, result?.area, result?.unitLabel]);
+
+  const [shareFeedback, setShareFeedback] = useState<"idle" | "copied">("idle");
+
+  const shareOnWhatsApp = async () => {
+    if (!shareMessage) return;
+    // 1. Native share sheet (mobile) — best UX where available.
+    try {
+      if (typeof navigator !== "undefined" && "share" in navigator) {
+        await (navigator as Navigator & { share: (d: { title: string; text: string }) => Promise<void> }).share({
+          title: "FertDose - Fertilizer Schedule",
+          text: shareMessage,
+        });
+        return;
+      }
+    } catch {
+      // User dismissed the sheet or share failed — fall through to wa.me.
+    }
+    // 2. Fallback: open WhatsApp with the pre-filled message.
+    window.open(
+      `https://wa.me/?text=${encodeURIComponent(shareMessage)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  const copyShareMessage = async () => {
+    if (!shareMessage) return;
+    try {
+      await navigator.clipboard.writeText(shareMessage);
+    } catch {
+      // Older browsers: hidden-textarea fallback.
+      const ta = document.createElement("textarea");
+      ta.value = shareMessage;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setShareFeedback("copied");
+    window.setTimeout(() => setShareFeedback("idle"), 2000);
+  };
+
+  /**
    * 10c — kg → lbs/acre conversion for display.
    * 1 kg/ha = 2.20462 lb ÷ 2.47105 ac/ha = 0.89218 ≈ 0.892 lbs/acre.
    * Display-only: the underlying kg result and the saved calculation are untouched.
@@ -426,6 +500,31 @@ export function CalculatorForm({ crops, initialArea, initialUnit, initialCrop }:
                 </div>
               </CardBody>
             </Card>
+
+            {/* WhatsApp share — every calculation becomes a forward (viral loop) */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                onClick={shareOnWhatsApp}
+                className="flex-1 inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] hover:bg-[#1eb85a] active:bg-[#199a4c] text-white font-semibold px-6 py-3.5 text-base shadow-sm transition-colors"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                {t("results.shareButton")}
+              </button>
+              <button
+                type="button"
+                onClick={copyShareMessage}
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-surface px-5 py-3.5 text-sm font-semibold text-ink hover:bg-surface-2 transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+                {shareFeedback === "copied" ? t("results.shareCopied") : t("results.shareCopy")}
+              </button>
+            </div>
 
             {/* Smart application tips — matched to the fertilizers in this result */}
             {applicationTips.length > 0 && (

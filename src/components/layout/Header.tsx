@@ -43,6 +43,9 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
     { href: "/kitchen-garden", label: t("kitchenGarden") },
     { href: "/profit-calculator", label: t("profitCalculator") },
     { href: "/compare", label: t("compare") },
+    { href: "/tank-mix-checker", label: t("tankMixChecker") },
+    { href: "/cost-calculator", label: t("costCalculator") },
+    { href: "/alternative-finder", label: t("alternativeFinder") },
   ];
 
   const growActive = GROW_LINKS.some((l) => pathname === l.href || pathname.startsWith(l.href + "/"));
