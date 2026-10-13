@@ -147,19 +147,24 @@ async function main() {
   }
   console.log(`regions: ${REGIONS.length}`);
 
-  // ── Planting windows (seed only when table is empty) ──
-  if ((await db.plantingWindow.count()) === 0) {
+  // ── Planting windows (upsert: add new, never duplicate) ──
+  {
     const itemIdBySlug = new Map(
       (await db.growingItem.findMany({ select: { id: true, slug: true } })).map((i) => [i.slug, i.id] as const)
     );
-    let windowCount = 0;
+    let windowCount = 0, skipped = 0;
     for (const w of PLANTING_WINDOWS) {
       const itemId = itemIdBySlug.get(w.itemSlug);
       const regionId = regionIdBySlug.get(w.regionId);
       if (!itemId || !regionId) continue;
+      const activityType = (w as any).activityType ?? "SOW";
+      const existing = await db.plantingWindow.findFirst({
+        where: { itemId, regionId, startMonth: w.startMonth, endMonth: w.endMonth, activityType },
+      });
+      if (existing) { skipped++; continue; }
       const win = await db.plantingWindow.create({
         data: {
-          itemId, regionId,
+          itemId, regionId, activityType,
           startMonth: w.startMonth, endMonth: w.endMonth,
           harvestText: w.harvestText, notes: w.notes,
           verificationStatus: w.verificationStatus as VerificationStatus,
@@ -178,9 +183,7 @@ async function main() {
       await db.windowSource.create({ data: { windowId: win.id, sourceId: src.id } });
       windowCount++;
     }
-    console.log(`planting windows inserted: ${windowCount}`);
-  } else {
-    console.log("planting windows: skipped (already seeded)");
+    console.log(`planting windows: ${windowCount} inserted, ${skipped} already existed`);
   }
 
   // ── Blog posts (insert-if-missing by slug) ──
