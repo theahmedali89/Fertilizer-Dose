@@ -5,7 +5,8 @@
  * - Planting windows are seeded ONLY from the app's existing published crop
  *   guidance (seasonDetail strings) or from institutional guidance supplied by
  *   Ahmed (ICAR-IIVR / PAU / HAU / TNAU vegetable windows; MARDI Malaysia;
- *   RDA South Korea; Tarım Bakanlığı/BATEM Türkiye; MAFF/NARO Japan).
+ *   RDA South Korea; Tarım Bakanlığı/BATEM Türkiye; MAFF/NARO Japan;
+ *   ARI Tandojam/Tarnab/Sariab & PARC Pakistan; MAPA/IFAPA/IMIDA/CITA Spain).
  *   Nothing is invented.
  * - Every window carries a SourceRef + verificationStatus. Seeds derived from
  *   editorial summaries are marked "under_review" until checked against a named
@@ -18,7 +19,7 @@ import type { SourceRef, GrowingCategory } from "./growing";
 
 export interface Region {
   id: string; // e.g. "pk-punjab"
-  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan";
+  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain";
   countryName: string;
   name: string;
 }
@@ -61,13 +62,17 @@ export const REGIONS: Region[] = [
   { id: "jp-hokkaido", country: "japan", countryName: "Japan", name: "Hokkaido" },
   { id: "jp-tohoku", country: "japan", countryName: "Japan", name: "Tohoku" },
   { id: "jp-kanto", country: "japan", countryName: "Japan", name: "Kanto/Kyushu" },
+  { id: "es-andalucia", country: "spain", countryName: "Spain", name: "Andalucía" },
+  { id: "es-murcia", country: "spain", countryName: "Spain", name: "Murcia" },
+  { id: "es-aragon", country: "spain", countryName: "Spain", name: "Aragón" },
+  { id: "es-castilla", country: "spain", countryName: "Spain", name: "Castilla-La Mancha" },
 ];
 
 export function getRegion(id: string): Region | undefined {
   return REGIONS.find((r) => r.id === id);
 }
 
-export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan"): Region[] {
+export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain"): Region[] {
   return REGIONS.filter((r) => r.country === country);
 }
 
@@ -584,6 +589,229 @@ function japanVegWindows(): PlantingWindow[] {
   return out;
 }
 
+
+// ── Pakistan (remaining provinces) vegetable planting windows (institutional, verified) ──
+// Source: ARI Tandojam (Sindh), ARI Tarnab (KPK), ARI Sariab/Quetta (Balochistan),
+// Pakistan Agricultural Research Council (PARC).
+// Three zones: Sindh (Lower Indus Basin — mild winter, early heat), KPK
+// (Peshawar Valley plains + Swat/Hazara summer highlands), Balochistan
+// (upland valleys — cold-arid, summer off-season). Supplied by Ahmed 2026-10-13.
+
+const pakistanVegSource = (region: Region): SourceRef => ({
+  organization: "ARI Tandojam (Sindh); ARI Tarnab (KPK); ARI Sariab/Quetta (Balochistan); PARC",
+  title: "Vegetable planting windows — Pakistan (Sindh, KPK, Balochistan)",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const PAKISTAN_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (Bhindi) — direct seeded on ridges/beds —
+  { regions: ["pk-sindh"], itemSlug: "okra", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Sindh early sowing: Jan 15 – Feb 28.", seasonName: "Sindh early Zaid" },
+  { regions: ["pk-kpk"], itemSlug: "okra", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "KPK plains sowing: Mar 01 – Apr 15.", seasonName: "KPK spring" },
+  { regions: ["pk-balochistan"], itemSlug: "okra", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Balochistan uplands sowing: Apr 15 – May 20.", seasonName: "Balochistan summer" },
+  // — 2. Peas (Matar) — direct seeded —
+  { regions: ["pk-sindh"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Sindh sowing: Oct 15 – Nov 20.", seasonName: "Sindh Rabi" },
+  { regions: ["pk-kpk"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "KPK plains sowing: Oct 01 – Nov 10.", seasonName: "KPK Rabi" },
+  { regions: ["pk-balochistan"], itemSlug: "peas", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Balochistan/Swat summer sowing: Mar 15 – Apr 20.", seasonName: "Highland off-season summer" },
+  // — 3. Spinach (Palak) — direct broadcast/lines —
+  { regions: ["pk-sindh"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Sindh sowing: Sep 15 – Nov 15.", seasonName: "Plains winter" },
+  { regions: ["pk-kpk"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "KPK plains sowing: Sep 01 – Oct 31.", seasonName: "Plains winter" },
+  { regions: ["pk-balochistan"], itemSlug: "spinach", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Balochistan spring sowing: Mar 15 – Apr 30.", seasonName: "Upland summer" },
+  { regions: ["pk-balochistan"], itemSlug: "spinach", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Balochistan autumn sowing: Aug 15 – Sep 15.", seasonName: "Upland autumn" },
+  // — 4. Cauliflower —
+  { regions: ["pk-sindh"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Sindh nursery sowing: Aug 15 – Sep 30.", seasonName: "Lower plains Rabi" },
+  { regions: ["pk-sindh"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 9, endMonth: 10, notes: "Sindh transplanting: Sep 15 – Oct 31.", seasonName: "Lower plains Rabi" },
+  { regions: ["pk-kpk"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "KPK plains early nursery sowing: Jun 15 – Jul 31.", seasonName: "KPK plains" },
+  { regions: ["pk-kpk"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "KPK plains late nursery sowing: Aug – Sep.", seasonName: "KPK plains" },
+  { regions: ["pk-kpk"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "KPK early transplanting: Jul 15 – Aug 15.", seasonName: "KPK plains" },
+  { regions: ["pk-kpk"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 9, endMonth: 10, notes: "KPK late transplanting: Sep – Oct.", seasonName: "KPK plains" },
+  { regions: ["pk-balochistan"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Balochistan uplands nursery sowing: Mar 15 – Apr 15.", seasonName: "Upland summer off-season" },
+  { regions: ["pk-balochistan"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Balochistan uplands transplanting: Apr 20 – May 15.", seasonName: "Upland summer off-season" },
+  // — 5. Cabbage —
+  { regions: ["pk-sindh"], itemSlug: "cabbage", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "Sindh nursery sowing: Sep 01 – Oct 15.", seasonName: "Subtropical Rabi" },
+  { regions: ["pk-sindh"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 10, endMonth: 11, notes: "Sindh transplanting: Oct 01 – Nov 15.", seasonName: "Subtropical Rabi" },
+  { regions: ["pk-kpk"], itemSlug: "cabbage", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "KPK plains nursery sowing: Aug 15 – Sep 30.", seasonName: "Subtropical Rabi" },
+  { regions: ["pk-kpk"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 9, endMonth: 10, notes: "KPK plains transplanting: Sep 15 – Oct 31.", seasonName: "Subtropical Rabi" },
+  { regions: ["pk-balochistan"], itemSlug: "cabbage", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Balochistan uplands nursery sowing: Mar 20 – Apr 20.", seasonName: "Highland summer" },
+  { regions: ["pk-balochistan"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Balochistan uplands transplanting: Apr 25 – May 25.", seasonName: "Highland summer" },
+  // — 6. Radish (Mooli) — direct seeded on ridges —
+  { regions: ["pk-sindh"], itemSlug: "radish", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Sindh sowing (desi/white): Sep 15 – Nov 15.", seasonName: "Plains autumn/winter" },
+  { regions: ["pk-kpk"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 10, notes: "KPK plains sowing: Aug 15 – Oct 31.", seasonName: "Plains autumn/winter" },
+  { regions: ["pk-balochistan"], itemSlug: "radish", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Balochistan uplands spring sowing: Apr 01 – May 15.", seasonName: "Highland summer" },
+  { regions: ["pk-balochistan"], itemSlug: "radish", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Balochistan uplands autumn sowing: Aug – Sep.", seasonName: "Highland autumn" },
+  // — 7. Carrot (Gajar) — direct seeded on fine ridges —
+  { regions: ["pk-sindh"], itemSlug: "carrot", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Sindh sowing: Sep 15 – Nov 10.", seasonName: "Plains winter" },
+  { regions: ["pk-kpk"], itemSlug: "carrot", activityType: "SOW", startMonth: 8, endMonth: 10, notes: "KPK plains sowing: Aug 15 – Oct 15.", seasonName: "Plains winter" },
+  { regions: ["pk-balochistan"], itemSlug: "carrot", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Balochistan uplands sowing: Mar 15 – Apr 30.", seasonName: "Upland early summer" },
+  // — 8. Brinjal (Baingan) —
+  { regions: ["pk-sindh"], itemSlug: "brinjal", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Sindh Cycle 1 nursery sowing: Jan 10 – Feb 15.", seasonName: "Sindh year-round (Cycle 1)" },
+  { regions: ["pk-sindh"], itemSlug: "brinjal", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Sindh Cycle 2 nursery sowing: Jun – Jul.", seasonName: "Sindh year-round (Cycle 2)" },
+  { regions: ["pk-sindh"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "Sindh Cycle 1 transplanting: Feb 15 – Mar 15.", seasonName: "Sindh year-round (Cycle 1)" },
+  { regions: ["pk-sindh"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Sindh Cycle 2 transplanting: Jul – Aug.", seasonName: "Sindh year-round (Cycle 2)" },
+  { regions: ["pk-kpk"], itemSlug: "brinjal", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "KPK nursery sowing: Mar 01 – Mar 31.", seasonName: "Highland summer" },
+  { regions: ["pk-kpk"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "KPK transplanting: Apr 15 – May 10.", seasonName: "Highland summer" },
+  { regions: ["pk-balochistan"], itemSlug: "brinjal", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Balochistan nursery sowing: Mar 01 – Mar 31.", seasonName: "Highland summer" },
+  { regions: ["pk-balochistan"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Balochistan transplanting: Apr 15 – May 10.", seasonName: "Highland summer" },
+  // — 9. Garlic (Lehsan) — direct clove dibbling —
+  { regions: ["pk-sindh"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 11, notes: "Sindh clove planting: Oct 01 – Nov 10.", seasonName: "Rabi (national baseline)" },
+  { regions: ["pk-kpk"], itemSlug: "garlic", activityType: "PLANT", startMonth: 9, endMonth: 10, notes: "KPK plains (Swabi/Peshawar) clove planting: Sep 15 – Oct 25.", seasonName: "Rabi (national baseline)" },
+  { regions: ["pk-balochistan"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 11, notes: "Balochistan uplands overwintering clove planting: Oct 15 – Nov 15.", seasonName: "Rabi overwintering" },
+  // — 10. Potato (Aaloo) — tubers on ridges —
+  { regions: ["pk-sindh"], itemSlug: "potato", activityType: "PLANT", startMonth: 10, endMonth: 11, notes: "Sindh autumn/winter tuber planting: Oct 15 – Nov 15.", seasonName: "Sindh winter" },
+  { regions: ["pk-kpk"], itemSlug: "potato", activityType: "PLANT", startMonth: 9, endMonth: 10, notes: "KPK plains autumn tuber planting: Sep 25 – Oct 20.", seasonName: "KPK autumn" },
+  { regions: ["pk-balochistan"], itemSlug: "potato", activityType: "PLANT", startMonth: 3, endMonth: 4, notes: "Balochistan/Swat summer tuber planting: Mar 15 – Apr 20.", seasonName: "Balochistan summer off-season" },
+  // — 11. Chili (Mirch) —
+  { regions: ["pk-sindh"], itemSlug: "chili", activityType: "SOW", startMonth: 12, endMonth: 1, notes: "Sindh (Kunri belt) nursery sowing: Dec 15 – Jan 31.", seasonName: "Kunri main season" },
+  { regions: ["pk-sindh"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "Sindh transplanting: Feb 01 – Mar 15.", seasonName: "Kunri main season" },
+  { regions: ["pk-kpk"], itemSlug: "chili", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "KPK plains nursery sowing: Feb 01 – Mar 10.", seasonName: "KPK summer" },
+  { regions: ["pk-kpk"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "KPK plains transplanting: Mar 15 – Apr 20.", seasonName: "KPK summer" },
+  { regions: ["pk-balochistan"], itemSlug: "chili", activityType: "SOW", startMonth: 3, endMonth: 3, notes: "Balochistan uplands nursery sowing: Mar 01 – Mar 31.", seasonName: "Upland summer" },
+  { regions: ["pk-balochistan"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Balochistan uplands transplanting: Apr 20 – May 15.", seasonName: "Upland summer" },
+  // — 12. Onion (Piyaz) —
+  { regions: ["pk-sindh"], itemSlug: "onion", activityType: "SOW", startMonth: 5, endMonth: 6, notes: "Sindh early/Kharif nursery sowing: May – Jun.", seasonName: "Sindh early market" },
+  { regions: ["pk-sindh"], itemSlug: "onion", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "Sindh main/late Rabi nursery sowing: Sep – Oct.", seasonName: "Sindh main Rabi" },
+  { regions: ["pk-sindh"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Sindh early transplanting: Jul – Aug.", seasonName: "Sindh early market" },
+  { regions: ["pk-sindh"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 11, endMonth: 12, notes: "Sindh main transplanting: Nov – Dec.", seasonName: "Sindh main Rabi" },
+  { regions: ["pk-balochistan"], itemSlug: "onion", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Balochistan highland summer nursery sowing: Jan – Feb.", seasonName: "Balochistan summer" },
+  { regions: ["pk-balochistan"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Balochistan highland transplanting: Mar 15 – Apr 30.", seasonName: "Balochistan summer" },
+  // — 13. Tomato —
+  { regions: ["pk-sindh"], itemSlug: "tomato", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Sindh autumn/winter (Badin/Thatta) nursery sowing: Jul – Aug.", seasonName: "Sindh winter picking" },
+  { regions: ["pk-sindh"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Sindh transplanting: Aug – Sep (peak winter picking).", seasonName: "Sindh winter picking" },
+  { regions: ["pk-kpk"], itemSlug: "tomato", activityType: "SOW", startMonth: 12, endMonth: 1, notes: "KPK plains tunnel nursery sowing: Dec – Jan.", seasonName: "KPK tunnel" },
+  { regions: ["pk-kpk"], itemSlug: "tomato", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "KPK plains summer nursery sowing: Jun – Jul.", seasonName: "KPK summer" },
+  { regions: ["pk-kpk"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 2, endMonth: 3, notes: "KPK transplanting (tunnel): Feb – Mar.", seasonName: "KPK tunnel" },
+  { regions: ["pk-kpk"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "KPK transplanting (summer): Jul – Aug.", seasonName: "KPK summer" },
+  { regions: ["pk-balochistan"], itemSlug: "tomato", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Balochistan (Quetta/Barkhan) summer nursery sowing: Feb – Mar.", seasonName: "Counter-seasonal summer" },
+  { regions: ["pk-balochistan"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Balochistan transplanting: Apr 01 – May 10.", seasonName: "Counter-seasonal summer" },
+  // — 14. Chinese cabbage — transplant 20–25 days post-sowing —
+  { regions: ["pk-sindh"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Sindh sowing: Oct 01 – Nov 15.", seasonName: "Mild winter plains" },
+  { regions: ["pk-sindh"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 10, endMonth: 11, notes: "Sindh transplanting (20–25 days post-sowing): Oct – Nov.", seasonName: "Mild winter plains" },
+  { regions: ["pk-kpk"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "KPK plains sowing: Oct 01 – Nov 15.", seasonName: "Mild winter plains" },
+  { regions: ["pk-kpk"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 10, endMonth: 11, notes: "KPK plains transplanting (20–25 days post-sowing): Oct – Nov.", seasonName: "Mild winter plains" },
+  { regions: ["pk-balochistan"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 4, endMonth: 5, notes: "Swat/Balochistan sowing: Apr 01 – May 10.", seasonName: "Cool highland" },
+  { regions: ["pk-balochistan"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Swat/Balochistan transplanting (20–25 days post-sowing): Apr – May.", seasonName: "Cool highland" },
+];
+
+function pakistanVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of PAKISTAN_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: pakistanVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
+
+// ── Spain vegetable planting windows (institutional, verified) ──
+// Source: MAPA (Guía Práctica de la Fertilización Racional), IFAPA (Andalucía),
+// IMIDA (Murcia), CITA Aragón, ITAP (Castilla-La Mancha).
+// Three systems: Andalucía & Murcia (Costa Cálida — frost-free Mediterranean
+// coast), Meseta Central (Castilla-La Mancha — continental, severe winter
+// freezes), Valle del Ebro (Aragón — irrigated river basin). Supplied by Ahmed 2026-10-13.
+
+const spainVegSource = (region: Region): SourceRef => ({
+  organization: "MAPA; IFAPA (Andalucía); IMIDA (Murcia); CITA Aragón; ITAP (Castilla-La Mancha)",
+  title: "Vegetable planting windows — Spain",
+  country: region.countryName,
+  region: region.name,
+  lastReviewed: "2026-10-13",
+});
+
+const SPAIN_VEG_WINDOW_SPECS: ZonedVegWindowSpec[] = [
+  // — 1. Okra (Ocra / Quimbombó) —
+  { regions: ["es-andalucia", "es-murcia"], itemSlug: "okra", activityType: "SOW", startMonth: 3, endMonth: 4, notes: "Andalucía/Murcia direct sowing: Mar 15 – Apr 30.", seasonName: "Costa Mediterránea spring/summer" },
+  { regions: ["es-andalucia", "es-murcia"], itemSlug: "okra", activityType: "TRANSPLANT", startMonth: 5, endMonth: 5, notes: "Transplanting: May 01 – May 20.", seasonName: "Costa Mediterránea spring/summer" },
+  // — 2. Peas (Guisante Verde) — direct seeded —
+  { regions: ["es-andalucia"], itemSlug: "peas", activityType: "SOW", startMonth: 10, endMonth: 11, notes: "Andalucía/Murcia early sowing: Oct 15 – Nov 30.", seasonName: "Otoño/invierno costa" },
+  { regions: ["es-aragon", "es-castilla"], itemSlug: "peas", activityType: "SOW", startMonth: 1, endMonth: 3, notes: "Aragón/Castilla (Valle del Ebro) sowing: Jan 15 – Mar 10.", seasonName: "Primavera interior" },
+  // — 3. Spinach (Espinaca) — direct seeded in flat beds —
+  { regions: ["es-murcia"], itemSlug: "spinach", activityType: "SOW", startMonth: 9, endMonth: 10, notes: "Murcia/Valencia autumn/winter sowing: Sep 01 – Oct 31.", seasonName: "Campaña de invierno" },
+  { regions: ["es-aragon"], itemSlug: "spinach", activityType: "SOW", startMonth: 1, endMonth: 3, notes: "Navarra/Aragón spring sowing: Jan 15 – Mar 01.", seasonName: "Campaña de primavera" },
+  // — 4. Cauliflower (Coliflor) —
+  { regions: ["es-murcia"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 6, endMonth: 7, notes: "Murcia/Valle del Guadalentín nursery sowing: Jun 15 – Jul 30.", seasonName: "Campaña de otoño/invierno (export)" },
+  { regions: ["es-murcia"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Murcia transplanting: Aug 01 – Sep 15.", seasonName: "Campaña de otoño/invierno (export)" },
+  { regions: ["es-aragon"], itemSlug: "cauliflower", activityType: "SOW", startMonth: 5, endMonth: 6, notes: "Navarra/La Rioja nursery sowing: May 15 – Jun 25.", seasonName: "Norte" },
+  { regions: ["es-aragon"], itemSlug: "cauliflower", activityType: "TRANSPLANT", startMonth: 7, endMonth: 8, notes: "Navarra/La Rioja transplanting: Jul 01 – Aug 10.", seasonName: "Norte" },
+  // — 5. Cabbage (Repollo / Col) —
+  { regions: ["es-andalucia"], itemSlug: "cabbage", activityType: "SOW", startMonth: 7, endMonth: 8, notes: "Andalucía/Murcia nursery sowing: Jul 01 – Aug 15.", seasonName: "Invierno Mediterráneo" },
+  { regions: ["es-andalucia"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 8, endMonth: 9, notes: "Andalucía/Murcia transplanting: Aug 15 – Sep 30.", seasonName: "Invierno Mediterráneo" },
+  { regions: ["es-castilla"], itemSlug: "cabbage", activityType: "SOW", startMonth: 3, endMonth: 5, notes: "Norte/Galicia nursery sowing: Mar 15 – May 01.", seasonName: "Verano Cantábrico" },
+  { regions: ["es-castilla"], itemSlug: "cabbage", activityType: "TRANSPLANT", startMonth: 5, endMonth: 6, notes: "Norte transplanting: May 01 – Jun 15.", seasonName: "Verano Cantábrico" },
+  // — 6. Radish (Rábano / Rabanito) — direct seeded, multi-cut —
+  { regions: ["es-murcia", "es-andalucia"], itemSlug: "radish", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Year-round crop, peak sowing: Sep – Nov.", seasonName: "Campaña continua" },
+  { regions: ["es-murcia", "es-andalucia"], itemSlug: "radish", activityType: "SOW", startMonth: 2, endMonth: 4, notes: "Year-round crop, spring peak sowing: Feb – Apr.", seasonName: "Campaña continua" },
+  // — 7. Carrot (Zanahoria) — direct seeded on ridges/beds —
+  { regions: ["es-andalucia"], itemSlug: "carrot", activityType: "SOW", startMonth: 9, endMonth: 11, notes: "Andalucía (Cádiz/Sanlúcar) sowing: Sep 01 – Nov 15.", seasonName: "Invierno litoral" },
+  { regions: ["es-castilla"], itemSlug: "carrot", activityType: "SOW", startMonth: 3, endMonth: 5, notes: "Castilla y León (Segovia/Valladolid) sowing: Mar 15 – May 15.", seasonName: "Primavera/verano interior" },
+  // — 8. Brinjal (Berenjena) —
+  { regions: ["es-andalucia"], itemSlug: "brinjal", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Almería/Murcia open-field nursery sowing: Jan 15 – Feb 28.", seasonName: "Aire libre Mediterráneo" },
+  { regions: ["es-andalucia"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Almería/Murcia transplanting: Mar 15 – Apr 15.", seasonName: "Aire libre Mediterráneo" },
+  { regions: ["es-aragon"], itemSlug: "brinjal", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Aragón/Valencia nursery sowing: Feb 15 – Mar 31.", seasonName: "Interior" },
+  { regions: ["es-aragon"], itemSlug: "brinjal", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Aragón/Valencia transplanting: Apr 20 – May 20.", seasonName: "Interior" },
+  // — 9. Garlic (Ajo Blanco y Morado) — direct clove dibbling —
+  { regions: ["es-castilla"], itemSlug: "garlic", activityType: "PLANT", startMonth: 11, endMonth: 12, notes: "Castilla-La Mancha (Las Pedroñeras) clove planting: Nov 15 – Dec 31.", seasonName: "Campaña nacional principal" },
+  { regions: ["es-andalucia"], itemSlug: "garlic", activityType: "PLANT", startMonth: 10, endMonth: 11, notes: "Andalucía (Montalbán/Córdoba) clove planting: Oct 15 – Nov 30.", seasonName: "Campaña nacional principal" },
+  // — 10. Potato (Patata) — tubers in ridges —
+  { regions: ["es-andalucia"], itemSlug: "potato", activityType: "PLANT", startMonth: 12, endMonth: 1, notes: "Temprana (Andalucía/Cartagena) tuber planting: Dec 15 – Jan 31.", seasonName: "Patata temprana" },
+  { regions: ["es-castilla"], itemSlug: "potato", activityType: "PLANT", startMonth: 3, endMonth: 4, notes: "Media estación/tardía (Castilla y León/Galicia) tuber planting: Mar 15 – Apr 30.", seasonName: "Patata de conservación" },
+  // — 11. Peppers (Pimiento) → chili —
+  { regions: ["es-andalucia"], itemSlug: "chili", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Andalucía/Murcia open-field nursery sowing: Jan 15 – Feb 28.", seasonName: "Aire libre primavera/verano" },
+  { regions: ["es-andalucia"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Andalucía/Murcia transplanting: Mar 20 – Apr 25.", seasonName: "Aire libre primavera/verano" },
+  { regions: ["es-aragon"], itemSlug: "chili", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Navarra/Ebro (piquillo) nursery sowing: Feb 15 – Mar 20.", seasonName: "Ebro" },
+  { regions: ["es-aragon"], itemSlug: "chili", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Navarra/Ebro transplanting: Apr 25 – May 20.", seasonName: "Ebro" },
+  // — 12. Onion (Cebolla) —
+  { regions: ["es-andalucia"], itemSlug: "onion", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Grano temprana (Valencia/Andalucía) nursery sowing: Aug 15 – Sep 30.", seasonName: "Cebolla temprana" },
+  { regions: ["es-andalucia"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 11, endMonth: 12, notes: "Temprana transplanting: Nov 01 – Dec 15.", seasonName: "Cebolla temprana" },
+  { regions: ["es-castilla"], itemSlug: "onion", activityType: "SOW", startMonth: 12, endMonth: 2, notes: "Medio grano/tardía (Castilla-La Mancha/Aragón) nursery sowing: Dec 15 – Feb 15.", seasonName: "Cebolla de guardar" },
+  { regions: ["es-castilla"], itemSlug: "onion", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Tardía transplanting: Mar 15 – Apr 30.", seasonName: "Cebolla de guardar" },
+  // — 13. Tomato (Tomate) —
+  { regions: ["es-aragon"], itemSlug: "tomato", activityType: "SOW", startMonth: 2, endMonth: 3, notes: "Extremadura/Ebro (tomate de industria) nursery sowing: Feb 01 – Mar 10.", seasonName: "Tomate de industria" },
+  { regions: ["es-aragon"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 4, endMonth: 5, notes: "Industria transplanting: Apr 05 – May 10.", seasonName: "Tomate de industria" },
+  { regions: ["es-andalucia"], itemSlug: "tomato", activityType: "SOW", startMonth: 1, endMonth: 2, notes: "Andalucía/Valencia (fresco aire libre) nursery sowing: Jan 15 – Feb 25.", seasonName: "Fresco aire libre" },
+  { regions: ["es-andalucia"], itemSlug: "tomato", activityType: "TRANSPLANT", startMonth: 3, endMonth: 4, notes: "Fresco transplanting: Mar 15 – Apr 15.", seasonName: "Fresco aire libre" },
+  // — 14. Chinese cabbage (Col China / Pak Choi) —
+  { regions: ["es-murcia"], itemSlug: "cabbage-chinese", activityType: "SOW", startMonth: 8, endMonth: 9, notes: "Murcia/Almería sowing: Aug 15 – Sep 30.", seasonName: "Cultivo de otoño/invierno para exportación" },
+  { regions: ["es-murcia"], itemSlug: "cabbage-chinese", activityType: "TRANSPLANT", startMonth: 9, endMonth: 10, notes: "Transplanting: Sep 15 – Oct 31.", seasonName: "Cultivo de otoño/invierno para exportación" },
+];
+
+function spainVegWindows(): PlantingWindow[] {
+  const out: PlantingWindow[] = [];
+  for (const spec of SPAIN_VEG_WINDOW_SPECS) {
+    for (const regionId of spec.regions) {
+      const region = getRegion(regionId)!;
+      out.push({
+        itemSlug: spec.itemSlug,
+        regionId,
+        startMonth: spec.startMonth,
+        endMonth: spec.endMonth,
+        harvestText: null,
+        notes: spec.notes,
+        activityType: spec.activityType,
+        seasonName: spec.seasonName,
+        source: spainVegSource(region),
+        verificationStatus: "verified",
+        lastReviewed: "2026-10-13",
+      });
+    }
+  }
+  return out;
+}
+
 /**
 
  * Seeds derived strictly from the crop library's published seasonDetail lines:
@@ -623,6 +851,8 @@ export const PLANTING_WINDOWS: PlantingWindow[] = [
   ...turkiyeVegWindows(),
   // — Japan vegetable windows (MAFF / NARO / HRO, verified) —
   ...japanVegWindows(),
+  ...pakistanVegWindows(),
+  ...spainVegWindows(),
 ];
 
 /** True if `month` (1–12) falls inside a possibly year-crossing window. */
