@@ -12,6 +12,9 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 import { SuggestButton } from "@/components/suggestions/SuggestButton";
 import { ContributorStrip } from "@/components/suggestions/ContributorStrip";
+import { ApplicationTimeline } from "@/components/crop/ApplicationTimeline";
+import { HowToApplyFaq } from "@/components/crop/HowToApplyFaq";
+import type { TimelineStage } from "@/lib/timeline-parse";
 
 function NoData({ title, hint }: { title: string; hint: string }) {
   return (
@@ -26,11 +29,14 @@ export async function GrowingDetail({
   item,
   related,
   localName,
+  timeline,
 }: {
   item: GrowingItem;
   related: GrowingItem[];
   /** Translated name for the active non-English locale (null → English). */
   localName?: string | null;
+  /** Parsed fertilizer application stages (optional — timeline hidden when empty). */
+  timeline?: TimelineStage[];
 }) {
   const t = await getTranslations("growing");
   const meta = CATEGORY_META[item.category];
@@ -167,6 +173,21 @@ export async function GrowingDetail({
 
             {/* Community contributors — approved suggestions only */}
             <ContributorStrip cropSlug={item.slug} />
+
+            {/* Application timeline — visual split schedule */}
+            {timeline && timeline.length > 0 && (
+              <Card>
+                <CardBody>
+                  <h2 className="font-display text-xl font-semibold mb-4">
+                    {s.applicationTimeline ?? "Application Schedule"}
+                  </h2>
+                  <ApplicationTimeline stages={timeline} />
+                </CardBody>
+              </Card>
+            )}
+
+            {/* How to apply — practical fertigation FAQ (SEO: FAQPage JSON-LD) */}
+            <HowToApplyFaq cropName={item.name} />
 
             {/* Growing conditions */}
             {hasConditions && (

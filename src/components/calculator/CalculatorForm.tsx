@@ -9,6 +9,7 @@ import { SearchableSelect } from "@/components/ui/SearchableSelect";
 import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
 import { AREA_UNITS, calculateDose, calculateDoseRange, fmtRange, type CropInfo } from "@/lib/agronomy";
+import { STANDARD_YIELDS_T_HA, DEFAULT_STANDARD_YIELD_T_HA, MAX_YIELD_FACTOR } from "@/lib/agronomy";
 import { SaveCalcButton } from "@/components/garden/SaveCalcButton";
 import { planSplitDose } from "@/lib/splitDose";
 
@@ -21,12 +22,17 @@ const SOILS = [
   "Saline / salt-affected",
 ];
 
-export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: CropInfo[]; initialArea?: string; initialUnit?: string }) {
+export function CalculatorForm({ crops, initialArea, initialUnit, initialCrop }: { crops: CropInfo[]; initialArea?: string; initialUnit?: string; initialCrop?: string }) {
   const t = useTranslations("calculator");
   // Selectable = point dose OR ranged dose. Ranged crops unlock with the
   // range UI (range in → range out); formula/null-N crops stay locked.
   const selectable = crops.filter((c) => c.npk || c.npkRange);
-  const [cropSlug, setCropSlug] = useState(selectable[0].slug);
+  // Pre-fill from ?crop= (programmatic SEO pages); fall back to first selectable.
+  const [cropSlug, setCropSlug] = useState(() =>
+    initialCrop && selectable.some((c) => c.slug === initialCrop)
+      ? initialCrop
+      : selectable[0].slug
+  );
   // Land Area Calculator integration: pre-fill from ?area=&unit= (validated).
   const [area, setArea] = useState(() => {
     const v = parseFloat(initialArea ?? "");
@@ -38,23 +44,122 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
   const [soil, setSoil] = useState(SOILS[0]);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  // Target yield (optional): scales the NPK dose by (target ÷ standard yield).
+  const [targetYield, setTargetYield] = useState("");
   // 10c — display-only unit toggle; never alters the kg calculation or saved calc
   const [displayUnit, setDisplayUnit] = useState<"kg" | "lbs">("kg");
 
   const crop = crops.find((c) => c.slug === cropSlug)!;
 
+  /**
+   * Target-yield scaling factor. The entered yield is converted to t/ha,
+   * divided by the crop's standard reference yield, and capped at
+   * MAX_YIELD_FACTOR. Null = no yield entered → classic behavior, unchanged.
+   */
+  const yieldFactor = useMemo(() => {
+    if (!submitted) return null;
+    const y = parseFloat(targetYield);
+    if (!Number.isFinite(y) || y <= 0) return null;
+    const u = AREA_UNITS.find((x) => x.id === unit) ?? AREA_UNITS[0];
+    const yieldPerHa = unit === "hectare" ? y : y / u.toHectare;
+    const standard = STANDARD_YIELDS_T_HA[crop.slug] ?? DEFAULT_STANDARD_YIELD_T_HA;
+    if (standard <= 0) return null;
+    return Math.min(yieldPerHa / standard, MAX_YIELD_FACTOR);
+  }, [submitted, targetYield, unit, crop.slug]);
+
+  /** Entered yield converted to t/ha, for the "adjusted" note. */
+  const yieldPerHaDisplay = useMemo(() => {
+    if (yieldFactor == null) return null;
+    const y = parseFloat(targetYield);
+    const u = AREA_UNITS.find((x) => x.id === unit) ?? AREA_UNITS[0];
+    const perHa = unit === "hectare" ? y : y / u.toHectare;
+    return Math.round(perHa * 10) / 10;
+  }, [yieldFactor, targetYield, unit]);
+
+  /** True only when scaling actually changes the dose. */
+  const yieldAdjusted = yieldFactor != null && Math.abs(yieldFactor - 1) > 0.001;
+
+  /**
+   * Crop with NPK scaled by the yield factor. The existing calculators run
+   * unchanged on this copy, so bag conversion, steps, totals and the split
+   * plan all follow the adjusted dose automatically.
+   */
+  const effectiveCrop = useMemo((): CropInfo => {
+    if (!yieldAdjusted || yieldFactor == null) return crop;
+    const s = (v: number) => Math.round(v * yieldFactor * 10) / 10;
+    const sr = (p: [number, number]): [number, number] => [s(p[0]), s(p[1])];
+    return {
+      ...crop,
+      npk: crop.npk ? { n: s(crop.npk.n), p: s(crop.npk.p), k: s(crop.npk.k) } : null,
+      npkRange: crop.npkRange
+        ? { n: sr(crop.npkRange.n), p: sr(crop.npkRange.p), k: sr(crop.npkRange.k) }
+        : null,
+    };
+  }, [crop, yieldFactor, yieldAdjusted]);
+
   const result = useMemo(() => {
     if (!submitted) return null;
     const a = parseFloat(area);
     if (!a || a <= 0) return null;
-    return crop.npkRange ? calculateDoseRange(crop, a, unit) : calculateDose(crop, a, unit);
-  }, [submitted, area, crop, unit]);
+    return effectiveCrop.npkRange ? calculateDoseRange(effectiveCrop, a, unit) : calculateDose(effectiveCrop, a, unit);
+  }, [submitted, area, effectiveCrop, unit]);
 
   // 10a — generic split-dose schedule derived from the calculated lines
   const splitPlan = useMemo(
     () => (result ? planSplitDose(crop.slug, result.lines) : null),
     [result, crop.slug]
   );
+
+  /**
+   * Smart application tips — one per fertilizer in the result, matched by
+   * product name, plus the general fertigation protocol. Rendered below the
+   * bag breakdown so farmers know HOW to apply, not just how much.
+   */
+  const applicationTips = useMemo(() => {
+    if (!result) return [];
+    const tips: { kind: "warning" | "info"; icon: string; title: string; body: string }[] = [];
+    const products = result.lines.map((l) => l.product.toUpperCase());
+    if (products.some((p) => p.includes("UREA"))) {
+      tips.push({
+        kind: "warning",
+        icon: "⚠️",
+        title: t("results.tipUreaTitle"),
+        body: t("results.tipUreaBody"),
+      });
+    }
+    if (products.some((p) => p.includes("DAP"))) {
+      tips.push({
+        kind: "info",
+        icon: "💧",
+        title: t("results.tipDapTitle"),
+        body: t("results.tipDapBody"),
+      });
+    }
+    if (products.some((p) => p.includes("MOP") || p.includes("SOP") || p.includes("POTASH"))) {
+      tips.push({
+        kind: "info",
+        icon: "💧",
+        title: t("results.tipPotashTitle"),
+        body: t("results.tipPotashBody"),
+      });
+    }
+    if (products.some((p) => p.includes("SSP"))) {
+      tips.push({
+        kind: "info",
+        icon: "🌱",
+        title: t("results.tipSspTitle"),
+        body: t("results.tipSspBody"),
+      });
+    }
+    // General fertigation protocol — always relevant.
+    tips.push({
+      kind: "info",
+      icon: "🌱",
+      title: t("results.tipGeneralTitle"),
+      body: t("results.tipGeneralBody"),
+    });
+    return tips;
+  }, [result, t]);
 
   /**
    * 10c — kg → lbs/acre conversion for display.
@@ -86,6 +191,14 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
       setError(t("form.areaLargeError"));
       setSubmitted(false);
       return;
+    }
+    if (targetYield.trim() !== "") {
+      const y = parseFloat(targetYield);
+      if (!Number.isFinite(y) || y <= 0) {
+        setError(t("form.yieldError"));
+        setSubmitted(false);
+        return;
+      }
     }
     setError("");
     setSubmitted(true);
@@ -160,6 +273,21 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                   <option key={s}>{s}</option>
                 ))}
               </Select>
+            </Field>
+
+            <Field
+              label={`${t("form.targetYield")} (${unit === "hectare" ? t("form.targetYieldUnitHa") : t("form.targetYieldUnitAcre")})`}
+              hint={t("form.targetYieldHint")}
+            >
+              <Input
+                type="number"
+                min="0"
+                step="any"
+                inputMode="decimal"
+                value={targetYield}
+                onChange={(e) => { setTargetYield(e.target.value); setSubmitted(false); }}
+                placeholder={t("form.targetYieldPlaceholder")}
+              />
             </Field>
 
             {error && (
@@ -246,20 +374,25 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                   </div>
                 </div>
                 <p className="text-sm text-ink-faint">
-                  {result.isRange && crop.npkRange
+                  {result.isRange && effectiveCrop.npkRange
                     ? t("results.recommendedRangeLine", {
-                        n: fmtRange(crop.npkRange.n[0], crop.npkRange.n[1]),
-                        p: fmtRange(crop.npkRange.p[0], crop.npkRange.p[1]),
-                        k: fmtRange(crop.npkRange.k[0], crop.npkRange.k[1]),
+                        n: fmtRange(effectiveCrop.npkRange.n[0], effectiveCrop.npkRange.n[1]),
+                        p: fmtRange(effectiveCrop.npkRange.p[0], effectiveCrop.npkRange.p[1]),
+                        k: fmtRange(effectiveCrop.npkRange.k[0], effectiveCrop.npkRange.k[1]),
                         region: result.region,
                       })
                     : t("results.recommendedLine", {
-                        n: crop.npk!.n,
-                        p: crop.npk!.p,
-                        k: crop.npk!.k,
+                        n: effectiveCrop.npk!.n,
+                        p: effectiveCrop.npk!.p,
+                        k: effectiveCrop.npk!.k,
                         region: result.region,
                       })}
                 </p>
+                {yieldAdjusted && yieldPerHaDisplay != null && (
+                  <p className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-leaf-800 dark:text-leaf-300 bg-leaf-100 dark:bg-leaf-950 border border-leaf-200 dark:border-leaf-800 rounded-full px-3 py-1">
+                    {t("results.yieldAdjusted", { yield: yieldPerHaDisplay })}
+                  </p>
+                )}
                 <div className="mt-5 grid sm:grid-cols-3 gap-3">
                   {result.lines.map((l) => (
                     <div key={l.product} className="rounded-xl border border-line bg-surface-2 p-4">
@@ -293,6 +426,40 @@ export function CalculatorForm({ crops, initialArea, initialUnit }: { crops: Cro
                 </div>
               </CardBody>
             </Card>
+
+            {/* Smart application tips — matched to the fertilizers in this result */}
+            {applicationTips.length > 0 && (
+              <Card>
+                <CardBody>
+                  <h4 className="font-display text-lg font-semibold mb-1">{t("results.tipsTitle")}</h4>
+                  <p className="text-sm text-ink-faint mb-4">{t("results.tipsSubtitle")}</p>
+                  <div className="space-y-3">
+                    {applicationTips.map((tip, i) => (
+                      <div
+                        key={i}
+                        className={`rounded-xl border p-4 flex gap-3 items-start ${
+                          tip.kind === "warning"
+                            ? "border-amber-300 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40"
+                            : "border-leaf-200 dark:border-leaf-800 bg-leaf-50 dark:bg-leaf-950/40"
+                        }`}
+                      >
+                        <span className="text-xl shrink-0 mt-0.5" aria-hidden="true">{tip.icon}</span>
+                        <div>
+                          <p className={`font-semibold text-sm ${
+                            tip.kind === "warning"
+                              ? "text-amber-900 dark:text-amber-200"
+                              : "text-leaf-900 dark:text-leaf-200"
+                          }`}>
+                            {tip.title}
+                          </p>
+                          <p className="text-sm text-ink-soft mt-1 leading-relaxed">{tip.body}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardBody>
+              </Card>
+            )}
 
             <Card>
               <CardBody>

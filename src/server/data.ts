@@ -29,6 +29,8 @@ import {
   type PlantingWindow,
 } from "@/lib/planting";
 import { POSTS as STATIC_POSTS, type BlogPost } from "@/lib/blog";
+import type { TimelineStage } from "@/lib/timeline-parse";
+import { parseApplicationTimeline } from "@/lib/timeline-parse";
 
 async function tryDb<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
   if (!isDbConfigured()) return fallback;
@@ -149,6 +151,35 @@ export async function getGrowingByCategory(category: GrowingCategory): Promise<G
   return all.filter((i) => i.category === category);
 }
 
+/* ── Application timeline (visual split schedule) ── */
+
+/**
+ * Fetch the primary fertilizer recommendation's application method for a crop
+ * and parse it into visual timeline stages. Returns [] when unavailable.
+ */
+export async function getApplicationTimeline(slug: string): Promise<TimelineStage[]> {
+  return tryDb(async () => {
+    const { getSelectedCountryCode } = await import("@/server/country");
+    const countryCode = await getSelectedCountryCode().catch(() => "PK");
+    const country = await db.country.findUnique({
+      where: { code: countryCode },
+      select: { id: true },
+    });
+    if (!country) return [];
+    const rec = await db.fertilizerRecommendation.findFirst({
+      where: {
+        countryId: country.id,
+        item: { slug },
+        verificationStatus: { in: ["verified", "published", "under_review"] },
+      },
+      orderBy: [{ isPrimary: "desc" }, { createdAt: "asc" }],
+      select: { applicationMethod: true, applicationTiming: true },
+    });
+    if (!rec?.applicationMethod) return [];
+    return parseApplicationTimeline(rec.applicationMethod, rec.applicationTiming);
+  }, []);
+}
+
 /* ── Regions + planting windows ── */
 
 export async function getRegions(): Promise<Region[]> {
@@ -228,7 +259,7 @@ export async function getPost(slug: string): Promise<BlogPost | undefined> {
 
 /* ── Calculator crops (dose data) ── */
 
-export async function getCrops(locale?: string): Promise<CropInfo[]> {
+export async function getCrops(locale?: string, countryCodeOverride?: string): Promise<CropInfo[]> {
   return tryDb(async () => {
     const items = await getGrowingItems();
     // Field crops + orchard/fruit plants (citrus, grape, olive…): in PK/IN
@@ -255,9 +286,13 @@ export async function getCrops(locale?: string): Promise<CropInfo[]> {
       source: string; underReview: boolean
     }>();
     try {
-      // Try to get selected country; default to PK if unavailable
+      // Try to get selected country; default to PK if unavailable.
+      // countryCodeOverride (e.g. ?country=PK from programmatic SEO pages)
+      // takes precedence over the cookie.
       const { getSelectedCountryCode } = await import("@/server/country");
-      const countryCode = await getSelectedCountryCode().catch(() => "PK");
+      const countryCode =
+        countryCodeOverride ??
+        (await getSelectedCountryCode().catch(() => "PK"));
       const country = await db.country.findUnique({ where: { code: countryCode }, select: { id: true } });
       if (country) {
         const recs = await db.fertilizerRecommendation.findMany({

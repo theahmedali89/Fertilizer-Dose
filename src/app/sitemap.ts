@@ -10,7 +10,7 @@ import { hreflangAlternates } from "@/lib/i18n-utils";
  * English URLs are unprefixed; other locales are prefixed (/hi/…, /ar/…).
  * Growing items with indexable=false (thin/in-review pages) are excluded.
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
   const now = new Date();
 
@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", priority: 1, changeFrequency: "weekly" as const },
     { path: "/calculator", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/plant-doctor", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/deficiency-checker", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/fertilizers", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/fertilizers/organic", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/crops", priority: 0.8, changeFrequency: "weekly" as const },
@@ -59,11 +60,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     vegetable: "/vegetables",
   };
 
+  // Programmatic SEO: /[country]/[crop]/ pages (DB-driven; empty when DB
+  // isn't configured at build time).
+  let countryCropPaths: string[] = [];
+  try {
+    const { getCountryCropCombos } = await import("@/server/country-crop");
+    const combos = await getCountryCropCombos();
+    countryCropPaths = combos.map((c) => `/${c.countrySlug}/${c.cropSlug}`);
+  } catch {
+    countryCropPaths = [];
+  }
+
   return [
     ...staticPages.map((p) => entry(p.path, p.priority, p.changeFrequency, now)),
     ...GROWING_ITEMS.filter((i) => i.indexable).map((i) =>
       entry(`${growingPaths[i.category]}/${i.slug}`, 0.7, "monthly", now)
     ),
+    ...countryCropPaths.map((p) => entry(p, 0.8, "monthly", now)),
     ...FERTILIZERS.map((f) => entry(`/fertilizers/${f.slug}`, 0.7, "monthly", now)),
     ...ORGANIC_FERTILIZERS.map((f) => entry(`/fertilizers/${f.slug}`, 0.7, "monthly", now)),
     ...POSTS.map((p) => entry(`/blog/${p.slug}`, 0.6, "monthly", new Date(p.date))),

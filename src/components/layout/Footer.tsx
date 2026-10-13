@@ -19,6 +19,7 @@ export function Footer() {
         { href: "/compare", label: t("links.compare") },
         { href: "/my-garden", label: t("links.myGarden") },
         { href: "/plant-doctor", label: t("links.plantDoctor") },
+        { href: "/deficiency-checker", label: t("links.deficiencyChecker") },
         { href: "/planting-calendar", label: t("links.plantingCalendar") },
         { href: "/fertilizer-dose-chart", label: t("links.charts") },
         { href: "/faq", label: t("links.faq") },

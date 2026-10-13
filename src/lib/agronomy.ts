@@ -721,6 +721,57 @@ export function calculateDoseRange(
   };
 }
 
+/* ---------------- Target-yield scaling ---------------- */
+
+/**
+ * Reference yields in tonnes per hectare, used to scale the NPK dose when
+ * the user enters a target yield. These are typical commercial yields for
+ * the region — the dose scales linearly with (target ÷ standard).
+ * Crops not listed fall back to DEFAULT_STANDARD_YIELD_T_HA.
+ * Values are agronomic reference points, not recommendations.
+ */
+export const STANDARD_YIELDS_T_HA: Record<string, number> = {
+  wheat: 4,
+  barley: 3.5,
+  rice: 5,
+  maize: 6,
+  sorghum: 3,
+  millet: 2,
+  cotton: 2.5,
+  sugarcane: 80,
+  sugarbeet: 50,
+  potato: 25,
+  tomato: 30,
+  onion: 25,
+  garlic: 8,
+  chili: 3,
+  pepper: 3,
+  okra: 12,
+  brinjal: 25,
+  cauliflower: 25,
+  cabbage: 30,
+  carrot: 25,
+  radish: 20,
+  peas: 8,
+  spinach: 15,
+  soybean: 2.5,
+  sunflower: 2,
+  mustard: 1.5,
+  canola: 2,
+  groundnut: 2,
+  chickpea: 1.5,
+  lentil: 1.2,
+};
+
+/** Fallback reference yield (t/ha) for crops without a listed standard. */
+export const DEFAULT_STANDARD_YIELD_T_HA = 4;
+
+/**
+ * Safety cap on target-yield scaling: the dose never exceeds 2× the base
+ * recommendation, no matter how high the entered target yield is.
+ */
+export const MAX_YIELD_FACTOR = 2;
+
 export function getCrop(slug: string): CropInfo | undefined {
   return CROPS.find((c) => c.slug === slug);
 }

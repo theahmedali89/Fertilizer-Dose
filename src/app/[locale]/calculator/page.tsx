@@ -29,14 +29,17 @@ export default async function CalculatorPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ area?: string; unit?: string }>;
+  searchParams: Promise<{ area?: string; unit?: string; crop?: string; country?: string }>;
 }) {
   const { locale } = await params;
   const sp = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations("calculator");
   const methodFaq = t.raw("methodFaq") as { q: string; a: string }[];
-  const crops = await getCrops(locale);
+  // ?country= (e.g. from /[country]/[crop] programmatic pages) overrides the
+  // cookie-selected country for the crop list. Validate against known codes.
+  const countryOverride = /^[A-Z]{2}$/.test(sp.country ?? "") ? sp.country : undefined;
+  const crops = await getCrops(locale, countryOverride);
 
   return (
     <>
@@ -56,7 +59,7 @@ export default async function CalculatorPage({
       </section>
 
       <Section>
-        <CalculatorForm crops={crops} initialArea={sp.area} initialUnit={sp.unit} />
+        <CalculatorForm crops={crops} initialArea={sp.area} initialUnit={sp.unit} initialCrop={sp.crop} />
         {/* Mode A — user-entered organic analysis (pure arithmetic on user inputs) */}
         <OrganicDoseSection />
       </Section>

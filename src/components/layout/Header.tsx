@@ -20,6 +20,7 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
   const NAV = [
     { href: "/", label: t("home") },
     { href: "/plant-doctor", label: t("plantDoctor") },
+    { href: "/deficiency-checker", label: t("deficiencyChecker") },
     { href: "/fertilizers", label: t("fertilizers") },
     { href: "/blog", label: t("blog") },
     { href: "/faq", label: t("faq") },

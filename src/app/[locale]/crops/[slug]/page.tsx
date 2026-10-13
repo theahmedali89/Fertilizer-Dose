@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { localizedMetadata } from "@/lib/seo";
 import { GrowingDetail } from "@/components/growing/GrowingDetail";
-import { getGrowingItem, getGrowingByCategory } from "@/server/data";
+import { getGrowingItem, getGrowingByCategory, getApplicationTimeline } from "@/server/data";
 import { getTranslatedItemNames } from "@/server/i18n-names";
 
 export async function generateStaticParams() {
@@ -41,5 +41,6 @@ export default async function CropDetail({
   if (!item || item.category !== "crop") notFound();
   const related = (await getGrowingByCategory("crop")).filter((i) => i.slug !== slug);
   const names = await getTranslatedItemNames([slug], locale);
-  return <GrowingDetail item={item} related={related} localName={names.get(slug) ?? null} />;
+  const timeline = await getApplicationTimeline(slug);
+  return <GrowingDetail item={item} related={related} localName={names.get(slug) ?? null} timeline={timeline} />;
 }

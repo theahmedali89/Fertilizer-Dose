@@ -20,6 +20,12 @@
       "soilHint": "Soil type doesn't change the math — it changes the advice. Sandy soils leach nitrogen faster; saline soils need care with MOP.",
       "submit": "Calculate dose",
       "unit": "Unit",
+      "targetYield": "Target yield (optional)",
+      "targetYieldUnitHa": "t/ha",
+      "targetYieldUnitAcre": "t/acre",
+      "targetYieldPlaceholder": "e.g. 5",
+      "targetYieldHint": "Scales the dose to your yield goal — capped at 2× the base dose.",
+      "yieldError": "Please enter a valid target yield greater than zero.",
       "rangeHint": "Dose range",
       "rangeBadge": "Range"
     },
@@ -49,7 +55,20 @@
       "recommendedLine": "Recommended {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
       "soilCustom": "You selected \"{soil}\". On {soilLower} soils, consider a soil test before changing the dose — the base calculation above stays the same.",
       "recommendedRangeLine": "Recommended dose range: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Pick within the range based on your soil test.",
-      "rangeSaveNote": "Saving to My Garden is available for exact doses. For ranges, note your chosen value within the range."
+      "yieldAdjusted": "Adjusted for {yield} t/ha target yield",
+      "rangeSaveNote": "Saving to My Garden is available for exact doses. For ranges, note your chosen value within the range.",
+      "tipsTitle": "Application tips",
+      "tipsSubtitle": "How to apply each fertilizer so nothing goes to waste.",
+      "tipUreaTitle": "Urea — do NOT flood",
+      "tipUreaBody": "Broadcast (chhatta) 1–2 days after watering on moist soil for 30–40% better absorption. Flooding wastes 40–50% of urea through leaching and denitrification.",
+      "tipDapTitle": "DAP — fertigate if missed at sowing",
+      "tipDapBody": "If you missed it at sowing, dissolve with DAP solvent and fertigate. Start after water covers 25% of the plot, and stop 10 minutes before water cut-off.",
+      "tipPotashTitle": "Potash (SOP / MOP) — flood-friendly",
+      "tipPotashBody": "Flood application works well for potash. For best results: 50% at sowing + 50% at flowering or fruiting.",
+      "tipSspTitle": "SSP — apply basal",
+      "tipSspBody": "Apply basal at land preparation and mix into the soil. SSP is slow-release, so early incorporation pays off.",
+      "tipGeneralTitle": "Fertigation protocol",
+      "tipGeneralBody": "Open the drum valve only after 1–1.5 kanal of water has entered the field (not at the start) for uniform distribution."
     },
     "title": "Exact fertilizer dose, with the math shown.",
     "soilTestCard": {
@@ -460,7 +479,8 @@
       "myGarden": "My Garden",
       "profitCalculator": "Profit Calculator",
       "compare": "Compare",
-      "improveTranslation": "Improve this translation"
+      "improveTranslation": "Improve this translation",
+      "deficiencyChecker": "Deficiency Checker"
     },
     "rights": "All rights reserved.",
     "tagline": "Exact fertilizer doses from real agronomic data — for wheat, rice, maize and more. Built for farmers across Pakistan & India.",
@@ -666,7 +686,8 @@
     "plantDoseCalculator": "Plant Dose Calculator",
     "landAreaCalculator": "Land Area Calculator",
     "kitchenGarden": "Kitchen Garden Planner",
-    "mapAreaCalculator": "Map Area Calculator"
+    "mapAreaCalculator": "Map Area Calculator",
+    "deficiencyChecker": "Deficiency Checker"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
