@@ -790,6 +790,12 @@
     "verified": "Verified",
     "emptyTitle": "No verified planting data here yet",
     "emptyHint": "We have not verified sowing windows for this region and month yet. We would rather show nothing than a guessed calendar.",
+    "visualTitle": "12-month planting overview",
+    "visualHint": "Select a month to see sowing, transplanting, and harvest windows.",
+    "legendTitle": "Legend",
+    "noData": "No data",
+    "monthCellLabel": "{month}, {count} planting windows",
+    "windowsCount": "{count} planting windows",
     "countryPages": {
       "pakistanTitle": "Planting Calendar — Pakistan",
       "pakistanDesc": "Sowing windows by province for Pakistan. Verified data only.",

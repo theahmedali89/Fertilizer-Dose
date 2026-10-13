@@ -1,9 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Section } from "@/components/ui/Section";
 import { CalendarFilters, type CalendarCategory } from "@/components/planting/CalendarFilters";
-import { PlantingHitCard, type HitCardLabels } from "@/components/planting/PlantingHitCard";
+import { type HitCardLabels } from "@/components/planting/PlantingHitCard";
+import { VisualMonthGrid } from "@/components/planting/VisualMonthGrid";
 import { localizedMetadata } from "@/lib/seo";
-import { monthName } from "@/lib/planting";
+import type { PlantingHit } from "@/server/country";
 import {
   getCountries,
   getAllRegions,
@@ -82,9 +83,17 @@ export default async function PlantingCalendarPage({
   const rawCat = String(sp.category ?? "all") as CalendarCategory;
   const category: CalendarCategory = VALID_CATEGORIES.includes(rawCat) ? rawCat : "all";
 
-  const hits = regionSlug
-    ? await getPlantingByMonth({ regionSlug, month, category, locale })
-    : [];
+  const hitsByMonth: Record<number, PlantingHit[]> = regionSlug
+    ? Object.fromEntries(
+        await Promise.all(
+          Array.from({ length: 12 }, (_, i) =>
+            getPlantingByMonth({ regionSlug, month: i + 1, category, locale }).then(
+              (hits) => [i + 1, hits] as const
+            )
+          )
+        )
+      )
+    : {};
 
   const regionsByCountry: Record<string, RegionInfo[]> = {};
   for (const r of allRegions) {
@@ -142,21 +151,16 @@ export default async function PlantingCalendarPage({
           }}
         />
 
-        {hits.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-line p-10 text-center max-w-2xl mx-auto">
-            <p className="font-display text-xl font-semibold">{t("emptyRegionTitle")}</p>
-            <p className="text-sm text-ink-soft mt-2 leading-relaxed">{t("emptyHint")}</p>
-            <p className="text-xs text-ink-faint mt-3 capitalize">
-              {regionName} · {monthName(month, locale)}
-            </p>
-          </div>
-        ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {hits.map((h) => (
-              <PlantingHitCard key={h.windowId} hit={h} locale={locale} labels={labels} />
-            ))}
-          </div>
-        )}
+        <VisualMonthGrid
+          hitsByMonth={hitsByMonth}
+          locale={locale}
+          selectedMonth={month}
+          labels={labels}
+          regionName={regionName}
+          country={countryCode.toLowerCase()}
+          region={regionSlug}
+          category={category}
+        />
       </Section>
     </>
   );
