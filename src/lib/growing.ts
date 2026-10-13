@@ -740,6 +740,7 @@ function vegetable(
 const vegetables: GrowingItem[] = [
   vegetable("tomato", "Tomato", "ٹماٹر", "Solanum lycopersicum"),
   vegetable("onion", "Onion", "پیاز", "Allium cepa"),
+  vegetable("shallot", "Shallot", "", "Allium cepa var. aggregatum"),
   vegetable("garlic", "Garlic", "لہسن", "Allium sativum"),
   vegetable("chili", "Chili / Hot Pepper", "مرچ", "Capsicum annuum"),
   vegetable("okra", "Okra (Ladyfinger)", "بھنڈی", "Abelmoschus esculentus"),

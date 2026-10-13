@@ -36,7 +36,8 @@
   "radish",
   "peas",
   "garlic",
-  "cabbage-chinese"
+  "cabbage-chinese",
+  "shallot"
  ],
  "records": [
   {
@@ -5207,6 +5208,363 @@
    "applicationMethod": "Apply P and K as basal at transplanting. Split N into 3 parts.",
    "applicationTiming": "1/3 N at transplanting (0 DAT). 1/3 N 25-30 days after transplanting (branching/flowering). 1/3 N 50-55 days after transplanting (after first fruit picking).",
    "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "okra",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "75-90",
+    "p2o5": "45-60",
+    "k2o": "50-60"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balai Penelitian Tanaman Sayuran (Balitsa), Lembang; Petunjuk Teknis Budidaya Sayuran BSIP",
+    "title": "Okra NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Java (West & East Java) & lowland tropics. Oxide forms confirmed (P2O5/K2O; SP-36 and KCl basis).",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, all K2O and 1/3 N as basal in furrow/planting hole at sowing. Remaining N in two equal side-dress splits.",
+   "applicationTiming": "1/3 N at sowing (0 HST). 1/3 N 20-25 days after sowing (20-25 HST). 1/3 N 40-45 days after sowing (40-45 HST, flowering & early harvest).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "peas",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "30-45",
+    "p2o5": "60-75",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Balitkabi Malang",
+    "title": "Peas NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland Java (Lembang, Pangalengan, Dieng Plateau). Starter N dose only; legume fixes atmospheric N. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "100% NPK as single basal dose in band placement 5 cm to the side and below the seed while forming beds. Excess nitrogen reduces pod yield.",
+   "applicationTiming": "100% basal at planting (0 HST).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "spinach",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "60-80",
+    "p2o5": "30-45",
+    "k2o": "30-45"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Panduan Teknis Budidaya Bayam BPTP",
+    "title": "Spinach NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Lowland & upland Java/Sumatra. Bayam cabut/bayam petik (Amaranthus tricolor / Spinacia oleracea). Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "Short-duration crop (25-30 days). All P2O5, K2O and 50% N at bed preparation. Remaining N as kocoran (dissolved in irrigation water) or side-dress.",
+   "applicationTiming": "50% N at sowing (0 HST). 50% N 12-15 days after emergence (12-15 HST).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "cauliflower",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "120-150",
+    "p2o5": "75-90",
+    "k2o": "75-100"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balai Penelitian Tanaman Sayuran (Balitsa), Lembang",
+    "title": "Cauliflower NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland Java (Lembang, Tosari, Brastagi). Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, Boron and 1/3 N as basal before laying plastic mulch. Remaining N in split doses via fertilizer holes beside plants.",
+   "applicationTiming": "1/3 N at transplanting (0 HST). 1/3 N 20-25 days after transplanting (20-25 HST). 1/3 N 40-45 days after transplanting (40-45 HST, curd formation).",
+   "micronutrients": {
+    "boron": "1.5-2.0 kg/ha (Borax)"
+   }
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "cabbage",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "110-140",
+    "p2o5": "60-80",
+    "k2o": "60-85"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Balai Pengkajian Teknologi Pertanian (BPTP) Jawa Barat",
+    "title": "Cabbage NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland Java & North Sumatra (Brastagi). Kubis/kol. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and K2O as basal. Nitrogen split into three equal doses for solid head formation.",
+   "applicationTiming": "1/3 N at transplanting (0 HST). 1/3 N 20-25 days after transplanting (20-25 HST). 1/3 N 40-45 days after transplanting (40-45 HST, head formation).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "radish",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-65",
+    "p2o5": "40-55",
+    "k2o": "40-50"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang",
+    "title": "Radish NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland & medium-elevation Java. Lobak. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O and half N incorporated in beds at sowing. Remaining N at weeding/root enlargement stage.",
+   "applicationTiming": "50% N at sowing (0 HST). 50% N 20-25 days after sowing (20-25 HST, root enlargement).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "carrot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "50-65",
+    "p2o5": "45-60",
+    "k2o": "60-80"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Panduan Budidaya Wortel BSIP",
+    "title": "Carrot NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland Java & Sumatra (Lembang, Dieng, Brastagi). Wortel. High potash for root shape and carotene. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All phosphorus, potash and half nitrogen before sowing; remaining nitrogen side-dressed at thinning and root initiation.",
+   "applicationTiming": "50% N at sowing (0 HST). 50% N 30-35 days after sowing (30-35 HST, thinning & root development).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "brinjal",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "50-65",
+    "k2o": "50-65"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Balai Pengkajian Teknologi Pertanian",
+    "title": "Brinjal NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: All regions (lowland & highland). Terung. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "P and K as basal in planting holes; N in three equal splits due to long picking period.",
+   "applicationTiming": "1/3 N at transplanting (0 HST). 1/3 N 25-30 days after transplanting (25-30 HST, early flowering). 1/3 N 50-55 days after transplanting (50-55 HST, harvest period).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "garlic",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "80-100",
+    "p2o5": "60-80",
+    "k2o": "70-90"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Program Swasembada Bawang Putih Ditjen Hortikultura",
+    "title": "Garlic NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland sub-districts (Temanggung, Sembalun Lombok, Tawangmangu). Bawang putih. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5, K2O, sulphur and 1/3 N in beds before mulch; remaining N in splits. Stop N 30 days before harvest.",
+   "applicationTiming": "1/3 N at planting (0 HST). 1/3 N 25-30 days after planting (25-30 HST). 1/3 N 50-55 days after planting (50-55 HST, bulb formation).",
+   "micronutrients": {
+    "sulphur": "15-20 kg/ha (via ZA fertilizer)"
+   }
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "potato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "130-160",
+    "p2o5": "90-120",
+    "k2o": "120-160"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balai Penelitian Tanaman Sayuran (Balitsa), Lembang",
+    "title": "Potato NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland Java & Sumatra (Pangalengan, Dieng, Kerinci). Granola/Atlantic varieties. High P for acid volcanic Andisols; SOP preferred for K. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 50% N and K2O in furrows at planting. Remaining N and K2O side-dressed at earthing-up (pembubunan).",
+   "applicationTiming": "50% N + 50% K2O at planting (0 HST). 50% N + 50% K2O 30-35 days after planting (30-35 HST, tuber initiation).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "chili",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-130",
+    "p2o5": "60-80",
+    "k2o": "70-90"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Ditjen Hortikultura SOP Cabai",
+    "title": "Chili NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: All regions (Kediri, Brebes, Magelang, Medan). Cabai merah / cabai rawit. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 1/3 K2O as basal under plastic mulch; N and remaining K2O in 3 splits via kocoran (fertigation/drenching) or fertilizer holes.",
+   "applicationTiming": "1/3 N + 1/3 K2O at transplanting (0 HST). 1/3 N + 1/3 K2O 25-30 days after transplanting (25-30 HST, active vegetative). 1/3 N + 1/3 K2O 50-60 days after transplanting (50-60 HST, flowering & fruiting).",
+   "micronutrients": null
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "shallot",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "90-110",
+    "p2o5": "50-70",
+    "k2o": "60-80"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balitsa Lembang; Balai Besar Pengkajian dan Pengembangan Teknologi Pertanian (BBP2TP)",
+    "title": "Shallot NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Brebes, Nganjuk, Enrekang, Bima. Bawang merah = shallot (Allium cepa var. aggregatum), not bulb onion. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 50% K2O as basal; N and remaining K2O in two equal side-dress/kocoran splits. No N after 35 HST.",
+   "applicationTiming": "100% P2O5 + 50% K2O at planting (0 HST). 50% N 10-15 days after planting (10-15 HST). 50% N + 50% K2O 25-30 days after planting (25-30 HST, bulb formation).",
+   "micronutrients": {
+    "sulphur": "15-20 kg/ha (via ZA fertilizer)"
+   }
+  },
+  {
+   "country": "ID",
+   "regionSlug": "id-national",
+   "itemSlug": "tomato",
+   "n": null,
+   "p2o5": null,
+   "k2o": null,
+   "ranges": {
+    "n": "100-130",
+    "p2o5": "60-80",
+    "k2o": "75-100"
+   },
+   "formula": null,
+   "confidence": "high",
+   "flags": [],
+   "source": {
+    "organization": "Balai Penelitian Tanaman Sayuran (Balitsa), Lembang",
+    "title": "Tomato NPK recommendation Indonesia",
+    "url": null,
+    "year": null
+   },
+   "notes": "Region: Highland & lowland Java/Sumatra. Tomat. Oxide forms confirmed.",
+   "suggestedStatus": "verified",
+   "applicationMethod": "All P2O5 and 40% K2O as basal in beds; N and remaining K2O in splits to keep fruit firmness and control blossom end rot.",
+   "applicationTiming": "1/3 N + 40% K2O at transplanting (0 HST). 1/3 N + 30% K2O 20-25 days after transplanting (20-25 HST). 1/3 N + 30% K2O 45-50 days after transplanting (45-50 HST, fruit enlargement).",
+   "micronutrients": null
   }
  ],
  "gaps": [
@@ -5647,16 +6005,6 @@
     "cabbage-chinese"
    ],
    "reason": "OSU onion guide exists but not extracted this phase"
-  },
-  {
-   "country": "ID",
-   "regionSlug": "id-national",
-   "items": [
-    "okra",
-    "radish",
-    "peas"
-   ],
-   "reason": "No official Balitsa/Kementan dose found"
   },
   {
    "country": "MY",
