@@ -98,6 +98,7 @@ export async function seedVegplant(db: PrismaClient): Promise<void> {
   let skipped = 0;
   let verifiedCount = 0;
   let reviewCount = 0;
+  let promoted = 0;
   for (const w of windows) {
     const itemId = itemIdBySlug.get(w.itemSlug);
     const regionId = regionIdBySlug.get(w.regionSlug);
@@ -130,13 +131,27 @@ export async function seedVegplant(db: PrismaClient): Promise<void> {
         endMonth: w.endMonth,
         activityType,
       },
-      select: { id: true },
+      select: { id: true, verificationStatus: true },
     });
-    if (existing) continue;
-
     // Status: only researched-"verified" becomes verified; all else under_review
     const status: VerificationStatus =
       w.verificationStatus === "verified" ? "verified" : "under_review";
+    if (existing) {
+      // Promote under_review → verified when the file now says verified.
+      // Never demote verified → under_review (protects reviewed data).
+      if (
+        existing.verificationStatus === "under_review" &&
+        status === "verified"
+      ) {
+        await db.plantingWindow.update({
+          where: { id: existing.id },
+          data: { verificationStatus: "verified" },
+        });
+        promoted++;
+      }
+      skipped++;
+      continue;
+    }
     if (status === "verified") verifiedCount++;
     else reviewCount++;
 
@@ -158,6 +173,6 @@ export async function seedVegplant(db: PrismaClient): Promise<void> {
     created++;
   }
   console.log(
-    `vegplant: windows created: ${created} (verified: ${verifiedCount}, under_review: ${reviewCount}), skipped: ${skipped}`
+    `vegplant: windows created: ${created} (verified: ${verifiedCount}, under_review: ${reviewCount}), promoted to verified: ${promoted}, skipped: ${skipped}`
   );
 }
