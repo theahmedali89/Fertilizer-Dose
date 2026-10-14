@@ -81,6 +81,18 @@ function loadFile(): VegDoseFile {
   return JSON.parse(readFileSync(p, "utf8")) as VegDoseFile;
 }
 
+// ── micronutrients: JSON may have string OR object — DB wants string ──
+function microToString(v: unknown): string | null {
+  if (v == null) return null;
+  if (typeof v === "string") return v;
+  if (typeof v === "object") {
+    return Object.entries(v as Record<string, unknown>)
+      .map(([k, val]) => `${k}: ${val}`)
+      .join("; ");
+  }
+  return String(v);
+}
+
 // ── No-populate records (report §7, binding) ─────────────────────────────
 
 const NO_POPULATE = new Set([
@@ -468,7 +480,7 @@ export async function seedVegdose(db: PrismaClient): Promise<void> {
           p2o5Max: pT.max,
           k2oMin: kT.min,
           k2oMax: kT.max,
-          micronutrients: r.micronutrients ?? null,
+          micronutrients: microToString(r.micronutrients),
           applicationTiming: r.applicationTiming ?? null,
           applicationMethod: r.applicationMethod ?? doseContext(r),
         },
@@ -496,7 +508,7 @@ export async function seedVegdose(db: PrismaClient): Promise<void> {
         k2oMin: kT.min,
         k2oMax: kT.max,
         nutrientBasis: "P2O5_K2O",
-        micronutrients: r.micronutrients ?? null,
+        micronutrients: microToString(r.micronutrients),
         applicationTiming: r.applicationTiming ?? null,
         applicationMethod: r.applicationMethod ?? doseContext(r),
         sourceId,
