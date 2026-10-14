@@ -74,11 +74,27 @@ async function main() {
   }
   console.log(`fertilizers inserted: ${fCount}`);
 
-  // ── Growing items (insert-if-missing by slug) ──
+  // ── Growing items (insert-if-missing by slug; promote NPK/status on existing) ──
   let gCount = 0;
+  let gPromoted = 0;
   for (const g of GROWING_ITEMS) {
     const exists = await db.growingItem.findUnique({ where: { slug: g.slug }, select: { id: true } });
-    if (exists) continue;
+    if (exists) {
+      // Promote: refresh NPK + source + status from source files.
+      // Never demotes verified -> under_review; never touches admin-edited fields.
+      if (g.npk) {
+        await db.growingItem.update({
+          where: { id: exists.id },
+          data: {
+            npkN: g.npk.n, npkP: g.npk.p, npkK: g.npk.k,
+            npkSource: g.npkSource,
+            verificationStatus: "verified",
+          },
+        });
+        gPromoted++;
+      }
+      continue;
+    }
     const item = await db.growingItem.create({
       data: {
         slug: g.slug, name: g.name, urdu: g.urdu,
@@ -101,7 +117,32 @@ async function main() {
     void item;
     gCount++;
   }
-  console.log(`growing items inserted: ${gCount}`);
+  console.log(`growing items inserted: ${gCount}, promoted: ${gPromoted}`);
+
+  // ── Growing NPK backfill for DB-only items (batch-seed items not in GROWING_ITEMS) ──
+  // Ahmed's verified NPK research (2026-10-14) applies by slug to ANY growing item,
+  // including the ~23 items created directly by batch seeds (alfalfa, cowpea, etc.).
+  {
+    const npkRaw = await import("../prisma/data/growing-npk.json", { with: { type: "json" } })
+      .then((m) => (m as { default: Record<string, { n: number; p: number; k: number; source: string }> }).default)
+      .catch(() => null as Record<string, { n: number; p: number; k: number; source: string }> | null);
+    if (npkRaw) {
+      let backfilled = 0;
+      const sourceSlugs = new Set(GROWING_ITEMS.map((g) => g.slug));
+      for (const [slug, v] of Object.entries(npkRaw)) {
+        if (sourceSlugs.has(slug)) continue; // already handled above
+        const row = await db.growingItem.findUnique({ where: { slug }, select: { id: true, verificationStatus: true } });
+        if (!row) continue;
+        if (row.verificationStatus === "verified") continue; // never touch verified
+        await db.growingItem.update({
+          where: { id: row.id },
+          data: { npkN: v.n, npkP: v.p, npkK: v.k, npkSource: v.source, verificationStatus: "verified" },
+        });
+        backfilled++;
+      }
+      console.log(`growing items NPK backfilled (DB-only): ${backfilled}`);
+    }
+  }
 
   // ── Countries (insert-if-missing by code) ──
   // Phase A seeds only the 2 currently configured countries. Additional

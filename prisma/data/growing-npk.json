@@ -1,0 +1,386 @@
+{
+  "alfalfa": {
+    "n": 28,
+    "p": 92,
+    "k": 150,
+    "source": "UC Davis Extension / FRI Sargodha"
+  },
+  "barley": {
+    "n": 80,
+    "p": 40,
+    "k": 55,
+    "source": "GRDC Australia / ARVALIS France"
+  },
+  "beans": {
+    "n": 40,
+    "p": 70,
+    "k": 50,
+    "source": "ICAR-IIPR Kanpur / Embrapa Arroz e Feijao"
+  },
+  "brinjal": {
+    "n": 140,
+    "p": 75,
+    "k": 80,
+    "source": "TNAU Agritech / BATEM Antalya"
+  },
+  "buckwheat": {
+    "n": 38,
+    "p": 50,
+    "k": 40,
+    "source": "MAFF Japan / Cornell University Extension"
+  },
+  "cabbage": {
+    "n": 190,
+    "p": 75,
+    "k": 160,
+    "source": "KTBL Germany / Purdue Extension"
+  },
+  "canola": {
+    "n": 145,
+    "p": 58,
+    "k": 65,
+    "source": "Canola Council of Canada / Terres Inovia"
+  },
+  "carrot": {
+    "n": 110,
+    "p": 75,
+    "k": 170,
+    "source": "AHDB UK / WA DPIRD"
+  },
+  "cassava": {
+    "n": 100,
+    "p": 50,
+    "k": 125,
+    "source": "IITA Ibadan / BSIP Kementan"
+  },
+  "cauliflower": {
+    "n": 165,
+    "p": 85,
+    "k": 125,
+    "source": "ICAR-IIVR / CTIFL France"
+  },
+  "chickpea": {
+    "n": 20,
+    "p": 50,
+    "k": 28,
+    "source": "GRDC GrowNotes / ICAR-IIPR Kanpur"
+  },
+  "chili": {
+    "n": 140,
+    "p": 70,
+    "k": 75,
+    "source": "TNAU / Texas A&M AgriLife"
+  },
+  "cabbage-chinese": {
+    "n": 175,
+    "p": 75,
+    "k": 130,
+    "source": "RDA Korea / CAAS IVF"
+  },
+  "chinese-cabbage": {
+    "n": 210,
+    "p": 100,
+    "k": 160,
+    "source": "NARO Japan / RDA NIHHS"
+  },
+  "citrus": {
+    "n": 200,
+    "p": 65,
+    "k": 160,
+    "source": "IVIA Spain / University of Florida IFAS"
+  },
+  "cocoa": {
+    "n": 100,
+    "p": 55,
+    "k": 130,
+    "source": "CRIG Ghana / CNRA Cote d'Ivoire"
+  },
+  "coconut": {
+    "n": 125,
+    "p": 65,
+    "k": 215,
+    "source": "ICAR-CPCRI Kasaragod / PCA Philippines"
+  },
+  "coffee": {
+    "n": 250,
+    "p": 60,
+    "k": 250,
+    "source": "Embrapa Cafe / Cenicafe Colombia"
+  },
+  "bean": {
+    "n": 42,
+    "p": 70,
+    "k": 50,
+    "source": "ICAR / Michigan State Extension"
+  },
+  "cotton": {
+    "n": 170,
+    "p": 65,
+    "k": 70,
+    "source": "Mississippi State Extension / CCRI Multan"
+  },
+  "cowpea": {
+    "n": 25,
+    "p": 50,
+    "k": 32,
+    "source": "IITA Ibadan / ICAR"
+  },
+  "cucumber": {
+    "n": 130,
+    "p": 75,
+    "k": 150,
+    "source": "University of Florida IFAS / BATEM"
+  },
+  "daikon": {
+    "n": 130,
+    "p": 110,
+    "k": 130,
+    "source": "MAFF Japan / RDA Korea"
+  },
+  "durum-wheat": {
+    "n": 135,
+    "p": 58,
+    "k": 55,
+    "source": "CREA Italy / Saskatchewan Agriculture"
+  },
+  "finger-millet": {
+    "n": 52,
+    "p": 38,
+    "k": 30,
+    "source": "ICAR-IIMR Hyderabad / NARO Uganda"
+  },
+  "garlic": {
+    "n": 130,
+    "p": 75,
+    "k": 120,
+    "source": "ITACyL / Shandong Academy of Agricultural Sciences"
+  },
+  "grape": {
+    "n": 65,
+    "p": 40,
+    "k": 110,
+    "source": "IFV France / AWRI Australia"
+  },
+  "groundnut": {
+    "n": 25,
+    "p": 50,
+    "k": 50,
+    "source": "ICAR-DGR Junagadh / UGA Extension"
+  },
+  "jute": {
+    "n": 70,
+    "p": 28,
+    "k": 50,
+    "source": "BJRI Bangladesh / ICAR-CRIJAF Barrackpore"
+  },
+  "lentil": {
+    "n": 20,
+    "p": 42,
+    "k": 30,
+    "source": "Saskatchewan Ministry of Agriculture / GRDC"
+  },
+  "lupins": {
+    "n": 10,
+    "p": 45,
+    "k": 52,
+    "source": "WA DPIRD Australia / LfL Germany"
+  },
+  "mango": {
+    "n": 150,
+    "p": 62,
+    "k": 150,
+    "source": "ICAR-CISH Lucknow / INIFAP Mexico"
+  },
+  "marigold": {
+    "n": 100,
+    "p": 70,
+    "k": 70,
+    "source": "ICAR-DFR Pune / TNAU Horticulture"
+  },
+  "millet": {
+    "n": 52,
+    "p": 32,
+    "k": 28,
+    "source": "UNL CropWatch Nebraska / CAAS"
+  },
+  "mung-bean": {
+    "n": 25,
+    "p": 50,
+    "k": 30,
+    "source": "ICAR-IIPR Kanpur / GRDC GrowNotes"
+  },
+  "mustard": {
+    "n": 75,
+    "p": 40,
+    "k": 40,
+    "source": "ICAR-DRMR Bharatpur / AAFC Canada"
+  },
+  "napa-cabbage": {
+    "n": 160,
+    "p": 75,
+    "k": 140,
+    "source": "UC Davis Extension / RDA Korea"
+  },
+  "rubber": {
+    "n": 75,
+    "p": 65,
+    "k": 100,
+    "source": "Malaysian Rubber Board (LGM) / RRIT Thailand"
+  },
+  "neem": {
+    "n": 40,
+    "p": 28,
+    "k": 30,
+    "source": "ICAR-CAFRI Jhansi / TNAU Forestry"
+  },
+  "oats": {
+    "n": 75,
+    "p": 45,
+    "k": 55,
+    "source": "University of Minnesota Extension / LWK Niedersachsen"
+  },
+  "palm-oil": {
+    "n": 150,
+    "p": 80,
+    "k": 230,
+    "source": "MPOB Malaysia / IOPRI Indonesia"
+  },
+  "okra": {
+    "n": 105,
+    "p": 60,
+    "k": 75,
+    "source": "TNAU / University of Florida IFAS"
+  },
+  "olive": {
+    "n": 80,
+    "p": 35,
+    "k": 110,
+    "source": "MAPA Spain / CREA-OFA Italy"
+  },
+  "onion": {
+    "n": 130,
+    "p": 75,
+    "k": 135,
+    "source": "Oregon State University Extension / WUR Wageningen"
+  },
+  "pearl-millet": {
+    "n": 70,
+    "p": 38,
+    "k": 32,
+    "source": "ICAR-AICRP on Pearl Millet / ICRISAT"
+  },
+  "peas": {
+    "n": 32,
+    "p": 60,
+    "k": 65,
+    "source": "PGRO UK / UNIP France"
+  },
+  "pepper": {
+    "n": 180,
+    "p": 85,
+    "k": 190,
+    "source": "MAPA Spain / University of Florida IFAS"
+  },
+  "pigeon-pea": {
+    "n": 25,
+    "p": 55,
+    "k": 28,
+    "source": "ICAR / ICRISAT / KALRO Kenya"
+  },
+  "potato": {
+    "n": 170,
+    "p": 100,
+    "k": 220,
+    "source": "LfL Bayern / University of Idaho Extension"
+  },
+  "radish": {
+    "n": 62,
+    "p": 45,
+    "k": 62,
+    "source": "DLR Rheinpfalz / MAFF Japan"
+  },
+  "rose": {
+    "n": 220,
+    "p": 80,
+    "k": 230,
+    "source": "WUR Wageningen / KALRO Kenya"
+  },
+  "rye": {
+    "n": 90,
+    "p": 50,
+    "k": 75,
+    "source": "IUNG-PIB Poland / LfL Germany"
+  },
+  "sesame": {
+    "n": 50,
+    "p": 32,
+    "k": 32,
+    "source": "ICAR-AICRP Sesame / Texas A&M AgriLife"
+  },
+  "shallot": {
+    "n": 105,
+    "p": 62,
+    "k": 85,
+    "source": "Balitsa Kementan / CTIFL France"
+  },
+  "sorghum": {
+    "n": 100,
+    "p": 45,
+    "k": 48,
+    "source": "Texas A&M AgriLife / GRDC Australia"
+  },
+  "soybean": {
+    "n": 12,
+    "p": 60,
+    "k": 80,
+    "source": "Iowa State Extension / Embrapa Soja"
+  },
+  "spinach": {
+    "n": 110,
+    "p": 55,
+    "k": 90,
+    "source": "LWK NRW / UC Davis Extension"
+  },
+  "sugar-beet": {
+    "n": 130,
+    "p": 75,
+    "k": 200,
+    "source": "LfL Bayern / ITB France"
+  },
+  "sugarcane": {
+    "n": 150,
+    "p": 60,
+    "k": 150,
+    "source": "IAC Boletim 100 / Sugar Research Australia (SRA)"
+  },
+  "sunflower": {
+    "n": 65,
+    "p": 50,
+    "k": 55,
+    "source": "Terres Inovia France / MAPA Spain"
+  },
+  "sweet-potato": {
+    "n": 58,
+    "p": 50,
+    "k": 120,
+    "source": "LSU AgCenter / CAAS"
+  },
+  "tomato": {
+    "n": 205,
+    "p": 100,
+    "k": 225,
+    "source": "UC Davis / MAPA Spain"
+  },
+  "triticale": {
+    "n": 90,
+    "p": 50,
+    "k": 65,
+    "source": "IUNG-PIB Pulawy / GRDC Australia"
+  },
+  "yam": {
+    "n": 95,
+    "p": 50,
+    "k": 115,
+    "source": "IITA Ibadan / NRCRI Umudike"
+  }
+}
