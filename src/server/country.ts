@@ -298,6 +298,8 @@ export async function getPlantingByMonth(opts: {
     // Dangling foreign key: plantingWindow rows whose growingItem was deleted
     // come back with item: null — skip them instead of crashing the page.
     if (!w.item) continue;
+    // Same for region: a dangling regionId gives region: null.
+    if (!w.region) continue;
     if (!monthInWindow(month, w.startMonth, w.endMonth)) continue;
     if (!categoryMatchesFilter(w.item.category, category)) continue;
     const src = w.sources[0]?.source;
@@ -365,11 +367,17 @@ export async function getWindowFilterIndex(): Promise<WindowFilterRow[]> {
       },
     });
   }, []);
-  return rows.map((w) => ({
-    itemSlug: w.item.slug,
-    regionSlug: w.region.slug,
-    countryCode: w.region.countryObj?.code ?? LEGACY_COUNTRY_TO_CODE[w.region.country] ?? "PK",
-    startMonth: w.startMonth,
-    endMonth: w.endMonth,
-  }));
+  return rows
+    .map((w) => {
+      // Dangling foreign keys: skip rows whose item or region was deleted.
+      if (!w.item || !w.region) return null;
+      return {
+        itemSlug: w.item.slug,
+        regionSlug: w.region.slug,
+        countryCode: w.region.countryObj?.code ?? LEGACY_COUNTRY_TO_CODE[w.region.country] ?? "PK",
+        startMonth: w.startMonth,
+        endMonth: w.endMonth,
+      };
+    })
+    .filter((x): x is NonNullable<typeof x> => x !== null);
 }

@@ -203,22 +203,28 @@ export async function getPlantingWindows(): Promise<PlantingWindow[]> {
       },
     });
     if (!rows.length) return STATIC_WINDOWS;
-    return rows.map((w) => ({
-      itemSlug: w.item.slug,
-      regionId: w.region.slug,
-      startMonth: w.startMonth, endMonth: w.endMonth,
-      harvestText: w.harvestText, notes: w.notes,
-      source: {
-        organization: w.sources[0]?.source.organization ?? "Fertilizer Dose editorial",
-        title: w.sources[0]?.source.title ?? "Regional crop calendar summary",
-        country: w.sources[0]?.source.country ?? undefined,
-        region: w.sources[0]?.source.region ?? undefined,
-        lastReviewed: w.sources[0]?.source.lastReviewed
-          ? w.sources[0].source.lastReviewed!.toISOString().slice(0, 10) : "",
-      },
-      verificationStatus: w.verificationStatus,
-      lastReviewed: w.lastReviewed ? w.lastReviewed.toISOString().slice(0, 10) : null,
-    }));
+    return rows
+      .map((w) => {
+        // Dangling foreign keys: skip rows whose item or region was deleted.
+        if (!w.item || !w.region) return null;
+        return {
+          itemSlug: w.item.slug,
+          regionId: w.region.slug,
+          startMonth: w.startMonth, endMonth: w.endMonth,
+          harvestText: w.harvestText, notes: w.notes,
+          source: {
+            organization: w.sources[0]?.source?.organization ?? "Fertilizer Dose editorial",
+            title: w.sources[0]?.source?.title ?? "Regional crop calendar summary",
+            country: w.sources[0]?.source?.country ?? undefined,
+            region: w.sources[0]?.source?.region ?? undefined,
+            lastReviewed: w.sources[0]?.source?.lastReviewed
+              ? w.sources[0].source!.lastReviewed!.toISOString().slice(0, 10) : "",
+          },
+          verificationStatus: w.verificationStatus,
+          lastReviewed: w.lastReviewed ? w.lastReviewed.toISOString().slice(0, 10) : null,
+        };
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null);
   }, STATIC_WINDOWS);
 }
 

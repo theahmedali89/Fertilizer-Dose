@@ -19,14 +19,18 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "calendar" });
-  return localizedMetadata({
-    locale,
-    path: "/planting-calendar",
-    title: t("metaTitle"),
-    description: t("metaDescription"),
-  });
+  try {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "calendar" });
+    return localizedMetadata({
+      locale,
+      path: "/planting-calendar",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+    });
+  } catch {
+    return {};
+  }
 }
 
 const VALID_CATEGORIES: CalendarCategory[] = [

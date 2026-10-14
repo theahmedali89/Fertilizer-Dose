@@ -11,14 +11,18 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "soilTest" });
-  return localizedMetadata({
-    locale,
-    path: "/soil-test-calculator",
-    title: t("metaTitle"),
-    description: t("metaDescription"),
-  });
+  try {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "soilTest" });
+    return localizedMetadata({
+      locale,
+      path: "/soil-test-calculator",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+    });
+  } catch {
+    return {};
+  }
 }
 
 export default async function SoilTestCalculatorPage({

@@ -19,15 +19,19 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = await params;
-  const p = await getPost(slug);
-  if (!p) return {};
-  return localizedMetadata({
-    locale,
-    path: `/blog/${slug}`,
-    title: p.title,
-    description: p.excerpt,
-  });
+  try {
+    const { locale, slug } = await params;
+    const p = await getPost(slug);
+    if (!p) return {};
+    return localizedMetadata({
+      locale,
+      path: `/blog/${slug}`,
+      title: p.title,
+      description: p.excerpt,
+    });
+  } catch {
+    return {};
+  }
 }
 
 export default async function BlogPostPage({

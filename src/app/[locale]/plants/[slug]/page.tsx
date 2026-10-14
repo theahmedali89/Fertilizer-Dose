@@ -15,19 +15,23 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = await params;
-  const item = await getGrowingItem(slug);
-  if (!item || item.category !== "plant") return {};
-  const base = localizedMetadata({
-    locale,
-    path: `/plants/${slug}`,
-    title: `${item.name} — Growing Guide`,
-    description: `${item.name}${item.scientificName ? ` (${item.scientificName})` : ""}: growing guide. Agronomic data published only after verification.`,
-  });
-  if (!item.indexable) {
-    return { ...base, robots: { index: false, follow: true } };
+  try {
+    const { locale, slug } = await params;
+    const item = await getGrowingItem(slug);
+    if (!item || item.category !== "plant") return {};
+    const base = localizedMetadata({
+      locale,
+      path: `/plants/${slug}`,
+      title: `${item.name} — Growing Guide`,
+      description: `${item.name}${item.scientificName ? ` (${item.scientificName})` : ""}: growing guide. Agronomic data published only after verification.`,
+    });
+    if (!item.indexable) {
+      return { ...base, robots: { index: false, follow: true } };
+    }
+    return base;
+  } catch {
+    return {};
   }
-  return base;
 }
 
 export default async function PlantDetail({

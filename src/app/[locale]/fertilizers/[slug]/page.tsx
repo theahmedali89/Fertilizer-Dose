@@ -27,15 +27,19 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = await params;
-  const f = await getFertilizer(slug);
-  if (!f) return {};
-  return localizedMetadata({
-    locale,
-    path: `/fertilizers/${slug}`,
-    title: `${f.name} — NPK, Uses & Dose Guidance`,
-    description: `${f.name}: ${nutrientSummary(f)}. ${f.tagline}`,
-  });
+  try {
+    const { locale, slug } = await params;
+    const f = await getFertilizer(slug);
+    if (!f) return {};
+    return localizedMetadata({
+      locale,
+      path: `/fertilizers/${slug}`,
+      title: `${f.name} — NPK, Uses & Dose Guidance`,
+      description: `${f.name}: ${nutrientSummary(f)}. ${f.tagline}`,
+    });
+  } catch {
+    return {};
+  }
 }
 
 const CATEGORY_KEYS: Record<string, string> = {

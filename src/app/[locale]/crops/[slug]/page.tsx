@@ -15,19 +15,23 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = await params;
-  const item = await getGrowingItem(slug);
-  if (!item || item.category !== "crop") return {};
-  const base = localizedMetadata({
-    locale,
-    path: `/crops/${slug}`,
-    title: `${item.name} — Growing Guide & Fertilizer Dose`,
-    description: `${item.name} (${item.season}): soil, water, growth stages, common problems${item.npk ? ` and verified ${item.npk.n}-${item.npk.p}-${item.npk.k} kg/ha NPK dose` : ""}.`,
-  });
-  if (!item.indexable) {
-    return { ...base, robots: { index: false, follow: true } };
+  try {
+    const { locale, slug } = await params;
+    const item = await getGrowingItem(slug);
+    if (!item || item.category !== "crop") return {};
+    const base = localizedMetadata({
+      locale,
+      path: `/crops/${slug}`,
+      title: `${item.name} — Growing Guide & Fertilizer Dose`,
+      description: `${item.name} (${item.season}): soil, water, growth stages, common problems${item.npk ? ` and verified ${item.npk.n}-${item.npk.p}-${item.npk.k} kg/ha NPK dose` : ""}.`,
+    });
+    if (!item.indexable) {
+      return { ...base, robots: { index: false, follow: true } };
+    }
+    return base;
+  } catch {
+    return {};
   }
-  return base;
 }
 
 export default async function CropDetail({
