@@ -230,7 +230,7 @@ export const ORGANIC_FERTILIZERS: FertilizerInfo[] = [
     kMax: 0.6,
     sourceUrl: "https://agritech.tnau.ac.in/ta/org_farm/orgfarm_manure.html",
     nutrientNote:
-      "Typical range only. TNAU reports well-decomposed FYM at 0.5% N, 0.2% P2O5, 0.5% K2O; the FAO fertilizer glossary widens this to 0.5–1.0% N, 0.15–0.20% P2O5, 0.5–0.6% K2O. Your heap depends on animal feed, litter, urine capture and storage — only ~30% of its nitrogen is available to the first crop (TNAU). Get a lab analysis for precision dosing.",
+      "If you searched for the FYM NPK ratio, the verified ranges in the table above are the honest answer — there is no single fixed number, because every heap differs with feed, litter, urine capture and storage. Typical range only. TNAU reports well-decomposed FYM at 0.5% N, 0.2% P2O5, 0.5% K2O; the FAO fertilizer glossary widens this to 0.5–1.0% N, 0.15–0.20% P2O5, 0.5–0.6% K2O. Your heap depends on animal feed, litter, urine capture and storage — only ~30% of its nitrogen is available to the first crop (TNAU). Get a lab analysis for precision dosing.",
     tagline: "The traditional bulky manure — low nutrients, high soil-conditioning value.",
     description:
       "Farmyard manure is the decomposed mixture of cattle dung and urine with litter and leftover fodder. It is the most widely used bulky organic manure in South Asia, but its nutrient concentration is roughly one-hundredth of urea's: it is a soil conditioner that also carries some nutrients, not a concentrated nutrient source.",

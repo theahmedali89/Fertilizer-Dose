@@ -1280,7 +1280,7 @@
   "mapArea": {
     "eyebrow": "Agricultural Tools",
     "title": "Map Area Calculator — Measure Land Area on the Map",
-    "desc": "Draw your field boundary on a free map and get its area instantly — in acres, hectares, square meters, and regional units. No account, no fees.",
+    "desc": "Draw your field boundary on a free map and get its area instantly — in acres, hectares, square meters, and regional units. No account, no fees. Works like a Google Earth square footage calculator: draw your field on the map and read off the area in square feet, acres, or hectares.",
     "metaTitle": "Free Acreage Calculator Map — Measure Land Area on Map",
     "metaDescription": "Free map area calculator: draw your field boundary on the map and measure land area in acres, hectares, m², Kanal and Marla. No sign-up needed.",
     "gateDescription": "Choose your country so regional units (like Kanal and Marla in Pakistan) are shown, then open the interactive map. Tapping places boundary points — drag them to adjust.",

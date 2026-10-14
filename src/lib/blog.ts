@@ -53,6 +53,7 @@ export const POSTS: BlogPost[] = [
       "Urea is a nitrogen specialist. Its 46% N is the highest concentration of any common solid fertilizer, which is why it is the go-to for top-dressing: quick nitrogen when the crop is growing fast. Split it into two or three applications; a single heavy dose risks losses to the air (volatilization) and causes lodging.",
       "## DAP: phosphorus with a nitrogen bonus",
       "DAP is primarily a phosphorus fertilizer that happens to carry nitrogen. Phosphorus barely moves in soil, so DAP must go down at sowing, near the seed zone — top-dressed phosphorus is largely wasted. Its 18% nitrogen is a bonus that counts toward the total nitrogen bill.",
+      "Wondering about urea phosphate vs DAP? Both supply phosphorus, but they serve different systems: DAP (18-46-0) is the granular standard for soil application at sowing, while urea phosphate is fully water-soluble and mainly used in drip fertigation. For ordinary broadcast field application, DAP is the economical choice.",
       "## The practical rule",
       "The practical rule: DAP at sowing for phosphorus (plus its nitrogen), urea in splits for the remaining nitrogen. Never try to meet a phosphorus need with urea, and never pay DAP prices just for nitrogen.",
       "Check the NPK table in our fertilizer library before buying — the percentages on the bag are the only numbers that matter for the calculation.",
