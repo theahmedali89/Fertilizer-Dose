@@ -2641,30 +2641,6 @@
     "country": "kr",
     "crop": "barley",
     "flags": [
-      "derived-from-fertilizer-formula"
-    ],
-    "k2o_max": 60,
-    "k2o_min": 40,
-    "n_max": 100,
-    "n_min": 80,
-    "notes": "40% N basal in autumn; 60% N in spring regrowth.",
-    "p2o5_max": 70,
-    "p2o5_min": 50,
-    "region": null,
-    "region_note": "Jeju Province (provincial recommendation; no matching region slug)",
-    "source_org": "Rural Development Administration (RDA Standard Fertilization Manual)",
-    "source_title": "Barley NPK — South Korea",
-    "source_url": "https://agri.jeju.go.kr/jeju/technologycenter/technology/crops.htm?page=12&act=download&seq=14604&no=1",
-    "source_year": null,
-    "sowing_months": null,
-    "_source_file": "kr.json"
-  },
-  {
-    "confidence": "high",
-    "confidence_note": "Re-verified 2026-10-13 per Ahmed's institutional research. Barley NPK — South Korea",
-    "country": "kr",
-    "crop": "barley",
-    "flags": [
       "secondary-press"
     ],
     "k2o_max": 60,
