@@ -583,7 +583,7 @@ export function calculateDose(
   // Standard DAP-first NPK algorithm (industry practice)
   const dapPerHa = (p * 100) / 46;
   const nFromDapPerHa = dapPerHa * 0.18;
-  const ureaPerHa = ((n - nFromDapPerHa) * 100) / 46;
+  const ureaPerHa = Math.max(0, ((n - nFromDapPerHa) * 100) / 46);
   const mopPerHa = (k * 100) / 60;
 
   const dapKg = r1(dapPerHa * areaHa);
