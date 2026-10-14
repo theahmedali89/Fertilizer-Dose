@@ -28,7 +28,8 @@ const CATEGORY_BASE: Record<string, string> = {
 export interface HitCardLabels {
   activity: Record<PlantingHit["activityType"], string>;
   categoryLabel: string;
-  category: (category: string) => string;
+  /** Pre-translated category names (functions can't cross the server→client boundary). */
+  category: Record<string, string>;
   plantingWindow: string;
   harvestWindow: string;
   appliesTo: string;
@@ -113,7 +114,7 @@ export function PlantingHitCard({
           </div>
           <div className="flex gap-2">
             <dt className="w-28 shrink-0 text-ink-faint text-[13px]">{labels.categoryLabel}</dt>
-            <dd className="text-ink-soft capitalize">{labels.category(hit.category)}</dd>
+            <dd className="text-ink-soft capitalize">{labels.category[hit.category] ?? hit.category}</dd>
           </div>
         </dl>
 

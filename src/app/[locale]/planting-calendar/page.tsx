@@ -113,7 +113,15 @@ export default async function PlantingCalendarPage({
       LAND_PREPARATION: t("activityLAND_PREPARATION"),
     },
     categoryLabel: t("category"),
-    category: (c) => categoryLabel(t, c),
+    // Pre-computed record: functions can't be passed to client components.
+    category: {
+      crop: categoryLabel(t, "crop"),
+      vegetable: categoryLabel(t, "vegetable"),
+      fruit: categoryLabel(t, "fruit"),
+      herb: categoryLabel(t, "herb"),
+      flower: categoryLabel(t, "flower"),
+      other: categoryLabel(t, "other"),
+    },
     plantingWindow: t("plantingWindow"),
     harvestWindow: t("harvestWindow"),
     appliesTo: t("appliesTo"),
