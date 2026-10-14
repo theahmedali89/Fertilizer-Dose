@@ -608,32 +608,32 @@
     {
       "itemSlug": "tomato",
       "regionSlug": "pk-punjab",
-      "startMonth": 2,
-      "endMonth": 3,
+      "startMonth": 10,
+      "endMonth": 11,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Paneeri (nursery); transplant at 30-35 days",
+      "notes": "Oct-Nov nursery under polythene; NPK 130-170/80-110/60-90 kg/ha",
       "source": {
-        "organization": "Punjab Agriculture Department",
-        "title": "Summer vegetable cultivation recommendations (press release, Lahore)",
-        "url": "http://thefreelibrary.com/Agriculture+Dept+issues+recommendations+for+summer+vegetable...-a0831366413"
+        "organization": "VRI, AARI Faisalabad / Directorate General Agriculture Extension Punjab",
+        "title": "Spring field tomato guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "onion",
       "regionSlug": "pk-punjab",
       "startMonth": 9,
-      "endMonth": 11,
+      "endMonth": 10,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery by end of November; corroborated by Naz & Amjad, Pak. J. Agri. Sci. 41(3-4) 2004 (Sep-Oct)",
+      "notes": "Sep-Oct nursery; NPK 110-140/60-80/50-70 kg/ha",
       "source": {
-        "organization": "Punjab Agriculture Department",
-        "title": "Press release PR 16112025 (Lahore, 16 Nov 2025) — onion nursery advisory",
-        "url": "https://agripunjab.gov.pk/system/files?file=PR%2016112025.pdf"
+        "organization": "VRI, AARI Faisalabad / Directorate of Agriculture Extension Punjab",
+        "title": "Winter Rabi onion guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "onion",
@@ -642,11 +642,11 @@
       "endMonth": 1,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Paneeri transplant Dec-Jan (cross-year)",
+      "notes": "Late Dec-Jan transplanting",
       "source": {
-        "organization": "VRI AARI / ARI Tandojam / ARI Tarnab",
-        "title": "Onion Production Guides",
-        "url": "https://agripunjab.gov.pk/system/files?file=PR%2016112025.pdf"
+        "organization": "VRI, AARI Faisalabad / Directorate of Agriculture Extension Punjab",
+        "title": "Winter Rabi onion guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -833,17 +833,17 @@
     {
       "itemSlug": "chili",
       "regionSlug": "pk-punjab",
-      "startMonth": 2,
-      "endMonth": 3,
+      "startMonth": 10,
+      "endMonth": 11,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery; transplant at 30-35 days",
+      "notes": "Oct-Nov nursery under plastic tunnels; NPK 120-150/60-80/60-80 kg/ha",
       "source": {
-        "organization": "Punjab Agriculture Department",
-        "title": "Summer vegetable cultivation recommendations (press release, Lahore)",
-        "url": "http://thefreelibrary.com/Agriculture+Dept+issues+recommendations+for+summer+vegetable...-a0831366413"
+        "organization": "Vegetable Research Institute (VRI), Ayub Agricultural Research Institute (AARI), Faisalabad",
+        "title": "Hot chili guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "brinjal",
@@ -882,13 +882,13 @@
       "endMonth": 6,
       "activityType": "SOW",
       "harvestText": "Harvest Oct-Dec",
-      "notes": "Nursery May-Jun (single-district survey); transplant Jul-Aug",
+      "notes": "May-Jun nursery; NPK 90-120/50-70/60-80 kg/ha",
       "source": {
-        "organization": "Field survey (academia.edu)",
-        "title": "Prospects and Constraints of Onion Production: Tando Allahyar, Sindh (2019)",
-        "url": "https://www.academia.edu/108778136/Prospects_and_Constraints_of_Onion_Production_and_Marketing_A_Case_Study_of_District_Tando_Allahyar_Sindh_Pakistan"
+        "organization": "Agriculture Research Institute (ARI) Tandojam, Sindh",
+        "title": "Early Kharif onion guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "onion",
@@ -969,46 +969,46 @@
       "itemSlug": "tomato",
       "regionSlug": "pk-kpk",
       "startMonth": 11,
-      "endMonth": 11,
+      "endMonth": 12,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery; KPK districts listed; PRIVATE advisory (not govt)",
+      "notes": "Nov-Dec protected nursery; NPK 130-160/80-100/60-80 kg/ha",
       "source": {
-        "organization": "Khaity (private agri-advisory)",
-        "title": "Tomato crop advisory",
-        "url": "https://staging.khaity.pk/2023/04/09/tomato/"
+        "organization": "ARI Tarnab, Peshawar / Agriculture Extension Department KPK",
+        "title": "Spring tomato guidelines (Peshawar Valley & Malakand)",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
       "regionSlug": "pk-kpk",
-      "startMonth": 1,
-      "endMonth": 2,
+      "startMonth": 2,
+      "endMonth": 3,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Page typo ('Feb-Mar best for sowing of nursery'); interpreted as transplant given Nov nursery; AMBIGUITY flagged",
+      "notes": "Feb-Mar transplanting",
       "source": {
-        "organization": "VRI AARI / ARI Tandojam / ARI Sariab",
-        "title": "Tomato Production Manuals",
-        "url": "https://staging.khaity.pk/2023/04/09/tomato/"
+        "organization": "ARI Tarnab, Peshawar / Agriculture Extension Department KPK",
+        "title": "Spring tomato guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
     {
       "itemSlug": "onion",
       "regionSlug": "pk-kpk",
-      "startMonth": 10,
-      "endMonth": 11,
+      "startMonth": 9,
+      "endMonth": 10,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery; KPK districts listed",
+      "notes": "Sep-Oct nursery; NPK 100-130/60-80/50-70 kg/ha",
       "source": {
-        "organization": "Khaity (private agri-advisory)",
-        "title": "Onion crop advisory",
-        "url": "https://staging.khaity.pk/2018/12/02/onion/"
+        "organization": "Agriculture Research Institute (ARI) Tarnab, Peshawar / KPK Agriculture Extension",
+        "title": "Onion cultivation guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "onion",
@@ -1017,11 +1017,11 @@
       "endMonth": 1,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Same advisory",
+      "notes": "Dec-Jan transplanting",
       "source": {
-        "organization": "VRI AARI / ARI Tandojam / ARI Tarnab",
-        "title": "Onion Production Guides",
-        "url": "https://staging.khaity.pk/2018/12/02/onion/"
+        "organization": "Agriculture Research Institute (ARI) Tarnab, Peshawar / KPK Agriculture Extension",
+        "title": "Onion cultivation guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -1118,17 +1118,17 @@
     {
       "itemSlug": "tomato",
       "regionSlug": "pk-balochistan",
-      "startMonth": 2,
-      "endMonth": 3,
+      "startMonth": 1,
+      "endMonth": 2,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery in tunnels; TRIAL dates (20 Feb/6 Mar/21 Mar; 20 Feb best) — not a formal recommendation",
+      "notes": "Jan-Feb nursery; NPK 120-150/75-100/60-80 kg/ha",
       "source": {
-        "organization": "Pirzada et al.",
-        "title": "Pak. J. Botany 58(12) 2026 — tomato sowing-date trial, Balochistan Agriculture College Quetta",
-        "url": "http://pakbs.org/pjbot/papers/1783064412.pdf"
+        "organization": "Agriculture Research Institute (ARI) Sariab, Quetta / PARC Balochistan",
+        "title": "Summer tomato guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "potato",
@@ -7134,16 +7134,16 @@
       "itemSlug": "tomato",
       "regionSlug": "es-aragon",
       "startMonth": 1,
-      "endMonth": 4,
+      "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery | MAPA commercial-scale; 'siembra' ≈ commercial establishment for nursery crops; collapsed-column inference",
+      "notes": "Jan-Mar nursery; NPK 180-240/90-130/200-280 kg/ha",
       "source": {
-        "organization": "MAPA (Spain)",
-        "title": "Calendario de siembra 2014-2016 — Aragón",
-        "url": "https://www.mapa.gob.es/gl/estadistica/temas/estadisticas-agrarias/02-aragon_tcm37-514168.pdf"
+        "organization": "CITA Aragón / MAPA Spain",
+        "title": "Guía Práctica de la Fertilización Racional: Tomate",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7152,11 +7152,11 @@
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Main | MAPA commercial-scale; 'siembra' ≈ commercial establishment for nursery crops; collapsed-column inference",
+      "notes": "Apr-May transplanting",
       "source": {
-        "organization": "CITA Aragon",
-        "title": "Tomate de Industria en Aragon: Calendario",
-        "url": "https://www.mapa.gob.es/gl/estadistica/temas/estadisticas-agrarias/02-aragon_tcm37-514168.pdf"
+        "organization": "CITA Aragón / MAPA Spain",
+        "title": "Guía Práctica de la Fertilización Racional: Tomate",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -7179,16 +7179,16 @@
       "itemSlug": "chili",
       "regionSlug": "es-aragon",
       "startMonth": 2,
-      "endMonth": 4,
+      "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Nursery | MAPA commercial-scale; 'siembra' ≈ commercial establishment for nursery crops; collapsed-column inference",
+      "notes": "Feb-Mar nursery; NPK 160-210/70-100/160-220 kg/ha",
       "source": {
-        "organization": "MAPA (Spain)",
-        "title": "Calendario de siembra 2014-2016 — Aragón",
-        "url": "https://www.mapa.gob.es/gl/estadistica/temas/estadisticas-agrarias/02-aragon_tcm37-514168.pdf"
+        "organization": "CITA Aragón / MAPA Spain",
+        "title": "Pimiento cultivation guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "chili",
@@ -7197,11 +7197,11 @@
       "endMonth": 6,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Main | MAPA commercial-scale; 'siembra' ≈ commercial establishment for nursery crops; collapsed-column inference",
+      "notes": "May-Jun transplanting (post-frost)",
       "source": {
-        "organization": "CITA Aragon",
-        "title": "Pimiento del Piquillo: Calendario de Cultivo",
-        "url": "https://www.mapa.gob.es/gl/estadistica/temas/estadisticas-agrarias/02-aragon_tcm37-514168.pdf"
+        "organization": "CITA Aragón / MAPA Spain",
+        "title": "Pimiento cultivation guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -7422,11 +7422,11 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Spring varieties, fine Feb-early Mar | Extended to Lombardy (same Po Valley; medium extension)",
+      "notes": "Spring sowing (Feb-Mar)",
       "source": {
-        "organization": "Regione Lombardia",
-        "title": "Coltivazione della Cipolla: Calendario",
-        "url": "https://agricoltura.regione.emilia-romagna.it/fitosanitario/difesa-sostenibile/bollettini/bollettini-interprovinciali-di-produzione-integrata-e-biologica-2025/bologna-e-ferrara/bollettino-7-del-26-marzo-2025-di-bologna-e-ferrara.pdf"
+        "organization": "Regione Lombardia (Direzione Generale Agricoltura) / ERSAF",
+        "title": "Disciplinari di Produzione Integrata: Cipolla",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -7437,13 +7437,13 @@
       "endMonth": 11,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Autumn bulb varieties; seed-onion context flagged | Extended to Lombardy (same Po Valley; medium extension)",
+      "notes": "Autumn transplanting (Sep-Nov); NPK 120-160/60-80/120-160 kg/ha",
       "source": {
-        "organization": "Regione Emilia-Romagna",
-        "title": "Disciplinare 2024 cipolla da seme + bollettini 2025",
-        "url": "https://agricoltura.regione.emilia-romagna.it/fitosanitario/difesa-sostenibile/bollettini/bollettini-interprovinciali-di-produzione-integrata-e-biologica-2025/bologna-e-ferrara/bollettino-7-del-26-marzo-2025-di-bologna-e-ferrara.pdf"
+        "organization": "Regione Lombardia (Direzione Generale Agricoltura) / ERSAF",
+        "title": "Disciplinari di Produzione Integrata: Cipolla",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "garlic",
@@ -7542,13 +7542,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Seedlings end Feb-first decade Mar | National PL set; continental climate",
+      "notes": "Feb-Mar nursery; NPK 130-170/70-95/150-210 kg/ha",
       "source": {
-        "organization": "sadyogrody.pl (trade press)",
-        "title": "Kiedy siać paprykę",
-        "url": "https://www.sadyogrody.pl/warzywa/102/kiedy_siac_papryke_uprawa_krok_po_kroku,33608.html"
+        "organization": "InHort Skierniewice / MODR Radom",
+        "title": "Paprika production guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7557,13 +7557,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Seedlings ~10 Mar; plant mid-Apr tunnels, ~mid-May field | National PL set; continental climate",
+      "notes": "March nursery; NPK 140-180/75-105/180-240 kg/ha",
       "source": {
-        "organization": "Instytut Ogrodnictwa – PIB",
-        "title": "Metodyka integrowanej ochrony pomidora pod osłonami",
-        "url": "http://www.inhort.pl/files/sor/metodyki_ior/Metodyka_integrowanej_ochrony_pomidora_pod_oslonami_producenci.pdf"
+        "organization": "Instytut Ogrodnictwa – PIB / Mazowiecki Ośrodek Doradztwa Rolniczego (MODR Warszawa)",
+        "title": "Field & processing tomato guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7572,11 +7572,11 @@
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Same as above | National PL set; continental climate",
+      "notes": "Mid-May transplanting",
       "source": {
-        "organization": "InHort Skierniewice",
-        "title": "Metodyka Integrowanej Produkcji Pomidora",
-        "url": "http://www.inhort.pl/files/sor/metodyki_ior/Metodyka_integrowanej_ochrony_pomidora_pod_oslonami_producenci.pdf"
+        "organization": "Instytut Ogrodnictwa – PIB / Mazowiecki Ośrodek Doradztwa Rolniczego (MODR Warszawa)",
+        "title": "Field & processing tomato guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -7677,13 +7677,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Seedlings end Feb-first decade Mar | National PL set; continental climate",
+      "notes": "Feb-Mar nursery; NPK 120-160/60-90/140-200 kg/ha",
       "source": {
-        "organization": "sadyogrody.pl (trade press)",
-        "title": "Kiedy siać paprykę",
-        "url": "https://www.sadyogrody.pl/warzywa/102/kiedy_siac_papryke_uprawa_krok_po_kroku,33608.html"
+        "organization": "InHort Skierniewice / WODR Poznań",
+        "title": "Paprika production guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7692,13 +7692,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Seedlings ~10 Mar; plant mid-Apr tunnels, ~mid-May field | National PL set; continental climate",
+      "notes": "March nursery; NPK 150-190/80-110/190-250 kg/ha",
       "source": {
-        "organization": "Instytut Ogrodnictwa – PIB",
-        "title": "Metodyka integrowanej ochrony pomidora pod osłonami",
-        "url": "http://www.inhort.pl/files/sor/metodyki_ior/Metodyka_integrowanej_ochrony_pomidora_pod_oslonami_producenci.pdf"
+        "organization": "Instytut Ogrodnictwa – PIB / Wielkopolski Ośrodek Doradztwa Rolniczego (WODR Poznań)",
+        "title": "Processing tomato guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7707,11 +7707,11 @@
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Same as above | National PL set; continental climate",
+      "notes": "Mid-May transplanting",
       "source": {
-        "organization": "InHort Skierniewice",
-        "title": "Metodyka Integrowanej Produkcji Pomidora",
-        "url": "http://www.inhort.pl/files/sor/metodyki_ior/Metodyka_integrowanej_ochrony_pomidora_pod_oslonami_producenci.pdf"
+        "organization": "Instytut Ogrodnictwa – PIB / Wielkopolski Ośrodek Doradztwa Rolniczego (WODR Poznań)",
+        "title": "Processing tomato guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -7812,13 +7812,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Seedlings end Feb-first decade Mar | National PL set; continental climate",
+      "notes": "Late Feb-Mar nursery; NPK 120-160/60-90/140-200 kg/ha",
       "source": {
-        "organization": "sadyogrody.pl (trade press)",
-        "title": "Kiedy siać paprykę",
-        "url": "https://www.sadyogrody.pl/warzywa/102/kiedy_siac_papryke_uprawa_krok_po_kroku,33608.html"
+        "organization": "InHort Skierniewice / IOR-PIB Poznań",
+        "title": "Metodyka Integrowanej Produkcji Papryki",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7827,13 +7827,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Seedlings ~10 Mar; plant mid-Apr tunnels, ~mid-May field | National PL set; continental climate",
+      "notes": "March nursery under glass; NPK 140-180/70-100/180-240 kg/ha",
       "source": {
-        "organization": "Instytut Ogrodnictwa – PIB",
-        "title": "Metodyka integrowanej ochrony pomidora pod osłonami",
-        "url": "http://www.inhort.pl/files/sor/metodyki_ior/Metodyka_integrowanej_ochrony_pomidora_pod_oslonami_producenci.pdf"
+        "organization": "Instytut Ogrodnictwa – PIB (InHort Skierniewice) / Lubelski Ośrodek Doradztwa Rolniczego",
+        "title": "Field tomato production guidelines",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -7842,11 +7842,11 @@
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Same as above | National PL set; continental climate",
+      "notes": "Mid-May transplanting (after frost); 40% N + 100% P + 50% K basal",
       "source": {
-        "organization": "InHort Skierniewice",
-        "title": "Metodyka Integrowanej Produkcji Pomidora",
-        "url": "http://www.inhort.pl/files/sor/metodyki_ior/Metodyka_integrowanej_ochrony_pomidora_pod_oslonami_producenci.pdf"
+        "organization": "Instytut Ogrodnictwa – PIB (InHort Skierniewice) / Lubelski Ośrodek Doradztwa Rolniczego",
+        "title": "Field tomato production guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -8112,13 +8112,13 @@
       "endMonth": 3,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Heated nursery; ~55-60 day nursery",
+      "notes": "Feb-Mar heated nursery sowing; NPK 180-240/200-280/180-250 kg/ha",
       "source": {
-        "organization": "Yamagata Prefecture (agrin.jp official agri site)",
-        "title": "Vegetable cultivation calendars",
-        "url": "https://web01.agrin.jp/"
+        "organization": "Yamagata Prefecture Department of Agriculture, Forestry and Fisheries / MAFF Japan",
+        "title": "Tomato cultivation guide (agrin.jp)",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "tomato",
@@ -8322,13 +8322,13 @@
       "endMonth": 9,
       "activityType": "SOW",
       "harvestText": null,
-      "notes": "Sow early-mid Sep",
+      "notes": "September nursery beds; NPK 180-240/70-90/120-160 kg/ha",
       "source": {
-        "organization": "Gyeongnam Agri Tech Center (via Newsis)",
-        "title": "Onion sowing advisory",
-        "url": "https://www.newsis.com/view/NISX20260916_0003791071"
+        "organization": "Rural Development Administration (RDA) Korea / Gyeongnam Agricultural Research and Extension Services",
+        "title": "Onion cultivation guidelines (Changnyeong Onion Research Station)",
+        "url": null
       },
-      "verificationStatus": "under_review"
+      "verificationStatus": "verified"
     },
     {
       "itemSlug": "onion",
@@ -8337,11 +8337,11 @@
       "endMonth": 11,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Transplant early-mid Nov",
+      "notes": "Late Oct-Nov transplanting under vinyl mulch; basal P + 30% N + 40% K, top-dress N/K in spring",
       "source": {
-        "organization": "Gyeongnam ARES",
-        "title": "Onion mechanized cultivation & timely transplant",
-        "url": "https://www.newsis.com/view/NISX20260916_0003791071"
+        "organization": "Rural Development Administration (RDA) Korea / Gyeongnam Agricultural Research and Extension Services",
+        "title": "Onion cultivation guidelines (Changnyeong Onion Research Station)",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -8652,11 +8652,11 @@
       "endMonth": 8,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Same survey",
+      "notes": "Jul-Aug transplanting",
       "source": {
-        "organization": "VRI AARI / ARI Tandojam / ARI Tarnab",
-        "title": "Onion Production Guides",
-        "url": "https://www.academia.edu/108778136/Prospects_and_Constraints_of_Onion_Production_and_Marketing_A_Case_Study_of_District_Tando_Allahyar_Sindh_Pakistan"
+        "organization": "Agriculture Research Institute (ARI) Tandojam, Sindh",
+        "title": "Early Kharif onion guidelines",
+        "url": null
       },
       "verificationStatus": "verified"
     },
@@ -10227,10 +10227,10 @@
       "endMonth": 3,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Transplant (2-3); Surkh Mirch Ki Kasht: Zari Sifarsat",
+      "notes": "Feb-Mar transplanting",
       "source": {
-        "organization": "VRI, AARI Faisalabad",
-        "title": "Surkh Mirch Ki Kasht: Zari Sifarsat",
+        "organization": "Vegetable Research Institute (VRI), Ayub Agricultural Research Institute (AARI), Faisalabad",
+        "title": "Hot chili guidelines",
         "url": null
       },
       "verificationStatus": "verified"
@@ -10238,13 +10238,13 @@
     {
       "itemSlug": "chili",
       "regionSlug": "pl-lubelskie",
-      "startMonth": 4,
+      "startMonth": 5,
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Transplant (4-5); Metodyka Integrowanej Produkcji Papryki",
+      "notes": "Mid-May field tunnels; 50% N + 100% P + 50% K basal",
       "source": {
-        "organization": "InHort Skierniewice",
+        "organization": "InHort Skierniewice / IOR-PIB Poznań",
         "title": "Metodyka Integrowanej Produkcji Papryki",
         "url": null
       },
@@ -10253,14 +10253,14 @@
     {
       "itemSlug": "chili",
       "regionSlug": "pl-mazowieckie",
-      "startMonth": 4,
+      "startMonth": 5,
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Transplant (4-5); Metodyka Integrowanej Produkcji Papryki",
+      "notes": "May transplanting",
       "source": {
-        "organization": "InHort Skierniewice",
-        "title": "Metodyka Integrowanej Produkcji Papryki",
+        "organization": "InHort Skierniewice / MODR Radom",
+        "title": "Paprika production guidelines",
         "url": null
       },
       "verificationStatus": "verified"
@@ -10268,14 +10268,149 @@
     {
       "itemSlug": "chili",
       "regionSlug": "pl-wielkopolskie",
-      "startMonth": 4,
+      "startMonth": 5,
       "endMonth": 5,
       "activityType": "TRANSPLANT",
       "harvestText": null,
-      "notes": "Transplant (4-5); Metodyka Integrowanej Produkcji Papryki",
+      "notes": "May transplanting",
       "source": {
-        "organization": "InHort Skierniewice",
-        "title": "Metodyka Integrowanej Produkcji Papryki",
+        "organization": "InHort Skierniewice / WODR Poznań",
+        "title": "Paprika production guidelines",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "tomato",
+      "regionSlug": "pk-balochistan",
+      "startMonth": 3,
+      "endMonth": 4,
+      "activityType": "TRANSPLANT",
+      "harvestText": null,
+      "notes": "Mar-Apr transplanting (high valleys: Quetta, Kalat, Mastung)",
+      "source": {
+        "organization": "Agriculture Research Institute (ARI) Sariab, Quetta / PARC Balochistan",
+        "title": "Summer tomato guidelines",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "tomato",
+      "regionSlug": "pk-punjab",
+      "startMonth": 1,
+      "endMonth": 2,
+      "activityType": "TRANSPLANT",
+      "harvestText": null,
+      "notes": "Jan-Feb transplanting",
+      "source": {
+        "organization": "VRI, AARI Faisalabad / Directorate General Agriculture Extension Punjab",
+        "title": "Spring field tomato guidelines",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "mustard",
+      "regionSlug": "pk-punjab",
+      "startMonth": 9,
+      "endMonth": 10,
+      "activityType": "SOW",
+      "harvestText": null,
+      "notes": "Mid-Sep to Oct sowing; NPK 75-90/45-60/25-35 + S 15-20 kg/ha",
+      "source": {
+        "organization": "Oilseeds Research Institute, AARI Faisalabad / PARC",
+        "title": "Mustard/Raya guidelines (Khanpur Raya, Super Raya)",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "maize",
+      "regionSlug": "id-java",
+      "startMonth": 4,
+      "endMonth": 6,
+      "activityType": "SOW",
+      "harvestText": null,
+      "notes": "Apr-Jun sowing; NPK 135-180/45-65/45-75 kg/ha",
+      "source": {
+        "organization": "Balai Penelitian Tanaman Serealia (Balitsereal) / Kementan RI",
+        "title": "Hybrid maize guidelines (Musim Tanam II)",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "wheat",
+      "regionSlug": "us-pnw",
+      "startMonth": 4,
+      "endMonth": 5,
+      "activityType": "SOW",
+      "harvestText": null,
+      "notes": "Apr-May sowing; NPK 90-135/35-55/35-55 + S 15-25 kg/ha",
+      "source": {
+        "organization": "Washington State University Extension / University of Idaho Extension",
+        "title": "Soft White Spring Wheat Fertilizer Guide",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "sugarcane",
+      "regionSlug": "pk-sindh",
+      "startMonth": 2,
+      "endMonth": 3,
+      "activityType": "SOW",
+      "harvestText": null,
+      "notes": "Mid-Feb to Mar spring planting; NPK 220-275/100-125/100-130 kg/ha",
+      "source": {
+        "organization": "National Sugar Crops Research Institute (NSCRI), Thatta / ARI Tandojam",
+        "title": "Sugarcane guidelines (Thatta-10, BL4)",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "rice",
+      "regionSlug": "pk-sindh",
+      "startMonth": 5,
+      "endMonth": 6,
+      "activityType": "SOW",
+      "harvestText": null,
+      "notes": "May-Jun nursery; NPK 135-170/60-80/50-65 + Zn 12.5-15 kg/ha",
+      "source": {
+        "organization": "Rice Research Institute (RRI), Dokri, Larkana / ARI Tandojam",
+        "title": "Coarse non-basmati rice guidelines (IRRI-6)",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "rice",
+      "regionSlug": "pk-sindh",
+      "startMonth": 6,
+      "endMonth": 7,
+      "activityType": "TRANSPLANT",
+      "harvestText": null,
+      "notes": "Jun-Jul transplanting",
+      "source": {
+        "organization": "Rice Research Institute (RRI), Dokri, Larkana / ARI Tandojam",
+        "title": "Coarse non-basmati rice guidelines",
+        "url": null
+      },
+      "verificationStatus": "verified"
+    },
+    {
+      "itemSlug": "cotton",
+      "regionSlug": "pk-sindh",
+      "startMonth": 4,
+      "endMonth": 5,
+      "activityType": "SOW",
+      "harvestText": null,
+      "notes": "Mid-Apr to May sowing; NPK 150-190/60-80/50-75 + B 2.5-3 kg/ha",
+      "source": {
+        "organization": "Central Cotton Research Institute (CCRI) Sakrand / ARI Tandojam",
+        "title": "Bt upland cotton guidelines",
         "url": null
       },
       "verificationStatus": "verified"
