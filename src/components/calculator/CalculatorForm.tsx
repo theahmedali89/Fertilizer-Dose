@@ -165,7 +165,24 @@ export function CalculatorForm({ crops, initialArea, initialUnit, initialCrop }:
    * WhatsApp share — builds a compact, forward-friendly schedule card.
    * The message stays in English so the brand format is identical everywhere
    * it gets forwarded.
+   *
+   * NOTE: helpers (lbsPerAcre, rangeKg/Bags/Lbs) must stay ABOVE this useMemo —
+   * the factory runs synchronously during render, so using them before their
+   * declaration throws "Cannot access before initialization".
    */
+  const lbsPerAcre = (kg: number): number => {
+    if (!result || result.areaHa <= 0) return 0;
+    return Math.round(((kg / result.areaHa) * 0.892) * 10) / 10;
+  };
+
+  // Range display helpers: "x" for exact, "x–y" for ranges.
+  const rangeKg = (l: { kg: number; kgMax?: number }): string =>
+    l.kgMax != null ? `${l.kg}–${l.kgMax}` : `${l.kg}`;
+  const rangeBags = (l: { bags: number; bagsMax?: number }): string =>
+    l.bagsMax != null ? `${l.bags}–${l.bagsMax}` : `${l.bags}`;
+  const rangeLbs = (l: { kg: number; kgMax?: number }): string =>
+    l.kgMax != null ? `${lbsPerAcre(l.kg)}–${lbsPerAcre(l.kgMax)}` : `${lbsPerAcre(l.kg)}`;
+
   const shareMessage = useMemo(() => {
     if (!result) return "";
     const divider = "━━━━━━━━━━━━";
@@ -234,24 +251,6 @@ export function CalculatorForm({ crops, initialArea, initialUnit, initialCrop }:
     setShareFeedback("copied");
     window.setTimeout(() => setShareFeedback("idle"), 2000);
   };
-
-  /**
-   * 10c — kg → lbs/acre conversion for display.
-   * 1 kg/ha = 2.20462 lb ÷ 2.47105 ac/ha = 0.89218 ≈ 0.892 lbs/acre.
-   * Display-only: the underlying kg result and the saved calculation are untouched.
-   */
-  const lbsPerAcre = (kg: number): number => {
-    if (!result || result.areaHa <= 0) return 0;
-    return Math.round(((kg / result.areaHa) * 0.892) * 10) / 10;
-  };
-
-  // Range display helpers: "x" for exact, "x–y" for ranges.
-  const rangeKg = (l: { kg: number; kgMax?: number }): string =>
-    l.kgMax != null ? `${l.kg}–${l.kgMax}` : `${l.kg}`;
-  const rangeBags = (l: { bags: number; bagsMax?: number }): string =>
-    l.bagsMax != null ? `${l.bags}–${l.bagsMax}` : `${l.bags}`;
-  const rangeLbs = (l: { kg: number; kgMax?: number }): string =>
-    l.kgMax != null ? `${lbsPerAcre(l.kg)}–${lbsPerAcre(l.kgMax)}` : `${lbsPerAcre(l.kg)}`;
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
