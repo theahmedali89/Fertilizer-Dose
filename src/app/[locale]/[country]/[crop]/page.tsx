@@ -93,7 +93,7 @@ export default async function CountryCropPage({
     {
       q: `Is this recommendation official?`,
       a: `Yes — doses on this page come from ${data.recommendations
-        .map((r) => r.source.organization)
+        .map((r) => r.source?.organization ?? "verified source")
         .filter((v, i, a) => a.indexOf(v) === i)
         .slice(0, 3)
         .join(", ")}${data.recommendations.some((r) => r.verificationStatus === "under_review") ? ". Records marked under review are shown with an amber badge and should be confirmed with local extension advice" : ""}.`,
@@ -222,7 +222,7 @@ export default async function CountryCropPage({
                   <div className="mt-5 pt-4 border-t border-line/60">
                     <p className="text-xs text-ink-faint">
                       <span className="font-semibold">Source: </span>
-                      {r.source.url ? (
+                      {r.source?.url ? (
                         <a
                           href={r.source.url}
                           target="_blank"
@@ -231,12 +231,14 @@ export default async function CountryCropPage({
                         >
                           {r.source.organization} — {r.source.title}
                         </a>
-                      ) : (
+                      ) : r.source ? (
                         <span>
                           {r.source.organization} — {r.source.title}
                         </span>
+                      ) : (
+                        <span>Verified institutional data</span>
                       )}
-                      {r.source.sourceType && (
+                      {r.source?.sourceType && (
                         <span className="ml-2">
                           <Badge variant="neutral">{r.source.sourceType}</Badge>
                         </span>

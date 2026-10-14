@@ -36,7 +36,7 @@ export interface CountryCropRecommendation {
     title: string;
     url: string | null;
     sourceType: string | null;
-  };
+  } | null;
 }
 
 export interface CountryCropPageData {
