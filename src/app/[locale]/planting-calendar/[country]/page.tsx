@@ -20,16 +20,21 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; country: string }>;
 }) {
-  const { locale, country } = await params;
-  if (!COUNTRIES.includes(country as (typeof COUNTRIES)[number])) return {};
-  const t = await getTranslations({ locale, namespace: "calendar" });
-  const cp = t.raw("countryPages") as Record<string, string>;
-  return localizedMetadata({
-    locale,
-    path: `/planting-calendar/${country}`,
-    title: cp[`${country}Title`],
-    description: cp[`${country}Desc`],
-  });
+  try {
+    const { locale, country } = await params;
+    if (!COUNTRIES.includes(country as (typeof COUNTRIES)[number])) return {};
+    const t = await getTranslations({ locale, namespace: "calendar" });
+    const cp =
+      (t.raw("countryPages") as Record<string, string> | undefined) ?? {};
+    return localizedMetadata({
+      locale,
+      path: `/planting-calendar/${country}`,
+      title: cp[`${country}Title`],
+      description: cp[`${country}Desc`],
+    });
+  } catch {
+    return {};
+  }
 }
 
 export default async function CountryCalendarPage({
@@ -41,7 +46,7 @@ export default async function CountryCalendarPage({
   if (!COUNTRIES.includes(country as (typeof COUNTRIES)[number])) notFound();
   setRequestLocale(locale);
   const t = await getTranslations("calendar");
-  const cp = t.raw("countryPages") as Record<string, string>;
+  const cp = (t.raw("countryPages") as Record<string, string> | undefined) ?? {};
   const regions = (await getRegions()).filter((r) => r.country === country);
   const windows = await getPlantingWindows();
   const countryName = country === "pakistan" ? "Pakistan" : "India";
