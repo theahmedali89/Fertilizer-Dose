@@ -251,16 +251,27 @@ function staticHits(regionSlug: string, month: number, category: string, limit?:
   return hits;
 }
 
-export async function getPlantingByMonth(opts: {
-  regionSlug: string;
-  month: number;
-  category?: string;
-  limit?: number;
-  locale?: string;
-}): Promise<PlantingHit[]> {
-  const { regionSlug, month, category = "all", limit, locale } = opts;
+/** Fetch all planting hits for a region (single DB query). Month filtering happens in JS. */
+async function fetchRegionHits(
+  regionSlug: string,
+  category: string,
+  locale?: string
+): Promise<PlantingHit[]> {
   // Static fallback when the database isn't configured (dev / build without DB).
-  if (!isDbConfigured()) return staticHits(regionSlug, month, category, limit);
+  if (!isDbConfigured()) {
+    // For static mode, collect all months
+    const all: PlantingHit[] = [];
+    for (let m = 1; m <= 12; m++) {
+      all.push(...staticHits(regionSlug, m, category));
+    }
+    // Dedupe (staticHits per month may overlap)
+    const seen = new Set<string>();
+    return all.filter((h) => {
+      if (seen.has(h.windowId)) return false;
+      seen.add(h.windowId);
+      return true;
+    });
+  }
   const rows = await tryDb(async () => {
     return await db.plantingWindow.findMany({
       where: { region: { slug: regionSlug } },
@@ -300,7 +311,6 @@ export async function getPlantingByMonth(opts: {
     if (!w.item) continue;
     // Same for region: a dangling regionId gives region: null.
     if (!w.region) continue;
-    if (!monthInWindow(month, w.startMonth, w.endMonth)) continue;
     if (!categoryMatchesFilter(w.item.category, category)) continue;
     const src = w.sources[0]?.source;
     hits.push({
@@ -325,9 +335,40 @@ export async function getPlantingByMonth(opts: {
       sourceOrg: src?.organization ?? "Fertilizer Dose editorial",
       sourceTitle: src?.title ?? "Regional crop calendar summary",
     });
-    if (limit && hits.length >= limit) break;
   }
   return hits;
+}
+
+export async function getPlantingByMonth(opts: {
+  regionSlug: string;
+  month: number;
+  category?: string;
+  limit?: number;
+  locale?: string;
+}): Promise<PlantingHit[]> {
+  const { regionSlug, month, category = "all", limit, locale } = opts;
+  const allHits = await fetchRegionHits(regionSlug, category, locale);
+  const hits = allHits.filter((h) => monthInWindow(month, h.startMonth, h.endMonth));
+  if (limit) return hits.slice(0, limit);
+  return hits;
+}
+
+/**
+ * Optimized: fetch ONCE for all 12 months (single DB query instead of 12).
+ * Used by the visual calendar page.
+ */
+export async function getPlantingHitsGroupedByMonth(opts: {
+  regionSlug: string;
+  category?: string;
+  locale?: string;
+}): Promise<Record<number, PlantingHit[]>> {
+  const { regionSlug, category = "all", locale } = opts;
+  const allHits = await fetchRegionHits(regionSlug, category, locale);
+  const grouped: Record<number, PlantingHit[]> = {};
+  for (let m = 1; m <= 12; m++) {
+    grouped[m] = allHits.filter((h) => monthInWindow(m, h.startMonth, h.endMonth));
+  }
+  return grouped;
 }
 
 /** Minimal index for client-side directory filtering (small payload). */

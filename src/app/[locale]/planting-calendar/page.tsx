@@ -8,7 +8,7 @@ import type { PlantingHit } from "@/server/country";
 import {
   getCountries,
   getAllRegions,
-  getPlantingByMonth,
+  getPlantingHitsGroupedByMonth,
   getSelectedCountryCode,
   getSelectedRegionSlug,
   type RegionInfo,
@@ -88,15 +88,7 @@ export default async function PlantingCalendarPage({
   const category: CalendarCategory = VALID_CATEGORIES.includes(rawCat) ? rawCat : "all";
 
   const hitsByMonth: Record<number, PlantingHit[]> = regionSlug
-    ? Object.fromEntries(
-        await Promise.all(
-          Array.from({ length: 12 }, (_, i) =>
-            getPlantingByMonth({ regionSlug, month: i + 1, category, locale })
-              .then((hits) => [i + 1, hits] as const)
-              .catch(() => [i + 1, []] as const)
-          )
-        )
-      )
+    ? await getPlantingHitsGroupedByMonth({ regionSlug, category, locale }).catch(() => ({}))
     : {};
 
   const regionsByCountry: Record<string, RegionInfo[]> = {};
