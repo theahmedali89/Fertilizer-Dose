@@ -91,9 +91,9 @@ export default async function PlantingCalendarPage({
     ? Object.fromEntries(
         await Promise.all(
           Array.from({ length: 12 }, (_, i) =>
-            getPlantingByMonth({ regionSlug, month: i + 1, category, locale }).then(
-              (hits) => [i + 1, hits] as const
-            )
+            getPlantingByMonth({ regionSlug, month: i + 1, category, locale })
+              .then((hits) => [i + 1, hits] as const)
+              .catch(() => [i + 1, []] as const)
           )
         )
       )
