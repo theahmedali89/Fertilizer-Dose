@@ -25,18 +25,23 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; country: string; crop: string }>;
 }) {
-  const { locale, country, crop } = await params;
-  const data = await getCountryCropPage(country, crop);
-  if (!data) return {};
-  const title = `${data.item.name} NPK Fertilizer Schedule in ${data.country.name} (Official)`;
-  const primary = data.recommendations.find((r) => r.isPrimary) ?? data.recommendations[0];
-  const dose = fmtDose(primary);
-  return localizedMetadata({
-    locale,
-    path: `/${data.country.slug}/${data.item.slug}`,
-    title,
-    description: `Official ${data.item.name} fertilizer recommendation for ${data.country.name}: ${dose} kg/ha NPK. Application method, timing, and sources.`,
-  });
+  try {
+    const { locale, country, crop } = await params;
+    const data = await getCountryCropPage(country, crop);
+    if (!data) return {};
+    const title = `${data.item.name} NPK Fertilizer Schedule in ${data.country.name} (Official)`;
+    const primary = data.recommendations.find((r) => r.isPrimary) ?? data.recommendations[0];
+    const dose = fmtDose(primary);
+    return localizedMetadata({
+      locale,
+      path: `/${data.country.slug}/${data.item.slug}`,
+      title,
+      description: `Official ${data.item.name} fertilizer recommendation for ${data.country.name}: ${dose} kg/ha NPK. Application method, timing, and sources.`,
+    });
+  } catch {
+    // Never let metadata generation 500 the page — fall back to defaults.
+    return {};
+  }
 }
 
 function fmtDose(r: CountryCropRecommendation): string {

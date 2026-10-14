@@ -289,12 +289,15 @@ export async function getPlantingByMonth(opts: {
     locale && locale !== "en"
       ? await import("@/server/i18n-names").then((m) =>
           m.getTranslatedItemNames(
-            [...new Set(rows.map((w) => w.item.slug))],
+            [...new Set(rows.map((w) => w.item?.slug).filter(Boolean) as string[])],
             locale
           )
         )
       : new Map<string, string>();
   for (const w of rows) {
+    // Dangling foreign key: plantingWindow rows whose growingItem was deleted
+    // come back with item: null — skip them instead of crashing the page.
+    if (!w.item) continue;
     if (!monthInWindow(month, w.startMonth, w.endMonth)) continue;
     if (!categoryMatchesFilter(w.item.category, category)) continue;
     const src = w.sources[0]?.source;

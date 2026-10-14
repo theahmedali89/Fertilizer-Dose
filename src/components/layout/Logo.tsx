@@ -18,7 +18,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
             Fertilizer<span className="text-leaf-700 dark:text-leaf-400 font-light"> Dose</span>
           </span>
           <span className="hidden sm:block text-[11px] font-medium text-ink-faint tracking-wide mt-0.5">
-            Fertilizer Dose Calculator for Crops, Plants &amp; Vegetables
+            Calculator for Crops, Plants &amp; Vegetables
           </span>
         </span>
       )}
