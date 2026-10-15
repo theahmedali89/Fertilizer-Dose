@@ -45,12 +45,12 @@ model User {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
-  accounts      Account[]
-  sessions      Session[]
-  plots         GardenPlot[]
-  calculations  SavedCalculation[]
-  reminders     GardenReminder[]
-  diagnoses     Diagnosis[]
+  accounts     Account[]
+  sessions     Session[]
+  plots        GardenPlot[]
+  calculations SavedCalculation[]
+  reminders    GardenReminder[]
+  diagnoses    Diagnosis[]
 }
 
 model Account {
@@ -113,23 +113,23 @@ model Fertilizer {
 
   // ── Organic fertilizer support (Phase 2; additive, all nullable/defaulted) ──
   // fertilizerType: "mineral" | "organic"
-  fertilizerType String @default("mineral")
+  fertilizerType    String  @default("mineral")
   // organicCategory: "manure" | "compost" | "green_manure" (organics only)
-  organicCategory String?
+  organicCategory   String?
   // nutrientValueType: "fixed" | "typical_range" | "variable" | "lab_analysis_required"
-  nutrientValueType String @default("fixed")
+  nutrientValueType String  @default("fixed")
   // Honest variability caveat, shown in the UI wherever ranges appear.
-  nutrientNote String? @db.Text
+  nutrientNote      String? @db.Text
   // Typical-range bounds (percent). Null when not applicable. Midpoints are
   // NEVER stored here as single values (see n/p/k above).
-  nMin Float?
-  nMax Float?
-  pMin Float?
-  pMax Float?
-  kMin Float?
-  kMax Float?
+  nMin              Float?
+  nMax              Float?
+  pMin              Float?
+  pMax              Float?
+  kMin              Float?
+  kMax              Float?
   // Source for the typical ranges (URL).
-  sourceUrl String?
+  sourceUrl         String?
 
   sources FertilizerSource[]
 }
@@ -137,31 +137,39 @@ model Fertilizer {
 // ── CMS: growing library (crops, plants, vegetables) ────
 
 model GrowingItem {
-  id                String             @id @default(cuid())
-  slug              String             @unique
-  name              String
-  urdu              String?
-  scientificName    String?
-  category          String // crop | vegetable | fruit | herb | flower | garden_plant | indoor_plant | outdoor_plant | plant (legacy)
-  plantSubcategory  String?
-  season            String?
-  seasonDetail      String?            @db.Text
-  sowingMonths      String?
-  harvestPeriod     String?
-  soil              String?            @db.Text
-  water             String?            @db.Text
-  sunlight          String?
-  climate           String?            @db.Text
-  regions           String[]
-  npkN              Float?
-  npkP              Float?
-  npkK              Float?
-  npkSource         String?
+  id                 String             @id @default(cuid())
+  slug               String             @unique
+  name               String
+  urdu               String?
+  scientificName     String?
+  category           String // crop | vegetable | fruit | herb | flower | garden_plant | indoor_plant | outdoor_plant | plant (legacy)
+  plantSubcategory   String?
+  season             String?
+  seasonDetail       String?            @db.Text
+  sowingMonths       String?
+  harvestPeriod      String?
+  soil               String?            @db.Text
+  water              String?            @db.Text
+  sunlight           String?
+  climate            String?            @db.Text
+  regions            String[]
+  npkN               Float?
+  npkP               Float?
+  npkK               Float?
+  // Source-faithful NPK ranges (Ahmed-supplied 2026-10-15). Prefer these over
+  // the legacy single-value fields; null = no range data. Never collapse to midpoints.
+  npkNMin            Float?
+  npkNMax            Float?
+  npkPMin            Float?
+  npkPMax            Float?
+  npkKMin            Float?
+  npkKMax            Float?
+  npkSource          String?
   verificationStatus VerificationStatus @default(under_review)
-  indexable         Boolean            @default(false)
-  published         Boolean            @default(true)
-  createdAt         DateTime           @default(now())
-  updatedAt         DateTime           @updatedAt
+  indexable          Boolean            @default(false)
+  published          Boolean            @default(true)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
 
   stages          GrowthStage[]
   sources         GrowingSource[]
@@ -171,12 +179,12 @@ model GrowingItem {
 }
 
 model GrowthStage {
-  id          String      @id @default(cuid())
-  itemId      String
-  name        String
-  timing      String?
-  note        String?     @db.Text
-  position    Int         @default(0)
+  id       String  @id @default(cuid())
+  itemId   String
+  name     String
+  timing   String?
+  note     String? @db.Text
+  position Int     @default(0)
 
   item GrowingItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
 
@@ -207,7 +215,7 @@ model Region {
   countryId String?
   name      String
 
-  countryObj      Country?                  @relation(fields: [countryId], references: [id], onDelete: SetNull)
+  countryObj      Country?                   @relation(fields: [countryId], references: [id], onDelete: SetNull)
   windows         PlantingWindow[]
   plots           GardenPlot[]
   seasons         Season[]
@@ -232,9 +240,9 @@ model PlantingWindow {
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
 
-  item    GrowingItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
-  region  Region      @relation(fields: [regionId], references: [id], onDelete: Cascade)
-  season  Season?     @relation(fields: [seasonId], references: [id], onDelete: SetNull)
+  item    GrowingItem    @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  region  Region         @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  season  Season?        @relation(fields: [seasonId], references: [id], onDelete: SetNull)
   sources WindowSource[]
 
   @@index([regionId, startMonth])
@@ -255,9 +263,9 @@ model Season {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  country Country @relation(fields: [countryId], references: [id], onDelete: Cascade)
-  region  Region? @relation(fields: [regionId], references: [id], onDelete: SetNull)
-  source  Source? @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  country Country          @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  region  Region?          @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  source  Source?          @relation(fields: [sourceId], references: [id], onDelete: SetNull)
   windows PlantingWindow[]
 
   @@index([countryId, regionId])
@@ -421,20 +429,20 @@ model Setting {
 // ── My Garden (per-user; localStorage remains the offline fallback) ──
 
 model GardenPlot {
-  id       String  @id @default(cuid())
-  userId   String
-  name     String
-  location String?
-  regionId String?
-  area     Float
-  unit     String // acre | kanal | marla | hectare
-  soilType String?
-  notes    String? @db.Text
+  id        String   @id @default(cuid())
+  userId    String
+  name      String
+  location  String?
+  regionId  String?
+  area      Float
+  unit      String // acre | kanal | marla | hectare
+  soilType  String?
+  notes     String?  @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-  region    Region?    @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  region    Region?          @relation(fields: [regionId], references: [id], onDelete: SetNull)
   plantings Planting[]
   reminders GardenReminder[]
 
@@ -473,17 +481,17 @@ model SavedCalculation {
 }
 
 model GardenReminder {
-  id         String    @id @default(cuid())
+  id         String   @id @default(cuid())
   userId     String
   title      String
-  dueDate    DateTime  @db.Date
+  dueDate    DateTime @db.Date
   plotId     String?
   plantingId String?
-  done       Boolean   @default(false)
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
+  done       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 
-  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user     User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   plot     GardenPlot? @relation(fields: [plotId], references: [id], onDelete: Cascade)
   planting Planting?   @relation(fields: [plantingId], references: [id], onDelete: Cascade)
 
@@ -531,23 +539,23 @@ model UserSuggestion {
   id               String           @id @default(cuid())
   type             SuggestionType
   status           SuggestionStatus @default(PENDING)
-  locale           String?          // translation locale, e.g. "ur"
-  pageUrl          String?          // page the suggestion refers to
-  fieldKey         String?          // translation key / field reference
+  locale           String? // translation locale, e.g. "ur"
+  pageUrl          String? // page the suggestion refers to
+  fieldKey         String? // translation key / field reference
   issueText        String?          @db.Text // "what's wrong" description
   submittedText    String           @db.Text // the suggested correction / request
-  sourceUrl        String?          // official link (one of sourceUrl/sourceText required for DATA_CORRECTION)
-  sourceText       String?          // written reference, e.g. "PAU Package of Practices 2024, p.23"
+  sourceUrl        String? // official link (one of sourceUrl/sourceText required for DATA_CORRECTION)
+  sourceText       String? // written reference, e.g. "PAU Package of Practices 2024, p.23"
   // Field-experience report (FIELD_EXPERIENCE only) — community tier, unverified
-  district         String?          // farmer's district/area
-  variety          String?          // crop variety, if known
+  district         String? // farmer's district/area
+  variety          String? // crop variety, if known
   appliedText      String?          @db.Text // what the farmer applied, e.g. "2 bags DAP + 1 bag urea per acre"
-  yieldText        String?          // result/yield, optional
-  cropSlug         String?          // crop/vegetable/plant the suggestion is about
+  yieldText        String? // result/yield, optional
+  cropSlug         String? // crop/vegetable/plant the suggestion is about
   // Contributor identity (optional, shown publicly ONLY after admin approval)
-  contributorName  String?          // display name, provided voluntarily
-  contributorImage String?          // /uploads/contributors/<hash>.<ext>
-  contributorToken String?          // anonymous stable token (localStorage) for badge counting
+  contributorName  String? // display name, provided voluntarily
+  contributorImage String? // /uploads/contributors/<hash>.<ext>
+  contributorToken String? // anonymous stable token (localStorage) for badge counting
   priority         Boolean          @default(false) // fast-track: trusted-tier contributor
   createdAt        DateTime         @default(now())
 
@@ -564,8 +572,8 @@ model UserSuggestion {
 model Contributor {
   id            String   @id @default(cuid())
   token         String   @unique // anonymous token from the submitter's browser
-  name          String?  // latest display name provided
-  imageUrl      String?  // latest photo path provided
+  name          String? // latest display name provided
+  imageUrl      String? // latest photo path provided
   approvedCount Int      @default(0)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt

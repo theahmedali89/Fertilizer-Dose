@@ -131,15 +131,15 @@ export async function GrowingDetail({
                     <div className="inline-flex items-center gap-6 rounded-2xl border border-line bg-surface-2 px-6 py-4 font-mono">
                       <span>
                         <span className="text-ink-faint text-sm font-sans">N </span>
-                        <b className="text-xl">{item.npk.n}</b>
+                        <b className="text-xl">{item.npkRange ? `${item.npkRange.n[0]}–${item.npkRange.n[1]}` : item.npk.n}</b>
                       </span>
                       <span>
                         <span className="text-ink-faint text-sm font-sans">P₂O₅ </span>
-                        <b className="text-xl">{item.npk.p}</b>
+                        <b className="text-xl">{item.npkRange ? `${item.npkRange.p[0]}–${item.npkRange.p[1]}` : item.npk.p}</b>
                       </span>
                       <span>
                         <span className="text-ink-faint text-sm font-sans">K₂O </span>
-                        <b className="text-xl">{item.npk.k}</b>
+                        <b className="text-xl">{item.npkRange ? `${item.npkRange.k[0]}–${item.npkRange.k[1]}` : item.npk.k}</b>
                       </span>
                       <span className="text-sm font-sans text-ink-faint">kg/ha</span>
                     </div>

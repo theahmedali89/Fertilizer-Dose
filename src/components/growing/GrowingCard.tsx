@@ -55,7 +55,7 @@ export function GrowingCard({
           )}
           {hasNpk && item.npk && (
             <p className="mt-3 font-mono text-sm">
-              N <b>{item.npk.n}</b> · P₂O₅ <b>{item.npk.p}</b> · K₂O <b>{item.npk.k}</b>{" "}
+              N <b>{item.npkRange ? `${item.npkRange.n[0]}–${item.npkRange.n[1]}` : item.npk.n}</b> · P₂O₅ <b>{item.npkRange ? `${item.npkRange.p[0]}–${item.npkRange.p[1]}` : item.npk.p}</b> · K₂O <b>{item.npkRange ? `${item.npkRange.k[0]}–${item.npkRange.k[1]}` : item.npk.k}</b>{" "}
               <span className="text-ink-faint font-sans">kg/ha</span>
             </p>
           )}

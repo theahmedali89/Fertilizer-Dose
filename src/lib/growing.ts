@@ -64,6 +64,8 @@ export interface GrowingItem {
 
   /** Recommended N–P2O5–K2O kg/ha. null = under review, never invented. */
   npk: { n: number; p: number; k: number } | null;
+  /** Source-faithful NPK ranges (preferred over npk when set). */
+  npkRange?: { n: [number, number]; p: [number, number]; k: [number, number] } | null;
   npkSource: string | null;
   /** Region tag for the recommendation */
   region: string;

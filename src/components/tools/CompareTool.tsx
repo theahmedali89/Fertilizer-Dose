@@ -285,7 +285,9 @@ export function CompareTool() {
                         <div>
                           <dt className="text-xs text-ink-faint">{t("dose")}</dt>
                           <dd className="font-semibold mt-0.5">
-                            {item.npk ? `${item.npk.n}–${item.npk.p}–${item.npk.k} kg/ha` : t("noDoseData")}
+                            {item.npkRange
+                              ? `N ${item.npkRange.n[0]}–${item.npkRange.n[1]} · P₂O₅ ${item.npkRange.p[0]}–${item.npkRange.p[1]} · K₂O ${item.npkRange.k[0]}–${item.npkRange.k[1]} kg/ha`
+                              : item.npk ? `${item.npk.n}–${item.npk.p}–${item.npk.k} kg/ha` : t("noDoseData")}
                           </dd>
                         </div>
                         <div>

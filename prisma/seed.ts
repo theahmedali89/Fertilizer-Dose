@@ -41,6 +41,7 @@ import { seedNg18 } from "./seed-ng18";
 import { seedVegplant } from "./seed-vegplant";
 import { seedVegdose } from "./seed-vegdose";
 import { seedImport20261015 } from "./seed-import-2026-10-15";
+import { seedImport20261015Part2 } from "./seed-import-2026-10-15-part2";
 import { seedTranslations } from "./seed-translations";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
@@ -142,6 +143,33 @@ async function main() {
         backfilled++;
       }
       console.log(`growing items NPK backfilled (DB-only): ${backfilled}`);
+    }
+  }
+
+  // ── Growing NPK RANGE backfill (2026-10-15) ──
+  // Ahmed's Section-2 data gives TRUE ranges; growing-npk.json stored rounded
+  // midpoints (never collapse ranges). Fill the new nullable range columns
+  // without touching the legacy single-value fields or verification status.
+  {
+    const rangesRaw = await import("../prisma/data/growing-npk-ranges.json", { with: { type: "json" } })
+      .then((m) => (m as { default: Record<string, { nMin: number; nMax: number; pMin: number; pMax: number; kMin: number; kMax: number; source: string }> }).default)
+      .catch(() => null);
+    if (rangesRaw) {
+      let rangeFilled = 0;
+      for (const [slug, v] of Object.entries(rangesRaw)) {
+        const row = await db.growingItem.findUnique({ where: { slug }, select: { id: true } });
+        if (!row) continue;
+        await db.growingItem.update({
+          where: { id: row.id },
+          data: {
+            npkNMin: v.nMin, npkNMax: v.nMax,
+            npkPMin: v.pMin, npkPMax: v.pMax,
+            npkKMin: v.kMin, npkKMax: v.kMax,
+          },
+        });
+        rangeFilled++;
+      }
+      console.log(`growing items NPK ranges backfilled: ${rangeFilled}`);
     }
   }
 
@@ -415,6 +443,9 @@ async function main() {
 
   // ── Import 2026-10-15: Ahmed's institutional NPK research (168 records: 77 inserts + 91 updates) — idempotent ──
   await seedImport20261015(db);
+
+  // ── Import 2026-10-15 Part 2: FR/okra/Grand Est single record — idempotent ──
+  await seedImport20261015Part2(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
