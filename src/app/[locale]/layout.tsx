@@ -11,6 +11,7 @@ import { Header } from "@/components/layout/Header";
 import { CountrySelector } from "@/components/layout/CountrySelector";
 import { Footer } from "@/components/layout/Footer";
 import { TranslationNotice } from "@/components/TranslationNotice";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <head>
+        <GoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
