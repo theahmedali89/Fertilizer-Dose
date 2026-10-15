@@ -1,0 +1,5616 @@
+{
+ "new": [
+  {
+   "country": "TR",
+   "crop": "lentil",
+   "region": null,
+   "rslug": null,
+   "n": [
+    20,
+    30
+   ],
+   "p": [
+    45,
+    60
+   ],
+   "k": [
+    0,
+    30
+   ],
+   "note": "Ahmed: 'Thrace & All Regions' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "TR",
+   "crop": "chickpea",
+   "region": null,
+   "rslug": null,
+   "n": [
+    20,
+    30
+   ],
+   "p": [
+    40,
+    60
+   ],
+   "k": [
+    0,
+    30
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "TR",
+   "crop": "sunflower",
+   "region": null,
+   "rslug": null,
+   "n": [
+    70,
+    90
+   ],
+   "p": [
+    45,
+    60
+   ],
+   "k": [
+    30,
+    50
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "TR",
+   "crop": "wheat",
+   "region": null,
+   "rslug": null,
+   "n": [
+    100,
+    140
+   ],
+   "p": [
+    50,
+    70
+   ],
+   "k": [
+    0,
+    40
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "PL",
+   "crop": "sugar-beet",
+   "region": null,
+   "rslug": null,
+   "n": [
+    110,
+    150
+   ],
+   "p": [
+    60,
+    85
+   ],
+   "k": [
+    160,
+    220
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "PL",
+   "crop": "barley",
+   "region": null,
+   "rslug": null,
+   "n": [
+    80,
+    120
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    60,
+    90
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "ES",
+   "crop": "sugar-beet",
+   "region": null,
+   "rslug": null,
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    60,
+    85
+   ],
+   "k": [
+    140,
+    200
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "ES",
+   "crop": "rice",
+   "region": null,
+   "rslug": null,
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "note": "Ahmed: 'All Regions / Delta Ebro / Sevilla' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "ES",
+   "crop": "sunflower",
+   "region": null,
+   "rslug": null,
+   "n": [
+    50,
+    75
+   ],
+   "p": [
+    35,
+    55
+   ],
+   "k": [
+    35,
+    55
+   ],
+   "note": "Ahmed: 'Aragon & All Regions' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "ES",
+   "crop": "maize",
+   "region": null,
+   "rslug": null,
+   "n": [
+    240,
+    320
+   ],
+   "p": [
+    85,
+    120
+   ],
+   "k": [
+    110,
+    160
+   ],
+   "note": "Ahmed: 'Aragon & All Regions' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "FR",
+   "crop": "soybean",
+   "region": null,
+   "rslug": null,
+   "n": [
+    0,
+    0
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    50,
+    75
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "FR",
+   "crop": "sugar-beet",
+   "region": null,
+   "rslug": null,
+   "n": [
+    110,
+    150
+   ],
+   "p": [
+    60,
+    85
+   ],
+   "k": [
+    160,
+    240
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "FR",
+   "crop": "sunflower",
+   "region": null,
+   "rslug": null,
+   "n": [
+    50,
+    80
+   ],
+   "p": [
+    40,
+    55
+   ],
+   "k": [
+    45,
+    65
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "FR",
+   "crop": "canola",
+   "region": null,
+   "rslug": null,
+   "n": [
+    150,
+    210
+   ],
+   "p": [
+    60,
+    90
+   ],
+   "k": [
+    70,
+    110
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "FR",
+   "crop": "barley",
+   "region": null,
+   "rslug": null,
+   "n": [
+    130,
+    170
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    50,
+    75
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "FR",
+   "crop": "wheat",
+   "region": null,
+   "rslug": null,
+   "n": [
+    170,
+    240
+   ],
+   "p": [
+    50,
+    75
+   ],
+   "k": [
+    50,
+    80
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "KR",
+   "crop": "sesame",
+   "region": null,
+   "rslug": null,
+   "n": [
+    60,
+    80
+   ],
+   "p": [
+    40,
+    50
+   ],
+   "k": [
+    40,
+    55
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "KR",
+   "crop": "sweet-potato",
+   "region": null,
+   "rslug": null,
+   "n": [
+    45,
+    60
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    100,
+    140
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "KR",
+   "crop": "maize",
+   "region": null,
+   "rslug": null,
+   "n": [
+    140,
+    180
+   ],
+   "p": [
+    60,
+    80
+   ],
+   "k": [
+    80,
+    100
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "KR",
+   "crop": "soybean",
+   "region": null,
+   "rslug": null,
+   "n": [
+    25,
+    35
+   ],
+   "p": [
+    40,
+    60
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "KR",
+   "crop": "barley",
+   "region": null,
+   "rslug": null,
+   "n": [
+    70,
+    95
+   ],
+   "p": [
+    50,
+    70
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "note": "Ahmed: 'Chungcheong & National' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "JP",
+   "crop": "buckwheat",
+   "region": "Tohoku",
+   "rslug": "jp-tohoku",
+   "n": [
+    30,
+    45
+   ],
+   "p": [
+    40,
+    60
+   ],
+   "k": [
+    35,
+    50
+   ],
+   "note": "Ahmed: 'Tohoku (Yamagata)'",
+   "rflag": null
+  },
+  {
+   "country": "JP",
+   "crop": "soybean",
+   "region": null,
+   "rslug": null,
+   "n": [
+    20,
+    30
+   ],
+   "p": [
+    60,
+    80
+   ],
+   "k": [
+    60,
+    80
+   ],
+   "note": "Ahmed: 'Chubu (Niigata) & Tohoku' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "JP",
+   "crop": "wheat",
+   "region": null,
+   "rslug": null,
+   "n": [
+    100,
+    140
+   ],
+   "p": [
+    80,
+    120
+   ],
+   "k": [
+    70,
+    100
+   ],
+   "note": "Ahmed: 'Tohoku & Hokkaido' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "JP",
+   "crop": "rice",
+   "region": "Tohoku",
+   "rslug": "jp-tohoku",
+   "n": [
+    70,
+    95
+   ],
+   "p": [
+    60,
+    85
+   ],
+   "k": [
+    70,
+    95
+   ],
+   "note": "Ahmed: 'Tohoku (Yamagata)'",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "sugarcane",
+   "region": "South China",
+   "rslug": "cn-south",
+   "n": [
+    200,
+    260
+   ],
+   "p": [
+    80,
+    120
+   ],
+   "k": [
+    160,
+    240
+   ],
+   "note": "Ahmed: 'South (Guangxi / Hainan)'",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "canola",
+   "region": null,
+   "rslug": null,
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    50,
+    75
+   ],
+   "k": [
+    60,
+    90
+   ],
+   "note": "Ahmed: 'Yangtze & All Regions' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "cotton",
+   "region": null,
+   "rslug": null,
+   "n": [
+    160,
+    220
+   ],
+   "p": [
+    60,
+    90
+   ],
+   "k": [
+    75,
+    110
+   ],
+   "note": "Ahmed: 'Xinjiang & North China Plain (Hebei)' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "soybean",
+   "region": null,
+   "rslug": null,
+   "n": [
+    25,
+    40
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    45,
+    65
+   ],
+   "note": "Ahmed: 'North Plain & Northeast' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "maize",
+   "region": null,
+   "rslug": null,
+   "n": [
+    160,
+    210
+   ],
+   "p": [
+    50,
+    75
+   ],
+   "k": [
+    60,
+    90
+   ],
+   "note": "Ahmed: 'North China Plain (Hebei) & Southwest' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "wheat",
+   "region": null,
+   "rslug": null,
+   "n": [
+    160,
+    200
+   ],
+   "p": [
+    65,
+    90
+   ],
+   "k": [
+    50,
+    80
+   ],
+   "note": "Ahmed: 'North Plain (Hebei) & Shaanxi' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "CN",
+   "crop": "rice",
+   "region": null,
+   "rslug": null,
+   "n": [
+    110,
+    145
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    50,
+    75
+   ],
+   "note": "Ahmed: 'Northeast (Jilin) & All Regions' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "MY",
+   "crop": "rice",
+   "region": "Peninsular",
+   "rslug": "my-peninsular",
+   "n": [
+    100,
+    130
+   ],
+   "p": [
+    40,
+    60
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "ID",
+   "crop": "groundnut",
+   "region": null,
+   "rslug": null,
+   "n": [
+    25,
+    35
+   ],
+   "p": [
+    40,
+    55
+   ],
+   "k": [
+    35,
+    50
+   ],
+   "note": "Ahmed: 'Groundnut (Kacang Tanah)', All Regions",
+   "rflag": null
+  },
+  {
+   "country": "ID",
+   "crop": "cassava",
+   "region": null,
+   "rslug": null,
+   "n": [
+    80,
+    110
+   ],
+   "p": [
+    40,
+    60
+   ],
+   "k": [
+    90,
+    130
+   ],
+   "note": "Ahmed: 'Cassava (Singkong)', All Regions",
+   "rflag": null
+  },
+  {
+   "country": "ID",
+   "crop": "sugarcane",
+   "region": null,
+   "rslug": null,
+   "n": [
+    120,
+    150
+   ],
+   "p": [
+    60,
+    90
+   ],
+   "k": [
+    90,
+    135
+   ],
+   "note": "Ahmed: 'Sugarcane (Tebu)', All Regions",
+   "rflag": null
+  },
+  {
+   "country": "ID",
+   "crop": "rice",
+   "region": null,
+   "rslug": null,
+   "n": [
+    90,
+    125
+   ],
+   "p": [
+    36,
+    54
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "note": "Ahmed: 'Rice (Padi Sawah)', All Regions",
+   "rflag": null
+  },
+  {
+   "country": "AU",
+   "crop": "sorghum",
+   "region": null,
+   "rslug": null,
+   "n": [
+    60,
+    100
+   ],
+   "p": [
+    25,
+    40
+   ],
+   "k": [
+    0,
+    30
+   ],
+   "note": "Ahmed: 'National / WA' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "AU",
+   "crop": "canola",
+   "region": null,
+   "rslug": null,
+   "n": [
+    75,
+    130
+   ],
+   "p": [
+    30,
+    50
+   ],
+   "k": [
+    0,
+    40
+   ],
+   "note": "Ahmed: 'National / WA' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "AU",
+   "crop": "barley",
+   "region": null,
+   "rslug": null,
+   "n": [
+    50,
+    85
+   ],
+   "p": [
+    25,
+    40
+   ],
+   "k": [
+    0,
+    30
+   ],
+   "note": "Ahmed: 'National / WA' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "AU",
+   "crop": "wheat",
+   "region": null,
+   "rslug": null,
+   "n": [
+    60,
+    110
+   ],
+   "p": [
+    25,
+    45
+   ],
+   "k": [
+    0,
+    40
+   ],
+   "note": "Ahmed: 'National / WA' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "BR",
+   "crop": "beans",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "n": [
+    60,
+    90
+   ],
+   "p": [
+    40,
+    70
+   ],
+   "k": [
+    30,
+    50
+   ],
+   "note": "Ahmed: 'Beans (Feijao)' -> mapped to 'beans'; AMBIGUOUS vs 'bean', flagged",
+   "rflag": null
+  },
+  {
+   "country": "BR",
+   "crop": "rice",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "n": [
+    50,
+    80
+   ],
+   "p": [
+    40,
+    70
+   ],
+   "k": [
+    30,
+    50
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BR",
+   "crop": "coffee",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "n": [
+    200,
+    300
+   ],
+   "p": [
+    40,
+    80
+   ],
+   "k": [
+    200,
+    300
+   ],
+   "note": "Ahmed: 'Coffee (Cafe Arabica)'",
+   "rflag": null
+  },
+  {
+   "country": "BR",
+   "crop": "sugarcane",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "n": [
+    100,
+    140
+   ],
+   "p": [
+    30,
+    50
+   ],
+   "k": [
+    120,
+    160
+   ],
+   "note": "Ahmed: 'Sugarcane (Cana-de-acucar)'",
+   "rflag": null
+  },
+  {
+   "country": "BR",
+   "crop": "maize",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    50,
+    80
+   ],
+   "k": [
+    40,
+    70
+   ],
+   "note": "Ahmed: 'Maize (Milho Cerrado)'",
+   "rflag": null
+  },
+  {
+   "country": "US",
+   "crop": "cowpea",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "n": [
+    30,
+    45
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    45,
+    65
+   ],
+   "note": "Ahmed: 'Peas (Cowpea)' -> mapped to cowpea",
+   "rflag": null
+  },
+  {
+   "country": "US",
+   "crop": "soybean",
+   "region": null,
+   "rslug": null,
+   "n": [
+    0,
+    0
+   ],
+   "p": [
+    45,
+    75
+   ],
+   "k": [
+    65,
+    110
+   ],
+   "note": "Ahmed: 'SE & Corn Belt' -> treated as national (null)",
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "mustard",
+   "region": null,
+   "rslug": null,
+   "n": [
+    60,
+    85
+   ],
+   "p": [
+    30,
+    45
+   ],
+   "k": [
+    35,
+    50
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "lentil",
+   "region": null,
+   "rslug": null,
+   "n": [
+    15,
+    25
+   ],
+   "p": [
+    35,
+    50
+   ],
+   "k": [
+    25,
+    35
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "sugarcane",
+   "region": null,
+   "rslug": null,
+   "n": [
+    120,
+    150
+   ],
+   "p": [
+    60,
+    85
+   ],
+   "k": [
+    80,
+    110
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "jute",
+   "region": null,
+   "rslug": null,
+   "n": [
+    50,
+    70
+   ],
+   "p": [
+    20,
+    30
+   ],
+   "k": [
+    35,
+    50
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "maize",
+   "region": null,
+   "rslug": null,
+   "n": [
+    200,
+    260
+   ],
+   "p": [
+    80,
+    120
+   ],
+   "k": [
+    120,
+    170
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "wheat",
+   "region": null,
+   "rslug": null,
+   "n": [
+    90,
+    120
+   ],
+   "p": [
+    50,
+    70
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "BD",
+   "crop": "rice",
+   "region": null,
+   "rslug": null,
+   "n": [
+    120,
+    150
+   ],
+   "p": [
+    45,
+    60
+   ],
+   "k": [
+    60,
+    90
+   ],
+   "note": "Ahmed: 'Rice (Boro)'",
+   "rflag": null
+  },
+  {
+   "country": "PK",
+   "crop": "olive",
+   "region": "Punjab",
+   "rslug": "pk-punjab",
+   "n": [
+    80,
+    120
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    90,
+    135
+   ],
+   "note": "Ahmed: 'Punjab (Pothwar / Chakwal)'",
+   "rflag": null
+  },
+  {
+   "country": "PK",
+   "crop": "sunflower",
+   "region": "Punjab",
+   "rslug": "pk-punjab",
+   "n": [
+    75,
+    90
+   ],
+   "p": [
+    50,
+    65
+   ],
+   "k": [
+    0,
+    30
+   ],
+   "note": null,
+   "rflag": null
+  },
+  {
+   "country": "PK",
+   "crop": "canola",
+   "region": "Punjab",
+   "rslug": "pk-punjab",
+   "n": [
+    80,
+    100
+   ],
+   "p": [
+    50,
+    65
+   ],
+   "k": [
+    30,
+    45
+   ],
+   "note": "Ahmed: 'Canola (Rapeseed)'",
+   "rflag": null
+  },
+  {
+   "country": "PK",
+   "crop": "mustard",
+   "region": "Punjab",
+   "rslug": "pk-punjab",
+   "n": [
+    75,
+    90
+   ],
+   "p": [
+    45,
+    60
+   ],
+   "k": [
+    25,
+    35
+   ],
+   "note": "Ahmed: 'Mustard (Raya)'",
+   "rflag": null
+  }
+ ],
+ "dup": [
+  {
+   "country": "TR",
+   "crop": "potato",
+   "region": "Thrace",
+   "rslug": "tr-thrace",
+   "ahmed_n": [
+    160,
+    200
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    180,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-200",
+      "p2o5": "80-110",
+      "k2o": "160-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "cabbage",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    180,
+    240
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    160,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-220",
+      "p2o5": "60-85",
+      "k2o": "120-180"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "garlic",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    100,
+    130
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    90,
+    130
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-130",
+      "p2o5": "60-80",
+      "k2o": "90-130"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "peas",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    30,
+    45
+   ],
+   "ahmed_p": [
+    50,
+    70
+   ],
+   "ahmed_k": [
+    60,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "20-35",
+      "p2o5": "50-70",
+      "k2o": "60-85"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "radish",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    50,
+    80
+   ],
+   "ahmed_p": [
+    40,
+    60
+   ],
+   "ahmed_k": [
+    60,
+    90
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "40-60",
+      "p2o5": "30-45",
+      "k2o": "45-65"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "brinjal",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-190",
+      "p2o5": "60-85",
+      "k2o": "140-200"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "chili",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    130,
+    170
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-200",
+      "p2o5": "70-95",
+      "k2o": "150-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "cauliflower",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    180,
+    240
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    160,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-210",
+      "p2o5": "60-90",
+      "k2o": "130-180"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "carrot",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    130
+   ],
+   "ahmed_p": [
+    50,
+    80
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-130",
+      "p2o5": "50-75",
+      "k2o": "130-190"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "spinach",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    80,
+    120
+   ],
+   "ahmed_p": [
+    45,
+    65
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-110",
+      "p2o5": "40-60",
+      "k2o": "70-100"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-150",
+      "p2o5": "60-90",
+      "k2o": "140-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "onion",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    60,
+    85
+   ],
+   "ahmed_k": [
+    120,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-145",
+      "p2o5": "50-75",
+      "k2o": "110-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "PL",
+   "crop": "tomato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    180,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-260",
+      "p2o5": "70-95",
+      "k2o": "160-240"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "carrot",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    100,
+    140
+   ],
+   "ahmed_p": [
+    50,
+    75
+   ],
+   "ahmed_k": [
+    150,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-150",
+      "p2o5": "60-90",
+      "k2o": "140-200"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "radish",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    50,
+    75
+   ],
+   "ahmed_p": [
+    35,
+    50
+   ],
+   "ahmed_k": [
+    45,
+    70
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "40-60",
+      "p2o5": "30-50",
+      "k2o": "40-60"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "peas",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    25,
+    40
+   ],
+   "ahmed_p": [
+    45,
+    65
+   ],
+   "ahmed_k": [
+    50,
+    70
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "30-45",
+      "p2o5": "50-75",
+      "k2o": "50-70"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "spinach",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    80,
+    120
+   ],
+   "ahmed_p": [
+    40,
+    60
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-120",
+      "p2o5": "40-60",
+      "k2o": "60-90"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "cauliflower",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    150,
+    200
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    130,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-210",
+      "p2o5": "60-90",
+      "k2o": "120-170"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "cabbage-chinese",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    50,
+    70
+   ],
+   "ahmed_k": [
+    100,
+    140
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-160",
+      "p2o5": "50-70",
+      "k2o": "100-140"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "cabbage",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    190
+   ],
+   "ahmed_p": [
+    60,
+    85
+   ],
+   "ahmed_k": [
+    120,
+    170
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-180",
+      "p2o5": "50-80",
+      "k2o": "100-140"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "chili",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    160,
+    220
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    160,
+    230
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-220",
+      "p2o5": "70-110",
+      "k2o": "160-240"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "brinjal",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    190
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-200",
+      "p2o5": "70-100",
+      "k2o": "150-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "onion",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    110,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-160",
+      "p2o5": "60-90",
+      "k2o": "110-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "tomato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    180,
+    240
+   ],
+   "ahmed_p": [
+    80,
+    120
+   ],
+   "ahmed_k": [
+    180,
+    270
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "180-250",
+      "p2o5": "80-120",
+      "k2o": "200-300"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    160,
+    220
+   ],
+   "ahmed_p": [
+    90,
+    140
+   ],
+   "ahmed_k": [
+    200,
+    280
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-200",
+      "p2o5": "80-110",
+      "k2o": "170-240"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "radish",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    40,
+    65
+   ],
+   "ahmed_p": [
+    30,
+    45
+   ],
+   "ahmed_k": [
+    40,
+    65
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "40-65",
+      "p2o5": "30-45",
+      "k2o": "50-70"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "peas",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    25,
+    40
+   ],
+   "ahmed_p": [
+    45,
+    65
+   ],
+   "ahmed_k": [
+    50,
+    75
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "20-35",
+      "p2o5": "50-70",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "brinjal",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    130,
+    170
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-240",
+      "p2o5": "65-90",
+      "k2o": "150-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "chili",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    130,
+    170
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    150,
+    210
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-230",
+      "p2o5": "65-90",
+      "k2o": "150-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "cauliflower",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    170,
+    230
+   ],
+   "ahmed_p": [
+    65,
+    95
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "180-230",
+      "p2o5": "60-90",
+      "k2o": "130-180"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "spinach",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    130
+   ],
+   "ahmed_p": [
+    45,
+    65
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-120",
+      "p2o5": "40-60",
+      "k2o": "70-100"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "carrot",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    130
+   ],
+   "ahmed_p": [
+    55,
+    80
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-135",
+      "p2o5": "50-75",
+      "k2o": "130-190"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    190
+   ],
+   "ahmed_p": [
+    70,
+    110
+   ],
+   "ahmed_k": [
+    160,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "130-180",
+      "p2o5": "80-120",
+      "k2o": "180-260"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "onion",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    110,
+    150
+   ],
+   "ahmed_p": [
+    55,
+    80
+   ],
+   "ahmed_k": [
+    110,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-150",
+      "p2o5": "50-75",
+      "k2o": "100-140"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "FR",
+   "crop": "tomato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    150,
+    200
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    160,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-270",
+      "p2o5": "70-100",
+      "k2o": "180-260"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    65,
+    90
+   ],
+   "ahmed_k": [
+    180,
+    260
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-160",
+      "p2o5": "70-100",
+      "k2o": "180-250"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "radish",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    60,
+    90
+   ],
+   "ahmed_p": [
+    35,
+    55
+   ],
+   "ahmed_k": [
+    50,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "50-70",
+      "p2o5": "30-50",
+      "k2o": "50-75"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "garlic",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    50,
+    70
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-130",
+      "p2o5": "60-80",
+      "k2o": "90-130"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "spinach",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    100,
+    140
+   ],
+   "ahmed_p": [
+    45,
+    65
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-130",
+      "p2o5": "40-65",
+      "k2o": "70-110"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "onion",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    110,
+    140
+   ],
+   "ahmed_p": [
+    50,
+    75
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-145",
+      "p2o5": "50-75",
+      "k2o": "110-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "carrot",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    130
+   ],
+   "ahmed_p": [
+    50,
+    75
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-140",
+      "p2o5": "50-75",
+      "k2o": "140-210"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "cabbage-chinese",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    130,
+    170
+   ],
+   "ahmed_p": [
+    50,
+    70
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "130-170",
+      "p2o5": "50-70",
+      "k2o": "120-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "cabbage",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    160,
+    210
+   ],
+   "ahmed_p": [
+    60,
+    85
+   ],
+   "ahmed_k": [
+    130,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "180-230",
+      "p2o5": "60-85",
+      "k2o": "130-190"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "cauliflower",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    180,
+    240
+   ],
+   "ahmed_p": [
+    70,
+    95
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "190-240",
+      "p2o5": "60-90",
+      "k2o": "140-200"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IT",
+   "crop": "chili",
+   "region": "Emilia-Romagna",
+   "rslug": "it-emilia-romagna",
+   "ahmed_n": [
+    140,
+    170
+   ],
+   "ahmed_p": [
+    65,
+    85
+   ],
+   "ahmed_k": [
+    180,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-190",
+      "p2o5": "60-90",
+      "k2o": "140-210"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "KR",
+   "crop": "chili",
+   "region": "Gangwon",
+   "rslug": "kr-gangwon",
+   "ahmed_n": [
+    160,
+    190
+   ],
+   "ahmed_p": [
+    80,
+    100
+   ],
+   "ahmed_k": [
+    120,
+    150
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-190",
+      "p2o5": "80-100",
+      "k2o": "120-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "JP",
+   "crop": "cabbage",
+   "region": "Chubu",
+   "rslug": "jp-chubu",
+   "ahmed_n": [
+    180,
+    220
+   ],
+   "ahmed_p": [
+    150,
+    200
+   ],
+   "ahmed_k": [
+    180,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "180-230",
+      "p2o5": "120-170",
+      "k2o": "140-190"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Chubu (Gifu)'"
+  },
+  {
+   "country": "JP",
+   "crop": "cabbage",
+   "region": "Tohoku",
+   "rslug": "jp-tohoku",
+   "ahmed_n": [
+    200,
+    245
+   ],
+   "ahmed_p": [
+    220,
+    280
+   ],
+   "ahmed_k": [
+    170,
+    210
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "180-230",
+      "p2o5": "120-170",
+      "k2o": "140-190"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Tohoku (Yamagata)'"
+  },
+  {
+   "country": "JP",
+   "crop": "chili",
+   "region": "Tohoku",
+   "rslug": "jp-tohoku",
+   "ahmed_n": [
+    240,
+    300
+   ],
+   "ahmed_p": [
+    250,
+    320
+   ],
+   "ahmed_k": [
+    220,
+    280
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "220-280",
+      "p2o5": "130-180",
+      "k2o": "180-240"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Chili / Shishito', Tohoku (Yamagata)"
+  },
+  {
+   "country": "KR",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    80,
+    100
+   ],
+   "ahmed_k": [
+    100,
+    130
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-120",
+      "p2o5": "80-100",
+      "k2o": "100-130"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "CN",
+   "crop": "garlic",
+   "region": "North China Plain",
+   "rslug": "cn-ncp",
+   "ahmed_n": [
+    150,
+    200
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-200",
+      "p2o5": "70-90",
+      "k2o": "110-150"
+     }
+    }
+   ],
+   "note": "Ahmed: 'North China Plain (Shandong/Henan)'"
+  },
+  {
+   "country": "CN",
+   "crop": "chili",
+   "region": "Yangtze River Basin",
+   "rslug": "cn-yangtze",
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-250",
+      "p2o5": "70-100",
+      "k2o": "130-180"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Yangtze River Basin (Anhui/Hubei)'"
+  },
+  {
+   "country": "CN",
+   "crop": "spinach",
+   "region": "Northeast",
+   "rslug": "cn-northeast",
+   "ahmed_n": [
+    70,
+    90
+   ],
+   "ahmed_p": [
+    35,
+    50
+   ],
+   "ahmed_k": [
+    35,
+    50
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-110",
+      "p2o5": "40-55",
+      "k2o": "50-75"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Northeast (Jilin/Heilongjiang)'"
+  },
+  {
+   "country": "CN",
+   "crop": "carrot",
+   "region": "South China",
+   "rslug": "cn-south",
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    150,
+    210
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-130",
+      "p2o5": "50-75",
+      "k2o": "120-170"
+     }
+    }
+   ],
+   "note": "Ahmed: 'South China (Fujian/Guangdong)'. DB had uncalibrated 330 kg N; verified institutional cap 160 kg N."
+  },
+  {
+   "country": "CN",
+   "crop": "tomato",
+   "region": "Yangtze Basin",
+   "rslug": "cn-yangtze",
+   "ahmed_n": [
+    180,
+    230
+   ],
+   "ahmed_p": [
+    80,
+    120
+   ],
+   "ahmed_k": [
+    180,
+    260
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "170-280",
+      "p2o5": "75-110",
+      "k2o": "180-260"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Yangtze Basin (Anhui)'. DB had uncalibrated 648 kg N; standard open/tunnel crop limit 230 kg N."
+  },
+  {
+   "country": "MY",
+   "crop": "okra",
+   "region": "Sabah",
+   "rslug": "my-sabah",
+   "ahmed_n": [
+    100,
+    120
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    80,
+    100
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-100",
+      "p2o5": "50-65",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "MY",
+   "crop": "okra",
+   "region": "Peninsular",
+   "rslug": "my-peninsular",
+   "ahmed_n": [
+    80,
+    100
+   ],
+   "ahmed_p": [
+    50,
+    65
+   ],
+   "ahmed_k": [
+    60,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-100",
+      "p2o5": "50-65",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "ID",
+   "crop": "cabbage-chinese",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    50,
+    70
+   ],
+   "ahmed_k": [
+    60,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-120",
+      "p2o5": "50-70",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Chinese Cabbage (Sawi Putih)', Indonesia National"
+  },
+  {
+   "country": "ID",
+   "crop": "spinach",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    60,
+    80
+   ],
+   "ahmed_p": [
+    30,
+    45
+   ],
+   "ahmed_k": [
+    30,
+    45
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "60-80",
+      "p2o5": "30-45",
+      "k2o": "30-45"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Spinach (Bayam)', Indonesia National"
+  },
+  {
+   "country": "ID",
+   "crop": "brinjal",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    60,
+    90
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-120",
+      "p2o5": "60-80",
+      "k2o": "60-90"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Brinjal (Terung)', Indonesia National"
+  },
+  {
+   "country": "ID",
+   "crop": "carrot",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    50,
+    65
+   ],
+   "ahmed_p": [
+    45,
+    60
+   ],
+   "ahmed_k": [
+    60,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "50-65",
+      "p2o5": "45-60",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Carrot (Wortel)', Indonesia National"
+  },
+  {
+   "country": "ID",
+   "crop": "cauliflower",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    110,
+    140
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    60,
+    85
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-150",
+      "p2o5": "75-90",
+      "k2o": "75-100"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Cauliflower (Kembang Kol)', Indonesia National"
+  },
+  {
+   "country": "ID",
+   "crop": "cabbage",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    110,
+    140
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    60,
+    85
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-140",
+      "p2o5": "60-80",
+      "k2o": "60-85"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Cabbage (Kubis)', Indonesia National"
+  },
+  {
+   "country": "ID",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    130,
+    160
+   ],
+   "ahmed_p": [
+    90,
+    120
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "130-160",
+      "p2o5": "90-120",
+      "k2o": "120-160"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Potato (Kentang)', 'Java / National' -> treated as national (null)"
+  },
+  {
+   "country": "ID",
+   "crop": "shallot",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    50,
+    70
+   ],
+   "ahmed_k": [
+    60,
+    85
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-110",
+      "p2o5": "50-70",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Onion / Shallot (Bawang Merah)' -> mapped to shallot (Bawang Merah = shallot); AMBIGUOUS, flagged"
+  },
+  {
+   "country": "ID",
+   "crop": "tomato",
+   "region": "Kalimantan",
+   "rslug": "id-kalimantan",
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    80,
+    100
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-120",
+      "p2o5": "80-110",
+      "k2o": "80-100"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "AU",
+   "crop": "garlic",
+   "region": "New South Wales",
+   "rslug": "au-nsw",
+   "ahmed_n": [
+    110,
+    145
+   ],
+   "ahmed_p": [
+    60,
+    85
+   ],
+   "ahmed_k": [
+    100,
+    140
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "p2o5": 103.1
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "AU",
+   "crop": "carrot",
+   "region": "Western Australia",
+   "rslug": "au-wa",
+   "ahmed_n": [
+    110,
+    150
+   ],
+   "ahmed_p": [
+    60,
+    85
+   ],
+   "ahmed_k": [
+    150,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-150",
+      "p2o5": "60-85",
+      "k2o": "150-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "AU",
+   "crop": "onion",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    130,
+    170
+   ],
+   "ahmed_p": [
+    65,
+    90
+   ],
+   "ahmed_k": [
+    110,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "130-170",
+      "p2o5": "65-90",
+      "k2o": "110-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "spinach",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    80,
+    110
+   ],
+   "ahmed_p": [
+    40,
+    70
+   ],
+   "ahmed_k": [
+    60,
+    100
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-110",
+      "p2o5": "50-80",
+      "k2o": "50-80"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Southeast (SP/MG)'"
+  },
+  {
+   "country": "BR",
+   "crop": "tomato",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    180,
+    250
+   ],
+   "ahmed_p": [
+    150,
+    300
+   ],
+   "ahmed_k": [
+    180,
+    300
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-220",
+      "p2o5": "150-250",
+      "k2o": "160-240"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Tomato (Mesa / Industria)', Southeast (SP/MG). DB had uncalibrated 800 kg P2O5; standard 150-300."
+  },
+  {
+   "country": "BR",
+   "crop": "cabbage",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    100,
+    200
+   ],
+   "ahmed_k": [
+    100,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "130-170",
+      "p2o5": "100-150",
+      "k2o": "90-130"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "okra",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    80,
+    110
+   ],
+   "ahmed_p": [
+    60,
+    120
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-110",
+      "p2o5": "60-90",
+      "k2o": "60-90"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "chili",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    110,
+    150
+   ],
+   "ahmed_p": [
+    80,
+    160
+   ],
+   "ahmed_k": [
+    100,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "130-180",
+      "p2o5": "120-180",
+      "k2o": "120-180"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "cauliflower",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    120,
+    200
+   ],
+   "ahmed_k": [
+    120,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "150-200",
+      "p2o5": "120-180",
+      "k2o": "100-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "carrot",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    90,
+    130
+   ],
+   "ahmed_p": [
+    100,
+    180
+   ],
+   "ahmed_k": [
+    120,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-120",
+      "p2o5": "120-180",
+      "k2o": "110-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "onion",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    100,
+    130
+   ],
+   "ahmed_p": [
+    100,
+    180
+   ],
+   "ahmed_k": [
+    90,
+    140
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-140",
+      "p2o5": "100-160",
+      "k2o": "100-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "brinjal",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    100,
+    140
+   ],
+   "ahmed_p": [
+    80,
+    140
+   ],
+   "ahmed_k": [
+    90,
+    140
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-160",
+      "p2o5": "100-150",
+      "k2o": "100-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "potato",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    140,
+    190
+   ],
+   "ahmed_p": [
+    150,
+    250
+   ],
+   "ahmed_k": [
+    140,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-180",
+      "p2o5": "150-240",
+      "k2o": "140-220"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BR",
+   "crop": "garlic",
+   "region": "Southeast",
+   "rslug": "br-southeast",
+   "ahmed_n": [
+    80,
+    120
+   ],
+   "ahmed_p": [
+    80,
+    150
+   ],
+   "ahmed_k": [
+    60,
+    100
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-160",
+      "p2o5": "140-200",
+      "k2o": "120-170"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "tomato",
+   "region": "Southern Plains",
+   "rslug": "us-southern-plains",
+   "ahmed_n": [
+    135,
+    180
+   ],
+   "ahmed_p": [
+    90,
+    135
+   ],
+   "ahmed_k": [
+    90,
+    150
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "135-180",
+      "p2o5": "90-135",
+      "k2o": "135-200"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "brinjal",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    135,
+    180
+   ],
+   "ahmed_p": [
+    80,
+    120
+   ],
+   "ahmed_k": [
+    110,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "135-180",
+      "p2o5": "80-120",
+      "k2o": "110-180"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "chili",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    70,
+    110
+   ],
+   "ahmed_k": [
+    110,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-160",
+      "p2o5": "70-110",
+      "k2o": "110-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "peas",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    25,
+    45
+   ],
+   "ahmed_p": [
+    55,
+    80
+   ],
+   "ahmed_k": [
+    55,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "25-45",
+      "p2o5": "55-80",
+      "k2o": "55-80"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "cauliflower",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    160,
+    210
+   ],
+   "ahmed_p": [
+    90,
+    135
+   ],
+   "ahmed_k": [
+    130,
+    190
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-210",
+      "p2o5": "90-135",
+      "k2o": "130-190"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "cabbage",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    140,
+    190
+   ],
+   "ahmed_p": [
+    80,
+    120
+   ],
+   "ahmed_k": [
+    110,
+    170
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-190",
+      "p2o5": "80-120",
+      "k2o": "110-170"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "radish",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    45,
+    70
+   ],
+   "ahmed_p": [
+    40,
+    60
+   ],
+   "ahmed_k": [
+    45,
+    70
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "45-70",
+      "p2o5": "40-60",
+      "k2o": "45-70"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "carrot",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    90,
+    135
+   ],
+   "ahmed_p": [
+    60,
+    110
+   ],
+   "ahmed_k": [
+    130,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-135",
+      "p2o5": "60-110",
+      "k2o": "130-180"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "spinach",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    90,
+    135
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    90,
+    135
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-135",
+      "p2o5": "60-90",
+      "k2o": "90-135"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "okra",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    90,
+    110
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    90,
+    130
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-110",
+      "p2o5": "60-90",
+      "k2o": "90-130"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "potato",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    170,
+    225
+   ],
+   "ahmed_p": [
+    110,
+    170
+   ],
+   "ahmed_k": [
+    170,
+    250
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "170-225",
+      "p2o5": "110-170",
+      "k2o": "170-250"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "garlic",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    110,
+    150
+   ],
+   "ahmed_p": [
+    70,
+    100
+   ],
+   "ahmed_k": [
+    90,
+    135
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-150",
+      "p2o5": "70-100",
+      "k2o": "90-135"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "onion",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    110,
+    150
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    110,
+    150
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-150",
+      "p2o5": "80-110",
+      "k2o": "110-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "tomato",
+   "region": "Corn Belt",
+   "rslug": "us-corn-belt",
+   "ahmed_n": [
+    135,
+    190
+   ],
+   "ahmed_p": [
+    90,
+    135
+   ],
+   "ahmed_k": [
+    170,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "135-190",
+      "p2o5": "90-135",
+      "k2o": "170-240"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "cabbage-chinese",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    110,
+    150
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "135-170",
+      "p2o5": "70-90",
+      "k2o": "110-150"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "radish",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    50,
+    75
+   ],
+   "ahmed_p": [
+    45,
+    65
+   ],
+   "ahmed_k": [
+    45,
+    65
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "50-70",
+      "p2o5": "40-60",
+      "k2o": "50-75"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "cabbage",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    160,
+    210
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    110,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-210",
+      "p2o5": "80-110",
+      "k2o": "110-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "brinjal",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    170,
+    220
+   ],
+   "ahmed_p": [
+    90,
+    120
+   ],
+   "ahmed_k": [
+    130,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-180",
+      "p2o5": "80-110",
+      "k2o": "120-170"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "chili",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    170,
+    220
+   ],
+   "ahmed_p": [
+    90,
+    120
+   ],
+   "ahmed_k": [
+    130,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "160-220",
+      "p2o5": "80-120",
+      "k2o": "140-200"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "cauliflower",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    170,
+    220
+   ],
+   "ahmed_p": [
+    90,
+    120
+   ],
+   "ahmed_k": [
+    130,
+    180
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "170-225",
+      "p2o5": "90-135",
+      "k2o": "135-190"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "carrot",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    120,
+    160
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    140,
+    200
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-160",
+      "p2o5": "70-90",
+      "k2o": "140-200"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "spinach",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    90,
+    130
+   ],
+   "ahmed_p": [
+    60,
+    90
+   ],
+   "ahmed_k": [
+    80,
+    120
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-135",
+      "p2o5": "70-90",
+      "k2o": "90-130"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "okra",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    110,
+    140
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    90,
+    130
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "110-140",
+      "p2o5": "70-90",
+      "k2o": "90-120"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "potato",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    170,
+    225
+   ],
+   "ahmed_p": [
+    90,
+    150
+   ],
+   "ahmed_k": [
+    150,
+    220
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "170-225",
+      "p2o5": "110-170",
+      "k2o": "170-250"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "onion",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    140,
+    180
+   ],
+   "ahmed_p": [
+    80,
+    120
+   ],
+   "ahmed_k": [
+    110,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "140-180",
+      "p2o5": "90-135",
+      "k2o": "110-160"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "tomato",
+   "region": "Southeast",
+   "rslug": "us-southeast",
+   "ahmed_n": [
+    190,
+    240
+   ],
+   "ahmed_p": [
+    100,
+    140
+   ],
+   "ahmed_k": [
+    170,
+    240
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "170-240",
+      "p2o5": "90-135",
+      "k2o": "180-270"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "potato",
+   "region": "Pacific Northwest",
+   "rslug": "us-pnw",
+   "ahmed_n": [
+    220,
+    270
+   ],
+   "ahmed_p": [
+    120,
+    180
+   ],
+   "ahmed_k": [
+    220,
+    320
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "200-270",
+      "p2o5": "135-200",
+      "k2o": "200-290"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Pacific Northwest (ID/WA/OR)'"
+  },
+  {
+   "country": "BD",
+   "crop": "brinjal",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    140,
+    175
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-120",
+      "p2o5": "45-60",
+      "k2o": "50-65"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BD",
+   "crop": "okra",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    60,
+    80
+   ],
+   "ahmed_p": [
+    40,
+    55
+   ],
+   "ahmed_k": [
+    70,
+    100
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-100",
+      "p2o5": "40-50",
+      "k2o": "50-60"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BD",
+   "crop": "peas",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    15,
+    25
+   ],
+   "ahmed_p": [
+    35,
+    45
+   ],
+   "ahmed_k": [
+    25,
+    35
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "25-35",
+      "p2o5": "50-60",
+      "k2o": "35-45"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BD",
+   "crop": "onion",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    100,
+    130
+   ],
+   "ahmed_p": [
+    80,
+    110
+   ],
+   "ahmed_k": [
+    80,
+    110
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "80-100",
+      "p2o5": "50-65",
+      "k2o": "70-85"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BD",
+   "crop": "tomato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    90,
+    120
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    70,
+    100
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-125",
+      "p2o5": "55-75",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "BD",
+   "crop": "potato",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    120,
+    150
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    120,
+    160
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "135-165",
+      "p2o5": "65-85",
+      "k2o": "135-165"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IN",
+   "crop": "brinjal",
+   "region": null,
+   "rslug": null,
+   "ahmed_n": [
+    120,
+    150
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    60,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "120-150",
+      "p2o5": "60-75",
+      "k2o": "60-80"
+     }
+    }
+   ],
+   "note": "Ahmed: 'Brinjal | India National'"
+  },
+  {
+   "country": "IN",
+   "crop": "cauliflower",
+   "region": "Tamil Nadu",
+   "rslug": "in-tn",
+   "ahmed_n": [
+    100,
+    130
+   ],
+   "ahmed_p": [
+    80,
+    100
+   ],
+   "ahmed_k": [
+    50,
+    75
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "n": 135,
+     "p2o5": 135,
+     "k2o": 135
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IN",
+   "crop": "cabbage",
+   "region": "Tamil Nadu",
+   "rslug": "in-tn",
+   "ahmed_n": [
+    100,
+    130
+   ],
+   "ahmed_p": [
+    100,
+    125
+   ],
+   "ahmed_k": [
+    40,
+    60
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "n": 135,
+     "p2o5": 135,
+     "k2o": 135
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IN",
+   "crop": "onion",
+   "region": "Tamil Nadu",
+   "rslug": "in-tn",
+   "ahmed_n": [
+    80,
+    110
+   ],
+   "ahmed_p": [
+    100,
+    140
+   ],
+   "ahmed_k": [
+    60,
+    85
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "n": 150,
+     "p2o5": 60,
+     "k2o": 108
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IN",
+   "crop": "okra",
+   "region": "Tamil Nadu",
+   "rslug": "in-tn",
+   "ahmed_n": [
+    60,
+    80
+   ],
+   "ahmed_p": [
+    40,
+    60
+   ],
+   "ahmed_k": [
+    30,
+    45
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "100-130",
+      "p2o5": "50-60",
+      "k2o": "50-60"
+     }
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IN",
+   "crop": "chili",
+   "region": "Tamil Nadu",
+   "rslug": "in-tn",
+   "ahmed_n": [
+    100,
+    125
+   ],
+   "ahmed_p": [
+    60,
+    80
+   ],
+   "ahmed_k": [
+    60,
+    80
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "n": 60,
+     "p2o5": 60,
+     "k2o": 30
+    }
+   ],
+   "note": null
+  },
+  {
+   "country": "IN",
+   "crop": "chili",
+   "region": "Punjab",
+   "rslug": "in-punjab",
+   "ahmed_n": [
+    100,
+    135
+   ],
+   "ahmed_p": [
+    45,
+    60
+   ],
+   "ahmed_k": [
+    40,
+    60
+   ],
+   "existing_statuses": [
+    "verified"
+   ],
+   "existing_files": [
+    "vegdose"
+   ],
+   "existing_vals": [
+    {
+     "ranges": {
+      "n": "90-110",
+      "p2o5": "50-65",
+      "k2o": "50-65"
+     }
+    }
+   ],
+   "note": null
+  }
+ ],
+ "new_region": [
+  {
+   "country": "TR",
+   "crop": "maize",
+   "region": "Southeast Anatolia",
+   "rslug": null,
+   "n": [
+    180,
+    240
+   ],
+   "p": [
+    70,
+    90
+   ],
+   "k": [
+    50,
+    80
+   ],
+   "rflag": "region 'Southeast Anatolia' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "TR",
+   "crop": "barley",
+   "region": "Southeast Anatolia",
+   "rslug": null,
+   "n": [
+    70,
+    100
+   ],
+   "p": [
+    45,
+    65
+   ],
+   "k": [
+    0,
+    30
+   ],
+   "rflag": "region 'Southeast Anatolia' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "ES",
+   "crop": "olive",
+   "region": "Andalucía",
+   "rslug": null,
+   "n": [
+    60,
+    100
+   ],
+   "p": [
+    25,
+    40
+   ],
+   "k": [
+    80,
+    130
+   ],
+   "rflag": "region 'Andalucía' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "triticale",
+   "region": "Niedersachsen & Bayern",
+   "rslug": null,
+   "n": [
+    130,
+    180
+   ],
+   "p": [
+    55,
+    75
+   ],
+   "k": [
+    80,
+    120
+   ],
+   "rflag": "region 'Niedersachsen & Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "rye",
+   "region": "Niedersachsen & Bayern",
+   "rslug": null,
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    50,
+    75
+   ],
+   "k": [
+    90,
+    140
+   ],
+   "rflag": "region 'Niedersachsen & Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "sugar-beet",
+   "region": "Bayern",
+   "rslug": null,
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    70,
+    100
+   ],
+   "k": [
+    180,
+    280
+   ],
+   "rflag": "region 'Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "canola",
+   "region": "Niedersachsen & Bayern",
+   "rslug": null,
+   "n": [
+    160,
+    200
+   ],
+   "p": [
+    70,
+    100
+   ],
+   "k": [
+    120,
+    180
+   ],
+   "rflag": "region 'Niedersachsen & Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "maize",
+   "region": "Bayern",
+   "rslug": null,
+   "n": [
+    160,
+    200
+   ],
+   "p": [
+    70,
+    95
+   ],
+   "k": [
+    140,
+    200
+   ],
+   "rflag": "region 'Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "barley",
+   "region": "Niedersachsen & Bayern",
+   "rslug": null,
+   "n": [
+    130,
+    170
+   ],
+   "p": [
+    55,
+    75
+   ],
+   "k": [
+    80,
+    125
+   ],
+   "rflag": "region 'Niedersachsen & Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "DE",
+   "crop": "wheat",
+   "region": "Niedersachsen & Bayern",
+   "rslug": null,
+   "n": [
+    170,
+    220
+   ],
+   "p": [
+    65,
+    85
+   ],
+   "k": [
+    90,
+    135
+   ],
+   "rflag": "region 'Niedersachsen & Bayern' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "KR",
+   "crop": "wheat",
+   "region": "Chungcheong",
+   "rslug": null,
+   "n": [
+    90,
+    110
+   ],
+   "p": [
+    60,
+    80
+   ],
+   "k": [
+    40,
+    60
+   ],
+   "rflag": "region 'Chungcheong' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "KR",
+   "crop": "rice",
+   "region": "Gyeongsang",
+   "rslug": null,
+   "n": [
+    80,
+    100
+   ],
+   "p": [
+    40,
+    55
+   ],
+   "k": [
+    50,
+    70
+   ],
+   "rflag": "region 'Gyeongsang' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "JP",
+   "crop": "sweet-potato",
+   "region": "Kanto",
+   "rslug": null,
+   "n": [
+    30,
+    50
+   ],
+   "p": [
+    60,
+    90
+   ],
+   "k": [
+    90,
+    130
+   ],
+   "rflag": "region 'Kanto' has no existing slug -> NEW region needed",
+   "note": "Ahmed: 'Kanto (Ibaraki)'"
+  },
+  {
+   "country": "CN",
+   "crop": "potato",
+   "region": "Yangtze & Southwest",
+   "rslug": null,
+   "n": [
+    120,
+    160
+   ],
+   "p": [
+    60,
+    90
+   ],
+   "k": [
+    120,
+    180
+   ],
+   "rflag": "region 'Yangtze & Southwest' has no existing slug -> NEW region needed",
+   "note": "Ahmed: 'Yangtze & Southwest (Chongqing/Yunnan)'"
+  },
+  {
+   "country": "US",
+   "crop": "sorghum",
+   "region": "Georgia",
+   "rslug": null,
+   "n": [
+    80,
+    120
+   ],
+   "p": [
+    40,
+    60
+   ],
+   "k": [
+    60,
+    90
+   ],
+   "rflag": "region 'Georgia' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "cotton",
+   "region": "Texas",
+   "rslug": null,
+   "n": [
+    80,
+    135
+   ],
+   "p": [
+    45,
+    70
+   ],
+   "k": [
+    45,
+    90
+   ],
+   "rflag": "region 'Texas' has no existing slug -> NEW region needed",
+   "note": null
+  },
+  {
+   "country": "US",
+   "crop": "wheat",
+   "region": "Great Plains",
+   "rslug": null,
+   "n": [
+    90,
+    135
+   ],
+   "p": [
+    40,
+    65
+   ],
+   "k": [
+    35,
+    55
+   ],
+   "rflag": "region 'Great Plains' has no existing slug -> NEW region needed",
+   "note": "Ahmed: 'Great Plains (KS/NE)'"
+  },
+  {
+   "country": "PK",
+   "crop": "grape",
+   "region": "KPK",
+   "rslug": null,
+   "n": [
+    90,
+    130
+   ],
+   "p": [
+    50,
+    75
+   ],
+   "k": [
+    110,
+    160
+   ],
+   "rflag": "region 'KPK' has no existing slug -> NEW region needed",
+   "note": "Ahmed: 'KPK (Peshawar / Swat)'"
+  }
+ ]
+}

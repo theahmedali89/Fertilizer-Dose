@@ -40,6 +40,7 @@ import { seedTr15 } from "./seed-tr15";
 import { seedNg18 } from "./seed-ng18";
 import { seedVegplant } from "./seed-vegplant";
 import { seedVegdose } from "./seed-vegdose";
+import { seedImport20261015 } from "./seed-import-2026-10-15";
 import { seedTranslations } from "./seed-translations";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
@@ -411,6 +412,9 @@ async function main() {
 
   // ── Nigeria 17-crop NPK dose recommendations (19 records, new country) — idempotent, user-supplied 2026-10-13 ──
   await seedNg18(db);
+
+  // ── Import 2026-10-15: Ahmed's institutional NPK research (168 records: 77 inserts + 91 updates) — idempotent ──
+  await seedImport20261015(db);
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
