@@ -9,6 +9,8 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const fertilizers = await getFertilizers();
   return fertilizers.map((f) => ({ slug: f.slug }));

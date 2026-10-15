@@ -15,6 +15,8 @@ import {
   type CountryCropRecommendation,
 } from "@/server/country-crop";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const combos = await getCountryCropCombos();
   return combos.map((c) => ({ country: c.countrySlug, crop: c.cropSlug }));

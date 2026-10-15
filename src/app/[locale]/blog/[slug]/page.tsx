@@ -9,6 +9,8 @@ import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const posts = await getPosts();
   return posts.map((p) => ({ slug: p.slug }));

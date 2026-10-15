@@ -3,6 +3,8 @@ import { Section } from "@/components/ui/Section";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { localizedMetadata } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

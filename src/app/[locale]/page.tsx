@@ -53,6 +53,8 @@ const TOOL_ICONS: Record<string, React.ReactNode> = {
 
 const TOOL_HREFS = ["/calculator", "/plant-doctor", "/fertilizers", "/crops", "/profit-calculator", "/compare"];
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

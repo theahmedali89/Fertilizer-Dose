@@ -4,6 +4,8 @@ import { Section } from "@/components/ui/Section";
 import { FertilizerLibrary } from "@/components/fertilizers/FertilizerLibrary";
 import { getFertilizers } from "@/server/data";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

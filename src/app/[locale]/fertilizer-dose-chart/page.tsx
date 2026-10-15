@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { CROPS } from "@/lib/agronomy";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

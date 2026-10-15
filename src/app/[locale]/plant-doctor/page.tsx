@@ -2,6 +2,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { localizedMetadata } from "@/lib/seo";
 import { DiagnosisForm } from "@/components/plant-doctor/DiagnosisForm";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

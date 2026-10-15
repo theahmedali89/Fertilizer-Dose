@@ -14,6 +14,8 @@ import {
   type RegionInfo,
 } from "@/server/country";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: {

@@ -6,6 +6,8 @@ import { localizedMetadata } from "@/lib/seo";
 import { getCrops } from "@/server/data";
 import { RelatedTools } from "@/components/tools/RelatedTools";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

@@ -6,6 +6,8 @@ import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { getFertilizers } from "@/server/data";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: {

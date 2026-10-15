@@ -23,6 +23,8 @@ import {
   type SunlightPref,
 } from "@/server/kitchenGarden";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

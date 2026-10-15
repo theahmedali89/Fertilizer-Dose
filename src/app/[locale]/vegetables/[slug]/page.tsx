@@ -5,6 +5,8 @@ import { GrowingDetail } from "@/components/growing/GrowingDetail";
 import { getGrowingItem, getGrowingByCategory } from "@/server/data";
 import { getTranslatedItemNames } from "@/server/i18n-names";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const items = await getGrowingByCategory("vegetable");
   return items.map((i) => ({ slug: i.slug }));

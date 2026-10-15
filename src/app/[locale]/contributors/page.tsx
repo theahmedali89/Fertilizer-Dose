@@ -6,6 +6,8 @@ import { db, isDbConfigured } from "@/lib/db";
 import { levelForCount, LEVEL_META, type ContributorLevel } from "@/lib/contributors";
 import { MyBadge } from "./MyBadge";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

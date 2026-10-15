@@ -2,6 +2,8 @@ import { setRequestLocale } from "next-intl/server";
 import { localizedMetadata } from "@/lib/seo";
 import { DeficiencyChecker } from "@/components/deficiency-checker/DeficiencyChecker";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

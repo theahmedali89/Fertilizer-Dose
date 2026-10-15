@@ -2,6 +2,8 @@ import { setRequestLocale } from "next-intl/server";
 import { localizedMetadata } from "@/lib/seo";
 import { AlternativeFinder } from "@/components/alternative-finder/AlternativeFinder";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

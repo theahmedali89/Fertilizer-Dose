@@ -11,6 +11,8 @@ import { siteConfig } from "@/config/site";
 
 const COUNTRIES = ["pakistan", "india"] as const;
 
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return COUNTRIES.map((country) => ({ country }));
 }

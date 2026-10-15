@@ -4,6 +4,8 @@ import { Accordion } from "@/components/ui/Accordion";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

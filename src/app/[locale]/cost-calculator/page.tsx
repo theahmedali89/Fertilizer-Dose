@@ -2,6 +2,8 @@ import { setRequestLocale } from "next-intl/server";
 import { localizedMetadata } from "@/lib/seo";
 import { CostCalculator } from "@/components/cost-calculator/CostCalculator";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

@@ -4,6 +4,8 @@ import { ProfitCalculator } from "@/components/tools/ProfitCalculator";
 import { localizedMetadata } from "@/lib/seo";
 import { RelatedTools } from "@/components/tools/RelatedTools";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

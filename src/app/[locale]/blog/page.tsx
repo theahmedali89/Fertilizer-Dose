@@ -6,6 +6,8 @@ import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { getPosts } from "@/server/data";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {
