@@ -444,7 +444,7 @@
     "home": "Start",
     "mobileNav": "Nawigacja mobilna",
     "openMenu": "Otwórz menu",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Doktor roślin",
     "plants": "Rośliny",
     "vegetables": "Warzywa",
     "grow": "Uprawa",
@@ -457,7 +457,8 @@
     "login": "Zaloguj się",
     "account": "Konto",
     "admin": "Admin",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "deficiencyChecker": "Wykrywacz niedoborów"
   },
   "plantDoctor": {
     "desc": "Prześlij wyraźne zdjęcie, opisz objawy i otrzymaj uporządkowaną ocenę — możliwe problemy z uczciwym poziomem pewności, prawdopodobne przyczyny i co dalej.",
@@ -513,7 +514,15 @@
     "filterMonth": "Miesiąc siewu",
     "anyMonth": "Dowolny miesiąc",
     "allCountries": "Wszystkie kraje",
-    "allRegions": "Wszystkie regiony"
+    "allRegions": "Wszystkie regiony",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (zima)",
+      "Kharif (summer)": "Kharif (lato)",
+      "Kharif (also spring in irrigated areas)": "Kharif (także wiosną na terenach nawadnianych)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Cały rok (uprawa 12–14-miesięczna)"
+    }
   },
   "calendar": {
     "metaTitle": "Kalendarz siewu — co siać w tym miesiącu",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — nauka o nawożeniu i przewodniki żywienia roślin",
-    "metaDescription": "Praktyczne przewodniki o dawkach nawozów, obliczeniach NPK, żywieniu roślin i zdrowiu gleby dla rolników z Pakistanu i Indii."
+    "metaDescription": "Praktyczne przewodniki o dawkach nawozów, obliczeniach NPK, żywieniu roślin i zdrowiu gleby dla rolników z Pakistanu i Indii.",
+    "title": "Zrozum, dlaczego dawka ma znaczenie.",
+    "previous": "Poprzednia",
+    "next": "Następna",
+    "pageOf": "Strona {page} z {totalPages}",
+    "minRead": "min czytania",
+    "share": "Udostępnij:",
+    "relatedArticles": "Powiązane artykuły"
   },
   "fertilizers": {
     "metaTitle": "Biblioteka nawozów — skład NPK, zastosowanie i dawkowanie",

@@ -457,7 +457,8 @@
     "login": "Se connecter",
     "account": "Compte",
     "admin": "Admin",
-    "logout": "Se déconnecter"
+    "logout": "Se déconnecter",
+    "deficiencyChecker": "Détecteur de carences"
   },
   "plantDoctor": {
     "desc": "Téléversez une photo nette, décrivez les symptômes et obtenez une évaluation structurée — problèmes possibles avec niveaux de confiance honnêtes, causes probables et prochaines étapes.",
@@ -513,7 +514,15 @@
     "filterMonth": "Mois de semis",
     "anyMonth": "N’importe quel mois",
     "allCountries": "Tous les pays",
-    "allRegions": "Toutes les régions"
+    "allRegions": "Toutes les régions",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (hiver)",
+      "Kharif (summer)": "Kharif (été)",
+      "Kharif (also spring in irrigated areas)": "Kharif (aussi au printemps dans les zones irriguées)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Toute l'année (culture de 12 à 14 mois)"
+    }
   },
   "calendar": {
     "metaTitle": "Calendrier de semis — Que semer ce mois-ci",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Science des engrais et guides de nutrition des cultures",
-    "metaDescription": "Guides pratiques sur les doses d’engrais, les calculs NPK, la nutrition des cultures et la santé des sols pour les agriculteurs pakistanais et indiens."
+    "metaDescription": "Guides pratiques sur les doses d’engrais, les calculs NPK, la nutrition des cultures et la santé des sols pour les agriculteurs pakistanais et indiens.",
+    "title": "Comprenez le pourquoi de la dose.",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {page} sur {totalPages}",
+    "minRead": "min de lecture",
+    "share": "Partager :",
+    "relatedArticles": "Articles similaires"
   },
   "fertilizers": {
     "metaTitle": "Bibliothèque d’engrais — Composition NPK, usages et conseils de dosage",

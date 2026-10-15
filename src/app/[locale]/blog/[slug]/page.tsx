@@ -43,6 +43,7 @@ export default async function BlogPostPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "blog" });
   const post = await getPost(slug);
   if (!post) notFound();
   const related = (await getPosts()).filter((p) => p.slug !== post.slug).slice(0, 2);
@@ -74,7 +75,7 @@ export default async function BlogPostPage({
           </nav>
           <div className="flex items-center gap-2 text-xs mb-4">
             <Badge variant="neutral">{post.category}</Badge>
-            <span className="text-ink-faint">{post.date} · {post.readMinutes} min read</span>
+            <span className="text-ink-faint">{post.date} · {post.readMinutes} {t("minRead")}</span>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-semibold text-balance leading-tight">
             {post.title}
@@ -123,7 +124,7 @@ export default async function BlogPostPage({
               })()}
             </div>
             <div className="mt-8 pt-6 border-t border-line flex flex-wrap items-center gap-3">
-              <span className="text-sm font-semibold">Share:</span>
+              <span className="text-sm font-semibold">{t("share")}</span>
               {[
                 ["WhatsApp", `https://wa.me/?text=${encodeURIComponent(post.title)}`],
                 ["Facebook", `https://www.facebook.com/sharer/sharer.php?u=`],
@@ -139,7 +140,7 @@ export default async function BlogPostPage({
 
           {related.length > 0 && (
             <div className="mt-10">
-              <h2 className="font-display text-2xl font-semibold mb-4">Related articles</h2>
+              <h2 className="font-display text-2xl font-semibold mb-4">{t("relatedArticles")}</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {related.map((r) => (
                   <Link key={r.slug} href={`/blog/${r.slug}`} className="group">

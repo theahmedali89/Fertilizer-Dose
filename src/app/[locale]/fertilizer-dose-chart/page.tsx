@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { CROPS } from "@/lib/agronomy";
+import { resolveNpk, hasAnyNpk } from "@/lib/npk-display";
 
 export const revalidate = 3600;
 
@@ -74,22 +75,38 @@ export default async function DoseChartPage({
                       </Link>
                       <span className="block text-xs text-ink-faint">{c.region}</span>
                     </td>
-                    {c.npk ? (
+                    {(() => {
+                      const r = resolveNpk(c);
+                      // Per-acre conversion honors ranges: convert each bound.
+                      const conv = (rng: [number, number] | null | undefined, single: number | null | undefined): string | null => {
+                        const src = rng ?? (single != null ? [single, single] as [number, number] : null);
+                        if (!src) return null;
+                        const [lo, hi] = src;
+                        if ((lo === 0 || lo == null) && (hi === 0 || hi == null)) return null;
+                        const a = Math.round((lo ?? 0) * PER_ACRE);
+                        const b = Math.round((hi ?? 0) * PER_ACRE);
+                        return a === b ? String(a) : `${a}–${b}`;
+                      };
+                      const paN = conv(c.npkRange?.n, c.npk?.n);
+                      const paP = conv(c.npkRange?.p, c.npk?.p);
+                      const paK = conv(c.npkRange?.k, c.npk?.k);
+                      return hasAnyNpk(r) ? (
                       <>
-                        <td className="px-5 py-3.5 text-right font-mono">{c.npk.n}</td>
-                        <td className="px-5 py-3.5 text-right font-mono">{c.npk.p}</td>
-                        <td className="px-5 py-3.5 text-right font-mono">{c.npk.k}</td>
+                        <td className="px-5 py-3.5 text-right font-mono">{r.n ?? "–"}</td>
+                        <td className="px-5 py-3.5 text-right font-mono">{r.p ?? "–"}</td>
+                        <td className="px-5 py-3.5 text-right font-mono">{r.k ?? "–"}</td>
                         <td className="px-5 py-3.5 text-right font-mono text-ink-soft">
-                          {Math.round(c.npk.n * PER_ACRE)}–{Math.round(c.npk.p * PER_ACRE)}–{Math.round(c.npk.k * PER_ACRE)}
+                          {paN ?? "–"}–{paP ?? "–"}–{paK ?? "–"}
                         </td>
                         <td className="px-5 py-3.5"><Badge variant="verified">Verified</Badge></td>
                       </>
-                    ) : (
+                      ) : (
                       <>
                         <td colSpan={4} className="px-5 py-3.5 text-ink-faint">—</td>
                         <td className="px-5 py-3.5"><Badge variant="review">In review</Badge></td>
                       </>
-                    )}
+                      );
+                    })()}
                   </tr>
                 ))}
               </tbody>

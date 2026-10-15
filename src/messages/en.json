@@ -790,7 +790,15 @@
     "organicOptions": "Organic fertilizer options",
     "organicOptionsBody": "Well-rotted farmyard manure, compost or vermicompost can be used as a basal soil conditioner for {name} — they build soil structure and release nutrients slowly over the season. Because organic nutrient content varies by source, top up the precise nutrient need with mineral fertilizer calculated for your crop and region.",
     "organicOptionsNote": "No crop-specific verified organic dose exists for this crop — the guidance above is general practice, not a measured recommendation. Get your material lab-tested for precision planning.",
-    "organicOptionsCta": "Explore organic fertilizers"
+    "organicOptionsCta": "Explore organic fertilizers",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (winter)",
+      "Kharif (summer)": "Kharif (summer)",
+      "Kharif (also spring in irrigated areas)": "Kharif (also spring in irrigated areas)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Year-round (12–14 month crop)"
+    }
   },
   "calendar": {
     "metaTitle": "Planting Calendar — What to Grow This Month",
@@ -1018,7 +1026,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Fertilizer Science & Crop Nutrition Guides",
-    "metaDescription": "Practical guides on fertilizer doses, NPK calculations, crop nutrition and soil health for Pakistani and Indian farmers."
+    "metaDescription": "Practical guides on fertilizer doses, NPK calculations, crop nutrition and soil health for Pakistani and Indian farmers.",
+    "title": "Learn the why behind the dose.",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {totalPages}",
+    "minRead": "min read",
+    "share": "Share:",
+    "relatedArticles": "Related articles"
   },
   "fertilizers": {
     "metaTitle": "Fertilizer Library — NPK Composition, Uses & Dose Guidance",

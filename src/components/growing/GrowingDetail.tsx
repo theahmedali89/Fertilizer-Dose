@@ -8,6 +8,7 @@ import {
   PLANT_SUBCATEGORIES,
   type GrowingItem,
 } from "@/lib/growing";
+import { resolveNpk, hasAnyNpk, translateSeason } from "@/lib/npk-display";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 import { SuggestButton } from "@/components/suggestions/SuggestButton";
@@ -41,7 +42,9 @@ export async function GrowingDetail({
   const t = await getTranslations("growing");
   const meta = CATEGORY_META[item.category];
   const s = t.raw("sections") as Record<string, string>;
-  const hasNpk = !!item.npk;
+  const seasonLabels = t.raw("seasonLabels") as Record<string, string> | undefined;
+  const npk = resolveNpk(item);
+  const hasNpk = hasAnyNpk(npk);
   // Bilingual heading: translated name primary on non-English locales,
   // English kept as faint secondary; Urdu shown only when it adds something.
   // English locale stays English-only (no Urdu secondary).
@@ -113,7 +116,7 @@ export async function GrowingDetail({
           )}
           {(item.season || item.region) && (
             <p className="mt-3 text-lg text-ink-soft">
-              {[item.season, item.region].filter(Boolean).join(" · ")}
+              {[translateSeason(seasonLabels, item.season), item.region].filter(Boolean).join(" · ")}
             </p>
           )}
         </div>
@@ -126,20 +129,20 @@ export async function GrowingDetail({
             <Card>
               <CardBody>
                 <h2 className="font-display text-xl font-semibold mb-4">{s.fertilizer}</h2>
-                {hasNpk && item.npk ? (
+                {hasNpk ? (
                   <>
                     <div className="inline-flex items-center gap-6 rounded-2xl border border-line bg-surface-2 px-6 py-4 font-mono">
                       <span>
                         <span className="text-ink-faint text-sm font-sans">N </span>
-                        <b className="text-xl">{item.npkRange ? `${item.npkRange.n[0]}–${item.npkRange.n[1]}` : item.npk.n}</b>
+                        <b className="text-xl">{npk.n ?? "–"}</b>
                       </span>
                       <span>
                         <span className="text-ink-faint text-sm font-sans">P₂O₅ </span>
-                        <b className="text-xl">{item.npkRange ? `${item.npkRange.p[0]}–${item.npkRange.p[1]}` : item.npk.p}</b>
+                        <b className="text-xl">{npk.p ?? "–"}</b>
                       </span>
                       <span>
                         <span className="text-ink-faint text-sm font-sans">K₂O </span>
-                        <b className="text-xl">{item.npkRange ? `${item.npkRange.k[0]}–${item.npkRange.k[1]}` : item.npk.k}</b>
+                        <b className="text-xl">{npk.k ?? "–"}</b>
                       </span>
                       <span className="text-sm font-sans text-ink-faint">kg/ha</span>
                     </div>

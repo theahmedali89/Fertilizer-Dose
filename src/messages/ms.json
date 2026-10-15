@@ -444,7 +444,7 @@
     "home": "Laman",
     "mobileNav": "Navigasi mudah alih",
     "openMenu": "Buka menu",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Doktor Pokok",
     "plants": "Pokok",
     "vegetables": "Sayur",
     "grow": "Penanaman",
@@ -457,7 +457,8 @@
     "login": "Log masuk",
     "account": "Akaun",
     "admin": "Admin",
-    "logout": "Log keluar"
+    "logout": "Log keluar",
+    "deficiencyChecker": "Pemeriksa Kekurangan Nutrien"
   },
   "plantDoctor": {
     "desc": "Muat naik foto yang jelas, jelaskan gejalanya, dan dapatkan penilaian berstruktur — kemungkinan masalah dengan tahap keyakinan yang jujur, jangkaan punca, dan langkah seterusnya.",
@@ -513,7 +514,15 @@
     "filterMonth": "Bulan penanaman",
     "anyMonth": "Mana-mana bulan",
     "allCountries": "Semua negara",
-    "allRegions": "Semua wilayah"
+    "allRegions": "Semua wilayah",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (musim sejuk)",
+      "Kharif (summer)": "Kharif (musim panas)",
+      "Kharif (also spring in irrigated areas)": "Kharif (juga pada musim bunga di kawasan pengairan)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Sepanjang tahun (tanaman 12–14 bulan)"
+    }
   },
   "calendar": {
     "metaTitle": "Kalendar Menanam — Apa yang Ditanam Bulan Ini",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Sains Baja & Panduan Pemakanan Tanaman",
-    "metaDescription": "Panduan praktikal tentang dos baja, pengiraan NPK, pemakanan tanaman dan kesihatan tanah untuk petani Pakistan dan India."
+    "metaDescription": "Panduan praktikal tentang dos baja, pengiraan NPK, pemakanan tanaman dan kesihatan tanah untuk petani Pakistan dan India.",
+    "title": "Fahami sebab di sebalik dos.",
+    "previous": "Sebelumnya",
+    "next": "Seterusnya",
+    "pageOf": "Halaman {page} daripada {totalPages}",
+    "minRead": "min bacaan",
+    "share": "Kongsi:",
+    "relatedArticles": "Artikel berkaitan"
   },
   "fertilizers": {
     "metaTitle": "Pustaka Baja — Komposisi NPK, Kegunaan & Panduan Dos",

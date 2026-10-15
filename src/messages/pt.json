@@ -444,7 +444,7 @@
     "home": "Início",
     "mobileNav": "Navegação móvel",
     "openMenu": "Abrir menu",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Doutor das plantas",
     "plants": "Plantas",
     "vegetables": "Hortaliças",
     "grow": "Cultivar",
@@ -457,7 +457,8 @@
     "login": "Entrar",
     "account": "Conta",
     "admin": "Admin",
-    "logout": "Sair"
+    "logout": "Sair",
+    "deficiencyChecker": "Detector de deficiências"
   },
   "plantDoctor": {
     "desc": "Envie uma foto nítida, descreva os sintomas e receba uma avaliação estruturada — possíveis problemas com níveis honestos de confiança, causas prováveis e o que fazer a seguir.",
@@ -513,7 +514,15 @@
     "filterMonth": "Mês de plantio",
     "anyMonth": "Qualquer mês",
     "allCountries": "Todos os países",
-    "allRegions": "Todas as regiões"
+    "allRegions": "Todas as regiões",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (inverno)",
+      "Kharif (summer)": "Kharif (verão)",
+      "Kharif (also spring in irrigated areas)": "Kharif (também na primavera em áreas irrigadas)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "O ano todo (cultura de 12–14 meses)"
+    }
   },
   "calendar": {
     "metaTitle": "Calendário de Plantio — O que Plantar Este Mês",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Ciência de Fertilizantes e Guias de Nutrição de Culturas",
-    "metaDescription": "Guias práticos sobre doses de fertilizantes, cálculos de NPK, nutrição de culturas e saúde do solo para agricultores do Paquistão e da Índia."
+    "metaDescription": "Guias práticos sobre doses de fertilizantes, cálculos de NPK, nutrição de culturas e saúde do solo para agricultores do Paquistão e da Índia.",
+    "title": "Entenda o porquê da dose.",
+    "previous": "Anterior",
+    "next": "Seguinte",
+    "pageOf": "Página {page} de {totalPages}",
+    "minRead": "min de leitura",
+    "share": "Partilhar:",
+    "relatedArticles": "Artigos relacionados"
   },
   "fertilizers": {
     "metaTitle": "Biblioteca de Fertilizantes — Composição NPK, Usos e Orientações de Dose",

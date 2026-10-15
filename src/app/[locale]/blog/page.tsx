@@ -34,6 +34,7 @@ export default async function BlogPage({
   const { locale } = await params;
   const sp = await searchParams;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "blog" });
   const posts = await getPosts();
 
   const POSTS_PER_PAGE = 12;
@@ -51,7 +52,7 @@ export default async function BlogPage({
             Blog
           </p>
           <h1 className="font-display text-4xl sm:text-5xl font-semibold text-balance max-w-3xl">
-            Learn the why behind the dose.
+            {t("title")}
           </h1>
         </div>
       </section>
@@ -73,7 +74,7 @@ export default async function BlogPage({
                 <CardBody>
                   <div className="flex items-center gap-2 text-xs">
                     <Badge variant="neutral">{post.category}</Badge>
-                    <span className="text-ink-faint">{post.readMinutes} min read · {post.date}</span>
+                    <span className="text-ink-faint">{post.readMinutes} {t("minRead")} · {post.date}</span>
                   </div>
                   <h2 className="mt-3 font-display text-lg font-semibold leading-snug group-hover:text-leaf-700 dark:group-hover:text-leaf-300 transition-colors">
                     {post.title}
@@ -91,26 +92,26 @@ export default async function BlogPage({
                 href={{ pathname: "/blog", query: { page: page - 1 } }}
                 className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-soft hover:border-leaf-600 hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors"
               >
-                ← Previous
+                ← {t("previous")}
               </Link>
             ) : (
               <span className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-faint opacity-50">
-                ← Previous
+                ← {t("previous")}
               </span>
             )}
             <span className="text-sm text-ink-faint">
-              Page {page} of {totalPages}
+              {t("pageOf", { page, totalPages })}
             </span>
             {page < totalPages ? (
               <Link
                 href={{ pathname: "/blog", query: { page: page + 1 } }}
                 className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-soft hover:border-leaf-600 hover:text-leaf-700 dark:hover:text-leaf-300 transition-colors"
               >
-                Next →
+                {t("next")} →
               </Link>
             ) : (
               <span className="rounded-xl border border-line px-4 py-2 text-sm font-semibold text-ink-faint opacity-50">
-                Next →
+                {t("next")} →
               </span>
             )}
           </nav>

@@ -8,6 +8,7 @@ import {
   type GrowingCategory,
 } from "@/lib/growing";
 import { getGrowingByCategory } from "@/server/data";
+import { getTranslatedItemNames } from "@/server/i18n-names";
 import {
   getCountries,
   getAllRegions,
@@ -37,6 +38,14 @@ export async function GrowingIndexPage({
     getAllRegions(),
     getWindowFilterIndex(),
   ]);
+  const namesMap = await getTranslatedItemNames(
+    items.map((i) => i.slug),
+    locale
+  );
+  const names: Record<string, string> = {};
+  namesMap.forEach((v, k) => {
+    names[k] = v;
+  });
 
   return (
     <>
@@ -83,6 +92,7 @@ export async function GrowingIndexPage({
           countries={countries}
           regions={regions}
           windowIndex={windowIndex}
+          names={names}
         />
       </Section>
     </>

@@ -457,7 +457,8 @@
     "login": "Accedi",
     "account": "Account",
     "admin": "Admin",
-    "logout": "Esci"
+    "logout": "Esci",
+    "deficiencyChecker": "Rilevatore di carenze"
   },
   "plantDoctor": {
     "desc": "Carica una foto chiara, descrivi i sintomi e ricevi una valutazione strutturata — possibili problemi con livelli di confidenza onesti, cause probabili e cosa fare.",
@@ -513,7 +514,15 @@
     "filterMonth": "Mese di semina",
     "anyMonth": "Qualsiasi mese",
     "allCountries": "Tutti i paesi",
-    "allRegions": "Tutte le regioni"
+    "allRegions": "Tutte le regioni",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (inverno)",
+      "Kharif (summer)": "Kharif (estate)",
+      "Kharif (also spring in irrigated areas)": "Kharif (anche in primavera nelle zone irrigue)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Tutto l'anno (coltura di 12–14 mesi)"
+    }
   },
   "calendar": {
     "metaTitle": "Calendario di semina — Cosa coltivare questo mese",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Guide di scienza dei fertilizzanti e nutrizione delle colture",
-    "metaDescription": "Guide pratiche su dosi di fertilizzante, calcoli NPK, nutrizione delle colture e salute del suolo per gli agricoltori pakistani e indiani."
+    "metaDescription": "Guide pratiche su dosi di fertilizzante, calcoli NPK, nutrizione delle colture e salute del suolo per gli agricoltori pakistani e indiani.",
+    "title": "Capisci il perché della dose.",
+    "previous": "Precedente",
+    "next": "Successivo",
+    "pageOf": "Pagina {page} di {totalPages}",
+    "minRead": "min di lettura",
+    "share": "Condividi:",
+    "relatedArticles": "Articoli correlati"
   },
   "fertilizers": {
     "metaTitle": "Biblioteca dei fertilizzanti — Composizione NPK, usi e guide alle dosi",

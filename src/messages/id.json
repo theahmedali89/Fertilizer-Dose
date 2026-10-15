@@ -444,7 +444,7 @@
     "home": "Beranda",
     "mobileNav": "Navigasi seluler",
     "openMenu": "Buka menu",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Dokter Tanaman",
     "plants": "Tanaman Hias",
     "vegetables": "Sayuran",
     "grow": "Budidaya",
@@ -457,7 +457,8 @@
     "login": "Masuk",
     "account": "Akun",
     "admin": "Admin",
-    "logout": "Keluar"
+    "logout": "Keluar",
+    "deficiencyChecker": "Pemeriksa Defisiensi"
   },
   "plantDoctor": {
     "desc": "Unggah foto yang jelas, jelaskan gejalanya, dan dapatkan penilaian terstruktur — kemungkinan masalah dengan tingkat kepercayaan yang jujur, dugaan penyebab, dan langkah selanjutnya.",
@@ -513,7 +514,15 @@
     "filterMonth": "Bulan tanam",
     "anyMonth": "Bulan apa pun",
     "allCountries": "Semua negara",
-    "allRegions": "Semua wilayah"
+    "allRegions": "Semua wilayah",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (musim dingin)",
+      "Kharif (summer)": "Kharif (musim panas)",
+      "Kharif (also spring in irrigated areas)": "Kharif (juga pada musim semi di daerah irigasi)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Sepanjang tahun (tanaman 12–14 bulan)"
+    }
   },
   "calendar": {
     "metaTitle": "Kalender Tanam — Apa yang Ditanam Bulan Ini",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Sains Pupuk & Panduan Nutrisi Tanaman",
-    "metaDescription": "Panduan praktis tentang dosis pupuk, perhitungan NPK, nutrisi tanaman, dan kesehatan tanah untuk petani Pakistan dan India."
+    "metaDescription": "Panduan praktis tentang dosis pupuk, perhitungan NPK, nutrisi tanaman, dan kesehatan tanah untuk petani Pakistan dan India.",
+    "title": "Pahami alasan di balik dosis.",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya",
+    "pageOf": "Halaman {page} dari {totalPages}",
+    "minRead": "mnt baca",
+    "share": "Bagikan:",
+    "relatedArticles": "Artikel terkait"
   },
   "fertilizers": {
     "metaTitle": "Pustaka Pupuk — Komposisi NPK, Kegunaan & Panduan Dosis",

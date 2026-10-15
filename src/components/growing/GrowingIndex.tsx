@@ -24,15 +24,19 @@ export function GrowingIndex({
   countries,
   regions,
   windowIndex,
+  names,
 }: {
   category: GrowingItem["category"];
   items: GrowingItem[];
   countries: CountryInfo[];
   regions: RegionInfo[];
   windowIndex: WindowFilterRow[];
+  /** slug → translated name for the active locale (empty → English). */
+  names?: Record<string, string>;
 }) {
   const t = useTranslations("growing");
   const locale = useLocale();
+  const seasonLabels = t.raw("seasonLabels") as Record<string, string> | undefined;
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<"all" | "verified" | "under_review">("all");
   const [subcat, setSubcat] = useState<PlantSubcategory | "all">("all");
@@ -235,6 +239,9 @@ export function GrowingIndex({
               verifiedLabel={t("verifiedBadge")}
               inReviewLabel={t("inReviewBadge")}
               locale={locale}
+              localName={names?.[item.slug] ?? null}
+              noDataLabel={t("noData")}
+              seasonLabels={seasonLabels}
             />
           ))}
         </div>

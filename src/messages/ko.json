@@ -444,7 +444,7 @@
     "home": "홈",
     "mobileNav": "모바일 내비게이션",
     "openMenu": "메뉴 열기",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "식물 닥터",
     "plants": "식물",
     "vegetables": "채소",
     "grow": "재배",
@@ -457,7 +457,8 @@
     "login": "로그인",
     "account": "계정",
     "admin": "관리",
-    "logout": "로그아웃"
+    "logout": "로그아웃",
+    "deficiencyChecker": "영양 결핍 체커"
   },
   "plantDoctor": {
     "desc": "선명한 사진을 올리고 증상을 설명해주세요. 솔직한 신뢰도와 함께 가능한 문제, 원인 후보, 다음 조치까지 구조적으로 진단해 드립니다.",
@@ -513,7 +514,15 @@
     "filterMonth": "파종 월",
     "anyMonth": "모든 월",
     "allCountries": "모든 국가",
-    "allRegions": "모든 지역"
+    "allRegions": "모든 지역",
+    "seasonLabels": {
+      "Rabi (winter)": "라비(겨울)",
+      "Kharif (summer)": "카리프(여름)",
+      "Kharif (also spring in irrigated areas)": "카리프(관개 지역에서는 봄에도)",
+      "Kharif": "카리프",
+      "Rabi": "라비",
+      "Year-round (12–14 month crop)": "연중(12~14개월 작물)"
+    }
   },
   "calendar": {
     "metaTitle": "파종 캘린더 — 이번 달에 심을 것",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "블로그 — 비료 과학과 작물 영양 가이드",
-    "metaDescription": "파키스탄과 인도 농민을 위한 비료량·NPK 계산·작물 영양·토양 건강 실용 가이드."
+    "metaDescription": "파키스탄과 인도 농민을 위한 비료량·NPK 계산·작물 영양·토양 건강 실용 가이드.",
+    "title": "용량 뒤에 숨은 이유를 이해하세요.",
+    "previous": "이전",
+    "next": "다음",
+    "pageOf": "{totalPages}페이지 중 {page}페이지",
+    "minRead": "분 읽기",
+    "share": "공유:",
+    "relatedArticles": "관련 글"
   },
   "fertilizers": {
     "metaTitle": "비료 라이브러리 — NPK 조성·용도·시비 가이드",

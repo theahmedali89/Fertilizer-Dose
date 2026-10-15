@@ -444,7 +444,7 @@
     "home": "Hem",
     "mobileNav": "Mobil navigering",
     "openMenu": "Öppna menyn",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Växtdoktor",
     "plants": "Växter",
     "vegetables": "Grönsaker",
     "grow": "Odla",
@@ -457,7 +457,8 @@
     "login": "Logga in",
     "account": "Konto",
     "admin": "Admin",
-    "logout": "Logga ut"
+    "logout": "Logga ut",
+    "deficiencyChecker": "Näringsbristkontroll"
   },
   "plantDoctor": {
     "desc": "Ladda upp ett tydligt foto, beskriv symptomen och få en strukturerad bedömning – möjliga problem med ärliga konfidensnivåer, troliga orsaker och vad du ska göra härnäst.",
@@ -513,7 +514,15 @@
     "filterMonth": "Planteringsmånad",
     "anyMonth": "Vilken månad som helst",
     "allCountries": "Alla länder",
-    "allRegions": "Alla regioner"
+    "allRegions": "Alla regioner",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (vinter)",
+      "Kharif (summer)": "Kharif (sommar)",
+      "Kharif (also spring in irrigated areas)": "Kharif (även på våren i bevattnade områden)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Året runt (12–14 månaders gröda)"
+    }
   },
   "calendar": {
     "metaTitle": "Såkalender — Vad ska odlas denna månad",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blogg — Gödselvetenskap & växtnäringsguider",
-    "metaDescription": "Praktiska guider om gödseldoser, NPK-beräkningar, växtnäring och jordhälsa för pakistanska och indiska lantbrukare."
+    "metaDescription": "Praktiska guider om gödseldoser, NPK-beräkningar, växtnäring och jordhälsa för pakistanska och indiska lantbrukare.",
+    "title": "Förstå varför dosen är viktig.",
+    "previous": "Föregående",
+    "next": "Nästa",
+    "pageOf": "Sida {page} av {totalPages}",
+    "minRead": "min läsning",
+    "share": "Dela:",
+    "relatedArticles": "Relaterade artiklar"
   },
   "fertilizers": {
     "metaTitle": "Gödselbibliotek — NPK-sammansättning, användning & dosvägledning",

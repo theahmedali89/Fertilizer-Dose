@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Field, Input } from "@/components/ui/fields";
 import { FERTILIZERS, ORGANIC_FERTILIZERS } from "@/lib/agronomy";
 import { getItemsByCategory } from "@/lib/growing";
+import { resolveNpk, hasAnyNpk } from "@/lib/npk-display";
 import { cn } from "@/lib/utils";
 
 type Tab = "fertilizers" | "crops" | "organic";
@@ -24,6 +25,7 @@ function perKgNutrient(bagPrice: number, bagKg: number, pct: number): number | n
 
 export function CompareTool() {
   const t = useTranslations("tools.compare");
+  const tg = useTranslations("growing");
   const [tab, setTab] = useState<Tab>("fertilizers");
   const [selected, setSelected] = useState<string[]>(["urea", "dap", "mop"]);
   const [prices, setPrices] = useState<Record<string, FertPrice>>({});
@@ -285,14 +287,22 @@ export function CompareTool() {
                         <div>
                           <dt className="text-xs text-ink-faint">{t("dose")}</dt>
                           <dd className="font-semibold mt-0.5">
-                            {item.npkRange
-                              ? `N ${item.npkRange.n[0]}–${item.npkRange.n[1]} · P₂O₅ ${item.npkRange.p[0]}–${item.npkRange.p[1]} · K₂O ${item.npkRange.k[0]}–${item.npkRange.k[1]} kg/ha`
-                              : item.npk ? `${item.npk.n}–${item.npk.p}–${item.npk.k} kg/ha` : t("noDoseData")}
+                            {(() => {
+                              const r = resolveNpk(item);
+                              return hasAnyNpk(r)
+                                ? `N ${r.n ?? "–"} · P₂O₅ ${r.p ?? "–"} · K₂O ${r.k ?? "–"} kg/ha`
+                                : t("noDoseData");
+                            })()}
                           </dd>
                         </div>
                         <div>
                           <dt className="text-xs text-ink-faint">{t("season")}</dt>
-                          <dd className="text-ink-soft mt-0.5">{item.season ?? t("na")}</dd>
+                          <dd className="text-ink-soft mt-0.5">
+                            {(() => {
+                              const labels = tg.raw("seasonLabels") as Record<string, string> | undefined;
+                              return item.season ? labels?.[item.season] ?? item.season : t("na");
+                            })()}
+                          </dd>
                         </div>
                         <div>
                           <dt className="text-xs text-ink-faint">{t("water")}</dt>

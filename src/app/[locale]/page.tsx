@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
 import { CROPS, FERTILIZERS } from "@/lib/agronomy";
 import { getItemsByCategory } from "@/lib/growing";
+import { getTranslatedItemNames } from "@/server/i18n-names";
+import { resolveNpk, hasAnyNpk, translateSeason } from "@/lib/npk-display";
 import { POSTS } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
 import { localizedMetadata } from "@/lib/seo";
@@ -86,6 +88,14 @@ export default async function Home({
   const whyItems = t.raw("why.items") as { t: string; d: string }[];
   const isEn = locale === "en";
   const urduAccents = ["مقدار کیلکولیٹر", "پودوں کا ڈاکٹر", "کھاد لائبریری", "فصل لائبریری", "منافع کیلکولیٹر", "موازنہ"];
+  // Locale-aware crop names for the popular-crops cards (fallback: English).
+  const cropNames = await getTranslatedItemNames(
+    CROPS.map((c) => c.slug),
+    locale
+  );
+  const tGrowing = await getTranslations("growing");
+  const noDataLabel = tGrowing("noData");
+  const seasonLabels = tGrowing.raw("seasonLabels") as Record<string, string> | undefined;
 
   return (
     <>
@@ -147,19 +157,22 @@ export default async function Home({
         description={t("crops.desc")}
       >
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {CROPS.map((crop) => (
+          {CROPS.map((crop) => {
+            // Locale-aware display name (English fallback); honest NPK (0 → missing).
+            const displayName = isEn ? crop.name : cropNames.get(crop.slug) || crop.name;
+            const npk = resolveNpk(crop);
+            const showNpk = hasAnyNpk(npk);
+            const seasonText = translateSeason(seasonLabels, crop.season);
+            return (
             <Link key={crop.slug} href={`/crops/${crop.slug}`} className="group">
               <Card className="h-full transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
                 <CardBody>
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h3 className="font-display text-xl font-semibold">
-                        {crop.name}{" "}
-                        <span className="text-sm font-sans font-normal text-ink-faint" lang="ur">
-                          {crop.urdu}
-                        </span>
+                        {displayName}
                       </h3>
-                      <p className="text-sm text-ink-faint mt-1">{crop.season}</p>
+                      <p className="text-sm text-ink-faint mt-1">{seasonText}</p>
                     </div>
                     {crop.npk ? (
                       <Badge variant="verified">{t("crops.verified")}</Badge>
@@ -168,10 +181,10 @@ export default async function Home({
                     )}
                   </div>
                   <p className="mt-4 font-mono text-sm bg-surface-2 border border-line rounded-lg px-3 py-2 inline-block">
-                    {crop.npk ? (
-                      <>N <b>{crop.npk.n}</b> · P₂O₅ <b>{crop.npk.p}</b> · K₂O <b>{crop.npk.k}</b> <span className="text-ink-faint">{t("crops.perHa")}</span></>
+                    {showNpk ? (
+                      <>N <b>{npk.n ?? "–"}</b> · P₂O₅ <b>{npk.p ?? "–"}</b> · K₂O <b>{npk.k ?? "–"}</b> <span className="text-ink-faint">{t("crops.perHa")}</span></>
                     ) : (
-                      <span className="text-ink-faint font-sans">{t("crops.reviewNote")}</span>
+                      <span className="text-ink-faint font-sans">{noDataLabel}</span>
                     )}
                   </p>
                   <p className="mt-4 text-sm font-semibold text-leaf-700 dark:text-leaf-300 flex items-center gap-1.5">
@@ -183,7 +196,8 @@ export default async function Home({
                 </CardBody>
               </Card>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </Section>
 

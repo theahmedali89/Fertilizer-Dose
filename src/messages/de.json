@@ -269,7 +269,7 @@
       "title": "Verstehen Sie das Warum hinter der Dosis"
     },
     "crops": {
-      "desc": "Empfohlenes N–P₂O₅–K₂O pro Hektar aus veröffentlichten Quellen. Als „in Prüfung“ markierte Kulturen werden niemals geschätzt – Daten erscheinen erst nach Verifizierung.",
+      "desc": "Empfohlenes N–P₂O₅–K₂O pro Hektar aus veröffentlichten Quellen. Markierte Kulturen („in Prüfung“) werden niemals geschätzt – Daten erscheinen erst nach Verifizierung.",
       "eyebrow": "Kulturbibliothek",
       "inReview": "In Prüfung",
       "openGuide": "Kulturanleitung öffnen",
@@ -444,7 +444,7 @@
     "home": "Start",
     "mobileNav": "Mobile Navigation",
     "openMenu": "Menü öffnen",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Pflanzendoktor",
     "plants": "Pflanzen",
     "vegetables": "Gemüse",
     "grow": "Anbauen",
@@ -457,7 +457,8 @@
     "login": "Anmelden",
     "account": "Konto",
     "admin": "Admin",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "deficiencyChecker": "Mangel-Checker"
   },
   "plantDoctor": {
     "desc": "Laden Sie ein klares Foto hoch, beschreiben Sie die Symptome und erhalten Sie eine strukturierte Einschätzung – mögliche Probleme mit ehrlichen Konfidenzangaben, wahrscheinliche Ursachen und was als Nächstes zu tun ist.",
@@ -513,7 +514,15 @@
     "filterMonth": "Aussaatmonat",
     "anyMonth": "Jeder Monat",
     "allCountries": "Alle Länder",
-    "allRegions": "Alle Regionen"
+    "allRegions": "Alle Regionen",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (Winter)",
+      "Kharif (summer)": "Kharif (Sommer)",
+      "Kharif (also spring in irrigated areas)": "Kharif (auch Frühjahr in bewässerten Gebieten)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Ganzjährig (12–14-monatige Kultur)"
+    }
   },
   "calendar": {
     "metaTitle": "Aussaatkalender — Was diesen Monat anbauen",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Düngerwissenschaft & Pflanzenernährungs-Anleitungen",
-    "metaDescription": "Praxisanleitungen zu Düngerdosen, NPK-Berechnungen, Pflanzenernährung und Bodengesundheit für pakistanische und indische Landwirte."
+    "metaDescription": "Praxisanleitungen zu Düngerdosen, NPK-Berechnungen, Pflanzenernährung und Bodengesundheit für pakistanische und indische Landwirte.",
+    "title": "Verstehe das Warum hinter der Dosis.",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "pageOf": "Seite {page} von {totalPages}",
+    "minRead": "Min. Lesezeit",
+    "share": "Teilen:",
+    "relatedArticles": "Ähnliche Artikel"
   },
   "fertilizers": {
     "metaTitle": "Düngerbibliothek — NPK-Zusammensetzung, Verwendung & Dosieranleitung",

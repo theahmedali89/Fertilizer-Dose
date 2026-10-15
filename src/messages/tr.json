@@ -444,7 +444,7 @@
     "home": "Ana Sayfa",
     "mobileNav": "Mobil gezinme",
     "openMenu": "Menüyü aç",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "Bitki Doktoru",
     "plants": "Bitkiler",
     "vegetables": "Sebzeler",
     "grow": "Yetiştirme",
@@ -457,7 +457,8 @@
     "login": "Giriş yap",
     "account": "Hesap",
     "admin": "Yönetici",
-    "logout": "Çıkış yap"
+    "logout": "Çıkış yap",
+    "deficiencyChecker": "Besin Eksikliği Denetçisi"
   },
   "plantDoctor": {
     "desc": "Net bir fotoğraf yükleyin, belirtileri anlatın ve yapılandırılmış bir değerlendirme alın — dürüst güven düzeyleriyle olası sorunlar, muhtemel nedenler ve bundan sonra ne yapılacağı.",
@@ -513,7 +514,15 @@
     "filterMonth": "Ekim ayı",
     "anyMonth": "Herhangi bir ay",
     "allCountries": "Tüm ülkeler",
-    "allRegions": "Tüm bölgeler"
+    "allRegions": "Tüm bölgeler",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi (kış)",
+      "Kharif (summer)": "Kharif (yaz)",
+      "Kharif (also spring in irrigated areas)": "Kharif (sulanan alanlarda ilkbaharda da)",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "Yıl boyu (12–14 aylık ürün)"
+    }
   },
   "calendar": {
     "metaTitle": "Ekim Takvimi — Bu Ay Ne Ekilmeli",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "Blog — Gübre Bilimi ve Ürün Besleme Kılavuzları",
-    "metaDescription": "Pakistanlı ve Hintli çiftçiler için gübre dozları, NPK hesaplamaları, ürün besleme ve toprak sağlığı hakkında pratik kılavuzlar."
+    "metaDescription": "Pakistanlı ve Hintli çiftçiler için gübre dozları, NPK hesaplamaları, ürün besleme ve toprak sağlığı hakkında pratik kılavuzlar.",
+    "title": "Dozun arkasındaki nedeni anlayın.",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "pageOf": "Sayfa {page} / {totalPages}",
+    "minRead": "dk okuma",
+    "share": "Paylaş:",
+    "relatedArticles": "İlgili makaleler"
   },
   "fertilizers": {
     "metaTitle": "Gübre Kütüphanesi — NPK Bileşimi, Kullanımlar ve Doz Rehberliği",

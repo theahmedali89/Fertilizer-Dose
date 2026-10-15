@@ -444,7 +444,7 @@
     "home": "ホーム",
     "mobileNav": "モバイルナビゲーション",
     "openMenu": "メニューを開く",
-    "plantDoctor": "Plant Doctor",
+    "plantDoctor": "植物ドクター",
     "plants": "植物",
     "vegetables": "野菜",
     "grow": "栽培",
@@ -457,7 +457,8 @@
     "login": "ログイン",
     "account": "アカウント",
     "admin": "管理",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "deficiencyChecker": "栄養欠乏チェッカー"
   },
   "plantDoctor": {
     "desc": "鮮明な写真をアップロードし、症状を説明してください。可能性のある問題を率直な確信度とともに、原因の候補と次の対策を含めて構造的に評価します。",
@@ -513,7 +514,15 @@
     "filterMonth": "作付け月",
     "anyMonth": "すべての月",
     "allCountries": "すべての国",
-    "allRegions": "すべての地域"
+    "allRegions": "すべての地域",
+    "seasonLabels": {
+      "Rabi (winter)": "ラビ（冬）",
+      "Kharif (summer)": "カリフ（夏）",
+      "Kharif (also spring in irrigated areas)": "カリフ（灌漑地域では春も）",
+      "Kharif": "カリフ",
+      "Rabi": "ラビ",
+      "Year-round (12–14 month crop)": "通年（12～14か月作物）"
+    }
   },
   "calendar": {
     "metaTitle": "播種カレンダー — 今月育てるもの",
@@ -721,7 +730,14 @@
   },
   "blog": {
     "metaTitle": "ブログ — 肥料科学と作物栄養ガイド",
-    "metaDescription": "パキスタンとインドの農家のための、施肥量・NPK計算・作物栄養・土壌の健康に関する実践ガイド。"
+    "metaDescription": "パキスタンとインドの農家のための、施肥量・NPK計算・作物栄養・土壌の健康に関する実践ガイド。",
+    "title": "用量の理由を理解しよう。",
+    "previous": "前へ",
+    "next": "次へ",
+    "pageOf": "{totalPages}ページ中 {page}ページ目",
+    "minRead": "分で読めます",
+    "share": "共有:",
+    "relatedArticles": "関連記事"
   },
   "fertilizers": {
     "metaTitle": "肥料ライブラリ — NPK組成・用途・施肥ガイダンス",
