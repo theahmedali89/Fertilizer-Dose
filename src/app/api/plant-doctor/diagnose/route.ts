@@ -120,6 +120,13 @@ export async function POST(req: NextRequest) {
         { status: 502 }
       );
     }
+    if (/400/.test(msg)) {
+      // Invalid/expired API key or request rejected by Google — retrying won't help.
+      return NextResponse.json(
+        { error: "The AI service key is invalid or expired. Please check the API key and try again." },
+        { status: 502 }
+      );
+    }
     if (/404/.test(msg)) {
       // Retired/unavailable model id — retrying won't help; needs a model update.
       return NextResponse.json(
