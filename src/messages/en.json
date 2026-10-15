@@ -202,6 +202,34 @@
       {
         "q": "What is soil test based fertilizer dose?",
         "a": "A soil test measures your soil's existing nitrogen, phosphorus, potassium, pH, and organic matter. Instead of using a blanket recommendation, the fertilizer dose is adjusted — if your soil already has high phosphorus, you apply less P fertilizer. This saves money and prevents over-fertilization. We recommend getting a soil test every 2-3 years through your local agriculture department. Our calculator uses standard recommendations; for soil-test-based precision doses, consult your local soil testing lab with these standard figures as a starting point."
+      },
+      {
+        "q": "How long does urea last in soil?",
+        "a": "Once applied, urea converts to plant-available ammonium within about 2–4 days through natural soil enzymes, then to nitrate over the following 2–4 weeks depending on soil temperature and moisture. In practical terms, a single urea application feeds the crop for roughly 4–6 weeks, which is why nitrogen is usually split into 2–3 doses across the season. Losses as ammonia gas are highest on hot, dry, alkaline soils when urea sits on the surface — working it into moist soil reduces this."
+      },
+      {
+        "q": "What is the difference between urea and DAP?",
+        "a": "Urea (46-0-0) supplies only nitrogen at 46% N — the most concentrated nitrogen fertilizer available. DAP (18-46-0) supplies 18% nitrogen plus 46% phosphate (P₂O₅). In practice, DAP is used as a basal dose at sowing when the crop needs phosphorus for root establishment, while urea is used for nitrogen top-dressing during active growth. They serve different primary purposes, which is why farmers often use them together rather than as substitutes for each other."
+      },
+      {
+        "q": "How do I dose fertilizer for plants?",
+        "a": "Start with a soil test if possible — it tells you what your soil already has so you only add what is missing. Then use the Plant Dose Calculator on Fertilizer Dose: enter your plant type and pot or bed size, and it gives the exact grams per plant. As a rule of thumb, apply in small splits rather than all at once, water after granular application, and always follow the label rate — more fertilizer does not mean more growth and can burn roots."
+      },
+      {
+        "q": "How much NPK is in farmyard manure (FYM)?",
+        "a": "Well-rotted farmyard manure typically contains around 0.5–1.0% nitrogen, 0.2–0.5% phosphate (P₂O₅), and 0.5–1.0% potash (K₂O), but this varies widely with the animal source, feed, bedding material, and how it was stored and composted. Because the nutrient content is low and variable compared to mineral fertilizers, FYM works best as a soil conditioner — it adds organic matter, improves soil structure, and supplies micronutrients — while mineral fertilizers provide the precise NPK dose the crop needs."
+      },
+      {
+        "q": "What is the best time of day to spray foliar fertilizer?",
+        "a": "Early morning (before about 9–10 am) or late evening are the best times to foliar-feed plants. Leaf pores (stomata) are open, temperatures are cooler, and spray droplets stay wet longer, which improves nutrient absorption. Avoid spraying in the heat of midday — droplets dry too fast for good uptake and concentrated residue can scorch leaves. Also skip spraying just before expected rain, which washes the feed off."
+      },
+      {
+        "q": "What does NPK on a fertilizer bag mean?",
+        "a": "The three numbers on a fertilizer bag (for example 15-15-15) are the percentage by weight of nitrogen (N), phosphate (P₂O₅), and potash (K₂O). So a 50 kg bag of 15-15-15 contains 7.5 kg each of N, P₂O₅, and K₂O. Note that phosphorus and potassium are expressed in their oxide forms by industry convention, not as elemental P and K — the Fertilizer Dose calculators handle this conversion for you."
+      },
+      {
+        "q": "What is ammonium sulphate fertilizer used for?",
+        "a": "Ammonium sulphate (21-0-0 plus 24% sulphur) supplies nitrogen together with sulphur, making it useful where soils are sulphur-deficient — common in high-yielding cereals and oilseeds. It has an acidifying effect on soil, so it suits neutral to alkaline soils well, but use it cautiously on already-acidic soils. It is also a good choice when you want nitrogen without adding any phosphorus or potassium."
       }
     ],
     "title": "Questions farmers ask us",
