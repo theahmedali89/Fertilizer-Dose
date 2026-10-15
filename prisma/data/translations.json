@@ -7,7 +7,8 @@
   {
     "itemSlug": "wheat",
     "locale": "hi",
-    "name": "गेहूँ"
+    "name": "गेहूं",
+    "status": "reviewed"
   },
   {
     "itemSlug": "wheat",
@@ -94,7 +95,8 @@
   {
     "itemSlug": "rice",
     "locale": "ur",
-    "name": "چاول / دھان"
+    "name": "دھان",
+    "status": "reviewed"
   },
   {
     "itemSlug": "rice",
@@ -180,8 +182,9 @@
   {
     "itemSlug": "rice",
     "locale": "ja",
-    "name": "稲",
-    "localName": "米"
+    "name": "イネ",
+    "localName": "米",
+    "status": "reviewed"
   },
   {
     "itemSlug": "rice",
@@ -337,7 +340,8 @@
   {
     "itemSlug": "cotton",
     "locale": "ru",
-    "name": "Хлопок"
+    "name": "Хлопчатник",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cotton",
@@ -362,7 +366,8 @@
   {
     "itemSlug": "cotton",
     "locale": "ja",
-    "name": "綿"
+    "name": "ワタ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cotton",
@@ -503,8 +508,9 @@
   {
     "itemSlug": "potato",
     "locale": "es",
-    "name": "Papa",
-    "localName": "Patata"
+    "name": "Patata",
+    "localName": "Patata",
+    "status": "reviewed"
   },
   {
     "itemSlug": "potato",
@@ -534,7 +540,8 @@
   {
     "itemSlug": "potato",
     "locale": "ms",
-    "name": "Kentang"
+    "name": "Ubi kentang",
+    "status": "reviewed"
   },
   {
     "itemSlug": "potato",
@@ -555,7 +562,8 @@
   {
     "itemSlug": "soybean",
     "locale": "ur",
-    "name": "سویابین"
+    "name": "سویا بین",
+    "status": "reviewed"
   },
   {
     "itemSlug": "soybean",
@@ -636,12 +644,14 @@
   {
     "itemSlug": "soybean",
     "locale": "ja",
-    "name": "大豆"
+    "name": "ダイズ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "soybean",
     "locale": "ko",
-    "name": "콩"
+    "name": "대두",
+    "status": "reviewed"
   },
   {
     "itemSlug": "groundnut",
@@ -687,8 +697,9 @@
   {
     "itemSlug": "groundnut",
     "locale": "es",
-    "name": "Maní",
-    "localName": "Cacahuete"
+    "name": "Cacahuate",
+    "localName": "Cacahuete",
+    "status": "reviewed"
   },
   {
     "itemSlug": "groundnut",
@@ -740,13 +751,15 @@
   {
     "itemSlug": "jute",
     "locale": "ur",
-    "name": "پٹسن"
+    "name": "پٹ سن",
+    "status": "reviewed"
   },
   {
     "itemSlug": "jute",
     "locale": "hi",
-    "name": "जूट",
-    "localName": "पटसन"
+    "name": "पटसन",
+    "localName": "पटसन",
+    "status": "reviewed"
   },
   {
     "itemSlug": "jute",
@@ -898,14 +911,16 @@
   {
     "itemSlug": "mustard",
     "locale": "id",
-    "name": "Sawi",
-    "localName": "Sesawi"
+    "name": "Sesawi",
+    "localName": "Sesawi",
+    "status": "reviewed"
   },
   {
     "itemSlug": "mustard",
     "locale": "ms",
-    "name": "Sawi",
-    "localName": "Sesawi"
+    "name": "Biji sawi",
+    "localName": "Sesawi",
+    "status": "reviewed"
   },
   {
     "itemSlug": "mustard",
@@ -941,7 +956,8 @@
   {
     "itemSlug": "lentil",
     "locale": "bn",
-    "name": "মসুর"
+    "name": "মসুর ডাল",
+    "status": "reviewed"
   },
   {
     "itemSlug": "lentil",
@@ -991,7 +1007,8 @@
   {
     "itemSlug": "lentil",
     "locale": "id",
-    "name": "Kacang lentil"
+    "name": "Miju-miju",
+    "status": "reviewed"
   },
   {
     "itemSlug": "lentil",
@@ -1011,7 +1028,8 @@
   {
     "itemSlug": "lentil",
     "locale": "ko",
-    "name": "렌즈콩"
+    "name": "렌틸콩",
+    "status": "reviewed"
   },
   {
     "itemSlug": "chickpea",
@@ -1096,7 +1114,8 @@
   {
     "itemSlug": "chickpea",
     "locale": "ja",
-    "name": "ヒヨコ豆"
+    "name": "ヒヨコマメ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "chickpea",
@@ -1111,7 +1130,8 @@
   {
     "itemSlug": "coffee",
     "locale": "hi",
-    "name": "कॉफ़ी"
+    "name": "अरेबिका कॉफी",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
@@ -1121,63 +1141,75 @@
   {
     "itemSlug": "coffee",
     "locale": "bn",
-    "name": "কফি"
+    "name": "অ্যারাবিকা কফি",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "ar",
-    "name": "قهوة",
-    "localName": "بن"
+    "name": "قهوة عربية",
+    "localName": "بن",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "tr",
-    "name": "Kahve"
+    "name": "Arabica kahvesi",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "fr",
-    "name": "Café"
+    "name": "Café Arabica",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "de",
-    "name": "Kaffee"
+    "name": "Arabica-Kaffee",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "es",
-    "name": "Café"
+    "name": "Café Arábica",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "it",
-    "name": "Caffè"
+    "name": "Caffè arabica",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "pl",
-    "name": "Kawa"
+    "name": "Kawa arabika",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "ru",
-    "name": "Кофе"
+    "name": "Кофе арабика",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "pt",
-    "name": "Café"
+    "name": "Café arábica",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "id",
-    "name": "Kopi"
+    "name": "Kopi arabika",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "ms",
-    "name": "Kopi"
+    "name": "Kopi Arabika",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
@@ -1187,12 +1219,14 @@
   {
     "itemSlug": "coffee",
     "locale": "ja",
-    "name": "コーヒー"
+    "name": "アラビカコーヒー",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coffee",
     "locale": "ko",
-    "name": "커피"
+    "name": "아라비카 커피",
+    "status": "reviewed"
   },
   {
     "itemSlug": "palm-oil",
@@ -1212,7 +1246,8 @@
   {
     "itemSlug": "palm-oil",
     "locale": "bn",
-    "name": "অয়েল পাম"
+    "name": "তেল পাম",
+    "status": "reviewed"
   },
   {
     "itemSlug": "palm-oil",
@@ -1237,7 +1272,8 @@
   {
     "itemSlug": "palm-oil",
     "locale": "es",
-    "name": "Palma aceitera"
+    "name": "Palma de aceite",
+    "status": "reviewed"
   },
   {
     "itemSlug": "palm-oil",
@@ -1247,7 +1283,8 @@
   {
     "itemSlug": "palm-oil",
     "locale": "pl",
-    "name": "Palma olejowa"
+    "name": "Olejowiec gwinejski",
+    "status": "reviewed"
   },
   {
     "itemSlug": "palm-oil",
@@ -1257,8 +1294,9 @@
   {
     "itemSlug": "palm-oil",
     "locale": "pt",
-    "name": "Palmeira de dendê",
-    "localName": "Palma de óleo"
+    "name": "Dendezeiro",
+    "localName": "Palma de óleo",
+    "status": "reviewed"
   },
   {
     "itemSlug": "palm-oil",
@@ -1293,7 +1331,8 @@
   {
     "itemSlug": "canola",
     "locale": "hi",
-    "name": "कैनोला"
+    "name": "कनोला",
+    "status": "reviewed"
   },
   {
     "itemSlug": "canola",
@@ -1318,8 +1357,9 @@
   {
     "itemSlug": "canola",
     "locale": "fr",
-    "name": "Canola",
-    "localName": "Colza"
+    "name": "Colza",
+    "localName": "Colza",
+    "status": "reviewed"
   },
   {
     "itemSlug": "canola",
@@ -1329,14 +1369,16 @@
   {
     "itemSlug": "canola",
     "locale": "es",
-    "name": "Canola",
-    "localName": "Colza"
+    "name": "Colza",
+    "localName": "Colza",
+    "status": "reviewed"
   },
   {
     "itemSlug": "canola",
     "locale": "it",
-    "name": "Canola",
-    "localName": "Colza"
+    "name": "Colza",
+    "localName": "Colza",
+    "status": "reviewed"
   },
   {
     "itemSlug": "canola",
@@ -1351,7 +1393,8 @@
   {
     "itemSlug": "canola",
     "locale": "pt",
-    "name": "Canola"
+    "name": "Colza",
+    "status": "reviewed"
   },
   {
     "itemSlug": "canola",
@@ -1371,14 +1414,16 @@
   {
     "itemSlug": "canola",
     "locale": "ja",
-    "name": "菜種",
-    "localName": "キャノーラ"
+    "name": "キャノーラ",
+    "localName": "キャノーラ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "canola",
     "locale": "ko",
-    "name": "유채",
-    "localName": "카놀라"
+    "name": "카놀라",
+    "localName": "카놀라",
+    "status": "reviewed"
   },
   {
     "itemSlug": "barley",
@@ -1398,7 +1443,8 @@
   {
     "itemSlug": "barley",
     "locale": "bn",
-    "name": "যব"
+    "name": "বার্লি",
+    "status": "reviewed"
   },
   {
     "itemSlug": "barley",
@@ -1493,8 +1539,9 @@
   {
     "itemSlug": "sunflower",
     "locale": "ar",
-    "name": "دوار الشمس",
-    "localName": "عباد الشمس"
+    "name": "عباد الشمس",
+    "localName": "عباد الشمس",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sunflower",
@@ -1564,7 +1611,8 @@
   {
     "itemSlug": "rubber",
     "locale": "ur",
-    "name": "قدرتی ربڑ"
+    "name": "ربڑ کا درخت",
+    "status": "reviewed"
   },
   {
     "itemSlug": "rubber",
@@ -1655,12 +1703,14 @@
   {
     "itemSlug": "durum-wheat",
     "locale": "ur",
-    "name": "ڈیورم گندم"
+    "name": "ڈورم گندم",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
     "locale": "hi",
-    "name": "ड्यूरम गेहूँ"
+    "name": "ड्यूरम गेहूं",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
@@ -1670,18 +1720,21 @@
   {
     "itemSlug": "durum-wheat",
     "locale": "bn",
-    "name": "ডুরাম গম"
+    "name": "ডুরম গম",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
     "locale": "ar",
-    "name": "قمح الديورم"
+    "name": "قمح صلب",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
     "locale": "tr",
-    "name": "Durum buğdayı",
-    "localName": "Makarnalık buğday"
+    "name": "Makarnalık buğday",
+    "localName": "Makarnalık buğday",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
@@ -1706,7 +1759,8 @@
   {
     "itemSlug": "durum-wheat",
     "locale": "pl",
-    "name": "Pszenica durum"
+    "name": "Pszenica twarda",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
@@ -1716,7 +1770,8 @@
   {
     "itemSlug": "durum-wheat",
     "locale": "pt",
-    "name": "Trigo duro"
+    "name": "Trigo-duro",
+    "status": "reviewed"
   },
   {
     "itemSlug": "durum-wheat",
@@ -1761,13 +1816,15 @@
   {
     "itemSlug": "sugar-beet",
     "locale": "bn",
-    "name": "চিনি বিট",
-    "localName": "বিট"
+    "name": "সুগার বিট",
+    "localName": "বিট",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sugar-beet",
     "locale": "ar",
-    "name": "شمندر سكري"
+    "name": "بنجر السكر",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sugar-beet",
@@ -1807,7 +1864,8 @@
   {
     "itemSlug": "sugar-beet",
     "locale": "pt",
-    "name": "Beterraba açucareira"
+    "name": "Beterraba-sacarina",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sugar-beet",
@@ -1817,8 +1875,9 @@
   {
     "itemSlug": "sugar-beet",
     "locale": "ms",
-    "name": "Ubi bit gula",
-    "localName": "Bit gula"
+    "name": "Bit gula",
+    "localName": "Bit gula",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sugar-beet",
@@ -1828,8 +1887,9 @@
   {
     "itemSlug": "sugar-beet",
     "locale": "ja",
-    "name": "甜菜",
-    "localName": "砂糖大根"
+    "name": "テンサイ",
+    "localName": "砂糖大根",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sugar-beet",
@@ -1859,7 +1919,8 @@
   {
     "itemSlug": "rye",
     "locale": "ar",
-    "name": "جاودار"
+    "name": "جودار",
+    "status": "reviewed"
   },
   {
     "itemSlug": "rye",
@@ -1945,7 +2006,8 @@
   {
     "itemSlug": "triticale",
     "locale": "bn",
-    "name": "ট্রিটিকেল"
+    "name": "ট্রিটিকেলে",
+    "status": "reviewed"
   },
   {
     "itemSlug": "triticale",
@@ -2000,7 +2062,8 @@
   {
     "itemSlug": "triticale",
     "locale": "ms",
-    "name": "Tritikale"
+    "name": "Tritikal",
+    "status": "reviewed"
   },
   {
     "itemSlug": "triticale",
@@ -2010,12 +2073,14 @@
   {
     "itemSlug": "triticale",
     "locale": "ja",
-    "name": "トリティカーレ"
+    "name": "ライ小麦",
+    "status": "reviewed"
   },
   {
     "itemSlug": "triticale",
     "locale": "ko",
-    "name": "트리티케일"
+    "name": "라이밀",
+    "status": "reviewed"
   },
   {
     "itemSlug": "olive",
@@ -2066,8 +2131,9 @@
   {
     "itemSlug": "olive",
     "locale": "it",
-    "name": "Olivo",
-    "localName": "Oliva"
+    "name": "Oliva",
+    "localName": "Oliva",
+    "status": "reviewed"
   },
   {
     "itemSlug": "olive",
@@ -2164,7 +2230,8 @@
   {
     "itemSlug": "grape",
     "locale": "pl",
-    "name": "Winogrona"
+    "name": "Winogrono",
+    "status": "reviewed"
   },
   {
     "itemSlug": "grape",
@@ -2226,67 +2293,78 @@
   {
     "itemSlug": "citrus",
     "locale": "ar",
-    "name": "حمضيات",
-    "localName": "برتقال"
+    "name": "برتقال",
+    "localName": "برتقال",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "tr",
-    "name": "Turunçgil",
-    "localName": "Portakal"
+    "name": "Portakal",
+    "localName": "Portakal",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "fr",
-    "name": "Agrume",
-    "localName": "Orange"
+    "name": "Orange",
+    "localName": "Orange",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "de",
-    "name": "Zitrusfrucht",
-    "localName": "Orange"
+    "name": "Orange",
+    "localName": "Orange",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "es",
-    "name": "Cítrico",
-    "localName": "Naranja"
+    "name": "Naranja",
+    "localName": "Naranja",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "it",
-    "name": "Agrume",
-    "localName": "Arancia"
+    "name": "Arancia",
+    "localName": "Arancia",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "pl",
-    "name": "Cytrus",
-    "localName": "Pomarańcza"
+    "name": "Pomarańcza",
+    "localName": "Pomarańcza",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "ru",
-    "name": "Цитрус",
-    "localName": "Апельсин"
+    "name": "Апельсин",
+    "localName": "Апельсин",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "pt",
-    "name": "Citrino",
-    "localName": "Laranja"
+    "name": "Laranja",
+    "localName": "Laranja",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "id",
-    "name": "Jeruk"
+    "name": "Jeruk manis",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "ms",
-    "name": "Limau",
-    "localName": "Oren"
+    "name": "Oren",
+    "localName": "Oren",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
@@ -2297,14 +2375,16 @@
   {
     "itemSlug": "citrus",
     "locale": "ja",
-    "name": "柑橘類",
-    "localName": "オレンジ"
+    "name": "オレンジ",
+    "localName": "オレンジ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "citrus",
     "locale": "ko",
-    "name": "감귤류",
-    "localName": "오렌지"
+    "name": "오렌지",
+    "localName": "오렌지",
+    "status": "reviewed"
   },
   {
     "itemSlug": "tomato",
@@ -2364,8 +2444,9 @@
   {
     "itemSlug": "tomato",
     "locale": "ru",
-    "name": "Помидор",
-    "localName": "Томат"
+    "name": "Томат",
+    "localName": "Томат",
+    "status": "reviewed"
   },
   {
     "itemSlug": "tomato",
@@ -2406,7 +2487,8 @@
   {
     "itemSlug": "onion",
     "locale": "hi",
-    "name": "प्याज़"
+    "name": "प्याज",
+    "status": "reviewed"
   },
   {
     "itemSlug": "onion",
@@ -2456,7 +2538,8 @@
   {
     "itemSlug": "onion",
     "locale": "ru",
-    "name": "Лук"
+    "name": "Лук репчатый",
+    "status": "reviewed"
   },
   {
     "itemSlug": "onion",
@@ -2466,7 +2549,8 @@
   {
     "itemSlug": "onion",
     "locale": "id",
-    "name": "Bawang bombai"
+    "name": "Bawang bombay",
+    "status": "reviewed"
   },
   {
     "itemSlug": "onion",
@@ -2582,7 +2666,8 @@
   {
     "itemSlug": "chili",
     "locale": "ur",
-    "name": "مرچ"
+    "name": "سرخ مرچ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "chili",
@@ -2634,13 +2719,15 @@
   {
     "itemSlug": "chili",
     "locale": "pl",
-    "name": "Papryczka chili"
+    "name": "Papryka ostra",
+    "status": "reviewed"
   },
   {
     "itemSlug": "chili",
     "locale": "ru",
-    "name": "Перец чили",
-    "localName": "Острый перец"
+    "name": "Острый перец",
+    "localName": "Острый перец",
+    "status": "reviewed"
   },
   {
     "itemSlug": "chili",
@@ -2693,7 +2780,8 @@
   {
     "itemSlug": "okra",
     "locale": "bn",
-    "name": "ঢেঁড়স"
+    "name": "ঢেঁড়শ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "okra",
@@ -2718,8 +2806,9 @@
   {
     "itemSlug": "okra",
     "locale": "es",
-    "name": "Okra",
-    "localName": "Quimbombó"
+    "name": "Quimbombó",
+    "localName": "Quimbombó",
+    "status": "reviewed"
   },
   {
     "itemSlug": "okra",
@@ -2735,8 +2824,9 @@
   {
     "itemSlug": "okra",
     "locale": "ru",
-    "name": "Бамия",
-    "localName": "Окра"
+    "name": "Окра",
+    "localName": "Окра",
+    "status": "reviewed"
   },
   {
     "itemSlug": "okra",
@@ -2786,7 +2876,8 @@
   {
     "itemSlug": "peas",
     "locale": "bn",
-    "name": "মটরশুটি"
+    "name": "মটরশুঁটি",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
@@ -2802,23 +2893,27 @@
   {
     "itemSlug": "peas",
     "locale": "fr",
-    "name": "Pois"
+    "name": "Petits pois",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
     "locale": "de",
-    "name": "Erbse"
+    "name": "Erbsen",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
     "locale": "es",
-    "name": "Guisante",
-    "localName": "Arveja"
+    "name": "Guisantes",
+    "localName": "Arveja",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
     "locale": "it",
-    "name": "Pisello"
+    "name": "Piselli",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
@@ -2833,7 +2928,8 @@
   {
     "itemSlug": "peas",
     "locale": "pt",
-    "name": "Ervilha"
+    "name": "Ervilhas",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
@@ -2853,7 +2949,8 @@
   {
     "itemSlug": "peas",
     "locale": "ja",
-    "name": "エンドウ"
+    "name": "エンドウ豆",
+    "status": "reviewed"
   },
   {
     "itemSlug": "peas",
@@ -2969,8 +3066,9 @@
   {
     "itemSlug": "spinach",
     "locale": "bn",
-    "name": "পালং",
-    "localName": "পালং শাক"
+    "name": "পালংশাক",
+    "localName": "পালং শাক",
+    "status": "reviewed"
   },
   {
     "itemSlug": "spinach",
@@ -3000,7 +3098,8 @@
   {
     "itemSlug": "spinach",
     "locale": "it",
-    "name": "Spinaci"
+    "name": "Spinacio",
+    "status": "reviewed"
   },
   {
     "itemSlug": "spinach",
@@ -3020,12 +3119,14 @@
   {
     "itemSlug": "spinach",
     "locale": "id",
-    "name": "Bayam"
+    "name": "Bayam jepang",
+    "status": "reviewed"
   },
   {
     "itemSlug": "spinach",
     "locale": "ms",
-    "name": "Bayam"
+    "name": "Bayam pasir",
+    "status": "reviewed"
   },
   {
     "itemSlug": "spinach",
@@ -3110,7 +3211,8 @@
   {
     "itemSlug": "brinjal",
     "locale": "id",
-    "name": "Terong"
+    "name": "Terung",
+    "status": "reviewed"
   },
   {
     "itemSlug": "brinjal",
@@ -3200,8 +3302,9 @@
   {
     "itemSlug": "cucumber",
     "locale": "id",
-    "name": "Timun",
-    "localName": "Mentimun"
+    "name": "Mentimun",
+    "localName": "Mentimun",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cucumber",
@@ -3322,8 +3425,9 @@
   {
     "itemSlug": "cabbage",
     "locale": "hi",
-    "name": "पत्तागोभी",
-    "localName": "बंदगोभी"
+    "name": "पत्ता गोभी",
+    "localName": "बंदगोभी",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
@@ -3349,13 +3453,15 @@
   {
     "itemSlug": "cabbage",
     "locale": "fr",
-    "name": "Chou"
+    "name": "Chou cabus",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
     "locale": "de",
-    "name": "Weißkohl",
-    "localName": "Kohl"
+    "name": "Kopfkohl",
+    "localName": "Kohl",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
@@ -3366,17 +3472,20 @@
   {
     "itemSlug": "cabbage",
     "locale": "it",
-    "name": "Cavolo"
+    "name": "Cavolo cappuccio",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
     "locale": "pl",
-    "name": "Kapusta"
+    "name": "Kapusta głowiasta",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
     "locale": "ru",
-    "name": "Капуста"
+    "name": "Капуста белокочанная",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
@@ -3393,7 +3502,8 @@
   {
     "itemSlug": "cabbage",
     "locale": "ms",
-    "name": "Kobis"
+    "name": "Kubis bulat",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage",
@@ -3414,13 +3524,15 @@
   {
     "itemSlug": "napa-cabbage",
     "locale": "ur",
-    "name": "چینی گوبھی"
+    "name": "ناپا بند گوبھی",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
     "locale": "hi",
-    "name": "चीनी गोभी",
-    "localName": "नापा पत्तागोभी"
+    "name": "नापा गोभी",
+    "localName": "नापा पत्तागोभी",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
@@ -3436,20 +3548,23 @@
   {
     "itemSlug": "napa-cabbage",
     "locale": "ar",
-    "name": "ملفوف صيني",
-    "localName": "ملفوف نابا"
+    "name": "كرنب نابا",
+    "localName": "ملفوف نابا",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
     "locale": "tr",
-    "name": "Çin lahanası",
-    "localName": "Napa lahana"
+    "name": "Napa lahanası",
+    "localName": "Napa lahana",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
     "locale": "fr",
-    "name": "Chou chinois",
-    "localName": "Chou nappa"
+    "name": "Chou Napa",
+    "localName": "Chou nappa",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
@@ -3459,14 +3574,16 @@
   {
     "itemSlug": "napa-cabbage",
     "locale": "es",
-    "name": "Col china",
-    "localName": "Col napa"
+    "name": "Col de Napa",
+    "localName": "Col napa",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
     "locale": "it",
-    "name": "Cavolo cinese",
-    "localName": "Cavolo napa"
+    "name": "Cavolo Napa",
+    "localName": "Cavolo napa",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
@@ -3481,8 +3598,9 @@
   {
     "itemSlug": "napa-cabbage",
     "locale": "pt",
-    "name": "Repolho chinês",
-    "localName": "Acelga chinesa"
+    "name": "Couve Napa",
+    "localName": "Acelga chinesa",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
@@ -3492,7 +3610,8 @@
   {
     "itemSlug": "napa-cabbage",
     "locale": "ms",
-    "name": "Kobis cina"
+    "name": "Kobis Napa",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
@@ -3502,7 +3621,8 @@
   {
     "itemSlug": "napa-cabbage",
     "locale": "ja",
-    "name": "ハクサイ"
+    "name": "白菜",
+    "status": "reviewed"
   },
   {
     "itemSlug": "napa-cabbage",
@@ -3527,7 +3647,8 @@
   {
     "itemSlug": "radish",
     "locale": "bn",
-    "name": "মুলা"
+    "name": "মূলা",
+    "status": "reviewed"
   },
   {
     "itemSlug": "radish",
@@ -3582,7 +3703,8 @@
   {
     "itemSlug": "radish",
     "locale": "ms",
-    "name": "Lobak"
+    "name": "Lobak putih",
+    "status": "reviewed"
   },
   {
     "itemSlug": "radish",
@@ -3602,7 +3724,8 @@
   {
     "itemSlug": "daikon",
     "locale": "ur",
-    "name": "جاپانی مولی"
+    "name": "سفید مولی",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
@@ -3617,7 +3740,8 @@
   {
     "itemSlug": "daikon",
     "locale": "bn",
-    "name": "জাপানি মুলা"
+    "name": "জাপানি মুলো",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
@@ -3634,8 +3758,9 @@
   {
     "itemSlug": "daikon",
     "locale": "fr",
-    "name": "Radis japonais",
-    "localName": "Daïkon"
+    "name": "Radis blanc",
+    "localName": "Daïkon",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
@@ -3646,14 +3771,16 @@
   {
     "itemSlug": "daikon",
     "locale": "es",
-    "name": "Rábano japonés",
-    "localName": "Daikon"
+    "name": "Rábano daikon",
+    "localName": "Daikon",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
     "locale": "it",
-    "name": "Ravanello giapponese",
-    "localName": "Daikon"
+    "name": "Daikon",
+    "localName": "Daikon",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
@@ -3670,8 +3797,9 @@
   {
     "itemSlug": "daikon",
     "locale": "pt",
-    "name": "Rabanete japonês",
-    "localName": "Daikon"
+    "name": "Nabo-daikon",
+    "localName": "Daikon",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
@@ -3682,8 +3810,9 @@
   {
     "itemSlug": "daikon",
     "locale": "ms",
-    "name": "Lobak jepun",
-    "localName": "Daikon"
+    "name": "Lobak putih jepun",
+    "localName": "Daikon",
+    "status": "reviewed"
   },
   {
     "itemSlug": "daikon",
@@ -3699,8 +3828,9 @@
   {
     "itemSlug": "daikon",
     "locale": "ko",
-    "name": "일본무",
-    "localName": "다이콘"
+    "name": "무",
+    "localName": "다이콘",
+    "status": "reviewed"
   },
   {
     "itemSlug": "rose",
@@ -3775,7 +3905,8 @@
   {
     "itemSlug": "rose",
     "locale": "ms",
-    "name": "Ros"
+    "name": "Bunga mawar",
+    "status": "reviewed"
   },
   {
     "itemSlug": "rose",
@@ -3795,8 +3926,9 @@
   {
     "itemSlug": "marigold",
     "locale": "ur",
-    "name": "گیندا",
-    "localName": "گیندے کا پھول"
+    "name": "گیندے کا پھول",
+    "localName": "گیندے کا پھول",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
@@ -3812,13 +3944,15 @@
   {
     "itemSlug": "marigold",
     "locale": "bn",
-    "name": "গাঁদা"
+    "name": "গাঁদা ফুল",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
     "locale": "ar",
-    "name": "قطيفة",
-    "localName": "ماريغولد"
+    "name": "مخملية",
+    "localName": "ماريغولد",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
@@ -3828,20 +3962,23 @@
   {
     "itemSlug": "marigold",
     "locale": "fr",
-    "name": "Œillet d'Inde",
-    "localName": "Souci"
+    "name": "Tagète",
+    "localName": "Souci",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
     "locale": "de",
-    "name": "Ringelblume",
-    "localName": "Studentenblume"
+    "name": "Tagetes",
+    "localName": "Studentenblume",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
     "locale": "es",
-    "name": "Tagete",
-    "localName": "Cempasúchil"
+    "name": "Caléndula",
+    "localName": "Cempasúchil",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
@@ -3863,14 +4000,16 @@
   {
     "itemSlug": "marigold",
     "locale": "pt",
-    "name": "Tagetes",
-    "localName": "Cravo-de-defunto"
+    "name": "Cravo-de-defunto",
+    "localName": "Cravo-de-defunto",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
     "locale": "id",
-    "name": "Bunga tahi ayam",
-    "localName": "Marigold"
+    "name": "Bunga marigold",
+    "localName": "Marigold",
+    "status": "reviewed"
   },
   {
     "itemSlug": "marigold",
@@ -3916,13 +4055,15 @@
   {
     "itemSlug": "money-plant",
     "locale": "ar",
-    "name": "نبتة المال"
+    "name": "بوتس",
+    "status": "reviewed"
   },
   {
     "itemSlug": "money-plant",
     "locale": "tr",
-    "name": "Para çiçeği",
-    "localName": "Money plant"
+    "name": "Salon sarmaşığı",
+    "localName": "Money plant",
+    "status": "reviewed"
   },
   {
     "itemSlug": "money-plant",
@@ -3937,8 +4078,9 @@
   {
     "itemSlug": "money-plant",
     "locale": "es",
-    "name": "Potos",
-    "localName": "Planta del dinero"
+    "name": "Poto",
+    "localName": "Planta del dinero",
+    "status": "reviewed"
   },
   {
     "itemSlug": "money-plant",
@@ -3949,19 +4091,22 @@
   {
     "itemSlug": "money-plant",
     "locale": "pl",
-    "name": "Epipremnum"
+    "name": "Epipremnum złociste",
+    "status": "reviewed"
   },
   {
     "itemSlug": "money-plant",
     "locale": "ru",
-    "name": "Эпипремнум",
-    "localName": "Сциндапсус"
+    "name": "Эпипремнум золотистый",
+    "localName": "Сциндапсус",
+    "status": "reviewed"
   },
   {
     "itemSlug": "money-plant",
     "locale": "pt",
-    "name": "Jiboia",
-    "localName": "Planta-dinheiro"
+    "name": "Jibóia",
+    "localName": "Planta-dinheiro",
+    "status": "reviewed"
   },
   {
     "itemSlug": "money-plant",
@@ -4107,17 +4252,20 @@
   {
     "itemSlug": "neem",
     "locale": "tr",
-    "name": "Neem ağacı"
+    "name": "Nim ağacı",
+    "status": "reviewed"
   },
   {
     "itemSlug": "neem",
     "locale": "fr",
-    "name": "Neem"
+    "name": "Margousier",
+    "status": "reviewed"
   },
   {
     "itemSlug": "neem",
     "locale": "de",
-    "name": "Neembaum"
+    "name": "Niembaum",
+    "status": "reviewed"
   },
   {
     "itemSlug": "neem",
@@ -4157,8 +4305,9 @@
   {
     "itemSlug": "neem",
     "locale": "ms",
-    "name": "Mambu",
-    "localName": "Neem"
+    "name": "Pokok semambu",
+    "localName": "Neem",
+    "status": "reviewed"
   },
   {
     "itemSlug": "neem",
@@ -4179,17 +4328,20 @@
   {
     "itemSlug": "beans",
     "locale": "ur",
-    "name": "لوبیا"
+    "name": "پھلیاں",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sweet-potato",
     "locale": "ur",
-    "name": "شکرقندی"
+    "name": "شکر قندی",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cassava",
     "locale": "ur",
-    "name": "کاساوا"
+    "name": "کساوا",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sesame",
@@ -4199,7 +4351,8 @@
   {
     "itemSlug": "buckwheat",
     "locale": "ur",
-    "name": "بکویٹ"
+    "name": "کٹو",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coconut",
@@ -4214,7 +4367,8 @@
   {
     "itemSlug": "millet",
     "locale": "ur",
-    "name": "باجرہ"
+    "name": "کَنگنی",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sorghum",
@@ -4229,7 +4383,8 @@
   {
     "itemSlug": "beans",
     "locale": "hi",
-    "name": "लोबिया"
+    "name": "फलियां",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sweet-potato",
@@ -4264,7 +4419,8 @@
   {
     "itemSlug": "millet",
     "locale": "hi",
-    "name": "बाजरा"
+    "name": "कांगणी",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sorghum",
@@ -4274,7 +4430,8 @@
   {
     "itemSlug": "cabbage-chinese",
     "locale": "hi",
-    "name": "चीनी पत्ता गोभी"
+    "name": "चीनी पत्तागोभी",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -4329,7 +4486,8 @@
   {
     "itemSlug": "beans",
     "locale": "bn",
-    "name": "সিম"
+    "name": "শিম",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sweet-potato",
@@ -4364,7 +4522,8 @@
   {
     "itemSlug": "millet",
     "locale": "bn",
-    "name": "বাজরা"
+    "name": "চীনা কাউন",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sorghum",
@@ -4374,7 +4533,8 @@
   {
     "itemSlug": "cabbage-chinese",
     "locale": "bn",
-    "name": "চাইনিজ বাঁধাকপি"
+    "name": "চীনা বাঁধাকপি",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -4419,7 +4579,8 @@
   {
     "itemSlug": "sorghum",
     "locale": "ar",
-    "name": "ذرة رفيعة"
+    "name": "ذرة بيضاء",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage-chinese",
@@ -4449,7 +4610,8 @@
   {
     "itemSlug": "buckwheat",
     "locale": "es",
-    "name": "trigo sarraceno"
+    "name": "Alforfón",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coconut",
@@ -4574,7 +4736,8 @@
   {
     "itemSlug": "cabbage-chinese",
     "locale": "de",
-    "name": "Chinakohl"
+    "name": "Pak Choi",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -4599,12 +4762,14 @@
   {
     "itemSlug": "buckwheat",
     "locale": "it",
-    "name": "grano saraceno"
+    "name": "Grano sarraceno",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coconut",
     "locale": "it",
-    "name": "noce di cocco"
+    "name": "Cocco",
+    "status": "reviewed"
   },
   {
     "itemSlug": "oats",
@@ -4689,7 +4854,8 @@
   {
     "itemSlug": "cassava",
     "locale": "ru",
-    "name": "кассава"
+    "name": "Маниок",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sesame",
@@ -4829,7 +4995,8 @@
   {
     "itemSlug": "beans",
     "locale": "id",
-    "name": "kacang"
+    "name": "Kacang-kacangan",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sweet-potato",
@@ -4849,7 +5016,8 @@
   {
     "itemSlug": "buckwheat",
     "locale": "id",
-    "name": "buckwheat"
+    "name": "Gandum kuda",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coconut",
@@ -4859,12 +5027,14 @@
   {
     "itemSlug": "oats",
     "locale": "id",
-    "name": "oat"
+    "name": "Gandum haver",
+    "status": "reviewed"
   },
   {
     "itemSlug": "millet",
     "locale": "id",
-    "name": "jawawut"
+    "name": "Milet",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sorghum",
@@ -4874,7 +5044,8 @@
   {
     "itemSlug": "cabbage-chinese",
     "locale": "id",
-    "name": "sawi putih"
+    "name": "Sawi sendok",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -4899,7 +5070,8 @@
   {
     "itemSlug": "buckwheat",
     "locale": "ms",
-    "name": "buckwheat"
+    "name": "Gandum kuda",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coconut",
@@ -4919,12 +5091,14 @@
   {
     "itemSlug": "sorghum",
     "locale": "ms",
-    "name": "sorgum"
+    "name": "Sekoi",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage-chinese",
     "locale": "ms",
-    "name": "kobis cina"
+    "name": "Sawi cina",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -4934,7 +5108,8 @@
   {
     "itemSlug": "sweet-potato",
     "locale": "ja",
-    "name": "さつまいも"
+    "name": "サツマイモ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cassava",
@@ -4944,12 +5119,14 @@
   {
     "itemSlug": "sesame",
     "locale": "ja",
-    "name": "ごま"
+    "name": "ゴマ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "buckwheat",
     "locale": "ja",
-    "name": "そば"
+    "name": "ソバ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "coconut",
@@ -4959,22 +5136,26 @@
   {
     "itemSlug": "oats",
     "locale": "ja",
-    "name": "オーツ麦"
+    "name": "エンバク",
+    "status": "reviewed"
   },
   {
     "itemSlug": "millet",
     "locale": "ja",
-    "name": "きび"
+    "name": "キビ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sorghum",
     "locale": "ja",
-    "name": "モロコシ"
+    "name": "ソルガム",
+    "status": "reviewed"
   },
   {
     "itemSlug": "cabbage-chinese",
     "locale": "ja",
-    "name": "白菜"
+    "name": "チンゲンサイ",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -5014,7 +5195,8 @@
   {
     "itemSlug": "millet",
     "locale": "ko",
-    "name": "기장"
+    "name": "조",
+    "status": "reviewed"
   },
   {
     "itemSlug": "sorghum",
@@ -5024,7 +5206,8 @@
   {
     "itemSlug": "cabbage-chinese",
     "locale": "ko",
-    "name": "배추"
+    "name": "청경채",
+    "status": "reviewed"
   },
   {
     "itemSlug": "beans",
@@ -5075,5 +5258,2069 @@
     "itemSlug": "cabbage-chinese",
     "locale": "zh",
     "name": "大白菜"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "ur",
+    "name": "لوسرن",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "hi",
+    "name": "अल्फाल्फा",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "es",
+    "name": "Alfalfa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "ru",
+    "name": "Люцерна",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "fr",
+    "name": "Luzerne",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "de",
+    "name": "Luzerne",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "it",
+    "name": "Erba medica",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "pt",
+    "name": "Alfafa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "bn",
+    "name": "আলফালফা",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "ja",
+    "name": "アルファルファ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "ko",
+    "name": "알팔파",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "ms",
+    "name": "Alfalfa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "pl",
+    "name": "Lucerna",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "id",
+    "name": "Alfalfa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "ar",
+    "name": "البرسيم الحجازي",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "bg",
+    "name": "Люцерна",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "tr",
+    "name": "Yonca",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "alfalfa",
+    "locale": "sv",
+    "name": "Lusern",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "bg",
+    "name": "Ечемик",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "barley",
+    "locale": "sv",
+    "name": "Korn",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "bg",
+    "name": "Фасул",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "beans",
+    "locale": "sv",
+    "name": "Bönor",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "bg",
+    "name": "Патладжан",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "brinjal",
+    "locale": "sv",
+    "name": "Aubergine",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "bg",
+    "name": "Елда",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "buckwheat",
+    "locale": "sv",
+    "name": "Bovete",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "bg",
+    "name": "Зеле",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cabbage",
+    "locale": "sv",
+    "name": "Vitkål",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "bg",
+    "name": "Рапица",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "canola",
+    "locale": "sv",
+    "name": "Raps",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "bg",
+    "name": "Морков",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "carrot",
+    "locale": "sv",
+    "name": "Morot",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "bg",
+    "name": "Маниока",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cassava",
+    "locale": "sv",
+    "name": "Maniok",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "bg",
+    "name": "Карфиол",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cauliflower",
+    "locale": "sv",
+    "name": "Blomkål",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "bg",
+    "name": "Нахут",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chickpea",
+    "locale": "sv",
+    "name": "Kikärt",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "bg",
+    "name": "Лют червен пипер",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chili",
+    "locale": "sv",
+    "name": "Chilipeppar",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "bg",
+    "name": "Китайско зеле",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cabbage-chinese",
+    "locale": "sv",
+    "name": "Pak choi",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "ur",
+    "name": "ناپا بند گوبھی",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "hi",
+    "name": "नापा गोभी",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "es",
+    "name": "Col china Napa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "ru",
+    "name": "Пекинская капуста",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "fr",
+    "name": "Chou de Pékin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "de",
+    "name": "Chinakohl",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "it",
+    "name": "Cavolo di Pechino",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "pt",
+    "name": "Couve-chinesa Napa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "bn",
+    "name": "নাপা বাঁধাকপি",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "ja",
+    "name": "ハクサイ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "ko",
+    "name": "배추",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "ms",
+    "name": "Kobis cina Napa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "pl",
+    "name": "Kapusta pekińska",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "id",
+    "name": "Sawi putih",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "ar",
+    "name": "ملفوف بكين",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "bg",
+    "name": "Пекинско зеле",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "tr",
+    "name": "Pekin lahanası",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "chinese-cabbage",
+    "locale": "sv",
+    "name": "Salladskål",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "bg",
+    "name": "Портокал",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "citrus",
+    "locale": "sv",
+    "name": "Apelsin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "ur",
+    "name": "کوکو",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "hi",
+    "name": "कोको",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "es",
+    "name": "Cacao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "ru",
+    "name": "Какао",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "fr",
+    "name": "Cacao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "de",
+    "name": "Kakao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "it",
+    "name": "Cacao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "pt",
+    "name": "Cacau",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "bn",
+    "name": "কোকো",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "ja",
+    "name": "カカオ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "ko",
+    "name": "카카오",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "ms",
+    "name": "Koko",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "pl",
+    "name": "Kakao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "id",
+    "name": "Kakao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "ar",
+    "name": "كاكاو",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "bg",
+    "name": "Какао",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "tr",
+    "name": "Kakao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cocoa",
+    "locale": "sv",
+    "name": "Kakao",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "bg",
+    "name": "Кокос",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "coconut",
+    "locale": "sv",
+    "name": "Kokosnöt",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "bg",
+    "name": "Кафе арабика",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "coffee",
+    "locale": "sv",
+    "name": "Arabicakaffe",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "ur",
+    "name": "راجما",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "hi",
+    "name": "राजमा",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "es",
+    "name": "Alubia",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "ru",
+    "name": "Фасоль обыкновенная",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "fr",
+    "name": "Haricot commun",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "de",
+    "name": "Gartenbohne",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "it",
+    "name": "Fagiolo comune",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "pt",
+    "name": "Feijão-comum",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "bn",
+    "name": "রাজমা",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "ja",
+    "name": "インゲンマメ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "ko",
+    "name": "강낭콩",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "ms",
+    "name": "Kacang merah",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "pl",
+    "name": "Fasola zwyczajna",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "id",
+    "name": "Kacang merah",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "ar",
+    "name": "فاصولياء شائعة",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "bg",
+    "name": "Обикновен фасул",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "tr",
+    "name": "Kuru fasulye",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "bean",
+    "locale": "sv",
+    "name": "Trädgårdsböna",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "bg",
+    "name": "Памук",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cotton",
+    "locale": "sv",
+    "name": "Bomull",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "ur",
+    "name": "رواں",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "hi",
+    "name": "लोबिया",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "es",
+    "name": "Caupí",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "ru",
+    "name": "Вигна",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "fr",
+    "name": "Niébé",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "de",
+    "name": "Augenbohne",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "it",
+    "name": "Fagiolo dall'occhio",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "pt",
+    "name": "Feijão-fradinho",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "bn",
+    "name": "বরবটি",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "ja",
+    "name": "ササゲ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "ko",
+    "name": "동부",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "ms",
+    "name": "Kacang tolo",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "pl",
+    "name": "Wspięga chińska",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "id",
+    "name": "Kacang tunggak",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "ar",
+    "name": "لوبياء",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "bg",
+    "name": "Вигна",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "tr",
+    "name": "Börülce",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cowpea",
+    "locale": "sv",
+    "name": "Ögonböna",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "bg",
+    "name": "Краставица",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "cucumber",
+    "locale": "sv",
+    "name": "Gurka",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "bg",
+    "name": "Дайкон",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "daikon",
+    "locale": "sv",
+    "name": "Daikon",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "bg",
+    "name": "Твърда пшеница",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "durum-wheat",
+    "locale": "sv",
+    "name": "Durumvete",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "ur",
+    "name": "منڈوا",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "hi",
+    "name": "रागी",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "es",
+    "name": "Mijo dedo",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "ru",
+    "name": "Дагусса",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "fr",
+    "name": "Éleusine cultivée",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "de",
+    "name": "Fingerhirse",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "it",
+    "name": "Miglio africano",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "pt",
+    "name": "Capim-pé-de-galinha",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "bn",
+    "name": "মারুয়া",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "ja",
+    "name": "シコクビエ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "ko",
+    "name": "핑거밀렛",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "ms",
+    "name": "Ragi",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "pl",
+    "name": "Miłka abisyńska",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "id",
+    "name": "Ragi",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "ar",
+    "name": "بشنة أصبعية",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "bg",
+    "name": "Пръстесто просо",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "tr",
+    "name": "Parmak darı",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "finger-millet",
+    "locale": "sv",
+    "name": "Korakan",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "bg",
+    "name": "Чесън",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "garlic",
+    "locale": "sv",
+    "name": "Vitlök",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "bg",
+    "name": "Грозде",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "grape",
+    "locale": "sv",
+    "name": "Vindruva",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "bg",
+    "name": "Фъстък",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "groundnut",
+    "locale": "sv",
+    "name": "Jordnöt",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "bg",
+    "name": "Юта",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "jute",
+    "locale": "sv",
+    "name": "Jute",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "bg",
+    "name": "Леща",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lentil",
+    "locale": "sv",
+    "name": "Lins",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "ur",
+    "name": "ترمس",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "hi",
+    "name": "ल्यूपिन",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "es",
+    "name": "Altramuz",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "ru",
+    "name": "Люпин",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "fr",
+    "name": "Lupin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "de",
+    "name": "Lupine",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "it",
+    "name": "Lupino",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "pt",
+    "name": "Tremoço",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "bn",
+    "name": "লুপিন",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "ja",
+    "name": "ルピナス",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "ko",
+    "name": "루핀",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "ms",
+    "name": "Lupin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "pl",
+    "name": "Łubin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "id",
+    "name": "Lupin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "ar",
+    "name": "ترمس",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "bg",
+    "name": "Лупина",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "tr",
+    "name": "Acıbakla",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "lupins",
+    "locale": "sv",
+    "name": "Lupin",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "bg",
+    "name": "Царевица",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "maize",
+    "locale": "sv",
+    "name": "Majs",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "bg",
+    "name": "Манго",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mango",
+    "locale": "sv",
+    "name": "Mango",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "bg",
+    "name": "Турта",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "marigold",
+    "locale": "sv",
+    "name": "Tagetes",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "bg",
+    "name": "Просо",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "millet",
+    "locale": "sv",
+    "name": "Hirs",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "bg",
+    "name": "Дяволски бръшлян",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "money-plant",
+    "locale": "sv",
+    "name": "Gullranka",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "ur",
+    "name": "مونگ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "hi",
+    "name": "मूँग",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "es",
+    "name": "Judía mungo",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "ru",
+    "name": "Маш",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "fr",
+    "name": "Haricot mungo",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "de",
+    "name": "Mungbohne",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "it",
+    "name": "Fagiolo mungo verde",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "pt",
+    "name": "Feijão-mungo",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "bn",
+    "name": "মুগ ডাল",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "ja",
+    "name": "リョクトウ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "ko",
+    "name": "녹두",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "ms",
+    "name": "Kacang hijau",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "pl",
+    "name": "Fasola mung",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "id",
+    "name": "Kacang hijau",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "ar",
+    "name": "ماش",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "bg",
+    "name": "Мунг",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "tr",
+    "name": "Maş fasulyesi",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mung-bean",
+    "locale": "sv",
+    "name": "Mungböna",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "bg",
+    "name": "Синап",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "mustard",
+    "locale": "sv",
+    "name": "Senap",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "bg",
+    "name": "Пекинско зеле",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "napa-cabbage",
+    "locale": "sv",
+    "name": "Salladskål",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "bg",
+    "name": "Естествен каучук",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rubber",
+    "locale": "sv",
+    "name": "Naturgummi",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "bg",
+    "name": "Нийм",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "neem",
+    "locale": "sv",
+    "name": "Neemträd",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "bg",
+    "name": "Овес",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "oats",
+    "locale": "sv",
+    "name": "Havre",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "bg",
+    "name": "Маслена палма",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "palm-oil",
+    "locale": "sv",
+    "name": "Oljepalm",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "bg",
+    "name": "Бамя",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "okra",
+    "locale": "sv",
+    "name": "Okra",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "bg",
+    "name": "Маслина",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "olive",
+    "locale": "sv",
+    "name": "Oliv",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "bg",
+    "name": "Лук",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "onion",
+    "locale": "sv",
+    "name": "Lök",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "ur",
+    "name": "باجرہ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "hi",
+    "name": "बाजरा",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "es",
+    "name": "Mijo perla",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "ru",
+    "name": "Просо жемчужное",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "fr",
+    "name": "Mil à chandelle",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "de",
+    "name": "Perlhirse",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "it",
+    "name": "Miglio perlato",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "pt",
+    "name": "Milheto-pérola",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "bn",
+    "name": "বাজরা",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "ja",
+    "name": "トウジンビエ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "ko",
+    "name": "진주조",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "ms",
+    "name": "Sekoi mutiara",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "pl",
+    "name": "Rozplenica perłowa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "id",
+    "name": "Milet mutiara",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "ar",
+    "name": "دخن لؤلؤي",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "bg",
+    "name": "Перлено просо",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "tr",
+    "name": "İnci darısı",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pearl-millet",
+    "locale": "sv",
+    "name": "Pärlhirs",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "bg",
+    "name": "Грах",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "peas",
+    "locale": "sv",
+    "name": "Ärtor",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "ur",
+    "name": "شملہ مرچ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "hi",
+    "name": "शिमला मिर्च",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "es",
+    "name": "Pimiento",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "ru",
+    "name": "Сладкий перец",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "fr",
+    "name": "Poivron",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "de",
+    "name": "Paprika",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "it",
+    "name": "Peperone",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "pt",
+    "name": "Pimentão",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "bn",
+    "name": "ক্যাপসিকাম",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "ja",
+    "name": "ピーマン",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "ko",
+    "name": "피망",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "ms",
+    "name": "Lada benggala",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "pl",
+    "name": "Papryka",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "id",
+    "name": "Paprika",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "ar",
+    "name": "فلفل حلو",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "bg",
+    "name": "Чушка",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "tr",
+    "name": "Biber",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pepper",
+    "locale": "sv",
+    "name": "Paprika",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "ur",
+    "name": "ارہر",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "hi",
+    "name": "अरहर",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "es",
+    "name": "Gandul",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "ru",
+    "name": "Голубиный горох",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "fr",
+    "name": "Pois d'Angole",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "de",
+    "name": "Straucherbse",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "it",
+    "name": "Pisello caiano",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "pt",
+    "name": "Feijão-guandu",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "bn",
+    "name": "অড়হর",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "ja",
+    "name": "キマメ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "ko",
+    "name": "비둘기콩",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "ms",
+    "name": "Kacang gude",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "pl",
+    "name": "Nikloz indyjski",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "id",
+    "name": "Kacang gude",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "ar",
+    "name": "بازلاء الحمام",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "bg",
+    "name": "Гълъбов грах",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "tr",
+    "name": "Güvercin bezelyesi",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "pigeon-pea",
+    "locale": "sv",
+    "name": "Duvärt",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "bg",
+    "name": "Картоф",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "potato",
+    "locale": "sv",
+    "name": "Potatis",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "bg",
+    "name": "Репичка",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "radish",
+    "locale": "sv",
+    "name": "Rädisa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "bg",
+    "name": "Ориз",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rice",
+    "locale": "sv",
+    "name": "Ris",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "bg",
+    "name": "Роза",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rose",
+    "locale": "sv",
+    "name": "Ros",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "bg",
+    "name": "Ръж",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "rye",
+    "locale": "sv",
+    "name": "Råg",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "bg",
+    "name": "Сусам",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sesame",
+    "locale": "sv",
+    "name": "Sesam",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "ur",
+    "name": "شلوٹ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "hi",
+    "name": "छोटा प्याज",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "es",
+    "name": "Chalota",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "ru",
+    "name": "Лук-шалот",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "fr",
+    "name": "Échalote",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "de",
+    "name": "Schalotte",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "it",
+    "name": "Scalogno",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "pt",
+    "name": "Chalota",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "bn",
+    "name": "ছোট পেঁয়াজ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "ja",
+    "name": "エシャロット",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "ko",
+    "name": "샬롯",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "ms",
+    "name": "Bawang merah kecil",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "pl",
+    "name": "Szalotka",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "id",
+    "name": "Bawang merah",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "ar",
+    "name": "كراث أندلسي",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "bg",
+    "name": "Шалот",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "tr",
+    "name": "Arpacık soğanı",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "shallot",
+    "locale": "sv",
+    "name": "Schalottenlök",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "bg",
+    "name": "Сорго",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sorghum",
+    "locale": "sv",
+    "name": "Durra",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "bg",
+    "name": "Соя",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "soybean",
+    "locale": "sv",
+    "name": "Sojaböna",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "bg",
+    "name": "Спанак",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "spinach",
+    "locale": "sv",
+    "name": "Spenat",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "bg",
+    "name": "Захарно цвекло",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sugar-beet",
+    "locale": "sv",
+    "name": "Sockerbeta",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "bg",
+    "name": "Захарна тръстика",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sugarcane",
+    "locale": "sv",
+    "name": "Sockerrör",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "bg",
+    "name": "Слънчоглед",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sunflower",
+    "locale": "sv",
+    "name": "Solros",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "bg",
+    "name": "Батат",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "sweet-potato",
+    "locale": "sv",
+    "name": "Sötpotatis",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "bg",
+    "name": "Домат",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "tomato",
+    "locale": "sv",
+    "name": "Tomat",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "bg",
+    "name": "Тритикале",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "triticale",
+    "locale": "sv",
+    "name": "Rågvete",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "bg",
+    "name": "Пшеница",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "wheat",
+    "locale": "sv",
+    "name": "Vete",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "ur",
+    "name": "رتالو",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "hi",
+    "name": "रतालू",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "es",
+    "name": "Ñame",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "ru",
+    "name": "Ямс",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "fr",
+    "name": "Igname",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "de",
+    "name": "Yam",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "it",
+    "name": "Igname",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "pt",
+    "name": "Inhame",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "bn",
+    "name": "মেটে আলু",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "ja",
+    "name": "ヤムイモ",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "ko",
+    "name": "참마",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "ms",
+    "name": "Ubi badak",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "pl",
+    "name": "Jam",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "id",
+    "name": "Ubi kelapa",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "ar",
+    "name": "يام",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "bg",
+    "name": "Ямс",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "tr",
+    "name": "Hint yerelması",
+    "status": "reviewed"
+  },
+  {
+    "itemSlug": "yam",
+    "locale": "sv",
+    "name": "Jams",
+    "status": "reviewed"
   }
 ]

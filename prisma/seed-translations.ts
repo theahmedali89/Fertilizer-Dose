@@ -1,12 +1,15 @@
 /**
- * Seed AI-authored translations of growing-item names.
+ * Seed translations of growing-item names.
  *
- * Source: prisma/data/translations.json (45 items x 18 locales = 810 rows).
- * Every record is created with status "draft" — AI translations, NOT native-reviewed.
- * A disclaimer is shown in the UI wherever these names are used.
+ * Source: prisma/data/translations.json.
+ * Rows WITHOUT "status" (or status "draft") are AI-authored: created with status
+ * "draft" and NEVER overwritten, so admin CMS edits survive re-seeding.
+ * Rows WITH "status": "reviewed" are human-vetted (Ahmed's dictionary batches):
+ * they UPSERT by the @@unique([growingItemId, locale]) key, so the JSON stays
+ * the source of truth for reviewed names. A disclaimer is shown in the UI
+ * wherever draft names are used.
  *
- * INSERT-IF-MISSING semantics: existing records are NEVER overwritten,
- * so admin CMS edits always survive re-seeding. Safe to run on every deploy.
+ * Safe to run on every deploy.
  */
 import { PrismaClient } from "@prisma/client";
 import translations from "./data/translations.json";
@@ -16,6 +19,7 @@ type TranslationRow = {
   locale: string;
   name: string;
   localName?: string;
+  status?: string; // "reviewed" => human-vetted, upsert; otherwise insert-if-missing
 };
 
 export async function seedTranslations(db: PrismaClient) {
@@ -26,6 +30,7 @@ export async function seedTranslations(db: PrismaClient) {
   const bySlug = new Map(items.map((i) => [i.slug, i.id]));
 
   let created = 0;
+  let upserted = 0;
   let missing = 0;
   for (const t of rows) {
     const growingItemId = bySlug.get(t.itemSlug);
@@ -33,11 +38,28 @@ export async function seedTranslations(db: PrismaClient) {
       missing++;
       continue;
     }
+    const key = { growingItemId_locale: { growingItemId, locale: t.locale } };
+    if (t.status === "reviewed") {
+      // Human-vetted: JSON is source of truth — upsert.
+      await db.growingItemTranslation.upsert({
+        where: key,
+        update: { name: t.name, localName: t.localName ?? null, status: "reviewed" },
+        create: {
+          growingItemId,
+          locale: t.locale,
+          name: t.name,
+          localName: t.localName ?? null,
+          status: "reviewed",
+        },
+      });
+      upserted++;
+      continue;
+    }
     const existing = await db.growingItemTranslation.findUnique({
-      where: { growingItemId_locale: { growingItemId, locale: t.locale } },
+      where: key,
       select: { id: true },
     });
-    if (existing) continue; // never overwrite admin edits
+    if (existing) continue; // never overwrite admin edits on draft rows
     await db.growingItemTranslation.create({
       data: {
         growingItemId,
@@ -50,7 +72,7 @@ export async function seedTranslations(db: PrismaClient) {
     created++;
   }
   console.log(
-    `translations: created ${created} draft records` +
+    `translations: created ${created} draft records, upserted ${upserted} reviewed records` +
       (missing ? `, skipped ${missing} rows with unknown slug` : "")
   );
 }
