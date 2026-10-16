@@ -55,25 +55,38 @@ export async function diagnosePlant(input: {
     `Symptoms described by farmer: ${input.symptoms}`,
   ].join("\n");
 
-  const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents: [
-          {
-            parts: [
-              { text: userText },
-              { inlineData: { mimeType: input.mimeType, data: input.imageBase64 } },
-            ],
-          },
-        ],
-        generationConfig: { temperature: 0.2, maxOutputTokens: 1200, responseMimeType: "application/json" },
-      }),
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 50_000);
+  let res: Response;
+  try {
+    res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          contents: [
+            {
+              parts: [
+                { text: userText },
+                { inlineData: { mimeType: input.mimeType, data: input.imageBase64 } },
+              ],
+            },
+          ],
+          generationConfig: { temperature: 0.2, maxOutputTokens: 1200, responseMimeType: "application/json" },
+        }),
+        signal: controller.signal,
+      }
+    );
+  } catch (e) {
+    clearTimeout(timeout);
+    if ((e as Error).name === "AbortError") {
+      throw new Error("Gemini request timed out after 50s.");
     }
-  );
+    throw new Error(`Gemini network error: ${(e as Error).message}`);
+  }
+  clearTimeout(timeout);
 
   if (!res.ok) {
     const text = await res.text().catch(() => "");

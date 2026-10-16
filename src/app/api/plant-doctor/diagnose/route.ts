@@ -134,6 +134,25 @@ export async function POST(req: NextRequest) {
         { status: 502 }
       );
     }
+    if (/500|502|503/.test(msg)) {
+      // Google's own servers errored — transient, retrying later may work.
+      return NextResponse.json(
+        { error: "The AI service is having temporary problems. Please try again in a few minutes." },
+        { status: 502 }
+      );
+    }
+    if (/timed out|network error/i.test(msg)) {
+      return NextResponse.json(
+        { error: "The AI service took too long to respond. Please try again with a smaller photo." },
+        { status: 504 }
+      );
+    }
+    if (/empty response|unparseable|malformed/i.test(msg)) {
+      return NextResponse.json(
+        { error: "The AI returned an unclear result. Please try again with a clearer photo." },
+        { status: 502 }
+      );
+    }
     return NextResponse.json(
       { error: "Diagnosis failed. Please try again in a moment." },
       { status: 502 }
