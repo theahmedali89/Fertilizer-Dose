@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { getPosts, getPost } from "@/server/data";
+import { getPostsLocalized, getPostLocalized } from "@/server/data";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  const posts = await getPosts();
+  const posts = await getPostsLocalized("en");
   return posts.map((p) => ({ slug: p.slug }));
 }
 
@@ -23,7 +23,7 @@ export async function generateMetadata({
 }) {
   try {
     const { locale, slug } = await params;
-    const p = await getPost(slug);
+    const p = await getPostLocalized(slug, locale);
     if (!p) return {};
     return localizedMetadata({
       locale,
@@ -44,9 +44,9 @@ export default async function BlogPostPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "blog" });
-  const post = await getPost(slug);
+  const post = await getPostLocalized(slug, locale);
   if (!post) notFound();
-  const related = (await getPosts()).filter((p) => p.slug !== post.slug).slice(0, 2);
+  const related = (await getPostsLocalized(locale)).filter((p) => p.slug !== post.slug).slice(0, 2);
   const postUrl = `${siteConfig.url}/blog/${post.slug}`;
 
   return (

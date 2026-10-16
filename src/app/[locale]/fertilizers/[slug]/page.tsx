@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { getFertilizers, getFertilizer } from "@/server/data";
+import { getFertilizers, getFertilizer, getFertilizerLocalized, getFertilizersLocalized } from "@/server/data";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { FertilizerLocalName } from "@/components/fertilizers/FertilizerLocalName";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
@@ -58,9 +59,9 @@ export default async function FertilizerDetail({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("fertilizers");
-  const f = await getFertilizer(slug);
+  const f = await getFertilizerLocalized(slug, locale);
   if (!f) notFound();
-  const fertilizers = await getFertilizers();
+  const fertilizers = await getFertilizersLocalized(locale);
   const fertUrl = `${siteConfig.url}/fertilizers/${f.slug}`;
   const isOrganic = f.fertilizerType === "organic";
 
@@ -99,7 +100,7 @@ export default async function FertilizerDetail({
           </div>
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">
             {f.name}{" "}
-            <span className="text-2xl font-sans font-normal text-ink-faint" lang="ur">{f.urdu}</span>
+            <FertilizerLocalName f={f} locale={locale} className="text-2xl font-sans font-normal text-ink-faint" />
           </h1>
           <p className="mt-3 text-lg text-ink-soft max-w-2xl">{f.tagline}</p>
           <div className="mt-6 inline-flex flex-wrap items-center gap-x-6 gap-y-2 rounded-2xl border border-line bg-surface-2 px-6 py-4 font-mono">

@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { getPosts } from "@/server/data";
+import { getPostsLocalized } from "@/server/data";
 
 export const revalidate = 3600;
 
@@ -35,7 +35,7 @@ export default async function BlogPage({
   const sp = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "blog" });
-  const posts = await getPosts();
+  const posts = await getPostsLocalized(locale);
 
   const POSTS_PER_PAGE = 12;
   const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));

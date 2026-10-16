@@ -1,11 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Input } from "@/components/ui/fields";
+import { FertilizerLocalName } from "@/components/fertilizers/FertilizerLocalName";
 import type { FertilizerInfo } from "@/lib/agronomy";
 
 type Tab = "all" | "mineral" | "organic";
@@ -37,6 +38,7 @@ function NpkLine({ f }: { f: FertilizerInfo }) {
 
 export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo[] }) {
   const t = useTranslations("fertilizers");
+  const locale = useLocale();
   const [tab, setTab] = useState<Tab>("all");
   const [query, setQuery] = useState("");
 
@@ -52,7 +54,8 @@ export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo
       (f) =>
         f.name.toLowerCase().includes(q) ||
         f.slug.toLowerCase().includes(q) ||
-        (f.urdu ?? "").includes(query.trim())
+        (f.urdu ?? "").includes(query.trim()) ||
+        (f.localName ?? "").toLowerCase().includes(q)
     );
   }, [tabbed, query]);
 
@@ -115,7 +118,7 @@ export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo
                 </div>
                 <h2 className="font-display text-xl font-semibold group-hover:text-leaf-700 dark:group-hover:text-leaf-300 transition-colors">
                   {f.name}{" "}
-                  <span className="text-sm font-sans font-normal text-ink-faint" lang="ur">{f.urdu}</span>
+                  <FertilizerLocalName f={f} locale={locale} className="text-sm font-sans font-normal text-ink-faint" />
                 </h2>
                 <NpkLine f={f} />
                 <p className="mt-3 text-sm text-ink-soft leading-relaxed">{f.tagline}</p>

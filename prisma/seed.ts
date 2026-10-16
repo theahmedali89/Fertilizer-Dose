@@ -43,6 +43,8 @@ import { seedVegdose } from "./seed-vegdose";
 import { seedImport20261015 } from "./seed-import-2026-10-15";
 import { seedImport20261015Part2 } from "./seed-import-2026-10-15-part2";
 import { seedTranslations } from "./seed-translations";
+import { seedPostTranslations } from "./seed-post-translations";
+import { seedFertilizerNames } from "./seed-fertilizer-names";
 
 const connectionString = process.env.DATABASE_URL ?? process.env.DATABASE_POSTGRES_URL;
 if (!connectionString) {
@@ -449,6 +451,12 @@ async function main() {
 
   // ── AI translations (draft, NOT native-reviewed) — approved 2026-10-06 ──
   await seedTranslations(db);
+
+  // ── Blog post translations (machine-translated drafts, status ai_draft) — approved 2026-10-16 ──
+  await seedPostTranslations(db);
+
+  // ── Fertilizer name translations (Ahmed-supplied, authoritative) — approved 2026-10-16 ──
+  await seedFertilizerNames(db);
 
   console.log("seed complete");
 }

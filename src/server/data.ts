@@ -55,9 +55,10 @@ function toFertilizerInfo(r: {
   pMin: number | null; pMax: number | null;
   kMin: number | null; kMax: number | null;
   sourceUrl: string | null;
-}): FertilizerInfo {
+}, localName?: string): FertilizerInfo {
   return {
     slug: r.slug, name: r.name, urdu: r.urdu ?? "",
+    localName: localName ?? r.urdu ?? "",
     n: r.n, p: r.p, k: r.k, tagline: r.tagline ?? "",
     description: r.description, benefits: r.benefits,
     precautions: r.precautions, application: r.application,
@@ -83,12 +84,39 @@ export async function getFertilizers(): Promise<FertilizerInfo[]> {
       where: { published: true }, orderBy: { name: "asc" },
     });
     if (!rows.length) return STATIC_ALL_FERTILIZERS;
-    return rows.map(toFertilizerInfo);
+    return rows.map((r) => toFertilizerInfo(r));
   }, STATIC_ALL_FERTILIZERS);
 }
 
 export async function getFertilizer(slug: string): Promise<FertilizerInfo | undefined> {
   const all = await getFertilizers();
+  return all.find((f) => f.slug === slug);
+}
+
+/**
+ * Localized fertilizer getters. `localName` = FertilizerTranslation for the
+ * requested locale, falling back to the legacy `urdu` column, then "".
+ * (User-supplied names, 2026-10-16 — authoritative, not AI drafts.)
+ */
+export async function getFertilizersLocalized(locale: string): Promise<FertilizerInfo[]> {
+  return tryDb(async () => {
+    const rows = await db.fertilizer.findMany({
+      where: { published: true },
+      orderBy: { name: "asc" },
+      include: { translations: { where: { locale }, select: { name: true } } },
+    });
+    if (!rows.length) return STATIC_ALL_FERTILIZERS;
+    return rows.map((r) =>
+      toFertilizerInfo(r, r.translations[0]?.name ?? r.urdu ?? ""),
+    );
+  }, STATIC_ALL_FERTILIZERS);
+}
+
+export async function getFertilizerLocalized(
+  slug: string,
+  locale: string,
+): Promise<FertilizerInfo | undefined> {
+  const all = await getFertilizersLocalized(locale);
   return all.find((f) => f.slug === slug);
 }
 
@@ -265,6 +293,52 @@ export async function getPosts(): Promise<BlogPost[]> {
 
 export async function getPost(slug: string): Promise<BlogPost | undefined> {
   const all = await getPosts();
+  return all.find((p) => p.slug === slug);
+}
+
+/* ── Blog (localized) ── */
+
+/** Apply a PostTranslation row onto a BlogPost, falling back to English. */
+function applyTranslation(
+  base: BlogPost,
+  t: { title: string; excerpt: string; body: string } | undefined,
+): BlogPost {
+  if (!t) return base;
+  const paras = t.body.split("\n\n").filter((p) => p.trim().length > 0);
+  return {
+    ...base,
+    title: t.title,
+    excerpt: t.excerpt,
+    body: paras.length ? paras : base.body,
+    readMinutes: Math.max(1, Math.round(t.body.split(/\s+/).length / 200)),
+  };
+}
+
+/**
+ * Blog posts with title/excerpt/body in the requested locale when a
+ * translation exists; English fallback per post otherwise. "en" skips
+ * the translation query entirely.
+ */
+export async function getPostsLocalized(locale: string): Promise<BlogPost[]> {
+  if (!locale || locale === "en") return getPosts();
+  return tryDb(async () => {
+    const rows = await db.post.findMany({
+      where: { published: true },
+      orderBy: { publishedAt: "desc" },
+      include: { translations: { where: { locale } } },
+    });
+    if (!rows.length) return STATIC_POSTS;
+    const dbSlugs = new Set(rows.map((r) => r.slug));
+    const localized = rows.map((r) => applyTranslation(toBlogPost(r), r.translations[0]));
+    return [...localized, ...STATIC_POSTS.filter((p) => !dbSlugs.has(p.slug))];
+  }, STATIC_POSTS);
+}
+
+export async function getPostLocalized(
+  slug: string,
+  locale: string,
+): Promise<BlogPost | undefined> {
+  const all = await getPostsLocalized(locale);
   return all.find((p) => p.slug === slug);
 }
 

@@ -14,6 +14,11 @@ export interface FertilizerInfo {
   name: string;
   urdu: string;
   /**
+   * Localized common name for the current locale (from FertilizerTranslation),
+   * falling back to `urdu`, then "". Set by getFertilizersLocalized().
+   */
+  localName?: string;
+  /**
    * Single label value (% N / % P2O5 / % K2O). NULL for organics with
    * ranges — there is NO single honest value, and storing a midpoint
    * would be fake precision.

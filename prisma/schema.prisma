@@ -132,6 +132,19 @@ model Fertilizer {
   sourceUrl         String?
 
   sources FertilizerSource[]
+  translations FertilizerTranslation[]
+}
+
+// ── Fertilizer name translations (user-supplied localized common names) ──
+model FertilizerTranslation {
+  id           String     @id @default(cuid())
+  fertilizerId String
+  locale       String
+  name         String
+  fertilizer   Fertilizer @relation(fields: [fertilizerId], references: [id], onDelete: Cascade)
+
+  @@unique([fertilizerId, locale])
+  @@index([locale])
 }
 
 // ── CMS: growing library (crops, plants, vegetables) ────
@@ -408,6 +421,24 @@ model Post {
   publishedAt DateTime?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+
+  translations PostTranslation[]
+}
+
+model PostTranslation {
+  id        String   @id @default(cuid())
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  locale    String
+  title     String
+  excerpt   String   @db.Text
+  body      String   @db.Text
+  status    String   @default("ai_draft")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([postId, locale])
+  @@index([locale])
 }
 
 model Faq {

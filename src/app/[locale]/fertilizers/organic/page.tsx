@@ -4,7 +4,8 @@ import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { getFertilizers } from "@/server/data";
+import { getFertilizersLocalized } from "@/server/data";
+import { FertilizerLocalName } from "@/components/fertilizers/FertilizerLocalName";
 
 export const revalidate = 86400;
 
@@ -33,7 +34,7 @@ export default async function OrganicHubPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("fertilizers");
-  const organics = (await getFertilizers()).filter((f) => f.fertilizerType === "organic");
+  const organics = (await getFertilizersLocalized(locale)).filter((f) => f.fertilizerType === "organic");
   const compareRows = t.raw("organic.compareRows") as CompareRow[];
   const uses = t.raw("organic.uses") as string[];
   const limits = t.raw("organic.limits") as string[];
@@ -76,7 +77,7 @@ export default async function OrganicHubPage({
                   </div>
                   <h3 className="font-display text-xl font-semibold">
                     {f.name}{" "}
-                    <span className="text-sm font-sans font-normal text-ink-faint" lang="ur">{f.urdu}</span>
+                    <FertilizerLocalName f={f} locale={locale} className="text-sm font-sans font-normal text-ink-faint" />
                   </h3>
                   <p className="mt-2 font-mono text-sm">
                     <span className="text-ink-faint">N</span> {range(f.nMin, f.nMax)} ·{" "}

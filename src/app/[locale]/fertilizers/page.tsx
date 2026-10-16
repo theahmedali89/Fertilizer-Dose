@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { localizedMetadata } from "@/lib/seo";
 import { Section } from "@/components/ui/Section";
 import { FertilizerLibrary } from "@/components/fertilizers/FertilizerLibrary";
-import { getFertilizers } from "@/server/data";
+import { getFertilizersLocalized } from "@/server/data";
 
 export const revalidate = 3600;
 
@@ -29,7 +29,7 @@ export default async function FertilizersPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("fertilizers");
-  const fertilizers = await getFertilizers();
+  const fertilizers = await getFertilizersLocalized(locale);
   return (
     <>
       <section className="border-b border-line bg-surface">
