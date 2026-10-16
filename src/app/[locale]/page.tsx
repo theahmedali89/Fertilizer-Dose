@@ -87,7 +87,6 @@ export default async function Home({
   const bullets = t.raw("doctor.bullets") as { t: string; d: string }[];
   const whyItems = t.raw("why.items") as { t: string; d: string }[];
   const isEn = locale === "en";
-  const urduAccents = ["مقدار کیلکولیٹر", "پودوں کا ڈاکٹر", "کھاد لائبریری", "فصل لائبریری", "منافع کیلکولیٹر", "موازنہ"];
   // Locale-aware crop names for the popular-crops cards (fallback: English).
   const cropNames = await getTranslatedItemNames(
     CROPS.map((c) => c.slug),
@@ -255,13 +254,8 @@ export default async function Home({
                       {TOOL_ICONS[["calculator", "doctor", "fertilizers", "crops", "profit", "compare"][i]]}
                     </span>
                     <span>
-                      <span className="font-display text-lg font-semibold flex items-baseline gap-2">
+                      <span className="font-display text-lg font-semibold">
                         {card.title}
-                        {isEn && (
-                          <span className="text-xs font-sans font-normal text-ink-faint" lang="ur">
-                            {urduAccents[i]}
-                          </span>
-                        )}
                       </span>
                       <span className="block mt-1.5 text-sm text-ink-soft leading-relaxed">{card.desc}</span>
                     </span>

@@ -63,6 +63,14 @@ export function Footer() {
             <p className="mt-4 text-xs text-ink-faint leading-relaxed max-w-xs">
               {t("disclaimer")}
             </p>
+            <p className="mt-3 text-sm">
+              <a
+                href="mailto:postmaster@fertdose.com"
+                className="font-medium text-leaf-700 hover:text-leaf-800 dark:text-leaf-300 dark:hover:text-leaf-200 transition-colors"
+              >
+                postmaster@fertdose.com
+              </a>
+            </p>
           </div>
           {COLS.map((col) => (
             <nav key={col.title} aria-label={col.title}>
