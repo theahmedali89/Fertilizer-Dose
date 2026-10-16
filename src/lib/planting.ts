@@ -19,7 +19,7 @@ import type { SourceRef, GrowingCategory } from "./growing";
 
 export interface Region {
   id: string; // e.g. "pk-punjab"
-  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain" | "china";
+  country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain" | "china" | "bangladesh" | "united-states" | "brazil" | "australia" | "indonesia" | "germany" | "france" | "italy" | "poland";
   countryName: string;
   name: string;
 }
@@ -69,22 +69,61 @@ export const REGIONS: Region[] = [
   { id: "cn-northeast", country: "china", countryName: "China", name: "Northeast China" },
   { id: "cn-ncp", country: "china", countryName: "China", name: "North China Plain" },
   { id: "cn-yangtze", country: "china", countryName: "China", name: "Yangtze River Basin" },
+  // — Bangladesh (batch 9, 2026-10-16, under_review) —
+  { id: "bd-central", country: "bangladesh", countryName: "Bangladesh", name: "Central Bangladesh (Dhaka/Gazipur)" },
+  { id: "bd-north", country: "bangladesh", countryName: "Bangladesh", name: "North Bangladesh (Rangpur)" },
+  { id: "bd-southeast", country: "bangladesh", countryName: "Bangladesh", name: "Southeast Bangladesh (Chattogram)" },
+  // — United States (batch 9, 2026-10-16, under_review) —
+  { id: "us-midwest", country: "united-states", countryName: "United States", name: "Midwest Corn Belt" },
+  { id: "us-california", country: "united-states", countryName: "United States", name: "California Central Valley" },
+  { id: "us-southeast", country: "united-states", countryName: "United States", name: "Southeast" },
+  { id: "us-pnw", country: "united-states", countryName: "United States", name: "Pacific Northwest" },
+  // — Brazil (batch 9, 2026-10-16, under_review) —
+  { id: "br-centerwest", country: "brazil", countryName: "Brazil", name: "Center-West (Mato Grosso)" },
+  { id: "br-southeast", country: "brazil", countryName: "Brazil", name: "Southeast" },
+  { id: "br-south", country: "brazil", countryName: "Brazil", name: "South" },
+  { id: "br-northeast", country: "brazil", countryName: "Brazil", name: "Northeast" },
+  // — Australia (batch 9, 2026-10-16, under_review) —
+  { id: "au-nsw", country: "australia", countryName: "Australia", name: "New South Wales" },
+  { id: "au-victoria", country: "australia", countryName: "Australia", name: "Victoria" },
+  { id: "au-queensland", country: "australia", countryName: "Australia", name: "Queensland" },
+  { id: "au-wa", country: "australia", countryName: "Australia", name: "Western Australia" },
+  // — Indonesia (batch 9, 2026-10-16, under_review) —
+  { id: "id-java", country: "indonesia", countryName: "Indonesia", name: "Java" },
+  { id: "id-sumatra", country: "indonesia", countryName: "Indonesia", name: "Sumatra" },
+  { id: "id-sulawesi", country: "indonesia", countryName: "Indonesia", name: "Sulawesi" },
+  // — Germany (batch 9, 2026-10-16, under_review) —
+  { id: "de-north", country: "germany", countryName: "Germany", name: "North German Plain" },
+  { id: "de-bavaria", country: "germany", countryName: "Germany", name: "Bavaria" },
+  { id: "de-rhine", country: "germany", countryName: "Germany", name: "Upper Rhine Valley" },
+  // — France (batch 9, 2026-10-16, under_review) —
+  { id: "fr-paris", country: "france", countryName: "France", name: "Paris Basin" },
+  { id: "fr-brittany", country: "france", countryName: "France", name: "Brittany" },
+  { id: "fr-south", country: "france", countryName: "France", name: "Mediterranean South" },
+  // — Italy (batch 9, 2026-10-16, under_review) —
+  { id: "it-po", country: "italy", countryName: "Italy", name: "Po Valley" },
+  { id: "it-central", country: "italy", countryName: "Italy", name: "Central Italy" },
+  { id: "it-south", country: "italy", countryName: "Italy", name: "South & Islands" },
+  // — Poland (batch 9, 2026-10-16, under_review) —
+  { id: "pl-central", country: "poland", countryName: "Poland", name: "Central Poland" },
+  { id: "pl-west", country: "poland", countryName: "Poland", name: "West Poland" },
+  { id: "pl-east", country: "poland", countryName: "Poland", name: "East Poland" },
 ];
 
 export function getRegion(id: string): Region | undefined {
   return REGIONS.find((r) => r.id === id);
 }
 
-export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain" | "china"): Region[] {
+export function regionsByCountry(country: "pakistan" | "india" | "malaysia" | "south_korea" | "turkiye" | "japan" | "spain" | "china" | "bangladesh" | "united-states" | "brazil" | "australia" | "indonesia" | "germany" | "france" | "italy" | "poland"): Region[] {
   return REGIONS.filter((r) => r.country === country);
 }
 
-const editorialSource = (region: Region): SourceRef => ({
+const editorialSource = (region: Region, reviewed = "2026-10-04"): SourceRef => ({
   organization: "Fertilizer Dose editorial",
   title: "Regional crop calendar summary, derived from the app's published crop guidance",
   country: region.countryName,
   region: region.name,
-  lastReviewed: "2026-10-04",
+  lastReviewed: reviewed,
 });
 
 function window(
@@ -93,7 +132,8 @@ function window(
   startMonth: number,
   endMonth: number,
   harvestText: string | null,
-  notes: string | null
+  notes: string | null,
+  reviewed = "2026-10-04"
 ): PlantingWindow {
   const region = getRegion(regionId)!;
   return {
@@ -103,9 +143,9 @@ function window(
     endMonth,
     harvestText,
     notes,
-    source: editorialSource(region),
+    source: editorialSource(region, reviewed),
     verificationStatus: "under_review",
-    lastReviewed: "2026-10-04",
+    lastReviewed: reviewed,
   };
 }
 
@@ -981,6 +1021,291 @@ export const PLANTING_WINDOWS: PlantingWindow[] = [
   ...spainVegWindows(),
   // — China vegetable windows (MARA / CAAS / SAAS / HBAAS, verified) —
   ...chinaVegWindows(),
+  // — Paris Basin, France (batch 9, 2026-10-16, under_review) —
+  // Sources: Arvalis; Terres Inovia; Académie d'Agriculture; ITB; La Bonne Graine.
+  window("fr-paris", "wheat", 9, 11, "July – August", "Winter wheat; optimal early–mid October. (Arvalis)", "2026-10-16"),
+  window("fr-paris", "barley", 9, 11, "June – July", "Winter barley. (Arvalis)", "2026-10-16"),
+  window("fr-paris", "maize", 4, 5, "October", "Grain maize; sow once soil reaches 10°C, late April–mid May. (Arvalis)", "2026-10-16"),
+  window("fr-paris", "sugar-beet", 3, 4, "October – November", "Sow after mid-March frosts to end April. (ITB)", "2026-10-16"),
+  window("fr-paris", "potato", 3, 4, "July – October", "Plant once soil reaches 8°C. (Arvalis)", "2026-10-16"),
+  window("fr-paris", "canola", 8, 9, "June – mid-July", "Winter rapeseed; sow mid-August–September. (Terres Inovia)", "2026-10-16"),
+  window("fr-paris", "sunflower", 4, 5, "September – October", "Sow once soil ≥8°C. (Terres Inovia)", "2026-10-16"),
+  window("fr-paris", "onion", 2, 3, "July – August", "Spring-sown dry onion. (La Bonne Graine)", "2026-10-16"),
+  // — Brittany, France (batch 9, 2026-10-16, under_review) —
+  // Sources: Arvalis; Terres Inovia; PotagerFruitier.
+  window("fr-brittany", "wheat", 9, 11, "July – August", "Winter wheat. (Arvalis)", "2026-10-16"),
+  window("fr-brittany", "barley", 9, 11, "June – July", "Winter barley. (Arvalis)", "2026-10-16"),
+  window("fr-brittany", "maize", 4, 5, "October", "Mostly silage maize in Brittany. (Arvalis)", "2026-10-16"),
+  window("fr-brittany", "potato", 3, 4, "July – October", "Major potato region; plant once soil reaches 8°C. (Arvalis)", "2026-10-16"),
+  window("fr-brittany", "canola", 8, 9, "June – mid-July", "Winter rapeseed; maritime edge up to early September. (Terres Inovia)", "2026-10-16"),
+  window("fr-brittany", "onion", 2, 3, "July – August", "Bulbilles planted end March–April in oceanic zone. (PotagerFruitier)", "2026-10-16"),
+  // — Mediterranean South, France (batch 9, 2026-10-16, under_review) —
+  // Sources: Arvalis; Terres Inovia; Chambres d'Agriculture; PotagerFruitier.
+  window("fr-south", "wheat", 9, 11, "June – July", "Winter wheat; southern sowings 20 Oct–30 Nov. (Arvalis)", "2026-10-16"),
+  window("fr-south", "durum-wheat", 10, 11, "June – July", "Winter durum, main French zone; best 20 Oct–15 Nov. (Arvalis)", "2026-10-16"),
+  window("fr-south", "barley", 9, 11, "June – July", "Winter barley. (Arvalis)", "2026-10-16"),
+  window("fr-south", "maize", 3, 5, "September – October", "Earlier than north; sowing can start end March. (Arvalis)", "2026-10-16"),
+  window("fr-south", "sunflower", 3, 5, "August – September", "Can start late March in the south. (Terres Inovia)", "2026-10-16"),
+  window("fr-south", "canola", 8, 9, "June – mid-July", "Winter rapeseed; south-east up to 10 September. (Terres Inovia)", "2026-10-16"),
+  window("fr-south", "grape", 11, 4, null, "Perennial — new vineyard planting: Dec–Mar bare-root, Feb–Oct potted. (Chambres d'Agriculture)", "2026-10-16"),
+  window("fr-south", "onion", 2, 3, "June – July", "Bulbilles from end February in Mediterranean zone. (PotagerFruitier)", "2026-10-16"),
+  // — Po Valley, Italy (batch 9, 2026-10-16, under_review) —
+  // Sources: Regione Emilia-Romagna DPI; Ente Nazionale Risi; OI Pomodoro Nord Italia; Sais Sementi.
+  window("it-po", "durum-wheat", 10, 11, "June – July", "Sow from second half of October. (Regione Emilia-Romagna DPI)", "2026-10-16"),
+  window("it-po", "maize", 4, 6, "August – October", "1st sowing April, delayed May, 2nd sowing June. (Regione Emilia-Romagna NTA 2025)", "2026-10-16"),
+  window("it-po", "rice", 4, 5, "September – October", "Sown April; harvest starts late September. (Ente Nazionale Risi)", "2026-10-16"),
+  window("it-po", "soybean", 4, 5, "September – October", "Sow once soil ≥10°C, typically April–May. (AgroNotizie)", "2026-10-16"),
+  window("it-po", "sugar-beet", 2, 3, "August – September", "Sow end February; 180-day cycle. (Italian bieticoltura guide)", "2026-10-16"),
+  window("it-po", "tomato", 4, 5, "July – September", "Transplant mid-April to ~20 June. (OI Pomodoro da Industria Nord Italia)", "2026-10-16"),
+  window("it-po", "sunflower", 3, 5, "August – September", "Sow late March–May once soil warms. (AgroNotizie)", "2026-10-16"),
+  window("it-po", "potato", 3, 4, "June – August", "Plant March–April in the north. (Orto da Coltivare)", "2026-10-16"),
+  window("it-po", "onion", 2, 3, "June – July", "Spring types sown mid/late Feb–early Mar. (Regione Emilia-Romagna DPI 2026)", "2026-10-16"),
+  window("it-po", "grape", 10, 4, null, "Perennial — new vineyard establishment, autumn to spring. (Vivai Borgato)", "2026-10-16"),
+  window("it-po", "olive", 2, 3, null, "Perennial — messa a dimora in new groves, February–March. (Vademecum dell'Olivicoltore 2026)", "2026-10-16"),
+  // — Central Italy (batch 9, 2026-10-16, under_review) —
+  // Sources: AgroNotizie; Regione Toscana; Regione Emilia-Romagna DPI; Vivai Borgato.
+  window("it-central", "durum-wheat", 10, 11, "June – July", "Autumn sowing, late Oct–early Nov. (AgroNotizie)", "2026-10-16"),
+  window("it-central", "maize", 4, 5, "August – October", "Spring sowing. (AgroNotizie)", "2026-10-16"),
+  window("it-central", "soybean", 4, 5, "September – October", "Sow once soil ≥10°C. (AgroNotizie)", "2026-10-16"),
+  window("it-central", "sunflower", 3, 5, "August – September", "Sow end March–May. (AgroNotizie)", "2026-10-16"),
+  window("it-central", "tomato", 4, 5, "July – September", "Transplant mid-April to 3rd decade of May. (Regione Toscana)", "2026-10-16"),
+  window("it-central", "potato", 3, 3, "June – July", "Plant March in central Italy. (Orto da Coltivare)", "2026-10-16"),
+  window("it-central", "onion", 2, 3, "June – July", "Spring types sown Feb–Mar; Cannara tradition: February. (Regione Emilia-Romagna DPI)", "2026-10-16"),
+  window("it-central", "grape", 10, 4, null, "Perennial — new vineyard establishment, autumn to spring. (Vivai Borgato)", "2026-10-16"),
+  window("it-central", "olive", 2, 3, null, "Perennial — new groves, Feb–Mar. (Vademecum dell'Olivicoltore 2026)", "2026-10-16"),
+  // — South & Islands, Italy (batch 9, 2026-10-16, under_review) —
+  // Sources: AgroNotizie; ANICAV; Sais Sementi; ARSAC; FruitJournal.
+  window("it-south", "durum-wheat", 10, 11, "June", "Main Italian durum zone; Puglia late Oct–Nov. (AgroNotizie)", "2026-10-16"),
+  window("it-south", "sunflower", 3, 4, "August – September", "Sow March–April. (AgroNotizie)", "2026-10-16"),
+  window("it-south", "tomato", 3, 5, "June – September", "Earlier transplanting in the south, March–May. (ANICAV)", "2026-10-16"),
+  window("it-south", "potato", 1, 2, "April – June", "Plant January–February in the south. (Orto da Coltivare)", "2026-10-16"),
+  window("it-south", "onion", 8, 10, "May – June", "Autumn sowing in the south; Tropea: sow mid-Aug–early Oct. (Sais Sementi)", "2026-10-16"),
+  window("it-south", "grape", 10, 4, null, "Perennial — new vineyard establishment, autumn to spring. (Vivai Borgato)", "2026-10-16"),
+  window("it-south", "olive", 2, 3, null, "Perennial — new groves, Feb–Mar (also autumn in the south). (Vademecum dell'Olivicoltore)", "2026-10-16"),
+  window("it-south", "citrus", 2, 4, null, "Perennial — plant late winter–early spring before vegetative restart. (FruitJournal)", "2026-10-16"),
+  // — Central Poland (batch 9, 2026-10-16, under_review) —
+  // Sources: Hestia crop-insurance sowing norms; IHAR-HR Strzelce; Infouprawa; PoradnikOgrodniczy.
+  // Note: harvest periods are standard PL agronomic norms (Hestia table covers sowing only).
+  window("pl-central", "wheat", 9, 10, "July – August", "Winter wheat 5 Sep–5 Oct; spring wheat 15 Mar–10 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "rye", 9, 9, "July", "Winter rye 15–30 Sep. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "triticale", 9, 9, "July – August", "Winter triticale 15–25 Sep. (Metodyka IP pszenżyta 2025)", "2026-10-16"),
+  window("pl-central", "barley", 9, 9, "July", "Winter barley 5–20 Sep; spring barley 15 Mar–10 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "potato", 4, 5, "September – October", "Planting 20 Apr–5 May. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "sugar-beet", 3, 4, "October – November", "Sowing 25 Mar–15 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "maize", 4, 5, "September – October", "Sowing 20 Apr–10 May, grain and silage. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "canola", 8, 8, "July", "Winter rapeseed 5–25 Aug; spring rapeseed 25 Mar–15 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-central", "onion", 3, 4, "August – September", "Direct sowing late March–April. (Infouprawa)", "2026-10-16"),
+  window("pl-central", "carrot", 3, 5, "July – October", "Direct sowing March–mid May. (PoradnikOgrodniczy)", "2026-10-16"),
+  // — West Poland (batch 9, 2026-10-16, under_review) —
+  window("pl-west", "wheat", 9, 10, "July – August", "Winter wheat 5 Sep–5 Oct; spring wheat 15 Mar–10 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "rye", 9, 9, "July", "Winter rye 15–30 Sep. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "triticale", 9, 10, "July – August", "Winter triticale 20 Sep–5 Oct in west/north-west. (Metodyka IP pszenżyta 2025)", "2026-10-16"),
+  window("pl-west", "barley", 9, 9, "July", "Winter barley 5–20 Sep; spring barley 15 Mar–10 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "potato", 4, 5, "September – October", "Planting 20 Apr–5 May. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "sugar-beet", 3, 4, "October – November", "Sowing 25 Mar–15 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "maize", 4, 5, "September – October", "Sowing 20 Apr–10 May. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "canola", 8, 8, "July", "Winter rapeseed 5–25 Aug. (Hestia norms)", "2026-10-16"),
+  window("pl-west", "onion", 3, 4, "August – September", "Direct sowing late March–April. (Infouprawa)", "2026-10-16"),
+  window("pl-west", "carrot", 3, 5, "July – October", "Direct sowing March–May. (PoradnikOgrodniczy)", "2026-10-16"),
+  // — East Poland (batch 9, 2026-10-16, under_review) —
+  window("pl-east", "wheat", 9, 10, "July – August", "Winter wheat; east earlier, optimal 1st–2nd decade Oct. (Hestia norms)", "2026-10-16"),
+  window("pl-east", "rye", 9, 9, "July", "Winter rye 15–30 Sep. (Hestia norms)", "2026-10-16"),
+  window("pl-east", "triticale", 9, 9, "July – August", "Winter triticale 10–25 Sep in north-east/east. (Metodyka IP pszenżyta 2025)", "2026-10-16"),
+  window("pl-east", "barley", 9, 9, "July", "Winter barley 5–20 Sep; spring barley 15 Mar–10 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-east", "potato", 4, 5, "September – October", "Planting 20 Apr–5 May. (Hestia norms)", "2026-10-16"),
+  window("pl-east", "sugar-beet", 3, 4, "October – November", "Sowing 25 Mar–15 Apr. (Hestia norms)", "2026-10-16"),
+  window("pl-east", "maize", 4, 5, "September – October", "Sowing 20 Apr–10 May. (Hestia norms)", "2026-10-16"),
+  window("pl-east", "canola", 8, 8, "July", "Winter rapeseed — sow EARLY in the east (first days of August). (Hestia norms)", "2026-10-16"),
+  window("pl-east", "onion", 3, 4, "August – September", "Direct sowing late March–April. (Infouprawa)", "2026-10-16"),
+  window("pl-east", "carrot", 3, 5, "July – October", "Direct sowing March–May. (PoradnikOgrodniczy)", "2026-10-16"),
+  // — Central Bangladesh (batch 9, 2026-10-16, under_review) —
+  // Sources: BAMIS; DAE Krishi Diary; BARI; BRRI; USDA FAS.
+  window("bd-central", "rice", 6, 7, "November – December", "T. Aman (Kharif-II): seedbed late May–Jun, transplant 15 Jul–15 Aug. Boro: seedbed Nov–Dec. (BAMIS/BRRI)", "2026-10-16"),
+  window("bd-central", "wheat", 11, 12, "March – April", "Rabi; sow after 15 Nov, finish by 10 Dec. (BAMIS)", "2026-10-16"),
+  window("bd-central", "maize", 10, 11, "March – April", "Rabi maize (main); Kharif maize sown mid-Jun. (DAE)", "2026-10-16"),
+  window("bd-central", "potato", 11, 12, "February – March", "Plant 15 Nov–15 Dec. (DAE/BAMIS)", "2026-10-16"),
+  window("bd-central", "mustard", 10, 11, "February – March", "Sow up to 1st fortnight of Nov. (BAMIS)", "2026-10-16"),
+  window("bd-central", "lentil", 11, 11, "February – March", "Optimum ~15 Nov. (BARI trials)", "2026-10-16"),
+  window("bd-central", "chickpea", 11, 11, "March – April", "Mid-Nov optimum. (BARI)", "2026-10-16"),
+  window("bd-central", "jute", 3, 4, "July – August", "Kharif-I; sow mid-Mar–end-Apr. (BARI/DAE)", "2026-10-16"),
+  window("bd-central", "sugarcane", 2, 3, "November – March", "Spring planting main; autumn planting Oct–Nov. (DAE)", "2026-10-16"),
+  window("bd-central", "onion", 11, 11, "March – April", "Winter onion transplant ~15 Nov. (BAU/DAE)", "2026-10-16"),
+  window("bd-central", "garlic", 11, 12, "March – April", "Rabi; plant from 15 Nov. (DAE)", "2026-10-16"),
+  window("bd-central", "chili", 10, 11, "December – March", "Cultivated Oct–Mar; harvest starts 60–70 days after transplanting. (DAE)", "2026-10-16"),
+  // — North Bangladesh (batch 9, 2026-10-16, under_review) —
+  // Sources: BAMIS Rangpur bulletins; BARI; DAE; BRRI.
+  window("bd-north", "rice", 6, 7, "November – December", "T. Aman: transplant 15 Jul–15 Aug; Boro strong in Rangpur. (BAMIS/BRRI)", "2026-10-16"),
+  window("bd-north", "wheat", 11, 12, "March – April", "Rabi; sow after 15 Nov, finish by 10 Dec. (BAMIS Rangpur)", "2026-10-16"),
+  window("bd-north", "maize", 10, 11, "March – April", "Rabi maize (main). (DAE)", "2026-10-16"),
+  window("bd-north", "potato", 11, 12, "February – March", "Plant 15 Nov–15 Dec. (DAE/BAMIS)", "2026-10-16"),
+  window("bd-north", "mustard", 10, 11, "February – March", "Sow up to 1st fortnight of Nov. (BAMIS)", "2026-10-16"),
+  window("bd-north", "lentil", 11, 11, "February – March", "Optimum ~15 Nov. (BARI)", "2026-10-16"),
+  window("bd-north", "chickpea", 11, 11, "March – April", "Mid-Nov optimum. (BARI)", "2026-10-16"),
+  window("bd-north", "jute", 3, 4, "July – August", "Kharif-I; sow mid-Mar–end-Apr. (BARI/DAE)", "2026-10-16"),
+  window("bd-north", "sugarcane", 2, 3, "November – March", "Spring planting main. (DAE)", "2026-10-16"),
+  window("bd-north", "onion", 11, 11, "March – April", "Winter onion transplant ~15 Nov. (BAU/DAE)", "2026-10-16"),
+  window("bd-north", "garlic", 11, 12, "March – April", "Rabi; plant from 15 Nov. (DAE)", "2026-10-16"),
+  window("bd-north", "chili", 10, 11, "December – March", "Char-land chili belt (Bogura/Rangpur); cultivated Oct–Mar. (DAE)", "2026-10-16"),
+  // — Southeast Bangladesh (batch 9, 2026-10-16, under_review) —
+  // Sources: BAMIS; DAE; BARI. Note: wheat/lentil/chickpea minor in Chattogram; Aus/Aman rice dominant.
+  window("bd-southeast", "rice", 6, 7, "November – December", "T. Aman dominant; Aus sown Mar–Apr. (BAMIS/BRRI)", "2026-10-16"),
+  window("bd-southeast", "wheat", 11, 12, "March – April", "Minor crop here; Rabi sowing Nov–Dec. (BAMIS)", "2026-10-16"),
+  window("bd-southeast", "maize", 10, 11, "March – April", "Rabi maize. (DAE)", "2026-10-16"),
+  window("bd-southeast", "potato", 11, 12, "February – March", "Plant 15 Nov–15 Dec. (DAE)", "2026-10-16"),
+  window("bd-southeast", "mustard", 10, 11, "February – March", "Sow up to 1st fortnight of Nov. (BAMIS)", "2026-10-16"),
+  window("bd-southeast", "lentil", 11, 11, "February – March", "Minor crop here; optimum ~15 Nov. (BARI)", "2026-10-16"),
+  window("bd-southeast", "chickpea", 11, 11, "March – April", "Minor crop here; mid-Nov optimum. (BARI)", "2026-10-16"),
+  window("bd-southeast", "jute", 3, 4, "July – August", "Kharif-I; sow mid-Mar–end-Apr. (BARI/DAE)", "2026-10-16"),
+  window("bd-southeast", "sugarcane", 2, 3, "November – March", "Spring planting main. (DAE)", "2026-10-16"),
+  window("bd-southeast", "onion", 11, 11, "March – April", "Winter onion transplant ~15 Nov. (BAU/DAE)", "2026-10-16"),
+  window("bd-southeast", "garlic", 11, 12, "March – April", "Rabi; plant from 15 Nov. (DAE)", "2026-10-16"),
+  window("bd-southeast", "chili", 10, 11, "December – March", "Cultivated Oct–Mar. (DAE)", "2026-10-16"),
+  // — Midwest Corn Belt, USA (batch 9, 2026-10-16, under_review) —
+  // Sources: Iowa State Extension; UNL CropWatch.
+  window("us-midwest", "maize", 4, 5, "September – October", "Optimal mid-Apr–May 20; soil >50°F. (Iowa State Extension)", "2026-10-16"),
+  window("us-midwest", "soybean", 4, 5, "September – October", "Plant Apr 10/15 onwards when fit. (Iowa State Extension)", "2026-10-16"),
+  window("us-midwest", "wheat", 9, 10, "June – July", "Winter wheat; recommended Sept 25+ (Hessian-fly avoidance). (UNL CropWatch)", "2026-10-16"),
+  // — California Central Valley, USA (batch 9, 2026-10-16, under_review) —
+  // Sources: UC Davis / UC Cooperative Extension; UC IPM; UC Master Gardener.
+  window("us-california", "rice", 4, 5, "September – October", "Water-seeded; most planting Apr 20–May 20. (UC Davis)", "2026-10-16"),
+  window("us-california", "tomato", 2, 4, "June – October", "Transplant Mar–Apr; processing tomatoes Feb–Jun. (UC Davis)", "2026-10-16"),
+  window("us-california", "cotton", 3, 4, "October – November", "San Joaquin Valley; season opens Mar 10. (UC IPM)", "2026-10-16"),
+  window("us-california", "garlic", 10, 11, "June – July", "Plant Oct–Nov (softneck). (UC Master Gardener)", "2026-10-16"),
+  // — Southeast USA (batch 9, 2026-10-16, under_review) —
+  // Sources: UGA Cooperative Extension (C813; Circular 913; B1498).
+  window("us-southeast", "maize", 3, 4, "July – August", "Field corn GA: Coastal Plain Mar 1–Apr 15. (UGA C813)", "2026-10-16"),
+  window("us-southeast", "soybean", 5, 6, "September – November", "GA: range Apr 1–Jul 15; preferred May–Jun. (UGA C813)", "2026-10-16"),
+  window("us-southeast", "wheat", 10, 11, "May – June", "Winter wheat. (UGA Extension)", "2026-10-16"),
+  window("us-southeast", "cotton", 4, 5, "September – November", "GA: Apr 1–May 25 (irrigated after May 1). (UGA C813)", "2026-10-16"),
+  window("us-southeast", "groundnut", 4, 6, "October – November", "GA: Apr 15–Jun 10; preferred May 10–25. (UGA Extension)", "2026-10-16"),
+  window("us-southeast", "onion", 9, 10, "April – May", "Vidalia: seedbed late Sep, transplant Nov–Dec. (UGA Circular 913)", "2026-10-16"),
+  window("us-southeast", "garlic", 10, 12, "May – June", "SE alliums late Oct–early Dec. (UGA B1498)", "2026-10-16"),
+  window("us-southeast", "potato", 2, 3, "May – June", "Spring potatoes Feb–Mar. (UGA B1498)", "2026-10-16"),
+  // — Pacific Northwest, USA (batch 9, 2026-10-16, under_review) —
+  // Sources: WA Potato Commission / WSU Othello; WSU Extension; USDA-ARS.
+  window("us-pnw", "potato", 3, 5, "September – October", "Columbia Basin; planting ~Apr 20–early Jun. (WA Potato Commission)", "2026-10-16"),
+  window("us-pnw", "wheat", 9, 10, "July – August", "Winter wheat dominant; spring wheat sown Mar–Apr. (WSU Extension)", "2026-10-16"),
+  window("us-pnw", "barley", 4, 5, "August – September", "Spring barley mid-Apr; winter barley sown mid-Oct. (WSU EM122E)", "2026-10-16"),
+  // — Center-West, Brazil (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: IMEA; Embrapa; Conab; Aprosoja-MT.
+  window("br-centerwest", "soybean", 9, 11, "January – April", "Sanitary break ends mid-Sep; bulk planting late Sep–Oct. (IMEA)", "2026-10-16"),
+  window("br-centerwest", "maize", 1, 2, "June – August", "Safrinha 2nd crop after early soybean; rains end ~May 5. (IMEA/Embrapa)", "2026-10-16"),
+  window("br-centerwest", "cotton", 12, 1, "June – August", "2nd-crop cotton after soybean; ideal window closes end-Jan. (Conab/IMEA)", "2026-10-16"),
+  // — Southeast, Brazil (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: Conab; Embrapa ZARC; SciELO (UNESP/IAC).
+  window("br-southeast", "soybean", 10, 12, "January – March", "ZARC windows open later than MT; confirm per municipality. (Conab/Embrapa)", "2026-10-16"),
+  window("br-southeast", "groundnut", 9, 11, "March – May", "SP: Sep–Nov optimal. (SciELO UNESP/IAC)", "2026-10-16"),
+  // — South, Brazil (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: Emater-RS; Min. of Agriculture; USDA FAS; IRGA; Conab.
+  window("br-south", "soybean", 9, 11, "February – April", "Official season from Sept 1 (Paraná); planting Oct–Nov. (Emater-RS)", "2026-10-16"),
+  window("br-south", "maize", 8, 10, "December – February", "1st-crop corn; 76% planted by mid-Oct. (Emater-RS)", "2026-10-16"),
+  window("br-south", "wheat", 4, 6, "September – December", "PR: planted Apr–mid-Jun (peak May); RS: May–Jun. (USDA FAS/Conab)", "2026-10-16"),
+  window("br-south", "rice", 9, 11, "February – April", "Irrigated rice RS; ~93% sown by late Nov. (IRGA)", "2026-10-16"),
+  // — Northeast, Brazil (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: Conab; Embrapa ZARC.
+  window("br-northeast", "soybean", 11, 12, "March – May", "Western Bahia (later rainfall onset); confirm per municipality. (Conab/Embrapa)", "2026-10-16"),
+  // — New South Wales, Australia (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: NSW DPI; GRDC; Cotton Australia; SunRice; Sugar Research Australia.
+  window("au-nsw", "wheat", 3, 6, "November – December", "Winter wheat; late Mar–end Jun by variety maturity. (NSW DPI)", "2026-10-16"),
+  window("au-nsw", "barley", 4, 5, "October – November", "Winter barley, dryland; sown slightly later than wheat. (GRDC)", "2026-10-16"),
+  window("au-nsw", "canola", 4, 5, "November – December", "Spring canola; mid-Apr–mid-May timely window. (GRDC)", "2026-10-16"),
+  window("au-nsw", "chickpea", 4, 5, "November – December", "Late autumn–early winter sowing. (NSW DPI)", "2026-10-16"),
+  window("au-nsw", "cotton", 9, 10, "March – May", "Irrigated; planting completes after Oct long weekend. (Cotton Australia)", "2026-10-16"),
+  window("au-nsw", "maize", 9, 12, "March – May", "Inland irrigated Oct–Nov; northern NSW Sep–Dec. (GRDC/NSW DPI)", "2026-10-16"),
+  window("au-nsw", "sunflower", 8, 10, "February – April", "Early-plant window; late plant Dec–Jan also possible. (NSW DPI)", "2026-10-16"),
+  window("au-nsw", "rice", 10, 11, "March – April", "Irrigated Riverina; planting Oct–mid-Dec. (SunRice/NSW DPI)", "2026-10-16"),
+  window("au-nsw", "sugarcane", 8, 10, "June – December (crush)", "Spring plant; autumn plant Mar–Jun also used. (Sugar Research Australia)", "2026-10-16"),
+  // — Victoria, Australia (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: GRDC; Southern Farming Systems; Agriculture Victoria.
+  window("au-victoria", "wheat", 4, 5, "November – December", "Winter wheat; Mallee/Wimmera late-Apr–mid-May. (GRDC)", "2026-10-16"),
+  window("au-victoria", "barley", 4, 5, "October – November", "Winter barley; April–May sowing. (GRDC)", "2026-10-16"),
+  window("au-victoria", "canola", 4, 5, "November – December", "Spring canola; mid-Apr–mid-May. (GRDC)", "2026-10-16"),
+  window("au-victoria", "chickpea", 4, 5, "November – December", "Wimmera/Mallee; mid-May recommended for northern Wimmera. (Agriculture Victoria/GRDC)", "2026-10-16"),
+  window("au-victoria", "potato", 9, 11, "December – March", "Gippsland commercial crop; staggered sowing. (Victorian potato industry)", "2026-10-16"),
+  // — Queensland, Australia (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: GRDC; Cotton Australia; NSW DPI; Grain Central.
+  window("au-queensland", "wheat", 4, 7, "October – November", "CQ from early Apr; Darling Downs window opens first week of May. (GRDC)", "2026-10-16"),
+  window("au-queensland", "barley", 5, 7, "October – November", "Darling Downs/Western Downs; sown May–Jul. (GRDC)", "2026-10-16"),
+  window("au-queensland", "canola", 4, 5, "October – November", "Darling Downs. (GRDC)", "2026-10-16"),
+  window("au-queensland", "chickpea", 4, 5, "November – December", "CQ: preferably May. (Grain Central/GRDC)", "2026-10-16"),
+  window("au-queensland", "cotton", 9, 10, "March – June", "Southern Qld; Central Highlands can start early Aug. (Cotton Australia)", "2026-10-16"),
+  window("au-queensland", "maize", 9, 10, "March – May", "Southern Qld mid-Sep–mid-Oct premium; Moreton from mid-Aug. (GRDC)", "2026-10-16"),
+  window("au-queensland", "sunflower", 8, 10, "February – April", "Early plant; late plant Dec–Jan. (NSW DPI/GRDC)", "2026-10-16"),
+  window("au-queensland", "sugarcane", 8, 10, "June – December (crush)", "Spring plant; autumn plant Mar–Jun also used. (Sugar Research Australia)", "2026-10-16"),
+  // — Western Australia (batch 9, 2026-10-16, under_review; southern hemisphere) —
+  // Sources: DPIRD; GRDC.
+  window("au-wa", "wheat", 4, 5, "November – December", "Mainstream late Apr–late May; long-season from mid-Mar in high-rainfall zone. (DPIRD)", "2026-10-16"),
+  window("au-wa", "barley", 4, 5, "October – November", "Late Apr–mid May; seeding finishes mid-May. (DPIRD/GRDC)", "2026-10-16"),
+  window("au-wa", "canola", 4, 5, "November – December", "Mid-Apr–early May main window. (DPIRD)", "2026-10-16"),
+  // — Java, Indonesia (batch 9, 2026-10-16, under_review) —
+  // Sources: Kementan (Balitbangtan/Balitkabi/Direktorat Hortikultura); Univ. Andalas; PT SMART.
+  window("id-java", "rice", 10, 12, "March – April (MT1)", "MT1 wet season: transplant late Dec–early Jan; MT2 dry: transplant mid-Jun–early Jul. (Balitbangtan)", "2026-10-16"),
+  window("id-java", "maize", 10, 1, "January – April (MT1)", "MT1 Oct–Jan; MT2 Feb–May; MT3 Jun–Sep by climate type. (Univ. Andalas)", "2026-10-16"),
+  window("id-java", "soybean", 3, 4, "June – July", "MK I after first rice harvest, planted ≤7 days after harvest. (Balitkabi)", "2026-10-16"),
+  window("id-java", "sugarcane", 10, 11, "June – October (mill)", "Establishment at start of rainy season. (Indonesian sugar-industry guidance)", "2026-10-16"),
+  window("id-java", "palm-oil", 10, 12, null, "Perennial; establishment at start of rainy season. (PT SMART)", "2026-10-16"),
+  window("id-java", "rubber", 9, 12, null, "Perennial; planted start to mid rainy season. (Indonesian rubber extension)", "2026-10-16"),
+  window("id-java", "coffee", 11, 12, null, "Perennial; planted at start of rainy season. (Coffee cultivation literature)", "2026-10-16"),
+  window("id-java", "groundnut", 3, 6, "June – September", "After rice harvest; second planting Jul–Oct possible. (Balitkabi)", "2026-10-16"),
+  window("id-java", "chili", 3, 5, "June – August", "Year-round possible; best at start of dry season. (Balitbangtan/BPTP)", "2026-10-16"),
+  window("id-java", "onion", 4, 5, "June – July", "Dry season on ex-paddy fields with irrigation. (Direktorat Hortikultura)", "2026-10-16"),
+  // — Sumatra, Indonesia (batch 9, 2026-10-16, under_review) —
+  window("id-sumatra", "rice", 10, 12, "March – April (MT1)", "Same two-season pattern as Java. (Balitbangtan)", "2026-10-16"),
+  window("id-sumatra", "maize", 10, 1, "January – April (MT1)", "MT1 Oct–Jan; southern Sumatra MT2 May–Jun. (Univ. Andalas/Kementan)", "2026-10-16"),
+  window("id-sumatra", "soybean", 3, 4, "June – July", "MK I after rice harvest. (Balitkabi)", "2026-10-16"),
+  window("id-sumatra", "sugarcane", 10, 11, "June – October (mill)", "Establishment at start of rainy season. (Indonesian sugar-industry guidance)", "2026-10-16"),
+  window("id-sumatra", "palm-oil", 10, 12, null, "Perennial; establishment at start of rainy season. (PT SMART)", "2026-10-16"),
+  window("id-sumatra", "rubber", 9, 12, null, "Perennial; major Sumatra crop; start–mid rainy season. (Indonesian rubber extension)", "2026-10-16"),
+  window("id-sumatra", "coffee", 11, 12, null, "Perennial; start of rainy season. (Coffee cultivation literature)", "2026-10-16"),
+  window("id-sumatra", "groundnut", 3, 6, "June – September", "After rice harvest. (Balitkabi)", "2026-10-16"),
+  window("id-sumatra", "chili", 3, 5, "June – August", "Best at start of dry season. (Balitbangtan/BPTP)", "2026-10-16"),
+  window("id-sumatra", "onion", 4, 5, "June – July", "Dry season, irrigated. (Direktorat Hortikultura)", "2026-10-16"),
+  // — Sulawesi, Indonesia (batch 9, 2026-10-16, under_review) —
+  window("id-sulawesi", "rice", 10, 12, "March – April (MT1)", "Same two-season pattern. (Balitbangtan)", "2026-10-16"),
+  window("id-sulawesi", "maize", 10, 1, "January – April (MT1)", "MT1 Oct–Jan; Sulsel also plants in MT2. (Univ. Andalas/Kementan)", "2026-10-16"),
+  window("id-sulawesi", "soybean", 3, 4, "June – July", "MK I; also used in intercrops. (Balitkabi/BRMP Sulsel)", "2026-10-16"),
+  window("id-sulawesi", "sugarcane", 10, 11, "June – October (mill)", "Establishment at start of rainy season. (Indonesian sugar-industry guidance)", "2026-10-16"),
+  window("id-sulawesi", "palm-oil", 10, 12, null, "Perennial; establishment at start of rainy season. (PT SMART)", "2026-10-16"),
+  window("id-sulawesi", "rubber", 9, 12, null, "Perennial (minor in Sulawesi); start–mid rainy season. (Indonesian rubber extension)", "2026-10-16"),
+  window("id-sulawesi", "coffee", 11, 12, null, "Perennial; start of rainy season (Toraja/arabica areas). (Coffee cultivation literature)", "2026-10-16"),
+  window("id-sulawesi", "groundnut", 3, 6, "June – September", "After rice harvest. (Balitkabi)", "2026-10-16"),
+  window("id-sulawesi", "chili", 3, 5, "June – August", "Best at start of dry season. (Balitbangtan/BPTP)", "2026-10-16"),
+  window("id-sulawesi", "onion", 4, 5, "June – July", "Dry season, irrigated. (Direktorat Hortikultura)", "2026-10-16"),
+  // — North German Plain (batch 9, 2026-10-16, under_review) —
+  // Sources: LWK Niedersachsen/NRW; LLG Sachsen-Anhalt; DSV; DMK; Nordzucker; proplanta.
+  // Note: rye/triticale windows inferred from the winter-cereal autumn window (no crop-specific official table found).
+  window("de-north", "wheat", 9, 10, "July – August", "Winter wheat; optimum around early Oct. (LLG/DSV/LWK NRW)", "2026-10-16"),
+  window("de-north", "barley", 9, 10, "June – July", "Winter barley; 3rd decade Sep–mid Oct. (LWK Niedersachsen)", "2026-10-16"),
+  window("de-north", "rye", 9, 10, "July – August", "Winter rye; same autumn window as winter wheat. (LWK winter-cereal guidance)", "2026-10-16"),
+  window("de-north", "triticale", 9, 10, "July – August", "Same autumn window as winter wheat. (LWK/seed-house guidance)", "2026-10-16"),
+  window("de-north", "canola", 8, 9, "July", "Winter canola; optimum 15–25 Aug, possible to mid-Sep. (proplanta/LWK NRW)", "2026-10-16"),
+  window("de-north", "potato", 4, 5, "August – October", "Planting late Mar–mid Apr. (Landwirtschaftskammer)", "2026-10-16"),
+  window("de-north", "sugar-beet", 3, 4, "September – November", "Sowing early Mar–mid Apr. (Nordzucker)", "2026-10-16"),
+  window("de-north", "maize", 4, 5, "September – October", "Optimum from 20 Apr; mid-Apr–early May. (DMK/LWK NRW)", "2026-10-16"),
+  window("de-north", "onion", 3, 4, "August – September", "Summer onion seed: mid-Mar–early Apr. (Horticultural extension)", "2026-10-16"),
+  window("de-north", "carrot", 3, 5, "July – October", "Direct sowing Mar–Jun by variety. (Horticultural extension)", "2026-10-16"),
+  // — Bavaria, Germany (batch 9, 2026-10-16, under_review) —
+  window("de-bavaria", "wheat", 9, 10, "July – August", "Winter wheat; typically early–mid Oct. (LLG/DSV/LWK)", "2026-10-16"),
+  window("de-bavaria", "barley", 9, 10, "June – July", "Winter barley; late Sep–early Oct. (Sachsen LWK/LWK NRW)", "2026-10-16"),
+  window("de-bavaria", "rye", 9, 10, "July – August", "Winter rye; same autumn window. (LWK winter-cereal guidance)", "2026-10-16"),
+  window("de-bavaria", "triticale", 9, 10, "July – August", "Same autumn window. (LWK/seed-house guidance)", "2026-10-16"),
+  window("de-bavaria", "canola", 8, 9, "July", "Winter canola; 15–25 Aug optimum. (proplanta/LWK NRW)", "2026-10-16"),
+  window("de-bavaria", "potato", 4, 5, "August – October", "Planting late Mar–mid Apr. (Landwirtschaftskammer)", "2026-10-16"),
+  window("de-bavaria", "sugar-beet", 3, 4, "September – November", "Sowing early Mar–mid Apr. (Nordzucker)", "2026-10-16"),
+  window("de-bavaria", "maize", 4, 5, "September – October", "Mid-Apr–early May. (DMK/LWK NRW)", "2026-10-16"),
+  window("de-bavaria", "onion", 3, 4, "August – September", "Seed mid-Mar–early Apr. (Horticultural extension)", "2026-10-16"),
+  window("de-bavaria", "carrot", 3, 5, "July – October", "Sowing Mar–Jun. (Horticultural extension)", "2026-10-16"),
+  // — Upper Rhine Valley, Germany (batch 9, 2026-10-16, under_review) —
+  window("de-rhine", "wheat", 9, 10, "July – August", "Winter wheat; warmer — can extend into mid-Oct. (DSV/LWK NRW)", "2026-10-16"),
+  window("de-rhine", "barley", 9, 10, "June – July", "Winter barley; warmer — toward October. (LWK NRW)", "2026-10-16"),
+  window("de-rhine", "rye", 9, 10, "July – August", "Winter rye; same autumn window. (LWK winter-cereal guidance)", "2026-10-16"),
+  window("de-rhine", "triticale", 9, 10, "July – August", "Same autumn window. (LWK/seed-house guidance)", "2026-10-16"),
+  window("de-rhine", "canola", 8, 9, "July", "Winter canola; 15–25 Aug optimum, to mid-Sep. (proplanta/LWK NRW)", "2026-10-16"),
+  window("de-rhine", "potato", 4, 5, "August – October", "Planting late Mar–mid Apr (early in this warm region). (Landwirtschaftskammer)", "2026-10-16"),
+  window("de-rhine", "sugar-beet", 3, 4, "September – November", "Sowing early Mar–mid Apr. (Nordzucker)", "2026-10-16"),
+  window("de-rhine", "maize", 4, 5, "September – October", "Favoured area — sowing from mid-Apr. (DMK/proplanta)", "2026-10-16"),
+  window("de-rhine", "onion", 3, 4, "August – September", "Seed mid-Mar–early Apr. (Horticultural extension)", "2026-10-16"),
+  window("de-rhine", "carrot", 3, 5, "July – October", "Sowing Mar–Jun. (Horticultural extension)", "2026-10-16"),
 ];
 
 /** True if `month` (1–12) falls inside a possibly year-crossing window. */
