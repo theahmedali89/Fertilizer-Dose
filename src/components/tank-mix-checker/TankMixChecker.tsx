@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@/components/ui/Card";
 import {
   FERTILIZERS,
   checkCompatibility,
-  fertilizerName,
   type Verdict,
 } from "@/lib/tank-mix";
 import { cn } from "@/lib/utils";
@@ -37,14 +37,20 @@ const VERDICT_STYLE: Record<Verdict, { ring: string; bg: string; badge: string; 
   },
 };
 
+const QUICK_REF_SLUGS = ["dap-zinc", "dap-calnit", "np-zinc", "ssp-zinc"];
+
 function Select({
   label,
   value,
   onChange,
+  placeholder,
+  getName,
 }: {
   label: string;
   value: string;
   onChange: (v: string) => void;
+  placeholder: string;
+  getName: (id: string) => string;
 }) {
   return (
     <label className="block">
@@ -54,10 +60,10 @@ function Select({
         onChange={(e) => onChange(e.target.value)}
         className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink shadow-sm focus:border-leaf-500 focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
       >
-        <option value="">— Select fertilizer —</option>
+        <option value="">{placeholder}</option>
         {FERTILIZERS.map((f) => (
           <option key={f.id} value={f.id}>
-            {f.name}
+            {getName(f.id)}
           </option>
         ))}
       </select>
@@ -66,6 +72,7 @@ function Select({
 }
 
 export function TankMixChecker() {
+  const t = useTranslations("tankMix");
   const [a, setA] = useState("");
   const [b, setB] = useState("");
   const [checked, setChecked] = useState(false);
@@ -73,17 +80,25 @@ export function TankMixChecker() {
   const result = checked && a && b ? checkCompatibility(a, b) : null;
   const style = result ? VERDICT_STYLE[result.verdict] : null;
 
+  const shortName = (id: string) => t(`fertilizers.${id}.short`);
+
   const onCheck = () => {
     if (a && b) setChecked(true);
   };
+
+  const resultTitle = result ? t(`rules.${result.ruleKey}.title`) : "";
+  const resultExplanation = result
+    ? t(`rules.${result.ruleKey}.explanation`, { name: shortName(a) })
+    : "";
+  const resultInstead = result ? t(`rules.${result.ruleKey}.instead`) : "";
 
   return (
     <div>
       <Card>
         <CardBody className="space-y-5">
           <div className="grid gap-4 sm:grid-cols-2">
-            <Select label="Fertilizer A" value={a} onChange={(v) => { setA(v); setChecked(false); }} />
-            <Select label="Fertilizer B" value={b} onChange={(v) => { setB(v); setChecked(false); }} />
+            <Select label={t("ui.fertA")} value={a} onChange={(v) => { setA(v); setChecked(false); }} placeholder={t("ui.selectPlaceholder")} getName={shortName} />
+            <Select label={t("ui.fertB")} value={b} onChange={(v) => { setB(v); setChecked(false); }} placeholder={t("ui.selectPlaceholder")} getName={shortName} />
           </div>
           <button
             onClick={onCheck}
@@ -95,7 +110,7 @@ export function TankMixChecker() {
                 : "bg-ink-faint/40 cursor-not-allowed"
             )}
           >
-            Check Compatibility
+            {t("ui.checkBtn")}
           </button>
         </CardBody>
       </Card>
@@ -109,18 +124,18 @@ export function TankMixChecker() {
               </span>
               <div className="min-w-0">
                 <span className={cn("inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide", style.badge)}>
-                  {result.title}
+                  {resultTitle}
                 </span>
                 <p className="mt-2 text-base font-semibold text-ink">
-                  {fertilizerName(a)} + {fertilizerName(b)}
+                  {shortName(a)} + {shortName(b)}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                  {result.explanation}
+                  {resultExplanation}
                 </p>
-                {result.instead && (
+                {resultInstead && (
                   <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-                    <p className="text-sm font-bold text-ink">💡 What to do instead</p>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{result.instead}</p>
+                    <p className="text-sm font-bold text-ink">{t("ui.insteadTitle")}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{resultInstead}</p>
                   </div>
                 )}
               </div>
@@ -131,22 +146,17 @@ export function TankMixChecker() {
 
       {/* Quick reference */}
       <div className="mt-10">
-        <h2 className="text-xl font-bold text-ink">Quick reference: never mix these</h2>
+        <h2 className="text-xl font-bold text-ink">{t("ui.quickRefTitle")}</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {[
-            { pair: "DAP + Zinc Sulphate", why: "Forms insoluble zinc phosphate sludge" },
-            { pair: "DAP + Calcium Nitrate", why: "Forms calcium phosphate precipitate" },
-            { pair: "Nitrophos + Zinc Sulphate", why: "Phosphate locks out zinc" },
-            { pair: "SSP + Zinc Sulphate", why: "Milky precipitate, nutrients lost" },
-          ].map((x) => (
-            <div key={x.pair} className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50/60 dark:bg-red-950/20 p-4">
-              <p className="text-sm font-bold text-red-800 dark:text-red-200">❌ {x.pair}</p>
-              <p className="mt-1 text-xs text-ink-soft">{x.why}</p>
+          {QUICK_REF_SLUGS.map((slug) => (
+            <div key={slug} className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50/60 dark:bg-red-950/20 p-4">
+              <p className="text-sm font-bold text-red-800 dark:text-red-200">❌ {t(`quickRef.${slug}.pair`)}</p>
+              <p className="mt-1 text-xs text-ink-soft">{t(`quickRef.${slug}.why`)}</p>
             </div>
           ))}
         </div>
         <p className="mt-4 text-xs text-ink-faint">
-          Always do a jar test before a full tank mix: mix small amounts in water, wait 15 minutes, and check for heat, gas, curdling, or sediment.
+          {t("ui.jarTest")}
         </p>
       </div>
     </div>

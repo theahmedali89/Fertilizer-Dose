@@ -2,31 +2,27 @@
 // Nutrient content per standard 50 kg bag (kg), from standard product grades.
 // Used to suggest nutrient-equivalent replacement combinations when a
 // product is unavailable or overpriced (e.g. DAP shortage season).
+//
+// Display text (name, short label, extras) is NOT stored here — it lives in
+// the messages under alternativeFinder.fertilizers.<id> (i18n).
 
 export interface AltFertilizer {
   id: string;
-  name: string; // display name with grade
-  short: string; // short label
   n: number; // kg N per 50 kg bag
   p: number; // kg P2O5 per 50 kg bag
   k: number; // kg K2O per 50 kg bag
-  extras?: string; // secondary nutrients / handling note
 }
 
 export const ALT_FERTILIZERS: AltFertilizer[] = [
-  { id: "dap", name: "DAP (18-46-0)", short: "DAP", n: 9, p: 23, k: 0 },
-  { id: "urea", name: "Urea (46% N)", short: "Urea", n: 23, p: 0, k: 0 },
-  { id: "sop", name: "SOP (0-0-50)", short: "SOP", n: 0, p: 0, k: 25, extras: "Sulphate of potash — chloride-free, also supplies sulphur." },
-  { id: "mop", name: "MOP (0-0-60)", short: "MOP", n: 0, p: 0, k: 30, extras: "Muriate of potash — cheapest K source, contains chloride." },
-  { id: "ssp", name: "SSP (16% P₂O₅)", short: "SSP", n: 0, p: 8, k: 0, extras: "Also supplies sulphur (~12%) and calcium; slower release than DAP." },
-  { id: "np", name: "Nitrophos (20-20-0)", short: "Nitrophos", n: 10, p: 10, k: 0 },
-  { id: "npk", name: "NPK 15-15-15", short: "NPK 15-15-15", n: 7.5, p: 7.5, k: 7.5 },
-  { id: "ams", name: "Ammonium Sulphate (21% N)", short: "Ammonium Sulphate", n: 10.5, p: 0, k: 0, extras: "Also supplies sulphur (24% S) — good for oilseeds and alkaline soils." },
+  { id: "dap", n: 9, p: 23, k: 0 },
+  { id: "urea", n: 23, p: 0, k: 0 },
+  { id: "sop", n: 0, p: 0, k: 25 },
+  { id: "mop", n: 0, p: 0, k: 30 },
+  { id: "ssp", n: 0, p: 8, k: 0 },
+  { id: "np", n: 10, p: 10, k: 0 },
+  { id: "npk", n: 7.5, p: 7.5, k: 7.5 },
+  { id: "ams", n: 10.5, p: 0, k: 0 },
 ];
-
-export function altFertilizerName(id: string): string {
-  return ALT_FERTILIZERS.find((f) => f.id === id)?.name ?? id;
-}
 
 export interface AltItem {
   fertilizer: AltFertilizer;
@@ -172,36 +168,19 @@ export function findAlternatives(targetId: string, bags: number): AltOption[] {
   return (useful.length > 0 ? useful : ranked.slice(0, 1)).slice(0, 3);
 }
 
-/** Contextual agronomic notes for an option. */
-export function optionNotes(o: AltOption): string[] {
-  const notes: string[] = [];
+/**
+ * Contextual agronomic note keys for an option. The component resolves each
+ * key suffix under alternativeFinder.notes.*.
+ */
+export function optionNoteKeys(o: AltOption): string[] {
+  const keys: string[] = [];
   const ids = o.items.map((it) => it.fertilizer.id);
-  if (ids.includes("ssp")) {
-    notes.push(
-      "SSP releases phosphorus more slowly than DAP — incorporate it into the soil a few days before sowing for best results.",
-    );
-  }
-  if (ids.includes("ams")) {
-    notes.push(
-      "Ammonium sulphate also supplies sulphur (24% S) — a plus for oilseeds, pulses and high-pH soils.",
-    );
-  }
-  if (ids.includes("urea")) {
-    notes.push(
-      "Broadcast urea 1–2 days after irrigation on moist soil — do not flood it with the irrigation water (up to 40–50% can be lost).",
-    );
-  }
-  if (ids.includes("mop") && o.needed.k > 0) {
-    notes.push(
-      "MOP contains chloride — prefer SOP for chloride-sensitive crops (tobacco, potato, citrus, grapes).",
-    );
-  }
-  if (o.matchPct < 85) {
-    notes.push(
-      "This is the closest practical match — an exact NPK replica with different products is rarely possible.",
-    );
-  }
-  return notes;
+  if (ids.includes("ssp")) keys.push("ssp");
+  if (ids.includes("ams")) keys.push("ams");
+  if (ids.includes("urea")) keys.push("urea");
+  if (ids.includes("mop") && o.needed.k > 0) keys.push("mop");
+  if (o.matchPct < 85) keys.push("imperfect");
+  return keys;
 }
 
 /** Nutrients the target quantity supplies (for the summary line). */

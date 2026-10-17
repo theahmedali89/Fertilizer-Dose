@@ -27,12 +27,6 @@ export const DEFAULT_REFERENCE_PRODUCTS: ReferenceProduct[] = [
   { id: "np", name: "Nitrophos (NP)", bagKg: 50, priceRs: 11000, n: 22, p2o5: 20, k2o: 0 },
 ];
 
-export const NUTRIENT_LABEL: Record<Nutrient, string> = {
-  n: "N (Nitrogen)",
-  p: "P₂O₅ (Phosphorus)",
-  k: "K₂O (Potash)",
-};
-
 /** Cost per kg of a given nutrient from a reference product. Returns null if the product has none of it. */
 export function costPerKgNutrient(
   product: ReferenceProduct,

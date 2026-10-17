@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@/components/ui/Card";
 import { cn } from "@/lib/utils";
 import {
   DEFAULT_REFERENCE_PRODUCTS,
-  NUTRIENT_LABEL,
   analyzeProduct,
   benchmark,
   costPerKgNutrient,
@@ -17,28 +17,25 @@ import {
 
 const VERDICT_STYLE: Record<
   Verdict,
-  { ring: string; bg: string; badge: string; icon: string; title: string }
+  { ring: string; bg: string; badge: string; icon: string }
 > = {
   good: {
     ring: "border-leaf-300 dark:border-leaf-700",
     bg: "bg-leaf-50 dark:bg-leaf-950/40",
     badge: "bg-leaf-600 text-white",
     icon: "✅",
-    title: "Good deal",
   },
   pricier: {
     ring: "border-amber-300 dark:border-amber-700",
     bg: "bg-amber-50 dark:bg-amber-950/30",
     badge: "bg-amber-500 text-white",
     icon: "⚠️",
-    title: "Pricier than standard",
   },
   expensive: {
     ring: "border-red-300 dark:border-red-700",
     bg: "bg-red-50 dark:bg-red-950/30",
     badge: "bg-red-600 text-white",
     icon: "❌",
-    title: "Expensive — buy the standard instead",
   },
 };
 
@@ -47,6 +44,8 @@ const NUTRIENT_DOT: Record<Nutrient, string> = {
   p: "bg-sky-500",
   k: "bg-violet-500",
 };
+
+const ALL_NUTRIENTS: Nutrient[] = ["n", "p", "k"];
 
 function Field({
   label,
@@ -82,16 +81,18 @@ function Field({
 function RefRow({
   product,
   onChange,
+  t,
 }: {
   product: ReferenceProduct;
   onChange: (p: ReferenceProduct) => void;
+  t: ReturnType<typeof useTranslations>;
 }) {
   return (
     <div className="grid grid-cols-[1fr_88px_64px] items-center gap-2 rounded-lg border border-line bg-surface px-3 py-2">
       <div>
         <p className="text-sm font-semibold text-ink">{product.name}</p>
         <p className="text-xs text-ink-faint">
-          {product.bagKg} kg bag
+          {t("refs.bagUnit", { bagKg: product.bagKg })}
           {[
             product.n > 0 ? `N ${product.n}%` : null,
             product.p2o5 > 0 ? `P₂O₅ ${product.p2o5}%` : null,
@@ -108,15 +109,16 @@ function RefRow({
         onChange={(e) =>
           onChange({ ...product, priceRs: Number(e.target.value) || 0 })
         }
-        aria-label={`${product.name} price in Rs`}
+        aria-label={t("refs.priceAria", { name: product.name })}
         className="w-full rounded-lg border border-line bg-surface px-2 py-1.5 text-sm text-ink focus:border-leaf-500 focus:outline-none"
       />
-      <span className="text-xs text-ink-faint">Rs / bag</span>
+      <span className="text-xs text-ink-faint">{t("refs.perBag")}</span>
     </div>
   );
 }
 
 export function CostCalculator() {
+  const t = useTranslations("costCalculator");
   const [name, setName] = useState("");
   const [size, setSize] = useState("");
   const [unit, setUnit] = useState<"kg" | "L">("kg");
@@ -164,20 +166,20 @@ export function CostCalculator() {
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block sm:col-span-2">
                 <span className="mb-1.5 block text-sm font-semibold text-ink">
-                  Product name
+                  {t("form.productName")}
                 </span>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. SuperPhos Liquid 10%"
+                  placeholder={t("form.productPh")}
                   className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink shadow-sm focus:border-leaf-500 focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
                 />
               </label>
 
               <div>
                 <span className="mb-1.5 block text-sm font-semibold text-ink">
-                  Pack size
+                  {t("form.packSize")}
                 </span>
                 <div className="flex gap-2">
                   <input
@@ -186,7 +188,7 @@ export function CostCalculator() {
                     step="any"
                     value={size}
                     onChange={(e) => setSize(e.target.value)}
-                    placeholder="e.g. 1"
+                    placeholder={t("form.packSizePh")}
                     className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink shadow-sm focus:border-leaf-500 focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
                   />
                   <div className="flex shrink-0 overflow-hidden rounded-xl border border-line">
@@ -209,28 +211,28 @@ export function CostCalculator() {
                 </div>
                 {unit === "L" && (
                   <p className="mt-1 text-xs text-ink-faint">
-                    Liquids are treated as 1 L ≈ 1 kg.
+                    {t("form.liquidNote")}
                   </p>
                 )}
               </div>
 
               <Field
-                label="Price (Rs per pack)"
+                label={t("form.price")}
                 value={price}
                 onChange={setPrice}
-                placeholder="e.g. 3500"
+                placeholder={t("form.pricePh")}
                 min={0}
               />
             </div>
 
             <div>
               <p className="mb-2 text-sm font-semibold text-ink">
-                Nutrient content (%)
+                {t("form.nutrientPct")}
               </p>
               <div className="grid grid-cols-3 gap-4">
-                <Field label="N %" value={nPct} onChange={setNPct} placeholder="0" min={0} />
-                <Field label="P₂O₅ %" value={pPct} onChange={setPPct} placeholder="10" min={0} />
-                <Field label="K₂O %" value={kPct} onChange={setKPct} placeholder="0" min={0} />
+                <Field label={t("form.nPct")} value={nPct} onChange={setNPct} placeholder="0" min={0} />
+                <Field label={t("form.pPct")} value={pPct} onChange={setPPct} placeholder="10" min={0} />
+                <Field label={t("form.kPct")} value={kPct} onChange={setKPct} placeholder="0" min={0} />
               </div>
             </div>
 
@@ -238,7 +240,7 @@ export function CostCalculator() {
               type="submit"
               className="w-full rounded-xl bg-leaf-600 px-6 py-3.5 text-base font-bold text-white shadow-sm transition hover:bg-leaf-700 sm:w-auto"
             >
-              💰 Calculate true cost
+              {t("form.submit")}
             </button>
           </form>
         </CardBody>
@@ -253,7 +255,7 @@ export function CostCalculator() {
             className="flex w-full items-center justify-between text-left"
           >
             <span className="text-sm font-bold text-ink">
-              📊 Reference prices (Pakistan, Rs / 50 kg bag)
+              {t("refs.title")}
             </span>
             <span className="text-ink-faint">{showRefs ? "▲" : "▼"}</span>
           </button>
@@ -266,6 +268,7 @@ export function CostCalculator() {
                   onChange={(p) =>
                     setRefs((prev) => prev.map((x) => (x.id === p.id ? p : x)))
                   }
+                  t={t}
                 />
               ))}
               <button
@@ -273,7 +276,7 @@ export function CostCalculator() {
                 onClick={() => setRefs(DEFAULT_REFERENCE_PRODUCTS)}
                 className="text-xs font-semibold text-leaf-700 dark:text-leaf-400 underline"
               >
-                Reset to defaults
+                {t("refs.reset")}
               </button>
             </div>
           )}
@@ -292,14 +295,14 @@ export function CostCalculator() {
                     <CardBody>
                       <p className="flex items-center gap-2 text-sm font-bold text-ink">
                         <span className={cn("inline-block h-2.5 w-2.5 rounded-full", NUTRIENT_DOT[r.nutrient])} />
-                        {NUTRIENT_LABEL[r.nutrient]}
+                        {t(`nutrients.${r.nutrient}`)}
                       </p>
                       <p className="mt-2 text-3xl font-extrabold text-ink">
                         {formatRs(r.costPerKg)}
-                        <span className="text-sm font-medium text-ink-faint"> / kg</span>
+                        <span className="text-sm font-medium text-ink-faint"> {t("results.perKg")}</span>
                       </p>
                       <p className="mt-1 text-xs text-ink-faint">
-                        {r.nutrientKg.toFixed(2)} kg in pack ·{" "}
+                        {t("results.kgInPack", { kg: r.nutrientKg.toFixed(2) })} ·{" "}
                         {r.benchmarkProduct}: {formatRs(r.benchmarkCostPerKg)}/kg
                       </p>
                       <p
@@ -312,7 +315,10 @@ export function CostCalculator() {
                               : "bg-red-100 text-red-800 dark:bg-red-950/60 dark:text-red-200"
                         )}
                       >
-                        {r.ratio.toFixed(1)}× vs {r.benchmarkProduct}
+                        {t("results.vsBenchmark", {
+                          ratio: r.ratio.toFixed(1),
+                          product: r.benchmarkProduct,
+                        })}
                       </p>
                     </CardBody>
                   </Card>
@@ -324,34 +330,35 @@ export function CostCalculator() {
                 <p className="flex items-center gap-2">
                   <span className="text-2xl">{style.icon}</span>
                   <span className={cn("rounded-full px-3 py-1 text-sm font-bold", style.badge)}>
-                    {style.title}
+                    {t(`verdicts.${analysis.verdict}.title`)}
                   </span>
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-ink">
                   {analysis.verdict === "good" && (
                     <>
-                      Fair price. {name.trim() || "This product"} costs about the
-                      same as standard fertilizers — go ahead.
+                      {t("results.verdictGood", {
+                        name: name.trim() || t("results.thisProduct"),
+                      })}
                     </>
                   )}
                   {analysis.verdict === "pricier" && analysis.worstNutrient && (
                     <>
-                      {NUTRIENT_LABEL[analysis.worstNutrient.nutrient]} is{" "}
-                      <strong>{analysis.worstRatio.toFixed(1)}× more expensive</strong>{" "}
-                      than {analysis.worstNutrient.benchmarkProduct} (
-                      {formatRs(analysis.worstNutrient.benchmarkCostPerKg)}/kg).
-                      Consider the standard product instead.
+                      {t("results.verdictPricier", {
+                        nutrient: t(`nutrients.${analysis.worstNutrient.nutrient}`),
+                        ratio: analysis.worstRatio.toFixed(1),
+                        product: analysis.worstNutrient.benchmarkProduct,
+                        price: formatRs(analysis.worstNutrient.benchmarkCostPerKg),
+                      })}
                     </>
                   )}
                   {analysis.verdict === "expensive" && analysis.worstNutrient && (
                     <>
-                      You are paying{" "}
-                      <strong>{analysis.worstRatio.toFixed(1)}× more</strong> for{" "}
-                      {NUTRIENT_LABEL[analysis.worstNutrient.nutrient]} than{" "}
-                      {analysis.worstNutrient.benchmarkProduct} (
-                      {formatRs(analysis.worstNutrient.benchmarkCostPerKg)}/kg).
-                      Buy {analysis.worstNutrient.benchmarkProduct} — don&apos;t
-                      let the dealer fool you.
+                      {t("results.verdictExpensive", {
+                        nutrient: t(`nutrients.${analysis.worstNutrient.nutrient}`),
+                        ratio: analysis.worstRatio.toFixed(1),
+                        product: analysis.worstNutrient.benchmarkProduct,
+                        price: formatRs(analysis.worstNutrient.benchmarkCostPerKg),
+                      })}
                     </>
                   )}
                 </p>
@@ -361,23 +368,23 @@ export function CostCalculator() {
               <Card>
                 <CardBody>
                   <h2 className="mb-3 text-base font-bold text-ink">
-                    📋 Benchmark comparison
+                    {t("results.benchTitle")}
                   </h2>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
                         <tr className="border-b border-line text-left text-ink-faint">
-                          <th className="py-2 pr-3 font-semibold">Nutrient</th>
-                          <th className="py-2 pr-3 font-semibold">Your product</th>
-                          <th className="py-2 pr-3 font-semibold">Cheapest standard</th>
-                          <th className="py-2 font-semibold">Ratio</th>
+                          <th className="py-2 pr-3 font-semibold">{t("results.thNutrient")}</th>
+                          <th className="py-2 pr-3 font-semibold">{t("results.thYours")}</th>
+                          <th className="py-2 pr-3 font-semibold">{t("results.thCheapest")}</th>
+                          <th className="py-2 font-semibold">{t("results.thRatio")}</th>
                         </tr>
                       </thead>
                       <tbody>
                         {analysis.results.map((r) => (
                           <tr key={r.nutrient} className="border-b border-line/60 last:border-0">
                             <td className="py-2.5 pr-3 font-semibold text-ink">
-                              {NUTRIENT_LABEL[r.nutrient]}
+                              {t(`nutrients.${r.nutrient}`)}
                             </td>
                             <td className="py-2.5 pr-3 text-ink">{formatRs(r.costPerKg)}/kg</td>
                             <td className="py-2.5 pr-3 text-ink-soft">
@@ -398,8 +405,7 @@ export function CostCalculator() {
             <Card className="border-2 border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/30">
               <CardBody>
                 <p className="text-sm text-ink">
-                  ⚠️ Please enter a pack size, price, and at least one nutrient
-                  percentage above zero.
+                  {t("results.noInput")}
                 </p>
               </CardBody>
             </Card>
@@ -411,25 +417,27 @@ export function CostCalculator() {
       <Card>
         <CardBody>
           <h2 className="mb-2 text-sm font-bold text-ink">
-            💡 Cheapest nutrient sources right now
+            {t("results.cheapTitle")}
           </h2>
           <div className="flex flex-wrap gap-2">
-            {(Object.keys(NUTRIENT_LABEL) as Nutrient[]).map((nut) => {
+            {ALL_NUTRIENTS.map((nut) => {
               const b = benchmarks[nut];
               return b ? (
                 <span
                   key={nut}
                   className="rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink"
                 >
-                  {NUTRIENT_LABEL[nut]}: {b.productName} @ {formatRs(b.costPerKg)}/kg
+                  {t("results.cheapLine", {
+                    nutrient: t(`nutrients.${nut}`),
+                    product: b.productName,
+                    price: formatRs(b.costPerKg),
+                  })}
                 </span>
               ) : null;
             })}
           </div>
           <p className="mt-3 text-xs text-ink-faint">
-            Reference prices are for Pakistan and editable above. Nutrient cost =
-            pack price ÷ (pack weight × nutrient %). Update prices when the
-            market moves.
+            {t("results.footnote")}
           </p>
         </CardBody>
       </Card>

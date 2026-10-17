@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import {
   ALT_FERTILIZERS,
   findAlternatives,
-  optionNotes,
+  optionNoteKeys,
   targetNutrients,
   dimLabel,
   type AltOption,
@@ -28,6 +29,7 @@ function Select({
   value: string;
   onChange: (v: string) => void;
 }) {
+  const t = useTranslations("alternativeFinder");
   return (
     <label className="block">
       <span className="mb-1.5 block text-sm font-semibold text-ink">{label}</span>
@@ -36,10 +38,10 @@ function Select({
         onChange={(e) => onChange(e.target.value)}
         className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink shadow-sm focus:border-leaf-500 focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
       >
-        <option value="">— Select fertilizer —</option>
+        <option value="">{t("ui.selectPh")}</option>
         {ALT_FERTILIZERS.map((f) => (
           <option key={f.id} value={f.id}>
-            {f.name}
+            {t(`fertilizers.${f.id}.name`)}
           </option>
         ))}
       </select>
@@ -47,30 +49,35 @@ function Select({
   );
 }
 
-function matchBadge(pct: number) {
+function matchBadge(pct: number, label: string) {
   if (pct >= 90)
-    return <Badge className="bg-leaf-600 text-white">≈{pct}% match</Badge>;
+    return <Badge className="bg-leaf-600 text-white">{label}</Badge>;
   if (pct >= 75)
-    return <Badge className="bg-amber-500 text-white">≈{pct}% match</Badge>;
-  return <Badge className="bg-ink-faint/20 text-ink">≈{pct}% match</Badge>;
+    return <Badge className="bg-amber-500 text-white">{label}</Badge>;
+  return <Badge className="bg-ink-faint/20 text-ink">{label}</Badge>;
 }
 
 function OptionCard({ option, rank }: { option: AltOption; rank: number }) {
-  const notes = optionNotes(option);
+  const t = useTranslations("alternativeFinder");
+  const notes = optionNoteKeys(option).map((k) => t(`notes.${k}`));
   const dims = (["n", "p", "k"] as Dim[]).filter((d) => option.needed[d] > 0);
   return (
     <div className="rounded-2xl border border-line bg-surface p-5 shadow-sm">
       <div className="flex items-center justify-between gap-3">
-        <h3 className="text-base font-bold text-ink">Option {rank}</h3>
-        {matchBadge(option.matchPct)}
+        <h3 className="text-base font-bold text-ink">
+          {t("ui.optionTitle", { rank })}
+        </h3>
+        {matchBadge(option.matchPct, t("ui.matchPct", { pct: option.matchPct }))}
       </div>
 
       <ul className="mt-3 space-y-1.5">
         {option.items.map((it) => (
           <li key={it.fertilizer.id} className="flex items-baseline justify-between gap-2 text-sm">
-            <span className="font-medium text-ink">{it.fertilizer.name}</span>
+            <span className="font-medium text-ink">
+              {t(`fertilizers.${it.fertilizer.id}.name`)}
+            </span>
             <span className="shrink-0 rounded-lg bg-leaf-100 dark:bg-leaf-950/60 border border-leaf-200 dark:border-leaf-800 px-2.5 py-0.5 font-semibold text-leaf-800 dark:text-leaf-200">
-              {fmtBags(it.bags)} {it.bags === 1 ? "bag" : "bags"}
+              {t("ui.bagCount", { count: fmtBags(it.bags), n: it.bags })}
             </span>
           </li>
         ))}
@@ -80,9 +87,9 @@ function OptionCard({ option, rank }: { option: AltOption; rank: number }) {
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-xs uppercase tracking-wide text-ink-faint">
-              <th className="pb-1.5 pr-3 font-semibold">Nutrient</th>
-              <th className="pb-1.5 pr-3 font-semibold">Needed</th>
-              <th className="pb-1.5 font-semibold">This option gives</th>
+              <th className="pb-1.5 pr-3 font-semibold">{t("ui.thNutrient")}</th>
+              <th className="pb-1.5 pr-3 font-semibold">{t("ui.thNeeded")}</th>
+              <th className="pb-1.5 font-semibold">{t("ui.thGives")}</th>
             </tr>
           </thead>
           <tbody>
@@ -119,6 +126,7 @@ function OptionCard({ option, rank }: { option: AltOption; rank: number }) {
 }
 
 export function AlternativeFinder() {
+  const t = useTranslations("alternativeFinder");
   const [fert, setFert] = useState("");
   const [bagsStr, setBagsStr] = useState("1");
   const [searched, setSearched] = useState(false);
@@ -127,7 +135,13 @@ export function AlternativeFinder() {
   const valid = fert !== "" && Number.isFinite(bags) && bags > 0;
   const options: AltOption[] = searched && valid ? findAlternatives(fert, bags) : [];
   const needed = searched && valid ? targetNutrients(fert, bags) : null;
-  const fertName = ALT_FERTILIZERS.find((f) => f.id === fert)?.name ?? "";
+  const fertName = fert !== "" ? t(`fertilizers.${fert}.name`) : "";
+  const nutrients = needed
+    ? (["n", "p", "k"] as Dim[])
+        .filter((d) => needed[d] > 0)
+        .map((d) => `${needed[d].toFixed(1)} kg ${dimLabel(d)}`)
+        .join(" + ")
+    : "";
 
   const onFind = () => {
     if (valid) setSearched(true);
@@ -139,7 +153,7 @@ export function AlternativeFinder() {
         <CardBody className="space-y-5">
           <div className="grid gap-4 sm:grid-cols-2">
             <Select
-              label="Fertilizer you need an alternative for"
+              label={t("ui.fertLabel")}
               value={fert}
               onChange={(v) => {
                 setFert(v);
@@ -148,7 +162,7 @@ export function AlternativeFinder() {
             />
             <label className="block">
               <span className="mb-1.5 block text-sm font-semibold text-ink">
-                Quantity (50 kg bags)
+                {t("ui.qtyLabel")}
               </span>
               <input
                 type="number"
@@ -169,7 +183,7 @@ export function AlternativeFinder() {
             disabled={!valid}
             className="w-full rounded-xl bg-leaf-600 px-6 py-3.5 text-base font-bold text-white shadow-sm transition hover:bg-leaf-700 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Find alternatives
+            {t("ui.findBtn")}
           </button>
         </CardBody>
       </Card>
@@ -178,33 +192,21 @@ export function AlternativeFinder() {
         <div className="mt-6 space-y-4">
           <p className="text-sm text-ink-soft">
             <span className="font-semibold text-ink">
-              {fmtBags(bags)} {bags === 1 ? "bag" : "bags"} of {fertName}
+              {t("ui.summaryLine", { count: bags, fertName, nutrients })}
             </span>{" "}
-            supplies{" "}
-            {(["n", "p", "k"] as Dim[])
-              .filter((d) => needed[d] > 0)
-              .map((d) => `${needed[d].toFixed(1)} kg ${dimLabel(d)}`)
-              .join(" + ")}
-            . Closest equivalent combinations:
+            {t("ui.summaryTail")}
           </p>
           {options.length === 0 ? (
             <Card>
               <CardBody>
-                <p className="text-sm text-ink-soft">
-                  No practical alternative found for this product with common
-                  fertilizers. Try the main dose calculator for a full schedule
-                  instead.
-                </p>
+                <p className="text-sm text-ink-soft">{t("ui.noResult")}</p>
               </CardBody>
             </Card>
           ) : (
             options.map((o, i) => <OptionCard key={i} option={o} rank={i + 1} />)
           )}
           <p className="text-xs leading-relaxed text-ink-faint">
-            These are nutrient-equivalent suggestions based on standard product
-            grades (50 kg bags). Actual grades vary by brand — always check the
-            label. Prices and availability are not tracked here; confirm with
-            your local dealer before buying.
+            {t("ui.footnote")}
           </p>
         </div>
       )}

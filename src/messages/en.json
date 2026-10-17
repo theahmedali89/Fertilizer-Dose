@@ -1640,5 +1640,480 @@
     "viewAll": "View all contributors",
     "priorityBadge": "⚡ Priority review",
     "close": "Close"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Apply borax (11% B) at 10–15 kg/ha to soil, or spray 0.2% borax at flowering. Do not over-apply — the gap between deficiency and toxicity is narrow.",
+        "fertilizer": "Borax",
+        "fullName": "Boron (B)",
+        "name": "Boron Deficiency",
+        "note": "Critical at flowering — affects pollen and fruit set."
+      },
+      "Ca": {
+        "correction": "Ensure consistent soil moisture first — most calcium issues are water-related, not soil-related. Apply gypsum (no pH change) or calcium nitrate. For blossom end rot, mulch and regular watering matter more than fertilizer.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Calcium (Ca)",
+        "name": "Calcium Deficiency",
+        "note": "Blossom end rot is usually uneven watering, not lack of calcium."
+      },
+      "Fe": {
+        "correction": "Spray 0.5–1% ferrous sulfate solution on foliage (repeat after 10–14 days). Soil application rarely works in alkaline soils — use chelated iron (Fe-EDDHA) if needed.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Iron (Fe)",
+        "name": "Iron Deficiency",
+        "note": "Almost always induced by high soil pH, not low iron."
+      },
+      "K": {
+        "correction": "Apply SOP (50% K₂O) or MOP (60% K₂O) at 50–75 kg/ha. Split in fruiting crops — half at flowering, half at fruit development.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Potassium (K)",
+        "name": "Potassium Deficiency",
+        "note": "Worsens in sandy soils and under drought stress."
+      },
+      "Mg": {
+        "correction": "Apply magnesium sulfate (Epsom salt, 9.8% Mg) at 25 kg/ha to soil, or spray 2% solution on foliage.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesium (Mg)",
+        "name": "Magnesium Deficiency",
+        "note": "Often confused with nitrogen — check if yellowing is between veins."
+      },
+      "Mn": {
+        "correction": "Spray 0.5% manganese sulfate on foliage. Avoid over-liming — high pH locks manganese up.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Manganese (Mn)",
+        "name": "Manganese Deficiency",
+        "note": "Similar to iron deficiency — soil pH test helps tell them apart."
+      },
+      "N": {
+        "correction": "Apply urea (46% N) at 50–100 kg/ha as a top-dress before irrigation, or spray 2% urea solution on foliage for a quick response.",
+        "fertilizer": "Urea",
+        "fullName": "Nitrogen (N)",
+        "name": "Nitrogen Deficiency",
+        "note": "Most common deficiency worldwide. Responds fast to nitrogen."
+      },
+      "P": {
+        "correction": "Apply DAP (18-46-0) or SSP at sowing/transplanting — phosphorus moves slowly in soil, so place it near the root zone. Foliar sprays are a weak fix.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Phosphorus (P)",
+        "name": "Phosphorus Deficiency",
+        "note": "Common in cold soils and acidic soils."
+      },
+      "S": {
+        "correction": "Apply gypsum (18% S) at 200–250 kg/ha, or switch nitrogen source to ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Sulphur (S)",
+        "name": "Sulphur Deficiency",
+        "note": "Looks like nitrogen deficiency but starts on NEW leaves."
+      },
+      "Zn": {
+        "correction": "Apply zinc sulfate (33% Zn) at 20–25 kg/ha to soil, or spray 0.5% zinc sulfate + 0.25% lime on foliage. One soil dose lasts 2–3 seasons.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Zinc (Zn)",
+        "name": "Zinc Deficiency",
+        "note": "Very common in high-pH (alkaline) and calcareous soils."
+      }
+    },
+    "hero": {
+      "desc": "Yellow leaves? Purple stems? Scorched edges? Select what you see on your plants and we'll point you to the likely nutrient deficiency — with the right fertilizer to fix it.",
+      "eyebrow": "Nutrient Deficiency",
+      "title": "Fertilizer Deficiency Symptom Checker"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Dark sunken spots at the bottom of fruit",
+        "label": "Blossom end rot on fruits"
+      },
+      "dark-delayed": {
+        "hint": "Slow growth, late flowering",
+        "label": "Dark green leaves with delayed maturity"
+      },
+      "inter-old": {
+        "hint": "Veins stay green, areas between turn yellow",
+        "label": "Yellowing between veins on older leaves"
+      },
+      "little-leaf": {
+        "hint": "Rosette-like bunched growth",
+        "label": "Abnormally small leaves (little leaf)"
+      },
+      "new-uniform": {
+        "hint": "Like nitrogen deficiency but on young leaves",
+        "label": "New leaves uniformly pale yellow"
+      },
+      "new-yellow-veins": {
+        "hint": "Top growth affected first",
+        "label": "New leaves yellow but veins stay green"
+      },
+      "old-yellow": {
+        "hint": "Starts from the bottom of the plant",
+        "label": "Older / lower leaves turning yellow"
+      },
+      "poor-fruit": {
+        "hint": "Flowers fall without forming fruit",
+        "label": "Poor fruit set / flower drop"
+      },
+      "purple": {
+        "hint": "Unusual coloration, not normal variety color",
+        "label": "Purple or reddish leaves / stems"
+      },
+      "scorch": {
+        "hint": "Margins look burnt, starting on older leaves",
+        "label": "Brown, scorched leaf edges"
+      },
+      "spots-weak": {
+        "hint": "Stems lodge or break easily",
+        "label": "Brown spots on leaves, weak stems"
+      },
+      "stunted": {
+        "hint": "Whole plant looks weak and small",
+        "label": "Stunted growth, pale green plants"
+      },
+      "tip-burn": {
+        "hint": "Common in lettuce, cabbage, cauliflower",
+        "label": "Tip burn on young inner leaves"
+      },
+      "tip-death": {
+        "hint": "New growth is deformed or dead",
+        "label": "Growing tip dies or looks distorted"
+      }
+    },
+    "ui": {
+      "bestMatch": "Best match",
+      "calcDose": "Calculate exact dose in the fertilizer calculator →",
+      "checkButton": "Check deficiency ({count} selected)",
+      "clearAll": "Clear all",
+      "disclaimer": "Disclaimer:",
+      "disclaimerText": "Visual symptoms overlap between deficiencies, pests, and diseases. This checker is an educational guide based on standard agronomic references — it is not a substitute for a laboratory soil or tissue test. When in doubt, get your soil tested before applying corrective fertilizer.",
+      "howToCorrect": "How to correct it",
+      "matchedOf": "Matched {matched} of {total} key symptoms",
+      "noMatches1": "No matches found. Try selecting different symptoms, or check the",
+      "noMatches2": "for a photo-based diagnosis.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Ranked by how many of your symptoms match. This is a guide, not a lab test — confirm with a soil test for certainty.",
+      "recFert": "Recommended fertilizer",
+      "refTitle": "Quick reference — all deficiencies",
+      "step1Desc": "Tap all that apply. You can select more than one.",
+      "step1Title": "Step 1 — Select the symptoms you see",
+      "step2Title": "Step 2 — Likely deficiencies",
+      "thFix": "Fix with",
+      "thNutrient": "Nutrient",
+      "thSymptom": "Classic symptom"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Mixing two fertilizers in one drum or spray tank? Check first — some combinations form insoluble sludge that wastes your money and blocks nozzles. Pick two fertilizers and get an instant verdict.",
+      "eyebrow": "Tank-Mix Compatibility",
+      "title": "Fertilizer Tank-Mix Compatibility Checker"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Forms calcium phosphate precipitate"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Forms insoluble zinc phosphate sludge"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Phosphate locks out zinc"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Milky precipitate, nutrients lost"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate mixes safely. Both are nitrogen sources; the combination also supplies sulphur. No adverse reaction.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Boron is safe together in solution — a common fertigation pairing for fruit crops at flowering.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Boron (borax/boric acid) is compatible in solution. This is a standard foliar combination — often sprayed together at flowering and fruit set.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate forms calcium phosphate precipitate. Both nutrients lock each other out and settle at the bottom of the tank — a complete waste of both fertilizers.",
+        "instead": "Apply calcium nitrate through fertigation on a different day than any phosphate fertilizer. Keep at least a 3–4 day gap.",
+        "title": "DANGER — Do NOT mix"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 contains phosphate, which can precipitate with calcium from calcium nitrate. Some liquid NPK grades are chelated and fine — granular NPK is risky in the same tank.",
+        "instead": "If both are needed, apply the NPK to soil and fertigate calcium nitrate separately, a few days apart.",
+        "title": "CAUTION — Check the grade"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate is chemically compatible, but both are strongly hygroscopic — the mixture absorbs moisture from the air, turns sticky, and cakes within hours.",
+        "instead": "Mix just before use and broadcast the same day. Store the two fertilizers separately in sealed bags.",
+        "title": "CAUTION — Highly hygroscopic"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP is a safe, widely used basal combination. No precipitation between phosphate and sulphate of potash.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "dap_urea": {
+        "explanation": "Dry-mixing DAP + Urea for broadcasting is safe. But dissolving both together in a spray tank raises pH and releases ammonia gas — you lose nitrogen and the high pH can scorch leaves.",
+        "instead": "Dry mix is fine for broadcasting. For fertigation/spray, apply them in separate passes.",
+        "title": "CAUTION — Fine dry, risky in solution"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate forms insoluble zinc phosphate — a thick, curd-like precipitate. The zinc becomes fixed and unavailable to the plant, and the sludge blocks spray nozzles and drip emitters.",
+        "instead": "Apply separately: broadcast DAP at sowing/land preparation, and apply zinc sulphate as a separate soil application or foliar spray (0.5% solution) 2–3 weeks later.",
+        "title": "DANGER — Do NOT mix"
+      },
+      "default": {
+        "explanation": "Is combination ka koi verified compatibility data nahi hai. Ise 'safe' mat samjho. Mix karne se pehle fertilizer label ki instructions follow karo, ya jar test karo: thodi miqdar pani me milao, 15 minute wait karo, aur heat, gas, dahi-jaisi phat-ti ya sediment check karo. Jab tak sure na ho, mix mat karo.",
+        "instead": "Agar dono fertilizers zaroori hain to unhe alag-alag apply karo — ya pehle chhote scale par jar test karke tasdeeq karo.",
+        "title": "UNKNOWN — Not verified"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP is chemically compatible for dry broadcasting. (Note: in drip irrigation or for chloride-sensitive crops, prefer SOP over MOP.)",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate mixes fine physically, but MOP adds a heavy chloride load. In drip irrigation or for chloride-sensitive crops (tobacco, potato, citrus, grapes), this combination stresses the crop.",
+        "instead": "Prefer SOP over MOP when mixing with micronutrients, especially under drip irrigation or for sensitive crops.",
+        "title": "CAUTION — Chloride load"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos contains phosphate, which reacts with zinc to form insoluble zinc phosphate — the same curd-like precipitate as DAP + Zinc. Zinc is lost and nozzles clog.",
+        "instead": "Apply zinc sulphate separately — as a basal soil dose or a 0.5% foliar spray — at least 2 weeks away from any phosphate fertilizer.",
+        "title": "DANGER — Do NOT mix"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP is safe and commonly used to raise potash in fruiting crops without adding chloride.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea is safe — commonly used to boost nitrogen in a basal dose. No adverse reaction.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "same": {
+        "explanation": "You selected {name} twice — nothing to mix. Pick two different fertilizers to check compatibility.",
+        "instead": "",
+        "title": "Same fertilizer"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP is a fully compatible mix, dry or dissolved. No precipitation, no nutrient loss. A common and effective combination for top-dressing.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate is safe in the tank. Sulphate-based fertilizers do not react with zinc, and both dissolve cleanly together.",
+        "instead": "",
+        "title": "SAFE — Compatible"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP is chemically compatible, but the mixture cakes and hardens quickly because urea absorbs moisture and SSP is acidic. It becomes difficult to spread evenly.",
+        "instead": "Mix only the amount you will broadcast within 1–2 hours. Do not store the mixture overnight.",
+        "title": "CAUTION — Use immediately"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP contains phosphate + calcium. Mixed with zinc sulphate it forms insoluble zinc phosphate and calcium precipitates — the mixture turns milky and unusable.",
+        "instead": "Apply zinc separately as a foliar spray or basal dose, away from SSP application.",
+        "title": "DANGER — Do NOT mix"
+      }
+    },
+    "ui": {
+      "checkBtn": "Check Compatibility",
+      "fertA": "Fertilizer A",
+      "fertB": "Fertilizer B",
+      "insteadTitle": "💡 What to do instead",
+      "jarTest": "Always do a jar test before a full tank mix: mix small amounts in water, wait 15 minutes, and check for heat, gas, curdling, or sediment.",
+      "quickRefTitle": "Quick reference: never mix these",
+      "selectPlaceholder": "— Select fertilizer —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Liquids are treated as 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Nutrient content (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Pack size",
+      "packSizePh": "e.g. 1",
+      "price": "Price (Rs per pack)",
+      "pricePh": "e.g. 3500",
+      "productName": "Product name",
+      "productPh": "e.g. SuperPhos Liquid 10%",
+      "submit": "💰 Calculate true cost"
+    },
+    "hero": {
+      "desc": "A fancy liquid phosphorus at Rs 3,500 per liter — bargain or scam? Enter any product's price and NPK percentage and we'll reveal its true cost per kg of nutrient, benchmarked against standard DAP, Urea, SOP and MOP.",
+      "eyebrow": "Price vs. Value",
+      "noteText": "Reference prices are illustrative and editable — not live market prices. Use your area's actual rates for accurate comparison.",
+      "noteTitle": "⚠️ Note:",
+      "title": "Fertilizer Cost Per Nutrient Calculator"
+    },
+    "nutrients": {
+      "k": "K₂O (Potash)",
+      "n": "N (Nitrogen)",
+      "p": "P₂O₅ (Phosphorus)"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg bag",
+      "perBag": "Rs / bag",
+      "priceAria": "{name} price in Rs",
+      "reset": "Reset to defaults",
+      "title": "📊 Reference prices (Pakistan, Rs / 50 kg bag)"
+    },
+    "results": {
+      "benchTitle": "📋 Benchmark comparison",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Cheapest nutrient sources right now",
+      "footnote": "Reference prices are for Pakistan and editable above. Nutrient cost = pack price ÷ (pack weight × nutrient %). Update prices when the market moves.",
+      "kgInPack": "{kg} kg in pack",
+      "noInput": "⚠️ Please enter a pack size, price, and at least one nutrient percentage above zero.",
+      "perKg": "/ kg",
+      "thCheapest": "Cheapest standard",
+      "thNutrient": "Nutrient",
+      "thRatio": "Ratio",
+      "thYours": "Your product",
+      "thisProduct": "This product",
+      "verdictExpensive": "You are paying {ratio}× more for {nutrient} than {product} ({price}/kg). Buy {product} — don't let the dealer fool you.",
+      "verdictGood": "Fair price. {name} costs about the same as standard fertilizers — go ahead.",
+      "verdictPricier": "{nutrient} is {ratio}× more expensive than {product} ({price}/kg). Consider the standard product instead.",
+      "vsBenchmark": "{ratio}× vs {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Expensive — buy the standard instead"
+      },
+      "good": {
+        "title": "Good deal"
+      },
+      "pricier": {
+        "title": "Pricier than standard"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Also supplies sulphur (24% S) — good for oilseeds and alkaline soils.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — cheapest K source, contains chloride.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — chloride-free, also supplies sulphur.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Also supplies sulphur (~12%) and calcium; slower release than DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP missing from the market, or SOP priced out of reach? Pick the fertilizer you wanted and how many bags you needed — we'll show the closest nutrient-equivalent combinations from products that are usually available.",
+      "eyebrow": "Shortage Helper",
+      "noteText": "Nutrient-equivalent math does not prove chemical compatibility, salt-index safety, or timing suitability. Confirm any substitution with your local agronomist before applying.",
+      "noteTitle": "⚠️ Important:",
+      "title": "Fertilizer Alternative Finder"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate also supplies sulphur (24% S) — a plus for oilseeds, pulses and high-pH soils.",
+      "imperfect": "This is the closest practical match — an exact NPK replica with different products is rarely possible.",
+      "mop": "MOP contains chloride — prefer SOP for chloride-sensitive crops (tobacco, potato, citrus, grapes).",
+      "ssp": "SSP releases phosphorus more slowly than DAP — incorporate it into the soil a few days before sowing for best results.",
+      "urea": "Broadcast urea 1–2 days after irrigation on moist soil — do not flood it with the irrigation water (up to 40–50% can be lost)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {bag} other {bags}}",
+      "fertLabel": "Fertilizer you need an alternative for",
+      "findBtn": "Find alternatives",
+      "footnote": "These are nutrient-equivalent suggestions based on standard product grades (50 kg bags). Actual grades vary by brand — always check the label. Prices and availability are not tracked here; confirm with your local dealer before buying.",
+      "matchPct": "≈{pct}% match",
+      "noResult": "No practical alternative found for this product with common fertilizers. Try the main dose calculator for a full schedule instead.",
+      "optionTitle": "Option {rank}",
+      "qtyLabel": "Quantity (50 kg bags)",
+      "selectPh": "— Select fertilizer —",
+      "summaryLine": "{count, plural, one {# bag} other {# bags}} of {fertName} supplies {nutrients}.",
+      "summaryTail": "Closest equivalent combinations:",
+      "thGives": "This option gives",
+      "thNeeded": "Needed",
+      "thNutrient": "Nutrient"
+    }
   }
 }

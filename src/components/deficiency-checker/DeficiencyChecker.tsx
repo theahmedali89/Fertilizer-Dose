@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Link } from "@/i18n/navigation";
 
@@ -8,149 +9,42 @@ import { Link } from "@/i18n/navigation";
 
 type Deficiency = {
   id: string;
-  name: string;
-  fullName: string;
   key: string; // nutrient symbol
   symptoms: string[];
-  correction: string;
-  fertilizer: string;
-  note: string;
 };
 
 const DEFICIENCIES: Deficiency[] = [
-  {
-    id: "N",
-    name: "Nitrogen Deficiency",
-    fullName: "Nitrogen (N)",
-    key: "N",
-    symptoms: ["old-yellow", "stunted"],
-    correction:
-      "Apply urea (46% N) at 50–100 kg/ha as a top-dress before irrigation, or spray 2% urea solution on foliage for a quick response.",
-    fertilizer: "Urea",
-    note: "Most common deficiency worldwide. Responds fast to nitrogen.",
-  },
-  {
-    id: "P",
-    name: "Phosphorus Deficiency",
-    fullName: "Phosphorus (P)",
-    key: "P",
-    symptoms: ["purple", "dark-delayed"],
-    correction:
-      "Apply DAP (18-46-0) or SSP at sowing/transplanting — phosphorus moves slowly in soil, so place it near the root zone. Foliar sprays are a weak fix.",
-    fertilizer: "DAP / SSP",
-    note: "Common in cold soils and acidic soils.",
-  },
-  {
-    id: "K",
-    name: "Potassium Deficiency",
-    fullName: "Potassium (K)",
-    key: "K",
-    symptoms: ["scorch", "spots-weak"],
-    correction:
-      "Apply SOP (50% K₂O) or MOP (60% K₂O) at 50–75 kg/ha. Split in fruiting crops — half at flowering, half at fruit development.",
-    fertilizer: "SOP / MOP",
-    note: "Worsens in sandy soils and under drought stress.",
-  },
-  {
-    id: "Zn",
-    name: "Zinc Deficiency",
-    fullName: "Zinc (Zn)",
-    key: "Zn",
-    symptoms: ["little-leaf", "inter-old"],
-    correction:
-      "Apply zinc sulfate (33% Zn) at 20–25 kg/ha to soil, or spray 0.5% zinc sulfate + 0.25% lime on foliage. One soil dose lasts 2–3 seasons.",
-    fertilizer: "Zinc sulfate",
-    note: "Very common in high-pH (alkaline) and calcareous soils.",
-  },
-  {
-    id: "Fe",
-    name: "Iron Deficiency",
-    fullName: "Iron (Fe)",
-    key: "Fe",
-    symptoms: ["new-yellow-veins"],
-    correction:
-      "Spray 0.5–1% ferrous sulfate solution on foliage (repeat after 10–14 days). Soil application rarely works in alkaline soils — use chelated iron (Fe-EDDHA) if needed.",
-    fertilizer: "Ferrous sulfate / Fe-EDDHA",
-    note: "Almost always induced by high soil pH, not low iron.",
-  },
-  {
-    id: "B",
-    name: "Boron Deficiency",
-    fullName: "Boron (B)",
-    key: "B",
-    symptoms: ["tip-death", "poor-fruit"],
-    correction:
-      "Apply borax (11% B) at 10–15 kg/ha to soil, or spray 0.2% borax at flowering. Do not over-apply — the gap between deficiency and toxicity is narrow.",
-    fertilizer: "Borax",
-    note: "Critical at flowering — affects pollen and fruit set.",
-  },
-  {
-    id: "Mg",
-    name: "Magnesium Deficiency",
-    fullName: "Magnesium (Mg)",
-    key: "Mg",
-    symptoms: ["old-yellow", "inter-old"],
-    correction:
-      "Apply magnesium sulfate (Epsom salt, 9.8% Mg) at 25 kg/ha to soil, or spray 2% solution on foliage.",
-    fertilizer: "Magnesium sulfate",
-    note: "Often confused with nitrogen — check if yellowing is between veins.",
-  },
-  {
-    id: "S",
-    name: "Sulphur Deficiency",
-    fullName: "Sulphur (S)",
-    key: "S",
-    symptoms: ["new-uniform"],
-    correction:
-      "Apply gypsum (18% S) at 200–250 kg/ha, or switch nitrogen source to ammonium sulfate (21% N + 24% S).",
-    fertilizer: "Gypsum / Ammonium sulfate",
-    note: "Looks like nitrogen deficiency but starts on NEW leaves.",
-  },
-  {
-    id: "Ca",
-    name: "Calcium Deficiency",
-    fullName: "Calcium (Ca)",
-    key: "Ca",
-    symptoms: ["tip-death", "ber", "tip-burn"],
-    correction:
-      "Ensure consistent soil moisture first — most calcium issues are water-related, not soil-related. Apply gypsum (no pH change) or calcium nitrate. For blossom end rot, mulch and regular watering matter more than fertilizer.",
-    fertilizer: "Gypsum / Calcium nitrate",
-    note: "Blossom end rot is usually uneven watering, not lack of calcium.",
-  },
-  {
-    id: "Mn",
-    name: "Manganese Deficiency",
-    fullName: "Manganese (Mn)",
-    key: "Mn",
-    symptoms: ["new-yellow-veins"],
-    correction:
-      "Spray 0.5% manganese sulfate on foliage. Avoid over-liming — high pH locks manganese up.",
-    fertilizer: "Manganese sulfate",
-    note: "Similar to iron deficiency — soil pH test helps tell them apart.",
-  },
+  { id: "N", key: "N", symptoms: ["old-yellow", "stunted"] },
+  { id: "P", key: "P", symptoms: ["purple", "dark-delayed"] },
+  { id: "K", key: "K", symptoms: ["scorch", "spots-weak"] },
+  { id: "Zn", key: "Zn", symptoms: ["little-leaf", "inter-old"] },
+  { id: "Fe", key: "Fe", symptoms: ["new-yellow-veins"] },
+  { id: "B", key: "B", symptoms: ["tip-death", "poor-fruit"] },
+  { id: "Mg", key: "Mg", symptoms: ["old-yellow", "inter-old"] },
+  { id: "S", key: "S", symptoms: ["new-uniform"] },
+  { id: "Ca", key: "Ca", symptoms: ["tip-death", "ber", "tip-burn"] },
+  { id: "Mn", key: "Mn", symptoms: ["new-yellow-veins"] },
 ];
 
 type Symptom = {
   id: string;
-  label: string;
-  hint: string;
 };
 
 const SYMPTOMS: Symptom[] = [
-  { id: "old-yellow", label: "Older / lower leaves turning yellow", hint: "Starts from the bottom of the plant" },
-  { id: "stunted", label: "Stunted growth, pale green plants", hint: "Whole plant looks weak and small" },
-  { id: "purple", label: "Purple or reddish leaves / stems", hint: "Unusual coloration, not normal variety color" },
-  { id: "dark-delayed", label: "Dark green leaves with delayed maturity", hint: "Slow growth, late flowering" },
-  { id: "scorch", label: "Brown, scorched leaf edges", hint: "Margins look burnt, starting on older leaves" },
-  { id: "spots-weak", label: "Brown spots on leaves, weak stems", hint: "Stems lodge or break easily" },
-  { id: "little-leaf", label: "Abnormally small leaves (little leaf)", hint: "Rosette-like bunched growth" },
-  { id: "inter-old", label: "Yellowing between veins on older leaves", hint: "Veins stay green, areas between turn yellow" },
-  { id: "new-yellow-veins", label: "New leaves yellow but veins stay green", hint: "Top growth affected first" },
-  { id: "new-uniform", label: "New leaves uniformly pale yellow", hint: "Like nitrogen deficiency but on young leaves" },
-  { id: "tip-death", label: "Growing tip dies or looks distorted", hint: "New growth is deformed or dead" },
-  { id: "poor-fruit", label: "Poor fruit set / flower drop", hint: "Flowers fall without forming fruit" },
-  { id: "ber", label: "Blossom end rot on fruits", hint: "Dark sunken spots at the bottom of fruit" },
-  { id: "tip-burn", label: "Tip burn on young inner leaves", hint: "Common in lettuce, cabbage, cauliflower" },
+  { id: "old-yellow" },
+  { id: "stunted" },
+  { id: "purple" },
+  { id: "dark-delayed" },
+  { id: "scorch" },
+  { id: "spots-weak" },
+  { id: "little-leaf" },
+  { id: "inter-old" },
+  { id: "new-yellow-veins" },
+  { id: "new-uniform" },
+  { id: "tip-death" },
+  { id: "poor-fruit" },
+  { id: "ber" },
+  { id: "tip-burn" },
 ];
 
 // ── Component ────────────────────────────────────────────────────────
@@ -163,6 +57,7 @@ type Result = {
 };
 
 export function DeficiencyChecker() {
+  const t = useTranslations("deficiencyChecker");
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [checked, setChecked] = useState(false);
 
@@ -200,10 +95,10 @@ export function DeficiencyChecker() {
     <div>
       {/* Symptom selection */}
       <h2 className="font-display text-2xl font-semibold mb-2">
-        Step 1 — Select the symptoms you see
+        {t("ui.step1Title")}
       </h2>
       <p className="text-sm text-ink-soft mb-6">
-        Tap all that apply. You can select more than one.
+        {t("ui.step1Desc")}
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2">
@@ -237,8 +132,8 @@ export function DeficiencyChecker() {
                   )}
                 </span>
                 <span>
-                  <span className="block font-medium text-sm">{s.label}</span>
-                  <span className="block text-xs text-ink-soft mt-0.5">{s.hint}</span>
+                  <span className="block font-medium text-sm">{t(`symptoms.${s.id}.label`)}</span>
+                  <span className="block text-xs text-ink-soft mt-0.5">{t(`symptoms.${s.id}.hint`)}</span>
                 </span>
               </span>
             </button>
@@ -254,7 +149,7 @@ export function DeficiencyChecker() {
           disabled={selected.size === 0}
           className="rounded-xl bg-leaf-700 dark:bg-leaf-600 px-6 py-3 font-semibold text-white hover:bg-leaf-800 dark:hover:bg-leaf-500 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          Check deficiency ({selected.size} selected)
+          {t("ui.checkButton", { count: selected.size })}
         </button>
         {selected.size > 0 && (
           <button
@@ -262,7 +157,7 @@ export function DeficiencyChecker() {
             onClick={reset}
             className="rounded-xl border border-line px-6 py-3 font-medium hover:bg-surface transition-colors"
           >
-            Clear all
+            {t("ui.clearAll")}
           </button>
         )}
       </div>
@@ -271,26 +166,24 @@ export function DeficiencyChecker() {
       {checked && (
         <div className="mt-10">
           <h2 className="font-display text-2xl font-semibold mb-2">
-            Step 2 — Likely deficiencies
+            {t("ui.step2Title")}
           </h2>
           {results.length === 0 ? (
             <Card>
               <CardBody>
                 <p className="text-ink-soft">
-                  No matches found. Try selecting different symptoms, or check
-                  the{" "}
+                  {t("ui.noMatches1")}{" "}
                   <Link href="/plant-doctor" className="font-semibold text-leaf-700 dark:text-leaf-300 hover:underline">
-                    Plant Doctor
+                    {t("ui.noMatchesLink")}
                   </Link>{" "}
-                  for a photo-based diagnosis.
+                  {t("ui.noMatches2")}
                 </p>
               </CardBody>
             </Card>
           ) : (
             <>
               <p className="text-sm text-ink-soft mb-6">
-                Ranked by how many of your symptoms match. This is a guide, not
-                a lab test — confirm with a soil test for certainty.
+                {t("ui.rankedDesc")}
               </p>
               <div className="space-y-4">
                 {results.map(({ def, matched, total }, i) => (
@@ -300,33 +193,33 @@ export function DeficiencyChecker() {
                         <div>
                           {i === 0 && (
                             <span className="inline-block text-xs font-bold uppercase tracking-wide text-leaf-700 dark:text-leaf-300 bg-leaf-100 dark:bg-leaf-900 rounded-full px-3 py-1 mb-2">
-                              Best match
+                              {t("ui.bestMatch")}
                             </span>
                           )}
                           <h3 className="font-display text-xl font-semibold">
-                            {def.name}{" "}
-                            <span className="text-sm font-normal text-ink-soft">({def.fullName})</span>
+                            {t(`deficiencies.${def.id}.name`)}{" "}
+                            <span className="text-sm font-normal text-ink-soft">({t(`deficiencies.${def.id}.fullName`)})</span>
                           </h3>
                           <p className="text-xs text-ink-soft mt-1">
-                            Matched {matched} of {total} key symptoms
+                            {t("ui.matchedOf", { matched, total })}
                           </p>
                         </div>
                         <div className="text-right">
-                          <p className="text-xs text-ink-soft">Recommended fertilizer</p>
-                          <p className="font-semibold text-leaf-700 dark:text-leaf-300">{def.fertilizer}</p>
+                          <p className="text-xs text-ink-soft">{t("ui.recFert")}</p>
+                          <p className="font-semibold text-leaf-700 dark:text-leaf-300">{t(`deficiencies.${def.id}.fertilizer`)}</p>
                         </div>
                       </div>
                       <div className="mt-4 rounded-lg bg-surface border border-line p-4">
-                        <p className="text-sm font-semibold mb-1">How to correct it</p>
-                        <p className="text-sm text-ink-soft leading-relaxed">{def.correction}</p>
+                        <p className="text-sm font-semibold mb-1">{t("ui.howToCorrect")}</p>
+                        <p className="text-sm text-ink-soft leading-relaxed">{t(`deficiencies.${def.id}.correction`)}</p>
                       </div>
-                      <p className="mt-3 text-xs text-ink-faint italic">{def.note}</p>
+                      <p className="mt-3 text-xs text-ink-faint italic">{t(`deficiencies.${def.id}.note`)}</p>
                       <div className="mt-4">
                         <Link
                           href="/calculator"
                           className="text-sm font-semibold text-leaf-700 dark:text-leaf-300 hover:underline"
                         >
-                          Calculate exact dose in the fertilizer calculator →
+                          {t("ui.calcDose")}
                         </Link>
                       </div>
                     </CardBody>
@@ -341,25 +234,25 @@ export function DeficiencyChecker() {
       {/* Reference table */}
       <div className="mt-12">
         <h2 className="font-display text-2xl font-semibold mb-4">
-          Quick reference — all deficiencies
+          {t("ui.refTitle")}
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-line text-left">
-                <th className="py-3 pr-4 font-semibold">Nutrient</th>
-                <th className="py-3 pr-4 font-semibold">Classic symptom</th>
-                <th className="py-3 font-semibold">Fix with</th>
+                <th className="py-3 pr-4 font-semibold">{t("ui.thNutrient")}</th>
+                <th className="py-3 pr-4 font-semibold">{t("ui.thSymptom")}</th>
+                <th className="py-3 font-semibold">{t("ui.thFix")}</th>
               </tr>
             </thead>
             <tbody>
               {DEFICIENCIES.map((d) => (
                 <tr key={d.id} className="border-b border-line/60">
-                  <td className="py-3 pr-4 font-medium whitespace-nowrap">{d.fullName}</td>
+                  <td className="py-3 pr-4 font-medium whitespace-nowrap">{t(`deficiencies.${d.id}.fullName`)}</td>
                   <td className="py-3 pr-4 text-ink-soft">
-                    {SYMPTOMS.find((s) => s.id === d.symptoms[0])?.label}
+                    {t(`symptoms.${d.symptoms[0]}.label`)}
                   </td>
-                  <td className="py-3 text-ink-soft">{d.fertilizer}</td>
+                  <td className="py-3 text-ink-soft">{t(`deficiencies.${d.id}.fertilizer`)}</td>
                 </tr>
               ))}
             </tbody>
@@ -371,11 +264,8 @@ export function DeficiencyChecker() {
       <Card className="mt-8">
         <CardBody>
           <p className="text-xs text-ink-soft leading-relaxed">
-            <strong className="text-ink">Disclaimer:</strong> Visual symptoms
-            overlap between deficiencies, pests, and diseases. This checker is
-            an educational guide based on standard agronomic references — it is
-            not a substitute for a laboratory soil or tissue test. When in
-            doubt, get your soil tested before applying corrective fertilizer.
+            <strong className="text-ink">{t("ui.disclaimer")}</strong>{" "}
+            {t("ui.disclaimerText")}
           </p>
         </CardBody>
       </Card>
