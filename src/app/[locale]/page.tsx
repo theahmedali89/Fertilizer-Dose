@@ -82,6 +82,7 @@ export default async function Home({
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const faqT = await getTranslations("faq");
+  const tFert = await getTranslations("fertilizers");
   const faqs = faqT.raw("items") as { q: string; a: string }[];
   const stats = t.raw("hero.stats") as { t: string; s: string }[];
   const toolCards = t.raw("tools.cards") as { title: string; desc: string }[];
@@ -348,7 +349,7 @@ export default async function Home({
                       <td className="px-5 py-3.5 text-end font-mono">{f.n}</td>
                       <td className="px-5 py-3.5 text-end font-mono">{f.p}</td>
                       <td className="px-5 py-3.5 text-end font-mono">{f.k}</td>
-                      <td className="px-5 py-3.5 text-ink-soft hidden sm:table-cell">{f.tagline}</td>
+                      <td className="px-5 py-3.5 text-ink-soft hidden sm:table-cell">{tFert(`taglines.${f.slug}`) || f.tagline}</td>
                     </tr>
                   ))}
                 </tbody>

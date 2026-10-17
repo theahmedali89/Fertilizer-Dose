@@ -959,7 +959,14 @@
     "saveCalculation": "Save to My Garden",
     "savedToGarden": "Saved to My Garden",
     "viewGarden": "View My Garden",
-    "organicApplicationLabel": "Organic manure application"
+    "organicApplicationLabel": "Organic manure application",
+    "soilTypes": {
+      "Sandy": "Sandy",
+      "Loamy": "Loamy",
+      "Clay": "Clay",
+      "Silty": "Silty",
+      "Saline": "Saline"
+    }
   },
   "tools": {
     "profit": {

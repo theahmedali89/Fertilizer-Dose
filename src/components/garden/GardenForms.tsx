@@ -166,7 +166,7 @@ export function PlotForm({
         <select value={soilType} onChange={(e) => setSoilType(e.target.value)} className={inputCls}>
           <option value="">{t("soilUnknown")}</option>
           {SOIL_TYPES.map((s) => (
-            <option key={s} value={s}>{s}</option>
+            <option key={s} value={s}>{t(`soilTypes.${s}`)}</option>
           ))}
         </select>
       </Field>
