@@ -732,7 +732,20 @@
     "eyebrow": "Plant Doctor",
     "title": "Show us the leaf. We'll help read it.",
     "metaTitle": "Plant Doctor — AI Crop Problem Diagnosis",
-    "metaDescription": "Upload a crop photo and describe symptoms for AI-assisted diagnosis with causes, actions and prevention steps."
+    "metaDescription": "Upload a crop photo and describe symptoms for AI-assisted diagnosis with causes, actions and prevention steps.",
+    "form": {
+      "photoLabel": "Plant photo",
+      "photoHint": "Click or drop a photo here",
+      "photoTypes": "JPG, PNG or WebP, max 5 MB",
+      "cropLabel": "Crop (if known)",
+      "cropPlaceholder": "Not sure / other",
+      "symptomsLabel": "Describe the symptoms",
+      "symptomsHint": "What do you see? Yellow spots, wilting, holes in leaves, when it started, which part of the plant…",
+      "symptomsPlaceholder": "e.g. Yellow spots with brown edges on lower leaves of wheat, started about a week ago after rain…",
+      "submit": "Diagnose my plant",
+      "analyzing": "Analyzing…",
+      "diagnosisTitle": "Diagnosis"
+    }
   },
   "growing": {
     "searchPlaceholder": "Search by name…",

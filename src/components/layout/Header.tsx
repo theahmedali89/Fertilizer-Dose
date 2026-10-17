@@ -20,7 +20,6 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
   const NAV = [
     { href: "/", label: t("home") },
     { href: "/plant-doctor", label: t("plantDoctor") },
-    { href: "/deficiency-checker", label: t("deficiencyChecker") },
     { href: "/fertilizers", label: t("fertilizers") },
     { href: "/blog", label: t("blog") },
     { href: "/faq", label: t("faq") },
@@ -36,6 +35,7 @@ export function Header({ countrySelector }: { countrySelector?: React.ReactNode 
 
   const TOOL_LINKS = [
     { href: "/calculator", label: t("calculator") },
+    { href: "/deficiency-checker", label: t("deficiencyChecker") },
     { href: "/soil-test-calculator", label: t("soilTestCalculator") },
     { href: "/plant-dose-calculator", label: t("plantDoseCalculator") },
     { href: "/land-area-calculator", label: t("landAreaCalculator") },

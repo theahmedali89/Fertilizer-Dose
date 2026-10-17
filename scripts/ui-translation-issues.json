@@ -1,0 +1,14 @@
+[
+  {
+    "locale": "bg",
+    "key": "calculator.form.underReviewBadge",
+    "issue": "translate-error: HTTP Error 429: Too Many Requests",
+    "src": "Under Review"
+  },
+  {
+    "locale": "bg",
+    "key": "calculator.form.targetYield",
+    "issue": "translate-error: HTTP Error 429: Too Many Requests",
+    "src": "Target yield (optional)"
+  }
+]

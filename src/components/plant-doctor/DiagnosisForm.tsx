@@ -1,12 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Field, Select, Textarea } from "@/components/ui/fields";
 import { CROPS } from "@/lib/agronomy";
 
 export function DiagnosisForm() {
+  const t = useTranslations("plantDoctor.form");
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string>("");
   const [symptoms, setSymptoms] = useState("");
@@ -80,7 +82,7 @@ export function DiagnosisForm() {
       <CardBody className="sm:p-8">
         <form onSubmit={onSubmit} className="space-y-6">
           <Field
-            label="Plant photo"
+            label={t("photoLabel")}
             hint="A clear, well-lit close-up of the affected leaf or area. JPG, PNG or WebP, max 5 MB."
           >
             <div
@@ -111,7 +113,7 @@ export function DiagnosisForm() {
                     <path d="M12 16V4m0 0 4 4m-4-4L8 8" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" strokeLinecap="round" />
                   </svg>
-                  <p className="mt-3 font-semibold">Click or drop a photo here</p>
+                  <p className="mt-3 font-semibold">{t("photoHint")}</p>
                 </>
               )}
             </div>
@@ -122,9 +124,9 @@ export function DiagnosisForm() {
             )}
           </Field>
 
-          <Field label="Crop (if known)">
+          <Field label={t("cropLabel")}>
             <Select value={crop} onChange={(e) => setCrop(e.target.value)}>
-              <option value="">Not sure / other</option>
+              <option value="">{t("cropPlaceholder")}</option>
               {CROPS.map((c) => (
                 <option key={c.slug} value={c.name}>{c.name}</option>
               ))}
@@ -132,13 +134,13 @@ export function DiagnosisForm() {
           </Field>
 
           <Field
-            label="Describe the symptoms"
-            hint="What do you see? Yellow spots, wilting, holes in leaves, when it started, which part of the plant…"
+            label={t("symptomsLabel")}
+            hint={t("symptomsHint")}
           >
             <Textarea
               value={symptoms}
               onChange={(e) => setSymptoms(e.target.value)}
-              placeholder="e.g. Yellow spots with brown edges on lower leaves of wheat, started about a week ago after rain…"
+              placeholder={t("symptomsPlaceholder")}
             />
           </Field>
 
@@ -156,13 +158,13 @@ export function DiagnosisForm() {
           )}
 
           <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "sending"}>
-            {status === "sending" ? "Analyzing…" : "Diagnose my plant"}
+            {status === "sending" ? t("analyzing") : t("submit")}
           </Button>
 
           {status === "done" && result && (
             <div className="rounded-2xl border border-line bg-surface-2/50 p-5 sm:p-6 space-y-5" aria-live="polite">
               <div className="flex items-center gap-2.5">
-                <h2 className="font-display text-xl font-semibold">Diagnosis</h2>
+                <h2 className="font-display text-xl font-semibold">{t("diagnosisTitle")}</h2>
                 <span
                   className={`text-xs font-bold uppercase tracking-wide rounded-full px-2.5 py-1 ${
                     result.urgency === "high"
