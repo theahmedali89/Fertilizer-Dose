@@ -101,6 +101,14 @@
       {
         "q": "Warum sind manche Kulturen deaktiviert?",
         "a": "Eine Kultur ist nur auswählbar, wenn ihre empfohlene NPK-Dosis anhand einer veröffentlichten Quelle verifiziert ist. Wir deaktivieren eine Kultur lieber, als ihre Werte zu erfinden – unverifizierte Kulturen sind bis zur Bestätigung als „Daten in Prüfung“ markiert."
+      },
+      {
+        "q": "Wie werden Kanal und Marla umgerechnet?",
+        "a": "1 acre = 8 kanal = 160 marla, und 1 kanal = 20 marla. Im metrischen System: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Der Rechner rechnet Ihre Fläche in Hektar um, wendet die Dosierung pro Hektar an und rechnet sie dann auf Ihre Einheit zurück."
+      },
+      {
+        "q": "Warum sind einige Feldfrüchte deaktiviert?",
+        "a": "Eine Feldfrucht ist nur auswählbar, wenn ihre empfohlene NPK-Dosis anhand einer veröffentlichten Quelle überprüft wurde. Wir deaktivieren eine Feldfrucht lieber, als Zahlen zu erfinden — ungeprüfte Kulturen sind bis zur Bestätigung als „Daten in Überprüfung“ markiert."
       }
     ],
     "organic": {
@@ -184,6 +192,50 @@
       {
         "a": "Ja – Rechner, Bibliotheken und Anleitungen sind kostenlos. Ein Konto ist nur für Funktionen wie das Speichern von Diagnosen nötig.",
         "q": "Ist Fertilizer Dose kostenlos?"
+      },
+      {
+        "q": "Kann ich Urea und DAP zusammen mischen?",
+        "a": "Ja, Urea und DAP können bei der Aussaat zusammen als Grunddüngung ausgebracht werden. DAP liefert Phosphor (46% P₂O₅) plus 18% Stickstoff, während Urea zusätzlichen Stickstoff (46% N) beisteuert. Es ist gängige Praxis, sie vor dem Ausbringen zu mischen. Vermeiden Sie es jedoch, Urea mit SSP (single super phosphate) in derselben Gabe zu mischen, wenn die Mischung stehen bleibt — sie kann klumpen. Prüfen Sie immer zuerst das für Ihre Kultur empfohlene NPK-Verhältnis."
+      },
+      {
+        "q": "Was bedeutet Grunddüngung (basal dose) bei Düngemitteln?",
+        "a": "Die Grunddüngung ist der Dünger, der bei oder vor der Aussaat/Pflanzung ausgebracht und in den Boden eingearbeitet wird. Sie umfasst typischerweise den gesamten Phosphor- und Kaliumbedarf sowie einen Teil des Stickstoffs (üblicherweise 1/3 bis 1/2). Der restliche Stickstoff wird später als Kopfdüngung gegeben — zum Beispiel Urea bei der Bestockung von Weizen. Die Grunddüngung stellt sicher, dass den jungen Wurzeln vom ersten Tag an Nährstoffe zur Verfügung stehen."
+      },
+      {
+        "q": "DAP vs. SSP — was ist besser?",
+        "a": "Das hängt von Ihrem Boden und Ihrer Kultur ab. DAP (18-46-0) hat eine höhere Phosphorkonzentration (46% P₂O₅), sodass Sie weniger Produkt pro acre benötigen — vorteilhaft für Transport und Handhabung. SSP (16% P₂O₅) liefert zusätzlich Schwefel (~11%) und Calcium (~19%) und eignet sich daher besser für Ölsaaten, Hülsenfrüchte und schwefelarme Böden. DAP ist meist pro kg Phosphor günstiger, aber SSP liefert Sekundärnährstoffe. Nutzen Sie unser Vergleichs-Tool, um zu prüfen, was bei Ihren lokalen Preisen pro kg P₂O₅ günstiger ist."
+      },
+      {
+        "q": "Was ist eine bodenuntersuchungsbasierte Düngerdosis?",
+        "a": "Eine Bodenuntersuchung misst den vorhandenen Stickstoff, Phosphor, Kalium, den pH-Wert und die organische Substanz Ihres Bodens. Anstelle einer pauschalen Empfehlung wird die Düngerdosis angepasst — wenn Ihr Boden bereits reich an Phosphor ist, bringen Sie weniger P-Dünger aus. Das spart Geld und verhindert eine Überdüngung. Wir empfehlen, alle 2-3 Jahre eine Bodenuntersuchung durchführen zu lassen."
+      },
+      {
+        "q": "Wie lange bleibt Urea im Boden aktiv?",
+        "a": "Nach der Ausbringung wandelt sich Urea durch natürliche Bodenenzyme innerhalb von etwa 2–4 Tagen in pflanzenverfügbares Ammonium um, und in den folgenden 2–4 Wochen je nach Bodentemperatur und -feuchtigkeit in Nitrat. Praktisch gesehen ernährt eine einzige Urea-Gabe die Kultur etwa 4–6 Wochen lang, weshalb Stickstoff meist in 2–3 Gaben über die Saison aufgeteilt wird. Ammoniakgasverluste sind auf heißen, trockenen, alkalischen Böden am höchsten, wenn Urea auf der Oberfläche liegt — das Einarbeiten in feuchten Boden verringert dies."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen Urea und DAP?",
+        "a": "Urea (46-0-0) liefert ausschließlich Stickstoff mit 46% N — der am stärksten konzentrierte Stickstoffdünger im allgemeinen Gebrauch. DAP (18-46-0) liefert 18% Stickstoff plus 46% Phosphat (P₂O₅). In der Praxis wird DAP als Grunddüngung bei der Aussaat eingesetzt, wenn die Kultur Phosphor zur Wurzelbildung benötigt, während Urea für die Stickstoff-Kopfdüngung während des aktiven Wachstums verwendet wird. Sie erfüllen unterschiedliche Zwecke."
+      },
+      {
+        "q": "Wie dosiere ich Dünger für Pflanzen?",
+        "a": "Beginnen Sie nach Möglichkeit mit einer Bodenuntersuchung — sie zeigt, was bereits vorhanden ist, sodass Sie nur Fehlendes ergänzen. Verwenden Sie dann den Pflanzendosierungs-Rechner auf Fertilizer Dose: Geben Sie Pflanzenart und Topf- oder Beetgröße ein, und er liefert die genauen Gramm pro Pflanze. Als Faustregel gilt: Besser in kleinen Teilgaben als alles auf einmal düngen, nach granulierter Ausbringung gießen und immer die Packungsangaben beachten."
+      },
+      {
+        "q": "Wie viel NPK ist in Festmist (FYM) enthalten?",
+        "a": "Gut verrotteter Stallmist (FYM) enthält typischerweise etwa 0.5–1.0% Stickstoff, 0.2–0.5% Phosphat (P₂O₅) und 0.5–1.0% Kali (K₂O), was jedoch je nach Tierart, Futter, Einstreu und Kompostierung stark variiert. Da der Nährstoffgehalt im Vergleich zu Mineraldüngern gering und variabel ist, eignet sich FYM am besten als Bodenverbesserer — er führt organische Substanz zu und verbessert die Struktur, während Mineraldünger die präzise NPK-Dosis liefern."
+      },
+      {
+        "q": "Wann ist die beste Tageszeit für Blattdüngung?",
+        "a": "Der frühe Morgen (vor 9–10 Uhr) oder der späte Abend sind die besten Zeiten für die Blattdüngung. Die Spaltöffnungen (Stomata) sind geöffnet, die Temperaturen kühler und die Spritztropfen bleiben länger feucht, was die Nährstoffaufnahme verbessert. Vermeiden Sie Spritzungen in der Mittagshitze — Tropfen trocknen zu schnell und Rückstände können Blätter verbrennen. Nicht unmittelbar vor Regen spritzen."
+      },
+      {
+        "q": "Was bedeutet NPK auf einem Düngersack?",
+        "a": "Die drei Zahlen auf einem Düngersack (z. B. 15-15-15) geben die Gewichtsprozente von Stickstoff (N), Phosphat (P₂O₅) und Kali (K₂O) an. Ein 50-kg-Sack 15-15-15 enthält also jeweils 7.5 kg N, P₂O₅ und K₂O. Beachten Sie, dass Phosphor und Kalium nach Branchenkonvention in ihren Oxidformen angegeben werden — die Fertilizer Dose-Rechner übernehmen diese Umrechnung automatisch für Sie."
+      },
+      {
+        "q": "Wofür wird Ammonium sulphate-Dünger verwendet?",
+        "a": "Ammonium sulphate (21-0-0 plus 24% Schwefel) liefert Stickstoff zusammen mit Schwefel, was auf schwefelarmen Böden sehr nützlich ist — häufig bei ertragreichem Getreide und Ölsaaten. Es wirkt versauernd auf den Boden, weshalb es sich gut für neutrale bis alkalische Böden eignet, auf bereits sauren Böden jedoch vorsichtig eingesetzt werden sollte."
       }
     ],
     "title": "Fragen, die uns Landwirte stellen",
@@ -539,7 +591,20 @@
     "eyebrow": "Plant Doctor",
     "title": "Zeigen Sie uns das Blatt. Wir helfen beim Lesen.",
     "metaTitle": "Plant Doctor — KI-Diagnose für Kulturprobleme",
-    "metaDescription": "Laden Sie ein Kulturfoto hoch und beschreiben Sie Symptome für eine KI-gestützte Diagnose mit Ursachen, Maßnahmen und Vorbeugung."
+    "metaDescription": "Laden Sie ein Kulturfoto hoch und beschreiben Sie Symptome für eine KI-gestützte Diagnose mit Ursachen, Maßnahmen und Vorbeugung.",
+    "form": {
+      "photoLabel": "Pflanzenfoto",
+      "photoHint": "Klicken oder Foto hier ablegen",
+      "photoTypes": "JPG, PNG oder WebP, max. 5 MB",
+      "cropLabel": "Kultur (falls bekannt)",
+      "cropPlaceholder": "Nicht sicher / andere",
+      "symptomsLabel": "Symptome beschreiben",
+      "symptomsHint": "Was sehen Sie? Gelbe Flecken, Welke, Löcher in Blättern, wann begann es, welcher Pflanzenteil…",
+      "symptomsPlaceholder": "z. B. Gelbe Flecken mit braunen Rändern auf unteren Weizenblättern, begann vor etwa einer Woche nach Regen…",
+      "submit": "Meine Pflanze diagnostizieren",
+      "analyzing": "Wird analysiert…",
+      "diagnosisTitle": "Diagnose"
+    }
   },
   "growing": {
     "searchPlaceholder": "Nach Name suchen…",
@@ -929,7 +994,19 @@
       "detailCta": "Details ansehen"
     },
     "searchPlaceholder": "Suche nach Düngemitteln…",
-    "searchNoResults": "Zu Ihrer Suche passen keine Düngemittel."
+    "searchNoResults": "Zu Ihrer Suche passen keine Düngemittel.",
+    "taglines": {
+      "urea": "Der am stärksten konzentrierte Stickstoffdünger im allgemeinen Gebrauch.",
+      "dap": "Die Standardquelle für Grundphosphor — mit Stickstoff-Bonus.",
+      "mop": "Die wirtschaftliche Kaliumquelle für die meisten Ackerkulturen.",
+      "ssp": "Phosphor plus Schwefel und Calcium in einem Granulat.",
+      "sop": "Chloridfreies Kalium für empfindliche, hochwertige Kulturen.",
+      "ammonium-sulphate": "Stickstoff plus Schwefel mit bodenversauernder Wirkung.",
+      "farmyard-manure": "Der traditionelle Hofdünger — geringe Nährstoffe, hoher Bodenverbesserungswert.",
+      "compost": "Zersetzte Hof- und Haushaltsabfälle — variable Nährstoffe je nach Ausgangsstoff.",
+      "vermicompost": "Wurmkompost — nährstoffreicher als normaler Mist, abhängig vom Futter.",
+      "green-manure": "Eine lebende Stickstofffabrik — angebaut und vor der Hauptfrucht untergepflügt."
+    }
   },
   "chart": {
     "metaTitle": "Düngerdosis-Tabelle — NPK-Kurzreferenz",
@@ -1016,7 +1093,8 @@
       "startDate": "Erste Fütterung",
       "addToGarden": "Fügen Sie einen Zeitplan zu „Mein Garten“ hinzu",
       "addedToGarden": "Hinzugefügt – siehe Mein Garten → Erinnerungen.",
-      "gardenHint": "Bei Erinnerungen handelt es sich um allgemeine Zeitvorschläge, nicht um Rezepte. Überspringen Sie eine Düngung, wenn die Pflanzen gestresst aussehen."
+      "gardenHint": "Bei Erinnerungen handelt es sich um allgemeine Zeitvorschläge, nicht um Rezepte. Überspringen Sie eine Düngung, wenn die Pflanzen gestresst aussehen.",
+      "scheduleTitle": "Vorschlag: Pflanzen düngen ({ppm} ppm {nutrient})"
     },
     "presets": {
       "gentle": {
@@ -1049,18 +1127,60 @@
       "perBed": "Insgesamt für das Bett",
       "perBedHint": "Mit dem Bewässerungswasser mischen und gleichmäßig über das Beet verteilen.",
       "scheduleTitle": "Fütterungsplan (nächste 6)",
-      "scheduleHint": "Basierend auf der von Ihnen gewählten Frequenz. Dies sind Planungshilfen – passen Sie sich an die Reaktion der Pflanzen an."
+      "scheduleHint": "Basierend auf der von Ihnen gewählten Frequenz. Dies sind Planungshilfen – passen Sie sich an die Reaktion der Pflanzen an.",
+      "total": "Gesamt für {litres} L",
+      "formulaNote": "Berechnung: {grade} bei {ppm} ppm {nutrient} → Gramm pro Liter = {ppm} ÷ (%{nutrient} × 10).",
+      "bedVolumeHint": "{area} {unit} × {depth} cm Wurzelzone.",
+      "formulaNoteLiquid": "Berechnung: {grade} bei {ppm} ppm {nutrient} → Gramm pro Liter = {ppm} ÷ (%{nutrient} × 10), dann ÷ {density} g/ml Dichte = ml pro Liter.",
+      "formulaNoteBed": "Beetvolumen = Fläche × {depth} cm Tiefe."
     },
     "method": {
       "eyebrow": "Wie es funktioniert",
       "title": "Dosierung nach ppm, so wie es Züchter machen",
-      "desc": "Kommerzielle Züchter raten nicht mit Löffeln – sie mischen den Dünger auf eine angestrebte Nährstoffkonzentration in Teilen pro Million (ppm). Dieser Rechner bietet Hobbygärtnern die gleiche Methode."
+      "desc": "Kommerzielle Züchter raten nicht mit Löffeln – sie mischen den Dünger auf eine angestrebte Nährstoffkonzentration in Teilen pro Million (ppm). Dieser Rechner bietet Hobbygärtnern die gleiche Methode.",
+      "steps": [
+        {
+          "t": "Wählen Sie Ihre Düngerformulierung",
+          "d": "Lesen Sie die N-P-K-Zahlen vom Sack ab, z. B. 20-20-20, oder geben Sie eine eigene Formulierung ein."
+        },
+        {
+          "t": "Düngestärke wählen",
+          "d": "Zimmerpflanzen und langsam wachsende Arten gedeihen bei schonenden Raten (~100 ppm N); die meisten Topfpflanzen bei normalen Raten (~150 ppm N); starkzehrende Pflanzen vertragen ~200 ppm N."
+        },
+        {
+          "t": "Mischen und normal gießen",
+          "d": "Lösen Sie die berechnete Grammzahl in Ihrer Gießkanne auf und gießen Sie normal, sodass überschüssiges Wasser ablaufen kann. Düngen Sie bei jedem Gießen mit dieser Konzentration oder halb so oft mit doppelter Stärke — niemals beides kombinieren."
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Quellen",
       "title": "Woher die Fütterungsraten kommen",
-      "note": "Voreinstellungen verwenden das untere Ende jedes veröffentlichten Bereichs, die konservative Wahl für die Lichtverhältnisse zu Hause. Befolgen Sie immer das Etikett Ihres Produkts und die Ratschläge Ihres örtlichen Beratungsdienstes."
-    }
+      "note": "Voreinstellungen verwenden das untere Ende jedes veröffentlichten Bereichs, die konservative Wahl für die Lichtverhältnisse zu Hause. Befolgen Sie immer das Etikett Ihres Produkts und die Ratschläge Ihres örtlichen Beratungsdienstes.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): Beetpflanzen 200–250 ppm N Dauerdüngung; langsam wachsende Typen 100–150 ppm N bis zum Anwachsen.",
+        "Michigan State University Extension (E2186): Topfpflanzen — Langzeitdünger plus zusätzliche Flüssigdüngung bei 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": die Formel g/L = ppm ÷ (%N × 10) und Rechenbeispiel mit 200 ppm N."
+      ]
+    },
+    "faq": [
+      {
+        "q": "Wie viel Dünger brauchen Topfpflanzen?",
+        "a": "Die meisten Topfpflanzen gedeihen gut mit einer Gießlösung von 100–150 ppm Stickstoff — etwa 0.5–1 g 20-20-20 pro Liter Wasser. Starkzehrer wie blühfreudige Einjährige vertragen bis zu 200 ppm. Beginnen Sie vorsichtig; steigern können Sie später immer noch."
+      },
+      {
+        "q": "Kann ich einfach einen Löffel statt einer Waage benutzen?",
+        "a": "Ein gestrichener Teelöffel Granulatdünger wiegt etwa 5–6 g, aber die Dichte variiert je nach Produkt, sodass Löffel nur ein grober Richtwert sind. Für kleine Töpfe und Setzlinge ist eine Feinwaage viel sicherer — 50% Abweichung bei Löffeln passieren schnell und verbrennen Wurzeln."
+      },
+      {
+        "q": "Sollte ich bei jedem Gießen düngen?",
+        "a": "Bei den oben genannten milden Raten ja — so handhaben es professionelle Gärtner („Fertigation“). Die Alternative ist halb so oft mit doppelter Konzentration. Wählen Sie einen Rhythmus und beobachten Sie die Pflanzen."
+      },
+      {
+        "q": "Was sind die Anzeichen von Überdüngung?",
+        "a": "Braune, trockene Blattränder, Welken trotz feuchter Erde und eine weiße Salzkruste auf der Erdoberfläche. Spülen Sie in diesem Fall den Topf gründlich mit klarem Wasser durch und setzen Sie die nächste Düngung aus."
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Kostenloses landwirtschaftliches Werkzeug",
@@ -1145,10 +1265,84 @@
       "conversionTitle": "Umrechnungstabelle für Landflächen",
       "conversionNote": "Genaue Definitionen. Regionale Einheiten werden nur angezeigt, wenn sie überprüft wurden.",
       "sourcesTitle": "Quellen & Methodik",
-      "sourcesBody": "Universelle Einheiten verwenden genaue SI- und imperiale Definitionen (1 Acre = 4.046,8564224 m²; 1 Hektar = 10.000 m²). Kanal und Marla verwenden den Punjab-Umsatzstandard: 1 Karam = 5,5 Fuß, 1 Marla = 9 Quadratkaram = 272,25 Quadratfuß, 1 Kanal = 20 Marla = 5.445 Quadratfuß. Alle Berechnungen erfolgen intern in Quadratmetern und werden einmal in die Anzeigeeinheit umgerechnet – keine verkettete Rundung."
+      "sourcesBody": "Universelle Einheiten verwenden genaue SI- und imperiale Definitionen (1 Acre = 4.046,8564224 m²; 1 Hektar = 10.000 m²). Kanal und Marla verwenden den Punjab-Umsatzstandard: 1 Karam = 5,5 Fuß, 1 Marla = 9 Quadratkaram = 272,25 Quadratfuß, 1 Kanal = 20 Marla = 5.445 Quadratfuß. Alle Berechnungen erfolgen intern in Quadratmetern und werden einmal in die Anzeigeeinheit umgerechnet – keine verkettete Rundung.",
+      "formulas": [
+        {
+          "name": "Rechteck",
+          "formula": "Fläche = Länge × Breite",
+          "example": "100 m × 50 m = 5,000 m²"
+        },
+        {
+          "name": "Quadrat",
+          "formula": "Fläche = Seite²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Dreieck",
+          "formula": "Fläche = ½ × Grundseite × Höhe",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapez",
+          "formula": "Fläche = ((Seite A + Seite B) / 2) × Höhe",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1,500 m²"
+        },
+        {
+          "name": "Vier Seiten + Diagonale",
+          "formula": "Entlang der Diagonale in zwei Dreiecke teilen; jedes mit Herons Formel berechnen und addieren",
+          "example": "Exakt — keine Näherung"
+        }
+      ]
     },
     "relatedTitle": "Verwandte landwirtschaftliche Werkzeuge",
-    "relatedCurrent": "Sie sind hier"
+    "relatedCurrent": "Sie sind hier",
+    "savedPlotName": "Gemessenes Feld ({date})",
+    "faq": [
+      {
+        "q": "Wie berechne ich die Grundstücksfläche?",
+        "a": "Messen Sie Länge und Breite in derselben Einheit und multiplizieren Sie: Fläche = Länge × Breite. Teilen Sie unregelmäßige Formen in Rechtecke und Dreiecke auf, berechnen Sie diese einzeln und addieren Sie sie."
+      },
+      {
+        "q": "Wie berechne ich landwirtschaftliche Nutzfläche?",
+        "a": "Nutzen Sie dieselbe Geometrie und rechnen Sie in die Einheit Ihrer Region um — Acres, Hektar oder lokale Einheiten wie Kanal und Marla. Dieser Rechner rechnet automatisch um und kann das Ergebnis direkt an den Düngerrechner übergeben."
+      },
+      {
+        "q": "Wie viele Acres hat dieses Feld?",
+        "a": "Geben Sie oben Länge und Breite ein und lesen Sie den Acre-Wert ab. Wenn Sie in Fuß gemessen haben, rechnet der Rechner Quadratfuß automatisch in Acres um (43,560 sq ft = 1 acre)."
+      },
+      {
+        "q": "Wie berechne ich Fläche in Quadratfuß?",
+        "a": "Multiplizieren Sie Länge in Fuß mit Breite in Fuß: 100 ft × 50 ft = 5,000 sq ft. Ein Acre entspricht 43,560 sq ft."
+      },
+      {
+        "q": "Kann man mit vier Seitenlängen ein unregelmäßiges Feld exakt berechnen?",
+        "a": "Nein. Vier Seiten allein legen die Fläche eines Vierecks nicht fest, da die Winkel variabel sind. Messen Sie zusätzlich eine Diagonale, um das Feld in zwei exakt lösbare Dreiecke zu teilen."
+      },
+      {
+        "q": "Wie rechne ich Acres in Hektar um?",
+        "a": "Multiplizieren Sie Acres mit 0.404686. Ein Hektar entspricht 2.471 Acres. Nutzen Sie oben den Umrechnungsmodus für beliebige Einheiten."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen einem Acre und einem Hektar?",
+        "a": "Ein Hektar (10,000 m²) ist etwa 2.47-mal größer als ein Acre (4,047 m²). Hektar ist in den meisten Ländern Standard; Acres sind in Pakistan, Indien, Bangladesch und den USA gebräuchlich."
+      },
+      {
+        "q": "Kann ich unregelmäßige Feldflächen berechnen?",
+        "a": "Ja — nutzen Sie den Unregelmäßig-Modus: Teilen Sie Ihr Feld in Rechtecke, Quadrate, Dreiecke oder Trapeze auf, tragen Sie jeden Abschnitt ein und der Rechner summiert sie."
+      },
+      {
+        "q": "Warum variieren traditionelle Landmaße je nach Region?",
+        "a": "Einheiten wie Bigha, Marla und Kanal stammen aus historischen lokalen Steuersystemen, weshalb ihre Größe variiert. Wir bieten regionale Einheiten nur dort an, wo die Umrechnung offiziell verifiziert ist."
+      },
+      {
+        "q": "Kann ich die berechnete Fläche im Düngerdosierungs-Rechner verwenden?",
+        "a": "Ja. Tippen Sie auf „Im Düngerrechner verwenden“ und Fläche, Einheit, Land sowie Region werden automatisch übertragen."
+      },
+      {
+        "q": "Ist dies eine rechtlich bindende Landvermessung?",
+        "a": "Nein. Dieses Werkzeug liefert nützliche Schätzungen aus Ihren eigenen Messungen für landwirtschaftliche Entscheidungen. Rechtliche Grenzen erfordern einen qualifizierten Vermesser."
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Landwirtschaftliche Werkzeuge",
@@ -1209,7 +1403,35 @@
     "bannerProfit": "Schätzen Sie den Gewinn",
     "bannerDismiss": "Zurückweisen",
     "relatedTitle": "Verwandte Tools",
-    "relatedCurrent": "Sie sind hier"
+    "relatedCurrent": "Sie sind hier",
+    "howSteps": [
+      "Öffnen Sie die Karte und finden Sie Ihr Feld — Zoomen Sie heran oder zentrieren Sie auf Ihren Standort.",
+      "Tippen Sie auf die Karte, um Grenzpunkte um das Feld zu setzen. Ziehen Sie Punkte zum Anpassen; tippen Sie auf einen nummerierten Punkt zum Löschen.",
+      "Ab 3 Punkten wird die Fläche mit geodätischer (erdkrümmungsbereinigter) Mathematik berechnet — präzise auf jedem Breitengrad.",
+      "Verwenden Sie die Fläche im Landflächen-Rechner und danach im Düngerdosierungs- oder Rentabilitätsrechner."
+    ],
+    "faq": [
+      {
+        "q": "Wie funktioniert der Karten-Flächenrechner?",
+        "a": "Setzen Sie Grenzpunkte um Ihr Feld. Ab 3 Punkten berechnet das Tool die eingeschlossene Fläche geodätisch unter Berücksichtigung der Erdkrümmung."
+      },
+      {
+        "q": "Ist die gemessene Fläche amtlich genau?",
+        "a": "Nein. Es ist eine praktische Schätzung basierend auf Ihren Punkten und der Ausrichtung der Satellitenbilder."
+      },
+      {
+        "q": "Verwendet dies Google Maps?",
+        "a": "Nein. Die Karte basiert auf OpenStreetMap, einer freien Gemeinschaftskarte. Es besteht keine Verbindung zu Google."
+      },
+      {
+        "q": "Kann ich die gemessene Fläche für die Düngerberechnung nutzen?",
+        "a": "Ja — die Schaltfläche „Diese Fläche nutzen“ überträgt die Fläche in den Flächenrechner und von dort in den Düngerdosierungs-Rechner."
+      },
+      {
+        "q": "Werden mein Standort oder meine Feldgrenzen gespeichert?",
+        "a": "Nein. Grenzpunkte verbleiben während der Messung nur im Speicher Ihres Browsers und werden nicht auf unseren Servern gespeichert."
+      }
+    ]
   },
   "kitchenGarden": {
     "eyebrow": "Küchengartenplaner",
@@ -1258,7 +1480,30 @@
     "savePlan": "Speichern Sie den Plan in „Mein Garten“.",
     "saved": "Plan in „Mein Garten“ gespeichert.",
     "openMyGarden": "Öffne meinen Garten",
-    "faqTitle": "Häufig gestellte Fragen zur Küchengärtnerei"
+    "faqTitle": "Häufig gestellte Fragen zur Küchengärtnerei",
+    "savedPlotName": "Nutzgarten — {date}",
+    "faq": [
+      {
+        "q": "Was kann ich diesen Monat in einem kleinen Nutzgarten pflanzen?",
+        "a": "Das hängt von Region und Monat ab. Tragen Sie Ihre Beetdaten oben ein und der Planer listet nur Gemüse und Kräuter mit verifizierten Pflanzfenstern auf."
+      },
+      {
+        "q": "Gibt der Planer Pflanzabstände an?",
+        "a": "Noch nicht. Reihen- und Pflanzenabstände sind für diese Kulturen in unserer Datenbank noch nicht abschließend verifiziert. Nutzen Sie lokale Anbauleitfäden."
+      },
+      {
+        "q": "Wie unterscheidet sich dies vom Aussaatkalender?",
+        "a": "Der Aussaatkalender umfasst auch Feldfrüchte. Dieser Planer konzentriert sich auf Hausgärten unter Berücksichtigung von Beetgröße und Sonnenlicht."
+      },
+      {
+        "q": "Kann ich meine Landflächenmessung hier verwenden?",
+        "a": "Ja. Die Schaltfläche „Nutzgarten planen“ im Landflächen-Rechner überträgt die Fläche direkt in diesen Planer."
+      },
+      {
+        "q": "Wo wird mein Plan gespeichert?",
+        "a": "In Ihrem Browser unter „Mein Garten“ (lokaler Speicher), sobald Sie auf „Plan in Mein Garten speichern“ klicken."
+      }
+    ]
   },
   "suggestions": {
     "improveTranslation": "Verbessern Sie diese Übersetzung",
