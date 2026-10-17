@@ -33,6 +33,16 @@ export default async function ContactPage({
         <p className="mt-4 text-lg text-ink-soft">
           Questions, corrections to our data, or partnership ideas — we read everything.
         </p>
+        <p className="mt-3 text-sm text-ink-soft">
+          Prefer email? Reach us directly at{" "}
+          <a
+            href="mailto:postmaster@fertdose.com"
+            className="font-medium text-leaf-700 hover:text-leaf-800 dark:text-leaf-300 dark:hover:text-leaf-200 transition-colors"
+          >
+            postmaster@fertdose.com
+          </a>
+          .
+        </p>
         <ContactForm />
       </div>
     </Section>
