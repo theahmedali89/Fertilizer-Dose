@@ -9,6 +9,7 @@ import { getItemsByCategory } from "@/lib/growing";
 import { getTranslatedItemNames } from "@/server/i18n-names";
 import { resolveNpk, hasAnyNpk, translateSeason } from "@/lib/npk-display";
 import { POSTS } from "@/lib/blog";
+import { getPostsLocalized } from "@/server/data";
 import { siteConfig } from "@/config/site";
 import { localizedMetadata } from "@/lib/seo";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
@@ -93,6 +94,8 @@ export default async function Home({
     locale
   );
   const tGrowing = await getTranslations("growing");
+  // Localized blog posts (falls back to English per post when no translation)
+  const posts = locale === "en" ? POSTS : await getPostsLocalized(locale);
   const noDataLabel = tGrowing("noData");
   const seasonLabels = tGrowing.raw("seasonLabels") as Record<string, string> | undefined;
 
@@ -363,7 +366,7 @@ export default async function Home({
       {/* ============ BLOG ============ */}
       <Section eyebrow={t("blog.eyebrow")} title={t("blog.title")}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {POSTS.map((post) => (
+          {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <Card className="h-full transition-all duration-200 group-hover:shadow-lift group-hover:-translate-y-0.5">
                 <CardBody>

@@ -18,18 +18,44 @@ DELAY = 1.0  # seconds between requests (conservative after 2026-10-16 throttle)
 
 def flat_keys(d, p=""):
     out = {}
-    for k, v in d.items():
-        if isinstance(v, dict):
-            out.update(flat_keys(v, p + k + "."))
+    if isinstance(d, dict):
+        items = d.items()
+    elif isinstance(d, list):
+        items = enumerate(d)
+    else:
+        return {p.rstrip("."): d} if p else {}
+    for k, v in items:
+        key = f"{p}{k}."
+        if isinstance(v, (dict, list)):
+            out.update(flat_keys(v, key))
         else:
-            out[p + k] = v
+            out[key.rstrip(".")] = v
     return out
 
 def set_nested(d, dotted, value):
     parts = dotted.split(".")
-    for p in parts[:-1]:
-        d = d.setdefault(p, {})
-    d[parts[-1]] = value
+    for i, p in enumerate(parts[:-1]):
+        nxt = parts[i + 1]
+        # decide container type by whether next part is numeric
+        if p.isdigit():
+            p = int(p)
+            # d must be a list here
+            while len(d) <= p:
+                d.append({} if not nxt.isdigit() else [])
+            d = d[p]
+        else:
+            if nxt.isdigit():
+                d = d.setdefault(p, [])
+            else:
+                d = d.setdefault(p, {})
+    last = parts[-1]
+    if last.isdigit():
+        last = int(last)
+        while len(d) <= last:
+            d.append(None)
+        d[last] = value
+    else:
+        d[last] = value
 
 def gt_translate(text, tl):
     url = ("https://translate.googleapis.com/translate_a/single"

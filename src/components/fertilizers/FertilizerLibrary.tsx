@@ -121,7 +121,7 @@ export function FertilizerLibrary({ fertilizers }: { fertilizers: FertilizerInfo
                   <FertilizerLocalName f={f} locale={locale} className="text-sm font-sans font-normal text-ink-faint" />
                 </h2>
                 <NpkLine f={f} />
-                <p className="mt-3 text-sm text-ink-soft leading-relaxed">{f.tagline}</p>
+                <p className="mt-3 text-sm text-ink-soft leading-relaxed">{t(`taglines.${f.slug}`) || f.tagline}</p>
               </CardBody>
             </Card>
           </Link>

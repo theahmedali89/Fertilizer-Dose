@@ -1138,7 +1138,19 @@
       "detailCta": "View details"
     },
     "searchPlaceholder": "Search fertilizers…",
-    "searchNoResults": "No fertilizers match your search."
+    "searchNoResults": "No fertilizers match your search.",
+    "taglines": {
+      "urea": "The most concentrated nitrogen fertilizer in common use.",
+      "dap": "The standard basal phosphorus source — with a nitrogen bonus.",
+      "mop": "The economical potassium source for most field crops.",
+      "ssp": "Phosphorus plus sulphur and calcium in one granule.",
+      "sop": "Chloride-free potassium for sensitive, high-value crops.",
+      "ammonium-sulphate": "Nitrogen plus sulphur, with an acidifying effect on soil.",
+      "farmyard-manure": "The traditional bulky manure — low nutrients, high soil-conditioning value.",
+      "compost": "Decomposed farm and household waste — variable, feedstock-dependent nutrition.",
+      "vermicompost": "Earthworm-processed manure — richer than FYM, but feedstock decides everything.",
+      "green-manure": "A living nitrogen factory — grown, then ploughed in before the main crop."
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose Chart — Quick NPK Reference",
