@@ -264,7 +264,40 @@
     "metaTitle": "常见问题 — 解答肥料用量问题",
     "metaDescription": "关于肥料用量计算、NPK 公式、英亩/kanal/marla 单位、数据来源和植物医生的解答。"
   },
-  "footer": {},
+  "footer": {
+    "company": "公司",
+    "disclaimer": "用量估计遵循已发布的建议。施用前请务必与当地农业官员确认并进行土壤测试。",
+    "library": "资料库",
+    "links": {
+      "about": "关于我们",
+      "blog": "博客",
+      "calculator": "肥料用量计算器",
+      "charts": "用量图表",
+      "contact": "联系我们",
+      "contributors": "我们的贡献者",
+      "crops": "作物资料库",
+      "faq": "常见问题",
+      "fertilizers": "肥料资料库",
+      "plantDoctor": "植物医生",
+      "privacy": "隐私政策",
+      "terms": "使用条款",
+      "wheat": "小麦指南",
+      "plants": "植物资料库",
+      "vegetables": "蔬菜资料库",
+      "plantingCalendar": "种植日历",
+      "myGarden": "我的花园",
+      "profitCalculator": "利润计算器",
+      "compare": "比较",
+      "improveTranslation": "改善此翻译",
+      "deficiencyChecker": "缺乏症检查器",
+      "tankMixChecker": "桶混检查器",
+      "costCalculator": "成本计算器",
+      "alternativeFinder": "替代品查找器"
+    },
+    "rights": "版权所有。",
+    "tagline": "来自真实农艺数据的精确肥料用量 — 适用于小麦、水稻、玉米等。为 17 个国家的农民构建。",
+    "tools": "工具"
+  },
   "home": {
     "planting": {
       "noCountryTitle": "您在哪里种植？",
@@ -273,14 +306,204 @@
       "changeCountry": "更改",
       "viewCalendar": "查看完整种植日历",
       "noItemsTitle": "本月尚无经过验证的内容",
-      "noItemsHint": "我们尚未验证该地区本月的任何播种期。"
+      "noItemsHint": "我们尚未验证该地区本月的任何播种期。",
+      "eyebrow": "种植日历",
+      "title": "这个月种什么？",
+      "desc": "针对您所在省份的了解地域的播种日历 — 没有千篇一律的猜测。每个窗口都有来源和验证徽章。",
+      "cta": "打开种植日历"
+    },
+    "blog": {
+      "eyebrow": "来自博客",
+      "minRead": "分钟阅读",
+      "title": "了解用量背后的原因"
+    },
+    "crops": {
+      "desc": "来自已发布来源的每公顷推荐 N–P₂O₅–K₂O。标记为“审核中”的作物绝不猜测 — 数据仅在验证后上线。",
+      "eyebrow": "作物资料库",
+      "inReview": "审核中",
+      "openGuide": "打开作物指南",
+      "perHa": "kg/ha",
+      "reviewNote": "推荐正在验证中",
+      "title": "为您实际种植的作物计算用量",
+      "verified": "已验证数据"
+    },
+    "doctor": {
+      "bullets": [
+        {
+          "d": "上传清晰的叶子或植物照片 — AI 读取视觉症状。",
+          "t": "照片优先诊断"
+        },
+        {
+          "d": "每条建议都带有低/中/高置信度措辞。没有虚假的确定性。",
+          "t": "诚实的不确定性"
+        },
+        {
+          "d": "原因、直接行动和预防 — 以及何时致电您的农业官员。",
+          "t": "可操作的下一步"
+        }
+      ],
+      "cta": "打开植物医生",
+      "desc": "上传叶子照片，描述您看到的现象，并获得结构化评估 — 可能的问题、可能的原因、下一步做什么以及如何预防。",
+      "dropSub": "JPG、PNG 或 WebP · 最大 5 MB",
+      "dropTitle": "在此处拖入叶子照片",
+      "eyebrow": "AI 植物医生",
+      "serverNote": "通过 Gemini 在服务端运行 — 您的 API 密钥绝不会触及浏览器。",
+      "title": "您的作物出问题了？询问植物医生。"
+    },
+    "fertilizers": {
+      "browse": "浏览完整肥料资料库 →",
+      "desc": "标签准确的 NPK 成分。这些百分比是所有用量计算的全部基础。",
+      "eyebrow": "肥料资料库",
+      "thBest": "最适合",
+      "thName": "肥料",
+      "title": "了解袋子里到底装了什么",
+      "thN": "N %",
+      "thP": "P₂O₅ %",
+      "thK": "K₂O %"
+    },
+    "finalCta": {
+      "cta": "计算肥料用量",
+      "desc": "正确的用量可以省钱、保护土壤并提高产量。只需不到一分钟。",
+      "title": "停止猜测。开始计算。"
+    },
+    "hero": {
+      "ctaCalc": "计算我的用量",
+      "ctaDoctor": "诊断植物",
+      "stats": [
+        {
+          "s": "引用每个数字",
+          "t": "有源数据"
+        },
+        {
+          "s": "标准 NPK 方法",
+          "t": "DAP 优先"
+        },
+        {
+          "s": "英亩 · Kanal · Marla · 公顷",
+          "t": "4 种单位"
+        }
+      ],
+      "subtitle": "肥料用量将已发布的农艺推荐转化为精确的每英亩、每 kanal 和每 marla 肥料用量 — 拥有真实数据、展示每个计算过程且绝不凭空捏造。",
+      "tagline": "如何正确为植物和作物配给肥料",
+      "title": "准确了解您的作物需要多少 <em>肥料</em>。"
+    },
+    "tools": {
+      "cards": [
+        {
+          "desc": "以英亩、kanal、marla 或公顷输入作物 + 面积 — 获取精确的尿素、DAP 和 MOP 数量，并显示每个计算步骤。",
+          "title": "用量计算器"
+        },
+        {
+          "desc": "上传叶片照片，描述症状，并获得带有原因、行动和预防步骤的 AI 辅助诊断。",
+          "title": "植物医生"
+        },
+        {
+          "desc": "针对每种主要肥料的标签准确的 NPK 成分、益处、注意事项和施用指导。",
+          "title": "肥料资料库"
+        },
+        {
+          "desc": "小麦、水稻、玉米、棉花、甘蔗和马铃薯的季节、土壤、水利、生长阶段和常见问题。",
+          "title": "作物资料库"
+        },
+        {
+          "title": "利润计算器",
+          "desc": "输入您自己的产量、价格和成本假设 — 查看每英亩和每公顷的净利润、盈亏平衡点和投资回报率。"
+        },
+        {
+          "title": "比较",
+          "desc": "根据您自己的价格并排比较肥料养分成本，以及来自验证数据的作物用量。"
+        }
+      ],
+      "eyebrow": "核心工具",
+      "title": "种植者所需的一切，尽在一处"
+    },
+    "why": {
+      "eyebrow": "为什么选择肥料用量",
+      "items": [
+        {
+          "d": "每个 NPK 值和作物用量均有来源和引文。绝无虚构数字。",
+          "t": "仅限真实数据"
+        },
+        {
+          "d": "每个结果都一步步解释公式 — 如果您愿意，可以用笔核对。",
+          "t": "展示其计算过程"
+        },
+        {
+          "d": "英亩、kanal、marla、公顷。以您习惯的单位输入土地。",
+          "t": "支持您的单位"
+        },
+        {
+          "d": "尊重您的系统设置和双眼的完整日/夜主题。",
+          "t": "亮色与暗色"
+        }
+      ],
+      "regionCta": "试用计算器",
+      "regionDesc": "默认推荐遵循旁遮普（巴基斯坦）和印度北部的农艺指导，每个数字都有地区标签。单位、术语和作物日历符合这里的实际耕作方式。",
+      "regionTitle": "扎根当地",
+      "title": "建立在证据之上，而非承诺"
+    },
+    "metaTitle": "NPK 肥料用量计算器 — 每英亩、Kanal、Marla 和公顷",
+    "metaDescription": "计算小麦、水稻、玉米等的精确尿素、DAP 和 MOP 用量。支持英亩/kanal/marla/公顷的免费 NPK 肥料计算器，附带作物指南和种植日历。",
+    "grow": {
+      "eyebrow": "种植",
+      "title": "作物、植物与蔬菜",
+      "desc": "一个成长中的资料库：具有验证肥料用量的大田作物，以及具有诚实、审核把关数据的蔬菜和植物。",
+      "cards": [
+        {
+          "title": "作物",
+          "desc": "小麦、水稻、玉米、棉花等 — 在有发布的地方提供验证的 NPK 用量。"
+        },
+        {
+          "title": "蔬菜",
+          "desc": "西红柿、洋葱、辣椒、秋葵等。数据仅在验证后上线。"
+        },
+        {
+          "title": "植物",
+          "desc": "家庭花园的花卉、室内、室外和观果植物。"
+        }
+      ],
+      "browse": "浏览"
     }
   },
   "language": {
     "choose": "选择语言",
     "label": "语言"
   },
-  "nav": {},
+  "nav": {
+    "blog": "博客",
+    "calculateDose": "计算用量",
+    "calculator": "用量计算器",
+    "closeMenu": "关闭菜单",
+    "country": "国家",
+    "crops": "作物",
+    "faq": "常见问题",
+    "fertilizers": "肥料",
+    "home": "首页",
+    "mobileNav": "移动端导航",
+    "openMenu": "打开菜单",
+    "plantDoctor": "植物医生",
+    "plants": "植物",
+    "vegetables": "蔬菜",
+    "grow": "种植",
+    "plantingCalendar": "种植日历",
+    "myGarden": "我的花园",
+    "tools": "工具",
+    "profitCalculator": "利润计算器",
+    "soilTestCalculator": "土壤测试计算器",
+    "compare": "比较",
+    "login": "登录",
+    "account": "账户",
+    "admin": "管理",
+    "logout": "登出",
+    "plantDoseCalculator": "植物用量计算器",
+    "landAreaCalculator": "土地面积计算器",
+    "kitchenGarden": "家庭菜园规划器",
+    "mapAreaCalculator": "地图面积计算器",
+    "deficiencyChecker": "缺乏症检查器",
+    "tankMixChecker": "桶混检查器",
+    "costCalculator": "成本计算器",
+    "alternativeFinder": "替代品查找器"
+  },
   "plantDoctor": {
     "form": {
       "photoLabel": "植物照片",
@@ -294,9 +517,79 @@
       "symptomsPlaceholder": "例如：小麦下部叶片出现带褐色边缘的黄斑，大约一周前雨后开始……",
       "analyzing": "正在分析……",
       "diagnosisTitle": "诊断结果"
+    },
+    "desc": "上传清晰的照片，描述症状，并获得结构化评估 — 带有诚实置信度级别的问题、可能的原因以及下一步操作。",
+    "eyebrow": "植物医生",
+    "title": "让我们看看叶子。我们来帮您解读。",
+    "metaTitle": "植物医生 — AI 作物问题诊断",
+    "metaDescription": "上传作物照片并描述症状，以获取带有原因、行动和预防步骤的 AI 辅助诊断。"
+  },
+  "growing": {
+    "searchPlaceholder": "按名称搜索…",
+    "filterAll": "全部",
+    "filterVerified": "已验证",
+    "filterInReview": "审核中",
+    "verifiedBadge": "已验证数据",
+    "inReviewBadge": "审核中",
+    "verifiedDose": "已验证用量",
+    "doseInReview": "用量审核中",
+    "resultsCount": "{count} 个项目",
+    "noResults": "未找到匹配项",
+    "noResultsHint": "尝试不同的拼写或清除搜索。",
+    "noData": "暂无已验证的数据。",
+    "noDataHint": "我们仅在与发布来源核对后才发布农艺数字 — 绝不猜测。",
+    "sections": {
+      "fertilizer": "肥料推荐",
+      "growingConditions": "生长条件",
+      "soil": "土壤",
+      "water": "水利",
+      "sunlight": "光照",
+      "climate": "气候",
+      "season": "生长季节",
+      "sowingWindow": "播种 / 种植窗口",
+      "harvestWindow": "收获窗口",
+      "regions": "适宜地区",
+      "stages": "生长阶段与施肥",
+      "deficiencies": "常见养分缺乏症",
+      "problems": "需注意的问题",
+      "references": "参考资料",
+      "lastReviewed": "最后审核"
+    },
+    "calculateCta": "为我的土地计算",
+    "doctorCta": "看到症状了？试试植物医生 →",
+    "relatedFertilizers": "相关肥料",
+    "relatedItems": "相关",
+    "inReviewNotice": "{name} 的推荐用量目前正在与发布来源进行核对。我们仅在确认后才在此发布 — 绝不猜测。",
+    "indexable": {
+      "cropsTitle": "每种作物及其需求，尽在一处。",
+      "plantsTitle": "适合各种花园的植物。",
+      "vegetablesTitle": "蔬菜，从田间到家庭菜园。"
+    },
+    "subcategoryAll": "所有类型",
+    "filterCountry": "国家",
+    "filterRegion": "地区",
+    "filterMonth": "种植月份",
+    "anyMonth": "任意月份",
+    "allCountries": "所有国家",
+    "allRegions": "所有地区",
+    "plantDoseCard": {
+      "title": "盆栽植物需要多少肥料？",
+      "desc": "按 ppm 混合水溶性肥料（每升克数和每盆克数），并结合基于推广的施肥率。",
+      "cta": "打开植物用量计算器 →"
+    },
+    "organicOptions": "有机肥选项",
+    "organicOptionsBody": "充分腐熟的农家肥、堆肥或蚯蚓粪可用作 {name} 的基础土壤调理剂 — 它们可以建立土壤结构并在整个季节缓慢释放养分。由于有机养分含量因来源而异，请用为您的作物和地区计算的矿质化肥来补充精确的养分需求。",
+    "organicOptionsNote": "此作物没有经过作物验证的特定有机用量 — 上述指导是一般做法，而不是测得的推荐。为了精确规划，请对您的物料进行实验室测试。",
+    "organicOptionsCta": "探索有机肥",
+    "seasonLabels": {
+      "Rabi (winter)": "Rabi（冬季）",
+      "Kharif (summer)": "Kharif（夏季）",
+      "Kharif (also spring in irrigated areas)": "Kharif（灌溉区也包括春季）",
+      "Kharif": "Kharif",
+      "Rabi": "Rabi",
+      "Year-round (12–14 month crop)": "全年（12–14 个月作物）"
     }
   },
-  "growing": {},
   "calendar": {
     "catFruit": "水果",
     "catHerb": "香草",
@@ -342,7 +635,17 @@
       "hasData": "种植数据可用",
       "noDataYet": "数据验证中",
       "openCalendar": "打开种植日历"
-    }
+    },
+    "metaTitle": "种植日历 — 这个月种什么",
+    "metaDescription": "了解地域的种植日历：这个月在您所在的省份播种哪些作物、蔬菜和植物。仅限经过验证的窗口。",
+    "eyebrow": "种植日历",
+    "title": "这个月种什么",
+    "desc": "选择您的国家和地区，然后浏览我们可以支持的播种窗口。没有猜测的日历 — 每个窗口都有其来源和验证状态。",
+    "country": "国家",
+    "region": "地区 / 省份",
+    "month": "月份",
+    "category": "类别",
+    "catAll": "全部"
   },
   "garden": {
     "metaTitle": "我的花园 — 追踪地块、种植与施肥计划",
@@ -697,14 +1000,44 @@
       "bedArea": "花坛面积",
       "bedAreaHint": "花坛的长 × 宽。",
       "areaM2": "m²",
-      "areaFt2": "ft²"
+      "areaFt2": "ft²",
+      "bedDepth": "根区深度 (厘米)",
+      "bedDepthHint": "肥料混合的假设深度 — 蔬菜苗床通常为 15–20 厘米。请根据您的苗床进行调整。",
+      "frequency": "施肥频率",
+      "interval1": "每周",
+      "interval2": "每 2 周",
+      "interval4": "每 4 周",
+      "startDate": "首次施肥",
+      "addToGarden": "将计划添加到“我的花园”",
+      "addedToGarden": "已添加 — 参见 我的花园 → 提醒。",
+      "gardenHint": "提醒是通用的时间建议，而非处方。如果植物看起来有压力，请跳过一次施肥。"
     },
     "results": {
       "total": "{litres} L 的总量",
       "formulaNote": "计算公式：{grade} 在 {ppm} ppm {nutrient} → 每升克数 = {ppm} ÷ (%{nutrient} × 10)。",
       "bedVolumeHint": "{area} {unit} × {depth} 厘米根区层。",
       "formulaNoteLiquid": "计算公式：{grade} 在 {ppm} ppm {nutrient} → 每升克数 = {ppm} ÷ (%{nutrient} × 10)，然后 ÷ {density} g/ml 密度 = 每升毫升数。",
-      "formulaNoteBed": "苗床体积 =面积 × {depth} 厘米深度。"
+      "formulaNoteBed": "苗床体积 =面积 × {depth} 厘米深度。",
+      "title": "您的植物用量",
+      "guidanceBadge": "通用指导",
+      "perLitre": "每升溶解量",
+      "totalHint": "搅拌至完全溶解；请在一天内用完。",
+      "perPot": "每 {cm} 厘米花盆",
+      "perPotHint": "近似值 — 花盆容积因制造商而异。",
+      "kitchenApprox": "{tsp} — 指南而非精确测量；为了准确请进行称重。",
+      "quarterTsp": "每升约 ¼ 茶匙",
+      "oneTsp": "每升约 1 茶匙",
+      "manyTsp": "每升约 {n} 茶匙",
+      "burnTitle": "避免肥害",
+      "burnBody": "并非越多越好：过多的盐分会灼伤根系和叶缘。对于新植物或受压植物，请从温和浓度开始；如果基质完全干燥，请先浇水，并始终让多余的溶液排出。如果产品标签给出了不同的比率，请遵循标签。",
+      "invalid": "请检查您的输入：养分百分比必须在 1–60 之间，目标在 1–1000 ppm 之间，水/面积/深度大于 0，液体的密度大于 0。",
+      "perLitreMl": "每升毫升数",
+      "mlPerL": "毫升/升",
+      "bedVolume": "苗床水量",
+      "perBed": "苗床总量",
+      "perBedHint": "混合到均匀施用于苗床的灌溉水中。",
+      "scheduleTitle": "施肥计划（接下来的 6 次）",
+      "scheduleHint": "根据您选择的频率。这些是规划辅助工具 — 请根据植物的反应进行调整。"
     },
     "method": {
       "steps": [
@@ -720,14 +1053,20 @@
           "t": "混合并正常浇水",
           "d": "将计算出的克数溶解在喷壶中并照常浇水，让多余的水分排出。每次浇水时按这些浓度施肥，或者以双倍浓度减半频率施肥——切勿两者同时进行。"
         }
-      ]
+      ],
+      "eyebrow": "工作原理",
+      "title": "按 ppm 配给，种植者的做法",
+      "desc": "商业种植者不会靠猜测舀勺子 — 他们将肥料混合到百万分之几 (ppm) 的目标养分浓度。此计算器将相同的方法带给家庭园丁。"
     },
     "sources": {
       "items": [
         "UMass Extension — “Fertilizing Bedding Plant Seedlings” (D. Cox, 2011)：花坛植物 200–250 ppm N 持续施肥；生长缓慢类型 100–150 ppm N 直至定植。",
         "Michigan State University Extension (E2186)：盆栽植物——控释肥外加 150–200 ppm N 补充液肥。",
         "Virginia Tech SPES-744 — “The Basics of Fertilizer Calculations for Greenhouse Crops”：g/L = ppm ÷ (%N × 10) 公式及 200 ppm N 示例。"
-      ]
+      ],
+      "eyebrow": "来源",
+      "title": "施肥率的来源",
+      "note": "预设使用每个已发布范围的低端，这是适应家庭光照水平的保守选择。请务必遵循您产品的标签和当地推广服务的建议。"
     },
     "faq": [
       {
@@ -752,7 +1091,18 @@
     "desc": "一个用于花盆和花园植物配给的免费计算器：根据大学推广施肥率，每升水混合适量的水溶性肥料。",
     "faqTitle": "植物肥料配给 — 常见问题",
     "metaTitle": "如何为植物配给肥料 — 植物用量计算器",
-    "metaDescription": "通过我们的免费计算器了解如何为植物配给肥料。以每升克数获取盆栽植物的正确肥料用量 — 针对室内植物和容器植物的基于推广的施肥率。"
+    "metaDescription": "通过我们的免费计算器了解如何为植物配给肥料。以每升克数获取盆栽植物的正确肥料用量 — 针对室内植物和容器植物的基于推广的施肥率。",
+    "presets": {
+      "gentle": {
+        "label": "温和 — {ppm} ppm N（室内植物、生长缓慢的植物）"
+      },
+      "regular": {
+        "label": "常规 — {ppm} ppm N（大多数容器植物）"
+      },
+      "heavy": {
+        "label": "重肥 — {ppm} ppm N（生长旺盛、喜肥植物）"
+      }
+    }
   },
   "landArea": {
     "savedPlotName": "测量地块 ({date})",
