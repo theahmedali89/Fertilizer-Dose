@@ -100,6 +100,14 @@
       {
         "q": "Pourquoi certaines cultures sont-elles désactivées ?",
         "a": "Une culture n’est sélectionnable que lorsque sa dose de NPK recommandée est vérifiée auprès d’une source publiée. Nous préférons désactiver une culture plutôt qu’inventer ses chiffres — les cultures non vérifiées sont marquées « données en cours de vérification » jusqu’à confirmation."
+      },
+      {
+        "q": "Comment convertit-on les kanal et marla ?",
+        "a": "1 acre = 8 kanal = 160 marla, et 1 kanal = 20 marla. En système métrique : 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Le calculateur convertit votre surface en hectares, applique la dose par hectare, puis la ramène à votre unité."
+      },
+      {
+        "q": "Pourquoi certaines cultures sont-elles désactivées ?",
+        "a": "Une culture n'est sélectionnable que lorsque sa dose NPK recommandée est vérifiée d'après une source publiée. Nous préférons désactiver une culture plutôt qu'inventer des chiffres — les cultures non vérifiées sont marquées « données en cours d'examen »."
       }
     ],
     "organic": {
@@ -183,6 +191,50 @@
       {
         "a": "Oui — le calculateur, les bibliothèques et les guides sont gratuits. Un compte n’est nécessaire que pour des fonctionnalités comme la sauvegarde des diagnostics.",
         "q": "Fertilizer Dose est-il gratuit ?"
+      },
+      {
+        "q": "Puis-je mélanger Urea et DAP ensemble ?",
+        "a": "Oui, Urea et DAP peuvent être appliqués ensemble comme dose de fond au semis. Le DAP fournit du phosphore (46% P₂O₅) et 18% d'azote, tandis que l'Urea apporte un complément d'azote (46% N). Il est courant de les mélanger avant épandage. Cependant, évitez de mélanger Urea avec du SSP (single super phosphate) si le mélange doit reposer — il peut former des mottes."
+      },
+      {
+        "q": "Qu'est-ce que la dose de fond (basal dose) en fertilisation ?",
+        "a": "La dose de fond est l'engrais apporté au moment ou avant le semis/la plantation, enfoui dans le sol. Elle comprend généralement la totalité des besoins en phosphore et potassium plus une fraction d'azote (souvent 1/3 à 1/2). Le reste de l'azote est apporté en couverture plus tard."
+      },
+      {
+        "q": "DAP vs SSP — lequel est le meilleur ?",
+        "a": "Cela dépend de votre sol et de votre culture. Le DAP (18-46-0) a une concentration plus élevée en phosphore (46% P₂O₅), nécessitant moins de produit à l'acre. Le SSP (16% P₂O₅) apporte également du soufre (~11%) et du calcium (~19%), convenant mieux aux oléagineux et sols carencés en soufre."
+      },
+      {
+        "q": "Qu'est-ce qu'une dose d'engrais basée sur l'analyse de sol ?",
+        "a": "Une analyse de sol mesure l'azote, le phosphore, le potassium, le pH et la matière organique. Au lieu d'une recommandation globale, la dose est ajustée — si votre sol est riche en phosphore, vous appliquez moins d'engrais P, économisant de l'argent et évitant le surdosage."
+      },
+      {
+        "q": "Combien de temps l'Urea reste-t-elle active dans le sol ?",
+        "a": "Une fois appliquée, l'Urea se transforme en ammonium assimilable en 2 à 4 jours par les enzymes du sol, puis en nitrate au cours des 2 à 4 semaines suivantes selon la température et l'humidité. Un apport d'Urea nourrit la culture pendant environ 4 à 6 semaines."
+      },
+      {
+        "q": "Quelle est la différence entre Urea et DAP ?",
+        "a": "L'Urea (46-0-0) n'apporte que de l'azote à 46% N — l'engrais azoté le plus concentré d'usage courant. Le DAP (18-46-0) apporte 18% d'azote plus 46% de phosphate (P₂O₅). Le DAP sert de dose de fond au semis pour l'enracinement, tandis que l'Urea est utilisée en couverture pendant la croissance active."
+      },
+      {
+        "q": "Comment doser l'engrais pour les plantes ?",
+        "a": "Commencez par une analyse de sol si possible. Utilisez le calculateur de dose de plante sur Fertilizer Dose : saisissez votre type de plante et le volume du pot ou de la plate-bande pour obtenir le grammage exact. Appliquez en fractions légères et arrosez après apport."
+      },
+      {
+        "q": "Quelle quantité de NPK contient le fumier de ferme (FYM) ?",
+        "a": "Un fumier bien décomposé (FYM) contient généralement environ 0.5–1.0% d'azote, 0.2–0.5% de phosphate (P₂O₅) et 0.5–1.0% de potasse (K₂O). Le fumier sert principalement d'amendement organique pour améliorer la structure du sol, complété par les engrais minéraux."
+      },
+      {
+        "q": "Quel est le meilleur moment pour pulvériser un engrais foliaire ?",
+        "a": "Tôt le matin (avant 9–10h) ou en fin de journée sont les moments idéaux. Les stomates sont ouverts, les températures fraîches et les gouttelettes sèchent lentement. Évitez les heures chaudes de midi qui risquent de brûler le feuillage."
+      },
+      {
+        "q": "Que signifie la mention NPK sur un sac d'engrais ?",
+        "a": "Les trois chiffres (ex. 15-15-15) indiquent le pourcentage en poids d'azote (N), de phosphate (P₂O₅) et de potasse (K₂O). Un sac de 50 kg de 15-15-15 contient 7.5 kg de chaque unité fertilisante."
+      },
+      {
+        "q": "À quoi sert l'engrais ammonium sulphate ?",
+        "a": "L'ammonium sulphate (21-0-0 plus 24% de soufre) apporte de l'azote associé à du soufre, idéal pour les sols carencés en soufre. Il a un effet acidifiant sur le sol."
       }
     ],
     "title": "Les questions que les agriculteurs nous posent",
@@ -538,7 +590,20 @@
     "eyebrow": "Docteur des plantes",
     "title": "Montrez-nous la feuille. Nous vous aiderons à la lire.",
     "metaTitle": "Docteur des plantes — Diagnostic IA des problèmes de cultures",
-    "metaDescription": "Téléversez une photo de culture et décrivez les symptômes pour un diagnostic assisté par l’IA avec causes, actions et étapes de prévention."
+    "metaDescription": "Téléversez une photo de culture et décrivez les symptômes pour un diagnostic assisté par l’IA avec causes, actions et étapes de prévention.",
+    "form": {
+      "photoLabel": "Photo de la plante",
+      "photoHint": "Cliquez ou déposez une photo ici",
+      "photoTypes": "JPG, PNG ou WebP, max 5 Mo",
+      "cropLabel": "Culture (si connue)",
+      "cropPlaceholder": "Pas certain / autre",
+      "symptomsLabel": "Décrivez les symptômes",
+      "symptomsHint": "Que voyez-vous ? Taches jaunes, flétrissement, trous, date d'apparition…",
+      "symptomsPlaceholder": "ex. Taches jaunes à bords bruns sur les feuilles basses du blé après la pluie…",
+      "submit": "Diagnostiquer ma plante",
+      "analyzing": "Analyse en cours…",
+      "diagnosisTitle": "Diagnostic"
+    }
   },
   "growing": {
     "searchPlaceholder": "Rechercher par nom…",
@@ -929,7 +994,19 @@
       "detailCta": "Voir les détails"
     },
     "searchPlaceholder": "Rechercher des engrais…",
-    "searchNoResults": "Aucun engrais ne correspond à votre recherche."
+    "searchNoResults": "Aucun engrais ne correspond à votre recherche.",
+    "taglines": {
+      "urea": "L'engrais azoté le plus concentré en usage courant.",
+      "dap": "La référence pour l'apport de phosphore au semis — avec un bonus d'azote.",
+      "mop": "La source de potassium économique pour les grandes cultures.",
+      "ssp": "Phosphore avec soufre et calcium dans un seul granulé.",
+      "sop": "Potassium sans chlorure pour cultures délicates à haute valeur.",
+      "ammonium-sulphate": "Azote et soufre combinés avec un effet acidifiant sur le sol.",
+      "farmyard-manure": "Le fumier traditionnel — fertilisation douce et remarquable effet structurant.",
+      "compost": "Matières organiques compostées — composition selon intrants.",
+      "vermicompost": "Lombricompost riche en micro-organismes et nutriments.",
+      "green-manure": "Engrais vert piégeur d'azote — cultivé puis enfoui au sol."
+    }
   },
   "chart": {
     "metaTitle": "Tableau des doses d’engrais — Référence NPK rapide",
@@ -1016,7 +1093,8 @@
       "startDate": "Première tétée",
       "addToGarden": "Ajouter un horaire à Mon jardin",
       "addedToGarden": "Ajouté — voir Mon jardin → Rappels.",
-      "gardenHint": "Les rappels sont des suggestions génériques de timing, et non des prescriptions. Évitez de vous nourrir si les plantes semblent stressées."
+      "gardenHint": "Les rappels sont des suggestions génériques de timing, et non des prescriptions. Évitez de vous nourrir si les plantes semblent stressées.",
+      "scheduleTitle": "Suggéré : Nourrir les plantes ({ppm} ppm {nutrient})"
     },
     "presets": {
       "gentle": {
@@ -1050,18 +1128,58 @@
       "perBed": "Total pour le lit",
       "perBedHint": "Mélanger à l'eau d'irrigation appliquée uniformément sur le lit.",
       "scheduleTitle": "Programme d'alimentation (6 prochains)",
-      "scheduleHint": "En fonction de la fréquence choisie. Ce sont des aides à la planification : adaptez-vous à la façon dont les plantes réagissent."
+      "scheduleHint": "En fonction de la fréquence choisie. Ce sont des aides à la planification : adaptez-vous à la façon dont les plantes réagissent.",
+      "bedVolumeHint": "{area} {unit} × {depth} cm de zone racinaire.",
+      "formulaNoteLiquid": "Calcul : {grade} à {ppm} ppm {nutrient} → g/L = {ppm} ÷ (%{nutrient} × 10), puis ÷ densité {density} g/ml = ml par litre.",
+      "formulaNoteBed": "Volume plate-bande = surface × {depth} cm profondeur."
     },
     "method": {
       "eyebrow": "Comment ça marche",
       "title": "Dosage par ppm, comme le font les producteurs",
-      "desc": "Les producteurs commerciaux ne devinent pas les cuillerées : ils mélangent l'engrais jusqu'à une concentration cible de nutriments en parties par million (ppm). Cette calculatrice apporte la même méthode aux jardiniers amateurs."
+      "desc": "Les producteurs commerciaux ne devinent pas les cuillerées : ils mélangent l'engrais jusqu'à une concentration cible de nutriments en parties par million (ppm). Cette calculatrice apporte la même méthode aux jardiniers amateurs.",
+      "steps": [
+        {
+          "t": "Choisissez le grade d'engrais",
+          "d": "Lisez les teneurs N-P-K sur le sac, ex. 20-20-20, ou saisissez un grade personnalisé."
+        },
+        {
+          "t": "Sélectionnez l'intensité",
+          "d": "Plantes d'intérieur à dose douce (~100 ppm N) ; plantes en pot standard (~150 ppm N) ; plantes vigoureuses jusqu'à ~200 ppm N."
+        },
+        {
+          "t": "Mélangez et arrosez normalement",
+          "d": "Dissolvez les grammes calculés dans votre arrosoir et arrosez comme d'habitude en laissant l'excédent s'écouler."
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Sources",
       "title": "D'où viennent les taux d'alimentation",
-      "note": "Les préréglages utilisent l'extrémité inférieure de chaque plage publiée, le choix conservateur pour les niveaux d'éclairage de la maison. Suivez toujours l'étiquette de votre produit et les conseils de votre service de vulgarisation local."
-    }
+      "note": "Les préréglages utilisent l'extrémité inférieure de chaque plage publiée, le choix conservateur pour les niveaux d'éclairage de la maison. Suivez toujours l'étiquette de votre produit et les conseils de votre service de vulgarisation local.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011).",
+        "Michigan State University Extension (E2186) : fertilisation liquide à 150–200 ppm N.",
+        "Virginia Tech SPES-744 — Formule g/L = ppm ÷ (%N × 10)."
+      ]
+    },
+    "faq": [
+      {
+        "q": "De quelle quantité d'engrais les plantes en pot ont-elles besoin ?",
+        "a": "La plupart des plantes prospèrent avec une solution de 100 à 150 ppm d'azote — soit environ 0.5 à 1 g de 20-20-20 par litre d'eau."
+      },
+      {
+        "q": "Puis-je utiliser une cuillère au lieu de peser ?",
+        "a": "Une cuillère à café rase équivaut à 5-6 g mais la densité varie fortement ; une balance précise au gramme évite de brûler les racines."
+      },
+      {
+        "q": "Dois-je fertiliser à chaque arrosage ?",
+        "a": "Aux doses douces recommandées, oui (« fertirrigation »). Sinon, divisez par deux la fréquence à double dose."
+      },
+      {
+        "q": "Quels sont les signes d'un excès d'engrais ?",
+        "a": "Bords des feuilles bruns et desséchés, flétrissement malgré une terre humide et croûte blanche à la surface du substrat."
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Outil agricole gratuit",
@@ -1147,10 +1265,83 @@
       "conversionTitle": "Tableau de conversion de la superficie des terres",
       "conversionNote": "Définitions exactes. Les unités régionales n'apparaissent que lorsqu'elles sont vérifiées.",
       "sourcesTitle": "Sources & méthodologie",
-      "sourcesBody": "Les unités universelles utilisent les définitions SI et impériales exactes (1 acre = 4 046,8564224 m² ; 1 hectare = 10 000 m²). Kanal et Marla utilisent la norme de revenus du Pendjab : 1 karam = 5,5 pieds, 1 marla = 9 karam carrés = 272,25 pieds carrés, 1 kanal = 20 marla = 5 445 pieds carrés. Tous les calculs sont exécutés en mètres carrés en interne et convertis une fois en unité d'affichage - pas d'arrondi en chaîne."
+      "sourcesBody": "Les unités universelles utilisent les définitions SI et impériales exactes (1 acre = 4 046,8564224 m² ; 1 hectare = 10 000 m²). Kanal et Marla utilisent la norme de revenus du Pendjab : 1 karam = 5,5 pieds, 1 marla = 9 karam carrés = 272,25 pieds carrés, 1 kanal = 20 marla = 5 445 pieds carrés. Tous les calculs sont exécutés en mètres carrés en interne et convertis une fois en unité d'affichage - pas d'arrondi en chaîne.",
+      "formulas": [
+        {
+          "name": "Rectangle",
+          "formula": "Surface = longueur × largeur",
+          "example": "100 m × 50 m = 5,000 m²"
+        },
+        {
+          "name": "Carré",
+          "formula": "Surface = côté²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Triangle",
+          "formula": "Surface = ½ × base × hauteur",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapèze",
+          "formula": "Surface = ((côté A + côté B) / 2) × hauteur",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1,500 m²"
+        },
+        {
+          "name": "Quatre côtés + diagonale",
+          "formula": "Divisez en deux triangles selon la diagonale ; appliquez la formule de Héron et additionnez",
+          "example": "Exact — aucun arrondi approximatif"
+        }
+      ]
     },
     "relatedTitle": "Outils agricoles associés",
-    "relatedCurrent": "Vous êtes ici"
+    "relatedCurrent": "Vous êtes ici",
+    "faq": [
+      {
+        "q": "Comment calculer la surface d'un terrain ?",
+        "a": "Mesurez longueur et largeur dans la même unité et multipliez-les. Pour les formes irrégulières, divisez en formes simples."
+      },
+      {
+        "q": "Comment calculer la surface d'une terre agricole ?",
+        "a": "Calculez la géométrie puis convertissez en hectares ou acres. Le calculateur transfère directement le résultat dans le module de fertilisation."
+      },
+      {
+        "q": "Combien d'acres fait cette parcelle ?",
+        "a": "Renseignez dimensions en pieds ou mètres et lisez directement la valeur en acres (43,560 sq ft = 1 acre)."
+      },
+      {
+        "q": "Comment calculer en pieds carrés ?",
+        "a": "Multipliez la longueur en pieds par la largeur en pieds : 100 ft × 50 ft = 5,000 sq ft."
+      },
+      {
+        "q": "Quatre côtés suffisent-ils à calculer une parcelle irrégulière ?",
+        "a": "Non. Les angles peuvent varier ; mesurer une diagonale est indispensable pour figer la surface en deux triangles distincts."
+      },
+      {
+        "q": "Comment convertir les acres en hectares ?",
+        "a": "Multipliez le nombre d'acres par 0.404686 (1 hectare = 2.471 acres)."
+      },
+      {
+        "q": "Quelle différence entre acre et hectare ?",
+        "a": "Un hectare (10,000 m²) équivaut à environ 2.47 fois un acre (4,047 m²)."
+      },
+      {
+        "q": "Puis-je calculer un champ de forme irrégulière ?",
+        "a": "Oui, le mode Irrégulier permet de décomposer le champ en plusieurs figures géométriques et d'en faire la somme."
+      },
+      {
+        "q": "Pourquoi les unités foncières traditionnelles varient-elles ?",
+        "a": "Les unités coutumières (bigha, kanal, marla) dépendent des cadastres régionaux historiques."
+      },
+      {
+        "q": "Puis-je utiliser cette surface dans le calculateur d'engrais ?",
+        "a": "Oui. Cliquez sur « Utiliser dans le calculateur » pour transférer automatiquement vos mesures."
+      },
+      {
+        "q": "S'agit-il d'un arpentage officiel ?",
+        "a": "Non. C'est un outil d'aide à la décision agronomique."
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Outils agricoles",
@@ -1211,7 +1402,35 @@
     "bannerProfit": "Estimation du bénéfice",
     "bannerDismiss": "Rejeter",
     "relatedTitle": "Outils associés",
-    "relatedCurrent": "Vous êtes ici"
+    "relatedCurrent": "Vous êtes ici",
+    "howSteps": [
+      "Ouvrez la carte et trouvez votre champ par zoom ou géolocalisation.",
+      "Touchez la carte pour placer les bornes autour du champ. Ajustez en glissant.",
+      "Dès 3 points, le calcul géodésique prend en compte la courbure de la terre.",
+      "Transférez la surface calculée vers les modules engrais et rentabilité."
+    ],
+    "faq": [
+      {
+        "q": "Comment fonctionne le calcul de surface sur carte ?",
+        "a": "Le calcul géodésique garantit une mesure précise quelle que soit la latitude."
+      },
+      {
+        "q": "Est-ce aussi précis qu'un relevé de géomètre ?",
+        "a": "Non, c'est une estimation basée sur l'imagerie satellite."
+      },
+      {
+        "q": "Cette fonction utilise-t-elle Google Maps ?",
+        "a": "Non, elle s'appuie sur la cartographie libre OpenStreetMap."
+      },
+      {
+        "q": "Puis-je utiliser cette mesure pour mes engrais ?",
+        "a": "Oui, via le bouton « Utiliser cette surface »."
+      },
+      {
+        "q": "Mes données parcellaires sont-elles enregistrées ?",
+        "a": "Non, les coordonnées restent en mémoire locale sur votre navigateur."
+      }
+    ]
   },
   "kitchenGarden": {
     "eyebrow": "Aménageur de potager",
@@ -1260,7 +1479,29 @@
     "saved": "Plan enregistré dans Mon jardin.",
     "openMyGarden": "Ouvrir mon jardin",
     "savedPlotName": "Potager — {date}",
-    "faqTitle": "FAQ sur le potager"
+    "faqTitle": "FAQ sur le potager",
+    "faq": [
+      {
+        "q": "Que planter ce mois-ci dans un petit potager ?",
+        "a": "Le planificateur filtre uniquement les espèces dont la période de semis est validée pour votre zone."
+      },
+      {
+        "q": "Les espacements sont-ils indiqués ?",
+        "a": "Pas encore pour ces cultures ; nous préférons ne pas afficher d'estimations non vérifiées."
+      },
+      {
+        "q": "En quoi diffère-t-il du calendrier général ?",
+        "a": "Il est optimisé pour les légumes et aromates de jardin domestique selon l'ensoleillement."
+      },
+      {
+        "q": "Puis-je importer ma mesure de terrain ?",
+        "a": "Oui, directement depuis le calculateur de terrain."
+      },
+      {
+        "q": "Où est sauvegardé mon plan ?",
+        "a": "Dans le stockage local de votre navigateur sous Mon Jardin."
+      }
+    ]
   },
   "suggestions": {
     "improveTranslation": "Améliorer cette traduction",
