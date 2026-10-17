@@ -78,7 +78,8 @@
       "tipGeneralBody": "Öffnen Sie das Fassventil erst, nachdem 1–1,5 Kanäle Wasser auf das Feld gelangt sind (nicht zu Beginn), um eine gleichmäßige Verteilung zu gewährleisten.",
       "shareButton": "Auf WhatsApp teilen",
       "shareCopy": "Kopie",
-      "shareCopied": "Kopiert!"
+      "shareCopied": "Kopiert!",
+      "recommendedRangeLine": "Empfohlener Dosierungsbereich: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Wählen Sie innerhalb des Bereichs auf Grundlage Ihrer Bodenanalyse."
     },
     "title": "Exakte Düngerdosis, mit offengelegter Berechnung.",
     "soilTestCard": {
@@ -336,7 +337,8 @@
       "sourceLabel": "Datenquelle:",
       "genericLabel": "Eigene Basis (nur generische Orientierung — keine verifizierte Empfehlung)",
       "disclaimer": "Alle Dosen sind Schätzungen. Bestätigen Sie vor der Düngung mit Ihrem örtlichen Agronomen / Ihrer landwirtschaftlichen Beratungsstelle.",
-      "baseRangeLine": "Basisdosisbereich: N {n} – P₂O₅ {p} – K₂O {k} kg/ha"
+      "baseRangeLine": "Basisdosisbereich: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Angepasster Dosierungsbereich: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Methode",
@@ -689,7 +691,8 @@
     },
     "organicOptions": "Optionen für organische Düngemittel",
     "organicOptionsNote": "Für diese Kultur gibt es keine kulturspezifische verifizierte Bio-Dosis – die oben genannten Leitlinien sind allgemeine Praxis und keine maßvolle Empfehlung. Lassen Sie Ihr Material für eine präzise Planung im Labor testen.",
-    "organicOptionsCta": "Entdecken Sie organische Düngemittel"
+    "organicOptionsCta": "Entdecken Sie organische Düngemittel",
+    "organicOptionsBody": "Gut verrotteter Stallmist, Kompost oder Wurmkompost können als organische Grunddüngung für {name} eingesetzt werden — sie verbessern die Bodenstruktur und geben Nährstoffe langsam über die Saison ab. Da der Nährstoffgehalt organischer Dünger je nach Herkunft schwankt, ergänzen Sie den genauen Nährstoffbedarf mit Mineraldünger, der für Ihre Kultur und Region berechnet wurde."
   },
   "calendar": {
     "metaTitle": "Aussaatkalender — Was diesen Monat anbauen",
@@ -745,7 +748,8 @@
     "visualHint": "Wählen Sie einen Monat aus, um die Aussaat-, Umpflanz- und Erntefenster anzuzeigen.",
     "legendTitle": "Legende",
     "noData": "Keine Daten",
-    "windowsCount": "{count} Pflanzfenster"
+    "windowsCount": "{count} Pflanzfenster",
+    "monthCellLabel": "{month}, {count} Pflanzfenster"
   },
   "garden": {
     "metaTitle": "Mein Garten — Parzellen, Pflanzungen & Düngepläne verfolgen",
@@ -910,7 +914,8 @@
       "perKgNFixed": "{kg} kg ergibt 1 kg N – genau, laut Beuteletikett.",
       "perKgNRange": "{lo}–{hi} kg liefert 1 kg N – typischer Bereich, Ihr Haufen wird unterschiedlich sein.",
       "organicHonesty": "Ehrliche Vergleichsregeln: Organischer Stickstoff wird langsam freigesetzt – nur ein Bruchteil (ungefähr ein Drittel bei Hofdünger) wird der ersten Ernte zugeführt, der Rest wird späteren Saisons zugeführt. Organische Stoffe bauen auch eine Bodenstruktur auf, die in Beuteln mit Dünger nicht möglich ist. Der Preis pro kg N ist nur eine Seite der Entscheidung; Holen Sie sich eine Laboranalyse Ihres Materials für eine präzise Planung.",
-      "viewOrganicHub": "Zentrum für organische Düngemittel"
+      "viewOrganicHub": "Zentrum für organische Düngemittel",
+      "unitSize": "Packungsgröße ({unit})"
     }
   },
   "blog": {
@@ -1114,7 +1119,8 @@
       "addToGarden": "Fügen Sie einen Zeitplan zu „Mein Garten“ hinzu",
       "addedToGarden": "Hinzugefügt – siehe Mein Garten → Erinnerungen.",
       "gardenHint": "Bei Erinnerungen handelt es sich um allgemeine Zeitvorschläge, nicht um Rezepte. Überspringen Sie eine Düngung, wenn die Pflanzen gestresst aussehen.",
-      "scheduleTitle": "Vorschlag: Pflanzen düngen ({ppm} ppm {nutrient})"
+      "scheduleTitle": "Vorschlag: Pflanzen düngen ({ppm} ppm {nutrient})",
+      "targetPpmPK": "Zielwert {nutrient} (ppm)"
     },
     "presets": {
       "gentle": {
@@ -1264,7 +1270,8 @@
     "noRegionalUnits": "Für dieses Land sind derzeit keine verifizierten regionalen Landeinheiten verfügbar. Es werden universelle Einheiten angezeigt. Wir erfinden niemals lokale Konvertierungen.",
     "pkUnitNote": "Kanal und Marla verwenden den Punjab-Einnahmenstandard (1 Kanal = 20 Marla = 5.445 Quadratfuß). Einige Wohnungsbaugesellschaften nutzen 250 oder 225 Quadratfuß große Marla – überprüfen Sie Ihre lokalen Dokumente auf Transaktionen.",
     "method": {
-      "quadDiag": "Viereck aus den Seiten {a}, {b}, {c}, {d} mit Diagonale {diag} ({unit}): in zwei Dreiecke aufgeteilt, jedes genau mit Herons Formel gelöst und dann summiert."
+      "quadDiag": "Viereck aus den Seiten {a}, {b}, {c}, {d} mit Diagonale {diag} ({unit}): in zwei Dreiecke aufgeteilt, jedes genau mit Herons Formel gelöst und dann summiert.",
+      "quadApprox": "Viereck aus den Seiten {a}, {b}, {c}, {d} ({unit}): ((a+c)/2) × ((b+d)/2) — Näherung, annähernd rechteckige Fläche vorausgesetzt."
     },
     "errors": {
       "enterDimensions": "Bitte geben Sie Länge und Breite ein.",
@@ -1362,7 +1369,8 @@
         "q": "Ist dies eine rechtlich bindende Landvermessung?",
         "a": "Nein. Dieses Werkzeug liefert nützliche Schätzungen aus Ihren eigenen Messungen für landwirtschaftliche Entscheidungen. Rechtliche Grenzen erfordern einen qualifizierten Vermesser."
       }
-    ]
+    ],
+    "savedPlotNote": "Gemessen mit dem Flächenrechner ({sqm})."
   },
   "mapArea": {
     "eyebrow": "Landwirtschaftliche Werkzeuge",
@@ -1523,7 +1531,9 @@
         "q": "Wo wird mein Plan gespeichert?",
         "a": "In Ihrem Browser unter „Mein Garten“ (lokaler Speicher), sobald Sie auf „Plan in Mein Garten speichern“ klicken."
       }
-    ]
+    ],
+    "suggestionsCount": "{n, plural, =0 {Keine Optionen} one {# Option} other {# Optionen}} für {month} in {region}",
+    "savedPlotNote": "{sqm} m² Gemüsegarten-Plan für {month}, {region}; {count} Kultur(en) ausgewählt."
   },
   "suggestions": {
     "improveTranslation": "Verbessern Sie diese Übersetzung",

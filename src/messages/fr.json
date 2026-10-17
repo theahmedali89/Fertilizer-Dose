@@ -77,7 +77,9 @@
       "tipGeneralBody": "Ouvrez la vanne du tambour seulement après que 1 à 1,5 canal d'eau soit entré dans le champ (pas au début) pour une distribution uniforme.",
       "shareButton": "Partager sur WhatsApp",
       "shareCopy": "Copie",
-      "shareCopied": "Copié!"
+      "shareCopied": "Copié!",
+      "recommendedRangeLine": "Plage de dose recommandée : N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Choisissez une valeur dans la plage selon votre analyse de sol.",
+      "tipDapBody": "Si vous l'avez manqué au semis, dissolvez-le avec un solvant DAP et faites une fertirrigation. Commencez une fois que l'eau couvre 25 % de la parcelle, et arrêtez 10 minutes avant la fin de l'irrigation."
     },
     "title": "Dose d’engrais exacte, calculs à l’appui.",
     "soilTestCard": {
@@ -335,7 +337,8 @@
       "sourceLabel": "Source des données :",
       "genericLabel": "Base personnalisée (orientation générique uniquement — pas une recommandation vérifiée)",
       "disclaimer": "Toutes les doses sont des estimations. Confirmez auprès de votre agronome local / agent de vulgarisation agricole avant d’appliquer de l’engrais.",
-      "baseRangeLine": "Plage de doses de base : N {n} – P₂O₅ {p} – K₂O {k} kg/ha"
+      "baseRangeLine": "Plage de doses de base : N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Plage de dose ajustée : N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Méthode",
@@ -745,7 +748,8 @@
     "visualHint": "Sélectionnez un mois pour voir les fenêtres de semis, de repiquage et de récolte.",
     "legendTitle": "Légende",
     "noData": "Aucune donnée",
-    "windowsCount": "{count} fenêtres de plantation"
+    "windowsCount": "{count} fenêtres de plantation",
+    "monthCellLabel": "{month}, {count} périodes de semis"
   },
   "garden": {
     "metaTitle": "Mon jardin — Suivez parcelles, plantations et plans d’engrais",
@@ -910,7 +914,8 @@
       "perKgNFixed": "{kg} kg fournit 1 kg N — exact, d'après l'étiquette du sac.",
       "perKgNRange": "{lo}–{hi} kg fournit 1 kg N – plage typique, votre tas sera différent.",
       "organicHonesty": "Règles de comparaison honnêtes : l’azote organique se libère lentement – ​​seule une fraction (environ un tiers pour le fumier de ferme) nourrit la première récolte, le reste alimente les saisons ultérieures. Les matières organiques construisent également une structure du sol que les engrais en sac ne peuvent pas. Le prix par kg de N n’est qu’un aspect de la décision ; obtenez une analyse en laboratoire de votre matériau pour une planification précise.",
-      "viewOrganicHub": "Centre d'engrais organiques"
+      "viewOrganicHub": "Centre d'engrais organiques",
+      "unitSize": "Taille de l'emballage ({unit})"
     }
   },
   "blog": {
@@ -1114,7 +1119,8 @@
       "addToGarden": "Ajouter un horaire à Mon jardin",
       "addedToGarden": "Ajouté — voir Mon jardin → Rappels.",
       "gardenHint": "Les rappels sont des suggestions génériques de timing, et non des prescriptions. Évitez de vous nourrir si les plantes semblent stressées.",
-      "scheduleTitle": "Suggéré : Nourrir les plantes ({ppm} ppm {nutrient})"
+      "scheduleTitle": "Suggéré : Nourrir les plantes ({ppm} ppm {nutrient})",
+      "targetPpmPK": "{nutrient} cible (ppm)"
     },
     "presets": {
       "gentle": {
@@ -1151,7 +1157,8 @@
       "scheduleHint": "En fonction de la fréquence choisie. Ce sont des aides à la planification : adaptez-vous à la façon dont les plantes réagissent.",
       "bedVolumeHint": "{area} {unit} × {depth} cm de zone racinaire.",
       "formulaNoteLiquid": "Calcul : {grade} à {ppm} ppm {nutrient} → g/L = {ppm} ÷ (%{nutrient} × 10), puis ÷ densité {density} g/ml = ml par litre.",
-      "formulaNoteBed": "Volume plate-bande = surface × {depth} cm profondeur."
+      "formulaNoteBed": "Volume plate-bande = surface × {depth} cm profondeur.",
+      "kitchenApprox": "{tsp} — à titre indicatif seulement, pas une mesure ; pesez pour plus de précision."
     },
     "method": {
       "eyebrow": "Comment ça marche",
@@ -1264,7 +1271,8 @@
     "noRegionalUnits": "Les unités foncières régionales vérifiées ne sont actuellement pas disponibles pour ce pays ; les unités universelles sont affichées. Nous n’inventons jamais les conversions locales.",
     "pkUnitNote": "Kanal et Marla utilisent la norme de revenus du Pendjab (1 kanal = 20 marla = 5 445 pieds carrés). Certains programmes de logement utilisent du marla de 250 ou 225 pieds carrés – vérifiez vos documents locaux pour les transactions.",
     "method": {
-      "quadDiag": "Quadrilatère des côtés {a}, {b}, {c}, {d} de diagonale {diag} ({unit}) : divisé en deux triangles, chacun résolu exactement avec la formule de Heron, puis additionné."
+      "quadDiag": "Quadrilatère des côtés {a}, {b}, {c}, {d} de diagonale {diag} ({unit}) : divisé en deux triangles, chacun résolu exactement avec la formule de Heron, puis additionné.",
+      "quadApprox": "Quadrilatère à partir des côtés {a}, {b}, {c}, {d} ({unit}) : ((a+c)/2) × ((b+d)/2) — approximation, suppose une parcelle presque rectangulaire."
     },
     "errors": {
       "enterDimensions": "Veuillez entrer la longueur et la largeur.",
@@ -1361,7 +1369,8 @@
         "q": "S'agit-il d'un arpentage officiel ?",
         "a": "Non. C'est un outil d'aide à la décision agronomique."
       }
-    ]
+    ],
+    "savedPlotNote": "Mesuré avec le calculateur de surface ({sqm})."
   },
   "mapArea": {
     "eyebrow": "Outils agricoles",
@@ -1521,7 +1530,10 @@
         "q": "Où est sauvegardé mon plan ?",
         "a": "Dans le stockage local de votre navigateur sous Mon Jardin."
       }
-    ]
+    ],
+    "savedPlotNote": "Plan de potager de {sqm} m² pour {month}, {region} ; {count} culture(s) sélectionnée(s).",
+    "selectHint": "Cochez les cultures que vous voulez cultiver pour établir votre plan ci-dessous.",
+    "suggestionsCount": "{n, plural, =0 {Aucune option} one {# option} other {# options}} pour {month}, {region}"
   },
   "suggestions": {
     "improveTranslation": "Améliorer cette traduction",
@@ -1595,7 +1607,9 @@
     "tajurbaIntro": "Dites-nous ce que vous avez réellement fait dans votre propre domaine. Soyez honnête : ceci est partagé sous forme d’expérience d’agriculteur et non sous forme de conseil officiel.",
     "errorSourceFlexRequired": "Veuillez donner une source - un lien ou une référence écrite (livre, département, officier).",
     "errorAppliedRequired": "Veuillez nous dire ce que vous avez postulé dans votre domaine.",
-    "sourceTextLabel": "Ou référence écrite (si pas de lien)"
+    "sourceTextLabel": "Ou référence écrite (si pas de lien)",
+    "dataIntro": "Vous connaissez la dose d'engrais officielle pour {crop} ? Partagez-la ici avec une source officielle (ministère de l'agriculture, université, revue scientifique). Notre équipe vérifie chaque contribution avant publication.",
+    "step3Title": "3. Approuver ou rejeter"
   },
   "contributors": {
     "title": "Nos contributeurs",

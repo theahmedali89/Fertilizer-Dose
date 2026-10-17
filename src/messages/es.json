@@ -78,7 +78,8 @@
       "tipGeneralBody": "Abra la válvula del tambor solo después de que entre 1 y 1,5 canales de agua hayan ingresado al campo (no al inicio) para una distribución uniforme.",
       "shareButton": "Compartir en WhatsApp",
       "shareCopy": "Copiar",
-      "shareCopied": "¡Copiado!"
+      "shareCopied": "¡Copiado!",
+      "recommendedRangeLine": "Rango de dosis recomendado: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Elige dentro del rango según tu análisis de suelo."
     },
     "title": "Dosis exacta de fertilizante, con el cálculo mostrado.",
     "soilTestCard": {
@@ -336,7 +337,8 @@
       "sourceLabel": "Fuente de datos:",
       "genericLabel": "Base personalizada (solo orientación genérica — no es una recomendación verificada)",
       "disclaimer": "Todas las dosis son estimaciones. Confirme con su agrónomo local / técnico de extensión agrícola antes de aplicar fertilizante.",
-      "baseRangeLine": "Rango de dosis base: N {n} – P₂O₅ {p} – K₂O {k} kg/ha"
+      "baseRangeLine": "Rango de dosis base: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Rango de dosis ajustado: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Método",
@@ -689,7 +691,8 @@
     },
     "organicOptions": "Opciones de fertilizantes orgánicos",
     "organicOptionsNote": "No existe una dosis orgánica verificada específica de este cultivo; la guía anterior es una práctica general, no una recomendación medida. Haga que su material sea probado en laboratorio para una planificación de precisión.",
-    "organicOptionsCta": "Explorar fertilizantes orgánicos"
+    "organicOptionsCta": "Explorar fertilizantes orgánicos",
+    "organicOptionsBody": "El estiércol bien descompuesto, el compost o el vermicompost pueden usarse como acondicionador de base del suelo para {name} — mejoran la estructura del suelo y liberan los nutrientes lentamente durante la temporada. Como el contenido de nutrientes orgánicos varía según la fuente, complementa la necesidad exacta de nutrientes con fertilizante mineral calculado para tu cultivo y tu región."
   },
   "calendar": {
     "metaTitle": "Calendario de siembra: qué sembrar este mes",
@@ -745,7 +748,8 @@
     "visualHint": "Seleccione un mes para ver las ventanas de siembra, trasplante y cosecha.",
     "legendTitle": "Leyenda",
     "noData": "Sin datos",
-    "windowsCount": "{count} plantando ventanas"
+    "windowsCount": "{count} plantando ventanas",
+    "monthCellLabel": "{month}, {count} ventanas de siembra"
   },
   "garden": {
     "metaTitle": "Mi huerto: controle parcelas, siembras y planes de fertilización",
@@ -910,7 +914,8 @@
       "perKgNFixed": "{kg} kg suministra 1 kg de N — exacto, según la etiqueta de la bolsa.",
       "perKgNRange": "{lo}–{hi} kg suministra 1 kg N: rango típico, su montón será diferente.",
       "organicHonesty": "Reglas de comparación honestas: el nitrógeno orgánico se libera lentamente: sólo una fracción (aproximadamente un tercio para el estiércol de granja) alimenta la primera cosecha, el resto alimenta las temporadas posteriores. Los productos orgánicos también construyen la estructura del suelo que los fertilizantes en bolsas no pueden. El precio por kg de N es sólo un aspecto de la decisión; obtenga un análisis de laboratorio de su material para una planificación de precisión.",
-      "viewOrganicHub": "Centro de fertilizantes orgánicos"
+      "viewOrganicHub": "Centro de fertilizantes orgánicos",
+      "unitSize": "Tamaño del paquete ({unit})"
     }
   },
   "blog": {
@@ -1113,7 +1118,9 @@
       "addToGarden": "Agregar horario a Mi Jardín",
       "addedToGarden": "Agregado: consulte Mi jardín → Recordatorios.",
       "gardenHint": "Los recordatorios son sugerencias genéricas de tiempos, no prescripciones. Omita la alimentación si las plantas parecen estresadas.",
-      "scheduleTitle": "Sugerido: Nutrir plantas ({ppm} ppm {nutrient})"
+      "scheduleTitle": "Sugerido: Nutrir plantas ({ppm} ppm {nutrient})",
+      "presetSource": "Fuente: {source}",
+      "targetPpmPK": "Objetivo de {nutrient} (ppm)"
     },
     "presets": {
       "gentle": {
@@ -1362,7 +1369,8 @@
         "q": "¿Es este un levantamiento topográfico legal?",
         "a": "No. Esta herramienta proporciona estimaciones útiles a partir de sus propias mediciones para la toma de decisiones agrícolas. Para límites legales o registros oficiales, contrate a un topógrafo matriculado."
       }
-    ]
+    ],
+    "savedPlotNote": "Medido con la calculadora de superficie ({sqm})."
   },
   "mapArea": {
     "eyebrow": "Herramientas agrícolas",
@@ -1523,7 +1531,9 @@
         "q": "¿Dónde se guarda mi plan?",
         "a": "En la sección Mi Huerto de su navegador (almacenamiento local) al presionar “Guardar plan en Mi Huerto”. Inicie sesión para sincronizarlo entre dispositivos."
       }
-    ]
+    ],
+    "suggestionsCount": "{n, plural, =0 {Sin opciones} one {# opción} other {# opciones}} para {month} en {region}",
+    "savedPlotNote": "Plan de huerto de {sqm} m² para {month}, {region}; {count} cultivo(s) seleccionado(s)."
   },
   "suggestions": {
     "improveTranslation": "Mejorar esta traducción",
@@ -1598,7 +1608,8 @@
     "tajurbaIntro": "Cuéntanos qué hiciste realmente en tu propio campo. Sea honesto: esto se comparte como experiencia de los agricultores, no como un consejo oficial.",
     "errorSourceFlexRequired": "Proporcione una fuente: un enlace o una referencia escrita (libro, departamento, funcionario).",
     "errorAppliedRequired": "Por favor díganos qué solicitó en su campo.",
-    "sourceTextLabel": "O referencia escrita (si no hay enlace)"
+    "sourceTextLabel": "O referencia escrita (si no hay enlace)",
+    "dataIntro": "¿Conoces la dosis oficial de fertilizante para {crop}? Compártela aquí con una fuente oficial (departamento de agricultura, universidad, revista de investigación). Nuestro equipo verifica cada aporte antes de publicarlo."
   },
   "contributors": {
     "title": "Nuestros colaboradores",

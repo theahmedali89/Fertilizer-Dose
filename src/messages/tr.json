@@ -78,7 +78,8 @@
       "tipGeneralBody": "Eşit dağıtım için varil vanasını yalnızca sahaya 1–1,5 kanal su girdikten sonra (başlangıçta değil) açın.",
       "shareButton": "WhatsApp'ta paylaş",
       "shareCopy": "Kopyala",
-      "shareCopied": "Kopyalandı!"
+      "shareCopied": "Kopyalandı!",
+      "recommendedRangeLine": "Önerilen doz aralığı: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Toprak analizinize göre aralık içinden bir değer seçin."
     },
     "title": "Hesabı gösterilen, hassas gübre dozu.",
     "soilTestCard": {
@@ -101,6 +102,14 @@
       {
         "q": "Bazı ürünler neden devre dışı?",
         "a": "Bir ürün, yalnızca önerilen NPK dozu yayınlanmış bir kaynakla doğrulandığında seçilebilir. Rakamları uydurmaktansa ürünü devre dışı bırakmayı tercih ederiz — doğrulanmamış ürünler teyit edilene kadar \"veriler inceleniyor\" olarak işaretlenir."
+      },
+      {
+        "a": "1 acre = 8 kanal = 160 marla ve 1 kanal = 20 marla. Metrik olarak: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Hesaplayıcı alanınızı hektara çevirir, hektar başına dozu uygular ve ardından geri ölçeklendirir.",
+        "q": "kanal ve marla nasıl dönüştürülür?"
+      },
+      {
+        "a": "Bir ürün, önerilen NPK dozu yayımlanmış bir kaynakla doğrulanmışsa seçilebilir. Rakamları uydurmaktansa ürünü devre dışı bırakmayı tercih ediyoruz — doğrulanmamış ürünler onaylanana kadar \"veri incelemede\" olarak işaretlenir.",
+        "q": "Bazı ürünler neden devre dışı?"
       }
     ],
     "organic": {
@@ -185,17 +194,50 @@
         "a": "Evet — hesaplayıcı, kütüphaneler ve kılavuzlar ücretsizdir. Hesap yalnızca tanı kaydetme gibi özellikler için gereklidir.",
         "q": "Fertilizer Dose ücretsiz mi?"
       },
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
+      {
+        "a": "Evet, Urea ve DAP ekimde taban dozu olarak birlikte uygulanabilir. DAP fosfor sağlar (46% P₂O₅) artı 18% azot, Urea ise daha fazla azot ekler (46% N). Yaygın bir uygulama, serpmeden önce bunları karıştırmaktır. Ancak karışım bekleyecekse aynı uygulamada Urea'yı SSP (tek süper fosfat) ile karıştırmaktan kaçının — topaklanabilir. Önce ürününüzün önerilen NPK oranını kontrol edin.",
+        "q": "Urea ve DAP birlikte karıştırılabilir mi?"
+      },
+      {
+        "a": "Taban dozu, ekim/dikim sırasında veya öncesinde uygulanan, toprağa karıştırılan gübredir. Genellikle tam fosfor ve potasyum ihtiyacını artı azotun bir kısmını (genellikle 1/3 ila 1/2) içerir. Kalan azot daha sonra üst gübreleme olarak verilir — örneğin buğdayda kardeşlenme döneminde Urea. Taban uygulaması, besinlerin ilk günden genç köklere ulaşmasını sağlar.",
+        "q": "Gübrede taban dozu nedir?"
+      },
+      {
+        "a": "Toprağınıza ve ürününüze bağlıdır. DAP (18-46-0) daha yüksek fosfor konsantrasyonuna sahiptir (46% P₂O₅), bu yüzden dönüm başına daha az ürün gerekir — taşıma ve kullanım için iyi. SSP (16% P₂O₅) ayrıca kükürt (~11%) ve kalsiyum (~19%) sağlar, bu da onu yağlı tohumlar, baklagiller ve kükürt eksik topraklar için daha iyi yapar. DAP genellikle kg fosfor başına daha ucuzdur, ancak SSP ikincil besinler ekler. Yerel fiyatlarınızda kg P₂O₅ başına hangisinin daha ucuz olduğunu kontrol etmek için Karşılaştırma aracımızı kullanın.",
+        "q": "DAP mı SSP mi — hangisi daha iyi?"
+      },
+      {
+        "a": "Toprak testi, toprağınızın mevcut azot, fosfor, potasyum, pH ve organik madde içeriğini ölçer. Sabit bir öneri kullanmak yerine gübre dozu ayarlanır — toprağınızda zaten yüksek fosfor varsa daha az P gübresi uygularsınız. Bu, paradan tasarruf sağlar ve aşırı gübrelemeyi önler. Yerel tarım müdürlüğünüz aracılığıyla her 2-3 yılda bir toprak testi yaptırmanızı öneririz. Hesaplayıcımız standart öneriler kullanır; toprak testine dayalı hassas dozlar için bu standart rakamları başlangıç noktası olarak yerel toprak test laboratuvarınıza danışın.",
+        "q": "Toprak testine dayalı gübre dozu nedir?"
+      },
+      {
+        "a": "Uygulandıktan sonra Urea, doğal toprak enzimleriyle yaklaşık 2–4 gün içinde bitkinin alabileceği amonyuma dönüşür, ardından toprak sıcaklığına ve nemine bağlı olarak sonraki 2–4 haftada nitrata dönüşür. Pratik olarak tek bir Urea uygulaması ürünü kabaca 4–6 hafta besler, bu yüzden azot genellikle sezona 2–3 doza bölünür. Amonyak gazı olarak kayıplar, Urea yüzeyde kaldığında sıcak, kuru, alkali topraklarda en yüksektir — nemli toprağa karıştırmak bunu azaltır.",
+        "q": "Urea toprakta ne kadar süre kalır?"
+      },
+      {
+        "a": "Urea (46-0-0) yalnızca 46% N ile azot sağlar — mevcut en yoğun azotlu gübre. DAP (18-46-0) 18% azot artı 46% fosfat (P₂O₅) sağlar. Pratikte DAP, ürünün kök gelişimi için fosfora ihtiyaç duyduğu ekimde taban dozu olarak kullanılırken, Urea aktif büyüme sırasında azot üst gübrelemesi için kullanılır. Farklı birincil amaçlara hizmet ederler, bu yüzden çiftçiler onları birbirinin yerine kullanmaktan çok birlikte kullanır.",
+        "q": "Urea ile DAP arasındaki fark nedir?"
+      },
+      {
+        "a": "Mümkünse bir toprak testiyle başlayın — toprağınızda zaten ne olduğunu söyler, böylece yalnızca eksik olanı eklersiniz. Ardından Fertilizer Dose üzerindeki Bitki Dozu Hesaplayıcısı'nı kullanın: bitki türünüzü ve saksı veya yatak boyutunu girin, bitki başına tam gramı verir. Genel kural olarak tek seferde değil küçük bölümler halinde uygulayın, granül uygulamadan sonra sulayın ve her zaman etiket dozuna uyun — daha fazla gübre daha fazla büyüme demek değildir ve kökleri yakabilir.",
+        "q": "Bitkiler için gübre dozunu nasıl hesaplarım?"
+      },
+      {
+        "a": "İyi çürümüş çiftlik gübresi genellikle yaklaşık 0.5–1.0% azot, 0.2–0.5% fosfat (P₂O₅) ve 0.5–1.0% potas (K₂O) içerir, ancak bu hayvan kaynağına, yeme, yataklık malzemesine ve nasıl depolanıp kompostlandığına göre büyük ölçüde değişir. Besin içeriği mineral gübrelere göre düşük ve değişken olduğundan FYM en iyi toprak düzenleyici olarak çalışır — organik madde ekler, toprak yapısını iyileştirir ve mikro besinler sağlar — mineral gübreler ise ürünün ihtiyaç duyduğu hassas NPK dozunu sağlar.",
+        "q": "Çiftlik gübresinde (FYM) ne kadar NPK bulunur?"
+      },
+      {
+        "a": "Bitkileri yapraktan beslemek için en iyi zamanlar sabah erken (yaklaşık 9–10'dan önce) veya akşam geç saatlerdir. Yaprak gözenekleri (stomalar) açıktır, sıcaklıklar daha serindir ve püskürtme damlacıkları daha uzun ıslak kalır, bu da besin alımını iyileştirir. Öğle sıcağında püskürtmekten kaçının — damlacıklar iyi alım için çok hızlı kurur ve yoğun kalıntı yaprakları yakabilir. Ayrıca beklenen yağmurdan hemen önce püskürtmeyi atlayın, çünkü yağmur besini yıkar.",
+        "q": "Yaprak gübresi püskürtmek için günün en iyi zamanı nedir?"
+      },
+      {
+        "a": "Gübre torbasındaki üç sayı (örneğin 15-15-15), ağırlıkça azot (N), fosfat (P₂O₅) ve potas (K₂O) yüzdesidir. Yani 50 kg'lık bir 15-15-15 torbası her birinden 7.5 kg N, P₂O₅ ve K₂O içerir. Fosfor ve potasyumun endüstri geleneğiyle elementel P ve K değil oksit formlarında ifade edildiğini unutmayın — Fertilizer Dose hesaplayıcıları bu dönüşümü sizin için yapar.",
+        "q": "Gübre torbasındaki NPK ne anlama gelir?"
+      },
+      {
+        "a": "Amonyum sülfat (21-0-0 artı 24% kükürt) kükürtle birlikte azot sağlar, bu da onu kükürt eksik topraklar için yararlı kılar — yüksek verimli tahıllarda ve yağlı tohumlarda yaygındır. Toprakta asitleştirici etkisi vardır, bu yüzden nötr ila alkali topraklara iyi uyar, ancak zaten asidik topraklarda dikkatli kullanın. Fosfor veya potasyum eklemeden azot vermek istediğinizde de iyi bir seçimdir.",
+        "q": "Amonyum sülfat gübresi ne için kullanılır?"
+      },
       {
         "q": "Yaprak gübresi toprak uygulamasının yerini tutar mı?",
         "a": "Hayır — yaprak gübrelemesi bir tamamlayıcıdır, yerine geçmez. Yapraklar besin maddelerini hızlı emer ama küçük miktarlarda; bu nedenle yaprak püskürtmeleri, mikro besin eksikliklerini gidermek (çinko, demir, bor) veya kritik büyüme dönemlerinde hızlı bir destek sağlamak için idealdir. Ancak NPK'nin büyük bölümü topraktan gelmelidir, çünkü bitkilerin akr başına kilogramlarca besine ihtiyacı vardır ve yapraklar bu hacmi ememez. Yaprak gübrelemesini, taban gübrelemesi ve üst gübreleme programınızla birlikte kullanın, onun yerine değil."
@@ -295,7 +337,8 @@
       "sourceLabel": "Veri kaynağı:",
       "genericLabel": "Özel baz (yalnızca genel yol gösterici — doğrulanmış öneri değil)",
       "disclaimer": "Tüm dozlar tahmindir. Gübre uygulamadan önce yerel ziraat mühendisiniz / tarım yayım görevlinizle teyit edin.",
-      "baseRangeLine": "Temel doz aralığı: N {n} – P₂O₅ {p} – K₂O {k} kg/ha"
+      "baseRangeLine": "Temel doz aralığı: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Düzeltilmiş doz aralığı: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Yöntem",
@@ -570,7 +613,20 @@
     "eyebrow": "Plant Doctor",
     "title": "Yaprağı bize gösterin. Okumanıza yardımcı olalım.",
     "metaTitle": "Plant Doctor — Yapay Zekâ Ürün Sorun Teşhisi",
-    "metaDescription": "Nedenler, eylemler ve önleme adımlarıyla yapay zekâ destekli tanı için ürün fotoğrafı yükleyin ve belirtileri anlatın."
+    "metaDescription": "Nedenler, eylemler ve önleme adımlarıyla yapay zekâ destekli tanı için ürün fotoğrafı yükleyin ve belirtileri anlatın.",
+    "form": {
+      "analyzing": "Analiz ediliyor…",
+      "cropLabel": "Ürün (biliniyorsa)",
+      "cropPlaceholder": "Emin değilim / diğer",
+      "diagnosisTitle": "Teşhis",
+      "photoHint": "Fotoğraf için tıklayın veya buraya bırakın",
+      "photoLabel": "Bitki fotoğrafı",
+      "photoTypes": "JPG, PNG veya WebP, en fazla 5 MB",
+      "submit": "Bitkimi teşhis et",
+      "symptomsHint": "Ne görüyorsunuz? Sarı lekeler, solma, yapraklarda delikler, ne zaman başladı, bitkinin hangi kısmı…",
+      "symptomsLabel": "Belirtileri açıklayın",
+      "symptomsPlaceholder": "ör. Buğdayın alt yapraklarında kahverengi kenarlı sarı lekeler, yağmurdan sonra yaklaşık bir hafta önce başladı…"
+    }
   },
   "growing": {
     "searchPlaceholder": "İsme göre ara…",
@@ -963,7 +1019,19 @@
       "detailCta": "Ayrıntıları görüntüle"
     },
     "searchPlaceholder": "Gübre ara…",
-    "searchNoResults": "Aramanızla eşleşen gübre yok."
+    "searchNoResults": "Aramanızla eşleşen gübre yok.",
+    "taglines": {
+      "ammonium-sulphate": "Azot artı kükürt, toprakta asitleştirici etkiyle.",
+      "compost": "Çürümüş çiftlik ve ev atıkları — değişken, ham maddeye bağlı besin.",
+      "dap": "Standart taban fosfor kaynağı — azot bonusuyla.",
+      "farmyard-manure": "Geleneksel hacimli gübre — düşük besin, yüksek toprak düzenleme değeri.",
+      "green-manure": "Yaşayan bir azot fabrikası — ana üründen önce yetiştirilip toprağa sürülür.",
+      "mop": "Çoğu tarla ürünü için ekonomik potasyum kaynağı.",
+      "sop": "Hassas, yüksek değerli ürünler için klorsuz potasyum.",
+      "ssp": "Tek granülde fosfor artı kükürt ve kalsiyum.",
+      "urea": "Yaygın kullanımda en yoğun azotlu gübre.",
+      "vermicompost": "Solucanla işlenmiş gübre — FYM'den daha zengin, ama ham madde her şeyi belirler."
+    }
   },
   "chart": {
     "metaTitle": "Gübre Doz Tablosu — Hızlı NPK Referansı",
@@ -1049,7 +1117,10 @@
       "startDate": "İlk besleme",
       "addToGarden": "Bahçem'e program ekle",
       "addedToGarden": "Eklendi — Bahçem → Hatırlatıcılar'a bakın.",
-      "gardenHint": "Hatırlatıcılar reçete değil, genel zamanlama önerileridir. Bitkiler stresli görünüyorsa beslemeyi atlayın."
+      "gardenHint": "Hatırlatıcılar reçete değil, genel zamanlama önerileridir. Bitkiler stresli görünüyorsa beslemeyi atlayın.",
+      "presetSource": "Kaynak: {source}",
+      "scheduleTitle": "Öneri: Bitkileri besleyin ({ppm} ppm {nutrient})",
+      "targetPpmPK": "Hedef {nutrient} (ppm)"
     },
     "presets": {
       "gentle": {
@@ -1082,18 +1153,60 @@
       "perBed": "Yatak için toplam",
       "perBedHint": "Yatağın üzerine eşit miktarda uygulanan sulama suyuna karıştırın.",
       "scheduleTitle": "Besleme programı (sonraki 6)",
-      "scheduleHint": "Seçtiğiniz frekansa göre. Bunlar planlama yardımcılarıdır; bitkilerin nasıl tepki vereceğine göre ayarlayın."
+      "scheduleHint": "Seçtiğiniz frekansa göre. Bunlar planlama yardımcılarıdır; bitkilerin nasıl tepki vereceğine göre ayarlayın.",
+      "bedVolumeHint": "{area} {unit} × {depth} cm kök bölgesi.",
+      "formulaNote": "Hesap: {grade}, {ppm} ppm {nutrient} → litre başına gram = {ppm} ÷ (%{nutrient} × 10).",
+      "formulaNoteBed": "Yatak hacmi = alan × {depth} cm derinlik.",
+      "formulaNoteLiquid": "Hesap: {grade}, {ppm} ppm {nutrient} → litre başına gram = {ppm} ÷ (%{nutrient} × 10), sonra ÷ {density} g/ml yoğunluk = litre başına ml.",
+      "total": "{litres} L için toplam"
     },
     "method": {
       "eyebrow": "Nasıl çalışır?",
       "title": "Yetiştiricilerin yaptığı gibi ppm'ye göre dozajlama",
-      "desc": "Ticari yetiştiriciler kaşık dolusu miktarı tahmin etmezler; gübreyi milyonda bir (ppm) cinsinden hedef besin konsantrasyonuna kadar karıştırırlar. Bu hesap makinesi aynı yöntemi ev bahçıvanlarına da getiriyor."
+      "desc": "Ticari yetiştiriciler kaşık dolusu miktarı tahmin etmezler; gübreyi milyonda bir (ppm) cinsinden hedef besin konsantrasyonuna kadar karıştırırlar. Bu hesap makinesi aynı yöntemi ev bahçıvanlarına da getiriyor.",
+      "steps": [
+        {
+          "d": "Torbadaki N-P-K sayılarını okuyun, ör. 20-20-20, veya özel bir derece girin.",
+          "t": "Gübre derecenizi seçin"
+        },
+        {
+          "d": "Ev bitkileri ve yavaş büyüyenler hafif dozlarda (~100 ppm N) gelişir; çoğu saksı bitkisi normal dozlarda (~150 ppm N); güçlü, hızlı büyüyenler ~200 ppm N alabilir.",
+          "t": "Besleme gücünü seçin"
+        },
+        {
+          "d": "Hesaplanan gramı sulama kabınıza karıştırın ve her zamanki gibi sulayın, fazlasının süzülmesine izin verin. Bu dozlarda her sulamada besleyin veya yarı sıklıkta iki kat güçte — ikisini birden asla yapmayın.",
+          "t": "Karıştırın ve normal sulayın"
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Kaynaklar",
       "title": "Besleme oranları nereden geliyor?",
-      "note": "Ön ayarlar, yayınlanan her aralığın alt ucunu kullanır; bu, evdeki ışık seviyeleri için muhafazakar bir seçimdir. Daima ürününüzün etiketine ve yerel uzatma hizmetinizin tavsiyelerine uyun."
-    }
+      "note": "Ön ayarlar, yayınlanan her aralığın alt ucunu kullanır; bu, evdeki ışık seviyeleri için muhafazakar bir seçimdir. Daima ürününüzün etiketine ve yerel uzatma hizmetinizin tavsiyelerine uyun.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): fidelere 200–250 ppm N sabit besleme; yavaş büyüyen türler yerleşene kadar 100–150 ppm N.",
+        "Michigan State University Extension (E2186): saksıda yetişen bitkiler — yavaş salınımlı gübre artı 150–200 ppm N ek sıvı besleme.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": g/L = ppm ÷ (%N × 10) formülü ve işlenmiş 200 ppm N örneği."
+      ]
+    },
+    "faq": [
+      {
+        "a": "Çoğu saksı bitkisi 100–150 ppm azotlu sulama çözeltisiyle iyi gelişir — litre su başına yaklaşık 0.5–1 g 20-20-20. Güçlü çiçek açan tek yıllıklar gibi yoğun besleyiciler 200 ppm'ye kadar alabilir. Hafif başlayın; bir dahaki sefere her zaman artırabilirsiniz.",
+        "q": "Saksı bitkilerinin ne kadar gübreye ihtiyacı var?"
+      },
+      {
+        "a": "Tepeleme bir çay kaşığı granül gübre kabaca 5–6 g'dır, ancak yoğunluk ürüne göre değişir, bu yüzden kaşıklar yalnızca kabaca bir ölçüdür. Küçük saksılar ve fideler için ucuz bir gram terazisi çok daha güvenilirdir — 50%'lik bir kaşık hatası kolayca olur ve kökleri yakmaya yeter.",
+        "q": "Tartmak yerine kaşık kullanabilir miyim?"
+      },
+      {
+        "a": "Yukarıdaki hafif ve normal dozlarda evet — ticari yetiştiriciler böyle yapar (\"fertigasyon\"). Alternatif, yarı sıklıkta iki kat güçte beslemektir. İkisini birden yapmayın: bir program seçin ve bitkileri izleyin.",
+        "q": "Her sulamada gübre vermeli miyim?"
+      },
+      {
+        "a": "Kahverengi, kıtır kıtır yaprak kenarları, toprak nemli olmasına rağmen solma ve ortam yüzeyinde beyaz kabuk. Bunları görürseniz saksıyı drenaj deliklerinden özgürce akana kadar sade suyla yıkayın ve bir sonraki beslemeyi atlayın.",
+        "q": "Aşırı gübrenin belirtileri nelerdir?"
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Ücretsiz tarım aracı",
@@ -1159,7 +1272,8 @@
     "noRegionalUnits": "Doğrulanmış bölgesel kara birimleri şu anda bu ülke için mevcut değil; evrensel birimler gösteriliyor. Hiçbir zaman yerel dönüşümleri icat etmeyiz.",
     "pkUnitNote": "Kanal ve Marla, Pencap gelir standardını kullanıyor (1 kanal = 20 marla = 5.445 ft2). Bazı konut planları 250 veya 225 m2 marla kullanır; işlemler için yerel belgelerinizi kontrol edin.",
     "method": {
-      "quadDiag": "{a}, {b}, {c}, {d} kenarlarından köşegen {diag} ({unit}) olan dörtgen: iki üçgene bölünür, her biri Heron formülüyle tam olarak çözülür ve sonra toplanır."
+      "quadDiag": "{a}, {b}, {c}, {d} kenarlarından köşegen {diag} ({unit}) olan dörtgen: iki üçgene bölünür, her biri Heron formülüyle tam olarak çözülür ve sonra toplanır.",
+      "quadApprox": "{a}, {b}, {c}, {d} kenarlarından dörtgen ({unit}): ((a+c)/2) × ((b+d)/2) — yaklaşımdır, arsanın dikdörtgene yakın olduğu varsayılır."
     },
     "errors": {
       "enterDimensions": "Lütfen hem uzunluğu hem de genişliği girin.",
@@ -1180,10 +1294,83 @@
       "conversionTitle": "Arsa alanı dönüşüm tablosu",
       "conversionNote": "Kesin tanımlar. Bölgesel birimler yalnızca doğrulanmış yerlerde görünür.",
       "sourcesTitle": "Kaynaklar ve metodoloji",
-      "sourcesBody": "Evrensel birimler tam SI ve emperyal tanımları kullanır (1 dönüm = 4.046,8564224 m²; 1 hektar = 10.000 m²). Kanal ve Marla, Pencap gelir standardını kullanıyor: 1 karam = 5,5 ft, 1 marla = 9 metrekare karam = 272,25 ft2, 1 kanal = 20 marla = 5.445 ft2. Tüm hesaplamalar dahili olarak metrekare cinsinden yapılır ve bir kez görüntüleme ünitesine dönüştürülür; zincirleme yuvarlama yoktur."
+      "sourcesBody": "Evrensel birimler tam SI ve emperyal tanımları kullanır (1 dönüm = 4.046,8564224 m²; 1 hektar = 10.000 m²). Kanal ve Marla, Pencap gelir standardını kullanıyor: 1 karam = 5,5 ft, 1 marla = 9 metrekare karam = 272,25 ft2, 1 kanal = 20 marla = 5.445 ft2. Tüm hesaplamalar dahili olarak metrekare cinsinden yapılır ve bir kez görüntüleme ünitesine dönüştürülür; zincirleme yuvarlama yoktur.",
+      "formulas": [
+        {
+          "example": "100 m × 50 m = 5.000 m²",
+          "formula": "Alan = uzunluk × genişlik",
+          "name": "Dikdörtgen"
+        },
+        {
+          "example": "25 m × 25 m = 625 m²",
+          "formula": "Alan = kenar²",
+          "name": "Kare"
+        },
+        {
+          "example": "½ × 40 m × 30 m = 600 m²",
+          "formula": "Alan = ½ × taban × yükseklik",
+          "name": "Üçgen"
+        },
+        {
+          "example": "((60 m + 40 m) / 2) × 30 m = 1.500 m²",
+          "formula": "Alan = ((A kenarı + B kenarı) / 2) × yükseklik",
+          "name": "Yamuk"
+        },
+        {
+          "example": "Kesin — yaklaşım yok",
+          "formula": "Köşegen boyunca iki üçgene bölün; her birini Heron formülüyle çözüp toplayın",
+          "name": "Dört kenar + köşegen"
+        }
+      ]
     },
     "relatedTitle": "İlgili tarım araçları",
-    "relatedCurrent": "Buradasınız"
+    "relatedCurrent": "Buradasınız",
+    "faq": [
+      {
+        "a": "Uzunluk ve genişliği aynı birimle ölçüp çarpın: alan = uzunluk × genişlik. Düzensiz şekiller için araziyi dikdörtgen ve üçgenlere bölün, her birini hesaplayıp toplayın.",
+        "q": "Arazi alanını nasıl hesaplarım?"
+      },
+      {
+        "a": "Aynı geometriyi kullanın, ardından bölgenizin kullandığı birime çevirin — dönüm, hektar veya Pakistan'da kanal ve marla gibi yerel birimler. Bu tarımsal arazi alanı hesaplayıcısı otomatik çevirir ve sonucu doğrudan Gübre Dozu Hesaplayıcısı'na gönderebilir.",
+        "q": "Tarımsal arazi alanını nasıl hesaplarım?"
+      },
+      {
+        "a": "Yukarıya arsanızın uzunluk ve genişliğini girin ve sonuçlardan dönüm değerini okuyun — elle hesap yok. Feet ile ölçtüyseniz hesaplayıcı fit kareyi dönüme otomatik çevirir (43.560 fit kare = 1 acre).",
+        "q": "Bu arsa kaç dönüm (acre)?"
+      },
+      {
+        "a": "Feet cinsinden uzunluğu feet cinsinden genişlikle çarpın: 100 ft × 50 ft = 5.000 fit kare. Bir acre 43.560 fit karedir.",
+        "q": "Fit kare cinsinden arazi alanını nasıl hesaplarım?"
+      },
+      {
+        "a": "Hayır. Yalnızca dört kenar bir dörtgenin alanını sabitleyemez — şekil esneyebilir. Bir köşegen de ölçün; arsa tam çözülebilir iki üçgene bölünür. Olmadan yalnızca etiketli bir yaklaşım mümkündür.",
+        "q": "Dört kenar uzunluğu düzensiz arsayı tam hesaplayabilir mi?"
+      },
+      {
+        "a": "Dönümü 0.404686 ile çarpın. Bir hektar 2.471 dönüme eşittir. Herhangi bir birim çifti için yukarıdaki Dönüştürücü modunu kullanın.",
+        "q": "Dönümü hektara nasıl çeviririm?"
+      },
+      {
+        "a": "Bir hektar (10.000 m²), bir acre'den (4.047 m²) yaklaşık 2.47 kat büyüktür. Çoğu ülkede standart hektardır; Pakistan, Hindistan, Bangladeş ve ABD'de acre yaygındır.",
+        "q": "Acre ile hektar arasındaki fark nedir?"
+      },
+      {
+        "a": "Evet — Düzensiz modu kullanın: tarlanızı dikdörtgen, kare, üçgen veya yamuklara bölün, her bölümü girin, hesaplayıcı toplar.",
+        "q": "Düzensiz tarla alanını hesaplayabilir miyim?"
+      },
+      {
+        "a": "Bigha, marla ve kanal gibi birimler yerel vergi sistemlerinden doğdu, bu yüzden boyutları eyalete ve uygulamaya göre değişir. Dönüşümü doğrulanmış bölgesel birimleri yalnızca sunuyoruz — örneğin kanal/marla için Punjab vergi standardı — ve kullanılan standardı etiketliyoruz.",
+        "q": "Bazı geleneksel arazi birimleri bölgeden bölgeye neden değişir?"
+      },
+      {
+        "a": "Evet. 'Gübre Hesaplayıcısı'nda Kullan'a dokunun; alanınız, biriminiz, ülkeniz ve bölgeniz otomatik aktarılır — yeniden yazma yok. Yine de ürününüzü orada seçersiniz, çünkü tek başına alan asla gübre dozunu belirlemez.",
+        "q": "Hesaplanan alanı Gübre Dozu Hesaplayıcısı'nda kullanabilir miyim?"
+      },
+      {
+        "a": "Hayır. Bu araç, çiftçilik kararları için kendi ölçümlerinizden yararlı tahminler verir. Yasal sınırlar, anlaşmazlıklar ve resmi kayıtlar için nitelikli bir ölçüm uzmanı veya arazi gelir idaresi gerekir.",
+        "q": "Bu yasal bir arazi ölçümü mü?"
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Tarım Aletleri",
@@ -1244,7 +1431,35 @@
     "bannerProfit": "Kâr Tahmini",
     "bannerDismiss": "Azletmek",
     "relatedTitle": "İlgili araçlar",
-    "relatedCurrent": "Buradasınız"
+    "relatedCurrent": "Buradasınız",
+    "faq": [
+      {
+        "a": "Tarlanızın çevresine sınır noktaları bırakmak için haritaya dokunun. En az 3 noktanız olduğunda araç, dünyanın eğriliğini hesaba katan jeodezik matematikle kapalı alanı hesaplar — düz ekran ölçümlerinden farklı olarak her enlemde doğrudur.",
+        "q": "Harita alanı hesaplayıcısı nasıl çalışır?"
+      },
+      {
+        "a": "Hayır. Noktaları yerleştirdiğiniz yere ve harita görüntüsü hizalamasına dayalı yararlı bir tahmindir. Yasal anlaşmazlıklar, arazi kayıtları veya resmi işlemler için nitelikli bir yerel ölçüm uzmanı tutun.",
+        "q": "Ölçülen alan ölçüm standardında doğru mu?"
+      },
+      {
+        "a": "Hayır. Harita, ücretsiz ve açık bir topluluk haritası olan OpenStreetMap ile çalışır. Google Haritalar entegrasyonu yoktur ve Google ile bağlantısı yoktur.",
+        "q": "Bu Google Haritalar mı kullanıyor?"
+      },
+      {
+        "a": "Evet — “Bu Alanı Kullan” düğmesi ölçülen alanı Arazi Alanı Hesaplayıcısı'na gönderir; oradan Gübre Dozu Hesaplayıcısı ve Kâr Hesaplayıcısı'na akar. Tek başına alan asla gübre önerisi üretmez; doğrulanmış ürün ve bölge yine de gereklidir.",
+        "q": "Ölçülen alanı gübre hesabı için kullanabilir miyim?"
+      },
+      {
+        "a": "Hayır. Sınır noktaları ölçüm yaparken yalnızca tarayıcınızın belleğinde yaşar. Araçlar arasında yalnızca nihai alan sayısı aktarılır — koordinatlarınız asla herkese açık kaydedilmez, paylaşılabilir bağlantılara konulmaz veya sunucularımıza gönderilmez.",
+        "q": "Konumum veya tarla sınırım kaydediliyor ya da paylaşılıyor mu?"
+      }
+    ],
+    "howSteps": [
+      "Haritayı açın ve tarlanızı bulun — arama gerekmez; kaydırıp yakınlaştırın veya konumunuza ortalayın.",
+      "Tarla çevresine sınır noktaları koymak için haritaya dokunun. Ayarlamak için herhangi bir noktayı sürükleyin; kaldırmak için numaralı bir noktaya dokunun.",
+      "3 veya daha fazla noktada alan, jeodezik (dünya eğriliği düzeltmeli) matematikle hesaplanır — her enlemde aynı.",
+      "Alanı Arazi Alanı Hesaplayıcısı'nda, ardından Gübre Dozu veya Kâr Hesaplayıcısı'nda kullanın."
+    ]
   },
   "kitchenGarden": {
     "eyebrow": "Mutfak bahçe planlayıcısı",
@@ -1296,7 +1511,29 @@
     "openMyGarden": "Bahçemi Aç",
     "savedPlotName": "Mutfak bahçesi — {date}",
     "savedPlotNote": "{month}, {region} için {sqm} m² mutfak bahçesi planı; {count} ürün seçildi.",
-    "faqTitle": "Bahçecilikle ilgili SSS"
+    "faqTitle": "Bahçecilikle ilgili SSS",
+    "faq": [
+      {
+        "a": "Bölgenize ve aya bağlıdır. Yukarıya arsa bilgilerinizi girin; planlayıcı yalnızca seçiminiz için doğrulanmış ekim dönemleri olan sebzeleri ve otları listeler — her öneride kaynak adı yazılır.",
+        "q": "Bu ay küçük bir mutfak bahçesine ne ekebilirim?"
+      },
+      {
+        "a": "Henüz değil. Verilerimizde bu ürünler için sıra ve bitki aralıkları doğrulanmadı, bu yüzden planlayıcı rakam uydurmak yerine bunu dürüstçe söylüyor. Aralık için yerel tarım yayım danışmanlığınıza bakın.",
+        "q": "Planlayıcı bitkilerin aralıklarını söylüyor mu?"
+      },
+      {
+        "a": "Ekim takvimi, tarla ürünleri dahil bir bölge ve ay için her doğrulanmış dönemi gösterir. Bu planlayıcı, ev bahçesi için uygun sebzelere ve otlara daraltır, arsa boyutunuzu ve güneş ışığını ekler ve seçimleri My Garden'a kaydedebileceğiniz basit bir yerleşim planına dönüştürür.",
+        "q": "Bu, ekim takviminden nasıl farklı?"
+      },
+      {
+        "a": "Evet. Arazi Alanı Hesaplayıcısı'ndaki “Mutfak Bahçesi Planla” düğmesi ölçülen alanınızı doğrudan bu planlayıcıya gönderir.",
+        "q": "Arazi alanı ölçümümü burada kullanabilir miyim?"
+      },
+      {
+        "a": "Tarayıcınızdaki My Garden'da (yerel depolama), “Planı My Garden'a Kaydet” düğmesine bastığınızda — tıpkı Arazi Alanı Hesaplayıcısı'ndaki kayıtlı arsalar gibi. Cihazlar arasında senkronize etmek için giriş yapın.",
+        "q": "Planım nerede saklanır?"
+      }
+    ]
   },
   "suggestions": {
     "improveTranslation": "Bu çeviriyi iyileştir",

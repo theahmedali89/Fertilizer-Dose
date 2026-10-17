@@ -25,7 +25,17 @@
       "soil": "Rodzaj gleby (opcjonalnie)",
       "soilHint": "Rodzaj gleby nie zmienia obliczeń — zmienia zalecenia. Gleby piaszczyste szybciej tracą azot; gleby zasolone wymagają ostrożności przy MOP.",
       "submit": "Oblicz dawkę",
-      "unit": "Jednostka"
+      "unit": "Jednostka",
+      "underReviewBadge": "W trakcie weryfikacji",
+      "targetYield": "Plon docelowy (opcjonalnie)",
+      "targetYieldUnitHa": "t/ha",
+      "targetYieldUnitAcre": "t/akr",
+      "targetYieldPlaceholder": "np. 5",
+      "targetYieldHint": "Dostosowuje dawkę do Twojego celu plonu — maksymalnie do 2× dawki podstawowej.",
+      "targetYieldWarning": "To tylko szacunek. Rzeczywiste zapotrzebowanie na nawóz zależy od analizy gleby, odmiany i warunków polowych. Skalowanie powyżej 2× nie jest uzasadnione agronomicznie.",
+      "yieldError": "Podaj prawidłowy plon docelowy większy od zera.",
+      "rangeHint": "Zakres dawki",
+      "rangeBadge": "Zakres"
     },
     "method": {
       "desc": "Żadnej czarnej skrzynki. To ta sama metoda „najpierw DAP”, której uczą na kursach agronomii.",
@@ -51,7 +61,25 @@
       "splitTitle": "Harmonogram dawki dzielonej",
       "splitGenericBadge": "Harmonogram ogólny",
       "recommendedLine": "Zalecane {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
-      "soilCustom": "Wybrano „{soil}”. Na glebach {soilLower} rozważ badanie gleby przed zmianą dawki — powyższe obliczenie bazowe pozostaje bez zmian."
+      "soilCustom": "Wybrano „{soil}”. Na glebach {soilLower} rozważ badanie gleby przed zmianą dawki — powyższe obliczenie bazowe pozostaje bez zmian.",
+      "recommendedRangeLine": "Zalecany zakres dawki: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Wybierz wartość z zakresu na podstawie analizy gleby.",
+      "yieldAdjusted": "Dostosowano do plonu docelowego {yield} t/ha",
+      "rangeSaveNote": "Zapisywanie w My Garden jest dostępne dla dokładnych dawek. W przypadku zakresów zanotuj wybraną przez siebie wartość z zakresu.",
+      "tipsTitle": "Wskazówki stosowania",
+      "tipsSubtitle": "Jak stosować każdy nawóz, żeby nic się nie zmarnowało.",
+      "tipUreaTitle": "Urea — NIE zalewaj",
+      "tipUreaBody": "Rozsiej (chhatta) 1–2 dni po podlaniu na wilgotną glebę, aby wchłanianie było o 30–40% lepsze. Zalewanie marnuje 40–50% Urea przez wymywanie i denitryfikację.",
+      "tipDapTitle": "DAP — fertygacja, jeśli nie zastosowano przy siewie",
+      "tipDapBody": "Jeśli nie zastosowano przy siewie, rozpuść z rozpuszczalnikiem do DAP i zastosuj fertygację. Zacznij, gdy woda pokryje 25% pola, i przerwij 10 minut przed odcięciem wody.",
+      "tipPotashTitle": "Potas (SOP / MOP) — nadaje się do zalewania",
+      "tipPotashBody": "Zalewanie sprawdza się dobrze przy potasie. Najlepsze efekty: 50% przy siewie + 50% w fazie kwitnienia lub owocowania.",
+      "tipSspTitle": "SSP — stosuj przedsiewnie",
+      "tipSspBody": "Zastosuj przedsiewnie przy przygotowaniu pola i wymieszaj z glebą. SSP działa wolno, więc wczesne wmieszanie się opłaca.",
+      "tipGeneralTitle": "Protokół fertygacji",
+      "tipGeneralBody": "Otwórz zawór beczki dopiero po wpłynięciu 1–1,5 kanal wody na pole (nie na początku), aby zapewnić równomierne rozprowadzenie.",
+      "shareButton": "Udostępnij na WhatsApp",
+      "shareCopy": "Kopiuj",
+      "shareCopied": "Skopiowano!"
     },
     "title": "Dokładna dawka nawozu, z pokazanymi obliczeniami.",
     "soilTestCard": {
@@ -74,6 +102,14 @@
       {
         "q": "Dlaczego niektóre uprawy są wyłączone?",
         "a": "Uprawę można wybrać tylko wtedy, gdy jej zalecana dawka NPK jest zweryfikowana względem opublikowanego źródła. Wolimy wyłączyć uprawę, niż wymyślać jej dane — niezweryfikowane uprawy są oznaczone jako „dane w weryfikacji” do czasu potwierdzenia."
+      },
+      {
+        "q": "Jak przelicza się kanal i marla?",
+        "a": "1 acre = 8 kanal = 160 marla, a 1 kanal = 20 marla. W jednostkach metrycznych: 1 acre = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Kalkulator przelicza Twoją powierzchnię na hektary, stosuje dawkę na hektar, a następnie skaluje z powrotem."
+      },
+      {
+        "q": "Dlaczego niektóre uprawy są niedostępne?",
+        "a": "Uprawa jest dostępna do wyboru tylko wtedy, gdy jej zalecana dawka NPK została zweryfikowana względem opublikowanego źródła. Wolimy wyłączyć uprawę, niż wymyślać dane — niezweryfikowane uprawy są oznaczone jako „w trakcie weryfikacji” do czasu potwierdzenia."
       }
     ],
     "organic": {
@@ -98,7 +134,37 @@
       "dismiss": "Zamknij",
       "resultN": "Azot (N)",
       "resultP": "Fosforan (P₂O₅)",
-      "resultK": "Potas (K₂O)"
+      "resultK": "Potas (K₂O)",
+      "labTitle": "Twoja analiza laboratoryjna (opcjonalnie)",
+      "labDesc": "Jeśli Twój materiał został przebadany, zapisz tu dane laboratorium dla przejrzystości. Obliczenia wykorzystują wyłącznie procenty wpisane powyżej.",
+      "labNameLabel": "Laboratorium / źródło",
+      "labNamePlaceholder": "np. Rejonowe laboratorium glebowe, Lahore",
+      "labDateLabel": "Data analizy",
+      "moistureLabel": "Wilgotność %",
+      "moistureHint": "Jeśli podano — tylko informacyjnie, nie jest używana w obliczeniach.",
+      "topupTitle": "Pomniejszenie dawki nawozu mineralnego",
+      "topupDesc": "Wpisz zapotrzebowanie uprawy na składniki (kg N–P₂O₅–K₂O na hektar, np. z powyższego kalkulatora lub zaleceń doradztwa), aby zobaczyć, ile nawozu mineralnego jest jeszcze potrzebne po tym nawożeniu organicznym.",
+      "baseNLabel": "Zapotrzebowanie uprawy — N (kg/ha)",
+      "basePLabel": "Zapotrzebowanie uprawy — P₂O₅ (kg/ha)",
+      "baseKLabel": "Zapotrzebowanie uprawy — K₂O (kg/ha)",
+      "topupResultsTitle": "Pozostała dawka uzupełniająca nawozu mineralnego",
+      "topupN": "Azot (N)",
+      "topupP": "Fosfor (P₂O₅)",
+      "topupK": "Potas (K₂O)",
+      "topupNote": "To jest MAKSYMALNE pomniejszenie. Azot organiczny mineralizuje się wolno — tylko część (ok. 30% azotu z FYM, wg TNAU) jest dostępna dla pierwszej uprawy — więc w praktyce możesz potrzebować więcej azotu mineralnego, niż pokazano. Traktuj to jako wskazówkę do planowania, a nie receptę.",
+      "formulaOffsetLabel": "Wzór",
+      "formulaOffset": "dawka uzupełniająca = max(0, zapotrzebowanie uprawy − zastosowano organicznie)",
+      "enterBase": "Wpisz powyżej co najmniej jedną wartość zapotrzebowania uprawy, aby zobaczyć pozostałą dawkę uzupełniającą nawozu mineralnego.",
+      "analysisSummary": "Analiza N {n}% / P₂O₅ {p}% / K₂O {k}% → dostarcza N {nKg} / P₂O₅ {pKg} / K₂O {kKg} kg/ha.",
+      "noLabRecord": "Nie wprowadzono zapisu z laboratorium — wartości wpisane przez użytkownika, niezweryfikowane.",
+      "topupSummary": "Pozostała dawka uzupełniająca nawozu mineralnego: N {n} / P₂O₅ {p} / K₂O {k} kg/ha (maksymalne pomniejszenie; nie uwzględniono wolnego uwalniania).",
+      "saveDisclaimer": "Nawożenie organiczne wpisane przez użytkownika. Dane o składnikach to wyniki obliczeń na danych użytkownika, niezweryfikowane laboratoryjnie przez aplikację."
+    },
+    "plantDoseCard": {
+      "eyebrow": "Rośliny doniczkowe?",
+      "title": "Dawkowanie nawozu dla roślin domowych i pojemnikowych.",
+      "desc": "Rozpuszczaj nawóz wodny według ppm — gramów na litr i na doniczkę — z dawkami opartymi na zaleceniach doradztwa rolniczego dla roślin mało, średnio i bardzo wymagających.",
+      "cta": "Otwórz kalkulator dawki dla roślin →"
     }
   },
   "common": {
@@ -128,17 +194,50 @@
         "a": "Tak — kalkulator, biblioteki i przewodniki są bezpłatne. Konto jest potrzebne tylko do funkcji takich jak zapisywanie diagnoz.",
         "q": "Czy korzystanie z Fertilizer Dose jest bezpłatne?"
       },
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
+      {
+        "q": "Czy mogę mieszać Urea z DAP?",
+        "a": "Tak, Urea i DAP można stosować razem jako dawkę przedsiewną przy siewie. DAP dostarcza fosfor (46% P₂O₅) oraz 18% azotu, a Urea dodaje więcej azotu (46% N). Częstą praktyką jest ich wymieszanie przed rozsianiem. Unikaj jednak mieszania Urea z SSP (superfosfat pojedynczy) w jednym zabiegu, jeśli mieszanina miałaby postać — może się zbrylić. Zawsze najpierw sprawdź zalecany dla swojej uprawy stosunek NPK."
+      },
+      {
+        "q": "Czym jest dawka przedsiewna w nawożeniu?",
+        "a": "Dawka przedsiewna to nawóz zastosowany przy siewie/sadzeniu lub wcześniej, wmieszany w glebę. Zwykle obejmuje pełne zapotrzebowanie na fosfor i potas oraz część azotu (zwykle 1/3 do 1/2). Pozostały azot podaje się później pogłównie — np. Urea w fazie krzewienia pszenicy. Nawożenie przedsiewne zapewnia młodym korzeniom dostęp do składników od pierwszego dnia."
+      },
+      {
+        "q": "DAP czy SSP — który lepszy?",
+        "a": "To zależy od Twojej gleby i uprawy. DAP (18-46-0) ma wyższe stężenie fosforu (46% P₂O₅), więc potrzeba mniej produktu na akr — dobrze do transportu i obsługi. SSP (16% P₂O₅) dostarcza też siarki (~11%) i wapnia (~19%), dzięki czemu lepiej sprawdza się przy roślinach oleistych, strączkowych i na glebach ubogich w siarkę. DAP jest zwykle tańszy w przeliczeniu na kg fosforu, ale SSP dodaje składniki drugorzędne. Użyj naszego narzędzia Porównaj, aby sprawdzić, który jest tańszy za kg P₂O₅ przy Twoich lokalnych cenach."
+      },
+      {
+        "q": "Czym jest dawka nawozu oparta na analizie gleby?",
+        "a": "Analiza gleby mierzy istniejącą w Twojej glebie zawartość azotu, fosforu, potasu, pH i materii organicznej. Zamiast stosować ogólne zalecenie, dawkę nawozu się dostosowuje — jeśli gleba ma już dużo fosforu, stosujesz mniej nawozu P. To oszczędza pieniądze i zapobiega przenawożeniu. Zalecamy wykonywanie analizy gleby co 2–3 lata w lokalnej stacji chemiczno-rolniczej. Nasz kalkulator stosuje standardowe zalecenia; w celu uzyskania precyzyjnych dawek opartych na analizie gleby skonsultuj się z lokalnym laboratorium, traktując te standardowe dane jako punkt wyjścia."
+      },
+      {
+        "q": "Jak długo Urea utrzymuje się w glebie?",
+        "a": "Po zastosowaniu Urea przekształca się w przyswajalny dla roślin amon w ciągu około 2–4 dni dzięki naturalnym enzymom glebowym, a następnie w azotany w ciągu kolejnych 2–4 tygodni, zależnie od temperatury i wilgotności gleby. Praktycznie pojedyncze zastosowanie Urea odżywia uprawę przez około 4–6 tygodni, dlatego azot dzieli się zwykle na 2–3 dawki w sezonie. Straty w postaci gazowego amoniaku są największe na gorących, suchych, zasadowych glebach, gdy Urea leży na powierzchni — wmieszanie go w wilgotną glebę to ogranicza."
+      },
+      {
+        "q": "Jaka jest różnica między Urea a DAP?",
+        "a": "Urea (46-0-0) dostarcza wyłącznie azot w stężeniu 46% N — to najbardziej skoncentrowany dostępny nawóz azotowy. DAP (18-46-0) dostarcza 18% azotu oraz 46% fosforu (P₂O₅). W praktyce DAP stosuje się przedsiewnie przy siewie, gdy uprawa potrzebuje fosforu do rozwoju korzeni, a Urea do azotowego nawożenia pogłównego w czasie intensywnego wzrostu. Służą różnym głównym celom, dlatego rolnicy często stosują je razem, a nie zamiennie."
+      },
+      {
+        "q": "Jak dawkować nawóz dla roślin?",
+        "a": "Jeśli to możliwe, zacznij od analizy gleby — pokaże, co gleba już zawiera, więc dodasz tylko to, czego brakuje. Następnie użyj Kalkulatora dawki dla roślin w aplikacji Fertilizer Dose: wpisz rodzaj rośliny oraz rozmiar doniczki lub grządki, a otrzymasz dokładną liczbę gramów na roślinę. Zasadniczo stosuj małe porcje zamiast całości naraz, podlej po zastosowaniu granulatu i zawsze trzymaj się dawki z etykiety — więcej nawozu nie oznacza większego wzrostu i może poparzyć korzenie."
+      },
+      {
+        "q": "Ile NPK zawiera obornik (FYM)?",
+        "a": "Dobrze przefermentowany obornik zawiera zwykle około 0,5–1,0% azotu, 0,2–0,5% fosforu (P₂O₅) i 0,5–1,0% potasu (K₂O), ale wartości te znacznie się różnią w zależności od gatunku zwierząt, paszy, ściółki oraz sposobu przechowywania i kompostowania. Ponieważ zawartość składników jest niska i zmienna w porównaniu z nawozami mineralnymi, FYM najlepiej sprawdza się jako środek poprawiający glebę — dodaje materię organiczną, poprawia strukturę gleby i dostarcza mikroelementy — natomiast nawozy mineralne zapewniają precyzyjną dawkę NPK potrzebną uprawie."
+      },
+      {
+        "q": "Jaka pora dnia jest najlepsza na oprysk nawozem dolistnym?",
+        "a": "Wczesny ranek (przed około 9–10) lub późny wieczór to najlepsze pory na dokarmianie dolistne. Pory liściowe (aparaty szparkowe) są otwarte, temperatury niższe, a krople oprysku dłużej pozostają wilgotne, co poprawia pobieranie składników. Unikaj oprysków w upalne południe — krople schną zbyt szybko, by dobrze się wchłonąć, a skoncentrowany osad może poparzyć liście. Nie pryskaj też tuż przed spodziewanym deszczem, który zmyje nawóz."
+      },
+      {
+        "q": "Co oznacza NPK na worku z nawozem?",
+        "a": "Trzy liczby na worku z nawozem (np. 15-15-15) to procentowa zawartość wagowa azotu (N), fosforu (P₂O₅) i potasu (K₂O). Worek 50 kg nawozu 15-15-15 zawiera więc po 7,5 kg N, P₂O₅ i K₂O. Zwróć uwagę, że fosfor i potas podaje się w formie tlenkowej zgodnie z konwencją branżową, a nie jako pierwiastkowe P i K — kalkulatory Fertilizer Dose wykonują to przeliczenie za Ciebie."
+      },
+      {
+        "q": "Do czego służy siarczan amonu?",
+        "a": "Siarczan amonu (21-0-0 plus 24% siarki) dostarcza azot wraz z siarką, co przydaje się na glebach ubogich w siarkę — częste u wysokoplennych zbóż i roślin oleistych. Zakwasza glebę, więc dobrze sprawdza się na glebach obojętnych i zasadowych, ale ostrożnie na glebach już kwaśnych. To też dobry wybór, gdy chcesz azot bez dodawania fosforu i potasu."
+      },
       {
         "q": "Czy nawóz dolistny może zastąpić nawożenie doglebowe?",
         "a": "Nie — dokarmianie dolistne to uzupełnienie, a nie zamiennik. Liście szybko pobierają składniki pokarmowe, ale w małych ilościach, dlatego opryski dolistne idealnie nadają się do korygowania niedoborów mikroelementów (cynk, żelazo, bor) albo do szybkiego wsparcia roślin w krytycznych fazach wzrostu. Jednak większość NPK musi trafić przez glebę, bo rośliny potrzebują kilogramów składników na akr, a liście po prostu nie są w stanie pobrać takiej ilości. Stosuj dokarmianie dolistne razem z podstawowym nawożeniem doglebowym i nawożeniem pogłównym, a nie zamiast nich."
@@ -200,7 +299,9 @@
       "optional": "opcjonalnie",
       "nProxyNote": "Laboratoria glebowe rzadko podają klasę azotu, dlatego węgiel organiczny służy jako wskaźnik zdolności Twojej gleby do dostarczania azotu.",
       "submit": "Dostosuj dawkę",
-      "soilTestHint": "Z karty zdrowia gleby lub raportu laboratoryjnego. Zostaw puste każdą wartość, której nie masz — ten składnik zachowa swoją dawkę bazową."
+      "soilTestHint": "Z karty zdrowia gleby lub raportu laboratoryjnego. Zostaw puste każdą wartość, której nie masz — ten składnik zachowa swoją dawkę bazową.",
+      "underReviewBadge": "W trakcie weryfikacji",
+      "rangeHint": "Zakres dawki"
     },
     "results": {
       "title": "Dawka skorygowana analizą gleby",
@@ -235,7 +336,9 @@
       ],
       "sourceLabel": "Źródło danych:",
       "genericLabel": "Własna baza (tylko ogólne wskazówki — nie zweryfikowane zalecenie)",
-      "disclaimer": "Wszystkie dawki są szacunkowe. Potwierdź z lokalnym agronomem / doradcą rolniczym przed zastosowaniem nawozu."
+      "disclaimer": "Wszystkie dawki są szacunkowe. Potwierdź z lokalnym agronomem / doradcą rolniczym przed zastosowaniem nawozu.",
+      "baseRangeLine": "Podstawowy zakres dawki: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Dostosowany zakres dawki: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Metoda",
@@ -287,7 +390,13 @@
       "plantingCalendar": "Kalendarz siewu",
       "myGarden": "Mój ogród",
       "profitCalculator": "Kalkulator zysku",
-      "compare": "Porównaj"
+      "compare": "Porównaj",
+      "contributors": "Nasi Współtwórcy",
+      "improveTranslation": "Popraw to tłumaczenie",
+      "deficiencyChecker": "Sprawdzanie niedoborów",
+      "tankMixChecker": "Kontrola mieszanin zbiornikowych",
+      "costCalculator": "Kalkulator kosztów",
+      "alternativeFinder": "Wyszukiwarka zamienników"
     },
     "rights": "Wszelkie prawa zastrzeżone.",
     "tagline": "Dokładne dawki nawozów z prawdziwych danych agronomicznych — dla pszenicy, ryżu, kukurydzy i innych. Zbudowane dla rolników w 17 krajach.",
@@ -489,14 +598,35 @@
     "account": "Konto",
     "admin": "Admin",
     "logout": "Wyloguj się",
-    "deficiencyChecker": "Wykrywacz niedoborów"
+    "deficiencyChecker": "Wykrywacz niedoborów",
+    "country": "Kraj",
+    "plantDoseCalculator": "Kalkulator dawki dla roślin",
+    "landAreaCalculator": "Kalkulator powierzchni gruntu",
+    "kitchenGarden": "Planer ogrodu warzywnego",
+    "mapAreaCalculator": "Kalkulator powierzchni na mapie",
+    "tankMixChecker": "Kontrola mieszanin zbiornikowych",
+    "costCalculator": "Kalkulator kosztów",
+    "alternativeFinder": "Wyszukiwarka zamienników"
   },
   "plantDoctor": {
     "desc": "Prześlij wyraźne zdjęcie, opisz objawy i otrzymaj uporządkowaną ocenę — możliwe problemy z uczciwym poziomem pewności, prawdopodobne przyczyny i co dalej.",
     "eyebrow": "Plant Doctor",
     "title": "Pokaż nam liść. Pomożemy go odczytać.",
     "metaTitle": "Plant Doctor — diagnoza problemów upraw ze SI",
-    "metaDescription": "Prześlij zdjęcie uprawy i opisz objawy, aby otrzymać diagnozę wspomaganą SI z przyczynami, działaniami i zapobieganiem."
+    "metaDescription": "Prześlij zdjęcie uprawy i opisz objawy, aby otrzymać diagnozę wspomaganą SI z przyczynami, działaniami i zapobieganiem.",
+    "form": {
+      "photoLabel": "Zdjęcie rośliny",
+      "photoHint": "Kliknij lub upuść tu zdjęcie",
+      "photoTypes": "JPG, PNG lub WebP, maks. 5 MB",
+      "cropLabel": "Uprawa (jeśli znana)",
+      "cropPlaceholder": "Nie wiem / inna",
+      "symptomsLabel": "Opisz objawy",
+      "symptomsHint": "Co widzisz? Żółte plamy, więdnięcie, dziury w liściach, kiedy się zaczęło, która część rośliny…",
+      "symptomsPlaceholder": "np. Żółte plamy z brązowymi brzegami na dolnych liściach pszenicy, zaczęły się około tygodnia temu po deszczu…",
+      "submit": "Zdiagnozuj moją roślinę",
+      "analyzing": "Analizowanie…",
+      "diagnosisTitle": "Diagnoza"
+    }
   },
   "growing": {
     "searchPlaceholder": "Szukaj po nazwie…",
@@ -553,7 +683,16 @@
       "Kharif": "Kharif",
       "Rabi": "Rabi",
       "Year-round (12–14 month crop)": "Cały rok (uprawa 12–14-miesięczna)"
-    }
+    },
+    "plantDoseCard": {
+      "title": "Ile nawozu potrzebuje roślina doniczkowa?",
+      "desc": "Rozpuszczaj nawóz wodny według ppm — gramów na litr i na doniczkę — z dawkami opartymi na zaleceniach doradztwa rolniczego.",
+      "cta": "Otwórz kalkulator dawki dla roślin →"
+    },
+    "organicOptions": "Opcje nawozów organicznych",
+    "organicOptionsBody": "Dobrze przefermentowany obornik, kompost lub wermikompost można stosować jako przedsiewny środek poprawiający glebę dla {name} — budują strukturę gleby i powoli uwalniają składniki w sezonie. Ponieważ zawartość składników organicznych różni się w zależności od źródła, uzupełnij precyzyjne zapotrzebowanie na składniki nawozem mineralnym obliczonym dla Twojej uprawy i regionu.",
+    "organicOptionsNote": "Nie istnieje zweryfikowana dawka organiczna dla tej konkretnej uprawy — powyższe wskazówki to ogólna praktyka, a nie zmierzone zalecenie. Zleć badanie laboratoryjne swojego materiału, aby precyzyjnie planować.",
+    "organicOptionsCta": "Poznaj nawozy organiczne"
   },
   "calendar": {
     "metaTitle": "Kalendarz siewu — co siać w tym miesiącu",
@@ -604,7 +743,13 @@
     "viewGuide": "Zobacz przewodnik uprawy",
     "emptyRegionTitle": "Brak zweryfikowanych informacji o sadzeniu dla tego regionu.",
     "plantingWindow": "Okno siewu",
-    "appliesTo": "Dotyczy"
+    "appliesTo": "Dotyczy",
+    "visualTitle": "12-miesięczny przegląd siewów",
+    "visualHint": "Wybierz miesiąc, aby zobaczyć terminy siewu, sadzenia rozsady i zbiorów.",
+    "legendTitle": "Legenda",
+    "noData": "Brak danych",
+    "monthCellLabel": "{month}, {count} terminów siewu",
+    "windowsCount": "{count} terminów siewu"
   },
   "garden": {
     "metaTitle": "Mój ogród — działki, nasadzenia i plany nawożenia",
@@ -674,7 +819,8 @@
     "backToGarden": "Wróć do Mojego ogrodu",
     "saveCalculation": "Zapisz w Moim ogrodzie",
     "savedToGarden": "Zapisano w Moim ogrodzie",
-    "viewGarden": "Zobacz Mój ogród"
+    "viewGarden": "Zobacz Mój ogród",
+    "organicApplicationLabel": "Zastosowanie obornika organicznego"
   },
   "tools": {
     "profit": {
@@ -756,7 +902,20 @@
       "noDoseData": "Dawka w weryfikacji — niezgadywana",
       "viewGuide": "Otwórz przewodnik uprawy",
       "priceDisclaimerTitle": "Zastrzeżenie cenowe",
-      "priceDisclaimer": "Ceny nawozów często się zmieniają i różnią w zależności od regionu, sprzedawcy i wielkości worka. Nie publikujemy ani nie weryfikujemy cen rynkowych — każda cena na tej stronie jest wpisana przez Ciebie. Przed zakupem zawsze potwierdź aktualne ceny u lokalnego sprzedawcy."
+      "priceDisclaimer": "Ceny nawozów często się zmieniają i różnią w zależności od regionu, sprzedawcy i wielkości worka. Nie publikujemy ani nie weryfikujemy cen rynkowych — każda cena na tej stronie jest wpisana przez Ciebie. Przed zakupem zawsze potwierdź aktualne ceny u lokalnego sprzedawcy.",
+      "tabOrganic": "Organiczne vs mineralne",
+      "organicIntro": "Porównaj materiał organiczny z nawozem mineralnym pod względem kosztu za kilogram azotu — przy użyciu własnych lokalnych cen. Zawartość składników organicznych to zawsze typowy zakres, nigdy stała wartość z etykiety.",
+      "organicMaterial": "Materiał organiczny",
+      "mineralFertilizer": "Nawóz mineralny",
+      "typicalRange": "Typowy zakres N: {nMin}–{nMax}%",
+      "fixedLabel": "stała wartość z etykiety",
+      "pricePerUnit": "Cena",
+      "unitSize": "Wielkość opakowania ({unit})",
+      "costPerKgN": "Koszt za kg azotu",
+      "perKgNFixed": "{kg} kg dostarcza 1 kg N — dokładnie, z etykiety worka.",
+      "perKgNRange": "{lo}–{hi} kg dostarcza 1 kg N — typowy zakres, Twoja pryzma będzie się różnić.",
+      "organicHonesty": "Uczciwe zasady porównania: azot organiczny uwalnia się wolno — tylko część (około jednej trzeciej w przypadku obornika) odżywia pierwszą uprawę, reszta późniejsze sezony. Nawozy organiczne budują też strukturę gleby, czego nawóz z worka nie potrafi. Cena za kg N to tylko jedna strona decyzji; zleć analizę laboratoryjną swojego materiału, aby precyzyjnie planować.",
+      "viewOrganicHub": "Centrum nawozów organicznych"
     }
   },
   "blog": {
@@ -858,6 +1017,20 @@
       "warnBody": "Organiczna sekcja kalkulatora wykonuje czystą arytmetykę na liczbach, które wpisujesz TY (Twój raport laboratoryjny lub etykieta dostawcy). Nie zna rzeczywistej analizy Twojej partii i nie uwzględnia powolnego uwalniania — traktuj wynik jako górną granicę zastosowanych składników, nie składników dostępnych dla uprawy w tym sezonie. Dla precyzyjnego dawkowania zleć analizę laboratoryjną swojego materiału.",
       "exploreCta": "Otwórz organiczną sekcję kalkulatora",
       "detailCta": "Zobacz szczegóły"
+    },
+    "searchPlaceholder": "Szukaj nawozów…",
+    "searchNoResults": "Żaden nawóz nie pasuje do wyszukiwania.",
+    "taglines": {
+      "urea": "Najbardziej skoncentrowany powszechnie stosowany nawóz azotowy.",
+      "dap": "Standardowe przedsiewne źródło fosforu — z bonusem azotowym.",
+      "mop": "Ekonomiczne źródło potasu dla większości upraw polowych.",
+      "ssp": "Fosfor plus siarka i wapń w jednej granuli.",
+      "sop": "Potas bezchlorkowy dla wrażliwych, wysokowartościowych upraw.",
+      "ammonium-sulphate": "Azot plus siarka, z zakwaszającym działaniem na glebę.",
+      "farmyard-manure": "Tradycyjny obornik w dużej objętości — mało składników, duża wartość poprawiająca glebę.",
+      "compost": "Przekompostowane odpady rolne i domowe — zmienne żywienie zależne od surowca.",
+      "vermicompost": "Obornik przetworzony przez dżdżownice — bogatszy niż FYM, ale o wszystkim decyduje surowiec.",
+      "green-manure": "Żywa fabryka azotu — uprawiana, a potem przyorana przed uprawą główną."
     }
   },
   "chart": {
@@ -888,5 +1061,584 @@
     "selectCountry": "Kraj",
     "selectRegion": "Region / województwo",
     "selectedCountry": "Wybrany kraj"
+  },
+  "plantDose": {
+    "eyebrow": "Narzędzie dla ogrodników",
+    "title": "Jak dawkować nawóz dla roślin",
+    "desc": "Darmowy kalkulator do dawkowania roślin w doniczkach i ogrodach: rozpuść odpowiednią ilość nawozu wodnego na litr wody, w oparciu o dawki zalecane przez uniwersyteckie doradztwo rolnicze.",
+    "faqTitle": "Dawkowanie nawozu dla roślin — FAQ",
+    "metaTitle": "Jak dawkować nawóz dla roślin — Kalkulator dawki dla roślin",
+    "metaDescription": "Dowiedz się, jak dawkować nawóz dla roślin dzięki naszemu darmowemu kalkulatorowi. Otrzymaj właściwą dawkę nawozu dla roślin doniczkowych w gramach na litr — dawki oparte na zaleceniach doradztwa rolniczego dla roślin domowych i pojemnikowych.",
+    "form": {
+      "grade": "Skład nawozu (N-P-K)",
+      "gradeHint": "Trzy liczby wydrukowane na worku, np. 20-20-20.",
+      "custom": "Własny skład…",
+      "nitrogen": "N %",
+      "phosphorus": "P₂O₅ %",
+      "potash": "K₂O %",
+      "strength": "Siła nawożenia",
+      "strengthHint": "Docelowe stężenie azotu w roztworze do podlewania. Ustawienia wstępne korzystają z ostrożnego końca opublikowanych zakresów doradztwa.",
+      "customPpm": "Własne ppm…",
+      "targetPpm": "Docelowy azot (ppm)",
+      "targetPpmHint": "Miligramy azotu na litr wody. Większość roślin domowych dobrze rośnie przy 100–150 ppm; nigdy nie przekraczaj 300 ppm bez konkretnego zalecenia.",
+      "presetSource": "Źródło: {source}",
+      "litres": "Woda do przygotowania (litry)",
+      "litresHint": "Pojemność Twojej konewki lub zbiornika.",
+      "potSize": "Rozmiar doniczki (do dawki na doniczkę)",
+      "potSizeHint": "Przybliżona objętość podłoża standardowej doniczki szkółkarskiej.",
+      "potOption": "doniczka {cm} cm",
+      "customGradeLabel": "{n}-{p}-{k}",
+      "submit": "Oblicz dawkę dla roślin",
+      "mode": "Dawka dla",
+      "modeCan": "Konewka / doniczki",
+      "modeCanHint": "Rozpuść nawóz w wodzie: gramy na litr, łącznie dla Twojej konewki i dawka na doniczkę.",
+      "modeBed": "Grządka",
+      "modeBedHint": "Dawka dla grządki według powierzchni: objętość grządki to Twoja powierzchnia × głębokość strefy korzeniowej.",
+      "productForm": "Forma produktu",
+      "solid": "Stały (proszek / granulat)",
+      "liquid": "Koncentrat płynny",
+      "density": "Gęstość (g/ml)",
+      "densityHint": "Z etykiety produktu — np. 1,2. Nigdy nie zakładana: gęstości płynów bardzo się różnią.",
+      "nutrient": "Docelowy składnik",
+      "nutrientHint": "Ustawienia wstępne nawożenia są publikowane dla azotu. Dla fosforu lub potasu wpisz własną wartość docelową.",
+      "nutrientN": "Azot (N)",
+      "nutrientP": "Fosfor (P₂O₅)",
+      "nutrientK": "Potas (K₂O)",
+      "targetPpmPK": "Docelowy poziom: {nutrient} (ppm)",
+      "pkCustomNote": "Brak ustawień wstępnych doradztwa dla fosforu/potasu w skali ogrodu domowego — wpisz własne stężenie docelowe. Obliczenia ppm są takie same.",
+      "bedArea": "Powierzchnia grządki",
+      "bedAreaHint": "Długość × szerokość grządki.",
+      "areaM2": "m²",
+      "areaFt2": "ft²",
+      "bedDepth": "Głębokość strefy korzeniowej (cm)",
+      "bedDepthHint": "Przyjęta głębokość, w którą wmiesza się dawka — 15–20 cm to typowa wartość dla grządek warzywnych. Dostosuj do swojej grządki.",
+      "frequency": "Częstotliwość nawożenia",
+      "interval1": "Co tydzień",
+      "interval2": "Co 2 tygodnie",
+      "interval4": "Co 4 tygodnie",
+      "startDate": "Pierwsze nawożenie",
+      "scheduleTitle": "Propozycja: Nawożenie roślin ({ppm} ppm {nutrient})",
+      "addToGarden": "Dodaj harmonogram do My Garden",
+      "addedToGarden": "Dodano — zobacz My Garden → Przypomnienia.",
+      "gardenHint": "Przypomnienia to ogólne sugestie terminów, nie zalecenia. Pomiń nawożenie, jeśli rośliny wyglądają na osłabione."
+    },
+    "presets": {
+      "gentle": {
+        "label": "Łagodne — {ppm} ppm N (rośliny domowe, wolno rosnące)"
+      },
+      "regular": {
+        "label": "Standardowe — {ppm} ppm N (większość roślin pojemnikowych)"
+      },
+      "heavy": {
+        "label": "Intensywne — {ppm} ppm N (silnie rosnące, bardzo wymagające)"
+      }
+    },
+    "results": {
+      "title": "Twoja dawka dla roślin",
+      "guidanceBadge": "Ogólne wskazówki",
+      "perLitre": "Rozpuść na litr",
+      "total": "Łącznie na {litres} l",
+      "totalHint": "Mieszaj do całkowitego rozpuszczenia; zużyj w ciągu doby.",
+      "perPot": "Na doniczkę {cm} cm",
+      "perPotHint": "Wartość przybliżona — objętości doniczek różnią się w zależności od producenta.",
+      "kitchenApprox": "{tsp} — tylko wskazówka, nie miara; dla dokładności zważ.",
+      "quarterTsp": "Około ¼ łyżeczki na litr",
+      "oneTsp": "Około 1 łyżeczka na litr",
+      "manyTsp": "Około {n} łyżeczki na litr",
+      "burnTitle": "Unikaj poparzenia nawozem",
+      "burnBody": "Więcej nie znaczy lepiej: nadmiar soli poparza korzenie i brzegi liści. Zacznij od łagodnej dawki dla nowych lub osłabionych roślin, najpierw podlej doniczkę, jeśli podłoże jest zupełnie suche, i zawsze pozwól nadmiarowi roztworu swobodnie odpłynąć. Jeśli etykieta produktu podaje inną dawkę, trzymaj się etykiety.",
+      "formulaNote": "Obliczenia: {grade} przy {ppm} ppm {nutrient} → gramów na litr = {ppm} ÷ (%{nutrient} × 10).",
+      "invalid": "Sprawdź wpisane dane: % składnika musi wynosić 1–60, cel 1–1000 ppm, woda/powierzchnia/głębokość powyżej 0, a gęstość powyżej 0 dla płynów.",
+      "perLitreMl": "Mililitry na litr",
+      "mlPerL": "ml/l",
+      "bedVolume": "Objętość wody w grządce",
+      "bedVolumeHint": "{area} {unit} × {depth} cm strefy korzeniowej.",
+      "perBed": "Łącznie na grządkę",
+      "perBedHint": "Wmieszaj w wodę do nawadniania rozprowadzaną równomiernie po grządce.",
+      "scheduleTitle": "Harmonogram nawożenia (kolejne 6)",
+      "scheduleHint": "Na podstawie wybranej częstotliwości. To pomoce do planowania — dostosuj do reakcji roślin.",
+      "formulaNoteLiquid": "Obliczenia: {grade} przy {ppm} ppm {nutrient} → gramów na litr = {ppm} ÷ (%{nutrient} × 10), następnie ÷ gęstość {density} g/ml = ml na litr.",
+      "formulaNoteBed": "Objętość grządki = powierzchnia × {depth} cm głębokości."
+    },
+    "method": {
+      "eyebrow": "Jak to działa",
+      "title": "Dawkowanie według ppm, tak jak robią to plantatorzy",
+      "desc": "Komercyjni plantatorzy nie zgadują łyżeczkami — mieszają nawóz do docelowego stężenia składnika w częściach na milion (ppm). Ten kalkulator przenosi tę samą metodę do ogrodników domowych.",
+      "steps": [
+        {
+          "t": "Wybierz skład swojego nawozu",
+          "d": "Odczytaj liczby N-P-K z worka, np. 20-20-20, lub wpisz własny skład."
+        },
+        {
+          "t": "Wybierz siłę nawożenia",
+          "d": "Rośliny domowe i wolno rosnące dobrze rosną przy łagodnych dawkach (~100 ppm N); większość roślin pojemnikowych przy standardowych (~150 ppm N); silnie rosnące, bardzo wymagające zniosą ~200 ppm N."
+        },
+        {
+          "t": "Wymieszaj i podlewaj normalnie",
+          "d": "Rozpuść obliczone gramy w konewce i podlewaj jak zwykle, pozwalając nadmiarowi odpłynąć. Nawoź przy każdym podlewaniu w tych dawkach albo dwa razy rzadziej w podwójnej sile — nigdy jedno i drugie."
+        }
+      ]
+    },
+    "sources": {
+      "eyebrow": "Źródła",
+      "title": "Skąd pochodzą dawki nawożenia",
+      "items": [
+        "UMass Extension — „Fertilizing Bedding Plant Seedlings” (D. Cox, 2011): rośliny rabatowe 200–250 ppm N w stałym nawożeniu; typy wolno rosnące 100–150 ppm N do czasu przyjęcia.",
+        "Michigan State University Extension (E2186): rośliny uprawiane w pojemnikach — nawóz o wolnym działaniu plus uzupełniające nawożenie płynne 150–200 ppm N.",
+        "Virginia Tech SPES-744 — „The Basics of Fertilizer Calculations for Greenhouse Crops”: wzór g/l = ppm ÷ (%N × 10) i rozwiązany przykład 200 ppm N."
+      ],
+      "note": "Ustawienia wstępne korzystają z dolnego końca każdego opublikowanego zakresu — ostrożny wybór przy domowym oświetleniu. Zawsze trzymaj się etykiety produktu i zaleceń lokalnego doradztwa rolniczego."
+    },
+    "faq": [
+      {
+        "q": "Ile nawozu potrzebują rośliny doniczkowe?",
+        "a": "Większość roślin doniczkowych dobrze rośnie przy roztworze do podlewania 100–150 ppm azotu — około 0,5–1 g nawozu 20-20-20 na litr wody. Bardzo wymagające, jak silnie rosnące jednoroczne kwitnące, zniosą do 200 ppm. Zacznij łagodnie; następnym razem zawsze możesz zwiększyć."
+      },
+      {
+        "q": "Czy mogę po prostu użyć łyżeczki zamiast ważyć?",
+        "a": "Płaska łyżeczka nawozu granulowanego to około 5–6 g, ale gęstość różni się w zależności od produktu, więc łyżeczki to tylko przybliżona wskazówka. Dla małych doniczek i siewek tania waga gramowa jest znacznie bardziej wiarygodna — 50% błąd łyżeczki jest łatwy i wystarczy, by poparzyć korzenie."
+      },
+      {
+        "q": "Czy nawozić przy każdym podlewaniu?",
+        "a": "Przy powyższych łagodnych i standardowych dawkach tak — tak robią komercyjni plantatorzy („fertygacja”). Alternatywą jest nawożenie dwa razy rzadziej w podwójnej sile. Nie rób jednego i drugiego: wybierz jeden harmonogram i obserwuj rośliny."
+      },
+      {
+        "q": "Jakie są oznaki nadmiaru nawozu?",
+        "a": "Brązowe, kruche brzegi liści, więdnięcie mimo wilgotnej gleby oraz biały nalot na powierzchni podłoża. Jeśli to zauważysz, przepłucz doniczkę czystą wodą, aż zacznie swobodnie wypływać przez otwory drenażowe, i pomiń kolejne nawożenie."
+      }
+    ]
+  },
+  "landArea": {
+    "eyebrow": "Darmowe narzędzie rolnicze",
+    "title": "Kalkulator powierzchni gruntów rolnych",
+    "desc": "Mierz grunty rolne, działki i pola — a następnie przeliczaj między akrami, hektarami, stopami kwadratowymi i zweryfikowanymi jednostkami regionalnymi. Użyj wyniku bezpośrednio w kalkulatorze dawki nawozu.",
+    "metaTitle": "Kalkulator powierzchni gruntów — grunty rolne i pomiar pól",
+    "metaDescription": "Darmowy kalkulator powierzchni gruntów rolnych i działek. Oblicz powierzchnię z wymiarów, 4 boków lub nieregularnych kształtów; przeliczaj akry, hektary, stopy kwadratowe, kanal i marla.",
+    "country": "Kraj",
+    "region": "Województwo / Region",
+    "modeLabel": "Tryb obliczeń",
+    "modes": {
+      "rect": "Długość × Szerokość",
+      "fourSides": "4 boki",
+      "irregular": "Nieregularny",
+      "converter": "Konwerter"
+    },
+    "length": "Długość",
+    "width": "Szerokość",
+    "side": "Bok {n}",
+    "sideUnit": "Jednostka dla wszystkich boków",
+    "diagonalOptional": "Przekątna (opcjonalnie, dla dokładnego wyniku)",
+    "diagonalPlaceholder": "Zostaw puste dla szacunku",
+    "fourSideExplainer": "Wpisz cztery boki w kolejności wokół działki. Dla nieregularnej działki czterobocznej same długości boków nie dają dokładnej powierzchni — dodaj pomiar przekątnej, aby uzyskać dokładny wynik.",
+    "noDiagonalWarning": "Nie wpisano przekątnej: poniższy wynik będzie wyraźnie oznaczonym przybliżeniem, a nie dokładną powierzchnią.",
+    "sectionName": "Nazwa sekcji",
+    "shape": "Kształt",
+    "dimensions": "Wymiary",
+    "unit": "Jednostka",
+    "dimPlaceholder": "Wartość {n}",
+    "shapes": {
+      "rectangle": "Prostokąt",
+      "square": "Kwadrat",
+      "triangle": "Trójkąt",
+      "trapezoid": "Trapez"
+    },
+    "shapeHint": {
+      "rectangle": "Dwie wartości: długość, szerokość.",
+      "square": "Jedna wartość: długość boku.",
+      "triangle": "Dwie wartości: podstawa, wysokość.",
+      "trapezoid": "Trzy wartości: dwa równoległe boki, potem wysokość."
+    },
+    "addSection": "Dodaj sekcję",
+    "remove": "Usuń",
+    "value": "Wartość",
+    "fromUnit": "Z jednostki",
+    "calculate": "Oblicz powierzchnię",
+    "totalArea": "Całkowita powierzchnia gruntu",
+    "approximate": "Przybliżona",
+    "approxWarning": "Tylko przybliżenie: same długości czterech boków nie wystarczą do wyznaczenia dokładnej powierzchni nieregularnej działki. Ten szacunek zakłada, że działka jest zbliżona do prostokąta. Dla dokładnego wyniku zmierz też przekątną.",
+    "equivalents": "Odpowiednik w innych jednostkach",
+    "howCalculated": "Jak to obliczono",
+    "precisionNote": "Wyniki są zaokrąglane do sensownych miejsc po przecinku. Pomiary taśmą nie dają dokładności geodezyjnej — w sprawach granic prawnych skonsultuj się z uprawnionym geodetą lub urzędową ewidencją gruntów.",
+    "nextActions": "Użyj tej powierzchni",
+    "useInFertilizer": "Użyj w Kalkulatorze nawozu",
+    "estimateProfit": "Oszacuj zysk z tego gruntu",
+    "savePlot": "Zapisz tę działkę",
+    "planKitchenGarden": "Zaplanuj ogród warzywny",
+    "plotSaved": "Działka zapisana w My Garden.",
+    "openMyGarden": "Otwórz My Garden",
+    "noFertilizerNote": "Sama powierzchnia gruntu nigdy nie wyznacza dawki nawozu — Kalkulator nawozu nadal potrzebuje Twojej uprawy i zweryfikowanego zalecenia.",
+    "savedPlotName": "Zmierzona działka ({date})",
+    "savedPlotNote": "Zmierzono Kalkulatorem powierzchni gruntu ({sqm}).",
+    "noRegionalUnits": "Zweryfikowane regionalne jednostki powierzchni nie są obecnie dostępne dla tego kraju — pokazano jednostki uniwersalne. Nigdy nie wymyślamy lokalnych przeliczeń.",
+    "pkUnitNote": "Kanal i Marla stosują standard skarbowy Pendżabu (1 kanal = 20 marla = 5 445 stóp kw.). Niektóre osiedla mieszkaniowe stosują marla 250 lub 225 stóp kw. — przy transakcjach sprawdź lokalne dokumenty.",
+    "method": {
+      "quadDiag": "Czworokąt z boków {a}, {b}, {c}, {d} z przekątną {diag} ({unit}): podzielony na dwa trójkąty, każdy rozwiązany dokładnie wzorem Herona, a następnie zsumowane.",
+      "quadApprox": "Czworokąt z boków {a}, {b}, {c}, {d} ({unit}): ((a+c)/2) × ((b+d)/2) — przybliżenie, zakłada działkę zbliżoną do prostokąta."
+    },
+    "errors": {
+      "enterDimensions": "Wpisz zarówno długość, jak i szerokość.",
+      "enterSides": "Wpisz długości wszystkich czterech boków.",
+      "enterValue": "Wpisz wartość do przeliczenia.",
+      "invalid": "Te pomiary nie mogą utworzyć prawidłowego kształtu. Sprawdź swoje liczby."
+    },
+    "guide": {
+      "eyebrow": "Jak to działa",
+      "title": "Mierz grunt uczciwie",
+      "formulasTitle": "Wzory na powierzchnię gruntu",
+      "formulas": [
+        {
+          "name": "Prostokąt",
+          "formula": "Powierzchnia = długość × szerokość",
+          "example": "100 m × 50 m = 5 000 m²"
+        },
+        {
+          "name": "Kwadrat",
+          "formula": "Powierzchnia = bok²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Trójkąt",
+          "formula": "Powierzchnia = ½ × podstawa × wysokość",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapez",
+          "formula": "Powierzchnia = ((bok A + bok B) / 2) × wysokość",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1 500 m²"
+        },
+        {
+          "name": "Cztery boki + przekątna",
+          "formula": "Podziel wzdłuż przekątnej na dwa trójkąty; każdy rozwiąż wzorem Herona i dodaj",
+          "example": "Dokładnie — bez przybliżenia"
+        }
+      ],
+      "sqftTitle": "Jak obliczyć powierzchnię gruntu w stopach kwadratowych",
+      "sqftBody": "Jeśli wymiary są w stopach, pomnóż: powierzchnia w stopach kwadratowych = długość w stopach × szerokość w stopach. Przykład: 100 ft × 50 ft = 5 000 stóp kw. Podziel przez 43 560, aby uzyskać akry, lub przez 9, aby uzyskać jardy kwadratowe. Dla nieregularnych działek podziel grunt na prostokąty i trójkąty, oblicz każdy i dodaj — albo zmierz przekątną i użyj powyższego trybu 4 boków.",
+      "fourSideTitle": "Dlaczego same cztery boki nie wystarczą",
+      "fourSideBody": "Czworokąt może się odkształcać: te same cztery długości boków mogą obejmować różne powierzchnie w zależności od kątów. Dlatego żaden uczciwy kalkulator nie poda „dokładnej” powierzchni z samych boków. Zmierz jedną przekątną (od rogu do przeciwległego rogu), a działka stanie się dwoma trójkątami — każdy z dokładną powierzchnią. Bez przekątnej możliwe jest tylko oznaczone przybliżenie.",
+      "irregularTitle": "Jak mierzyć nieregularny grunt",
+      "irregularBody": "Przejdź pole i podziel je na proste kształty — prostokąty, trójkąty, trapezy. Zmierz każdy, oblicz osobno i dodaj powierzchnie. Powyższy tryb Nieregularny robi dokładnie to: dodaj sekcję dla każdej części pola, a on je zsumuje.",
+      "conversionTitle": "Tabela przeliczeń powierzchni gruntów",
+      "conversionNote": "Dokładne definicje. Jednostki regionalne pojawiają się tylko tam, gdzie są zweryfikowane.",
+      "sourcesTitle": "Źródła i metodologia",
+      "sourcesBody": "Jednostki uniwersalne stosują dokładne definicje SI i imperialne (1 acre = 4 046,8564224 m²; 1 hektar = 10 000 m²). Kanal i Marla stosują standard skarbowy Pendżabu: 1 karam = 5,5 ft, 1 marla = 9 karam kw. = 272,25 stóp kw., 1 kanal = 20 marla = 5 445 stóp kw. Wszystkie obliczenia wewnętrznie prowadzone są w metrach kwadratowych i przeliczane raz na jednostkę wyświetlaną — bez łańcuchowego zaokrąglania."
+    },
+    "faq": [
+      {
+        "q": "Jak obliczyć powierzchnię gruntu?",
+        "a": "Zmierz długość i szerokość w tej samej jednostce i pomnóż: powierzchnia = długość × szerokość. Dla nietypowych kształtów podziel grunt na prostokąty i trójkąty, oblicz każdy i dodaj."
+      },
+      {
+        "q": "Jak obliczyć powierzchnię gruntu rolnego?",
+        "a": "Użyj tej samej geometrii, a następnie przelicz na jednostkę używaną w Twoim regionie — akry, hektary lub lokalne jednostki jak kanal i marla w Pakistanie. Ten kalkulator powierzchni gruntów rolnych przelicza automatycznie i może wysłać wynik prosto do Kalkulatora dawki nawozu (Fertilizer Dose Calculator)."
+      },
+      {
+        "q": "Ile akrów ma ta działka?",
+        "a": "Wpisz powyżej długość i szerokość działki i odczytaj liczbę akrów z wyników — bez ręcznych obliczeń. Jeśli mierzyłeś w stopach, kalkulator automatycznie przeliczy stopy kwadratowe na akry (43 560 stóp kw. = 1 acre)."
+      },
+      {
+        "q": "Jak obliczyć powierzchnię gruntu w stopach kwadratowych?",
+        "a": "Pomnóż długość w stopach przez szerokość w stopach: 100 ft × 50 ft = 5 000 stóp kw. Jeden acre to 43 560 stóp kw."
+      },
+      {
+        "q": "Czy cztery długości boków pozwalają dokładnie obliczyć nieregularną działkę?",
+        "a": "Nie. Same cztery boki nie wyznaczają powierzchni czworokąta — kształt może się odkształcać. Zmierz też przekątną, a działka podzieli się na dwa dokładnie rozwiązywalne trójkąty. Bez niej możliwe jest tylko oznaczone przybliżenie."
+      },
+      {
+        "q": "Jak przeliczyć akry na hektary?",
+        "a": "Pomnóż akry przez 0,404686. Jeden hektar to 2,471 akra. Użyj powyższego trybu Konwerter dla dowolnej pary jednostek."
+      },
+      {
+        "q": "Jaka jest różnica między akrem a hektarem?",
+        "a": "Hektar (10 000 m²) jest około 2,47 raza większy niż acre (4 047 m²). Hektary są standardem w większości krajów; akry są powszechne w Pakistanie, Indiach, Bangladeszu i USA."
+      },
+      {
+        "q": "Czy mogę obliczyć powierzchnię nieregularnego pola?",
+        "a": "Tak — użyj trybu Nieregularny: podziel pole na prostokąty, kwadraty, trójkąty lub trapezy, wpisz każdą sekcję, a kalkulator je zsumuje."
+      },
+      {
+        "q": "Dlaczego niektóre tradycyjne jednostki powierzchni różnią się w zależności od regionu?",
+        "a": "Jednostki takie jak bigha, marla i kanal wyrosły z lokalnych systemów skarbowych, więc ich wielkość różni się w zależności od prowincji i konwencji. Oferujemy jednostkę regionalną tylko tam, gdzie jej przeliczenie jest zweryfikowane — np. standard skarbowy Pendżabu dla kanal/marla — i oznaczamy zastosowany standard."
+      },
+      {
+        "q": "Czy mogę użyć obliczonej powierzchni w Kalkulatorze dawki nawozu?",
+        "a": "Tak. Dotknij „Użyj w Kalkulatorze nawozu”, a Twoja powierzchnia, jednostka, kraj i region przeniosą się automatycznie — bez ponownego wpisywania. Uprawę nadal wybierasz tam, ponieważ sama powierzchnia nigdy nie wyznacza dawki nawozu."
+      },
+      {
+        "q": "Czy to jest urzędowy pomiar geodezyjny?",
+        "a": "Nie. To narzędzie daje przydatne szacunki z Twoich własnych pomiarów do decyzji rolniczych. Granice prawne, spory i urzędowe ewidencje wymagają uprawnionego geodety lub organu ewidencji gruntów."
+      }
+    ],
+    "relatedTitle": "Powiązane narzędzia rolnicze",
+    "relatedCurrent": "Jesteś tutaj"
+  },
+  "mapArea": {
+    "eyebrow": "Narzędzia rolnicze",
+    "title": "Kalkulator powierzchni na mapie — zmierz powierzchnię gruntu na mapie",
+    "desc": "Narysuj granicę swojego pola na darmowej mapie i natychmiast uzyskaj jego powierzchnię — w akrach, hektarach, metrach kwadratowych i jednostkach regionalnych. Bez konta, bez opłat. Działa jak kalkulator powierzchni w Google Earth: narysuj pole na mapie i odczytaj powierzchnię w stopach kwadratowych, akrach lub hektarach.",
+    "metaTitle": "Darmowa mapa kalkulatora powierzchni — zmierz powierzchnię gruntu na mapie",
+    "metaDescription": "Darmowy kalkulator powierzchni na mapie: narysuj granicę pola na mapie i zmierz powierzchnię gruntu w akrach, hektarach, m², Kanal i Marla. Rejestracja nie jest potrzebna.",
+    "gateDescription": "Wybierz swój kraj, aby pokazano jednostki regionalne (jak Kanal i Marla w Pakistanie), a następnie otwórz interaktywną mapę. Dotknięcie umieszcza punkty graniczne — przeciągnij je, aby dostosować.",
+    "countryLabel": "Kraj",
+    "countryHint": "Kraj decyduje tylko o tym, które jednostki regionalne są pokazywane. Nigdy nie zmienia mapy ani Twojego języka.",
+    "countries": {
+      "PK": "Pakistan",
+      "IN": "Indie",
+      "BD": "Bangladesz",
+      "CN": "Chiny",
+      "US": "Stany Zjednoczone",
+      "BR": "Brazylia",
+      "ID": "Indonezja",
+      "TR": "Turcja",
+      "MY": "Malezja",
+      "JP": "Japonia",
+      "KR": "Korea Południowa",
+      "ES": "Hiszpania",
+      "FR": "Francja",
+      "DE": "Niemcy",
+      "IT": "Włochy",
+      "PL": "Polska",
+      "RU": "Rosja",
+      "AU": "Australia",
+      "INTL": "Międzynarodowe / Inne"
+    },
+    "openMap": "Zacznij mierzyć na mapie",
+    "freeNote": "Darmowe na zawsze — dane mapowe od współtwórców OpenStreetMap.",
+    "mapAriaLabel": "Interaktywna mapa do rysowania granicy pola",
+    "loadingMap": "Ładowanie mapy…",
+    "undoPoint": "Cofnij punkt",
+    "clearAll": "Wyczyść wszystko",
+    "myLocation": "Wyśrodkuj na mojej lokalizacji",
+    "locating": "Lokalizowanie…",
+    "geoDenied": "Nie udało się uzyskać dostępu do Twojej lokalizacji (odmowa uprawnień lub niedostępność). Wskazówka: zezwól na dostęp do lokalizacji w ustawieniach przeglądarki albo po prostu nawiguj mapę ręcznie — działa tak samo.",
+    "dismissHint": "Odrzuć",
+    "boundaryPoints": "Punkty graniczne",
+    "removePoint": "Usuń punkt {index}",
+    "tapHint": "Dotknij numerowanego punktu, aby go usunąć, lub przeciągnij dowolny punkt, aby go przesunąć.",
+    "resultTitle": "Zmierzona powierzchnia",
+    "estimateBadge": "Szacunek",
+    "perimeter": "Obwód",
+    "precisionNote": "Przydatny szacunek na podstawie umieszczonych przez Ciebie punktów — nie geodezyjny. Granice prawne lub urzędowe wymagają uprawnionego lokalnego geodety.",
+    "useThisArea": "Użyj tej powierzchni w Kalkulatorze powierzchni gruntu",
+    "privacyNote": "Twoja granica zostaje na tym urządzeniu. Przenoszona jest tylko liczba powierzchni — nigdy Twoje współrzędne.",
+    "howTitle": "Jak działa pomiar na mapie",
+    "howSteps": [
+      "Otwórz mapę i znajdź swoje pole — wyszukiwanie nie jest potrzebne; przesuń i przybliż do niego albo wyśrodkuj na swojej lokalizacji.",
+      "Dotknij mapy, aby umieścić punkty graniczne wokół pola. Przeciągnij dowolny punkt, aby go dostosować; dotknij numerowanego punktu, aby go usunąć.",
+      "Przy 3 lub więcej punktach powierzchnia jest obliczana matematyką geodezyjną (uwzględniającą krzywiznę Ziemi) — taką samą dla każdej szerokości geograficznej.",
+      "Użyj powierzchni w Kalkulatorze powierzchni gruntu, a następnie w Kalkulatorze nawozu (Fertilizer Dose) lub Kalkulatorze zysku."
+    ],
+    "mapNoteTitle": "O mapie",
+    "mapNoteBody": "Mapa korzysta z OpenStreetMap, darmowej mapy świata tworzonej przez społeczność — to nie są Mapy Google, a to narzędzie nie jest powiązane z Google. Kafelki ładują się tylko podczas pomiaru.",
+    "faqTitle": "FAQ",
+    "faq": [
+      {
+        "q": "Jak działa kalkulator powierzchni na mapie?",
+        "a": "Dotknij mapy, aby umieścić punkty graniczne wokół pola. Gdy masz co najmniej 3 punkty, narzędzie oblicza otoczoną powierzchnię przy użyciu matematyki geodezyjnej uwzględniającej krzywiznę Ziemi — dokładnej na każdej szerokości geograficznej, w przeciwieństwie do płaskiego pomiaru na ekranie."
+      },
+      {
+        "q": "Czy zmierzona powierzchnia jest geodezyjnie dokładna?",
+        "a": "Nie. To przydatny szacunek oparty na miejscu umieszczonych punktów i wyrównaniu obrazów mapy. W przypadku sporów prawnych, ewidencji gruntów lub urzędowych transakcji zatrudnij uprawnionego lokalnego geodetę."
+      },
+      {
+        "q": "Czy to korzysta z Map Google?",
+        "a": "Nie. Mapa jest oparta na OpenStreetMap, darmowej i otwartej mapie społeczności. Nie ma integracji z Mapami Google ani powiązania z Google."
+      },
+      {
+        "q": "Czy mogę użyć zmierzonej powierzchni do obliczenia nawozu?",
+        "a": "Tak — przycisk „Użyj tej powierzchni” wysyła zmierzoną powierzchnię do Kalkulatora powierzchni gruntu, skąd trafia ona do Kalkulatora dawki nawozu (Fertilizer Dose Calculator) i Kalkulatora zysku. Sama powierzchnia nigdy nie daje zalecenia nawozowego; nadal wymagana jest zweryfikowana uprawa i region."
+      },
+      {
+        "q": "Czy moja lokalizacja lub granica pola jest zapisywana lub udostępniana?",
+        "a": "Nie. Punkty graniczne istnieją tylko w pamięci przeglądarki podczas pomiaru. Między narzędziami przenoszona jest tylko końcowa liczba powierzchni — Twoje współrzędne nigdy nie są zapisywane publicznie, umieszczane w linkach do udostępniania ani wysyłane na nasze serwery."
+      }
+    ],
+    "bannerTitle": "Zmierzono na mapie",
+    "bannerFertilizer": "Oblicz dawkę nawozu",
+    "bannerProfit": "Oszacuj zysk",
+    "bannerDismiss": "Odrzuć",
+    "relatedTitle": "Powiązane narzędzia",
+    "relatedCurrent": "Jesteś tutaj",
+    "pointsCount": "{count, plural, one {# punkt} other {# punktów}}"
+  },
+  "kitchenGarden": {
+    "eyebrow": "Planer ogrodu warzywnego",
+    "title": "Co posiać w tym miesiącu",
+    "metaTitle": "Planer ogrodu warzywnego — co posiać w tym miesiącu",
+    "metaDescription": "Zaplanuj domowy ogród warzywny: wpisz rozmiar działki, wybierz miesiąc, region i nasłonecznienie, i otrzymaj propozycje warzyw i ziół ze zweryfikowanych terminów siewu — nigdy zgadywane.",
+    "desc": "Podaj nam rozmiar działki, region i miesiąc siewu. Proponujemy tylko warzywa i zioła ze zweryfikowanymi terminami siewu na ten miesiąc — żadnych wymyślonych odmian, żadnych zgadywanych kalendarzy.",
+    "plotTitle": "Twoja działka i warunki",
+    "area": "Powierzchnia działki",
+    "areaUnit": "Jednostka powierzchni",
+    "unitSqm": "Metry kwadratowe (m²)",
+    "unitSqft": "Stopy kwadratowe (ft²)",
+    "country": "Kraj",
+    "region": "Region",
+    "month": "Miesiąc siewu",
+    "sunlight": "Nasłonecznienie",
+    "sunlightAny": "Dowolne",
+    "sunlightFull": "Pełne słońce",
+    "sunlightPartial": "Częściowy cień",
+    "sunlightShade": "Cień",
+    "suggestionsTitle": "Co możesz posadzić",
+    "suggestionsCount": "{n, plural, =0 {Brak opcji} one {# opcja} other {# opcji}} dla {month} w {region}",
+    "selectHint": "Zaznacz uprawy, które chcesz uprawiać, aby zbudować poniższy plan.",
+    "verified": "Zweryfikowane",
+    "underReview": "W trakcie weryfikacji",
+    "published": "Opublikowane",
+    "source": "Źródło",
+    "plantingWindow": "Termin siewu",
+    "activitySOW": "Siej",
+    "activityTRANSPLANT": "Sadź rozsadę",
+    "activityPLANT": "Sadź",
+    "emptyTitle": "Brak zweryfikowanych danych siewu dla tego wyboru",
+    "emptyBody": "Nie mamy jeszcze zweryfikowanych terminów siewu warzyw i ziół dla {region} w {month}. Nigdy nie zgadujemy — spróbuj inny miesiąc lub region albo przeglądaj pełny kalendarz siewu, w miarę jak weryfikowane są kolejne dane regionalne.",
+    "sunlightGapNote": "Potrzeby nasłonecznienia nie są jeszcze zapisane dla tych upraw, więc Twoja preferencja nasłonecznienia nie mogła zostać zastosowana jako filtr. Pokazano wszystkie opcje odpowiednie na ten miesiąc.",
+    "categoryVegetable": "Warzywo",
+    "categoryHerb": "Zioło",
+    "planTitle": "Twój plan ogrodu",
+    "planCrop": "Uprawa",
+    "planShare": "Udział działki (%)",
+    "planArea": "Powierzchnia",
+    "shareTotal": "Udziały sumują się do {total}% — powinny sumować się do 100%.",
+    "bedTitle": "Prosty szacunek układu",
+    "bedWidth": "Szerokość grządki (m)",
+    "pathWidth": "Szerokość ścieżki (m)",
+    "bedAssumptionNote": "Tylko matematyka układu: przy grządkach o szerokości {bedWidth} m i ścieżkach {pathWidth} m, około {pct}% Twojej działki to powierzchnia grządek do obsadzenia — około {bedMeters} m długości grządek. Szerokość grządki i ścieżki to Twoje własne regulowane założenia, nie wskazówki uprawowe.",
+    "spacingNote": "Rozstawa rzędów i roślin nie jest jeszcze zweryfikowana dla tych upraw — przed ustaleniem rozstawy sprawdź zalecenia lokalnego doradztwa rolniczego.",
+    "savePlan": "Zapisz plan w My Garden",
+    "saved": "Plan zapisany w My Garden.",
+    "openMyGarden": "Otwórz My Garden",
+    "savedPlotName": "Ogród warzywny — {date}",
+    "savedPlotNote": "Plan ogrodu warzywnego {sqm} m² na {month}, {region}; wybrano upraw: {count}.",
+    "faqTitle": "FAQ o ogrodzie warzywnym",
+    "faq": [
+      {
+        "q": "Co mogę posadzić w małym ogrodzie warzywnym w tym miesiącu?",
+        "a": "To zależy od Twojego regionu i miesiąca. Wpisz powyżej dane działki, a planer wypisze tylko warzywa i zioła ze zweryfikowanymi terminami siewu dla Twojego wyboru — z podanym źródłem przy każdej propozycji."
+      },
+      {
+        "q": "Czy planer podaje, w jakich odstępach sadzić?",
+        "a": "Jeszcze nie. Rozstawa rzędów i roślin nie została zweryfikowana dla tych upraw w naszych danych, więc planer mówi to uczciwie zamiast wymyślać liczby. Sprawdź zalecenia lokalnego doradztwa rolniczego dotyczące rozstawy."
+      },
+      {
+        "q": "Czym to różni się od kalendarza siewu?",
+        "a": "Kalendarz siewu pokazuje każdy zweryfikowany termin dla regionu i miesiąca, w tym uprawy polowe. Ten planer zawęża to do warzyw i ziół odpowiednich do domowego ogrodu, dodaje rozmiar Twojej działki i nasłonecznienie oraz zamienia wybory w prosty plan układu, który możesz zapisać w My Garden."
+      },
+      {
+        "q": "Czy mogę tu użyć mojego pomiaru powierzchni gruntu?",
+        "a": "Tak. Przycisk „Zaplanuj ogród warzywny” w Kalkulatorze powierzchni gruntu wysyła zmierzoną powierzchnię prosto do tego planera."
+      },
+      {
+        "q": "Gdzie jest przechowywany mój plan?",
+        "a": "W My Garden w przeglądarce (pamięć lokalna), gdy naciśniesz „Zapisz plan w My Garden”, tak jak zapisane działki z Kalkulatora powierzchni gruntu. Zaloguj się, aby synchronizować między urządzeniami."
+      }
+    ]
+  },
+  "suggestions": {
+    "improveTranslation": "Popraw to tłumaczenie",
+    "suggestData": "Zaproponuj poprawkę danych",
+    "translationIntro": "Zauważyłeś złe tłumaczenie na tej stronie? Powiedz nam, co jest nie tak i jak powinno brzmieć. Recenzent to sprawdzi.",
+    "dataIntro": "Znasz oficjalną dawkę nawozu dla {crop}? Podziel się nią tutaj wraz z oficjalnym źródłem (wydział rolnictwa, uniwersytet, czasopismo naukowe). Nasz zespół weryfikuje każde zgłoszenie przed publikacją.",
+    "dataTypeLabel": "Rodzaj sugestii",
+    "dataCorrection": "Popraw istniejące dane",
+    "dataRequest": "Poproś o dane dla tej uprawy",
+    "whatsWrong": "Co jest nie tak? (opcjonalnie)",
+    "whatsWrongPlaceholder": "np. To zdanie jest niejasne…",
+    "yourSuggestion": "Twoja sugestia",
+    "yourSuggestionPlaceholder": "Napisz poprawiony tekst lub opisz dawkę…",
+    "sourceUrl": "Adres URL źródła",
+    "sourceHint": "Tylko oficjalne źródła: wydziały rolnictwa, uniwersytety, czasopisma naukowe. Losowe blogi i strony z konwerterami nie są akceptowane.",
+    "reviewNote": "Wszystkie sugestie trafiają do kolejki recenzji ludzkiej. Nic nie jest publikowane automatycznie.",
+    "submit": "Wyślij sugestię",
+    "sending": "Wysyłanie…",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "thanks": "Dziękujemy!",
+    "thanksDetail": "Twoja sugestia została odebrana i zostanie sprawdzona przez nasz zespół.",
+    "errorTooShort": "Napisz trochę więcej szczegółów.",
+    "errorSourceRequired": "Do poprawek danych wymagany jest adres URL źródła (http/https).",
+    "errorGeneric": "Nie udało się wysłać. Spróbuj ponownie.",
+    "creditTitle": "Otrzymaj uznanie za pomoc (opcjonalnie)",
+    "yourName": "Twoje imię",
+    "yourNamePlaceholder": "np. Ahmed Khan",
+    "yourPhoto": "Twoje zdjęcie",
+    "photoHint": "JPG, PNG, WebP lub GIF, maks. 2 MB.",
+    "choosePhoto": "Wybierz zdjęcie",
+    "changePhoto": "Zmień zdjęcie",
+    "removePhoto": "Usuń",
+    "imageTypeError": "Wybierz obraz JPG, PNG, WebP lub GIF.",
+    "imageSizeError": "Obraz musi mieć mniej niż 2 MB.",
+    "imageUploadError": "Nie udało się przesłać zdjęcia. Spróbuj mniejszego obrazu lub kontynuuj bez niego.",
+    "consentNote": "Jeśli Twoja sugestia zostanie zatwierdzona, Twoje imię i zdjęcie będą pokazywane publicznie na tej stronie (np. na stronie uprawy i w rankingu współtwórców). Udostępniaj tylko to, co chętnie upublicznisz.",
+    "howItWorksTitle": "Jak to działa — bez tajemnic",
+    "step1Title": "1. Ty wysyłasz",
+    "step1Text": "Wypełnij ten krótki formularz. Konto nie jest potrzebne. Zajmuje około 2 minut.",
+    "step2Title": "2. My sprawdzamy",
+    "step2Text": "Nasz zespół czyta każdą sugestię i porównuje ją z oficjalnymi źródłami (wydziały rolnictwa, uniwersytety, prace naukowe).",
+    "step3Title": "3. Zatwierdzenie lub odrzucenie",
+    "step3Approve": "Zatwierdzono → Twoje imię i zdjęcie pojawiają się na stronie uprawy, a Ty zdobywasz odznakę współtwórcy.",
+    "step3Reject": "Odrzucono → zwykle spam, złe źródło lub reklama. Nic nie jest publikowane bez sprawdzenia.",
+    "rulesToggle": "Co akceptujemy — a co odrzucamy",
+    "acceptTitle": "Akceptujemy",
+    "accept1": "Oficjalne linki — wydział rolnictwa, uniwersytet, czasopismo naukowe",
+    "accept2": "Nazwa książki lub pracy z numerem strony — np. „PAU Package of Practices 2024, s. 23”",
+    "accept3": "Odniesienie do urzędnika lub wydziału rolnictwa — np. „urzędnik Zarat, Sargodha”",
+    "accept4": "Własne doświadczenie polowe — napisane uczciwie (patrz poniżej)",
+    "rejectTitle": "Odrzucamy",
+    "reject1": "Twierdzenia bez żadnego źródła",
+    "reject2": "Przekazywane wiadomości WhatsApp i „słyszałem, że…”",
+    "reject3": "Reklamy jakiejkolwiek firmy lub produktu",
+    "reject4": "Boty i spam — blokowane automatycznie",
+    "tajurbaNoteTitle": "O „Moim doświadczeniu”",
+    "tajurbaNote": "Twoje doświadczenie polowe jest cenne, ale NIE jest oficjalnym źródłem. Nigdy nie trafi do kalkulatora dawki. Zatwierdzone doświadczenia pojawiają się tylko w sekcji społeczności, wyraźnie oznaczone jako „Doświadczenie rolnika — niezweryfikowane”. Jeśli wielu rolników z jednego obszaru zgłasza to samo, oznaczamy to do właściwych badań.",
+    "dataTypeOfficial": "Oficjalna poprawka — mam źródło",
+    "dataTypeTajurba": "Moje doświadczenie — jestem rolnikiem",
+    "dataTypeRequest": "Poproś o dane dla tej uprawy",
+    "sourceLabelFlex": "Źródło (link lub odniesienie pisemne) *",
+    "sourcePlaceholderFlex": "https://…  lub  „PAU Package of Practices 2024, s. 23”",
+    "sourceHintFlex": "Link LUB odniesienie pisemne — np. nazwa książki z numerem strony lub „urzędnik Zarat, Sargodha”.",
+    "districtLabel": "Dystrykt / obszar",
+    "districtPlaceholder": "np. Sargodha",
+    "varietyLabel": "Odmiana uprawy (jeśli znasz)",
+    "varietyPlaceholder": "np. Kinnow",
+    "appliedLabel": "Co zastosowałeś? *",
+    "appliedPlaceholder": "np. 2 worki DAP + 1 worek Urea na acre",
+    "yieldLabel": "Wynik / plon (opcjonalnie)",
+    "yieldPlaceholder": "np. 40 maundów na acre",
+    "tajurbaIntro": "Opowiedz nam, co faktycznie zrobiłeś na własnym polu. Bądź uczciwy — to jest udostępniane jako doświadczenie rolnika, nie jako oficjalna porada.",
+    "errorSourceFlexRequired": "Podaj źródło — link lub odniesienie pisemne (książka, wydział, urzędnik).",
+    "errorAppliedRequired": "Powiedz nam, co zastosowałeś na swoim polu.",
+    "sourceTextLabel": "Lub odniesienie pisemne (jeśli brak linku)"
+  },
+  "contributors": {
+    "title": "Nasi Współtwórcy",
+    "metaTitle": "Współtwórcy — Fertilizer Dose",
+    "metaDescription": "Poznaj rolników i ekspertów ulepszających Fertilizer Dose: zweryfikowani współtwórcy, odznaki i ranking.",
+    "subtitle": "Rolnicy i eksperci, którzy dzielą się zweryfikowaną wiedzą ze społecznością — nagradzani uznaniem, nigdy pieniędzmi.",
+    "leaderboardTitle": "Najlepsi współtwórcy",
+    "approvedSuggestions": "zatwierdzonych sugestii",
+    "approvedSuggestionOne": "zatwierdzona sugestia",
+    "badgeContributor": "Współtwórca",
+    "badgeTrusted": "Zaufany Rolnik",
+    "badgeExpert": "Ekspert Rolny",
+    "badgeContributorDesc": "1 zatwierdzona sugestia",
+    "badgeTrustedDesc": "5 zatwierdzonych sugestii · priorytetowa recenzja",
+    "badgeExpertDesc": "20 zatwierdzonych sugestii · certyfikat do wydruku",
+    "howItWorks": "Jak działają nagrody",
+    "howItWorksBody": "Podziel się poprawką tłumaczenia lub danymi uprawy z oficjalnym źródłem. Gdy nasz zespół to zatwierdzi, Twoje imię i zdjęcie pojawią się na odpowiednich stronach, liczba zatwierdzonych rośnie, a Ty zdobywasz odznaki: 🌱 Współtwórca (1), 🌾 Zaufany Rolnik (5, z priorytetową recenzją), 🏅 Ekspert Rolny (20, z certyfikatem do wydruku).",
+    "myBadge": "Moja odznaka",
+    "myBadgeHint": "Twoja odznaka jest śledzona w tej przeglądarce (konto nie jest potrzebne).",
+    "noBadgeYet": "Brak zatwierdzonych sugestii z tej przeglądarki — pierwsze zatwierdzenie daje odznakę 🌱 Współtwórcy.",
+    "printCertificate": "Drukuj certyfikat",
+    "certificateTitle": "Certyfikat Współtwórcy",
+    "certificateBody": "przyznany {name} za {count} zatwierdzonych wkładów w otwartą rolniczą bazę wiedzy Fertilizer Dose, pomagając rolnikom w Pakistanie i Indiach gospodarować na prawdziwych danych.",
+    "certificateLevel": "Poziom: Ekspert Rolny 🏅",
+    "empty": "Brak współtwórców — bądź pierwszy! Użyj „Popraw to tłumaczenie” lub „Zaproponuj poprawkę danych” w dowolnym miejscu na stronie.",
+    "communityContributors": "Współtwórcy społeczności",
+    "communityContributorsHint": "Ich zatwierdzone sugestie pomogły ulepszyć tę stronę.",
+    "viewAll": "Zobacz wszystkich współtwórców",
+    "priorityBadge": "⚡ Priorytetowa recenzja",
+    "close": "Zamknij"
   }
 }

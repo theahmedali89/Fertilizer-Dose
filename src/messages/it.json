@@ -77,7 +77,9 @@
       "tipGeneralBody": "Aprire la valvola del fusto solo dopo che 1–1,5 canali d'acqua sono entrati nel campo (non all'inizio) per una distribuzione uniforme.",
       "shareButton": "Condividi su WhatsApp",
       "shareCopy": "Copia",
-      "shareCopied": "Copiato!"
+      "shareCopied": "Copiato!",
+      "recommendedRangeLine": "Intervallo di dose raccomandato: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Scegli all'interno dell'intervallo in base alla tua analisi del terreno.",
+      "yieldAdjusted": "Regolato per una resa obiettivo di {yield} t/ha"
     },
     "title": "Dose di fertilizzante esatta, con il calcolo mostrato.",
     "soilTestCard": {
@@ -100,6 +102,14 @@
       {
         "q": "Perché alcune colture sono disabilitate?",
         "a": "Una coltura è selezionabile solo quando la sua dose NPK consigliata è verificata rispetto a una fonte pubblicata. Preferiamo disabilitare una coltura piuttosto che inventarne i dati — le colture non verificate sono contrassegnate come \"dati in revisione\" fino a conferma."
+      },
+      {
+        "a": "1 acre = 8 kanal = 160 marla e 1 kanal = 20 marla. In metrico: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Il calcolatore converte la tua superficie in ettari, applica la dose per ettaro e poi la riporta alla scala originale.",
+        "q": "Come si convertono kanal e marla?"
+      },
+      {
+        "a": "Una coltura è selezionabile solo quando la dose NPK raccomandata è verificata rispetto a una fonte pubblicata. Preferiamo disabilitare una coltura piuttosto che inventarne i valori — le colture non verificate sono contrassegnate come \"data in review\" fino a conferma.",
+        "q": "Perché alcune colture sono disabilitate?"
       }
     ],
     "organic": {
@@ -184,17 +194,50 @@
         "a": "Sì — calcolatore, biblioteche e guide sono gratuiti. Un account serve solo per funzioni come salvare le diagnosi.",
         "q": "Fertilizer Dose è gratuito?"
       },
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
+      {
+        "a": "Sì, Urea e DAP possono essere applicati insieme come dose di base alla semina. Il DAP fornisce fosforo (46% P₂O₅) più il 18% di azoto, mentre l'Urea aggiunge altro azoto (46% N). Una pratica comune è mescolarli prima dello spandimento. Tuttavia, evita di mescolare l'Urea con l'SSP (perfostato semplice) nella stessa applicazione se la miscela dovrà riposare — può diventare grumosa. Controlla sempre prima il rapporto NPK raccomandato per la tua coltura.",
+        "q": "Posso mescolare Urea e DAP insieme?"
+      },
+      {
+        "a": "La dose di base è il concime applicato al momento della semina/trapianto o prima, interrato nel terreno. Include tipicamente l'intero fabbisogno di fosforo e potassio più una porzione di azoto (di solito da 1/3 a 1/2). L'azoto rimanente viene dato in copertura successivamente — ad esempio Urea all'accestimento per il frumento. L'applicazione di base assicura che i nutrienti siano disponibili per le giovani radici fin dal primo giorno.",
+        "q": "Cos'è la dose di base nel concime?"
+      },
+      {
+        "a": "Dipende dal tuo terreno e dalla tua coltura. Il DAP (18-46-0) ha una maggiore concentrazione di fosforo (46% P₂O₅), quindi serve meno prodotto per acro — bene per trasporto e movimentazione. L'SSP (16% P₂O₅) fornisce anche zolfo (~11%) e calcio (~19%), rendendolo migliore per oleaginose, leguminose e terreni carenti di zolfo. Il DAP di solito è più economico per kg di fosforo, ma l'SSP aggiunge nutrienti secondari. Usa il nostro strumento Confronta per verificare quale è più economico per kg di P₂O₅ ai tuoi prezzi locali.",
+        "q": "DAP vs SSP — quale è meglio?"
+      },
+      {
+        "a": "Un'analisi del terreno misura l'azoto, il fosforo, il potassio, il pH e la sostanza organica già presenti nel tuo terreno. Invece di usare una raccomandazione generica, la dose di concime viene regolata — se il tuo terreno ha già molto fosforo, applichi meno concime P. Questo fa risparmiare denaro e previene l'eccesso di concimazione. Consigliamo un'analisi del terreno ogni 2-3 anni tramite il tuo ufficio agricolo locale. Il nostro calcolatore usa raccomandazioni standard; per dosi di precisione basate sull'analisi del terreno, consulta il tuo laboratorio di analisi locale usando questi valori standard come punto di partenza.",
+        "q": "Cos'è una dose di concime basata sull'analisi del terreno?"
+      },
+      {
+        "a": "Una volta applicata, l'Urea si converte in ammonio assimilabile dalle piante entro circa 2–4 giorni grazie agli enzimi naturali del terreno, poi in nitrato nelle 2–4 settimane successive a seconda della temperatura e dell'umidità del suolo. In pratica, una singola applicazione di Urea nutre la coltura per circa 4–6 settimane, ed è per questo che l'azoto di solito viene frazionato in 2–3 dosi durante la stagione. Le perdite come gas ammoniacale sono massime sui terreni caldi, secchi e alcalini quando l'Urea resta in superficie — interrarla nel terreno umido riduce questo fenomeno.",
+        "q": "Quanto dura l'Urea nel terreno?"
+      },
+      {
+        "a": "Urea (46-0-0) fornisce solo azoto al 46% N — il concime azotato più concentrato disponibile. DAP (18-46-0) fornisce il 18% di azoto più il 46% di fosfato (P₂O₅). In pratica, il DAP si usa come dose di base alla semina quando la coltura ha bisogno di fosforo per l'attecchimento radicale, mentre l'Urea si usa per le concimazioni azotate in copertura durante la crescita attiva. Hanno scopi principali diversi, ed è per questo che gli agricoltori li usano spesso insieme piuttosto che come sostituti l'uno dell'altro.",
+        "q": "Qual è la differenza tra Urea e DAP?"
+      },
+      {
+        "a": "Inizia con un'analisi del terreno se possibile — ti dice cosa c'è già nel tuo terreno, così aggiungi solo ciò che manca. Poi usa il Calcolatore di dose per piante su Fertilizer Dose: inserisci il tipo di pianta e la dimensione del vaso o dell'aiuola, e ti dà i grammi esatti per pianta. Come regola pratica, applica in piccole dosi frazionate invece che tutto in una volta, annaffia dopo l'applicazione granulare e segui sempre la dose in etichetta — più concime non significa più crescita e può bruciare le radici.",
+        "q": "Come doso il concime per le piante?"
+      },
+      {
+        "a": "Il letame bovino ben maturo contiene tipicamente circa 0.5–1.0% di azoto, 0.2–0.5% di fosfato (P₂O₅) e 0.5–1.0% di potassa (K₂O), ma varia molto a seconda della fonte animale, dell'alimentazione, della lettiera e di come è stato conservato e compostato. Poiché il contenuto di nutrienti è basso e variabile rispetto ai concimi minerali, il FYM funziona meglio come ammendante — aggiunge sostanza organica, migliora la struttura del suolo e fornisce micronutrienti — mentre i concimi minerali forniscono la dose NPK precisa di cui la coltura ha bisogno.",
+        "q": "Quanto NPK c'è nel letame (FYM)?"
+      },
+      {
+        "a": "Il primo mattino (prima delle 9–10 circa) o la sera tardi sono i momenti migliori per nutrire le piante per via fogliare. I pori delle foglie (stomi) sono aperti, le temperature sono più fresche e le gocce dello spray restano bagnate più a lungo, il che migliora l'assorbimento dei nutrienti. Evita di spruzzare nel caldo di mezzogiorno — le gocce si asciugano troppo in fretta per un buon assorbimento e il residuo concentrato può bruciare le foglie. Salta anche la spruzzatura appena prima della pioggia prevista, che dilava il nutrimento.",
+        "q": "Qual è il momento migliore della giornata per spruzzare il concime fogliare?"
+      },
+      {
+        "a": "I tre numeri su un sacco di concime (ad esempio 15-15-15) sono la percentuale in peso di azoto (N), fosfato (P₂O₅) e potassa (K₂O). Quindi un sacco da 50 kg di 15-15-15 contiene 7.5 kg ciascuno di N, P₂O₅ e K₂O. Nota che fosforo e potassio sono espressi nelle loro forme ossidate per convenzione industriale, non come P e K elementari — i calcolatori di Fertilizer Dose gestiscono questa conversione per te.",
+        "q": "Cosa significa NPK su un sacco di concime?"
+      },
+      {
+        "a": "Il solfato ammonico (21-0-0 più 24% di zolfo) fornisce azoto insieme allo zolfo, risultando utile dove i terreni sono carenti di zolfo — comune nei cereali ad alta resa e nelle oleaginose. Ha un effetto acidificante sul suolo, quindi si adatta bene ai terreni neutri e alcalini, ma usalo con cautela su terreni già acidi. È anche una buona scelta quando vuoi azoto senza aggiungere fosforo o potassio.",
+        "q": "A cosa serve il solfato ammonico?"
+      },
       {
         "q": "Il concime fogliare può sostituire la concimazione al suolo?",
         "a": "No — la concimazione fogliare è un'integrazione, non una sostituzione. Le foglie assorbono i nutrienti in fretta ma in piccole quantità, quindi i trattamenti fogliari sono ideali per correggere le carenze di microelementi (zinco, ferro, boro) o per dare una spinta rapida nelle fasi critiche della crescita. Ma la maggior parte dell'NPK deve arrivare dal suolo, perché le piante hanno bisogno di chilogrammi di nutrienti per acre e le foglie non possono assorbire quel volume. Usa la concimazione fogliare insieme al tuo programma di concimazione di fondo e in copertura, non al suo posto."
@@ -294,7 +337,8 @@
       "sourceLabel": "Fonte dei dati:",
       "genericLabel": "Base personalizzata (solo orientamento generico — non una raccomandazione verificata)",
       "disclaimer": "Tutte le dosi sono stime. Conferma con il tuo agronomo locale / tecnico di divulgazione agricola prima di applicare il fertilizzante.",
-      "baseRangeLine": "Intervallo di dose base: N {n} – P₂O₅ {p} – K₂O {k} kg/ha"
+      "baseRangeLine": "Intervallo di dose base: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Intervallo di dose regolato: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Metodo",
@@ -569,7 +613,20 @@
     "eyebrow": "Dottore delle piante",
     "title": "Mostraci la foglia. Ti aiuteremo a leggerla.",
     "metaTitle": "Dottore delle piante — Diagnosi IA dei problemi delle colture",
-    "metaDescription": "Carica la foto di una coltura e descrivi i sintomi per una diagnosi assistita dall'IA con cause, azioni e passi di prevenzione."
+    "metaDescription": "Carica la foto di una coltura e descrivi i sintomi per una diagnosi assistita dall'IA con cause, azioni e passi di prevenzione.",
+    "form": {
+      "analyzing": "Analisi in corso…",
+      "cropLabel": "Coltura (se nota)",
+      "cropPlaceholder": "Non so / altro",
+      "diagnosisTitle": "Diagnosi",
+      "photoHint": "Clicca o trascina qui una foto",
+      "photoLabel": "Foto della pianta",
+      "photoTypes": "JPG, PNG o WebP, max 5 MB",
+      "submit": "Diagnostica la mia pianta",
+      "symptomsHint": "Cosa vedi? Macchie gialle, avvizzimento, buchi nelle foglie, quando è iniziato, quale parte della pianta…",
+      "symptomsLabel": "Descrivi i sintomi",
+      "symptomsPlaceholder": "es. Macchie gialle con bordi marroni sulle foglie basse del frumento, iniziate circa una settimana fa dopo la pioggia…"
+    }
   },
   "growing": {
     "searchPlaceholder": "Cerca per nome…",
@@ -691,7 +748,8 @@
     "visualHint": "Seleziona un mese per visualizzare le finestre di semina, trapianto e raccolto.",
     "legendTitle": "Leggenda",
     "noData": "Nessun dato",
-    "windowsCount": "{count} finestre per piantare"
+    "windowsCount": "{count} finestre per piantare",
+    "monthCellLabel": "{month}, {count} finestre di semina"
   },
   "garden": {
     "metaTitle": "Il mio giardino — Tieni traccia di appezzamenti, semine e piani di concimazione",
@@ -856,7 +914,8 @@
       "perKgNFixed": "{kg} kg fornisce 1 kg N — esatto, dall'etichetta della borsa.",
       "perKgNRange": "{lo}–{hi} kg fornisce 1 kg N: intervallo tipico, il tuo heap sarà diverso.",
       "organicHonesty": "Regole di confronto oneste: l'azoto organico viene rilasciato lentamente: solo una frazione (circa un terzo per il letame) alimenta il primo raccolto, il resto alimenta le stagioni successive. I prodotti organici costruiscono anche la struttura del suolo che i fertilizzanti in sacchi non possono. Il prezzo per kg di N è solo un lato della decisione; ottieni un'analisi di laboratorio del tuo materiale per una pianificazione precisa.",
-      "viewOrganicHub": "Centro di fertilizzanti organici"
+      "viewOrganicHub": "Centro di fertilizzanti organici",
+      "unitSize": "Formato confezione ({unit})"
     }
   },
   "blog": {
@@ -960,7 +1019,19 @@
       "detailCta": "Vedi dettagli"
     },
     "searchPlaceholder": "Cerca fertilizzanti…",
-    "searchNoResults": "Nessun fertilizzante corrisponde alla tua ricerca."
+    "searchNoResults": "Nessun fertilizzante corrisponde alla tua ricerca.",
+    "taglines": {
+      "ammonium-sulphate": "Azoto più zolfo, con effetto acidificante sul suolo.",
+      "compost": "Scarti agricoli e domestici decomposti — nutrizione variabile, dipendente dalla materia prima.",
+      "dap": "La fonte standard di fosforo di base — con un bonus di azoto.",
+      "farmyard-manure": "Il letame tradizionale ingombrante — pochi nutrienti, alto valore ammendante.",
+      "green-manure": "Una fabbrica di azoto vivente — coltivata, poi interrata prima della coltura principale.",
+      "mop": "La fonte economica di potassio per la maggior parte delle colture da campo.",
+      "sop": "Potassio senza cloro per colture sensibili di alto valore.",
+      "ssp": "Fosforo più zolfo e calcio in un unico granulo.",
+      "urea": "Il concime azotato più concentrato di uso comune.",
+      "vermicompost": "Letame elaborato dai lombrichi — più ricco del FYM, ma la materia prima decide tutto."
+    }
   },
   "chart": {
     "metaTitle": "Tabella delle dosi di fertilizzante — Riferimento rapido NPK",
@@ -1046,7 +1117,10 @@
       "startDate": "Prima poppata",
       "addToGarden": "Aggiungi pianificazione a Il mio giardino",
       "addedToGarden": "Aggiunto: vedi Il mio giardino → Promemoria.",
-      "gardenHint": "I promemoria sono suggerimenti temporali generici, non prescrizioni. Salta la concimazione se le piante sembrano stressate."
+      "gardenHint": "I promemoria sono suggerimenti temporali generici, non prescrizioni. Salta la concimazione se le piante sembrano stressate.",
+      "presetSource": "Fonte: {source}",
+      "scheduleTitle": "Consigliato: nutri le piante ({ppm} ppm {nutrient})",
+      "targetPpmPK": "Obiettivo {nutrient} (ppm)"
     },
     "presets": {
       "gentle": {
@@ -1079,18 +1153,60 @@
       "perBed": "Totale per il letto",
       "perBedHint": "Mescolare nell'acqua di irrigazione applicata uniformemente sul letto.",
       "scheduleTitle": "Programma di alimentazione (prossimo 6)",
-      "scheduleHint": "In base alla frequenza scelta. Questi sono aiuti alla pianificazione: adattati alla risposta delle piante."
+      "scheduleHint": "In base alla frequenza scelta. Questi sono aiuti alla pianificazione: adattati alla risposta delle piante.",
+      "bedVolumeHint": "{area} {unit} × {depth} cm di zona radicale.",
+      "formulaNote": "Calcolo: {grade} a {ppm} ppm {nutrient} → grammi per litro = {ppm} ÷ (%{nutrient} × 10).",
+      "formulaNoteBed": "Volume dell'aiuola = area × {depth} cm di profondità.",
+      "formulaNoteLiquid": "Calcolo: {grade} a {ppm} ppm {nutrient} → grammi per litro = {ppm} ÷ (%{nutrient} × 10), poi ÷ {density} g/ml di densità = ml per litro.",
+      "total": "Totale per {litres} L"
     },
     "method": {
       "eyebrow": "Come funziona",
       "title": "Dosaggio in ppm, come fanno i coltivatori",
-      "desc": "I coltivatori commerciali non indovinano i cucchiai: mescolano il fertilizzante fino a una concentrazione di nutrienti target in parti per milione (ppm). Questo calcolatore offre lo stesso metodo ai giardinieri domestici."
+      "desc": "I coltivatori commerciali non indovinano i cucchiai: mescolano il fertilizzante fino a una concentrazione di nutrienti target in parti per milione (ppm). Questo calcolatore offre lo stesso metodo ai giardinieri domestici.",
+      "steps": [
+        {
+          "d": "Leggi i numeri N-P-K sul sacco, es. 20-20-20, o inserisci un titolo personalizzato.",
+          "t": "Scegli il titolo del tuo concime"
+        },
+        {
+          "d": "Le piante da appartamento e quelle a crescita lenta prosperano con dosi blande (~100 ppm N); la maggior parte delle piante in vaso con dosi regolari (~150 ppm N); le piante vigorose ed esigenti possono arrivare a ~200 ppm N.",
+          "t": "Scegli l'intensità di concimazione"
+        },
+        {
+          "d": "Sciogli i grammi calcolati nel tuo annaffiatoio e annaffia come al solito, lasciando drenare l'eccesso. Nutri a ogni annaffiatura a queste dosi, oppure la metà delle volte a doppia concentrazione — mai entrambe le cose.",
+          "t": "Mescola e annaffia normalmente"
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Fonti",
       "title": "Da dove provengono i tassi di alimentazione",
-      "note": "Le preimpostazioni utilizzano il limite inferiore di ciascun intervallo pubblicato, la scelta conservativa per i livelli di luce domestica. Segui sempre l'etichetta del tuo prodotto e i consigli del servizio di estensione locale."
-    }
+      "note": "Le preimpostazioni utilizzano il limite inferiore di ciascun intervallo pubblicato, la scelta conservativa per i livelli di luce domestica. Segui sempre l'etichetta del tuo prodotto e i consigli del servizio di estensione locale.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): piante da aiuola 200–250 ppm N in alimentazione costante; tipi a crescita lenta 100–150 ppm N fino all'attecchimento.",
+        "Michigan State University Extension (E2186): piante in contenitore — concime a lento rilascio più alimentazione liquida supplementare a 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": la formula g/L = ppm ÷ (%N × 10) e l'esempio svolto a 200 ppm N."
+      ]
+    },
+    "faq": [
+      {
+        "a": "La maggior parte delle piante in vaso cresce bene con una soluzione di irrigazione di 100–150 ppm di azoto — circa 0.5–1 g di 20-20-20 per litro d'acqua. Le piante molto esigenti come le annuali fiorite vigorose possono arrivare fino a 200 ppm. Inizia piano; potrai sempre aumentare la prossima volta.",
+        "q": "Quanto concime serve alle piante in vaso?"
+      },
+      {
+        "a": "Un cucchiaino raso di concime granulare è circa 5–6 g, ma la densità varia per prodotto, quindi i cucchiai sono solo una guida approssimativa. Per vasi piccoli e piantine, una bilancia da cucina economica è molto più affidabile — un errore del 50% col cucchiaio è facile e basta a bruciare le radici.",
+        "q": "Posso usare un cucchiaio invece di pesare?"
+      },
+      {
+        "a": "Alle dosi blande e regolari di cui sopra, sì — è così che fanno i coltivatori professionali (\"fertirrigazione\"). L'alternativa è concimare la metà delle volte a doppia concentrazione. Non fare entrambe le cose: scegli un programma e osserva le piante.",
+        "q": "Devo concimare ogni volta che annaffio?"
+      },
+      {
+        "a": "Bordi delle foglie marroni e croccanti, avvizzimento nonostante il terreno bagnato e una crosta bianca sulla superficie del substrato. Se li vedi, lava il vaso con acqua pulita finché non cola liberamente dai fori di drenaggio e salta la concimazione successiva.",
+        "q": "Quali sono i segni di eccesso di concime?"
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Attrezzo agricolo gratuito",
@@ -1176,10 +1292,85 @@
       "conversionTitle": "Tabella di conversione delle superfici",
       "conversionNote": "Definizioni esatte. Le unità regionali vengono visualizzate solo se verificate.",
       "sourcesTitle": "Fonti e metodologia",
-      "sourcesBody": "Le unità universali utilizzano le definizioni SI e imperiali esatte (1 acro = 4.046,8564224 m²; 1 ettaro = 10.000 m²). Kanal e Marla utilizzano lo standard di reddito del Punjab: 1 karam = 5,5 piedi, 1 marla = 9 karam quadrati = 272,25 piedi quadrati, 1 kanal = 20 marla = 5.445 piedi quadrati. Tutti i calcoli vengono eseguiti internamente in metri quadrati e vengono convertiti una volta nell'unità di visualizzazione, senza arrotondamenti concatenati."
+      "sourcesBody": "Le unità universali utilizzano le definizioni SI e imperiali esatte (1 acro = 4.046,8564224 m²; 1 ettaro = 10.000 m²). Kanal e Marla utilizzano lo standard di reddito del Punjab: 1 karam = 5,5 piedi, 1 marla = 9 karam quadrati = 272,25 piedi quadrati, 1 kanal = 20 marla = 5.445 piedi quadrati. Tutti i calcoli vengono eseguiti internamente in metri quadrati e vengono convertiti una volta nell'unità di visualizzazione, senza arrotondamenti concatenati.",
+      "formulas": [
+        {
+          "example": "100 m × 50 m = 5.000 m²",
+          "formula": "Area = lunghezza × larghezza",
+          "name": "Rettangolo"
+        },
+        {
+          "example": "25 m × 25 m = 625 m²",
+          "formula": "Area = lato²",
+          "name": "Quadrato"
+        },
+        {
+          "example": "½ × 40 m × 30 m = 600 m²",
+          "formula": "Area = ½ × base × altezza",
+          "name": "Triangolo"
+        },
+        {
+          "example": "((60 m + 40 m) / 2) × 30 m = 1.500 m²",
+          "formula": "Area = ((lato A + lato B) / 2) × altezza",
+          "name": "Trapezio"
+        },
+        {
+          "example": "Esatto — nessuna approssimazione",
+          "formula": "Dividi in due triangoli lungo la diagonale; risolvi ciascuno con la formula di Erone e somma",
+          "name": "Quattro lati + diagonale"
+        }
+      ]
     },
     "relatedTitle": "Attrezzi agricoli correlati",
-    "relatedCurrent": "Tu sei qui"
+    "relatedCurrent": "Tu sei qui",
+    "faq": [
+      {
+        "a": "Misura lunghezza e larghezza nella stessa unità e moltiplica: area = lunghezza × larghezza. Per forme irregolari, dividi il terreno in rettangoli e triangoli, calcola ciascuno e sommali.",
+        "q": "Come calcolo l'area di un terreno?"
+      },
+      {
+        "a": "Usa la stessa geometria, poi converti nell'unità usata nella tua regione — acri, ettari o unità locali come kanal e marla in Pakistan. Questo calcolatore di area agricola converte automaticamente e può inviare il risultato direttamente al Calcolatore di dose concime.",
+        "q": "Come calcolo l'area di un terreno agricolo?"
+      },
+      {
+        "a": "Inserisci sopra lunghezza e larghezza del tuo appezzamento e leggi il valore in acri dai risultati — nessun calcolo manuale. Se hai misurato in piedi, il calcolatore converte automaticamente i piedi quadrati in acri (43.560 sq ft = 1 acre).",
+        "q": "Quanti acri è questo appezzamento?"
+      },
+      {
+        "a": "Moltiplica la lunghezza in piedi per la larghezza in piedi: 100 ft × 50 ft = 5.000 piedi quadrati. Un acro è 43.560 piedi quadrati.",
+        "q": "Come calcolo l'area in piedi quadrati?"
+      },
+      {
+        "a": "No. Quattro lati da soli non possono fissare l'area di un quadrilatero — la forma può deformarsi. Misura anche una diagonale e l'appezzamento si divide in due triangoli risolvibili esattamente. Senza di essa, è possibile solo un'approssimazione dichiarata.",
+        "q": "Quattro lunghezze laterali possono calcolare esattamente un appezzamento irregolare?"
+      },
+      {
+        "a": "Moltiplica gli acri per 0.404686. Un ettaro equivale a 2.471 acri. Usa la modalità Convertitore sopra per qualsiasi coppia di unità.",
+        "q": "Come converto gli acri in ettari?"
+      },
+      {
+        "a": "Un ettaro (10.000 m²) è circa 2.47 volte più grande di un acro (4.047 m²). Gli ettari sono standard nella maggior parte dei paesi; gli acri sono comuni in Pakistan, India, Bangladesh e USA.",
+        "q": "Qual è la differenza tra acro ed ettaro?"
+      },
+      {
+        "a": "Sì — usa la modalità Irregolare: dividi il tuo campo in rettangoli, quadrati, triangoli o trapezi, inserisci ogni sezione e il calcolatore li somma.",
+        "q": "Posso calcolare l'area di un campo irregolare?"
+      },
+      {
+        "a": "Unità come bigha, marla e kanal sono nate dai sistemi fiscali locali, quindi la loro dimensione varia per provincia e consuetudine. Offriamo un'unità regionale solo dove la sua conversione è verificata — ad esempio lo standard fiscale del Punjab per kanal/marla — e indichiamo lo standard usato.",
+        "q": "Perché alcune unità tradizionali variano da regione a regione?"
+      },
+      {
+        "a": "Sì. Tocca 'Usa nel Calcolatore concime' e la tua area, unità, paese e regione vengono trasferiti automaticamente — senza riscrivere. Dovrai comunque scegliere la tua coltura lì, perché la sola area non determina mai la dose di concime.",
+        "q": "Posso usare l'area calcolata nel Calcolatore di dose concime?"
+      },
+      {
+        "a": "No. Questo strumento fornisce stime utili dalle tue misurazioni per le decisioni agricole. Confini legali, controversie e registri ufficiali richiedono un tecnico qualificato o l'ufficio del catasto.",
+        "q": "È un rilievo catastale legale?"
+      }
+    ],
+    "savedPlotName": "Appezzamento misurato ({date})",
+    "savedPlotNote": "Misurato con il Calcolatore di area ({sqm})."
   },
   "mapArea": {
     "eyebrow": "Strumenti agricoli",
@@ -1239,7 +1430,36 @@
     "bannerProfit": "Stima del profitto",
     "bannerDismiss": "Congedare",
     "relatedTitle": "Strumenti correlati",
-    "relatedCurrent": "Tu sei qui"
+    "relatedCurrent": "Tu sei qui",
+    "faq": [
+      {
+        "a": "Tocca la mappa per posizionare punti di confine attorno al tuo campo. Una volta che hai almeno 3 punti, lo strumento calcola l'area racchiusa usando matematica geodetica che tiene conto della curvatura terrestre — precisa a qualsiasi latitudine, a differenza delle misurazioni su schermo piatto.",
+        "q": "Come funziona il calcolatore di area su mappa?"
+      },
+      {
+        "a": "No. È una stima utile basata su dove posizioni i punti e sull'allineamento delle immagini della mappa. Per controversie legali, registri catastali o transazioni ufficiali, incarica un tecnico locale qualificato.",
+        "q": "L'area misurata è precisa come un rilievo?"
+      },
+      {
+        "a": "No. La mappa è basata su OpenStreetMap, una mappa comunitaria gratuita e aperta. Non c'è integrazione con Google Maps né affiliazione con Google.",
+        "q": "Usa Google Maps?"
+      },
+      {
+        "a": "Sì — il pulsante “Usa quest'area” invia l'area misurata al Calcolatore di area, da cui fluisce nel Calcolatore di dose concime e nel Calcolatore di profitto. La sola area non produce mai una raccomandazione di concime; sono comunque necessari coltura e regione verificati.",
+        "q": "Posso usare l'area misurata per il calcolo del concime?"
+      },
+      {
+        "a": "No. I punti di confine vivono solo nella memoria del tuo browser mentre misuri. Tra gli strumenti viene trasferito solo il numero finale dell'area — le tue coordinate non vengono mai salvate pubblicamente, inserite in link condivisibili o inviate ai nostri server.",
+        "q": "La mia posizione o il confine del campo vengono salvati o condivisi?"
+      }
+    ],
+    "howSteps": [
+      "Apri la mappa e trova il tuo campo — non serve cercare; sposta e ingrandisci, oppure centra sulla tua posizione.",
+      "Tocca la mappa per posizionare punti di confine attorno al campo. Trascina un punto per regolarlo; tocca un punto numerato per rimuoverlo.",
+      "Con 3 o più punti l'area viene calcolata con matematica geodetica (corretta per la curvatura terrestre) — la stessa per qualsiasi latitudine.",
+      "Usa l'area nel Calcolatore di area, poi nel Calcolatore di dose concime o di profitto."
+    ],
+    "removePoint": "Rimuovi punto {index}"
   },
   "kitchenGarden": {
     "eyebrow": "Pianificatore dell'orto",
@@ -1287,7 +1507,33 @@
     "savePlan": "Salva il piano in Il mio giardino",
     "saved": "Piano salvato in Il mio giardino.",
     "openMyGarden": "Apri il mio giardino",
-    "faqTitle": "Domande frequenti sull'orto in cucina"
+    "faqTitle": "Domande frequenti sull'orto in cucina",
+    "emptyBody": "Non abbiamo ancora finestre di semina verificate per ortaggi o erbe aromatiche per {region} a {month}. Non tiriamo mai a indovinare — prova un altro mese o regione, oppure sfoglia il calendario di semina completo man mano che vengono verificati più dati regionali.",
+    "faq": [
+      {
+        "a": "Dipende dalla tua regione e dal mese. Inserisci sopra i dettagli del tuo appezzamento e il pianificatore elenca solo ortaggi ed erbe con finestre di semina verificate per la tua selezione — con la fonte indicata in ogni suggerimento.",
+        "q": "Cosa posso piantare in un piccolo orto questo mese?"
+      },
+      {
+        "a": "Non ancora. Le distanze tra file e piante non sono state verificate per queste colture nei nostri dati, quindi il pianificatore lo dice onestamente invece di inventare numeri. Consulta la guida del tuo servizio di divulgazione agricola locale per le distanze.",
+        "q": "Il pianificatore mi dice le distanze di impianto?"
+      },
+      {
+        "a": "Il calendario di semina mostra ogni finestra verificata per una regione e un mese, comprese le colture da campo. Questo pianificatore restringe a ortaggi ed erbe adatti a un orto domestico, aggiunge le dimensioni del tuo appezzamento e la luce solare, e trasforma le scelte in un semplice piano di disposizione che puoi salvare in My Garden.",
+        "q": "In cosa differisce dal calendario di semina?"
+      },
+      {
+        "a": "Sì. Il pulsante “Plan a Kitchen Garden” del Calcolatore di area invia l'area misurata direttamente a questo pianificatore.",
+        "q": "Posso usare qui la mia misurazione dell'area?"
+      },
+      {
+        "a": "Nel My Garden del tuo browser (archiviazione locale) quando premi “Save plan to My Garden”, proprio come gli appezzamenti salvati dal Calcolatore di area. Accedi per sincronizzarlo tra i dispositivi.",
+        "q": "Dove viene conservato il mio piano?"
+      }
+    ],
+    "savedPlotName": "Orto — {date}",
+    "savedPlotNote": "Piano orto di {sqm} m² per {month}, {region}; {count} colture selezionate.",
+    "suggestionsCount": "{n, plural, =0 {Nessuna opzione} one {# opzione} other {# opzioni}} per {month} in {region}"
   },
   "suggestions": {
     "improveTranslation": "Migliora questa traduzione",

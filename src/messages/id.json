@@ -77,7 +77,9 @@
       "tipGeneralBody": "Buka katup drum hanya setelah 1–1.5 saluran air masuk ke lapangan (bukan di awal) untuk pemerataan.",
       "shareButton": "Bagikan di WhatsApp",
       "shareCopy": "Menyalin",
-      "shareCopied": "Disalin!"
+      "shareCopied": "Disalin!",
+      "recommendedRangeLine": "Rentang dosis yang disarankan: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Pilih dalam rentang sesuai hasil uji tanah Anda.",
+      "yieldAdjusted": "Disesuaikan untuk target hasil {yield} t/ha"
     },
     "title": "Dosis pupuk yang tepat, lengkap dengan hitungannya.",
     "soilTestCard": {
@@ -100,6 +102,14 @@
       {
         "q": "Mengapa beberapa tanaman tidak bisa dipilih?",
         "a": "Tanaman hanya bisa dipilih jika dosis NPK yang dianjurkan sudah terverifikasi terhadap sumber yang dipublikasikan. Kami lebih memilih menonaktifkan tanaman daripada mengarang angkanya — tanaman yang belum terverifikasi ditandai \"data sedang ditinjau\" hingga terkonfirmasi."
+      },
+      {
+        "a": "1 acre = 8 kanal = 160 marla, dan 1 kanal = 20 marla. Dalam satuan metrik: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Kalkulator mengubah luas Anda ke hektar, menerapkan dosis per hektar, lalu mengembalikan ke skala semula.",
+        "q": "Bagaimana kanal dan marla dikonversi?"
+      },
+      {
+        "a": "Tanaman hanya bisa dipilih jika dosis NPK yang disarankan terverifikasi dari sumber yang diterbitkan. Kami lebih memilih menonaktifkan tanaman daripada mengarang angkanya — tanaman yang belum terverifikasi ditandai \"data dalam peninjauan\" hingga terkonfirmasi.",
+        "q": "Mengapa sebagian tanaman dinonaktifkan?"
       }
     ],
     "organic": {
@@ -184,17 +194,50 @@
         "a": "Ya — kalkulator, pustaka, dan panduan gratis. Akun hanya dibutuhkan untuk fitur seperti menyimpan diagnosis.",
         "q": "Apakah Fertilizer Dose gratis?"
       },
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
+      {
+        "a": "Ya, urea dan DAP bisa diaplikasikan bersama sebagai dosis basal saat tanam. DAP menyediakan fosfor (46% P₂O₅) plus 18% nitrogen, sedangkan urea menambah lebih banyak nitrogen (46% N). Praktik umum adalah mencampurnya sebelum disebar. Namun, hindari mencampur urea dengan SSP (superfosfat tunggal) dalam satu aplikasi jika campuran akan didiamkan — bisa menggumpal. Selalu periksa rasio NPK yang disarankan untuk tanaman Anda terlebih dahulu.",
+        "q": "Bisakah urea dan DAP dicampur?"
+      },
+      {
+        "a": "Dosis basal adalah pupuk yang diberikan saat atau sebelum tanam/ditanam, diaduk ke dalam tanah. Umumnya mencakup seluruh kebutuhan fosfor dan kalium plus sebagian nitrogen (biasanya 1/3 hingga 1/2). Sisa nitrogen diberikan sebagai pemupukan susulan kemudian — misalnya urea saat fase anakan pada gandum. Pemupukan basal memastikan hara tersedia bagi akar muda sejak hari pertama.",
+        "q": "Apa itu dosis basal dalam pupuk?"
+      },
+      {
+        "a": "Tergantung tanah dan tanaman Anda. DAP (18-46-0) memiliki konsentrasi fosfor lebih tinggi (46% P₂O₅), sehingga Anda membutuhkan lebih sedikit produk per acre — bagus untuk pengangkutan dan penanganan. SSP (16% P₂O₅) juga menyediakan sulfur (~11%) dan kalsium (~19%), sehingga lebih baik untuk tanaman minyak, kacang-kacangan, dan tanah yang kekurangan sulfur. DAP biasanya lebih murah per kg fosfor, tetapi SSP menambah hara sekunder. Gunakan alat Compare kami untuk memeriksa mana yang lebih murah per kg P₂O₅ pada harga lokal Anda.",
+        "q": "DAP vs SSP — mana yang lebih baik?"
+      },
+      {
+        "a": "Uji tanah mengukur nitrogen, fosfor, kalium, pH, dan bahan organik yang sudah ada di tanah Anda. Alih-alih menggunakan rekomendasi umum, dosis pupuk disesuaikan — jika tanah Anda sudah tinggi fosfor, Anda mengaplikasikan lebih sedikit pupuk P. Ini menghemat biaya dan mencegah pemupukan berlebih. Kami menyarankan uji tanah setiap 2-3 tahun melalui dinas pertanian setempat. Kalkulator kami menggunakan rekomendasi standar; untuk dosis presisi berbasis uji tanah, konsultasikan ke laboratorium uji tanah setempat dengan angka standar ini sebagai titik awal.",
+        "q": "Apa itu dosis pupuk berbasis uji tanah?"
+      },
+      {
+        "a": "Setelah diaplikasikan, urea berubah menjadi amonium yang tersedia bagi tanaman dalam waktu sekitar 2–4 hari melalui enzim alami tanah, lalu menjadi nitrat selama 2–4 minggu berikutnya tergantung suhu dan kelembapan tanah. Secara praktis, satu aplikasi urea memberi makan tanaman selama kurang lebih 4–6 minggu, itulah mengapa nitrogen biasanya dibagi menjadi 2–3 dosis sepanjang musim. Kehilangan sebagai gas amonia paling tinggi pada tanah panas, kering, dan alkalis ketika urea dibiarkan di permukaan — mengaduknya ke tanah yang lembap mengurangi hal ini.",
+        "q": "Berapa lama urea bertahan di tanah?"
+      },
+      {
+        "a": "Urea (46-0-0) hanya menyediakan nitrogen sebesar 46% N — pupuk nitrogen paling pekat yang tersedia. DAP (18-46-0) menyediakan 18% nitrogen plus 46% fosfat (P₂O₅). Dalam praktiknya, DAP digunakan sebagai dosis basal saat tanam ketika tanaman membutuhkan fosfor untuk pembentukan akar, sedangkan urea digunakan untuk pemupukan susulan nitrogen selama pertumbuhan aktif. Keduanya memiliki tujuan utama yang berbeda, itulah mengapa petani sering menggunakannya bersamaan, bukan sebagai pengganti satu sama lain.",
+        "q": "Apa perbedaan urea dan DAP?"
+      },
+      {
+        "a": "Mulai dengan uji tanah jika memungkinkan — ini memberi tahu apa yang sudah ada di tanah Anda sehingga Anda hanya menambahkan yang kurang. Lalu gunakan Kalkulator Dosis Tanaman di Fertilizer Dose: masukkan jenis tanaman dan ukuran pot atau bedengan Anda, dan kalkulator memberi gram per tanaman yang tepat. Sebagai patokan, berikan dalam dosis kecil bertahap daripada sekaligus, siram setelah pemupukan butiran, dan selalu ikuti dosis pada label — lebih banyak pupuk bukan berarti lebih banyak pertumbuhan dan bisa membakar akar.",
+        "q": "Bagaimana cara memberi dosis pupuk untuk tanaman?"
+      },
+      {
+        "a": "Pupuk kandang yang sudah matang biasanya mengandung sekitar 0.5–1.0% nitrogen, 0.2–0.5% fosfat (P₂O₅), dan 0.5–1.0% kalium (K₂O), tetapi ini sangat bervariasi tergantung sumber hewan, pakan, bahan alas, serta cara penyimpanan dan pengomposannya. Karena kandungan haranya rendah dan bervariasi dibandingkan pupuk mineral, FYM paling cocok sebagai pembenah tanah — menambah bahan organik, memperbaiki struktur tanah, dan menyediakan hara mikro — sementara pupuk mineral menyediakan dosis NPK yang tepat sesuai kebutuhan tanaman.",
+        "q": "Berapa NPK dalam pupuk kandang (FYM)?"
+      },
+      {
+        "a": "Pagi hari (sebelum sekitar jam 9–10) atau sore menjelang malam adalah waktu terbaik untuk memupuk tanaman lewat daun. Pori daun (stomata) terbuka, suhu lebih sejuk, dan tetesan semprotan bertahan lebih lama dalam keadaan basah, sehingga penyerapan hara meningkat. Hindari menyemprot di tengah hari yang panas — tetesan mengering terlalu cepat untuk penyerapan yang baik dan residu yang pekat bisa membakar daun. Lewati juga penyemprotan tepat sebelum hujan yang diperkirakan turun, karena hujan akan membilas pupuknya.",
+        "q": "Kapan waktu terbaik menyemprot pupuk daun?"
+      },
+      {
+        "a": "Tiga angka pada karung pupuk (misalnya 15-15-15) adalah persentase berat nitrogen (N), fosfat (P₂O₅), dan kalium (K₂O). Jadi karung 50 kg 15-15-15 mengandung masing-masing 7.5 kg N, P₂O₅, dan K₂O. Perhatikan bahwa fosfor dan kalium dinyatakan dalam bentuk oksidanya sesuai konvensi industri, bukan sebagai P dan K elemental — kalkulator Fertilizer Dose menangani konversi ini untuk Anda.",
+        "q": "Apa arti NPK pada karung pupuk?"
+      },
+      {
+        "a": "Amonium sulfat (21-0-0 plus 24% sulfur) menyediakan nitrogen bersama sulfur, sehingga bermanfaat di tanah yang kekurangan sulfur — umum pada serealia hasil tinggi dan tanaman minyak. Ia memiliki efek mengasamkan tanah, sehingga cocok untuk tanah netral hingga alkalis, tetapi gunakan dengan hati-hati pada tanah yang sudah asam. Ia juga pilihan yang baik saat Anda menginginkan nitrogen tanpa menambah fosfor atau kalium.",
+        "q": "Amonium sulfat digunakan untuk apa?"
+      },
       {
         "q": "Bisakah pupuk daun menggantikan pemupukan lewat tanah?",
         "a": "Tidak — pemupukan daun adalah suplemen, bukan pengganti. Daun menyerap unsur hara dengan cepat tetapi dalam jumlah kecil, sehingga penyemprotan daun ideal untuk mengatasi kekurangan unsur hara mikro (seng, besi, boron) atau memberi dorongan cepat selama fase pertumbuhan kritis. Namun sebagian besar NPK harus diberikan lewat tanah karena tanaman membutuhkan unsur hara berkilo-kilo per acre, dan daun sama sekali tidak dapat menyerap sebanyak itu. Gunakan pemupukan daun bersama program pemupukan dasar dan susulan Anda, bukan sebagai penggantinya."
@@ -294,7 +337,8 @@
       "sourceLabel": "Sumber data:",
       "genericLabel": "Dasar kustom (hanya panduan umum — bukan rekomendasi terverifikasi)",
       "disclaimer": "Semua dosis adalah estimasi. Konfirmasikan dengan agronomis setempat / petugas penyuluh pertanian Anda sebelum mengaplikasikan pupuk.",
-      "baseRangeLine": "Kisaran dosis dasar: N {n} – P₂O₅ {p} – K₂O {k} kg/ha"
+      "baseRangeLine": "Kisaran dosis dasar: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Rentang dosis disesuaikan: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Metode",
@@ -569,7 +613,20 @@
     "eyebrow": "Plant Doctor",
     "title": "Tunjukkan daunnya. Kami bantu membacanya.",
     "metaTitle": "Plant Doctor — Diagnosis Masalah Tanaman dengan AI",
-    "metaDescription": "Unggah foto tanaman dan jelaskan gejalanya untuk diagnosis berbantuan AI berisi penyebab, tindakan, dan langkah pencegahan."
+    "metaDescription": "Unggah foto tanaman dan jelaskan gejalanya untuk diagnosis berbantuan AI berisi penyebab, tindakan, dan langkah pencegahan.",
+    "form": {
+      "analyzing": "Menganalisis…",
+      "cropLabel": "Tanaman (jika diketahui)",
+      "cropPlaceholder": "Tidak yakin / lainnya",
+      "diagnosisTitle": "Diagnosis",
+      "photoHint": "Klik atau jatuhkan foto di sini",
+      "photoLabel": "Foto tanaman",
+      "photoTypes": "JPG, PNG, atau WebP, maks 5 MB",
+      "submit": "Diagnosis tanaman saya",
+      "symptomsHint": "Apa yang Anda lihat? Bercak kuning, layu, lubang di daun, kapan mulainya, bagian tanaman yang mana…",
+      "symptomsLabel": "Jelaskan gejalanya",
+      "symptomsPlaceholder": "cth. Bercak kuning bertepi cokelat pada daun bawah gandum, mulai sekitar seminggu lalu setelah hujan…"
+    }
   },
   "growing": {
     "searchPlaceholder": "Cari berdasarkan nama…",
@@ -962,7 +1019,19 @@
       "detailCta": "Lihat detail"
     },
     "searchPlaceholder": "Cari pupuk…",
-    "searchNoResults": "Tidak ada pupuk yang cocok dengan pencarian Anda."
+    "searchNoResults": "Tidak ada pupuk yang cocok dengan pencarian Anda.",
+    "taglines": {
+      "ammonium-sulphate": "Nitrogen plus sulfur, dengan efek mengasamkan tanah.",
+      "compost": "Limbah pertanian dan rumah tangga yang terurai — nutrisi bervariasi, tergantung bahan baku.",
+      "dap": "Sumber fosfor basal standar — dengan bonus nitrogen.",
+      "farmyard-manure": "Pupuk kandang tradisional yang besar — hara rendah, nilai pembenah tanah tinggi.",
+      "green-manure": "Pabrik nitrogen hidup — ditanam, lalu dibajak sebelum tanaman utama.",
+      "mop": "Sumber kalium ekonomis untuk sebagian besar tanaman lapangan.",
+      "sop": "Kalium bebas klorida untuk tanaman sensitif bernilai tinggi.",
+      "ssp": "Fosfor plus sulfur dan kalsium dalam satu butir.",
+      "urea": "Pupuk nitrogen paling pekat yang umum digunakan.",
+      "vermicompost": "Pupuk kandang yang diolah cacing tanah — lebih kaya dari FYM, tetapi bahan baku menentukan segalanya."
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose — Bagan Dosis Pupuk & Referensi Cepat NPK",
@@ -1050,7 +1119,8 @@
       "scheduleTitle": "Disarankan: Pakan tanaman ({ppm} ppm {nutrient})",
       "addToGarden": "Tambahkan jadwal ke Taman Saya",
       "addedToGarden": "Ditambahkan — lihat Taman Saya → Pengingat.",
-      "gardenHint": "Pengingat adalah saran waktu yang umum, bukan resep. Lewatkan pemberian makan jika tanaman terlihat stres."
+      "gardenHint": "Pengingat adalah saran waktu yang umum, bukan resep. Lewatkan pemberian makan jika tanaman terlihat stres.",
+      "targetPpmPK": "Target {nutrient} (ppm)"
     },
     "presets": {
       "gentle": {
@@ -1083,18 +1153,60 @@
       "perBed": "Total untuk tempat tidur",
       "perBedHint": "Campurkan ke dalam air irigasi yang dioleskan secara merata di atas bedengan.",
       "scheduleTitle": "Jadwal pemberian makan (6 berikutnya)",
-      "scheduleHint": "Berdasarkan frekuensi yang Anda pilih. Ini adalah alat bantu perencanaan - sesuaikan dengan respons tanaman."
+      "scheduleHint": "Berdasarkan frekuensi yang Anda pilih. Ini adalah alat bantu perencanaan - sesuaikan dengan respons tanaman.",
+      "bedVolumeHint": "{area} {unit} × {depth} cm zona akar.",
+      "formulaNoteBed": "Volume bedengan = luas × {depth} cm kedalaman.",
+      "formulaNoteLiquid": "Hitung: {grade} pada {ppm} ppm {nutrient} → gram per liter = {ppm} ÷ (%{nutrient} × 10), lalu ÷ {density} g/ml kerapatan = ml per liter.",
+      "kitchenApprox": "{tsp} — panduan kasar, bukan ukuran pasti; timbang untuk akurasi.",
+      "total": "Total untuk {litres} L"
     },
     "method": {
       "eyebrow": "Bagaimana cara kerjanya",
       "title": "Pemberian dosis per ppm, seperti yang dilakukan petani",
-      "desc": "Petani komersial tidak menebak-nebak sesendok pun — mereka mencampurkan pupuk hingga mencapai target konsentrasi unsur hara dalam bagian per juta (ppm). Kalkulator ini menghadirkan metode yang sama untuk tukang kebun rumah."
+      "desc": "Petani komersial tidak menebak-nebak sesendok pun — mereka mencampurkan pupuk hingga mencapai target konsentrasi unsur hara dalam bagian per juta (ppm). Kalkulator ini menghadirkan metode yang sama untuk tukang kebun rumah.",
+      "steps": [
+        {
+          "d": "Baca angka N-P-K pada karung, cth. 20-20-20, atau masukkan grade kustom.",
+          "t": "Pilih grade pupuk Anda"
+        },
+        {
+          "d": "Tanaman hias dalam ruangan dan tanaman lambat tumbuh cocok dengan dosis lembut (~100 ppm N); sebagian besar tanaman pot dengan dosis reguler (~150 ppm N); tanaman rakus yang subur bisa menerima ~200 ppm N.",
+          "t": "Pilih kekuatan pemberian makan"
+        },
+        {
+          "d": "Larutkan gram terhitung ke dalam gembor Anda dan siram seperti biasa, biarkan kelebihan air menetes. Beri makan setiap penyiraman pada dosis ini, atau setengah lebih jarang dengan dosis ganda — jangan keduanya.",
+          "t": "Campur dan siram seperti biasa"
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Sumber",
       "title": "Dari mana tarif pemberian makan berasal",
-      "note": "Preset menggunakan rentang terendah dari setiap rentang yang dipublikasikan, pilihan konservatif untuk tingkat cahaya rumah. Selalu ikuti label produk Anda dan saran layanan penyuluhan lokal Anda."
-    }
+      "note": "Preset menggunakan rentang terendah dari setiap rentang yang dipublikasikan, pilihan konservatif untuk tingkat cahaya rumah. Selalu ikuti label produk Anda dan saran layanan penyuluhan lokal Anda.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): tanaman bedding 200–250 ppm N umpan konstan; tipe lambat tumbuh 100–150 ppm N hingga mapan.",
+        "Michigan State University Extension (E2186): tanaman dalam pot — pupuk slow-release plus umpan cair tambahan 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": rumus g/L = ppm ÷ (%N × 10) dan contoh 200 ppm N yang dikerjakan."
+      ]
+    },
+    "faq": [
+      {
+        "a": "Sebagian besar tanaman pot tumbuh baik dengan larutan penyiraman 100–150 ppm nitrogen — kira-kira 0.5–1 g 20-20-20 per liter air. Tanaman rakus seperti bunga tahunan yang subur bisa menerima hingga 200 ppm. Mulai dengan lembut; Anda selalu bisa menambah lain kali.",
+        "q": "Berapa banyak pupuk yang dibutuhkan tanaman pot?"
+      },
+      {
+        "a": "Satu sendok teh peres pupuk butiran kira-kira 5–6 g, tetapi kerapatan bervariasi antar produk, jadi sendok hanya panduan kasar. Untuk pot kecil dan bibit, timbangan gram murah jauh lebih andal — kesalahan sendok 50% mudah terjadi dan cukup untuk membakar akar.",
+        "q": "Bisakah saya pakai sendok saja tanpa menimbang?"
+      },
+      {
+        "a": "Pada dosis lembut dan reguler di atas, ya — begitulah cara petani komersial melakukannya (\"fertigasi\"). Alternatifnya adalah memberi makan setengah lebih jarang dengan dosis ganda. Jangan lakukan keduanya: pilih satu jadwal dan amati tanaman.",
+        "q": "Haruskah saya memupuk setiap kali menyiram?"
+      },
+      {
+        "a": "Tepi daun cokelat dan renyah, layu padahal tanah basah, dan kerak putih di permukaan media. Jika Anda melihat ini, bilas pot dengan air biasa hingga mengalir bebas dari lubang drainase, dan lewati pemupukan berikutnya.",
+        "q": "Apa tanda-tanda pupuk berlebihan?"
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Alat pertanian gratis",
@@ -1182,10 +1294,83 @@
       "conversionTitle": "Tabel konversi luas lahan",
       "conversionNote": "Definisi yang tepat. Unit regional hanya muncul jika diverifikasi.",
       "sourcesTitle": "Sumber & metodologi",
-      "sourcesBody": "Satuan universal menggunakan SI dan definisi imperial (1 hektar = 4.046.8564224 m²; 1 hektar = 10.000 m²). Kanal dan Marla menggunakan standar pendapatan Punjab: 1 karam = 5,5 kaki, 1 marla = 9 karam persegi = 272,25 kaki persegi, 1 kanal = 20 marla = 5,445 kaki persegi. Semua penghitungan dijalankan dalam meter persegi secara internal dan dikonversi satu kali ke unit tampilan — tanpa pembulatan berantai."
+      "sourcesBody": "Satuan universal menggunakan SI dan definisi imperial (1 hektar = 4.046.8564224 m²; 1 hektar = 10.000 m²). Kanal dan Marla menggunakan standar pendapatan Punjab: 1 karam = 5,5 kaki, 1 marla = 9 karam persegi = 272,25 kaki persegi, 1 kanal = 20 marla = 5,445 kaki persegi. Semua penghitungan dijalankan dalam meter persegi secara internal dan dikonversi satu kali ke unit tampilan — tanpa pembulatan berantai.",
+      "formulas": [
+        {
+          "example": "100 m × 50 m = 5.000 m²",
+          "formula": "Luas = panjang × lebar",
+          "name": "Persegi panjang"
+        },
+        {
+          "example": "25 m × 25 m = 625 m²",
+          "formula": "Luas = sisi²",
+          "name": "Persegi"
+        },
+        {
+          "example": "½ × 40 m × 30 m = 600 m²",
+          "formula": "Luas = ½ × alas × tinggi",
+          "name": "Segitiga"
+        },
+        {
+          "example": "((60 m + 40 m) / 2) × 30 m = 1.500 m²",
+          "formula": "Luas = ((sisi A + sisi B) / 2) × tinggi",
+          "name": "Trapesium"
+        },
+        {
+          "example": "Tepat — tanpa perkiraan",
+          "formula": "Bagi menjadi dua segitiga di sepanjang diagonal; selesaikan masing-masing dengan rumus Heron lalu jumlahkan",
+          "name": "Empat sisi + diagonal"
+        }
+      ]
     },
     "relatedTitle": "Alat pertanian terkait",
-    "relatedCurrent": "Anda di sini"
+    "relatedCurrent": "Anda di sini",
+    "faq": [
+      {
+        "a": "Ukur panjang dan lebar dalam satuan yang sama lalu kalikan: luas = panjang × lebar. Untuk bentuk tidak beraturan, bagi lahan menjadi persegi panjang dan segitiga, hitung masing-masing, lalu jumlahkan.",
+        "q": "Bagaimana cara menghitung luas lahan?"
+      },
+      {
+        "a": "Gunakan geometri yang sama, lalu konversi ke satuan yang dipakai wilayah Anda — acre, hektar, atau satuan lokal seperti kanal dan marla di Pakistan. Kalkulator luas lahan pertanian ini mengonversi otomatis dan bisa mengirim hasilnya langsung ke Kalkulator Dosis Pupuk.",
+        "q": "Bagaimana cara menghitung luas lahan pertanian?"
+      },
+      {
+        "a": "Masukkan panjang dan lebar petak Anda di atas lalu baca angka acre dari hasil — tanpa hitungan manual. Jika Anda mengukur dalam kaki, kalkulator mengonversi kaki persegi ke acre otomatis (43.560 sq ft = 1 acre).",
+        "q": "Berapa acre petak ini?"
+      },
+      {
+        "a": "Kalikan panjang dalam kaki dengan lebar dalam kaki: 100 ft × 50 ft = 5.000 sq ft. Satu acre adalah 43.560 sq ft.",
+        "q": "Bagaimana cara menghitung luas lahan dalam kaki persegi?"
+      },
+      {
+        "a": "Tidak. Empat sisi saja tidak bisa menentukan luas segi empat — bentuknya bisa berubah. Ukur juga diagonalnya dan petak terbagi menjadi dua segitiga yang bisa diselesaikan persis. Tanpa itu, hanya perkiraan berlabel yang mungkin.",
+        "q": "Bisakah empat panjang sisi menghitung petak tidak beraturan dengan tepat?"
+      },
+      {
+        "a": "Kalikan acre dengan 0.404686. Satu hektar sama dengan 2.471 acre. Gunakan mode Converter di atas untuk pasangan satuan apa pun.",
+        "q": "Bagaimana cara mengonversi acre ke hektar?"
+      },
+      {
+        "a": "Satu hektar (10.000 m²) sekitar 2.47 kali lebih besar dari satu acre (4.047 m²). Hektar adalah standar di kebanyakan negara; acre umum di Pakistan, India, Bangladesh, dan AS.",
+        "q": "Apa perbedaan acre dan hektar?"
+      },
+      {
+        "a": "Ya — gunakan mode Irregular: bagi lahan Anda menjadi persegi panjang, persegi, segitiga, atau trapesium, masukkan setiap bagian, dan kalkulator menjumlahkannya.",
+        "q": "Bisakah saya menghitung luas lahan tidak beraturan?"
+      },
+      {
+        "a": "Satuan seperti bigha, marla, dan kanal tumbuh dari sistem pendapatan lokal, sehingga ukurannya berbeda antar provinsi dan kebiasaan. Kami hanya menawarkan satuan regional yang konversinya terverifikasi — misalnya standar pendapatan Punjab untuk kanal/marla — dan kami memberi label standar yang digunakan.",
+        "q": "Mengapa sebagian satuan lahan tradisional berbeda antar wilayah?"
+      },
+      {
+        "a": "Ya. Ketuk 'Use in Fertilizer Calculator' dan luas, satuan, negara, serta wilayah Anda berpindah otomatis — tanpa mengetik ulang. Anda tetap memilih tanaman di sana, karena luas saja tidak pernah menentukan dosis pupuk.",
+        "q": "Bisakah saya menggunakan luas terhitung di Kalkulator Dosis Pupuk?"
+      },
+      {
+        "a": "Tidak. Alat ini memberikan perkiraan bermanfaat dari pengukuran Anda sendiri untuk keputusan bertani. Batas legal, sengketa, dan catatan resmi memerlukan surveyor berkualifikasi atau otoritas pertanahan.",
+        "q": "Apakah ini survei lahan resmi?"
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Alat Pertanian",
@@ -1246,7 +1431,35 @@
     "bannerProfit": "Perkirakan Keuntungan",
     "bannerDismiss": "Membubarkan",
     "relatedTitle": "Alat terkait",
-    "relatedCurrent": "Anda di sini"
+    "relatedCurrent": "Anda di sini",
+    "faq": [
+      {
+        "a": "Ketuk peta untuk menjatuhkan titik batas di sekeliling lahan Anda. Setelah memiliki minimal 3 titik, alat menghitung luas tertutup menggunakan matematika geodesi yang memperhitungkan kelengkungan bumi — akurat di lintang mana pun, tidak seperti pengukuran layar datar.",
+        "q": "Bagaimana cara kerja kalkulator luas peta?"
+      },
+      {
+        "a": "Tidak. Ini perkiraan bermanfaat berdasarkan tempat Anda menaruh titik dan keselarasan citra peta. Untuk sengketa legal, catatan lahan, atau transaksi resmi, gunakan surveyor lokal berkualifikasi.",
+        "q": "Apakah luas terukur akurat setara survei?"
+      },
+      {
+        "a": "Tidak. Peta ini didukung OpenStreetMap, peta komunitas yang gratis dan terbuka. Tidak ada integrasi Google Maps dan tidak ada afiliasi dengan Google.",
+        "q": "Apakah ini menggunakan Google Maps?"
+      },
+      {
+        "a": "Ya — tombol “Use This Area” mengirim luas terukur ke Kalkulator Luas Lahan, dari sana mengalir ke Kalkulator Dosis Pupuk dan Kalkulator Keuntungan. Luas saja tidak pernah menghasilkan rekomendasi pupuk; tanaman dan wilayah terverifikasi tetap diperlukan.",
+        "q": "Bisakah saya menggunakan luas terukur untuk perhitungan pupuk?"
+      },
+      {
+        "a": "Tidak. Titik batas hanya ada di memori peramban Anda selama Anda mengukur. Hanya angka luas akhir yang dipindahkan antar alat — koordinat Anda tidak pernah disimpan publik, dimasukkan ke tautan yang bisa dibagikan, atau dikirim ke server kami.",
+        "q": "Apakah lokasi atau batas lahan saya disimpan atau dibagikan?"
+      }
+    ],
+    "howSteps": [
+      "Buka peta dan temukan lahan Anda — pencarian tidak diperlukan; geser dan perbesar, atau pusatkan pada lokasi Anda.",
+      "Ketuk peta untuk menempatkan titik batas di sekeliling lahan. Seret titik mana pun untuk menyesuaikan; ketuk titik bernomor untuk menghapusnya.",
+      "Dengan 3 titik atau lebih, luas dihitung dengan matematika geodesi (koreksi kelengkungan bumi) — sama untuk lintang mana pun.",
+      "Gunakan luas di Kalkulator Luas Lahan, lalu di Kalkulator Dosis Pupuk atau Kalkulator Keuntungan."
+    ]
   },
   "kitchenGarden": {
     "eyebrow": "Perencana taman dapur",
@@ -1295,7 +1508,32 @@
     "saved": "Rencana disimpan ke Taman Saya.",
     "openMyGarden": "Buka Taman Saya",
     "savedPlotName": "Kebun dapur — {date}",
-    "faqTitle": "FAQ berkebun di dapur"
+    "faqTitle": "FAQ berkebun di dapur",
+    "emptyBody": "Kami belum memiliki jendela tanam sayur atau herba yang terverifikasi untuk {region} pada {month}. Kami tidak pernah menebak — coba bulan atau wilayah lain, atau jelajahi kalender tanam lengkap selagi lebih banyak data regional terverifikasi.",
+    "faq": [
+      {
+        "a": "Tergantung wilayah dan bulan Anda. Masukkan detail petak di atas dan perencana hanya mencantumkan sayur dan herba dengan jendela tanam terverifikasi untuk pilihan Anda — dengan sumber yang disebutkan di setiap saran.",
+        "q": "Apa yang bisa saya tanam di kebun dapur kecil bulan ini?"
+      },
+      {
+        "a": "Belum. Jarak baris dan jarak tanam belum terverifikasi untuk tanaman-tanaman ini di data kami, jadi perencana mengatakannya dengan jujur alih-alih mengarang angka. Periksa panduan penyuluhan pertanian setempat untuk jarak tanam.",
+        "q": "Apakah perencana memberi tahu jarak tanam?"
+      },
+      {
+        "a": "Kalender tanam menunjukkan setiap jendela terverifikasi untuk suatu wilayah dan bulan, termasuk tanaman lapangan. Perencana ini mempersempitnya menjadi sayur dan herba yang cocok untuk kebun rumah, menambahkan ukuran petak dan cahaya matahari Anda, dan mengubah pilihan menjadi rencana tata letak sederhana yang bisa disimpan ke My Garden.",
+        "q": "Apa bedanya dengan kalender tanam?"
+      },
+      {
+        "a": "Ya. Tombol “Plan a Kitchen Garden” di Kalkulator Luas Lahan mengirim luas terukur Anda langsung ke perencana ini.",
+        "q": "Bisakah saya menggunakan pengukuran luas lahan saya di sini?"
+      },
+      {
+        "a": "Di My Garden pada peramban Anda (penyimpanan lokal) saat Anda menekan “Save plan to My Garden”, sama seperti petak tersimpan dari Kalkulator Luas Lahan. Masuk untuk menyinkronkannya antar perangkat.",
+        "q": "Di mana rencana saya disimpan?"
+      }
+    ],
+    "savedPlotNote": "Rencana kebun dapur {sqm} m² untuk {month}, {region}; {count} tanaman dipilih.",
+    "suggestionsCount": "{n, plural, =0 {Tidak ada opsi} one {# opsi} other {# opsi}} untuk {month} di {region}"
   },
   "suggestions": {
     "improveTranslation": "Sempurnakan terjemahan ini",

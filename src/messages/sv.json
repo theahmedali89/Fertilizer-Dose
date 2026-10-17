@@ -102,6 +102,14 @@
       {
         "q": "Varför är vissa grödor inaktiverade?",
         "a": "En gröda kan bara väljas när dess rekommenderade NPK-dos är verifierad mot en publicerad källa. Vi inaktiverar hellre en gröda än hittar på dess värden – overifierade grödor är märkta ”data under granskning” tills de bekräftats."
+      },
+      {
+        "q": "Hur omvandlas kanal och marla?",
+        "a": "1 acre = 8 kanal = 160 marla, och 1 kanal = 20 marla. I metriska enheter: 1 acre = 0,4047 ha, 1 kanal = 0,0506 ha, 1 marla = 0,00253 ha. Kalkylatorn omvandlar din areal till hektar, tillämpar dosen per hektar och skalar sedan tillbaka."
+      },
+      {
+        "q": "Varför är vissa grödor inaktiverade?",
+        "a": "En gröda kan bara väljas när den rekommenderade NPK-dosen är verifierad mot en publicerad källa. Vi inaktiverar hellre en gröda än att hitta på siffror — overifierade grödor markeras \"data under granskning\" tills de bekräftats."
       }
     ],
     "organic": {
@@ -186,17 +194,50 @@
         "a": "Ja – beräknaren, biblioteken och guiderna är gratis. Ett konto behövs bara för funktioner som att spara diagnoser.",
         "q": "Är Fertilizer Dose gratis att använda?"
       },
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
+      {
+        "q": "Kan jag blanda Urea och DAP tillsammans?",
+        "a": "Ja, Urea och DAP kan spridas tillsammans som grundgödsling vid sådd. DAP ger fosfor (46 % P₂O₅) plus 18 % kväve, medan Urea tillför mer kväve (46 % N). Ett vanligt sätt är att blanda dem före spridning. Undvik dock att blanda Urea med SSP (enkel superfosfat) i samma spridning om blandningen får stå — den kan bli klumpig. Kontrollera alltid din grödas rekommenderade NPK-förhållande först."
+      },
+      {
+        "q": "Vad är grundgödsling i gödsling?",
+        "a": "Grundgödsling är den gödsel som sprids vid eller före sådd/plantering och myllas ner i jorden. Den innehåller vanligtvis hela fosfor- och kaliumbehovet plus en del av kvävet (vanligtvis 1/3 till 1/2). Resten av kvävet ges som övergödsling senare — till exempel Urea vid axgång för vete. Grundgödsling säkerställer att näring finns tillgänglig för unga rötter från dag ett."
+      },
+      {
+        "q": "DAP mot SSP — vilket är bäst?",
+        "a": "Det beror på din jord och din gröda. DAP (18-46-0) har högre fosforhalt (46 % P₂O₅), så du behöver mindre produkt per hektar — bra för transport och hantering. SSP (16 % P₂O₅) ger också svavel (~11 %) och kalcium (~19 %), vilket gör det bättre för oljeväxter, baljväxter och svavelbristiga jordar. DAP är vanligtvis billigare per kg fosfor, men SSP tillför sekundära näringsämnen. Använd vårt Jämför-verktyg för att se vilket som är billigast per kg P₂O₅ till dina lokala priser."
+      },
+      {
+        "q": "Vad är jordprovbaserad gödseldos?",
+        "a": "Ett jordprov mäter din jords befintliga kväve, fosfor, kalium, pH och mullhalt. Istället för att använda en schablonrekommendation justeras gödseldosen — om din jord redan har höga fosforhalter sprider du mindre P-gödsel. Detta sparar pengar och förhindrar övergödsling. Vi rekommenderar att du tar ett jordprov vart 2–3:e år via din lokala jordbruksförvaltning. Vår kalkylator använder standardrekommendationer; för jordprovbaserade precisionsdoser, rådfråga ditt lokala jordprovslabb med dessa standardvärden som utgångspunkt."
+      },
+      {
+        "q": "Hur länge håller Urea i jorden?",
+        "a": "När Urea har spridits omvandlas den till växttillgängligt ammonium inom cirka 2–4 dagar genom naturliga jordenzymer, och sedan till nitrat under de följande 2–4 veckorna beroende på jordtemperatur och fukt. I praktiken gödslar en enda Urea-giva grödan i ungefär 4–6 veckor, vilket är anledningen till att kväve vanligtvis delas upp i 2–3 doser över säsongen. Förluster som ammoniakgas är störst på varma, torra, alkaliska jordar när Urea ligger kvar på ytan — att mylla ner den i fuktig jord minskar detta."
+      },
+      {
+        "q": "Vad är skillnaden mellan Urea och DAP?",
+        "a": "Urea (46-0-0) ger bara kväve vid 46 % N — det mest koncentrerade kvävegödslet som finns. DAP (18-46-0) ger 18 % kväve plus 46 % fosfat (P₂O₅). I praktiken används DAP som grundgödsling vid sådd när grödan behöver fosfor för rotetablering, medan Urea används för kväveövergödsling under aktiv tillväxt. De tjänar olika huvudsyften, vilket är anledningen till att odlare ofta använder dem tillsammans snarare än som ersättning för varandra."
+      },
+      {
+        "q": "Hur doserar jag gödsel till växter?",
+        "a": "Börja med ett jordprov om möjligt — det visar vad din jord redan har så att du bara tillsätter det som saknas. Använd sedan Växtdos-kalkylatorn på Fertilizer Dose: ange din växttyp och kruk- eller bäddstorlek, så får du den exakta mängden i gram per planta. Som tumregel, sprid i små deldoser snarare än allt på en gång, vattna efter granulatspridning och följ alltid etikettens dosering — mer gödsel betyder inte mer tillväxt och kan bränna rötter."
+      },
+      {
+        "q": "Hur mycket NPK finns i stallgödsel (FYM)?",
+        "a": "Väl komposterad stallgödsel innehåller vanligtvis cirka 0,5–1,0 % kväve, 0,2–0,5 % fosfat (P₂O₅) och 0,5–1,0 % kalium (K₂O), men detta varierar kraftigt med djurslag, foder, strömedel och hur den lagrats och komposterats. Eftersom näringsinnehållet är lågt och varierande jämfört med mineralgödsel fungerar FYM bäst som jordförbättrare — den tillför mull, förbättrar markstrukturen och ger mikronäringsämnen — medan mineralgödsel ger den exakta NPK-dos grödan behöver."
+      },
+      {
+        "q": "Vilken tid på dygnet är bäst för att spruta bladgödsel?",
+        "a": "Tidig morgon (före cirka 9–10) eller sen kväll är de bästa tiderna att bladgödsla växter. Bladens klyvöppningar (stomata) är öppna, det är svalare och spraydropparna förblir våta längre, vilket förbättrar näringsupptaget. Undvik att spruta mitt på dagen i hettan — dropparna torkar för snabbt för bra upptag och koncentrerade rester kan bränna bladen. Hoppa också över sprutning precis före väntat regn, som sköljer bort gödseln."
+      },
+      {
+        "q": "Vad betyder NPK på en gödselsäck?",
+        "a": "De tre siffrorna på en gödselsäck (till exempel 15-15-15) är andelen i vikt av kväve (N), fosfat (P₂O₅) och kalium (K₂O). Så en 50 kg-säck av 15-15-15 innehåller 7,5 kg vardera av N, P₂O₅ och K₂O. Observera att fosfor och kalium enligt branschkonvention uttrycks i sina oxidformer, inte som grundämnena P och K — Fertilizer Dose-kalkylatorerna hanterar denna omvandling åt dig."
+      },
+      {
+        "q": "Vad används ammoniumsulfatgödsel till?",
+        "a": "Ammoniumsulfat (21-0-0 plus 24 % svavel) ger kväve tillsammans med svavel, vilket gör det användbart där jordar har svavelbrist — vanligt i högavkastande spannmål och oljeväxter. Det har en försurande effekt på jorden, så det passar bra för neutrala till alkaliska jordar, men använd det med försiktighet på redan sura jordar. Det är också ett bra val när du vill ha kväve utan att tillsätta fosfor eller kalium."
+      },
       {
         "q": "Kan bladgödsling ersätta gödsling i jorden?",
         "a": "Nej — bladgödsling är ett komplement, inte en ersättning. Bladen tar upp näring snabbt men i små mängder, vilket gör bladgödsling idealisk för att rätta till brist på mikronäring (zink, järn, bor) eller ge en snabb skjuts under kritiska tillväxtstadier. Men merparten av NPK måste tillföras via jorden, eftersom grödan behöver kilovis med näring per acre och bladen helt enkelt inte kan ta upp så stora mängder. Använd bladgödsling tillsammans med grundgödsling och övergödsling i jorden — inte i stället för dem."
@@ -349,7 +390,13 @@
       "plantingCalendar": "Såkalender",
       "myGarden": "Min trädgård",
       "profitCalculator": "Vinstberäknare",
-      "compare": "Jämför"
+      "compare": "Jämför",
+      "contributors": "Våra bidragsgivare",
+      "improveTranslation": "Förbättra den här översättningen",
+      "deficiencyChecker": "Bristsymtomkontroll",
+      "tankMixChecker": "Tankblandningskontroll",
+      "costCalculator": "Kostnadskalkylator",
+      "alternativeFinder": "Alternativsökare"
     },
     "rights": "Alla rättigheter förbehållna.",
     "tagline": "Exakta gödseldoser från verkliga agronomiska data – för vete, ris, majs och mer. Byggd för lantbrukare i 17 länder.",
@@ -551,14 +598,35 @@
     "account": "Konto",
     "admin": "Admin",
     "logout": "Logga ut",
-    "deficiencyChecker": "Näringsbristkontroll"
+    "deficiencyChecker": "Näringsbristkontroll",
+    "country": "Land",
+    "plantDoseCalculator": "Växtdos-kalkylator",
+    "landAreaCalculator": "Areal-kalkylator",
+    "kitchenGarden": "Köksträdgårdsplanerare",
+    "mapAreaCalculator": "Kartarea-kalkylator",
+    "tankMixChecker": "Tankblandningskontroll",
+    "costCalculator": "Kostnadskalkylator",
+    "alternativeFinder": "Alternativsökare"
   },
   "plantDoctor": {
     "desc": "Ladda upp ett tydligt foto, beskriv symptomen och få en strukturerad bedömning – möjliga problem med ärliga konfidensnivåer, troliga orsaker och vad du ska göra härnäst.",
     "eyebrow": "Plant Doctor",
     "title": "Visa oss bladet. Vi hjälper dig att läsa det.",
     "metaTitle": "Plant Doctor — AI-diagnos av grödproblem",
-    "metaDescription": "Ladda upp ett grödfoto och beskriv symptom för AI-assisterad diagnos med orsaker, åtgärder och förebyggande."
+    "metaDescription": "Ladda upp ett grödfoto och beskriv symptom för AI-assisterad diagnos med orsaker, åtgärder och förebyggande.",
+    "form": {
+      "photoLabel": "Växtfoto",
+      "photoHint": "Klicka eller släpp ett foto här",
+      "photoTypes": "JPG, PNG eller WebP, max 5 MB",
+      "cropLabel": "Gröda (om känd)",
+      "cropPlaceholder": "Vet inte / annat",
+      "symptomsLabel": "Beskriv symtomen",
+      "symptomsHint": "Vad ser du? Gula fläckar, vissnande, hål i bladen, när det började, vilken del av växten…",
+      "symptomsPlaceholder": "t.ex. Gula fläckar med bruna kanter på nedre blad på vete, började för ungefär en vecka sedan efter regn…",
+      "submit": "Diagnostisera min växt",
+      "analyzing": "Analyserar…",
+      "diagnosisTitle": "Diagnos"
+    }
   },
   "growing": {
     "searchPlaceholder": "Sök på namn…",
@@ -615,7 +683,16 @@
       "Kharif": "Kharif",
       "Rabi": "Rabi",
       "Year-round (12–14 month crop)": "Året runt (12–14 månaders gröda)"
-    }
+    },
+    "plantDoseCard": {
+      "title": "Hur mycket gödsel behöver en krukväxt?",
+      "desc": "Blanda vattenlöslig gödsel i ppm — gram per liter och per kruka — med forskningsbaserade gödslingsdoser.",
+      "cta": "Öppna växtdos-kalkylatorn →"
+    },
+    "organicOptions": "Ekologiska gödselalternativ",
+    "organicOptionsBody": "Väl komposterad stallgödsel, kompost eller maskkompost kan användas som grundläggande jordförbättrare för {name} — de bygger markstruktur och frigör näring långsamt över säsongen. Eftersom organiskt näringsinnehåll varierar per källa, fyll på det exakta näringsbehovet med mineralgödsel beräknat för din gröda och region.",
+    "organicOptionsNote": "Det finns ingen grödspecifik verifierad organisk dos för denna gröda — vägledningen ovan är allmän praxis, inte en uppmätt rekommendation. Låt ditt material labbtestas för exakt planering.",
+    "organicOptionsCta": "Utforska ekologiska gödselmedel"
   },
   "calendar": {
     "metaTitle": "Såkalender — Vad ska odlas denna månad",
@@ -666,7 +743,13 @@
     "viewGuide": "Visa odlingsguiden",
     "emptyRegionTitle": "Ingen verifierad planteringsinformation finns ännu för denna region.",
     "plantingWindow": "Planteringsfönster",
-    "appliesTo": "Gäller för"
+    "appliesTo": "Gäller för",
+    "visualTitle": "12-månaders odlingsöversikt",
+    "visualHint": "Välj en månad för att se sådd-, planterings- och skördefönster.",
+    "legendTitle": "Teckenförklaring",
+    "noData": "Ingen data",
+    "monthCellLabel": "{month}, {count} odlingsfönster",
+    "windowsCount": "{count} odlingsfönster"
   },
   "garden": {
     "metaTitle": "Min trädgård — Följ lotter, planteringar & gödslingsplaner",
@@ -736,7 +819,8 @@
     "backToGarden": "Tillbaka till Min trädgård",
     "saveCalculation": "Spara i Min trädgård",
     "savedToGarden": "Sparad i Min trädgård",
-    "viewGarden": "Visa Min trädgård"
+    "viewGarden": "Visa Min trädgård",
+    "organicApplicationLabel": "Spridning av organisk gödsel"
   },
   "tools": {
     "profit": {
@@ -818,7 +902,20 @@
       "noDoseData": "Dos under granskning – inte gissad",
       "viewGuide": "Öppna grödguide",
       "priceDisclaimerTitle": "Prisfriskrivning",
-      "priceDisclaimer": "Gödselpriser ändras ofta och varierar beroende på region, återförsäljare och säckstorlek. Vi publicerar eller verifierar inga marknadspriser — varje pris på den här sidan anges av dig. Bekräfta alltid aktuella priser hos din lokala återförsäljare innan du köper."
+      "priceDisclaimer": "Gödselpriser ändras ofta och varierar beroende på region, återförsäljare och säckstorlek. Vi publicerar eller verifierar inga marknadspriser — varje pris på den här sidan anges av dig. Bekräfta alltid aktuella priser hos din lokala återförsäljare innan du köper.",
+      "tabOrganic": "Ekologiskt mot mineral",
+      "organicIntro": "Jämför ett organiskt material mot ett mineralgödsel på kostnad per kilogram kväve — med dina egna lokala priser. Organiskt näringsinnehåll är alltid ett typiskt intervall, aldrig ett fast etikettvärde.",
+      "organicMaterial": "Organiskt material",
+      "mineralFertilizer": "Mineralgödsel",
+      "typicalRange": "Typiskt N-intervall: {nMin}–{nMax} %",
+      "fixedLabel": "fast etikettvärde",
+      "pricePerUnit": "Pris",
+      "unitSize": "Förpackningsstorlek ({unit})",
+      "costPerKgN": "Kostnad per kg kväve",
+      "perKgNFixed": "{kg} kg ger 1 kg N — exakt, från säckens etikett.",
+      "perKgNRange": "{lo}–{hi} kg ger 1 kg N — typiskt intervall, din hög kommer att skilja sig.",
+      "organicHonesty": "Ärliga jämförelseregler: organiskt kväve frigörs långsamt — bara en bråkdel (ungefär en tredjedel för stallgödsel) gödslar den första grödan, resten gödslar senare säsonger. Organiskt material bygger också markstruktur som säckgödsel inte kan. Pris per kg N är bara en sida av beslutet; låt ditt material labbanalyseras för exakt planering.",
+      "viewOrganicHub": "Nav för ekologisk gödsel"
     }
   },
   "blog": {
@@ -920,6 +1017,20 @@
       "warnBody": "Beräknarens organiska avsnitt kör ren aritmetik på siffror som DU anger (din laboratorierapport eller leverantörens etikett). Det känner inte till ditt partis verkliga analys och kan inte ta hänsyn till långsam frigörning — betrakta resultatet som en övre gräns för tillförda näringsämnen, inte näringsämnen tillgängliga för denna säsongs gröda. För precis dosering, beställ en laboratorieanalys av ditt faktiska material.",
       "exploreCta": "Öppna beräknarens organiska avsnitt",
       "detailCta": "Visa detaljer"
+    },
+    "searchPlaceholder": "Sök gödselmedel…",
+    "searchNoResults": "Inga gödselmedel matchar din sökning.",
+    "taglines": {
+      "urea": "Det mest koncentrerade kvävegödslet i vanligt bruk.",
+      "dap": "Standardfosforkällan för grundgödsling — med en kvävebonus.",
+      "mop": "Den ekonomiska kaliumkällan för de flesta fältgrödor.",
+      "ssp": "Fosfor plus svavel och kalcium i ett granulat.",
+      "sop": "Klorfritt kalium för känsliga, högvärdiga grödor.",
+      "ammonium-sulphate": "Kväve plus svavel, med försurande effekt på jorden.",
+      "farmyard-manure": "Den traditionella stallgödseln — låg näring, högt jordförbättrande värde.",
+      "compost": "Nedbrutet lantbruks- och hushållsavfall — varierande, råvaruberoende näring.",
+      "vermicompost": "Maskbearbetad gödsel — rikare än FYM, men råvaran avgör allt.",
+      "green-manure": "En levande kvävefabrik — odlas, plöjs sedan ner före huvudgrödan."
     }
   },
   "chart": {
@@ -992,7 +1103,542 @@
       "nutrientN": "Kväve (N)",
       "nutrientP": "Fosfat (P₂O5)",
       "nutrientK": "Potaska (K₂O)",
-      "pkCustomNote": "Det finns ingen förinställning av förlängningsmatning för fosfat/potaska i trädgårdsskala – ange din egen målkoncentration. Samma ppm matematik gäller."
-    }
+      "pkCustomNote": "Det finns ingen förinställning av förlängningsmatning för fosfat/potaska i trädgårdsskala – ange din egen målkoncentration. Samma ppm matematik gäller.",
+      "presetSource": "Källa: {source}",
+      "targetPpmPK": "Mål-{nutrient} (ppm)",
+      "bedArea": "Bäddens area",
+      "bedAreaHint": "Bäddens längd × bredd.",
+      "areaM2": "m²",
+      "areaFt2": "ft²",
+      "bedDepth": "Rotzonsdjup (cm)",
+      "bedDepthHint": "Antaget djup som dosen blandas in i — 15–20 cm är typiskt för grönsaksbäddar. Anpassa till din bädd.",
+      "frequency": "Gödselfrekvens",
+      "interval1": "Varje vecka",
+      "interval2": "Varannan vecka",
+      "interval4": "Var 4:e vecka",
+      "startDate": "Första gödsling",
+      "scheduleTitle": "Förslag: Gödsla växter ({ppm} ppm {nutrient})",
+      "addToGarden": "Lägg till schema i My Garden",
+      "addedToGarden": "Tillagt — se My Garden → Påminnelser.",
+      "gardenHint": "Påminnelser är allmänna tidsförslag, inte recept. Hoppa över en gödsling om växterna ser stressade ut."
+    },
+    "presets": {
+      "gentle": {
+        "label": "Försiktig — {ppm} ppm N (krukväxter, långsamma odlare)"
+      },
+      "regular": {
+        "label": "Normal — {ppm} ppm N (de flesta krukväxter)"
+      },
+      "heavy": {
+        "label": "Kraftig — {ppm} ppm N (kraftiga, näringskrävande växter)"
+      }
+    },
+    "results": {
+      "title": "Din växtdos",
+      "guidanceBadge": "Allmän vägledning",
+      "perLitre": "Lös upp per liter",
+      "total": "Totalt för {litres} L",
+      "totalHint": "Rör om tills det är helt upplöst; använd inom ett dygn.",
+      "perPot": "Per {cm} cm-kruka",
+      "perPotHint": "Ungefärligt — krukvolymer varierar mellan tillverkare.",
+      "kitchenApprox": "{tsp} — en riktlinje, inte ett mått; väg för noggrannhet.",
+      "quarterTsp": "Cirka ¼ tsk per liter",
+      "oneTsp": "Cirka 1 tsk per liter",
+      "manyTsp": "Cirka {n} tsk per liter",
+      "burnTitle": "Undvik gödselbränna",
+      "burnBody": "Mer är inte bättre: för mycket salter bränner rötter och bladkanter. Börja med den försiktiga dosen för nya eller stressade växter, vattna krukan först om odlingsmediet är torrt som damm, och låt alltid överskottslösning rinna bort. Om en produktetikett anger en annan dos, följ etiketten.",
+      "formulaNote": "Matematik: {grade} vid {ppm} ppm {nutrient} → gram per liter = {ppm} ÷ (%{nutrient} × 10).",
+      "invalid": "Kontrollera dina inmatningar: närings-% måste vara 1–60, målet 1–1000 ppm, vatten/area/djup över 0, och densitet över 0 för vätskor.",
+      "perLitreMl": "Milliliter per liter",
+      "mlPerL": "ml/L",
+      "bedVolume": "Bäddens vattenvolym",
+      "bedVolumeHint": "{area} {unit} × {depth} cm rotzon.",
+      "perBed": "Totalt för bädden",
+      "perBedHint": "Blanda i bevattningsvatten som sprids jämnt över bädden.",
+      "scheduleTitle": "Gödslingsschema (nästa 6)",
+      "scheduleHint": "Baserat på din valda frekvens. Dessa är planeringshjälpmedel — anpassa efter hur växterna svarar.",
+      "formulaNoteLiquid": "Matematik: {grade} vid {ppm} ppm {nutrient} → gram per liter = {ppm} ÷ (%{nutrient} × 10), sedan ÷ {density} g/ml densitet = ml per liter.",
+      "formulaNoteBed": "Bäddvolym = area × {depth} cm djup."
+    },
+    "method": {
+      "eyebrow": "Så fungerar det",
+      "title": "Dosering i ppm, som yrkesodlarna gör det",
+      "desc": "Yrkesodlare gissar inte med skedmått — de blandar gödsel till en målnäringshalt i miljondelar (ppm). Den här kalkylatorn ger samma metod till hemmaodlaren.",
+      "steps": [
+        {
+          "t": "Välj din gödselkvalitet",
+          "d": "Läs av N-P-K-siffrorna på säcken, t.ex. 20-20-20, eller ange en egen kvalitet."
+        },
+        {
+          "t": "Välj gödslingsstyrka",
+          "d": "Krukväxter och långsamma odlare trivs med försiktiga doser (~100 ppm N); de flesta krukväxter med normala doser (~150 ppm N); kraftiga näringskrävande växter kan ta ~200 ppm N."
+        },
+        {
+          "t": "Blanda och vattna som vanligt",
+          "d": "Lös upp de beräknade grammen i din vattenkanna och vattna som vanligt, låt överskottet rinna bort. Gödsla vid varje vattning i dessa doser, eller hälften så ofta med dubbel styrka — aldrig båda."
+        }
+      ]
+    },
+    "sources": {
+      "eyebrow": "Källor",
+      "title": "Var gödslingsdoserna kommer ifrån",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): rabattväxter 200–250 ppm N konstantgödsling; långsamma typer 100–150 ppm N tills de etablerats.",
+        "Michigan State University Extension (E2186): krukodlade växter — långtidsverkande gödsel plus kompletterande flytande gödsling vid 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": formeln g/L = ppm ÷ (%N × 10) och det genomräknade exemplet med 200 ppm N."
+      ],
+      "note": "Förinställningarna använder den nedre delen av varje publicerat intervall, det försiktiga valet för ljusnivåer hemma. Följ alltid din produkts etikett och din lokala rådgivningstjänsts råd."
+    },
+    "faq": [
+      {
+        "q": "Hur mycket gödsel behöver krukväxter?",
+        "a": "De flesta krukväxter klarar sig bra med en bevattningslösning på 100–150 ppm kväve — ungefär 0,5–1 g av 20-20-20 per liter vatten. Näringskrävande växter som kraftiga blommande ettåriga kan ta upp till 200 ppm. Börja försiktigt; du kan alltid öka nästa gång."
+      },
+      {
+        "q": "Kan jag bara använda en sked istället för att väga?",
+        "a": "En rågad tesked granulärgödsel är ungefär 5–6 g, men densiteten varierar per produkt, så skedar är bara en grov riktlinje. För små krukor och plantor är en billig gramvåg mycket mer pålitlig — ett skedfel på 50 % är lätt att göra och räcker för att bränna rötter."
+      },
+      {
+        "q": "Ska jag gödsla varje gång jag vattnar?",
+        "a": "I de försiktiga och normala doserna ovan, ja — så gör yrkesodlare (\"fertigering\"). Alternativet är att gödsla hälften så ofta med dubbel styrka. Gör inte båda: välj ett schema och titta på växterna."
+      },
+      {
+        "q": "Vilka är tecknen på för mycket gödsel?",
+        "a": "Bruna, krispiga bladkanter, vissnande trots blöt jord och en vit skorpa på odlingsmediets yta. Om du ser detta, spola krukan med rent vatten tills det rinner fritt ur dräneringshålen och hoppa över nästa gödsling."
+      }
+    ]
+  },
+  "landArea": {
+    "eyebrow": "Gratis lantbruksverktyg",
+    "title": "Areal-kalkylator för jordbruksmark",
+    "desc": "Mät lantbruksmark, skiften och fält — omvandla sedan mellan acres, hektar, kvadratfot och verifierade regionala enheter. Använd ditt resultat direkt i gödseldos-kalkylatorn.",
+    "metaTitle": "Areal-kalkylator – jordbruksmark & fältmätning",
+    "metaDescription": "Gratis areal-kalkylator för jordbruksmark och skiften. Beräkna area från mått, 4 sidor eller oregelbundna former; omvandla acres, hektar, kvadratfot, kanal och marla.",
+    "country": "Land",
+    "region": "Län / Region",
+    "modeLabel": "Beräkningsläge",
+    "modes": {
+      "rect": "Längd × Bredd",
+      "fourSides": "4 sidor",
+      "irregular": "Oregelbunden",
+      "converter": "Omvandlare"
+    },
+    "length": "Längd",
+    "width": "Bredd",
+    "side": "Sida {n}",
+    "sideUnit": "Enhet för alla sidor",
+    "diagonalOptional": "Diagonal (valfri, för exakt resultat)",
+    "diagonalPlaceholder": "Lämna tomt för uppskattning",
+    "fourSideExplainer": "Ange de fyra sidorna i ordning runt skiftet. För ett oregelbundet fyrhörnigt skifte kan fyra sidlängder ensamma inte ge den exakta arean — lägg till ett diagonalmått för ett exakt resultat.",
+    "noDiagonalWarning": "Ingen diagonal angiven: resultatet nedan blir en tydligt markerad uppskattning, inte en exakt area.",
+    "sectionName": "Sektionsnamn",
+    "shape": "Form",
+    "dimensions": "Mått",
+    "unit": "Enhet",
+    "dimPlaceholder": "Värde {n}",
+    "shapes": {
+      "rectangle": "Rektangel",
+      "square": "Kvadrat",
+      "triangle": "Triangel",
+      "trapezoid": "Trapets"
+    },
+    "shapeHint": {
+      "rectangle": "Två värden: längd, bredd.",
+      "square": "Ett värde: sidlängd.",
+      "triangle": "Två värden: bas, höjd.",
+      "trapezoid": "Tre värden: de två parallella sidorna, sedan höjd."
+    },
+    "addSection": "Lägg till sektion",
+    "remove": "Ta bort",
+    "value": "Värde",
+    "fromUnit": "Från enhet",
+    "calculate": "Beräkna area",
+    "totalArea": "Total markareal",
+    "approximate": "Ungefärlig",
+    "approxWarning": "Endast uppskattning: fyra sidlängder ensamma kan inte bestämma den exakta arean för ett oregelbundet skifte. Denna uppskattning förutsätter att skiftet är nära rektangulärt. För ett exakt resultat, mät även en diagonal.",
+    "equivalents": "Motsvarighet i andra enheter",
+    "howCalculated": "Så beräknades detta",
+    "precisionNote": "Resultaten avrundas till rimliga decimaler. Måttband kan inte ge lantmäterigrad precision — för juridiska gränser rådfråga en behörig lantmätare eller officiellt fastighetsregister.",
+    "nextActions": "Använd denna area",
+    "useInFertilizer": "Använd i gödselkalkylatorn",
+    "estimateProfit": "Beräkna vinst för denna mark",
+    "savePlot": "Spara detta skifte",
+    "planKitchenGarden": "Planera en köksträdgård",
+    "plotSaved": "Skiftet sparat i My Garden.",
+    "openMyGarden": "Öppna My Garden",
+    "noFertilizerNote": "Markareal ensam bestämmer aldrig gödseldosen — gödselkalkylatorn behöver fortfarande din gröda och en verifierad rekommendation.",
+    "savedPlotName": "Uppmätt skifte ({date})",
+    "savedPlotNote": "Uppmätt med Areal-kalkylatorn ({sqm}).",
+    "noRegionalUnits": "Verifierade regionala markenheter är för närvarande inte tillgängliga för detta land — universella enheter visas. Vi hittar aldrig på lokala omvandlingar.",
+    "pkUnitNote": "Kanal och Marla använder Punjabs fastighetsstandard (1 kanal = 20 marla = 5 445 kvadratfot). Vissa bostadsområden använder 250 eller 225 kvadratfot marla — kontrollera dina lokala dokument vid affärer.",
+    "method": {
+      "quadDiag": "Fyrhörning från sidorna {a}, {b}, {c}, {d} med diagonal {diag} ({unit}): delas i två trianglar, var och en löses exakt med Herons formel, sedan summeras.",
+      "quadApprox": "Fyrhörning från sidorna {a}, {b}, {c}, {d} ({unit}): ((a+c)/2) × ((b+d)/2) — uppskattning, förutsätter nästan rektangulärt skifte."
+    },
+    "errors": {
+      "enterDimensions": "Ange både längd och bredd.",
+      "enterSides": "Ange alla fyra sidlängder.",
+      "enterValue": "Ange ett värde att omvandla.",
+      "invalid": "Dessa mått kan inte bilda en giltig form. Kontrollera dina siffror."
+    },
+    "guide": {
+      "eyebrow": "Så fungerar det",
+      "title": "Mät mark på det ärliga sättet",
+      "formulasTitle": "Arealformler",
+      "formulas": [
+        {
+          "name": "Rektangel",
+          "formula": "Area = längd × bredd",
+          "example": "100 m × 50 m = 5 000 m²"
+        },
+        {
+          "name": "Kvadrat",
+          "formula": "Area = sida²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Triangel",
+          "formula": "Area = ½ × bas × höjd",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapets",
+          "formula": "Area = ((sida A + sida B) / 2) × höjd",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1 500 m²"
+        },
+        {
+          "name": "Fyra sidor + diagonal",
+          "formula": "Dela i två trianglar längs diagonalen; lös var och en med Herons formel och addera",
+          "example": "Exakt — ingen uppskattning"
+        }
+      ],
+      "sqftTitle": "Så beräknar du markareal i kvadratfot",
+      "sqftBody": "Om dina mått är i fot, multiplicera: area i kvadratfot = längd i fot × bredd i fot. Exempel: 100 ft × 50 ft = 5 000 sq ft. Dividera med 43 560 för acres, eller med 9 för kvadratyard. För oregelbundna skiften, dela marken i rektanglar och trianglar, beräkna var och en och addera dem — eller mät en diagonal och använd 4-sidesläget ovan.",
+      "fourSideTitle": "Varför fyra sidor ensamma inte räcker",
+      "fourSideBody": "En fyrhörning kan flexa: samma fyra sidlängder kan omsluta olika areor beroende på vinklarna. Därför ger ingen ärlig kalkylator en \"exakt\" area från enbart sidor. Mät en diagonal (hörn till motsatt hörn) så blir skiftet två trianglar — var och en med en exakt area. Utan diagonal är endast en markerad uppskattning möjlig.",
+      "irregularTitle": "Så mäter du oregelbunden mark",
+      "irregularBody": "Gå fältet och dela det i enkla former — rektanglar, trianglar, trapetser. Mät var och en, beräkna separat och addera areorna. Oregelbunden-läget ovan gör precis detta: lägg till en sektion per del av ditt fält så summerar det åt dig.",
+      "conversionTitle": "Omvandlingstabell för markareal",
+      "conversionNote": "Exakta definitioner. Regionala enheter visas endast där de är verifierade.",
+      "sourcesTitle": "Källor & metodik",
+      "sourcesBody": "Universella enheter använder exakta SI- och imperiedefinitioner (1 acre = 4 046,8564224 m²; 1 hektar = 10 000 m²). Kanal och Marla använder Punjabs fastighetsstandard: 1 karam = 5,5 ft, 1 marla = 9 kvadratkaram = 272,25 kvadratfot, 1 kanal = 20 marla = 5 445 kvadratfot. Alla beräkningar körs i kvadratmeter internt och omvandlas en gång till visningsenheten — ingen kedjad avrundning."
+    },
+    "faq": [
+      {
+        "q": "Hur beräknar jag markareal?",
+        "a": "Mät längd och bredd i samma enhet och multiplicera: area = längd × bredd. För udda former, dela marken i rektanglar och trianglar, beräkna var och en och addera dem."
+      },
+      {
+        "q": "Hur beräknar jag arean av jordbruksmark?",
+        "a": "Använd samma geometri, omvandla sedan till den enhet din region använder — acres, hektar eller lokala enheter som kanal och marla i Pakistan. Den här areal-kalkylatorn för jordbruksmark omvandlar automatiskt och kan skicka resultatet direkt till gödseldos-kalkylatorn."
+      },
+      {
+        "q": "Hur många acres är det här skiftet?",
+        "a": "Ange skiftets längd och bredd ovan och läs acresiffran i resultaten — ingen huvudräkning. Om du mätte i fot omvandlar kalkylatorn automatiskt kvadratfot till acres (43 560 sq ft = 1 acre)."
+      },
+      {
+        "q": "Hur beräknar jag markareal i kvadratfot?",
+        "a": "Multiplicera längd i fot med bredd i fot: 100 ft × 50 ft = 5 000 sq ft. En acre är 43 560 sq ft."
+      },
+      {
+        "q": "Kan fyra sidlängder beräkna ett oregelbundet skifte exakt?",
+        "a": "Nej. Fyra sidor ensamma kan inte låsa en fyrhörnings area — formen kan flexa. Mät även en diagonal så delas skiftet i två exakt lösliga trianglar. Utan den är endast en markerad uppskattning möjlig."
+      },
+      {
+        "q": "Hur omvandlar jag acres till hektar?",
+        "a": "Multiplicera acres med 0,404686. En hektar motsvarar 2,471 acres. Använd omvandlarläget ovan för valfritt enhetspar."
+      },
+      {
+        "q": "Vad är skillnaden mellan en acre och en hektar?",
+        "a": "En hektar (10 000 m²) är cirka 2,47 gånger större än en acre (4 047 m²). Hektar är standard i de flesta länder; acres är vanliga i Pakistan, Indien, Bangladesh och USA."
+      },
+      {
+        "q": "Kan jag beräkna arean för ett oregelbundet fält?",
+        "a": "Ja — använd Oregelbunden-läget: dela ditt fält i rektanglar, kvadrater, trianglar eller trapetser, ange varje sektion så summerar kalkylatorn dem."
+      },
+      {
+        "q": "Varför varierar vissa traditionella markenheter per region?",
+        "a": "Enheter som bigha, marla och kanal växte fram ur lokala fastighetssystem, så deras storlek skiljer sig per provins och konvention. Vi erbjuder bara en regional enhet där omvandlingen är verifierad — till exempel Punjabs fastighetsstandard för kanal/marla — och vi anger vilken standard som använts."
+      },
+      {
+        "q": "Kan jag använda den beräknade arean i gödseldos-kalkylatorn?",
+        "a": "Ja. Tryck på \"Använd i gödselkalkylatorn\" så överförs din area, enhet, land och region automatiskt — ingen omskrivning. Du väljer fortfarande din gröda där, eftersom area ensam aldrig bestämmer gödseldosen."
+      },
+      {
+        "q": "Är detta en juridisk lantmäterimätning?",
+        "a": "Nej. Det här verktyget ger användbara uppskattningar från dina egna mätningar för odlingsbeslut. Juridiska gränser, tvister och officiella register kräver en behörig lantmätare eller fastighetsmyndigheten."
+      }
+    ],
+    "relatedTitle": "Relaterade lantbruksverktyg",
+    "relatedCurrent": "Du är här"
+  },
+  "mapArea": {
+    "eyebrow": "Lantbruksverktyg",
+    "title": "Kartarea-kalkylator — mät markareal på kartan",
+    "desc": "Rita din fältgräns på en gratis karta och få arean direkt — i acres, hektar, kvadratmeter och regionala enheter. Inget konto, inga avgifter. Fungerar som en Google Earth-kvadratfotsräknare: rita ditt fält på kartan och läs av arean i kvadratfot, acres eller hektar.",
+    "metaTitle": "Gratis arealkalkylatorkarta — mät markareal på karta",
+    "metaDescription": "Gratis kartarea-kalkylator: rita din fältgräns på kartan och mät markareal i acres, hektar, m², Kanal och Marla. Ingen registrering behövs.",
+    "gateDescription": "Välj ditt land så visas regionala enheter (som Kanal och Marla i Pakistan), och öppna sedan den interaktiva kartan. Tappning placerar gränspunkter — dra dem för att justera.",
+    "countryLabel": "Land",
+    "countryHint": "Landet avgör bara vilka regionala enheter som visas. Det ändrar aldrig kartan eller ditt språk.",
+    "countries": {
+      "PK": "Pakistan",
+      "IN": "Indien",
+      "BD": "Bangladesh",
+      "CN": "Kina",
+      "US": "USA",
+      "BR": "Brasilien",
+      "ID": "Indonesien",
+      "TR": "Turkiet",
+      "MY": "Malaysia",
+      "JP": "Japan",
+      "KR": "Sydkorea",
+      "ES": "Spanien",
+      "FR": "Frankrike",
+      "DE": "Tyskland",
+      "IT": "Italien",
+      "PL": "Polen",
+      "RU": "Ryssland",
+      "AU": "Australien",
+      "INTL": "Internationellt / Övrigt"
+    },
+    "openMap": "Börja mäta på kartan",
+    "freeNote": "Gratis för alltid — kartdata från OpenStreetMap-bidragsgivare.",
+    "mapAriaLabel": "Interaktiv karta för att rita en fältgräns",
+    "loadingMap": "Laddar karta…",
+    "undoPoint": "Ångra punkt",
+    "clearAll": "Rensa allt",
+    "myLocation": "Centrera på min plats",
+    "locating": "Söker plats…",
+    "geoDenied": "Kunde inte komma åt din plats (behörighet nekad eller otillgänglig). Tips: tillåt platsåtkomst i webbläsarens inställningar, eller navigera kartan manuellt — det fungerar likadant.",
+    "dismissHint": "Stäng",
+    "boundaryPoints": "Gränspunkter",
+    "removePoint": "Ta bort punkt {index}",
+    "tapHint": "Tryck på en numrerad punkt för att ta bort den, eller dra valfri punkt för att flytta den.",
+    "resultTitle": "Uppmätt area",
+    "estimateBadge": "Uppskattning",
+    "perimeter": "Omkrets",
+    "precisionNote": "Användbar uppskattning baserad på punkterna du placerat — inte lantmäteriklass. Juridiska eller officiella gränser kräver en behörig lokal lantmätare.",
+    "useThisArea": "Använd denna area i areal-kalkylatorn",
+    "privacyNote": "Din gräns stannar på den här enheten. Endast areasiffran överförs — aldrig dina koordinater.",
+    "howTitle": "Så fungerar kartmätning",
+    "howSteps": [
+      "Öppna kartan och hitta ditt fält — sökning behövs inte; panorera och zooma dit, eller centrera på din plats.",
+      "Tryck på kartan för att placera gränspunkter runt fältet. Dra valfri punkt för att justera den; tryck på en numrerad punkt för att ta bort den.",
+      "Med 3 eller fler punkter beräknas arean med geodetisk (jordkrökningskorrigerad) matematik — samma för alla latituder.",
+      "Använd arean i areal-kalkylatorn, sedan i gödseldos- eller vinstkalkylatorn."
+    ],
+    "mapNoteTitle": "Om kartan",
+    "mapNoteBody": "Kartan använder OpenStreetMap, en gratis världs-karta byggd av gemenskapen — det är inte Google Maps, och detta verktyg har ingen koppling till Google. Kartbilder laddas bara medan du mäter.",
+    "faqTitle": "Vanliga frågor",
+    "faq": [
+      {
+        "q": "Hur fungerar kartarea-kalkylatorn?",
+        "a": "Tryck på kartan för att släppa gränspunkter runt ditt fält. När du har minst 3 punkter beräknar verktyget den inneslutna arean med geodetisk matematik som tar hänsyn till jordens krökning — exakt vid alla latituder, till skillnad från platt skärmmätning."
+      },
+      {
+        "q": "Är den uppmätta arean lantmäteriexakt?",
+        "a": "Nej. Det är en användbar uppskattning baserad på var du placerar punkterna och hur kartbilderna ligger i linje. För juridiska tvister, fastighetsregister eller officiella affärer, anlita en behörig lokal lantmätare."
+      },
+      {
+        "q": "Använder detta Google Maps?",
+        "a": "Nej. Kartan drivs av OpenStreetMap, en gratis och öppen gemenskapskarta. Det finns ingen Google Maps-integration och ingen koppling till Google."
+      },
+      {
+        "q": "Kan jag använda den uppmätta arean för gödselberäkning?",
+        "a": "Ja — knappen \"Använd denna area\" skickar den uppmätta arean till areal-kalkylatorn, varifrån den flödar vidare till gödseldos-kalkylatorn och vinstkalkylatorn. Area ensam ger aldrig en gödselrekommendation; en verifierad gröda och region krävs fortfarande."
+      },
+      {
+        "q": "Sparas eller delas min plats eller fältgräns?",
+        "a": "Nej. Gränspunkter finns bara i din webbläsares minne medan du mäter. Endast den slutliga areasiffran överförs mellan verktygen — dina koordinater sparas aldrig offentligt, läggs i delbara länkar eller skickas till våra servrar."
+      }
+    ],
+    "bannerTitle": "Uppmätt på kartan",
+    "bannerFertilizer": "Beräkna gödseldos",
+    "bannerProfit": "Beräkna vinst",
+    "bannerDismiss": "Stäng",
+    "relatedTitle": "Relaterade verktyg",
+    "relatedCurrent": "Du är här",
+    "pointsCount": "{count, plural, one {# punkt} other {# punkter}}"
+  },
+  "kitchenGarden": {
+    "eyebrow": "Köksträdgårdsplanerare",
+    "title": "Vad du kan odla denna månad",
+    "metaTitle": "Köksträdgårdsplanerare — vad du kan odla denna månad",
+    "metaDescription": "Planera en köksträdgård hemma: ange din tomts storlek, välj månad, region och solljus, och få förslag på grönsaker och örter från verifierade odlingsfönster — aldrig gissat.",
+    "desc": "Berätta om din tomts storlek, region och odlingsmånad. Vi föreslår bara grönsaker och örter med verifierade odlingsfönster för den månaden — inga påhittade sorter, inga gissade kalendrar.",
+    "plotTitle": "Din tomt & förhållanden",
+    "area": "Tomtarea",
+    "areaUnit": "Areaenhet",
+    "unitSqm": "Kvadratmeter (m²)",
+    "unitSqft": "Kvadratfot (ft²)",
+    "country": "Land",
+    "region": "Region",
+    "month": "Odlingsmånad",
+    "sunlight": "Solljus",
+    "sunlightAny": "Valfritt",
+    "sunlightFull": "Full sol",
+    "sunlightPartial": "Halvskugga",
+    "sunlightShade": "Skugga",
+    "suggestionsTitle": "Vad du kan plantera",
+    "suggestionsCount": "{n, plural, =0 {Inga alternativ} one {# alternativ} other {# alternativ}} för {month} i {region}",
+    "selectHint": "Bocka i grödorna du vill odla för att bygga din plan nedan.",
+    "verified": "Verifierad",
+    "underReview": "Under granskning",
+    "published": "Publicerad",
+    "source": "Källa",
+    "plantingWindow": "Odlingsfönster",
+    "activitySOW": "Så",
+    "activityTRANSPLANT": "Omplantera",
+    "activityPLANT": "Plantera",
+    "emptyTitle": "Ingen verifierad odlingsdata för detta urval",
+    "emptyBody": "Vi har inga verifierade odlingsfönster för grönsaker eller örter för {region} i {month} ännu. Vi gissar aldrig — prova en annan månad eller region, eller bläddra i hela odlingskalendern allt eftersom mer regional data verifieras.",
+    "sunlightGapNote": "Solljusbehov är inte registrerade för dessa grödor ännu, så din solljuspreferens kunde inte användas som filter. Alla månadslämpliga alternativ visas.",
+    "categoryVegetable": "Grönsak",
+    "categoryHerb": "Ört",
+    "planTitle": "Din trädgårdsplan",
+    "planCrop": "Gröda",
+    "planShare": "Andel av tomt (%)",
+    "planArea": "Area",
+    "shareTotal": "Andelarna summerar till {total} % — de bör totalt bli 100 %.",
+    "bedTitle": "Enkel layoutuppskattning",
+    "bedWidth": "Bäddbredd (m)",
+    "pathWidth": "Gångbredd (m)",
+    "bedAssumptionNote": "Endast layoutmatematik: med {bedWidth} m breda bäddar och {pathWidth} m gångar är cirka {pct} % av din tomt planterbar bäddarea — ungefär {bedMeters} m bäddlängd. Bädd- och gångbredd är dina egna justerbara antaganden, inte odlingsråd.",
+    "spacingNote": "Rad- och plantavstånd är inte verifierade för dessa grödor ännu — kontrollera din lokala lantbruksrådgivning innan du fastställer avstånd.",
+    "savePlan": "Spara plan i My Garden",
+    "saved": "Planen sparad i My Garden.",
+    "openMyGarden": "Öppna My Garden",
+    "savedPlotName": "Köksträdgård — {date}",
+    "savedPlotNote": "{sqm} m² köksträdgårdsplan för {month}, {region}; {count} grödor valda.",
+    "faqTitle": "Vanliga frågor om köksträdgård",
+    "faq": [
+      {
+        "q": "Vad kan jag plantera i en liten köksträdgård denna månad?",
+        "a": "Det beror på din region och månad. Ange dina tomtuppgifter ovan så listar planeraren bara grönsaker och örter med verifierade odlingsfönster för ditt urval — med källan angiven på varje förslag."
+      },
+      {
+        "q": "Säger planeraren hur tätt jag ska plantera?",
+        "a": "Inte ännu. Rad- och plantavstånd har inte verifierats för dessa grödor i vår data, så planeraren säger det ärligt istället för att hitta på siffror. Kontrollera din lokala lantbruksrådgivning för avstånd."
+      },
+      {
+        "q": "Hur skiljer sig detta från odlingskalendern?",
+        "a": "Odlingskalendern visar varje verifierat fönster för en region och månad, inklusive fältgrödor. Den här planeraren begränsar det till grönsaker och örter som passar i en hemmaträdgård, lägger till din tomtstorlek och solljus, och gör valen till en enkel layoutplan du kan spara i My Garden."
+      },
+      {
+        "q": "Kan jag använda min markarealmätning här?",
+        "a": "Ja. Areal-kalkylatorns knapp \"Planera en köksträdgård\" skickar din uppmätta area rakt in i den här planeraren."
+      },
+      {
+        "q": "Var lagras min plan?",
+        "a": "I din webbläsares My Garden (lokal lagring) när du trycker på \"Spara plan i My Garden\", precis som sparade skiften från areal-kalkylatorn. Logga in för att synka den mellan enheter."
+      }
+    ]
+  },
+  "suggestions": {
+    "improveTranslation": "Förbättra den här översättningen",
+    "suggestData": "Föreslå datakorrigering",
+    "translationIntro": "Hittade du en dålig översättning på den här sidan? Berätta vad som är fel och hur det ska stå. En granskare kontrollerar det.",
+    "dataIntro": "Vet du den officiella gödseldosen för {crop}? Dela den här med en officiell källa (jordbruksdepartement, universitet, forskningsjournal). Vårt team verifierar varje inskick innan det publiceras.",
+    "dataTypeLabel": "Förslagstyp",
+    "dataCorrection": "Korrigera befintlig data",
+    "dataRequest": "Begär data för denna gröda",
+    "whatsWrong": "Vad är fel? (valfritt)",
+    "whatsWrongPlaceholder": "t.ex. Den här meningen är oklar…",
+    "yourSuggestion": "Ditt förslag",
+    "yourSuggestionPlaceholder": "Skriv den korrigerade texten eller beskriv dosen…",
+    "sourceUrl": "Käll-URL",
+    "sourceHint": "Endast officiella källor: jordbruksdepartement, universitet, forskningsjournaler. Slumpmässiga bloggar och omvandlingssajter accepteras inte.",
+    "reviewNote": "Alla förslag går till en mänsklig granskningskö. Inget publiceras automatiskt.",
+    "submit": "Skicka förslag",
+    "sending": "Skickar…",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "thanks": "Tack!",
+    "thanksDetail": "Ditt förslag togs emot och kommer att granskas av vårt team.",
+    "errorTooShort": "Skriv lite mer detaljer, tack.",
+    "errorSourceRequired": "En käll-URL (http/https) krävs för datakorrigeringar.",
+    "errorGeneric": "Kunde inte skicka. Försök igen.",
+    "creditTitle": "Få cred för din hjälp (valfritt)",
+    "yourName": "Ditt namn",
+    "yourNamePlaceholder": "t.ex. Ahmed Khan",
+    "yourPhoto": "Ditt foto",
+    "photoHint": "JPG, PNG, WebP eller GIF, max 2 MB.",
+    "choosePhoto": "Välj foto",
+    "changePhoto": "Byt foto",
+    "removePhoto": "Ta bort",
+    "imageTypeError": "Välj en JPG-, PNG-, WebP- eller GIF-bild.",
+    "imageSizeError": "Bilden måste vara under 2 MB.",
+    "imageUploadError": "Kunde inte ladda upp fotot. Prova en mindre bild eller fortsätt utan.",
+    "consentNote": "Om ditt förslag godkänns visas ditt namn och foto offentligt på denna sida (till exempel på grödans sida och bidragsgivarnas topplista). Dela bara det du är bekväm med att offentliggöra.",
+    "howItWorksTitle": "Så fungerar det — inget dolt",
+    "step1Title": "1. Du skickar",
+    "step1Text": "Fyll i detta korta formulär. Inget konto behövs. Tar cirka 2 minuter.",
+    "step2Title": "2. Vi kontrollerar",
+    "step2Text": "Vårt team läser varje förslag och matchar det mot officiella källor (jordbruksdepartement, universitet, forskningsartiklar).",
+    "step3Title": "3. Godkänn eller avvisa",
+    "step3Approve": "Godkänd → ditt namn och foto visas på grödans sida, och du får ett bidragsgivarmärke.",
+    "step3Reject": "Avvisad → vanligtvis skräppost, en felaktig källa eller en annons. Inget publiceras någonsin utan kontroll.",
+    "rulesToggle": "Vad vi accepterar — och vad vi avvisar",
+    "acceptTitle": "Vi accepterar",
+    "accept1": "Officiella länkar — jordbruksdepartement, universitet, forskningsjournal",
+    "accept2": "Ett bok- eller artikelnamn med sidnummer — t.ex. \"PAU Package of Practices 2024, s. 23\"",
+    "accept3": "En hänvisning till en jordbrukstjänsteman eller avdelning — t.ex. \"Zarat officer, Sargodha\"",
+    "accept4": "Din egen fälterfarenhet — skriven ärligt (se nedan)",
+    "rejectTitle": "Vi avvisar",
+    "reject1": "Påståenden utan någon källa alls",
+    "reject2": "WhatsApp-vidarebefordringar och \"jag hörde att…\"",
+    "reject3": "Reklam för valfritt företag eller produkt",
+    "reject4": "Bots och skräppost — blockeras automatiskt",
+    "tajurbaNoteTitle": "Om \"Min erfarenhet\"",
+    "tajurbaNote": "Din fälterfarenhet är värdefull, men den är INTE en officiell källa. Den hamnar aldrig i doskalkylatorn. Godkända erfarenheter visas bara i gemenskapsdelen, tydligt markerade \"Lantbrukares erfarenhet — overifierad\". Om många lantbrukare från ett område rapporterar samma sak flaggar vi det för ordentlig forskning.",
+    "dataTypeOfficial": "Officiell korrigering — jag har en källa",
+    "dataTypeTajurba": "Min erfarenhet — jag är lantbrukare",
+    "dataTypeRequest": "Begär data för denna gröda",
+    "sourceLabelFlex": "Källa (länk eller skriftlig referens) *",
+    "sourcePlaceholderFlex": "https://…  eller  \"PAU Package of Practices 2024, s. 23\"",
+    "sourceHintFlex": "En länk ELLER en skriftlig referens — t.ex. ett boknamn med sidnummer, eller \"Zarat officer, Sargodha\".",
+    "districtLabel": "Distrikt / område",
+    "districtPlaceholder": "t.ex. Sargodha",
+    "varietyLabel": "Grödsort (om du vet den)",
+    "varietyPlaceholder": "t.ex. Kinnow",
+    "appliedLabel": "Vad spridde du? *",
+    "appliedPlaceholder": "t.ex. 2 säckar DAP + 1 säck Urea per acre",
+    "yieldLabel": "Resultat / skörd (valfritt)",
+    "yieldPlaceholder": "t.ex. 40 maunds per acre",
+    "tajurbaIntro": "Berätta vad du faktiskt gjorde på ditt eget fält. Var ärlig — detta delas som lantbrukares erfarenhet, inte som officiellt råd.",
+    "errorSourceFlexRequired": "Ange en källa — en länk eller en skriftlig referens (bok, avdelning, tjänsteman).",
+    "errorAppliedRequired": "Berätta vad du spridde på ditt fält.",
+    "sourceTextLabel": "Eller skriftlig referens (om ingen länk)"
+  },
+  "contributors": {
+    "title": "Våra bidragsgivare",
+    "metaTitle": "Bidragsgivare — Fertilizer Dose",
+    "metaDescription": "Möt lantbrukarna och experterna som förbättrar Fertilizer Dose: verifierade bidragsgivare, märken och topplistan.",
+    "subtitle": "Lantbrukare och experter som delar verifierad kunskap med gemenskapen — belönade med erkännande, aldrig pengar.",
+    "leaderboardTitle": "Bästa bidragsgivarna",
+    "approvedSuggestions": "godkända förslag",
+    "approvedSuggestionOne": "godkänt förslag",
+    "badgeContributor": "Bidragsgivare",
+    "badgeTrusted": "Pålitlig lantbrukare",
+    "badgeExpert": "Agroexpert",
+    "badgeContributorDesc": "1 godkänt förslag",
+    "badgeTrustedDesc": "5 godkända förslag · prioriterad granskning",
+    "badgeExpertDesc": "20 godkända förslag · utskrivbart intyg",
+    "howItWorks": "Så fungerar belöningarna",
+    "howItWorksBody": "Dela en översättningsfix eller grödodata med en officiell källa. När vårt team godkänner den visas ditt namn och foto på relevanta sidor, ditt antal godkända växer och du får märken: 🌱 Bidragsgivare (1), 🌾 Pålitlig lantbrukare (5, med prioriterad granskning), 🏅 Agroexpert (20, med ett utskrivbart intyg).",
+    "myBadge": "Mitt märke",
+    "myBadgeHint": "Ditt märke spåras i den här webbläsaren (inget konto behövs).",
+    "noBadgeYet": "Inga godkända förslag från den här webbläsaren ännu — ditt första godkännande ger 🌱 Bidragsgivarmärket.",
+    "printCertificate": "Skriv ut intyg",
+    "certificateTitle": "Bidragsintyg",
+    "certificateBody": "tilldelas {name} för {count} godkända bidrag till Fertilizer Doses öppna jordbruksdatabas, och hjälper lantbrukare i Pakistan och Indien att odla med riktiga data.",
+    "certificateLevel": "Nivå: Agroexpert 🏅",
+    "empty": "Inga bidragsgivare ännu — bli den första! Använd \"Förbättra den här översättningen\" eller \"Föreslå datakorrigering\" var som helst på sidan.",
+    "communityContributors": "Gemenskapsbidragsgivare",
+    "communityContributorsHint": "Deras godkända förslag hjälpte till att förbättra den här sidan.",
+    "viewAll": "Visa alla bidragsgivare",
+    "priorityBadge": "⚡ Prioriterad granskning",
+    "close": "Stäng"
   }
 }
