@@ -183,6 +183,37 @@
       {
         "a": "Ya — kalkulator, pustaka, dan panduan gratis. Akun hanya dibutuhkan untuk fitur seperti menyimpan diagnosis.",
         "q": "Apakah Fertilizer Dose gratis?"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "q": "Bisakah pupuk daun menggantikan pemupukan lewat tanah?",
+        "a": "Tidak — pemupukan daun adalah suplemen, bukan pengganti. Daun menyerap unsur hara dengan cepat tetapi dalam jumlah kecil, sehingga penyemprotan daun ideal untuk mengatasi kekurangan unsur hara mikro (seng, besi, boron) atau memberi dorongan cepat selama fase pertumbuhan kritis. Namun sebagian besar NPK harus diberikan lewat tanah karena tanaman membutuhkan unsur hara berkilo-kilo per acre, dan daun sama sekali tidak dapat menyerap sebanyak itu. Gunakan pemupukan daun bersama program pemupukan dasar dan susulan Anda, bukan sebagai penggantinya."
+      },
+      {
+        "q": "Apa rumus perhitungan pupuk NPK?",
+        "a": "Rumus bakunya adalah: pupuk yang dibutuhkan (kg) = (hara yang dibutuhkan dalam kg × 100) ÷ % hara dalam pupuk. Contohnya, jika gandum membutuhkan 50 kg nitrogen per acre dan Anda menggunakan Urea (46% N): 50 × 100 ÷ 46 = 109 kg Urea per acre. Untuk fosfor dari DAP (46% P₂O₅): jika Anda membutuhkan 30 kg P₂O₅, Anda membutuhkan 30 × 100 ÷ 46 = 65 kg DAP. Kalkulator Dosis kami menghitung ini secara otomatis untuk tanaman dan lahan Anda."
+      },
+      {
+        "q": "Apakah NPK 19-19-19 organik?",
+        "a": "Tidak — 19-19-19 adalah pupuk sintetis (kimia). Pupuk ini dibuat agar setiap butiran mengandung tepat 19% nitrogen, 19% fosfat (P₂O₅), dan 19% kalium (K₂O). Pupuk organik seperti FYM, kompos, atau vermikompos memiliki kandungan hara yang jauh lebih rendah dan tidak tetap (biasanya di bawah 2% NPK gabungan). Jika Anda menginginkan sertifikasi organik, 19-19-19 tidak memenuhi syarat. Namun, pupuk ini merupakan pilihan seimbang yang praktis untuk pemupukan tanaman secara umum di mana status organik tidak menjadi masalah."
+      },
+      {
+        "q": "Apa itu tanaman dhaincha?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa) adalah tanaman kacang-kacangan yang tumbuh cepat dan ditanam sebagai pupuk hijau, terutama dalam sistem padi-gandum. Disemai sebelum tanam pindah padi, tanaman ini tumbuh 6-8 kaki dalam 45-60 hari, kemudian dibajak ke dalam tanah di mana ia terurai dan menambahkan 60-80 kg nitrogen per hectare — kira-kira setara dengan 130-175 kg Urea. Ia juga menambah bahan organik dan memperbaiki struktur tanah. Kebutuhan benih biasanya 20-25 kg per acre, dan tanaman ini tidak membutuhkan pupuk sendiri karena mengikat nitrogen dari udara."
+      },
+      {
+        "q": "Berapa berat sekarung pupuk?",
+        "a": "Di Pakistan dan India, karung pupuk standar beratnya 50 kg. Ini berlaku untuk Urea, DAP, MOP, SSP, dan sebagian besar pupuk granul. Beberapa produk khusus (unsur hara mikro, pupuk larut air) dikemas dalam kemasan kecil 1, 5, atau 25 kg. Saat menghitung dosis, selalu ubah kebutuhan per acre Anda menjadi jumlah karung: contohnya, 109 kg Urea per acre = sedikit lebih dari 2 karung (2.18 karung)."
       }
     ],
     "title": "Pertanyaan yang sering ditanyakan petani",

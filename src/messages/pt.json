@@ -184,6 +184,37 @@
       {
         "a": "Sim — a calculadora, as bibliotecas e os guias são gratuitos. Uma conta só é necessária para recursos como salvar diagnósticos.",
         "q": "O Fertilizer Dose é gratuito?"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "q": "O adubo foliar pode substituir a aplicação no solo?",
+        "a": "Não — a adubação foliar é um complemento, não uma substituição. As folhas absorvem os nutrientes rapidamente, mas em pequenas quantidades, por isso as pulverizações foliares são ideais para corrigir deficiências de micronutrientes (zinco, ferro, boro) ou dar um impulso rápido durante as fases críticas do crescimento. Mas a maior parte do NPK precisa vir pelo solo, porque as plantas precisam de quilogramas de nutrientes por acre, e as folhas simplesmente não conseguem absorver esse volume. Use a adubação foliar junto com seu programa de adubação de base e em cobertura, não no lugar dele."
+      },
+      {
+        "q": "Qual é a fórmula de cálculo do fertilizante NPK?",
+        "a": "A fórmula padrão é: fertilizante necessário (kg) = (nutriente necessário em kg × 100) ÷ % de nutriente no fertilizante. Por exemplo, se o trigo precisa de 50 kg de nitrogênio por acre e você usa Urea (46% N): 50 × 100 ÷ 46 = 109 kg de Urea por acre. Para o fósforo do DAP (46% P₂O₅): se você precisa de 30 kg de P₂O₅, precisa de 30 × 100 ÷ 46 = 65 kg de DAP. Nossa Calculadora de Dose faz isso automaticamente para sua cultura e sua área."
+      },
+      {
+        "q": "O NPK 19-19-19 é orgânico?",
+        "a": "Não — o 19-19-19 é um fertilizante sintético (químico). Ele é fabricado para conter exatamente 19% de nitrogênio, 19% de fosfato (P₂O₅) e 19% de potássio (K₂O) em cada grânulo. Fertilizantes orgânicos como FYM, composto ou vermicomposto têm teor de nutrientes muito menor e variável (normalmente abaixo de 2% de NPK combinado). Se você busca certificação orgânica, o 19-19-19 não se qualifica. É, porém, uma opção equilibrada e prática para a nutrição geral das plantas quando o status orgânico não importa."
+      },
+      {
+        "q": "O que é a cultura de dhaincha?",
+        "a": "A dhaincha (Sesbania aculeata/bispinosa) é uma leguminosa de crescimento rápido cultivada como adubação verde, principalmente em sistemas arroz-trigo. Semeada antes do transplantio do arroz, ela cresce 6-8 pés em 45-60 dias e depois é incorporada ao solo com arado, onde se decompõe e adiciona 60-80 kg de nitrogênio por hectare — aproximadamente o equivalente a 130-175 kg de Urea. Também adiciona matéria orgânica e melhora a estrutura do solo. A taxa de semeadura costuma ser de 20-25 kg por acre, e ela não precisa de fertilizante porque fixa o nitrogênio atmosférico."
+      },
+      {
+        "q": "Quanto pesa um saco de fertilizante?",
+        "a": "No Paquistão e na Índia, o saco padrão de fertilizante pesa 50 kg. Isso vale para Urea, DAP, MOP, SSP e para a maioria dos fertilizantes granulados. Alguns produtos especiais (micronutrientes, fertilizantes hidrossolúveis) vêm em embalagens menores de 1, 5 ou 25 kg. Ao calcular as doses, converta sempre sua necessidade por acre em número de sacos: por exemplo, 109 kg de Urea por acre = pouco mais de 2 sacos (2.18 sacos)."
       }
     ],
     "title": "Perguntas que os agricultores nos fazem",

@@ -236,6 +236,26 @@
       {
         "q": "¿Para qué se utiliza el fertilizante ammonium sulphate?",
         "a": "Ammonium sulphate (21-0-0 más 24% de azufre) suministra nitrógeno junto con azufre, muy útil en suelos deficientes en azufre. Tiene un efecto acidificante en el suelo, por lo que resulta ideal para suelos neutros a alcalinos, pero debe usarse con precaución en suelos que ya son ácidos."
+      },
+      {
+        "q": "¿Puede el fertilizante foliar reemplazar la aplicación al suelo?",
+        "a": "No — la fertilización foliar es un complemento, no un reemplazo. Las hojas absorben los nutrientes rápidamente pero en pequeñas cantidades, por lo que las aspersiones foliares son ideales para corregir deficiencias de micronutrientes (zinc, hierro, boro) o para dar un impulso rápido durante las etapas críticas del crecimiento. Pero la mayor parte del NPK debe aportarse a través del suelo, porque las plantas necesitan kilogramos de nutrientes por acre y las hojas simplemente no pueden absorber ese volumen. Usa la fertilización foliar junto con tu programa de aplicación de fondo y en cobertera, no en lugar de este."
+      },
+      {
+        "q": "¿Cuál es la fórmula para calcular el fertilizante NPK?",
+        "a": "La fórmula estándar es: fertilizante necesario (kg) = (nutriente necesario en kg × 100) ÷ % de nutriente en el fertilizante. Por ejemplo, si el trigo necesita 50 kg de nitrógeno por acre y usas Urea (46% N): 50 × 100 ÷ 46 = 109 kg de Urea por acre. Para el fósforo del DAP (46% P₂O₅): si necesitas 30 kg de P₂O₅, necesitas 30 × 100 ÷ 46 = 65 kg de DAP. Nuestra Calculadora de Dosis lo hace automáticamente para tu cultivo y tu superficie."
+      },
+      {
+        "q": "¿El NPK 19-19-19 es orgánico?",
+        "a": "No — el 19-19-19 es un fertilizante sintético (químico). Se fabrica para contener exactamente 19% de nitrógeno, 19% de fosfato (P₂O₅) y 19% de potasa (K₂O) en cada gránulo. Los fertilizantes orgánicos como el FYM, el compost o la lombricomposta tienen un contenido de nutrientes mucho menor y variable (normalmente menos del 2% de NPK combinado). Si buscas la certificación orgánica, el 19-19-19 no califica. Sin embargo, es una opción balanceada y práctica para la alimentación general de las plantas cuando lo orgánico no es un requisito."
+      },
+      {
+        "q": "¿Qué es el cultivo de dhaincha?",
+        "a": "El dhaincha (Sesbania aculeata/bispinosa) es una leguminosa de crecimiento rápido que se cultiva como abono verde, principalmente en sistemas arroz-trigo. Se siembra antes del trasplante del arroz, crece de 6 a 8 pies en 45-60 días y luego se incorpora al suelo con el arado, donde se descompone y aporta 60-80 kg de nitrógeno por hectárea — aproximadamente el equivalente a 130-175 kg de Urea. También aporta materia orgánica y mejora la estructura del suelo. La dosis de siembra suele ser de 20-25 kg por acre, y no necesita fertilizante porque fija el nitrógeno atmosférico."
+      },
+      {
+        "q": "¿Cuánto pesa un saco de fertilizante?",
+        "a": "En Pakistán y la India, el saco estándar de fertilizante pesa 50 kg. Esto aplica a la Urea, el DAP, el MOP, el SSP y a la mayoría de los fertilizantes granulados. Algunos productos especiales (micronutrientes, fertilizantes hidrosolubles) vienen en empaques más pequeños de 1, 5 o 25 kg. Al calcular las dosis, convierte siempre tu requerimiento por acre a número de sacos: por ejemplo, 109 kg de Urea por acre = poco más de 2 sacos (2.18 sacos)."
       }
     ],
     "title": "Preguntas que nos hacen los agricultores",

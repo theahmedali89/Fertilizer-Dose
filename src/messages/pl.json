@@ -127,6 +127,37 @@
       {
         "a": "Tak — kalkulator, biblioteki i przewodniki są bezpłatne. Konto jest potrzebne tylko do funkcji takich jak zapisywanie diagnoz.",
         "q": "Czy korzystanie z Fertilizer Dose jest bezpłatne?"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "q": "Czy nawóz dolistny może zastąpić nawożenie doglebowe?",
+        "a": "Nie — dokarmianie dolistne to uzupełnienie, a nie zamiennik. Liście szybko pobierają składniki pokarmowe, ale w małych ilościach, dlatego opryski dolistne idealnie nadają się do korygowania niedoborów mikroelementów (cynk, żelazo, bor) albo do szybkiego wsparcia roślin w krytycznych fazach wzrostu. Jednak większość NPK musi trafić przez glebę, bo rośliny potrzebują kilogramów składników na akr, a liście po prostu nie są w stanie pobrać takiej ilości. Stosuj dokarmianie dolistne razem z podstawowym nawożeniem doglebowym i nawożeniem pogłównym, a nie zamiast nich."
+      },
+      {
+        "q": "Jaki jest wzór na obliczenie dawki nawozu NPK?",
+        "a": "Standardowy wzór to: potrzebny nawóz (kg) = (potrzebny składnik w kg × 100) ÷ % składnika w nawozie. Na przykład, jeśli pszenica potrzebuje 50 kg azotu na akr, a stosujesz Urea (46% N): 50 × 100 ÷ 46 = 109 kg Urea na akr. Dla fosforu z DAP (46% P₂O₅): jeśli potrzebujesz 30 kg P₂O₅, potrzeba 30 × 100 ÷ 46 = 65 kg DAP. Nasz Kalkulator dawki zrobi to automatycznie dla Twojej uprawy i powierzchni."
+      },
+      {
+        "q": "Czy NPK 19-19-19 to nawóz organiczny?",
+        "a": "Nie — 19-19-19 to nawóz syntetyczny (chemiczny). Jest produkowany tak, aby każda granulka zawierała dokładnie 19% azotu, 19% fosforu (P₂O₅) i 19% potasu (K₂O). Nawozy organiczne, takie jak FYM, kompost czy wermikompost, mają znacznie niższą i zmienną zawartość składników (zwykle poniżej 2% NPK łącznie). Do certyfikacji ekologicznej 19-19-19 się nie kwalifikuje. Jest to jednak wygodna, zbilansowana opcja do zwykłego dokarmiania roślin tam, gdzie status ekologiczny nie ma znaczenia."
+      },
+      {
+        "q": "Co to jest dhaincha?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa) to szybko rosnąca roślina motylkowa uprawiana na zielony nawóz, głównie w zmianowaniu ryż–pszenica. Wysiana przed sadzeniem ryżu, w ciągu 45-60 dni dorasta do 6-8 stóp, po czym przyoruje się ją do gleby, gdzie rozkłada się i dostarcza 60-80 kg azotu na hektar — mniej więcej tyle, ile 130-175 kg Urea. Wzbogaca też glebę w materię organiczną i poprawia jej strukturę. Norma wysiewu to zwykle 20-25 kg na akr, a samego nawożenia nie potrzebuje, bo wiąże azot z powietrza."
+      },
+      {
+        "q": "Ile waży worek nawozu?",
+        "a": "W Pakistanie i Indiach standardowy worek nawozu waży 50 kg. Dotyczy to Urea, DAP, MOP, SSP i większości nawozów granulowanych. Niektóre produkty specjalistyczne (mikronawozy, nawozy rozpuszczalne w wodzie) sprzedawane są w mniejszych opakowaniach 1, 5 lub 25 kg. Przy obliczaniu dawek zawsze przeliczaj zapotrzebowanie na akr na liczbę worków: na przykład 109 kg Urea na akr to nieco ponad 2 worki (2,18 worka)."
       }
     ],
     "title": "Pytania, które zadają nam rolnicy",

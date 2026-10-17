@@ -237,6 +237,26 @@
       {
         "q": "Apakah kegunaan baja ammonium sulphate?",
         "a": "Ammonium sulphate (21-0-0 serta 24% sulfur) membekalkan nitrogen bersama-sama sulfur, menjadikannya berguna di kawasan tanah yang kekurangan sulfur — lazim dalam bijirin berhasil tinggi dan biji minyak. Ia mempunyai kesan mengasidkan tanah, jadi ia sangat sesuai untuk tanah neutral hingga beralkali, tetapi gunakannya dengan berhati-hati pada tanah yang sedia berasid. Ia juga merupakan pilihan baik apabila anda memerlukan nitrogen tanpa menambah sebarang fosforus atau kalium."
+      },
+      {
+        "q": "Bolehkah baja foliar menggantikan pembajaan tanah?",
+        "a": "Tidak — pembajaan foliar ialah suplemen, bukan pengganti. Daun menyerap nutrien dengan cepat tetapi dalam jumlah yang sedikit, menjadikan semburan foliar sesuai untuk membetulkan kekurangan mikronutrien (zink, ferum, boron) atau memberi rangsangan segera semasa peringkat pertumbuhan kritikal. Tetapi sebahagian besar NPK mesti diberi melalui tanah kerana tumbuhan memerlukan nutrien berkilogram-kilogram per acre, dan daun sememangnya tidak dapat menyerap sebanyak itu. Gunakan pembajaan foliar bersama-sama program pembajaan basal dan susulan anda, bukan sebagai gantinya."
+      },
+      {
+        "q": "Apakah formula pengiraan baja NPK?",
+        "a": "Formula piawai ialah: baja yang diperlukan (kg) = (nutrien yang diperlukan dalam kg × 100) ÷ % nutrien dalam baja. Contohnya, jika gandum memerlukan 50 kg nitrogen per acre dan anda menggunakan Urea (46% N): 50 × 100 ÷ 46 = 109 kg Urea per acre. Untuk fosforus daripada DAP (46% P₂O₅): jika anda memerlukan 30 kg P₂O₅, anda memerlukan 30 × 100 ÷ 46 = 65 kg DAP. Kalkulator Dos kami mengira ini secara automatik untuk tanaman dan keluasan anda."
+      },
+      {
+        "q": "Adakah NPK 19-19-19 organik?",
+        "a": "Tidak — 19-19-19 ialah baja sintetik (kimia). Ia dikilangkan supaya setiap granul mengandungi tepat 19% nitrogen, 19% fosfat (P₂O₅), dan 19% potasyum (K₂O). Baja organik seperti FYM, kompos, atau vermikompos mempunyai kandungan nutrien yang jauh lebih rendah dan berubah-ubah (biasanya di bawah 2% NPK digabungkan). Jika anda mahukan pensijilan organik, 19-19-19 tidak layak. Walau bagaimanapun, ia merupakan pilihan seimbang yang mudah untuk pembajaan am tumbuhan di mana status organik tidak penting."
+      },
+      {
+        "q": "Apakah tanaman dhaincha?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa) ialah kekacang yang cepat membesar dan ditanam sebagai baja hijau, terutamanya dalam sistem padi-gandum. Disemai sebelum pemindahan padi, ia membesar 6-8 kaki dalam 45-60 hari, kemudian dibajak ke dalam tanah di mana ia mereput dan menambah 60-80 kg nitrogen per hectare — lebih kurang bersamaan dengan 130-175 kg Urea. Ia juga menambah bahan organik dan membaiki struktur tanah. Kadar benih biasanya 20-25 kg per acre, dan ia tidak memerlukan baja sendiri kerana ia mengikat nitrogen atmosfera."
+      },
+      {
+        "q": "Berapa berat sebeg baja?",
+        "a": "Di Pakistan dan India, beg baja piawai beratnya 50 kg. Ini terpakai untuk Urea, DAP, MOP, SSP, dan kebanyakan baja bergranul. Sesetengah produk khusus (mikronutrien, baja larut air) didatangkan dalam pek kecil 1, 5, atau 25 kg. Semasa mengira dos, sentiasa tukarkan keperluan per acre anda kepada bilangan beg: contohnya, 109 kg Urea per acre = lebih sedikit daripada 2 beg (2.18 beg)."
       }
     ],
     "title": "Soalan yang sering ditanya petani",

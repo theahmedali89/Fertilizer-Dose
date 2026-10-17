@@ -236,6 +236,26 @@
       {
         "q": "Wofür wird Ammonium sulphate-Dünger verwendet?",
         "a": "Ammonium sulphate (21-0-0 plus 24% Schwefel) liefert Stickstoff zusammen mit Schwefel, was auf schwefelarmen Böden sehr nützlich ist — häufig bei ertragreichem Getreide und Ölsaaten. Es wirkt versauernd auf den Boden, weshalb es sich gut für neutrale bis alkalische Böden eignet, auf bereits sauren Böden jedoch vorsichtig eingesetzt werden sollte."
+      },
+      {
+        "q": "Kann Blattdünger die Düngung über den Boden ersetzen?",
+        "a": "Nein — Blattdüngung ist eine Ergänzung, kein Ersatz. Blätter nehmen Nährstoffe zwar schnell, aber nur in kleinen Mengen auf, deshalb eignen sich Blattspritzungen ideal, um Mikronährstoffmängel (Zink, Eisen, Bor) zu beheben oder in kritischen Wachstumsstadien einen schnellen Schub zu geben. Der Großteil des NPK muss aber über den Boden kommen, denn Pflanzen brauchen Kilogramm an Nährstoffen pro Acre, und Blätter können diese Menge einfach nicht aufnehmen. Nutzen Sie die Blattdüngung ergänzend zu Ihrem Grund- und Kopfdüngungsprogramm, nicht stattdessen."
+      },
+      {
+        "q": "Wie lautet die Formel zur Berechnung von NPK-Dünger?",
+        "a": "Die Standardformel lautet: benötigter Dünger (kg) = (benötigter Nährstoff in kg × 100) ÷ Nährstoffgehalt % im Dünger. Wenn Weizen zum Beispiel 50 kg Stickstoff pro Acre braucht und Sie Urea (46 % N) verwenden: 50 × 100 ÷ 46 = 109 kg Urea pro Acre. Für Phosphor aus DAP (46 % P₂O₅): Bei einem Bedarf von 30 kg P₂O₅ brauchen Sie 30 × 100 ÷ 46 = 65 kg DAP. Unser Dosis-Rechner erledigt das automatisch für Ihre Kultur und Fläche."
+      },
+      {
+        "q": "Ist NPK 19-19-19 organisch?",
+        "a": "Nein — 19-19-19 ist ein synthetischer (chemischer) Dünger. Er wird so hergestellt, dass jedes Korn exakt 19 % Stickstoff, 19 % Phosphat (P₂O₅) und 19 % Kali (K₂O) enthält. Organische Dünger wie FYM, Kompost oder Wurmkompost haben einen deutlich geringeren und schwankenden Nährstoffgehalt (in der Regel unter 2 % NPK insgesamt). Für eine Bio-Zertifizierung kommt 19-19-19 nicht infrage. Es ist aber eine praktische, ausgewogene Option für die allgemeine Pflanzenernährung, wo der Bio-Status keine Rolle spielt."
+      },
+      {
+        "q": "Was ist Dhaincha?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa) ist eine schnell wachsende Leguminose, die als Gründüngung angebaut wird, vor allem in Reis-Weizen-Systemen. Vor dem Umpflanzen des Reises ausgesät, wächst sie in 45–60 Tagen 6–8 Fuß hoch und wird dann in den Boden eingepflügt, wo sie sich zersetzt und 60–80 kg Stickstoff pro Hektar liefert — das entspricht etwa 130–175 kg Urea. Sie führt dem Boden außerdem organische Substanz zu und verbessert die Bodenstruktur. Die Aussaatmenge liegt typischerweise bei 20–25 kg pro Acre, und sie braucht selbst keinen Dünger, da sie Luftstickstoff bindet."
+      },
+      {
+        "q": "Wie viel wiegt ein Sack Dünger?",
+        "a": "In Pakistan und Indien wiegt der Standard-Düngersack 50 kg. Das gilt für Urea, DAP, MOP, SSP und die meisten granulierten Dünger. Manche Spezialprodukte (Mikronährstoffe, wasserlösliche Düngemittel) gibt es in kleineren Gebinden von 1, 5 oder 25 kg. Rechnen Sie bei der Dosierung Ihren Bedarf pro Acre immer in Säcke um: zum Beispiel 109 kg Urea pro Acre = etwas mehr als 2 Säcke (2.18 Säcke)."
       }
     ],
     "title": "Fragen, die uns Landwirte stellen",

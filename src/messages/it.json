@@ -183,6 +183,37 @@
       {
         "a": "Sì — calcolatore, biblioteche e guide sono gratuiti. Un account serve solo per funzioni come salvare le diagnosi.",
         "q": "Fertilizer Dose è gratuito?"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "q": "Il concime fogliare può sostituire la concimazione al suolo?",
+        "a": "No — la concimazione fogliare è un'integrazione, non una sostituzione. Le foglie assorbono i nutrienti in fretta ma in piccole quantità, quindi i trattamenti fogliari sono ideali per correggere le carenze di microelementi (zinco, ferro, boro) o per dare una spinta rapida nelle fasi critiche della crescita. Ma la maggior parte dell'NPK deve arrivare dal suolo, perché le piante hanno bisogno di chilogrammi di nutrienti per acre e le foglie non possono assorbire quel volume. Usa la concimazione fogliare insieme al tuo programma di concimazione di fondo e in copertura, non al suo posto."
+      },
+      {
+        "q": "Qual è la formula per calcolare il concime NPK?",
+        "a": "La formula standard è: concime necessario (kg) = (nutriente necessario in kg × 100) ÷ % di nutriente nel concime. Per esempio, se il frumento ha bisogno di 50 kg di azoto per acre e usi Urea (46% N): 50 × 100 ÷ 46 = 109 kg di Urea per acre. Per il fosforo dal DAP (46% P₂O₅): se servono 30 kg di P₂O₅, servono 30 × 100 ÷ 46 = 65 kg di DAP. Il nostro Calcolatore di dose lo fa automaticamente per la tua coltura e la tua superficie."
+      },
+      {
+        "q": "L'NPK 19-19-19 è biologico?",
+        "a": "No — il 19-19-19 è un concime sintetico (chimico). È prodotto per contenere esattamente il 19% di azoto, il 19% di fosfato (P₂O₅) e il 19% di potassa (K₂O) in ogni granulo. I concimi organici come FYM, compost o vermicompost hanno un contenuto di nutrienti molto più basso e variabile (di solito sotto il 2% di NPK complessivo). Se vuoi la certificazione biologica, il 19-19-19 non è ammesso. È però un'opzione bilanciata e pratica per nutrire le piante in generale, quando lo status biologico non conta."
+      },
+      {
+        "q": "Cos'è la coltura di dhaincha?",
+        "a": "Il dhaincha (Sesbania aculeata/bispinosa) è una leguminosa a crescita rapida coltivata come sovescio, soprattutto nei sistemi riso-frumento. Seminato prima del trapianto del riso, cresce 6-8 piedi in 45-60 giorni, poi viene interrato nel suolo dove si decompone e apporta 60-80 kg di azoto per ettaro — più o meno l'equivalente di 130-175 kg di Urea. Apporta anche sostanza organica e migliora la struttura del suolo. La dose di semina è di solito 20-25 kg per acre, e non ha bisogno di concime perché fissa l'azoto atmosferico."
+      },
+      {
+        "q": "Quanto pesa un sacco di concime?",
+        "a": "In Pakistan e in India, il sacco standard di concime pesa 50 kg. Vale per Urea, DAP, MOP, SSP e per la maggior parte dei concimi granulari. Alcuni prodotti speciali (microelementi, concimi idrosolubili) sono venduti in confezioni più piccole da 1, 5 o 25 kg. Quando calcoli le dosi, converti sempre il fabbisogno per acre in numero di sacchi: per esempio, 109 kg di Urea per acre = poco più di 2 sacchi (2.18 sacchi)."
       }
     ],
     "title": "Domande che gli agricoltori ci fanno",

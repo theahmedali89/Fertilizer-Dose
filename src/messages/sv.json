@@ -185,6 +185,37 @@
       {
         "a": "Ja – beräknaren, biblioteken och guiderna är gratis. Ett konto behövs bara för funktioner som att spara diagnoser.",
         "q": "Är Fertilizer Dose gratis att använda?"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "q": "Kan bladgödsling ersätta gödsling i jorden?",
+        "a": "Nej — bladgödsling är ett komplement, inte en ersättning. Bladen tar upp näring snabbt men i små mängder, vilket gör bladgödsling idealisk för att rätta till brist på mikronäring (zink, järn, bor) eller ge en snabb skjuts under kritiska tillväxtstadier. Men merparten av NPK måste tillföras via jorden, eftersom grödan behöver kilovis med näring per acre och bladen helt enkelt inte kan ta upp så stora mängder. Använd bladgödsling tillsammans med grundgödsling och övergödsling i jorden — inte i stället för dem."
+      },
+      {
+        "q": "Vad är formeln för att beräkna NPK-gödsling?",
+        "a": "Standardformeln är: gödselbehov (kg) = (näringsbehov i kg × 100) ÷ näringshalten i % i gödselmedlet. Exempel: om vete behöver 50 kg kväve per acre och du använder Urea (46 % N): 50 × 100 ÷ 46 = 109 kg Urea per acre. För fosfor från DAP (46 % P₂O₅): om du behöver 30 kg P₂O₅ behöver du 30 × 100 ÷ 46 = 65 kg DAP. Vår Dose Calculator räknar ut detta automatiskt för din gröda och areal."
+      },
+      {
+        "q": "Är NPK 19-19-19 ekologiskt?",
+        "a": "Nej — 19-19-19 är ett syntetiskt (kemiskt) gödselmedel. Det tillverkas för att innehålla exakt 19 % kväve, 19 % fosfor (P₂O₅) och 19 % kalium (K₂O) i varje granulat. Ekologiska gödselmedel som FYM, kompost eller maskkompost har mycket lägre och varierande näringshalt (vanligtvis under 2 % NPK sammanlagt). Om du vill ha ekologisk certifiering kvalificerar sig inte 19-19-19. Det är däremot ett bekvämt och balanserat alternativ för allmän växtnäring där ekostatus inte spelar någon roll."
+      },
+      {
+        "q": "Vad är dhaincha för gröda?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa) är en snabbväxande baljväxt som odlas som gröngödsling, främst i ris–vete-system. Den sås före risplanteringen, växer 6–8 fot på 45–60 dagar och plöjs sedan ner i jorden där den bryts ner och tillför 60–80 kg kväve per hektar — ungefär motsvarande 130–175 kg Urea. Den tillför också organiskt material och förbättrar markstrukturen. Utsädesmängden är vanligtvis 20–25 kg per acre, och den behöver inget eget gödsel eftersom den fixerar luftens kväve."
+      },
+      {
+        "q": "Hur mycket väger en gödselsäck?",
+        "a": "I Pakistan och Indien väger en standardsäck gödsel 50 kg. Det gäller Urea, DAP, MOP, SSP och de flesta granulatformade gödselmedel. Vissa specialprodukter (mikronäring, vattenlösliga gödselmedel) säljs i mindre förpackningar om 1, 5 eller 25 kg. När du beräknar givan ska du alltid räkna om behovet per acre till antal säckar: till exempel motsvarar 109 kg Urea per acre drygt 2 säckar (2.18 säckar)."
       }
     ],
     "title": "Frågor som lantbrukare ställer oss",

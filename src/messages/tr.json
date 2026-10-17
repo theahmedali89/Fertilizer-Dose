@@ -184,6 +184,37 @@
       {
         "a": "Evet — hesaplayıcı, kütüphaneler ve kılavuzlar ücretsizdir. Hesap yalnızca tanı kaydetme gibi özellikler için gereklidir.",
         "q": "Fertilizer Dose ücretsiz mi?"
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "q": "Yaprak gübresi toprak uygulamasının yerini tutar mı?",
+        "a": "Hayır — yaprak gübrelemesi bir tamamlayıcıdır, yerine geçmez. Yapraklar besin maddelerini hızlı emer ama küçük miktarlarda; bu nedenle yaprak püskürtmeleri, mikro besin eksikliklerini gidermek (çinko, demir, bor) veya kritik büyüme dönemlerinde hızlı bir destek sağlamak için idealdir. Ancak NPK'nin büyük bölümü topraktan gelmelidir, çünkü bitkilerin akr başına kilogramlarca besine ihtiyacı vardır ve yapraklar bu hacmi ememez. Yaprak gübrelemesini, taban gübrelemesi ve üst gübreleme programınızla birlikte kullanın, onun yerine değil."
+      },
+      {
+        "q": "NPK gübre hesaplama formülü nedir?",
+        "a": "Standart formül şudur: gerekli gübre (kg) = (gerekli besin maddesi kg × 100) ÷ gübredeki besin maddesi %. Örneğin, buğdayın akr başına 50 kg azota ihtiyacı varsa ve Urea (%46 N) kullanıyorsanız: 50 × 100 ÷ 46 = akr başına 109 kg Urea. DAP'tan fosfor (%46 P₂O₅) için: 30 kg P₂O₅ gerekiyorsa, 30 × 100 ÷ 46 = 65 kg DAP gerekir. Doz Hesaplayıcımız bunu ürününüz ve alanınız için otomatik olarak yapar."
+      },
+      {
+        "q": "NPK 19-19-19 organik midir?",
+        "a": "Hayır — 19-19-19 sentetik (kimyasal) bir gübredir. Her granülün tam olarak %19 azot, %19 fosfor (P₂O₅) ve %19 potasyum (K₂O) içermesi için üretilir. FYM, kompost veya vermikompost gibi organik gübrelerin besin içeriği çok daha düşük ve değişkendir (genellikle toplamda %2 NPK'nin altındadır). Organik sertifika için 19-19-19 uygun değildir. Ancak organik statünün önemli olmadığı genel bitki beslemede pratik, dengeli bir seçenektir."
+      },
+      {
+        "q": "Dhaincha bitkisi nedir?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa), özellikle çeltik-buğday sistemlerinde yeşil gübre olarak yetiştirilen hızlı büyüyen bir baklagildir. Çeltik dikiminden önce ekilir, 45-60 günde 6-8 fit boya ulaşır, sonra toprağa gömülür; burada ayrışarak hektar başına 60-80 kg azot katar — bu yaklaşık 130-175 kg Urea'ya eşdeğerdir. Ayrıca toprağa organik madde katar ve toprak yapısını iyileştirir. Tohumluk miktarı genellikle akr başına 20-25 kg'dır ve atmosferik azotu bağladığı için kendisi gübre istemez."
+      },
+      {
+        "q": "Bir torba gübre kaç kilogramdır?",
+        "a": "Pakistan ve Hindistan'da standart gübre torbası 50 kg'dır. Bu; Urea, DAP, MOP, SSP ve çoğu granül gübre için geçerlidir. Bazı özel ürünler (mikro besinler, suda çözünür gübreler) 1, 5 veya 25 kg'lık daha küçük ambalajlarda satılır. Doz hesaplarken akr başına ihtiyacınızı her zaman torba sayısına çevirin: örneğin akr başına 109 kg Urea, 2 torbadan biraz fazladır (2,18 torba)."
       }
     ],
     "title": "Çiftçilerin bize sorduğu sorular",

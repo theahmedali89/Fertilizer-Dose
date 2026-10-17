@@ -235,6 +235,26 @@
       {
         "q": "À quoi sert l'engrais ammonium sulphate ?",
         "a": "L'ammonium sulphate (21-0-0 plus 24% de soufre) apporte de l'azote associé à du soufre, idéal pour les sols carencés en soufre. Il a un effet acidifiant sur le sol."
+      },
+      {
+        "q": "L'engrais foliaire peut-il remplacer l'apport au sol ?",
+        "a": "Non — la fertilisation foliaire est un complément, pas un remplacement. Les feuilles absorbent les nutriments rapidement mais en petites quantités, ce qui fait des pulvérisations foliaires la solution idéale pour corriger les carences en oligo-éléments (zinc, fer, bore) ou donner un coup de pouce rapide pendant les stades critiques de la croissance. Mais l'essentiel du NPK doit passer par le sol, car les plantes ont besoin de kilogrammes de nutriments par acre et les feuilles ne peuvent tout simplement pas absorber ce volume. Utilisez la fertilisation foliaire en complément de votre programme d'apport de fond et d'apports en couverture, pas à la place."
+      },
+      {
+        "q": "Quelle est la formule de calcul de l'engrais NPK ?",
+        "a": "La formule standard est : engrais nécessaire (kg) = (nutriment nécessaire en kg × 100) ÷ % de nutriment dans l'engrais. Par exemple, si le blé a besoin de 50 kg d'azote par acre et que vous utilisez de l'Urea (46 % N) : 50 × 100 ÷ 46 = 109 kg d'Urea par acre. Pour le phosphore du DAP (46 % P₂O₅) : s'il vous faut 30 kg de P₂O₅, il vous faut 30 × 100 ÷ 46 = 65 kg de DAP. Notre calculateur de dose le fait automatiquement pour votre culture et votre surface."
+      },
+      {
+        "q": "Le NPK 19-19-19 est-il biologique ?",
+        "a": "Non — le 19-19-19 est un engrais de synthèse (chimique). Il est fabriqué pour contenir exactement 19 % d'azote, 19 % de phosphate (P₂O₅) et 19 % de potasse (K₂O) dans chaque granulé. Les engrais organiques comme le FYM, le compost ou le vermicompost ont une teneur en nutriments bien plus faible et variable (généralement moins de 2 % de NPK combiné). Si vous visez la certification biologique, le 19-19-19 ne convient pas. C'est en revanche une option équilibrée et pratique pour nourrir les plantes en général, quand le statut biologique n'a pas d'importance."
+      },
+      {
+        "q": "Qu'est-ce que la culture de dhaincha ?",
+        "a": "Le dhaincha (Sesbania aculeata/bispinosa) est une légumineuse à croissance rapide cultivée comme engrais vert, principalement dans les systèmes riz-blé. Semé avant le repiquage du riz, il pousse de 6 à 8 pieds en 45-60 jours, puis est enfoui dans le sol où il se décompose et apporte 60-80 kg d'azote par hectare — soit l'équivalent d'environ 130-175 kg d'Urea. Il apporte aussi de la matière organique et améliore la structure du sol. La dose de semis est généralement de 20-25 kg par acre, et il n'a besoin d'aucun engrais car il fixe l'azote atmosphérique."
+      },
+      {
+        "q": "Combien pèse un sac d'engrais ?",
+        "a": "Au Pakistan et en Inde, le sac d'engrais standard pèse 50 kg. Cela s'applique à l'Urea, au DAP, au MOP, au SSP et à la plupart des engrais granulés. Certains produits de spécialité (oligo-éléments, engrais hydrosolubles) sont vendus en plus petits conditionnements de 1, 5 ou 25 kg. Pour calculer les doses, convertissez toujours votre besoin par acre en nombre de sacs : par exemple, 109 kg d'Urea par acre = un peu plus de 2 sacs (2.18 sacs)."
       }
     ],
     "title": "Les questions que les agriculteurs nous posent",
