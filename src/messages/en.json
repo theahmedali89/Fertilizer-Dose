@@ -230,6 +230,26 @@
       {
         "q": "What is ammonium sulphate fertilizer used for?",
         "a": "Ammonium sulphate (21-0-0 plus 24% sulphur) supplies nitrogen together with sulphur, making it useful where soils are sulphur-deficient — common in high-yielding cereals and oilseeds. It has an acidifying effect on soil, so it suits neutral to alkaline soils well, but use it cautiously on already-acidic soils. It is also a good choice when you want nitrogen without adding any phosphorus or potassium."
+      },
+      {
+        "q": "Can foliar fertilizer replace soil application?",
+        "a": "No — foliar feeding is a supplement, not a replacement. Leaves absorb nutrients quickly but in small amounts, making foliar sprays ideal for correcting micronutrient deficiencies (zinc, iron, boron) or giving a quick boost during critical growth stages. But the bulk of NPK must come through the soil because plants need kilograms of nutrients per acre, and leaves simply cannot absorb that volume. Use foliar feeding alongside your soil-applied basal and top-dressing program, not instead of it."
+      },
+      {
+        "q": "What is the NPK fertilizer calculation formula?",
+        "a": "The standard formula is: fertilizer needed (kg) = (nutrient needed in kg × 100) ÷ nutrient % in the fertilizer. For example, if wheat needs 50 kg of nitrogen per acre and you are using urea (46% N): 50 × 100 ÷ 46 = 109 kg of urea per acre. For phosphorus from DAP (46% P₂O₅): if you need 30 kg P₂O₅, you need 30 × 100 ÷ 46 = 65 kg of DAP. Our Dose Calculator does this automatically for your crop and area."
+      },
+      {
+        "q": "Is NPK 19-19-19 organic?",
+        "a": "No — 19-19-19 is a synthetic (chemical) fertilizer. It is manufactured to contain exactly 19% nitrogen, 19% phosphate (P₂O₅), and 19% potash (K₂O) in every granule. Organic fertilizers like FYM, compost, or vermicompost have much lower and variable nutrient content (typically under 2% NPK combined). If you want organic certification, 19-19-19 does not qualify. It is, however, a convenient balanced option for general plant feeding where organic status does not matter."
+      },
+      {
+        "q": "What is dhaincha crop?",
+        "a": "Dhaincha (Sesbania aculeata/bispinosa) is a fast-growing legume grown as green manure, mainly in rice-wheat systems. Sown before paddy transplanting, it grows 6-8 feet in 45-60 days, then is ploughed into the soil where it decomposes and adds 60-80 kg of nitrogen per hectare — roughly equivalent to 130-175 kg of urea. It also adds organic matter and improves soil structure. Seed rate is typically 20-25 kg per acre, and it needs no fertilizer itself since it fixes atmospheric nitrogen."
+      },
+      {
+        "q": "How much does a bag of fertilizer weigh?",
+        "a": "In Pakistan and India, the standard fertilizer bag weighs 50 kg. This applies to urea, DAP, MOP, SSP, and most granular fertilizers. Some specialty products (micronutrients, water-soluble fertilizers) come in smaller packs of 1, 5, or 25 kg. When calculating doses, always convert your per-acre requirement into number of bags: for example, 109 kg of urea per acre = just over 2 bags (2.18 bags)."
       }
     ],
     "title": "Questions farmers ask us",
