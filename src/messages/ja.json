@@ -1647,5 +1647,480 @@
     "viewAll": "すべての寄稿者を表示",
     "priorityBadge": "⚡ 優先審査",
     "close": "近い"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "土壌にborax（11% B）を10–15 kg/ha施用するか、開花期に0.2%のborax液を葉面散布してください。多量施用は厳禁 — 欠乏と過剰症の間の幅が狭い栄養素です。",
+        "fertilizer": "Borax",
+        "fullName": "ホウ素（B）",
+        "name": "ホウ素欠乏",
+        "note": "開花期に特に重要 — 花粉と着果に影響します。"
+      },
+      "Ca": {
+        "correction": "まず土壌水分を一定に保つこと — カルシウム障害のほとんどは土壌ではなく水が原因です。gypsum（pHは変わりません）またはcalcium nitrateを施用してください。尻腐れ病には、肥料よりもマルチと定期的なかん水が重要です。",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "カルシウム（Ca）",
+        "name": "カルシウム欠乏",
+        "note": "尻腐れ病は通常、カルシウム不足ではなく不均一なかん水が原因です。"
+      },
+      "Fe": {
+        "correction": "葉に0.5–1%のferrous sulfate溶液を散布します（10–14日後に繰り返し）。アルカリ性土壌では土壌施用はほとんど効きません — 必要ならキレート鉄（Fe-EDDHA）を使ってください。",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "鉄（Fe）",
+        "name": "鉄欠乏",
+        "note": "ほとんどの場合、鉄不足ではなく土壌pHが高いことが原因です。"
+      },
+      "K": {
+        "correction": "SOP（50% K₂O）またはMOP（60% K₂O）を50–75 kg/ha施用します。果菜類では分施してください — 開花期に半分、果実肥大期に半分です。",
+        "fertilizer": "SOP / MOP",
+        "fullName": "カリウム（K）",
+        "name": "カリウム欠乏",
+        "note": "砂質土壌や乾燥ストレスで悪化します。"
+      },
+      "Mg": {
+        "correction": "土壌にmagnesium sulfate（Epsom salt、9.8% Mg）を25 kg/ha施用するか、葉に2%溶液を散布してください。",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "マグネシウム（Mg）",
+        "name": "マグネシウム欠乏",
+        "note": "窒素欠乏と間違えやすい — 黄化が葉脈の間に出ているか確認してください。"
+      },
+      "Mn": {
+        "correction": "葉に0.5%のmanganese sulfateを散布してください。過剰な石灰施用は避けること — pHが高いとマンガンが固定されます。",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "マンガン（Mn）",
+        "name": "マンガン欠乏",
+        "note": "鉄欠乏に似ています — 土壌pHの測定で見分けられます。"
+      },
+      "N": {
+        "correction": "かん水前にUrea（46% N）を50–100 kg/haで追肥するか、即効性を求めるなら2%のUrea溶液を葉面散布してください。",
+        "fertilizer": "Urea",
+        "fullName": "窒素（N）",
+        "name": "窒素欠乏",
+        "note": "世界で最も多い欠乏症。窒素に速く反応します。"
+      },
+      "P": {
+        "correction": "播種・定植時にDAP（18-46-0）またはSSPを施用してください — リンは土壌中で動きにくいので、根圏の近くに置きます。葉面散布は効果が弱い対策です。",
+        "fertilizer": "DAP / SSP",
+        "fullName": "リン（P）",
+        "name": "リン欠乏",
+        "note": "冷たい土壌や酸性土壌でよく見られます。"
+      },
+      "S": {
+        "correction": "gypsum（18% S）を200–250 kg/ha施用するか、窒素源をammonium sulfate（21% N + 24% S）に切り替えてください。",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "硫黄（S）",
+        "name": "硫黄欠乏",
+        "note": "窒素欠乏に似ていますが、新葉から始まるのが特徴です。"
+      },
+      "Zn": {
+        "correction": "土壌にzinc sulfate（33% Zn）を20–25 kg/ha施用するか、葉に0.5% zinc sulfate＋0.25%石灰の溶液を散布してください。土壌施用1回で2–3作持ちます。",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "亜鉛（Zn）",
+        "name": "亜鉛欠乏",
+        "note": "pHの高い（アルカリ性）石灰質土壌で非常に多い欠乏症です。"
+      }
+    },
+    "hero": {
+      "desc": "葉が黄色い？茎が紫色？葉縁が焼けたよう？植物に見られる症状を選んでください — 可能性の高い栄養欠乏を、対策に使う適切な肥料とともに示します。",
+      "eyebrow": "栄養欠乏",
+      "title": "肥料の欠乏症状チェッカー"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "果実の下部に黒くへこんだ斑点",
+        "label": "果実の尻腐れ病"
+      },
+      "dark-delayed": {
+        "hint": "生育が遅く、開花が遅れる",
+        "label": "濃緑色の葉と成熟の遅れ"
+      },
+      "inter-old": {
+        "hint": "葉脈は緑のまま、葉脈間が黄色くなる",
+        "label": "古い葉の葉脈間黄化"
+      },
+      "little-leaf": {
+        "hint": "ロゼット状に詰まった生育",
+        "label": "異常に小さい葉（リトルリーフ）"
+      },
+      "new-uniform": {
+        "hint": "窒素欠乏に似るが若い葉に出る",
+        "label": "新葉が均一に淡黄色"
+      },
+      "new-yellow-veins": {
+        "hint": "先端の生育が先に影響を受ける",
+        "label": "新葉は黄色いが葉脈は緑のまま"
+      },
+      "old-yellow": {
+        "hint": "株の下部から始まる",
+        "label": "古い・下位葉が黄色くなる"
+      },
+      "poor-fruit": {
+        "hint": "結実せずに花が落ちる",
+        "label": "着果不良・落花"
+      },
+      "purple": {
+        "hint": "品種本来の色ではない異常な着色",
+        "label": "葉・茎が紫色や赤みを帯びる"
+      },
+      "scorch": {
+        "hint": "葉縁が焼けたようになり、古い葉から始まる",
+        "label": "茶色く焼けた葉縁"
+      },
+      "spots-weak": {
+        "hint": "茎が倒伏したり折れやすい",
+        "label": "葉の褐色斑点、弱い茎"
+      },
+      "stunted": {
+        "hint": "株全体が弱々しく小さい",
+        "label": "生育不良、淡緑色の株"
+      },
+      "tip-burn": {
+        "hint": "レタス、キャベツ、カリフラワーによく見られる",
+        "label": "内側の若い葉の先端枯れ"
+      },
+      "tip-death": {
+        "hint": "新しい生育が変形または枯死",
+        "label": "成長点が枯死または変形"
+      }
+    },
+    "ui": {
+      "bestMatch": "最適な一致",
+      "calcDose": "肥料計算機で正確な施肥量を計算 →",
+      "checkButton": "欠乏をチェック（{count}件選択中）",
+      "clearAll": "すべてクリア",
+      "disclaimer": "免責事項：",
+      "disclaimerText": "目視の症状は欠乏症・病害虫・病気で重なることがあります。このチェッカーは標準的な農学資料に基づく学習用ガイドであり、土壌や植物体の検査に代わるものではありません。迷ったときは、矯正施肥の前に土壌診断を受けてください。",
+      "howToCorrect": "矯正方法",
+      "matchedOf": "主要症状{total}件中{matched}件が一致",
+      "noMatches1": "一致が見つかりませんでした。別の症状を選ぶか、",
+      "noMatches2": "で写真による診断を受けてください。",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "あなたの症状との一致数でランク付けしています。これはガイドであり検査ではありません — 確実を期すには土壌診断で確認してください。",
+      "recFert": "推奨肥料",
+      "refTitle": "クイックリファレンス — すべての欠乏症",
+      "step1Desc": "当てはまるものをすべてタップ。複数選択できます。",
+      "step1Title": "ステップ1 — 見られる症状を選ぶ",
+      "step2Title": "ステップ2 — 可能性の高い欠乏症",
+      "thFix": "対策",
+      "thNutrient": "栄養素",
+      "thSymptom": "典型的な症状"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "ドラム缶や散布タンクで2種類の肥料を混ぜますか？先に確認を — 組み合わせによっては不溶性の汚泥ができ、お金が無駄になりノズルが詰まります。2つの肥料を選ぶと、即座に判定が出ます。",
+      "eyebrow": "タンクミックス適合性",
+      "title": "肥料タンクミックス適合性チェッカー"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "リン酸カルシウムの沈殿を形成"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "不溶性のリン酸亜鉛スラッジを形成"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "リン酸が亜鉛を固定する"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "乳白色の沈殿、養分が失われる"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "UreaとAmmonium Sulphateは安全に混合できます。どちらも窒素源で、この組み合わせは硫黄も供給します。異常な反応はありません。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "boron_sop": {
+        "explanation": "SOPとホウ素は溶液中で安全に混合できます — 開花期の果菜類によく使われる潅水施肥の組み合わせです。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "boron_urea": {
+        "explanation": "Ureaとホウ素（borax／ホウ酸）は溶液中で適合します。標準的な葉面散布の組み合わせで、開花期や着果期によく一緒に散布されます。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "calnit_dap": {
+        "explanation": "DAPとCalcium Nitrateはリン酸カルシウムの沈殿を形成します。両方の養分が互いに固定し合い、タンクの底に沈みます — 両方の肥料が完全に無駄になります。",
+        "instead": "リン酸肥料とは別の日にcalcium nitrateを潅水施肥で施用してください。少なくとも3–4日の間隔を空けてください。",
+        "title": "危険 — 混ぜないでください"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15はリン酸を含み、calcium nitrateのカルシウムと沈殿することがあります。液体NPKの中にはキレート化されていて問題ないものもありますが、粒状NPKは同じタンクでは危険です。",
+        "instead": "両方が必要な場合は、NPKを土壌施用し、calcium nitrateは数日空けて別に潅水施肥してください。",
+        "title": "注意 — グレードを確認"
+      },
+      "calnit_urea": {
+        "explanation": "UreaとCalcium Nitrateは化学的に適合しますが、どちらも強い吸湿性があります — 混合物は空気中の水分を吸い、ベタついて数時間で固結します。",
+        "instead": "使用直前に混合し、当日中に散布してください。2つの肥料は密封袋で別々に保管してください。",
+        "title": "注意 — 強い吸湿性"
+      },
+      "dap_sop": {
+        "explanation": "DAPとSOPは安全で広く使われる基肥の組み合わせです。リン酸と硫酸カリの間に沈殿は起きません。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "dap_urea": {
+        "explanation": "散布用の乾式混合ならDAPとUreaは安全です。しかし散布タンクで両方を一緒に溶かすとpHが上がりアンモニアガスが発生します — 窒素が失われ、高いpHで葉が焼けることがあります。",
+        "instead": "散布用の乾式混合は問題ありません。潅水施肥や散布では別々に施用してください。",
+        "title": "注意 — 乾式は可、溶液では危険"
+      },
+      "dap_zinc": {
+        "explanation": "DAPとZinc Sulphateは不溶性のリン酸亜鉛を形成します — 濃厚なカード状の沈殿です。亜鉛は固定されて植物に利用できなくなり、スラッジが散布ノズルや点滴チューブを詰まらせます。",
+        "instead": "別々に施用してください：播種・圃場準備時にDAPを散布し、zinc sulphateは土壌への別施用か葉面散布（0.5%溶液）で2–3週間後に施用します。",
+        "title": "危険 — 混ぜないでください"
+      },
+      "default": {
+        "explanation": "この組み合わせについての適合性データは確認されていません。「安全」とは考えないでください。混合前に肥料ラベルの指示に従うか、ジャー試験を行ってください：少量を水に混ぜ、15分待って、発熱・ガス・凝固・沈殿がないか確認します。確信が持てるまで混合しないでください。",
+        "instead": "両方の肥料が必要な場合は別々に施用するか — まず小規模でジャー試験を行って確認してください。",
+        "title": "不明 — 未確認"
+      },
+      "mop_urea": {
+        "explanation": "UreaとMOPは散布用の乾式混合で化学的に適合します。（注：点滴潅水や塩素感受性作物では、MOPよりSOPを優先してください。）",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "mop_zinc": {
+        "explanation": "MOPとZinc Sulphateは物理的には問題なく混合できますが、MOPは多量の塩素を持ち込みます。点滴潅水や塩素感受性作物（タバコ、ジャガイモ、柑橘、ブドウ）では、この組み合わせが作物にストレスを与えます。",
+        "instead": "微量要素と混合する際はMOPよりSOPを優先してください。特に点滴潅水や感受性作物では重要です。",
+        "title": "注意 — 塩素負荷"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophosはリン酸を含み、亜鉛と反応して不溶性のリン酸亜鉛を形成します — DAP＋亜鉛と同じカード状の沈殿です。亜鉛が失われ、ノズルが詰まります。",
+        "instead": "zinc sulphateは別々に施用してください — 基肥の土壌施用か0.5%の葉面散布で、リン酸肥料とは少なくとも2週間空けてください。",
+        "title": "危険 — 混ぜないでください"
+      },
+      "npk_sop": {
+        "explanation": "NPKとSOPは安全で、塩素を加えずに果菜類のカリを高めるのによく使われます。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15とUreaは安全です — 基肥の窒素を高めるのによく使われます。異常な反応はありません。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "same": {
+        "explanation": "同じ{name}を2回選びました — 混ぜるものがありません。適合性を確認するには異なる2つの肥料を選んでください。",
+        "instead": "",
+        "title": "同じ肥料"
+      },
+      "sop_urea": {
+        "explanation": "UreaとSOPは乾式・溶解のどちらでも完全に適合する混合です。沈殿も養分損失もありません。追肥によく使われる効果的な組み合わせです。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "sop_zinc": {
+        "explanation": "SOPとZinc Sulphateはタンク内で安全です。硫酸系肥料は亜鉛と反応せず、両方ともきれいに一緒に溶けます。",
+        "instead": "",
+        "title": "安全 — 適合"
+      },
+      "ssp_urea": {
+        "explanation": "UreaとSSPは化学的に適合しますが、Ureaが水分を吸いSSPが酸性のため、混合物はすぐに固結して硬くなります。均一に散布するのが難しくなります。",
+        "instead": "1–2時間以内に散布する分だけ混合してください。混合物を一晩置かないでください。",
+        "title": "注意 — すぐに使用"
+      },
+      "ssp_zinc": {
+        "explanation": "SSPはリン酸＋カルシウムを含みます。zinc sulphateと混ぜると不溶性のリン酸亜鉛とカルシウム沈殿を形成し — 混合物は乳白色になって使えなくなります。",
+        "instead": "亜鉛は葉面散布や基肥としてSSP施用とは離して別々に施用してください。",
+        "title": "危険 — 混ぜないでください"
+      }
+    },
+    "ui": {
+      "checkBtn": "適合性をチェック",
+      "fertA": "肥料A",
+      "fertB": "肥料B",
+      "insteadTitle": "💡 代わりにこうする",
+      "jarTest": "タンクいっぱいの混合の前に必ずジャー試験を行ってください：少量を水に混ぜ、15分待って、発熱・ガス・凝固・沈殿がないか確認します。",
+      "quickRefTitle": "クイックリファレンス：絶対に混ぜない組み合わせ",
+      "selectPlaceholder": "— 肥料を選択 —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "液体は1 L ≈ 1 kgとして扱います。",
+      "nPct": "N %",
+      "nutrientPct": "養分含有率（%）",
+      "pPct": "P₂O₅ %",
+      "packSize": "包装サイズ",
+      "packSizePh": "例：1",
+      "price": "価格（Rs／袋）",
+      "pricePh": "例：3500",
+      "productName": "製品名",
+      "productPh": "例：SuperPhos Liquid 10%",
+      "submit": "💰 真のコストを計算"
+    },
+    "hero": {
+      "desc": "1リットルRs 3,500の派手な液体リン — お買い得？それとも詐欺？製品の価格とNPK含有率を入力すれば、標準的なDAP・Urea・SOP・MOPと比較した1 kg養分あたりの真のコストが分かります。",
+      "eyebrow": "価格 vs 価値",
+      "noteText": "参考価格は例示であり編集可能です — 実際の市場価格ではありません。正確な比較にはお住まいの地域の実際の価格を使ってください。",
+      "noteTitle": "⚠️ 注意：",
+      "title": "肥料の養分あたりコスト計算機"
+    },
+    "nutrients": {
+      "k": "K₂O（カリ）",
+      "n": "N（窒素）",
+      "p": "P₂O₅（リン酸）"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg袋",
+      "perBag": "Rs／袋",
+      "priceAria": "{name}の価格（Rs）",
+      "reset": "初期値に戻す",
+      "title": "📊 参考価格（パキスタン、Rs／50 kg袋）"
+    },
+    "results": {
+      "benchTitle": "📋 ベンチマーク比較",
+      "cheapLine": "{nutrient}：{product} @ {price}/kg",
+      "cheapTitle": "💡 今いちばん安い養分源",
+      "footnote": "参考価格はパキスタンのもので、上で編集できます。養分コスト ＝ 袋価格 ÷（袋重量 × 養分%）。市場が動いたら価格を更新してください。",
+      "kgInPack": "袋あたり{kg} kg",
+      "noInput": "⚠️ 袋サイズ、価格、0より大きい養分含有率を少なくとも1つ入力してください。",
+      "perKg": "／kg",
+      "thCheapest": "最安の標準品",
+      "thNutrient": "養分",
+      "thRatio": "比率",
+      "thYours": "あなたの製品",
+      "thisProduct": "この製品",
+      "verdictExpensive": "{nutrient}に{product}（{price}/kg）の{ratio}倍も払っています。{product}を買いましょう — 販売店に騙されないで。",
+      "verdictGood": "適正価格です。{name}は標準的な肥料とほぼ同じ価格 — 問題ありません。",
+      "verdictPricier": "{nutrient}は{product}（{price}/kg）より{ratio}倍高くなっています。代わりに標準品を検討してください。",
+      "vsBenchmark": "{product}比{ratio}倍"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "高い — 代わりに標準品を買う"
+      },
+      "good": {
+        "title": "お買い得"
+      },
+      "pricier": {
+        "title": "標準品より高い"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "硫黄（24% S）も供給 — 油糧種子やアルカリ性土壌に適しています。",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "塩化カリ — 最も安いカリ源、塩素を含みます。",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "硫酸カリ — 塩素を含まず、硫黄も供給します。",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "硫黄（約12%）とカルシウムも供給；DAPより緩効性です。",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAPが市場から消えた、またはSOPが高すぎて手が出ない？欲しかった肥料と必要だった袋数を選んでください — 通常入手できる製品の中から、養分が最も近い組み合わせを示します。",
+      "eyebrow": "不足時のヘルパー",
+      "noteText": "養分換算の計算は、化学的適合性・塩類濃度の安全性・施用時期の適否を証明するものではありません。代替前に必ず地域の農業指導員に確認してください。",
+      "noteTitle": "⚠️ 重要：",
+      "title": "肥料代替品ファインダー"
+    },
+    "notes": {
+      "ams": "ammonium sulphateは硫黄（24% S）も供給します — 油糧種子・豆類・高pH土壌にプラスです。",
+      "imperfect": "これが最も近い実用的な組み合わせです — 異なる製品でNPKを正確に再現することはめったにできません。",
+      "mop": "MOPは塩素を含みます — 塩素感受性作物（タバコ、ジャガイモ、柑橘、ブドウ）にはSOPを優先してください。",
+      "ssp": "SSPはDAPよりリンをゆっくり放出します — 最良の結果のため、播種の数日前に土壌に混ぜ込んでください。",
+      "urea": "Ureaはかん水の1–2日後に湿った土壌に散布してください — かん水で水没させないこと（40–50%が失われることがあります）。"
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {袋} other {袋}}",
+      "fertLabel": "代替品を探す肥料",
+      "findBtn": "代替品を探す",
+      "footnote": "標準的な製品グレード（50 kg袋）に基づく養分換算の提案です。実際のグレードはブランドによって異なります — 必ずラベルを確認してください。価格と入手可能性はここでは追跡していません；購入前に地域の販売店に確認してください。",
+      "matchPct": "≈{pct}%一致",
+      "noResult": "一般的な肥料ではこの製品の実用的な代替品が見つかりませんでした。代わりにメインの施肥量計算機で全体の施肥計画を立ててください。",
+      "optionTitle": "選択肢{rank}",
+      "qtyLabel": "数量（50 kg袋）",
+      "selectPh": "— 肥料を選択 —",
+      "summaryLine": "{count, plural, one {# 袋} other {# 袋}}の{fertName}は{nutrients}を供給します。",
+      "summaryTail": "最も近い換算の組み合わせ：",
+      "thGives": "この選択肢の供給養分",
+      "thNeeded": "必要量",
+      "thNutrient": "養分"
+    }
   }
 }

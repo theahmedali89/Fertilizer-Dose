@@ -1647,5 +1647,480 @@
     "viewAll": "Lihat semua kontributor",
     "priorityBadge": "⚡ Tinjauan prioritas",
     "close": "Menutup"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Berikan borax (11% B) ke tanah dengan dosis 10–15 kg/ha, atau semprotkan borax 0.2% saat berbunga. Jangan berlebihan — jarak antara defisiensi dan keracunan sangat sempit.",
+        "fertilizer": "Borax",
+        "fullName": "Boron (B)",
+        "name": "Defisiensi Boron",
+        "note": "Kritis saat berbunga — memengaruhi serbuk sari dan pembentukan buah."
+      },
+      "Ca": {
+        "correction": "Pastikan kelembapan tanah selalu merata dulu — sebagian besar masalah kalsium terkait air, bukan tanah. Berikan gypsum (tidak mengubah pH) atau calcium nitrate. Untuk busuk ujung buah, mulsa dan penyiraman rutin lebih penting daripada pupuk.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Kalsium (Ca)",
+        "name": "Defisiensi Kalsium",
+        "note": "Busuk ujung buah biasanya karena penyiraman tidak merata, bukan kekurangan kalsium."
+      },
+      "Fe": {
+        "correction": "Semprotkan larutan ferrous sulfate 0.5–1% ke daun (ulangi setelah 10–14 hari). Pemberian lewat tanah jarang berhasil di tanah alkalis — gunakan besi terkelat (Fe-EDDHA) bila perlu.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Besi (Fe)",
+        "name": "Defisiensi Besi",
+        "note": "Hampir selalu disebabkan pH tanah yang tinggi, bukan kekurangan besi."
+      },
+      "K": {
+        "correction": "Berikan SOP (50% K₂O) atau MOP (60% K₂O) dengan dosis 50–75 kg/ha. Pada tanaman buah, bagi dua — separuh saat berbunga, separuh saat pembentukan buah.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Kalium (K)",
+        "name": "Defisiensi Kalium",
+        "note": "Memburuk di tanah berpasir dan saat kekeringan."
+      },
+      "Mg": {
+        "correction": "Berikan magnesium sulfate (garam Epsom, 9.8% Mg) ke tanah dengan dosis 25 kg/ha, atau semprotkan larutan 2% ke daun.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesium (Mg)",
+        "name": "Defisiensi Magnesium",
+        "note": "Sering tertukar dengan nitrogen — periksa apakah daun menguning di antara tulang daun."
+      },
+      "Mn": {
+        "correction": "Semprotkan manganese sulfate 0.5% ke daun. Hindari pengapuran berlebihan — pH tinggi mengunci mangan.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Mangan (Mn)",
+        "name": "Defisiensi Mangan",
+        "note": "Mirip defisiensi besi — uji pH tanah membantu membedakannya."
+      },
+      "N": {
+        "correction": "Berikan urea (46% N) dengan dosis 50–100 kg/ha sebagai pupuk susulan sebelum irigasi, atau semprotkan larutan urea 2% ke daun untuk respons cepat.",
+        "fertilizer": "Urea",
+        "fullName": "Nitrogen (N)",
+        "name": "Defisiensi Nitrogen",
+        "note": "Defisiensi paling umum di dunia. Cepat merespons nitrogen."
+      },
+      "P": {
+        "correction": "Berikan DAP (18-46-0) atau SSP saat tanam/pindah tanam — fosfor bergerak lambat di tanah, jadi letakkan dekat zona akar. Semprotan daun hanya solusi lemah.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fosfor (P)",
+        "name": "Defisiensi Fosfor",
+        "note": "Umum di tanah dingin dan tanah masam."
+      },
+      "S": {
+        "correction": "Berikan gypsum (18% S) dengan dosis 200–250 kg/ha, atau ganti sumber nitrogen ke ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Belerang (S)",
+        "name": "Defisiensi Belerang",
+        "note": "Mirip defisiensi nitrogen tetapi dimulai dari daun BARU."
+      },
+      "Zn": {
+        "correction": "Berikan zinc sulfate (33% Zn) ke tanah dengan dosis 20–25 kg/ha, atau semprotkan zinc sulfate 0.5% + kapur 0.25% ke daun. Satu dosis tanah bertahan 2–3 musim.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Seng (Zn)",
+        "name": "Defisiensi Seng",
+        "note": "Sangat umum di tanah berpH tinggi (alkalis) dan berkapur."
+      }
+    },
+    "hero": {
+      "desc": "Daun menguning? Batang ungu? Tepi gosong? Pilih yang Anda lihat pada tanaman, kami akan tunjukkan kemungkinan defisiensi nutrisinya — beserta pupuk yang tepat untuk mengatasinya.",
+      "eyebrow": "Defisiensi Nutrisi",
+      "title": "Pemeriksa Gejala Defisiensi Pupuk"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Bercak gelap cekung di bagian bawah buah",
+        "label": "Busuk ujung buah"
+      },
+      "dark-delayed": {
+        "hint": "Pertumbuhan lambat, berbunga terlambat",
+        "label": "Daun hijau tua dengan kematangan tertunda"
+      },
+      "inter-old": {
+        "hint": "Tulang daun tetap hijau, area di antaranya menguning",
+        "label": "Menguning di antara tulang daun pada daun tua"
+      },
+      "little-leaf": {
+        "hint": "Pertumbuhan rumpun seperti roset",
+        "label": "Daun sangat kecil (little leaf)"
+      },
+      "new-uniform": {
+        "hint": "Seperti defisiensi nitrogen tetapi pada daun muda",
+        "label": "Daun baru kuning pucat merata"
+      },
+      "new-yellow-veins": {
+        "hint": "Pertumbuhan atas terkena duluan",
+        "label": "Daun baru menguning tetapi tulang daun tetap hijau"
+      },
+      "old-yellow": {
+        "hint": "Dimulai dari bagian bawah tanaman",
+        "label": "Daun tua / bawah menguning"
+      },
+      "poor-fruit": {
+        "hint": "Bunga rontok tanpa membentuk buah",
+        "label": "Pembentukan buah buruk / bunga rontok"
+      },
+      "purple": {
+        "hint": "Warna tidak biasa, bukan warna normal varietasnya",
+        "label": "Daun / batang ungu atau kemerahan"
+      },
+      "scorch": {
+        "hint": "Tepi terlihat gosong, dimulai dari daun tua",
+        "label": "Tepi daun cokelat dan gosong"
+      },
+      "spots-weak": {
+        "hint": "Batang rebah atau mudah patah",
+        "label": "Bercak cokelat pada daun, batang lemah"
+      },
+      "stunted": {
+        "hint": "Seluruh tanaman terlihat lemah dan kecil",
+        "label": "Pertumbuhan kerdil, tanaman hijau pucat"
+      },
+      "tip-burn": {
+        "hint": "Umum pada selada, kubis, kembang kol",
+        "label": "Ujung terbakar pada daun muda bagian dalam"
+      },
+      "tip-death": {
+        "hint": "Pertumbuhan baru cacat atau mati",
+        "label": "Tunas tumbuh mati atau terlihat cacat"
+      }
+    },
+    "ui": {
+      "bestMatch": "Paling cocok",
+      "calcDose": "Hitung dosis tepat di kalkulator pupuk →",
+      "checkButton": "Periksa defisiensi ({count} dipilih)",
+      "clearAll": "Hapus semua",
+      "disclaimer": "Penafian:",
+      "disclaimerText": "Gejala visual bisa mirip antara defisiensi, hama, dan penyakit. Pemeriksa ini adalah panduan edukasi berdasarkan referensi agronomi standar — bukan pengganti uji tanah atau jaringan di laboratorium. Jika ragu, uji tanah Anda sebelum memberi pupuk korektif.",
+      "howToCorrect": "Cara mengatasinya",
+      "matchedOf": "Cocok {matched} dari {total} gejala kunci",
+      "noMatches1": "Tidak ditemukan kecocokan. Coba pilih gejala lain, atau periksa",
+      "noMatches2": "untuk diagnosis berbasis foto.",
+      "noMatchesLink": "Dokter Tanaman",
+      "rankedDesc": "Diurutkan berdasarkan jumlah gejala Anda yang cocok. Ini panduan, bukan uji lab — pastikan dengan uji tanah untuk kepastian.",
+      "recFert": "Pupuk yang disarankan",
+      "refTitle": "Referensi cepat — semua defisiensi",
+      "step1Desc": "Ketuk semua yang sesuai. Anda bisa memilih lebih dari satu.",
+      "step1Title": "Langkah 1 — Pilih gejala yang terlihat",
+      "step2Title": "Langkah 2 — Kemungkinan defisiensi",
+      "thFix": "Atasi dengan",
+      "thNutrient": "Nutrisi",
+      "thSymptom": "Gejala khas"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Mencampur dua pupuk dalam satu drum atau tangki semprot? Periksa dulu — beberapa kombinasi membentuk lumpur tak larut yang membuang uang Anda dan menyumbat nosel. Pilih dua pupuk dan dapatkan hasilnya seketika.",
+      "eyebrow": "Kompatibilitas Campuran Tangki",
+      "title": "Pemeriksa Kompatibilitas Campuran Tangki Pupuk"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Membentuk endapan kalsium fosfat"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Membentuk lumpur seng fosfat tak larut"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Fosfat mengunci seng"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Endapan seperti susu, nutrisi hilang"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate aman dicampur. Keduanya sumber nitrogen; kombinasi ini juga memberi belerang. Tidak ada reaksi merugikan.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Boron aman bersama dalam larutan — pasangan fertigasi umum untuk tanaman buah saat berbunga.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Boron (borax / asam borat) kompatibel dalam larutan. Ini kombinasi daun standar — sering disemprot bersamaan saat berbunga dan pembentukan buah.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate membentuk endapan kalsium fosfat. Kedua nutrisi saling mengunci dan mengendap di dasar tangki — pemborosan total kedua pupuk.",
+        "instead": "Berikan calcium nitrate lewat fertigasi pada hari berbeda dari pupuk fosfat apa pun. Jaga jarak minimal 3–4 hari.",
+        "title": "BAHAYA — JANGAN dicampur"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 mengandung fosfat, yang dapat mengendap dengan kalsium dari calcium nitrate. Beberapa grade NPK cair terkelat dan aman — NPK granular berisiko dalam tangki yang sama.",
+        "instead": "Jika keduanya dibutuhkan, berikan NPK ke tanah dan fertigasikan calcium nitrate secara terpisah, selang beberapa hari.",
+        "title": "HATI-HATI — Periksa gradenya"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate kompatibel secara kimia, tetapi keduanya sangat higroskopis — campuran menyerap kelembapan udara, menjadi lengket, dan menggumpal dalam hitungan jam.",
+        "instead": "Campur sesaat sebelum dipakai dan tebarkan di hari yang sama. Simpan kedua pupuk terpisah dalam karung tertutup.",
+        "title": "HATI-HATI — Sangat higroskopis"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP adalah kombinasi pupuk dasar yang aman dan umum dipakai. Tidak ada pengendapan antara fosfat dan sulfat kalium.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "dap_urea": {
+        "explanation": "Mencampur kering DAP + Urea untuk disebar aman. Tetapi melarutkan keduanya bersamaan dalam tangki semprot menaikkan pH dan melepas gas amonia — nitrogen hilang dan pH tinggi bisa membakar daun.",
+        "instead": "Campuran kering cocok untuk disebar. Untuk fertigasi/semprot, berikan secara terpisah.",
+        "title": "HATI-HATI — Aman kering, berisiko dalam larutan"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate membentuk seng fosfat tak larut — endapan kental seperti dadih. Seng menjadi tidak tersedia bagi tanaman, dan lumpur menyumbat nosel semprot dan emitter tetes.",
+        "instead": "Berikan terpisah: tebarkan DAP saat tanam/persiapan lahan, dan berikan Zinc Sulphate sebagai aplikasi tanah terpisah atau semprotan daun (larutan 0.5%) 2–3 minggu kemudian.",
+        "title": "BAHAYA — JANGAN dicampur"
+      },
+      "default": {
+        "explanation": "Tidak ada data kompatibilitas terverifikasi untuk kombinasi ini. Jangan anggap \"aman\". Sebelum mencampur, ikuti petunjuk label pupuk, atau lakukan uji toples: campur sedikit dalam air, tunggu 15 menit, dan periksa panas, gas, penggumpalan, atau endapan. Sampai yakin, jangan campur.",
+        "instead": "Jika kedua pupuk diperlukan, berikan secara terpisah — atau verifikasi dulu dengan uji toples skala kecil.",
+        "title": "TIDAK DIKETAHUI — Belum terverifikasi"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP kompatibel secara kimia untuk disebar kering. (Catatan: pada irigasi tetes atau tanaman peka klorida, pilih SOP daripada MOP.)",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate tercampur baik secara fisik, tetapi MOP menambah beban klorida yang besar. Pada irigasi tetes atau tanaman peka klorida (tembakau, kentang, jeruk, anggur), kombinasi ini membuat tanaman stres.",
+        "instead": "Utamakan SOP daripada MOP saat mencampur dengan mikronutrisi, terutama pada irigasi tetes atau tanaman peka.",
+        "title": "HATI-HATI — Beban klorida"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos mengandung fosfat, yang bereaksi dengan seng membentuk seng fosfat tak larut — endapan seperti dadih yang sama seperti DAP + Zinc. Seng hilang dan nosel tersumbat.",
+        "instead": "Berikan Zinc Sulphate secara terpisah — sebagai dosis tanah dasar atau semprotan daun 0.5% — minimal 2 minggu dari pupuk fosfat apa pun.",
+        "title": "BAHAYA — JANGAN dicampur"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP aman dan umum digunakan untuk menaikkan kalium pada tanaman buah tanpa menambah klorida.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea aman — umum digunakan untuk menambah nitrogen pada dosis dasar. Tidak ada reaksi merugikan.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "same": {
+        "explanation": "Anda memilih {name} dua kali — tidak ada yang dicampur. Pilih dua pupuk berbeda untuk memeriksa kompatibilitas.",
+        "instead": "",
+        "title": "Pupuk yang sama"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP adalah campuran yang sepenuhnya kompatibel, kering atau dilarutkan. Tanpa pengendapan, tanpa kehilangan nutrisi. Kombinasi umum dan efektif untuk pupuk susulan.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate aman di tangki. Pupuk berbasis sulfat tidak bereaksi dengan seng, dan keduanya larut bersih bersama.",
+        "instead": "",
+        "title": "AMAN — Kompatibel"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP kompatibel secara kimia, tetapi campuran cepat menggumpal dan mengeras karena urea menyerap kelembapan dan SSP bersifat asam. Menjadi sulit disebar merata.",
+        "instead": "Campur hanya sebanyak yang akan Anda sebarkan dalam 1–2 jam. Jangan simpan campuran semalaman.",
+        "title": "HATI-HATI — Segera gunakan"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP mengandung fosfat + kalsium. Dicampur dengan Zinc Sulphate membentuk seng fosfat tak larut dan endapan kalsium — campuran menjadi seperti susu dan tidak bisa dipakai.",
+        "instead": "Berikan seng secara terpisah sebagai semprotan daun atau dosis dasar, jauh dari pemberian SSP.",
+        "title": "BAHAYA — JANGAN dicampur"
+      }
+    },
+    "ui": {
+      "checkBtn": "Periksa Kompatibilitas",
+      "fertA": "Pupuk A",
+      "fertB": "Pupuk B",
+      "insteadTitle": "💡 Yang bisa dilakukan",
+      "jarTest": "Selalu lakukan uji toples sebelum campuran tangki penuh: campur sedikit dalam air, tunggu 15 menit, dan periksa panas, gas, penggumpalan, atau endapan.",
+      "quickRefTitle": "Referensi cepat: jangan pernah campur ini",
+      "selectPlaceholder": "— Pilih pupuk —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Cairan dihitung sebagai 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Kandungan nutrisi (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Ukuran kemasan",
+      "packSizePh": "cth. 1",
+      "price": "Harga (Rs per kemasan)",
+      "pricePh": "cth. 3500",
+      "productName": "Nama produk",
+      "productPh": "cth. SuperPhos Liquid 10%",
+      "submit": "💰 Hitung biaya sebenarnya"
+    },
+    "hero": {
+      "desc": "Fosfor cair mewah seharga Rs 3,500 per liter — murah atau tipuan? Masukkan harga dan persentase NPK produk apa pun, kami akan ungkap biaya sebenarnya per kg nutrisi, dibandingkan dengan standar DAP, Urea, SOP, dan MOP.",
+      "eyebrow": "Harga vs. Nilai",
+      "noteText": "Harga referensi bersifat ilustratif dan bisa diubah — bukan harga pasar terkini. Gunakan tarif aktual di daerah Anda untuk perbandingan yang akurat.",
+      "noteTitle": "⚠️ Catatan:",
+      "title": "Kalkulator Biaya Pupuk per Nutrisi"
+    },
+    "nutrients": {
+      "k": "K₂O (Kalium)",
+      "n": "N (Nitrogen)",
+      "p": "P₂O₅ (Fosfor)"
+    },
+    "refs": {
+      "bagUnit": "karung {bagKg} kg",
+      "perBag": "Rs / karung",
+      "priceAria": "Harga {name} dalam Rs",
+      "reset": "Kembalikan ke bawaan",
+      "title": "📊 Harga referensi (Pakistan, Rs / karung 50 kg)"
+    },
+    "results": {
+      "benchTitle": "📋 Perbandingan acuan",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Sumber nutrisi termurah saat ini",
+      "footnote": "Harga referensi untuk Pakistan dan bisa diubah di atas. Biaya nutrisi = harga kemasan ÷ (berat kemasan × % nutrisi). Perbarui harga saat pasar bergerak.",
+      "kgInPack": "{kg} kg dalam kemasan",
+      "noInput": "⚠️ Masukkan ukuran kemasan, harga, dan minimal satu persentase nutrisi di atas nol.",
+      "perKg": "/ kg",
+      "thCheapest": "Standar termurah",
+      "thNutrient": "Nutrisi",
+      "thRatio": "Rasio",
+      "thYours": "Produk Anda",
+      "thisProduct": "Produk ini",
+      "verdictExpensive": "Anda membayar {ratio}× lebih mahal untuk {nutrient} dibanding {product} ({price}/kg). Beli {product} — jangan biarkan penjual menipu Anda.",
+      "verdictGood": "Harga wajar. {name} harganya hampir sama dengan pupuk standar — silakan.",
+      "verdictPricier": "{nutrient} {ratio}× lebih mahal dibanding {product} ({price}/kg). Pertimbangkan produk standar saja.",
+      "vsBenchmark": "{ratio}× vs {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Mahal — beli yang standar saja"
+      },
+      "good": {
+        "title": "Penawaran bagus"
+      },
+      "pricier": {
+        "title": "Lebih mahal dari standar"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Juga memberi belerang (24% S) — bagus untuk tanaman minyak dan tanah alkalis.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriat kalium — sumber K termurah, mengandung klorida.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulfat kalium — bebas klorida, juga memberi belerang.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Juga memberi belerang (~12%) dan kalsium; pelepasannya lebih lambat dari DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP langka di pasar, atau SOP terlalu mahal? Pilih pupuk yang Anda inginkan dan berapa karung yang dibutuhkan — kami akan tunjukkan kombinasi setara nutrisi terdekat dari produk yang biasanya tersedia.",
+      "eyebrow": "Penolong Saat Langka",
+      "noteText": "Hitungan kesetaraan nutrisi tidak membuktikan kompatibilitas kimia, keamanan indeks garam, atau kesesuaian waktu pemberian. Konfirmasi setiap penggantian dengan agronom setempat sebelum mengaplikasikan.",
+      "noteTitle": "⚠️ Penting:",
+      "title": "Pencari Alternatif Pupuk"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate juga memberi belerang (24% S) — nilai plus untuk tanaman minyak, kacang-kacangan, dan tanah berpH tinggi.",
+      "imperfect": "Ini kecocokan praktis terdekat — replika NPK persis dengan produk berbeda jarang mungkin.",
+      "mop": "MOP mengandung klorida — pilih SOP untuk tanaman peka klorida (tembakau, kentang, jeruk, anggur).",
+      "ssp": "SSP melepas fosfor lebih lambat dari DAP — campurkan ke tanah beberapa hari sebelum tanam untuk hasil terbaik.",
+      "urea": "Tebarkan urea 1–2 hari setelah irigasi di tanah lembap — jangan rendam dengan air irigasi (40–50% bisa hilang)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {karung} other {karung}}",
+      "fertLabel": "Pupuk yang Anda cari alternatifnya",
+      "findBtn": "Cari alternatif",
+      "footnote": "Ini saran setara nutrisi berdasarkan grade produk standar (karung 50 kg). Grade aktual berbeda per merek — selalu periksa label. Harga dan ketersediaan tidak dilacak di sini; konfirmasi dengan penjual setempat sebelum membeli.",
+      "matchPct": "≈{pct}% cocok",
+      "noResult": "Tidak ditemukan alternatif praktis untuk produk ini dengan pupuk umum. Coba kalkulator dosis utama untuk jadwal lengkap.",
+      "optionTitle": "Opsi {rank}",
+      "qtyLabel": "Jumlah (karung 50 kg)",
+      "selectPh": "— Pilih pupuk —",
+      "summaryLine": "{count, plural, one {# karung} other {# karung}} {fertName} memberi {nutrients}.",
+      "summaryTail": "Kombinasi setara terdekat:",
+      "thGives": "Opsi ini memberi",
+      "thNeeded": "Dibutuhkan",
+      "thNutrient": "Nutrisi"
+    }
   }
 }

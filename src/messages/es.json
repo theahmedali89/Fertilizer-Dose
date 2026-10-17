@@ -1647,5 +1647,480 @@
     "viewAll": "Ver todos los contribuyentes",
     "priorityBadge": "⚡ Revisión prioritaria",
     "close": "Cerca"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Aplica borax (11% B) al suelo en dosis de 10–15 kg/ha, o asperja borax al 0.2% durante la floración. No apliques de más: el margen entre deficiencia y toxicidad es muy estrecho.",
+        "fertilizer": "Borax",
+        "fullName": "Boro (B)",
+        "name": "Deficiencia de boro",
+        "note": "Crítica durante la floración: afecta el polen y el cuajado de frutos."
+      },
+      "Ca": {
+        "correction": "Primero asegúrate de mantener una humedad constante en el suelo: la mayoría de los problemas de calcio se deben al riego, no al suelo. Aplica gypsum (no cambia el pH) o calcium nitrate. Para la pudrición apical, el acolchado y el riego regular importan más que el fertilizante.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Calcio (Ca)",
+        "name": "Deficiencia de calcio",
+        "note": "La pudrición apical suele deberse a un riego irregular, no a falta de calcio."
+      },
+      "Fe": {
+        "correction": "Asperja una solución de ferrous sulfate al 0.5–1% sobre el follaje (repite a los 10–14 días). La aplicación al suelo rara vez funciona en suelos alcalinos: usa hierro quelatado (Fe-EDDHA) si es necesario.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Hierro (Fe)",
+        "name": "Deficiencia de hierro",
+        "note": "Casi siempre se debe al pH alto del suelo, no a falta de hierro."
+      },
+      "K": {
+        "correction": "Aplica SOP (50% K₂O) o MOP (60% K₂O) en dosis de 50–75 kg/ha. En cultivos de fruto, divide la dosis: la mitad en floración y la otra mitad durante el desarrollo del fruto.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Potasio (K)",
+        "name": "Deficiencia de potasio",
+        "note": "Empeora en suelos arenosos y bajo estrés por sequía."
+      },
+      "Mg": {
+        "correction": "Aplica magnesium sulfate (sal de Epsom, 9.8% Mg) al suelo en dosis de 25 kg/ha, o asperja una solución al 2% sobre el follaje.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesio (Mg)",
+        "name": "Deficiencia de magnesio",
+        "note": "Suele confundirse con el nitrógeno: revisa si el amarillamiento ocurre entre las nervaduras."
+      },
+      "Mn": {
+        "correction": "Asperja manganese sulfate al 0.5% sobre el follaje. Evita encalar en exceso: un pH alto bloquea el manganeso.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Manganeso (Mn)",
+        "name": "Deficiencia de manganeso",
+        "note": "Similar a la deficiencia de hierro: una prueba de pH del suelo ayuda a distinguirlas."
+      },
+      "N": {
+        "correction": "Aplica urea (46% N) en dosis de 50–100 kg/ha como abonado de cobertera antes del riego, o asperja una solución de urea al 2% sobre el follaje para una respuesta rápida.",
+        "fertilizer": "Urea",
+        "fullName": "Nitrógeno (N)",
+        "name": "Deficiencia de nitrógeno",
+        "note": "La deficiencia más común en el mundo. Responde rápido al nitrógeno."
+      },
+      "P": {
+        "correction": "Aplica DAP (18-46-0) o SSP en la siembra o el trasplante: el fósforo se mueve lento en el suelo, así que colócalo cerca de la zona de raíces. Las aspersiones foliares son una solución débil.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fósforo (P)",
+        "name": "Deficiencia de fósforo",
+        "note": "Común en suelos fríos y suelos ácidos."
+      },
+      "S": {
+        "correction": "Aplica gypsum (18% S) en dosis de 200–250 kg/ha, o cambia la fuente de nitrógeno a ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Azufre (S)",
+        "name": "Deficiencia de azufre",
+        "note": "Se parece a la deficiencia de nitrógeno, pero empieza en las hojas NUEVAS."
+      },
+      "Zn": {
+        "correction": "Aplica zinc sulfate (33% Zn) al suelo en dosis de 20–25 kg/ha, o asperja zinc sulfate al 0.5% + cal al 0.25% sobre el follaje. Una dosis al suelo dura 2–3 temporadas.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Zinc (Zn)",
+        "name": "Deficiencia de zinc",
+        "note": "Muy común en suelos de pH alto (alcalinos) y calcáreos."
+      }
+    },
+    "hero": {
+      "desc": "¿Hojas amarillas? ¿Tallos morados? ¿Bordes quemados? Selecciona lo que ves en tus plantas y te señalaremos la probable deficiencia de nutrientes, con el fertilizante adecuado para corregirla.",
+      "eyebrow": "Deficiencia de nutrientes",
+      "title": "Comprobador de síntomas de deficiencia de fertilizante"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Manchas oscuras hundidas en la parte inferior del fruto",
+        "label": "Pudrición apical en los frutos"
+      },
+      "dark-delayed": {
+        "hint": "Crecimiento lento, floración tardía",
+        "label": "Hojas verde oscuro con madurez retrasada"
+      },
+      "inter-old": {
+        "hint": "Las nervaduras se mantienen verdes; las zonas entre ellas se amarillean",
+        "label": "Amarillamiento entre nervaduras en hojas viejas"
+      },
+      "little-leaf": {
+        "hint": "Crecimiento apretado en forma de roseta",
+        "label": "Hojas anormalmente pequeñas (hoja pequeña)"
+      },
+      "new-uniform": {
+        "hint": "Como la deficiencia de nitrógeno, pero en hojas jóvenes",
+        "label": "Hojas nuevas uniformemente amarillo pálido"
+      },
+      "new-yellow-veins": {
+        "hint": "El crecimiento de arriba se afecta primero",
+        "label": "Hojas nuevas amarillas pero con nervaduras verdes"
+      },
+      "old-yellow": {
+        "hint": "Empieza desde la parte baja de la planta",
+        "label": "Hojas viejas / bajas que se amarillean"
+      },
+      "poor-fruit": {
+        "hint": "Las flores caen sin formar fruto",
+        "label": "Mal cuajado de frutos / caída de flores"
+      },
+      "purple": {
+        "hint": "Coloración inusual, no el color normal de la variedad",
+        "label": "Hojas / tallos morados o rojizos"
+      },
+      "scorch": {
+        "hint": "Los bordes se ven quemados, empezando en hojas viejas",
+        "label": "Bordes de hojas marrones y quemados"
+      },
+      "spots-weak": {
+        "hint": "Los tallos se acaman o se rompen fácil",
+        "label": "Manchas marrones en hojas, tallos débiles"
+      },
+      "stunted": {
+        "hint": "Toda la planta se ve débil y pequeña",
+        "label": "Crecimiento atrofiado, plantas verde pálido"
+      },
+      "tip-burn": {
+        "hint": "Común en lechuga, repollo y coliflor",
+        "label": "Quemadura de puntas en hojas jóvenes internas"
+      },
+      "tip-death": {
+        "hint": "El crecimiento nuevo sale deformado o muerto",
+        "label": "La yema terminal muere o se ve deformada"
+      }
+    },
+    "ui": {
+      "bestMatch": "Mejor coincidencia",
+      "calcDose": "Calcula la dosis exacta en la calculadora de fertilizante →",
+      "checkButton": "Revisar deficiencia ({count} seleccionados)",
+      "clearAll": "Borrar todo",
+      "disclaimer": "Aviso:",
+      "disclaimerText": "Los síntomas visuales se traslapan entre deficiencias, plagas y enfermedades. Este verificador es una guía educativa basada en referencias agronómicas estándar: no sustituye un análisis de suelo o de tejido en laboratorio. Ante la duda, analiza tu suelo antes de aplicar fertilizante correctivo.",
+      "howToCorrect": "Cómo corregirla",
+      "matchedOf": "Coinciden {matched} de {total} síntomas clave",
+      "noMatches1": "No se encontraron coincidencias. Prueba con otros síntomas, o consulta el",
+      "noMatches2": "para un diagnóstico con fotos.",
+      "noMatchesLink": "Doctor de Plantas",
+      "rankedDesc": "Ordenados por cuántos de tus síntomas coinciden. Esto es una guía, no un análisis de laboratorio: confirma con un análisis de suelo para tener certeza.",
+      "recFert": "Fertilizante recomendado",
+      "refTitle": "Referencia rápida: todas las deficiencias",
+      "step1Desc": "Toca todas las que apliquen. Puedes seleccionar más de una.",
+      "step1Title": "Paso 1: selecciona los síntomas que ves",
+      "step2Title": "Paso 2: deficiencias probables",
+      "thFix": "Corregir con",
+      "thNutrient": "Nutriente",
+      "thSymptom": "Síntoma clásico"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boro",
+        "short": "Boro"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "¿Vas a mezclar dos fertilizantes en un tambor o en el tanque de aspersión? Revisa primero: algunas combinaciones forman un lodo insoluble que desperdicia tu dinero y tapa las boquillas. Elige dos fertilizantes y obtén un veredicto al instante.",
+      "eyebrow": "Compatibilidad de mezclas en tanque",
+      "title": "Verificador de compatibilidad de mezclas de fertilizantes en tanque"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Forma un precipitado de fosfato de calcio"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Forma un lodo insoluble de fosfato de zinc"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "El fosfato bloquea el zinc"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Precipitado lechoso, se pierden nutrientes"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate se mezclan sin problema. Ambos son fuentes de nitrógeno; la combinación también aporta azufre. Sin reacciones adversas.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "boron_sop": {
+        "explanation": "SOP + boro es seguro en solución: una combinación común en fertirriego para frutales en floración.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "boron_urea": {
+        "explanation": "Urea + boro (borax / ácido bórico) es compatible en solución. Es una combinación foliar estándar: suele asperjarse junta en floración y cuajado.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate forma un precipitado de fosfato de calcio. Ambos nutrientes se bloquean entre sí y se asientan en el fondo del tanque: un desperdicio total de ambos fertilizantes.",
+        "instead": "Aplica calcium nitrate por fertirriego en un día distinto al de cualquier fertilizante fosfatado. Deja al menos 3–4 días de separación.",
+        "title": "PELIGRO — NO mezclar"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 contiene fosfato, que puede precipitar con el calcio del calcium nitrate. Algunos grados líquidos de NPK son quelatados y están bien; el NPK granulado es riesgoso en el mismo tanque.",
+        "instead": "Si necesitas ambos, aplica el NPK al suelo y fertirriga el calcium nitrate por separado, con unos días de diferencia.",
+        "title": "PRECAUCIÓN — Revisa el grado"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate son químicamente compatibles, pero ambos son muy higroscópicos: la mezcla absorbe humedad del aire, se vuelve pegajosa y se apelmasa en cuestión de horas.",
+        "instead": "Mezcla justo antes de usar y aplica el mismo día. Guarda los dos fertilizantes por separado en sacos sellados.",
+        "title": "PRECAUCIÓN — Muy higroscópico"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP es una combinación basal segura y muy usada. No hay precipitación entre el fosfato y el sulfato de potasio.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "dap_urea": {
+        "explanation": "Mezclar DAP + Urea en seco para esparcir es seguro. Pero disolver ambos juntos en el tanque eleva el pH y libera gas amoníaco: pierdes nitrógeno y el pH alto puede quemar las hojas.",
+        "instead": "La mezcla en seco está bien para esparcir. Para fertirriego o aspersión, aplícalos en pasadas separadas.",
+        "title": "PRECAUCIÓN — Bien en seco, riesgoso en solución"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate forma fosfato de zinc insoluble: un precipitado espeso, como cuajada. El zinc queda fijo e indisponible para la planta, y el lodo tapa las boquillas y los goteros.",
+        "instead": "Aplica por separado: esparce DAP en la siembra o preparación del terreno, y aplica Zinc Sulphate como aplicación al suelo aparte o en aspersión foliar (solución al 0.5%) 2–3 semanas después.",
+        "title": "PELIGRO — NO mezclar"
+      },
+      "default": {
+        "explanation": "No hay datos verificados de compatibilidad para esta combinación. No la consideres \"segura\". Antes de mezclar, sigue las instrucciones de la etiqueta del fertilizante o haz una prueba de frasco: mezcla una pequeña cantidad en agua, espera 15 minutos y revisa si hay calor, gas, cuajado o sedimento. Hasta estar seguro, no mezcles.",
+        "instead": "Si ambos fertilizantes son necesarios, aplícalos por separado, o verifica primero con una prueba de frasco a pequeña escala.",
+        "title": "DESCONOCIDO — No verificado"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP son químicamente compatibles para esparcir en seco. (Nota: en riego por goteo o para cultivos sensibles al cloruro, prefiere SOP sobre MOP.)",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate se mezclan bien físicamente, pero MOP aporta una fuerte carga de cloruro. En riego por goteo o para cultivos sensibles al cloruro (tabaco, papa, cítricos, uvas), esta combinación estresa el cultivo.",
+        "instead": "Prefiere SOP sobre MOP al mezclar con micronutrientes, sobre todo en riego por goteo o en cultivos sensibles.",
+        "title": "PRECAUCIÓN — Carga de cloruro"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos contiene fosfato, que reacciona con el zinc y forma fosfato de zinc insoluble: el mismo precipitado como cuajada que DAP + Zinc. Se pierde el zinc y se tapan las boquillas.",
+        "instead": "Aplica Zinc Sulphate por separado, como dosis basal al suelo o en aspersión foliar al 0.5%, al menos 2 semanas lejos de cualquier fertilizante fosfatado.",
+        "title": "PELIGRO — NO mezclar"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP es seguro y se usa comúnmente para subir la potasa en cultivos de fruto sin añadir cloruro.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea es seguro: se usa comúnmente para reforzar el nitrógeno en la dosis basal. Sin reacciones adversas.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "same": {
+        "explanation": "Seleccionaste {name} dos veces: no hay nada que mezclar. Elige dos fertilizantes distintos para revisar la compatibilidad.",
+        "instead": "",
+        "title": "Mismo fertilizante"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP es una mezcla totalmente compatible, en seco o disuelta. Sin precipitación ni pérdida de nutrientes. Una combinación común y efectiva para el abonado de cobertera.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate es seguro en el tanque. Los fertilizantes a base de sulfato no reaccionan con el zinc y ambos se disuelven bien juntos.",
+        "instead": "",
+        "title": "SEGURO — Compatible"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP son químicamente compatibles, pero la mezcla se apelmasa y endurece rápido porque la urea absorbe humedad y el SSP es ácido. Se vuelve difícil esparcirla de forma pareja.",
+        "instead": "Mezcla solo la cantidad que vas a esparcir en 1–2 horas. No guardes la mezcla de un día para otro.",
+        "title": "PRECAUCIÓN — Úsala de inmediato"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP contiene fosfato + calcio. Mezclado con Zinc Sulphate forma fosfato de zinc insoluble y precipitados de calcio: la mezcla se vuelve lechosa e inutilizable.",
+        "instead": "Aplica el zinc por separado, en aspersión foliar o dosis basal, lejos de la aplicación de SSP.",
+        "title": "PELIGRO — NO mezclar"
+      }
+    },
+    "ui": {
+      "checkBtn": "Revisar compatibilidad",
+      "fertA": "Fertilizante A",
+      "fertB": "Fertilizante B",
+      "insteadTitle": "💡 Qué hacer en su lugar",
+      "jarTest": "Haz siempre una prueba de frasco antes de una mezcla completa: mezcla pequeñas cantidades en agua, espera 15 minutos y revisa si hay calor, gas, cuajado o sedimento.",
+      "quickRefTitle": "Referencia rápida: nunca mezcles estos",
+      "selectPlaceholder": "— Selecciona fertilizante —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Los líquidos se tratan como 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Contenido de nutrientes (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Tamaño del envase",
+      "packSizePh": "ej. 1",
+      "price": "Precio (Rs por envase)",
+      "pricePh": "ej. 3500",
+      "productName": "Nombre del producto",
+      "productPh": "ej. SuperPhos Liquid 10%",
+      "submit": "💰 Calcular costo real"
+    },
+    "hero": {
+      "desc": "¿Un fósforo líquido elegante a Rs 3,500 por litro: ganga o estafa? Ingresa el precio y el porcentaje de NPK de cualquier producto y te revelaremos su costo real por kg de nutriente, comparado con DAP, Urea, SOP y MOP estándar.",
+      "eyebrow": "Precio vs. valor",
+      "noteText": "Los precios de referencia son ilustrativos y editables, no precios de mercado en vivo. Usa las tarifas reales de tu zona para una comparación precisa.",
+      "noteTitle": "⚠️ Nota:",
+      "title": "Calculadora de costo por nutriente del fertilizante"
+    },
+    "nutrients": {
+      "k": "K₂O (Potasa)",
+      "n": "N (Nitrógeno)",
+      "p": "P₂O₅ (Fósforo)"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg por saco",
+      "perBag": "Rs / saco",
+      "priceAria": "Precio de {name} en Rs",
+      "reset": "Restablecer valores",
+      "title": "📊 Precios de referencia (Pakistán, Rs / saco de 50 kg)"
+    },
+    "results": {
+      "benchTitle": "📋 Comparación de referencia",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Fuentes de nutrientes más baratas ahora",
+      "footnote": "Los precios de referencia son para Pakistán y se pueden editar arriba. Costo por nutriente = precio del envase ÷ (peso del envase × % de nutriente). Actualiza los precios cuando el mercado cambie.",
+      "kgInPack": "{kg} kg en el envase",
+      "noInput": "⚠️ Ingresa el tamaño del envase, el precio y al menos un porcentaje de nutriente mayor a cero.",
+      "perKg": "/ kg",
+      "thCheapest": "Estándar más barato",
+      "thNutrient": "Nutriente",
+      "thRatio": "Proporción",
+      "thYours": "Tu producto",
+      "thisProduct": "Este producto",
+      "verdictExpensive": "Estás pagando {ratio}× más por {nutrient} que con {product} ({price}/kg). Compra {product}: no dejes que el vendedor te engañe.",
+      "verdictGood": "Precio justo. {name} cuesta más o menos lo mismo que los fertilizantes estándar: adelante.",
+      "verdictPricier": "{nutrient} es {ratio}× más caro que {product} ({price}/kg). Considera mejor el producto estándar.",
+      "vsBenchmark": "{ratio}× vs {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Caro: compra el estándar"
+      },
+      "good": {
+        "title": "Buena oferta"
+      },
+      "pricier": {
+        "title": "Más caro que el estándar"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "También aporta azufre (24% S): bueno para oleaginosas y suelos alcalinos.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriato de potasa: la fuente de K más barata, contiene cloruro.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulfato de potasa: sin cloruro, también aporta azufre.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "También aporta azufre (~12%) y calcio; liberación más lenta que DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "¿DAP agotado en el mercado, o SOP fuera de tu alcance? Elige el fertilizante que querías y cuántos sacos necesitabas: te mostraremos las combinaciones equivalentes en nutrientes más cercanas, con productos que suelen estar disponibles.",
+      "eyebrow": "Ayuda en escasez",
+      "noteText": "El cálculo de equivalencia de nutrientes no garantiza compatibilidad química, seguridad del índice salino ni idoneidad del momento de aplicación. Confirma cualquier sustitución con tu agrónomo local antes de aplicar.",
+      "noteTitle": "⚠️ Importante:",
+      "title": "Buscador de alternativas de fertilizante"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate también aporta azufre (24% S): una ventaja para oleaginosas, leguminosas y suelos de pH alto.",
+      "imperfect": "Esta es la coincidencia práctica más cercana: una réplica exacta de NPK con otros productos rara vez es posible.",
+      "mop": "MOP contiene cloruro: prefiere SOP para cultivos sensibles al cloruro (tabaco, papa, cítricos, uvas).",
+      "ssp": "SSP libera el fósforo más lento que DAP: incorpóralo al suelo unos días antes de la siembra para mejores resultados.",
+      "urea": "Esparce la urea 1–2 días después del riego sobre suelo húmedo: no la inundes con el agua de riego (se puede perder hasta 40–50%)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {saco} other {sacos}}",
+      "fertLabel": "Fertilizante del que necesitas una alternativa",
+      "findBtn": "Buscar alternativas",
+      "footnote": "Estas son sugerencias equivalentes en nutrientes basadas en grados estándar de producto (sacos de 50 kg). Los grados reales varían por marca: revisa siempre la etiqueta. Aquí no se registran precios ni disponibilidad; confirma con tu distribuidor local antes de comprar.",
+      "matchPct": "≈{pct}% de coincidencia",
+      "noResult": "No se encontró una alternativa práctica para este producto con fertilizantes comunes. Prueba la calculadora de dosis principal para un plan completo.",
+      "optionTitle": "Opción {rank}",
+      "qtyLabel": "Cantidad (sacos de 50 kg)",
+      "selectPh": "— Selecciona fertilizante —",
+      "summaryLine": "{count, plural, one {# saco} other {# sacos}} de {fertName} aportan {nutrients}.",
+      "summaryTail": "Combinaciones equivalentes más cercanas:",
+      "thGives": "Esta opción aporta",
+      "thNeeded": "Necesario",
+      "thNutrient": "Nutriente"
+    }
   }
 }

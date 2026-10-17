@@ -1647,5 +1647,480 @@
     "viewAll": "Lihat semua penyumbang",
     "priorityBadge": "⚡ Semakan keutamaan",
     "close": "tutup"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Sapu borax (11% B) pada kadar 10–15 kg/ha ke tanah, atau sembur borax 0.2% semasa berbunga. Jangan terlebih sapu — jurang antara kekurangan dan ketoksikan adalah sempit.",
+        "fertilizer": "Borax",
+        "fullName": "Boron (B)",
+        "name": "Kekurangan Boron",
+        "note": "Kritikal semasa berbunga — menjejaskan debunga dan pembentukan buah."
+      },
+      "Ca": {
+        "correction": "Pastikan kelembapan tanah konsisten dahulu — kebanyakan masalah kalsium berpunca daripada air, bukan tanah. Sapu gypsum (tidak mengubah pH) atau calcium nitrate. Untuk reput hujung bunga, sungkupan dan penyiraman berkala lebih penting daripada baja.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Kalsium (Ca)",
+        "name": "Kekurangan Kalsium",
+        "note": "Reput hujung bunga biasanya berpunca daripada penyiraman tidak sekata, bukan kekurangan kalsium."
+      },
+      "Fe": {
+        "correction": "Sembur larutan ferrous sulfate 0.5–1% pada daun (ulangi selepas 10–14 hari). Sapuan tanah jarang berkesan dalam tanah beralkali — gunakan besi berchelat (Fe-EDDHA) jika perlu.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Besi (Fe)",
+        "name": "Kekurangan Besi",
+        "note": "Hampir selalu disebabkan pH tanah yang tinggi, bukan besi yang rendah."
+      },
+      "K": {
+        "correction": "Sapu SOP (50% K₂O) atau MOP (60% K₂O) pada kadar 50–75 kg/ha. Bahagikan untuk tanaman berbuah — separuh semasa berbunga, separuh semasa buah membesar.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Kalium (K)",
+        "name": "Kekurangan Kalium",
+        "note": "Bertambah buruk dalam tanah berpasir dan di bawah tekanan kemarau."
+      },
+      "Mg": {
+        "correction": "Sapu magnesium sulfate (Epsom salt, 9.8% Mg) pada kadar 25 kg/ha ke tanah, atau sembur larutan 2% pada daun.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesium (Mg)",
+        "name": "Kekurangan Magnesium",
+        "note": "Selalu dikelirukan dengan nitrogen — periksa sama ada kekuningan berlaku di antara urat daun."
+      },
+      "Mn": {
+        "correction": "Sembur manganese sulfate 0.5% pada daun. Elakkan pengapuran berlebihan — pH tinggi mengunci mangan.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Mangan (Mn)",
+        "name": "Kekurangan Mangan",
+        "note": "Serupa dengan kekurangan besi — ujian pH tanah membantu membezakannya."
+      },
+      "N": {
+        "correction": "Sapu Urea (46% N) pada kadar 50–100 kg/ha sebagai baja tambahan sebelum pengairan, atau sembur larutan Urea 2% pada daun untuk tindak balas cepat.",
+        "fertilizer": "Urea",
+        "fullName": "Nitrogen (N)",
+        "name": "Kekurangan Nitrogen",
+        "note": "Kekurangan paling biasa di dunia. Bertindak balas cepat terhadap nitrogen."
+      },
+      "P": {
+        "correction": "Sapu DAP (18-46-0) atau SSP semasa menyemai/memindah — fosforus bergerak perlahan dalam tanah, jadi letakkannya berhampiran zon akar. Semburan daun adalah pembaikan yang lemah.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fosforus (P)",
+        "name": "Kekurangan Fosforus",
+        "note": "Biasa dalam tanah sejuk dan tanah berasid."
+      },
+      "S": {
+        "correction": "Sapu gypsum (18% S) pada kadar 200–250 kg/ha, atau tukar sumber nitrogen kepada ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Sulfur (S)",
+        "name": "Kekurangan Sulfur",
+        "note": "Nampak seperti kekurangan nitrogen tetapi bermula pada daun BAHARU."
+      },
+      "Zn": {
+        "correction": "Sapu zinc sulfate (33% Zn) pada kadar 20–25 kg/ha ke tanah, atau sembur zinc sulfate 0.5% + kapur 0.25% pada daun. Satu dos tanah bertahan 2–3 musim.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Zink (Zn)",
+        "name": "Kekurangan Zink",
+        "note": "Sangat biasa dalam tanah berpH tinggi (beralkali) dan berkapur."
+      }
+    },
+    "hero": {
+      "desc": "Daun kuning? Batang ungu? Tepi daun terbakar? Pilih apa yang anda lihat pada tanaman anda dan kami akan tunjukkan kemungkinan kekurangan nutrien — dengan baja yang betul untuk membetulkannya.",
+      "eyebrow": "Kekurangan Nutrien",
+      "title": "Pemeriksa Simptom Kekurangan Baja"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Tompot gelap dan tenggelam di bahagian bawah buah",
+        "label": "Reput hujung bunga pada buah"
+      },
+      "dark-delayed": {
+        "hint": "Tumbesaran perlahan, pembungaan lewat",
+        "label": "Daun hijau gelap dengan kematangan lewat"
+      },
+      "inter-old": {
+        "hint": "Urat kekal hijau, kawasan antara menjadi kuning",
+        "label": "Kekuningan antara urat pada daun tua"
+      },
+      "little-leaf": {
+        "hint": "Tumbesaran padat seperti roset",
+        "label": "Daun luar biasa kecil (little leaf)"
+      },
+      "new-uniform": {
+        "hint": "Seperti kekurangan nitrogen tetapi pada daun muda",
+        "label": "Daun baharu kuning pucat sekata"
+      },
+      "new-yellow-veins": {
+        "hint": "Tumbesaran atas terjejas dahulu",
+        "label": "Daun baharu kuning tetapi urat kekal hijau"
+      },
+      "old-yellow": {
+        "hint": "Bermula dari bahagian bawah tanaman",
+        "label": "Daun tua / bawah menjadi kuning"
+      },
+      "poor-fruit": {
+        "hint": "Bunga gugur tanpa membentuk buah",
+        "label": "Pembentukan buah lemah / gugur bunga"
+      },
+      "purple": {
+        "hint": "Warna luar biasa, bukan warna biasa varieti",
+        "label": "Daun / batang ungu atau kemerahan"
+      },
+      "scorch": {
+        "hint": "Tepi kelihatan terbakar, bermula pada daun tua",
+        "label": "Tepi daun perang dan terbakar"
+      },
+      "spots-weak": {
+        "hint": "Batang mudah rebah atau patah",
+        "label": "Tompot perang pada daun, batang lemah"
+      },
+      "stunted": {
+        "hint": "Seluruh tanaman kelihatan lemah dan kecil",
+        "label": "Tumbesaran terbantut, tanaman hijau pucat"
+      },
+      "tip-burn": {
+        "hint": "Biasa pada salad, kubis, kubis bunga",
+        "label": "Hujung daun muda dalam terbakar"
+      },
+      "tip-death": {
+        "hint": "Tumbesaran baharu cacat atau mati",
+        "label": "Pucuk tumbuh mati atau kelihatan cacat"
+      }
+    },
+    "ui": {
+      "bestMatch": "Padanan terbaik",
+      "calcDose": "Kira dos tepat dalam kalkulator baja →",
+      "checkButton": "Semak kekurangan ({count} dipilih)",
+      "clearAll": "Padam semua",
+      "disclaimer": "Penafian:",
+      "disclaimerText": "Simptom visual bertindih antara kekurangan, perosak, dan penyakit. Pemeriksa ini ialah panduan pendidikan berdasarkan rujukan agronomi standard — ia bukan pengganti ujian makmal tanah atau tisu. Jika ragu-ragu, uji tanah anda sebelum menyapu baja pembetulan.",
+      "howToCorrect": "Cara membetulkannya",
+      "matchedOf": "Dipadankan {matched} daripada {total} simptom utama",
+      "noMatches1": "Tiada padanan ditemui. Cuba pilih simptom berbeza, atau semak",
+      "noMatches2": "untuk diagnosis berasaskan foto.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Disusun mengikut bilangan simptom anda yang sepadan. Ini panduan, bukan ujian makmal — sahkan dengan ujian tanah untuk kepastian.",
+      "recFert": "Baja disyorkan",
+      "refTitle": "Rujukan pantas — semua kekurangan",
+      "step1Desc": "Ketik semua yang berkenaan. Anda boleh pilih lebih daripada satu.",
+      "step1Title": "Langkah 1 — Pilih simptom yang anda lihat",
+      "step2Title": "Langkah 2 — Kemungkinan kekurangan",
+      "thFix": "Betulkan dengan",
+      "thNutrient": "Nutrien",
+      "thSymptom": "Simptom klasik"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Mencampur dua baja dalam satu dram atau tangki semburan? Semak dahulu — sesetengah kombinasi membentuk enapan tidak larut yang membazirkan wang anda dan menyumbat muncung. Pilih dua baja dan dapatkan keputusan serta-merta.",
+      "eyebrow": "Keserasian Campuran Tangki",
+      "title": "Pemeriksa Keserasian Campuran Tangki Baja"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Membentuk mendakan kalsium fosfat"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Membentuk enapan zink fosfat tidak larut"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Fosfat mengunci zink"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Mendakan ber susu, nutrien hilang"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate bercampur dengan selamat. Kedua-duanya sumber nitrogen; kombinasi ini juga membekalkan sulfur. Tiada tindak balas buruk.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Boron selamat bersama dalam larutan — gabungan fertigasi biasa untuk tanaman berbuah semasa berbunga.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Boron (borax/asid borik) serasi dalam larutan. Ini ialah kombinasi daun standard — sering disembur bersama semasa berbunga dan pembentukan buah.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate membentuk mendakan kalsium fosfat. Kedua-dua nutrien saling mengunci dan mendap di dasar tangki — pembaziran total kedua-dua baja.",
+        "instead": "Sapu calcium nitrate melalui fertigasi pada hari berbeza daripada sebarang baja fosfat. Kekalkan sekurang-kurangnya 3–4 hari jarak.",
+        "title": "BAHAYA — JANGAN campur"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 mengandungi fosfat, yang boleh mendak dengan kalsium daripada calcium nitrate. Sesetengah NPK cecair berchelat adalah baik — NPK berbutir berisiko dalam tangki yang sama.",
+        "instead": "Jika kedua-duanya diperlukan, sapu NPK ke tanah dan fertigasikan calcium nitrate secara berasingan, beberapa hari kemudian.",
+        "title": "AWAS — Semak gred"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate serasi dari segi kimia, tetapi kedua-duanya sangat higroskopik — campuran menyerap lembapan daripada udara, menjadi melekit, dan mengeras dalam beberapa jam.",
+        "instead": "Campur sejurus sebelum digunakan dan tabur pada hari yang sama. Simpan kedua-dua baja secara berasingan dalam beg tertutup.",
+        "title": "AWAS — Sangat higroskopik"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP ialah kombinasi asas yang selamat dan digunakan meluas. Tiada pemendakan antara fosfat dan sulfat potasy.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "dap_urea": {
+        "explanation": "Mencampur kering DAP + Urea untuk taburan adalah selamat. Tetapi melarutkan kedua-duanya bersama dalam tangki semburan menaikkan pH dan membebaskan gas ammonia — anda kehilangan nitrogen dan pH tinggi boleh membakar daun.",
+        "instead": "Campuran kering baik untuk taburan. Untuk fertigasi/semburan, sapukannya dalam laluan berasingan.",
+        "title": "AWAS — Baik kering, berisiko dalam larutan"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate membentuk zink fosfat tidak larut — mendakan pekat seperti dadih. Zink menjadi terkunci dan tidak tersedia untuk tanaman, dan enapan menyumbat muncung semburan dan pemancar titisan.",
+        "instead": "Sapu berasingan: tabur DAP semasa menyemai/penyediaan tanah, dan sapu zinc sulphate sebagai sapuan tanah berasingan atau semburan daun (larutan 0.5%) 2–3 minggu kemudian.",
+        "title": "BAHAYA — JANGAN campur"
+      },
+      "default": {
+        "explanation": "Tiada data keserasian yang disahkan untuk kombinasi ini. Jangan anggap ia 'selamat'. Sebelum mencampur, ikut arahan pada label baja atau lakukan ujian balang: campurkan sedikit dalam air, tunggu 15 minit, dan periksa haba, gas, penggumpalan, atau enapan. Selagi belum pasti, jangan campur.",
+        "instead": "Jika kedua-dua baja diperlukan, sapukannya berasingan — atau sahkan dahulu dengan ujian balang berskala kecil.",
+        "title": "TIDAK DIKETAHUI — Belum disahkan"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP serasi dari segi kimia untuk taburan kering. (Nota: dalam pengairan titisan atau untuk tanaman sensitif klorida, utamakan SOP berbanding MOP.)",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate bercampur baik secara fizikal, tetapi MOP menambah beban klorida yang berat. Dalam pengairan titisan atau untuk tanaman sensitif klorida (tembakau, kentang, sitrus, anggur), kombinasi ini memberi tekanan pada tanaman.",
+        "instead": "Utamakan SOP berbanding MOP apabila mencampur dengan mikronutrien, terutamanya di bawah pengairan titisan atau untuk tanaman sensitif.",
+        "title": "AWAS — Beban klorida"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos mengandungi fosfat, yang bertindak balas dengan zink untuk membentuk zink fosfat tidak larut — mendakan seperti dadih yang sama seperti DAP + Zink. Zink hilang dan muncung tersumbat.",
+        "instead": "Sapu zinc sulphate secara berasingan — sebagai dos tanah asas atau semburan daun 0.5% — sekurang-kurangnya 2 minggu jauh daripada sebarang baja fosfat.",
+        "title": "BAHAYA — JANGAN campur"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP adalah selamat dan biasa digunakan untuk menaikkan kalium dalam tanaman berbuah tanpa menambah klorida.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea adalah selamat — biasa digunakan untuk meningkatkan nitrogen dalam dos asas. Tiada tindak balas buruk.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "same": {
+        "explanation": "Anda memilih {name} dua kali — tiada apa untuk dicampur. Pilih dua baja berbeza untuk menyemak keserasian.",
+        "instead": "",
+        "title": "Baja yang sama"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP ialah campuran serasi sepenuhnya, kering atau terlarut. Tiada pemendakan, tiada kehilangan nutrien. Kombinasi biasa dan berkesan untuk baja tambahan.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate selamat dalam tangki. Baja berasaskan sulfat tidak bertindak balas dengan zink, dan kedua-duanya larut bersih bersama.",
+        "instead": "",
+        "title": "SELAMAT — Serasi"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP serasi dari segi kimia, tetapi campuran mengeras dan menjadi keras dengan cepat kerana Urea menyerap lembapan dan SSP berasid. Ia menjadi sukar untuk ditabur sekata.",
+        "instead": "Campur hanya jumlah yang akan anda tabur dalam masa 1–2 jam. Jangan simpan campuran semalaman.",
+        "title": "AWAS — Guna serta-merta"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP mengandungi fosfat + kalsium. Dicampur dengan zinc sulphate ia membentuk zink fosfat tidak larut dan mendakan kalsium — campuran menjadi ber susu dan tidak boleh digunakan.",
+        "instead": "Sapu zink secara berasingan sebagai semburan daun atau dos asas, jauh daripada sapuan SSP.",
+        "title": "BAHAYA — JANGAN campur"
+      }
+    },
+    "ui": {
+      "checkBtn": "Semak Keserasian",
+      "fertA": "Baja A",
+      "fertB": "Baja B",
+      "insteadTitle": "💡 Apa yang perlu dilakukan sebagai gantinya",
+      "jarTest": "Sentiasa lakukan ujian balang sebelum campuran tangki penuh: campurkan sedikit dalam air, tunggu 15 minit, dan periksa haba, gas, penggumpalan, atau enapan.",
+      "quickRefTitle": "Rujukan pantas: jangan sekali-kali campur ini",
+      "selectPlaceholder": "— Pilih baja —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Cecair dikira sebagai 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Kandungan nutrien (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Saiz pek",
+      "packSizePh": "cth. 1",
+      "price": "Harga (Rs setiap pek)",
+      "pricePh": "cth. 3500",
+      "productName": "Nama produk",
+      "productPh": "cth. SuperPhos Liquid 10%",
+      "submit": "💰 Kira kos sebenar"
+    },
+    "hero": {
+      "desc": "Fosforus cecair mewah pada Rs 3,500 seliter — tawaran berbaloi atau penipuan? Masukkan harga mana-mana produk dan peratusan NPK dan kami akan dedahkan kos sebenar setiap kg nutrien, dibandingkan dengan DAP, Urea, SOP dan MOP standard.",
+      "eyebrow": "Harga vs. Nilai",
+      "noteText": "Harga rujukan adalah ilustrasi dan boleh disunting — bukan harga pasaran semasa. Gunakan kadar sebenar kawasan anda untuk perbandingan yang tepat.",
+      "noteTitle": "⚠️ Nota:",
+      "title": "Kalkulator Kos Setiap Nutrien Baja"
+    },
+    "nutrients": {
+      "k": "K₂O (Potasy)",
+      "n": "N (Nitrogen)",
+      "p": "P₂O₅ (Fosforus)"
+    },
+    "refs": {
+      "bagUnit": "beg {bagKg} kg",
+      "perBag": "Rs / beg",
+      "priceAria": "harga {name} dalam Rs",
+      "reset": "Tetapkan semula kepada lalai",
+      "title": "📊 Harga rujukan (Pakistan, Rs / beg 50 kg)"
+    },
+    "results": {
+      "benchTitle": "📋 Perbandingan penanda aras",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Sumber nutrien termurah sekarang",
+      "footnote": "Harga rujukan adalah untuk Pakistan dan boleh disunting di atas. Kos nutrien = harga pek ÷ (berat pek × % nutrien). Kemas kini harga apabila pasaran berubah.",
+      "kgInPack": "{kg} kg setiap pek",
+      "noInput": "⚠️ Sila masukkan saiz pek, harga, dan sekurang-kurangnya satu peratusan nutrien melebihi sifar.",
+      "perKg": "/ kg",
+      "thCheapest": "Standard termurah",
+      "thNutrient": "Nutrien",
+      "thRatio": "Nisbah",
+      "thYours": "Produk anda",
+      "thisProduct": "Produk ini",
+      "verdictExpensive": "Anda membayar {ratio}× lebih untuk {nutrient} berbanding {product} ({price}/kg). Beli {product} — jangan biarkan peniaga menipu anda.",
+      "verdictGood": "Harga berpatutan. {name} berharga lebih kurang sama dengan baja standard — teruskan.",
+      "verdictPricier": "{nutrient} adalah {ratio}× lebih mahal daripada {product} ({price}/kg). Pertimbangkan produk standard sebagai gantinya.",
+      "vsBenchmark": "{ratio}× berbanding {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Mahal — beli yang standard sebagai gantinya"
+      },
+      "good": {
+        "title": "Tawaran baik"
+      },
+      "pricier": {
+        "title": "Lebih mahal daripada standard"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Juga membekalkan sulfur (24% S) — bagus untuk tanaman minyak dan tanah beralkali.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — sumber K termurah, mengandungi klorida.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — bebas klorida, juga membekalkan sulfur.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Juga membekalkan sulfur (~12%) dan kalsium; pelepasan lebih perlahan daripada DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP tiada dalam pasaran, atau SOP terlalu mahal? Pilih baja yang anda mahu dan berapa beg yang diperlukan — kami akan tunjukkan kombinasi nutrien yang paling hampir setara daripada produk yang biasa ada.",
+      "eyebrow": "Pembantu Kekurangan",
+      "noteText": "Pengiraan setara nutrien tidak membuktikan keserasian kimia, keselamatan indeks garam, atau kesesuaian masa. Sahkan sebarang penggantian dengan ahli agronomi tempatan anda sebelum menggunakannya.",
+      "noteTitle": "⚠️ Penting:",
+      "title": "Pencari Alternatif Baja"
+    },
+    "notes": {
+      "ams": "ammonium sulphate juga membekalkan sulfur (24% S) — kelebihan untuk tanaman minyak, kekacang dan tanah berpH tinggi.",
+      "imperfect": "Ini ialah padanan praktikal yang paling hampir — replika NPK yang tepat dengan produk berbeza jarang sekali dapat dicapai.",
+      "mop": "MOP mengandungi klorida — utamakan SOP untuk tanaman sensitif klorida (tembakau, kentang, sitrus, anggur).",
+      "ssp": "SSP melepaskan fosforus lebih perlahan daripada DAP — gaulkannya ke dalam tanah beberapa hari sebelum menyemai untuk hasil terbaik.",
+      "urea": "Tabur Urea 1–2 hari selepas pengairan di atas tanah lembap — jangan tenggelamkannya dengan air pengairan (sehingga 40–50% boleh hilang)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {beg} other {beg}}",
+      "fertLabel": "Baja yang anda perlukan alternatif",
+      "findBtn": "Cari alternatif",
+      "footnote": "Ini ialah cadangan setara nutrien berdasarkan gred produk standard (beg 50 kg). Gred sebenar berbeza mengikut jenama — sentiasa semak label. Harga dan ketersediaan tidak dipantau di sini; sahkan dengan peniaga tempatan anda sebelum membeli.",
+      "matchPct": "≈{pct}% padanan",
+      "noResult": "Tiada alternatif praktikal ditemui untuk produk ini dengan baja biasa. Cuba kalkulator dos utama untuk jadual penuh sebagai gantinya.",
+      "optionTitle": "Pilihan {rank}",
+      "qtyLabel": "Kuantiti (beg 50 kg)",
+      "selectPh": "— Pilih baja —",
+      "summaryLine": "{count, plural, one {# beg} other {# beg}} {fertName} membekalkan {nutrients}.",
+      "summaryTail": "Kombinasi setara yang paling hampir:",
+      "thGives": "Pilihan ini memberi",
+      "thNeeded": "Diperlukan",
+      "thNutrient": "Nutrien"
+    }
   }
 }

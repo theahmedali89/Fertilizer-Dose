@@ -1648,5 +1648,480 @@
         "a": "自定义基础选项仅供通用指导 — 对于数据库中没有验证推荐的作物，这是一个起点。如果存在经过验证的作物×地区用量，请始终使用该用量；验证的数据带有其发布的来源。"
       }
     ]
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "按 10–15 kg/ha 的用量向土壤施用 borax（11% B），或在开花期喷施 0.2% borax。不要过量——缺乏与中毒之间的界限很窄。",
+        "fertilizer": "Borax",
+        "fullName": "硼 (B)",
+        "name": "硼缺乏",
+        "note": "开花期最为关键——影响授粉和坐果。"
+      },
+      "Ca": {
+        "correction": "首先保证土壤水分稳定——多数钙问题是水分问题，而非土壤问题。施用 gypsum（不改变 pH）或 calcium nitrate。发生脐腐病时，覆盖和定期浇水比施肥更重要。",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "钙 (Ca)",
+        "name": "钙缺乏",
+        "note": "脐腐病通常是浇水不均所致，而非缺钙。"
+      },
+      "Fe": {
+        "correction": "向叶面喷施 0.5–1% ferrous sulfate 溶液（10–14 天后重复一次）。碱性土壤中土施很少有效——如有需要请使用螯合铁 (Fe-EDDHA)。",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "铁 (Fe)",
+        "name": "铁缺乏",
+        "note": "几乎总是因土壤 pH 过高引起，而非土壤缺铁。"
+      },
+      "K": {
+        "correction": "按 50–75 kg/ha 施用 SOP（50% K₂O）或 MOP（60% K₂O）。果菜类分两次施——开花期一半，果实发育期一半。",
+        "fertilizer": "SOP / MOP",
+        "fullName": "钾 (K)",
+        "name": "钾缺乏",
+        "note": "在沙土和干旱胁迫下会加重。"
+      },
+      "Mg": {
+        "correction": "按 25 kg/ha 向土壤施用 magnesium sulfate（Epsom salt，9.8% Mg），或向叶面喷施 2% 溶液。",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "镁 (Mg)",
+        "name": "镁缺乏",
+        "note": "常与缺氮混淆——检查黄化是否发生在叶脉之间。"
+      },
+      "Mn": {
+        "correction": "向叶面喷施 0.5% manganese sulfate。避免过量施石灰——高 pH 会固定锰。",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "锰 (Mn)",
+        "name": "锰缺乏",
+        "note": "与铁缺乏相似——测土壤 pH 有助于区分。"
+      },
+      "N": {
+        "correction": "在灌溉前作追肥按 50–100 kg/ha 施用 Urea（46% N），或为快速见效向叶面喷施 2% Urea 溶液。",
+        "fertilizer": "Urea",
+        "fullName": "氮 (N)",
+        "name": "氮缺乏",
+        "note": "全球最常见的缺乏症。对氮反应迅速。"
+      },
+      "P": {
+        "correction": "在播种/移栽时施用 DAP (18-46-0) 或 SSP——磷在土壤中移动缓慢，应施在根区附近。叶面喷施效果较弱。",
+        "fertilizer": "DAP / SSP",
+        "fullName": "磷 (P)",
+        "name": "磷缺乏",
+        "note": "在冷凉土壤和酸性土壤中常见。"
+      },
+      "S": {
+        "correction": "按 200–250 kg/ha 施用 gypsum（18% S），或将氮源换成 ammonium sulfate（21% N + 24% S）。",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "硫 (S)",
+        "name": "硫缺乏",
+        "note": "看似缺氮，但从新叶开始。"
+      },
+      "Zn": {
+        "correction": "按 20–25 kg/ha 向土壤施用 zinc sulfate（33% Zn），或向叶面喷施 0.5% zinc sulfate + 0.25% 石灰。一次土施可持续 2–3 季。",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "锌 (Zn)",
+        "name": "锌缺乏",
+        "note": "在高 pH（碱性）和石灰性土壤中非常常见。"
+      }
+    },
+    "hero": {
+      "desc": "叶片发黄？茎秆发紫？叶缘焦枯？选择您在植株上看到的症状，我们会指出可能的养分缺乏症——以及纠正它的合适肥料。",
+      "eyebrow": "养分缺乏",
+      "title": "肥料缺乏症状检查器"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "果实底部有深色凹陷斑点",
+        "label": "果实脐腐病"
+      },
+      "dark-delayed": {
+        "hint": "生长缓慢，开花推迟",
+        "label": "叶片深绿、成熟推迟"
+      },
+      "inter-old": {
+        "hint": "叶脉保持绿色，脉间变黄",
+        "label": "老叶脉间黄化"
+      },
+      "little-leaf": {
+        "hint": "莲座状丛生",
+        "label": "叶片异常小（小叶病）"
+      },
+      "new-uniform": {
+        "hint": "类似缺氮，但发生在幼叶",
+        "label": "新叶均匀淡黄"
+      },
+      "new-yellow-veins": {
+        "hint": "顶部生长先受影响",
+        "label": "新叶发黄但叶脉保持绿色"
+      },
+      "old-yellow": {
+        "hint": "从植株下部开始",
+        "label": "老叶/下部叶变黄"
+      },
+      "poor-fruit": {
+        "hint": "花朵未结果就脱落",
+        "label": "坐果不良/落花"
+      },
+      "purple": {
+        "hint": "异常着色，非品种正常颜色",
+        "label": "叶片/茎秆发紫或发红"
+      },
+      "scorch": {
+        "hint": "叶缘似灼烧状，从老叶开始",
+        "label": "叶缘褐色焦枯"
+      },
+      "spots-weak": {
+        "hint": "茎秆易倒伏或折断",
+        "label": "叶片有褐斑，茎秆细弱"
+      },
+      "stunted": {
+        "hint": "整株看起来弱小",
+        "label": "生长受阻，植株淡绿"
+      },
+      "tip-burn": {
+        "hint": "生菜、甘蓝、花椰菜中常见",
+        "label": "幼嫩内叶叶尖灼伤"
+      },
+      "tip-death": {
+        "hint": "新梢畸形或死亡",
+        "label": "生长点死亡或畸形"
+      }
+    },
+    "ui": {
+      "bestMatch": "最佳匹配",
+      "calcDose": "在肥料计算器中计算精确用量 →",
+      "checkButton": "检查缺乏症（已选 {count} 项）",
+      "clearAll": "清除全部",
+      "disclaimer": "免责声明：",
+      "disclaimerText": "视觉症状在缺乏症、病虫害之间有重叠。本检查器是基于标准农艺参考文献的教育指南——不能替代实验室土壤或组织检测。如有疑问，施用纠正肥料前请先检测土壤。",
+      "howToCorrect": "纠正方法",
+      "matchedOf": "匹配了 {total} 个关键症状中的 {matched} 个",
+      "noMatches1": "未找到匹配。请尝试选择其他症状，或查看",
+      "noMatches2": "进行基于照片的诊断。",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "按与您症状的匹配数量排序。这是指南，不是实验室检测——为确保准确，请用土壤检测确认。",
+      "recFert": "推荐肥料",
+      "refTitle": "快速参考——所有缺乏症",
+      "step1Desc": "点选所有符合项。可以多选。",
+      "step1Title": "第 1 步——选择您看到的症状",
+      "step2Title": "第 2 步——可能的缺乏症",
+      "thFix": "纠正用",
+      "thNutrient": "养分",
+      "thSymptom": "典型症状"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / 硼",
+        "short": "硼"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "要在一个桶或喷雾罐中混用两种肥料？先检查一下——有些组合会形成不溶性沉渣，既浪费钱又堵塞喷头。选择两种肥料，立即获得结论。",
+      "eyebrow": "混配兼容性",
+      "title": "肥料混配兼容性检查器"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "形成磷酸钙沉淀"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "形成不溶性磷酸锌沉渣"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "磷酸盐使锌失效"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "乳白色沉淀，养分损失"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate 可安全混用。两者都是氮源；该组合还可提供硫。无不良反应。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "boron_sop": {
+        "explanation": "SOP + 硼在溶液中一起使用是安全的——是果树开花期常见的水肥一体化配对。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "boron_urea": {
+        "explanation": "Urea + 硼（borax/硼酸）在溶液中兼容。这是标准的叶面组合——常在开花期和坐果期一起喷施。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate 会形成磷酸钙沉淀。两种养分相互锁定并沉到罐底——两种肥料完全浪费。",
+        "instead": "将 calcium nitrate 通过水肥一体化在与任何磷肥不同的日期施用，间隔至少 3–4 天。",
+        "title": "危险——请勿混用"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 含磷酸盐，可能与 calcium nitrate 中的钙发生沉淀。部分液体 NPK 为螯合型、没有问题——颗粒 NPK 在同一罐中有风险。",
+        "instead": "如果两者都需要，将 NPK 施入土壤，calcium nitrate 间隔几天单独水肥施用。",
+        "title": "注意——检查产品规格"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate 化学上兼容，但两者都强吸湿——混合物会从空气中吸潮、变黏，几小时内结块。",
+        "instead": "使用前即混即用，当天撒施。两种肥料分开密封存放在袋中。",
+        "title": "注意——强吸湿性"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP 是安全、广泛使用的基肥组合。磷酸盐与硫酸钾之间不会沉淀。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "dap_urea": {
+        "explanation": "为撒施而将 DAP + Urea 干混是安全的。但在喷雾罐中将两者一起溶解会升高 pH 并释放氨气——损失氮素，高 pH 还可能灼伤叶片。",
+        "instead": "撒施用干混即可。水肥/喷施请分开施用。",
+        "title": "注意——干混可以，溶解有风险"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate 会形成不溶性磷酸锌——浓稠的凝乳状沉淀。锌被固定、作物无法吸收，沉渣还会堵塞喷头和滴头。",
+        "instead": "分开施用：播种/整地时撒施 DAP，2–3 周后再单独土施或叶面喷施 zinc sulphate（0.5% 溶液）。",
+        "title": "危险——请勿混用"
+      },
+      "default": {
+        "explanation": "该组合没有经过验证的兼容性数据。请勿将其视为“安全”。混合前请遵循肥料标签说明，或做烧杯试验：将少量混入水中，等待 15 分钟，检查是否发热、产气、凝乳状絮凝或沉淀。确认之前不要混合。",
+        "instead": "如果两种肥料都需要，请分开施用——或先小规模做烧杯试验验证。",
+        "title": "未知——未经验证"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP 干撒施化学上兼容。（注：滴灌或对氯敏感作物，请用 SOP 代替 MOP。）",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate 物理上混配良好，但 MOP 会带来较重的氯负荷。在滴灌或对氯敏感作物（烟草、马铃薯、柑橘、葡萄）上，该组合会给作物造成胁迫。",
+        "instead": "与微量元素混用时请用 SOP 代替 MOP，尤其是在滴灌或敏感作物上。",
+        "title": "注意——氯负荷"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos 含磷酸盐，会与锌反应形成不溶性磷酸锌——与 DAP + 锌相同的凝乳状沉淀。锌损失，喷头堵塞。",
+        "instead": "将 zinc sulphate 单独施用——作基肥土施或 0.5% 叶面喷施——与任何磷肥至少间隔 2 周。",
+        "title": "危险——请勿混用"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP 安全，常用于在不加氯的情况下提高果菜类的钾。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea 安全——常用于在基肥中补充氮。无不良反应。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "same": {
+        "explanation": "您选择了两次 {name}——无需混配。请选择两种不同的肥料检查兼容性。",
+        "instead": "",
+        "title": "同一种肥料"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP 干混或溶解都是完全兼容的混合。无沉淀，无养分损失。是追肥常用且有效的组合。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate 在罐中安全。硫酸盐类肥料不与锌反应，两者可干净地一起溶解。",
+        "instead": "",
+        "title": "安全——兼容"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP 化学上兼容，但因 urea 吸湿且 SSP 呈酸性，混合物会迅速结块变硬，难以均匀撒施。",
+        "instead": "只混合 1–2 小时内能撒完的量。不要将混合物过夜存放。",
+        "title": "注意——立即使用"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP 含磷酸盐 + 钙。与 zinc sulphate 混合会形成不溶性磷酸锌和钙沉淀——混合物变浑浊，无法使用。",
+        "instead": "将锌与 SSP 施用分开，作叶面喷施或基肥单独施用。",
+        "title": "危险——请勿混用"
+      }
+    },
+    "ui": {
+      "checkBtn": "检查兼容性",
+      "fertA": "肥料 A",
+      "fertB": "肥料 B",
+      "insteadTitle": "💡 替代做法",
+      "jarTest": "在大罐混配前务必做烧杯试验：将少量混入水中，等待 15 分钟，检查是否发热、产气、凝乳状絮凝或沉淀。",
+      "quickRefTitle": "快速参考：切勿混用这些",
+      "selectPlaceholder": "— 选择肥料 —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "液体按 1 L ≈ 1 kg 计算。",
+      "nPct": "N %",
+      "nutrientPct": "养分含量 (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "包装规格",
+      "packSizePh": "例如 1",
+      "price": "价格（每包 Rs）",
+      "pricePh": "例如 3500",
+      "productName": "产品名称",
+      "productPh": "例如 SuperPhos Liquid 10%",
+      "submit": "💰 计算真实成本"
+    },
+    "hero": {
+      "desc": "每升 Rs 3,500 的花哨液体磷肥——是捡漏还是骗局？输入任意产品的价格和 NPK 百分比，我们将揭示其每公斤养分的真实成本，并与标准 DAP、Urea、SOP 和 MOP 对标。",
+      "eyebrow": "价格与价值",
+      "noteText": "参考价格仅为示例、可编辑——不是实时市场价格。请使用您所在地区的实际价格进行准确比较。",
+      "noteTitle": "⚠️ 注意：",
+      "title": "肥料单位养分成本计算器"
+    },
+    "nutrients": {
+      "k": "K₂O（钾）",
+      "n": "N（氮）",
+      "p": "P₂O₅（磷）"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg 袋",
+      "perBag": "Rs / 袋",
+      "priceAria": "{name} 的价格（Rs）",
+      "reset": "恢复默认",
+      "title": "📊 参考价格（巴基斯坦，Rs / 50 kg 袋）"
+    },
+    "results": {
+      "benchTitle": "📋 对标比较",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 当前最便宜的养分来源",
+      "footnote": "参考价格为巴基斯坦价格，可在上方编辑。养分成本 = 包装价格 ÷（包装重量 × 养分%）。市场变化时请更新价格。",
+      "kgInPack": "每包 {kg} kg",
+      "noInput": "⚠️ 请输入包装规格、价格，以及至少一个大于零的养分百分比。",
+      "perKg": "/ kg",
+      "thCheapest": "最便宜的标准品",
+      "thNutrient": "养分",
+      "thRatio": "倍数",
+      "thYours": "您的产品",
+      "thisProduct": "本产品",
+      "verdictExpensive": "您为 {nutrient} 支付的价格比 {product}（{price}/kg）高出 {ratio}×。买 {product} 吧——别让经销商忽悠了。",
+      "verdictGood": "价格公道。{name} 与标准肥料价格相当——可以买。",
+      "verdictPricier": "{nutrient} 比 {product}（{price}/kg）贵 {ratio}×。建议考虑标准产品。",
+      "vsBenchmark": "为 {product} 的 {ratio}×"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "偏贵——买标准品吧"
+      },
+      "good": {
+        "title": "价格不错"
+      },
+      "pricier": {
+        "title": "比标准品贵"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "还可提供硫（24% S）——适合油料作物和碱性土壤。",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash——最便宜的钾源，含氯。",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash——不含氯，还可提供硫。",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "还可提供硫（~12%）和钙；比 DAP 释放更慢。",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP 市场上买不到，或 SOP 贵得离谱？选择您想要的肥料和需要的袋数——我们将展示通常可买到的产品中最接近的养分等效组合。",
+      "eyebrow": "缺货助手",
+      "noteText": "养分等效计算不能证明化学兼容性、盐分安全性或施用时机适宜性。施用前请与当地农艺师确认任何替代方案。",
+      "noteTitle": "⚠️ 重要：",
+      "title": "肥料替代品查找器"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate 还可提供硫（24% S）——对油料作物、豆类和高 pH 土壤是加分项。",
+      "imperfect": "这是最接近的实用匹配——用不同产品完全复制 NPK 很少可能。",
+      "mop": "MOP 含氯——对氯敏感作物（烟草、马铃薯、柑橘、葡萄）请用 SOP。",
+      "ssp": "SSP 释放磷比 DAP 更慢——为获得最佳效果，请在播种前几天混入土壤。",
+      "urea": "在灌溉后 1–2 天于湿润土壤上撒施 Urea——不要用灌溉水淹没（可能损失 40–50%）。"
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {袋} other {袋}}",
+      "fertLabel": "需要找替代品的肥料",
+      "findBtn": "查找替代品",
+      "footnote": "这些是基于标准产品规格（50 kg 袋）的养分等效建议。实际规格因品牌而异——请务必查看标签。此处不跟踪价格和供应情况；购买前请与当地经销商确认。",
+      "matchPct": "≈{pct}% 匹配",
+      "noResult": "用常见肥料未找到该产品的实用替代品。请改用主用量计算器制定完整施肥方案。",
+      "optionTitle": "方案 {rank}",
+      "qtyLabel": "数量（50 kg 袋）",
+      "selectPh": "— 选择肥料 —",
+      "summaryLine": "{count, plural, one {# 袋} other {# 袋}} {fertName} 可提供 {nutrients}。",
+      "summaryTail": "最接近的等效组合：",
+      "thGives": "该方案提供",
+      "thNeeded": "需要",
+      "thNutrient": "养分"
+    }
   }
 }

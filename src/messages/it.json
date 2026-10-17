@@ -1647,5 +1647,480 @@
     "viewAll": "Visualizza tutti i contributori",
     "priorityBadge": "⚡ Revisione prioritaria",
     "close": "Vicino"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Distribuisci borax (11% B) al terreno a 10–15 kg/ha, oppure spruzza borax allo 0,2% alla fioritura. Non esagerare — il margine tra carenza e tossicità è stretto.",
+        "fertilizer": "Borax",
+        "fullName": "Boro (B)",
+        "name": "Carenza di boro",
+        "note": "Critico alla fioritura — influisce su polline e allegagione."
+      },
+      "Ca": {
+        "correction": "Prima di tutto assicura un'umidità costante del terreno — la maggior parte dei problemi di calcio dipende dall'acqua, non dal terreno. Applica gypsum (non cambia il pH) o calcium nitrate. Contro il marciume apicale, pacciamatura e irrigazioni regolari contano più del concime.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Calcio (Ca)",
+        "name": "Carenza di calcio",
+        "note": "Il marciume apicale di solito è dovuto a irrigazioni irregolari, non a mancanza di calcio."
+      },
+      "Fe": {
+        "correction": "Spruzza una soluzione di ferrous sulfate allo 0,5–1% sulle foglie (ripeti dopo 10–14 giorni). L'applicazione al terreno raramente funziona nei suoli alcalini — se serve, usa ferro chelato (Fe-EDDHA).",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Ferro (Fe)",
+        "name": "Carenza di ferro",
+        "note": "Quasi sempre indotta da pH alto del terreno, non da poco ferro."
+      },
+      "K": {
+        "correction": "Applica SOP (50% K₂O) o MOP (60% K₂O) a 50–75 kg/ha. Nelle colture da frutto fraziona la dose — metà alla fioritura, metà durante lo sviluppo dei frutti.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Potassio (K)",
+        "name": "Carenza di potassio",
+        "note": "Peggiora nei terreni sabbiosi e in condizioni di siccità."
+      },
+      "Mg": {
+        "correction": "Applica magnesium sulfate (Epsom salt, 9,8% Mg) al terreno a 25 kg/ha, oppure spruzza una soluzione al 2% sulle foglie.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesio (Mg)",
+        "name": "Carenza di magnesio",
+        "note": "Spesso confusa con la carenza di azoto — controlla se l'ingiallimento è tra le nervature."
+      },
+      "Mn": {
+        "correction": "Spruzza manganese sulfate allo 0,5% sulle foglie. Evita eccessi di calce — il pH alto blocca il manganese.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Manganese (Mn)",
+        "name": "Carenza di manganese",
+        "note": "Simile alla carenza di ferro — un'analisi del pH del terreno aiuta a distinguerle."
+      },
+      "N": {
+        "correction": "Applica Urea (46% N) a 50–100 kg/ha in copertura prima dell'irrigazione, oppure spruzza una soluzione di Urea al 2% sulle foglie per un effetto rapido.",
+        "fertilizer": "Urea",
+        "fullName": "Azoto (N)",
+        "name": "Carenza di azoto",
+        "note": "La carenza più comune al mondo. Risponde in fretta all'azoto."
+      },
+      "P": {
+        "correction": "Applica DAP (18-46-0) o SSP alla semina/trapianto — il fosforo si muove lentamente nel terreno, quindi posizionalo vicino alle radici. Le applicazioni fogliari sono un rimedio debole.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fosforo (P)",
+        "name": "Carenza di fosforo",
+        "note": "Comune nei terreni freddi e acidi."
+      },
+      "S": {
+        "correction": "Applica gypsum (18% S) a 200–250 kg/ha, oppure passa a una fonte di azoto a base di ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Zolfo (S)",
+        "name": "Carenza di zolfo",
+        "note": "Somiglia alla carenza di azoto ma parte dalle foglie NUOVE."
+      },
+      "Zn": {
+        "correction": "Applica zinc sulfate (33% Zn) al terreno a 20–25 kg/ha, oppure spruzza zinc sulfate allo 0,5% + calce allo 0,25% sulle foglie. Una dose al terreno dura 2–3 stagioni.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Zinco (Zn)",
+        "name": "Carenza di zinco",
+        "note": "Molto comune nei terreni a pH alto (alcalini) e calcarei."
+      }
+    },
+    "hero": {
+      "desc": "Foglie gialle? Steli violacei? Margini bruciati? Seleziona quello che vedi sulle tue piante e ti indicheremo la probabile carenza nutritiva — con il concime giusto per risolverla.",
+      "eyebrow": "Carenza nutritiva",
+      "title": "Controllo sintomi da carenza di concime"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Macchie scure e infossate sul fondo del frutto",
+        "label": "Marciume apicale sui frutti"
+      },
+      "dark-delayed": {
+        "hint": "Crescita lenta, fioritura tardiva",
+        "label": "Foglie verde scuro con maturazione ritardata"
+      },
+      "inter-old": {
+        "hint": "Le nervature restano verdi, le zone tra di esse ingialliscono",
+        "label": "Ingiallimento tra le nervature sulle foglie vecchie"
+      },
+      "little-leaf": {
+        "hint": "Crescita compatta a rosetta",
+        "label": "Foglie anormalmente piccole (microfillia)"
+      },
+      "new-uniform": {
+        "hint": "Come la carenza di azoto ma sulle foglie giovani",
+        "label": "Foglie nuove uniformemente giallo pallido"
+      },
+      "new-yellow-veins": {
+        "hint": "La crescita apicale è colpita per prima",
+        "label": "Foglie nuove gialle ma con nervature verdi"
+      },
+      "old-yellow": {
+        "hint": "Parte dalla base della pianta",
+        "label": "Foglie vecchie / basse che ingialliscono"
+      },
+      "poor-fruit": {
+        "hint": "I fiori cadono senza formare frutti",
+        "label": "Scarsa allegagione / cascola fiorale"
+      },
+      "purple": {
+        "hint": "Colorazione insolita, non il colore normale della varietà",
+        "label": "Foglie / steli viola o rossastri"
+      },
+      "scorch": {
+        "hint": "I margini sembrano bruciati, a partire dalle foglie vecchie",
+        "label": "Margini fogliari marroni e bruciati"
+      },
+      "spots-weak": {
+        "hint": "Gli steli si allettano o si rompono facilmente",
+        "label": "Macchie marroni sulle foglie, steli deboli"
+      },
+      "stunted": {
+        "hint": "La pianta intera appare debole e piccola",
+        "label": "Crescita stentata, piante verde pallido"
+      },
+      "tip-burn": {
+        "hint": "Comune in lattuga, cavolo, cavolfiore",
+        "label": "Bruciatura apicale sulle foglie giovani interne"
+      },
+      "tip-death": {
+        "hint": "La nuova crescita è deformata o morta",
+        "label": "L'apice vegetativo muore o appare deformato"
+      }
+    },
+    "ui": {
+      "bestMatch": "Migliore corrispondenza",
+      "calcDose": "Calcola la dose esatta nel calcolatore di concime →",
+      "checkButton": "Verifica carenza ({count} selezionati)",
+      "clearAll": "Cancella tutto",
+      "disclaimer": "Avvertenza:",
+      "disclaimerText": "I sintomi visivi possono sovrapporsi tra carenze, parassiti e malattie. Questo strumento è una guida didattica basata su riferimenti agronomici standard — non sostituisce un'analisi di laboratorio del terreno o dei tessuti. In caso di dubbio, fai analizzare il terreno prima di applicare concimi correttivi.",
+      "howToCorrect": "Come correggerla",
+      "matchedOf": "{matched} sintomi chiave su {total} corrispondono",
+      "noMatches1": "Nessuna corrispondenza trovata. Prova a selezionare sintomi diversi, oppure consulta",
+      "noMatches2": "per una diagnosi basata su foto.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Ordinate in base a quanti dei tuoi sintomi corrispondono. È una guida, non un'analisi di laboratorio — per certezza fai analizzare il terreno.",
+      "recFert": "Concime consigliato",
+      "refTitle": "Riferimento rapido — tutte le carenze",
+      "step1Desc": "Tocca tutte le voci pertinenti. Puoi selezionarne più di una.",
+      "step1Title": "Passaggio 1 — Seleziona i sintomi che vedi",
+      "step2Title": "Passaggio 2 — Probabili carenze",
+      "thFix": "Correggi con",
+      "thNutrient": "Nutriente",
+      "thSymptom": "Sintomo classico"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Stai miscelando due concimi in un unico fusto o botte? Verifica prima — alcune combinazioni formano fanghi insolubili che sprecano i tuoi soldi e otturano gli ugelli. Scegli due concimi e ottieni un responso immediato.",
+      "eyebrow": "Compatibilità delle miscele in botte",
+      "title": "Verifica di compatibilità delle miscele di concimi"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Forma un precipitato di fosfato di calcio"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Forma fanghi insolubili di fosfato di zinco"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Il fosfato blocca lo zinco"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Precipitato lattiginoso, nutrienti persi"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate si miscelano in sicurezza. Entrambi sono fonti di azoto; la combinazione fornisce anche zolfo. Nessuna reazione avversa.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "boron_sop": {
+        "explanation": "SOP + boro sono sicuri insieme in soluzione — un abbinamento comune in fertirrigazione per le colture da frutto alla fioritura.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "boron_urea": {
+        "explanation": "Urea + boro (borax/acido borico) è compatibile in soluzione. È una combinazione fogliare standard — spesso spruzzata insieme alla fioritura e all'allegagione.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate forma un precipitato di fosfato di calcio. I due nutrienti si bloccano a vicenda e si depositano sul fondo della botte — uno spreco totale di entrambi i concimi.",
+        "instead": "Applica il calcium nitrate in fertirrigazione in un giorno diverso da qualsiasi concime fosfatico. Mantieni almeno 3–4 giorni di intervallo.",
+        "title": "PERICOLO — Non miscelare"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 contiene fosfato, che può precipitare con il calcio del calcium nitrate. Alcuni NPK liquidi sono chelati e vanno bene — l'NPK granulare è rischioso nella stessa botte.",
+        "instead": "Se servono entrambi, applica l'NPK al terreno e irriga il calcium nitrate in fertirrigazione separatamente, a qualche giorno di distanza.",
+        "title": "ATTENZIONE — Controlla il tipo"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate sono chimicamente compatibili, ma entrambi sono fortemente igroscopici — la miscela assorbe umidità dall'aria, diventa appiccicosa e si indurisce in poche ore.",
+        "instead": "Miscela appena prima dell'uso e distribuisci lo stesso giorno. Conserva i due concimi separati in sacchi sigillati.",
+        "title": "ATTENZIONE — Fortemente igroscopico"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP è una combinazione di fondo sicura e molto usata. Nessuna precipitazione tra fosfato e solfato di potassio.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "dap_urea": {
+        "explanation": "Miscelare a secco DAP + Urea per la distribuzione è sicuro. Ma scioglierli insieme in botte alza il pH e libera ammoniaca gassosa — perdi azoto e il pH alto può bruciare le foglie.",
+        "instead": "La miscela a secco va bene per la distribuzione. Per fertirrigazione/spruzzatura, applicali in passaggi separati.",
+        "title": "ATTENZIONE — Bene a secco, rischioso in soluzione"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate forma fosfato di zinco insolubile — un precipitato denso, simile a cagliata. Lo zinco diventa fisso e indisponibile per la pianta, e il fango ottura ugelli ed emettitori a goccia.",
+        "instead": "Applica separatamente: distribuisci il DAP alla semina/preparazione del terreno, e applica lo zinc sulphate come concimazione al terreno separata o spray fogliare (soluzione allo 0,5%) 2–3 settimane dopo.",
+        "title": "PERICOLO — Non miscelare"
+      },
+      "default": {
+        "explanation": "Non esistono dati verificati di compatibilità per questa combinazione. Non considerarla 'sicura'. Prima di miscelare, segui le istruzioni sull'etichetta del concime oppure fai il jar test: mescola piccole quantità in acqua, aspetta 15 minuti e controlla calore, gas, coagulazione o sedimento. Finché non sei sicuro, non miscelare.",
+        "instead": "Se entrambi i concimi sono necessari, applicali separatamente — oppure verifica prima con un jar test su piccola scala.",
+        "title": "SCONOSCIUTO — Non verificato"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP sono chimicamente compatibili per la distribuzione a secco. (Nota: in irrigazione a goccia o per colture sensibili al cloro, preferisci SOP a MOP.)",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate si miscela bene fisicamente, ma il MOP aggiunge un forte carico di cloro. In irrigazione a goccia o per colture sensibili al cloro (tabacco, patata, agrumi, uva), questa combinazione stressa la coltura.",
+        "instead": "Preferisci SOP a MOP quando misceli con micronutrienti, soprattutto in irrigazione a goccia o per colture sensibili.",
+        "title": "ATTENZIONE — Carico di cloro"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos contiene fosfato, che reagisce con lo zinco formando fosfato di zinco insolubile — lo stesso precipitato simile a cagliata di DAP + zinco. Lo zinco si perde e gli ugelli si otturano.",
+        "instead": "Applica lo zinc sulphate separatamente — come dose di fondo al terreno o spray fogliare allo 0,5% — almeno 2 settimane lontano da qualsiasi concime fosfatico.",
+        "title": "PERICOLO — Non miscelare"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP è sicuro e comunemente usato per aumentare il potassio nelle colture da frutto senza aggiungere cloro.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea è sicuro — comunemente usato per aumentare l'azoto in una dose di fondo. Nessuna reazione avversa.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "same": {
+        "explanation": "Hai selezionato {name} due volte — niente da miscelare. Scegli due concimi diversi per verificare la compatibilità.",
+        "instead": "",
+        "title": "Stesso concime"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP è una miscela pienamente compatibile, a secco o disciolta. Nessuna precipitazione, nessuna perdita di nutrienti. Una combinazione comune ed efficace per la concimazione in copertura.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate è sicuro in botte. I concimi a base di solfato non reagiscono con lo zinco, ed entrambi si sciolgono bene insieme.",
+        "instead": "",
+        "title": "SICURO — Compatibile"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP sono chimicamente compatibili, ma la miscela si indurisce rapidamente perché l'Urea assorbe umidità e l'SSP è acido. Diventa difficile distribuirla in modo uniforme.",
+        "instead": "Miscela solo la quantità che distribuirai entro 1–2 ore. Non conservare la miscela durante la notte.",
+        "title": "ATTENZIONE — Usa subito"
+      },
+      "ssp_zinc": {
+        "explanation": "L'SSP contiene fosfato + calcio. Miscelato con zinc sulphate forma fosfato di zinco insolubile e precipitati di calcio — la miscela diventa lattiginosa e inutilizzabile.",
+        "instead": "Applica lo zinco separatamente come spray fogliare o dose di fondo, lontano dall'applicazione di SSP.",
+        "title": "PERICOLO — Non miscelare"
+      }
+    },
+    "ui": {
+      "checkBtn": "Verifica compatibilità",
+      "fertA": "Concime A",
+      "fertB": "Concime B",
+      "insteadTitle": "💡 Cosa fare invece",
+      "jarTest": "Fai sempre un jar test prima di una miscela completa in botte: mescola piccole quantità in acqua, aspetta 15 minuti e controlla calore, gas, coagulazione o sedimento.",
+      "quickRefTitle": "Riferimento rapido: non miscelare mai questi",
+      "selectPlaceholder": "— Seleziona il concime —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "I liquidi sono trattati come 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Contenuto di nutrienti (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Dimensione confezione",
+      "packSizePh": "es. 1",
+      "price": "Prezzo (Rs per confezione)",
+      "pricePh": "es. 3500",
+      "productName": "Nome prodotto",
+      "productPh": "es. SuperPhos Liquid 10%",
+      "submit": "💰 Calcola il costo reale"
+    },
+    "hero": {
+      "desc": "Un costoso fosforo liquido a Rs 3.500 al litro — affare o truffa? Inserisci il prezzo di un prodotto e la percentuale di NPK e ti riveleremo il vero costo per kg di nutriente, confrontato con DAP, Urea, SOP e MOP standard.",
+      "eyebrow": "Prezzo vs. valore",
+      "noteText": "I prezzi di riferimento sono indicativi e modificabili — non prezzi di mercato in tempo reale. Usa i prezzi reali della tua zona per un confronto accurato.",
+      "noteTitle": "⚠️ Nota:",
+      "title": "Calcolatore del costo per nutriente dei concimi"
+    },
+    "nutrients": {
+      "k": "K₂O (potassa)",
+      "n": "N (azoto)",
+      "p": "P₂O₅ (fosforo)"
+    },
+    "refs": {
+      "bagUnit": "sacco da {bagKg} kg",
+      "perBag": "Rs / sacco",
+      "priceAria": "prezzo di {name} in Rs",
+      "reset": "Ripristina valori predefiniti",
+      "title": "📊 Prezzi di riferimento (Pakistan, Rs / sacco da 50 kg)"
+    },
+    "results": {
+      "benchTitle": "📋 Confronto di riferimento",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Fonti di nutrienti più economiche al momento",
+      "footnote": "I prezzi di riferimento sono per il Pakistan e modificabili sopra. Costo nutriente = prezzo confezione ÷ (peso confezione × % nutriente). Aggiorna i prezzi quando il mercato si muove.",
+      "kgInPack": "{kg} kg per confezione",
+      "noInput": "⚠️ Inserisci dimensione confezione, prezzo e almeno una percentuale di nutriente sopra lo zero.",
+      "perKg": "/ kg",
+      "thCheapest": "Standard più economico",
+      "thNutrient": "Nutriente",
+      "thRatio": "Rapporto",
+      "thYours": "Il tuo prodotto",
+      "thisProduct": "Questo prodotto",
+      "verdictExpensive": "Stai pagando {ratio}× in più per {nutrient} rispetto a {product} ({price}/kg). Compra {product} — non farti ingannare dal rivenditore.",
+      "verdictGood": "Prezzo onesto. {name} costa più o meno come i concimi standard — vai pure.",
+      "verdictPricier": "{nutrient} è {ratio}× più costoso di {product} ({price}/kg). Considera invece il prodotto standard.",
+      "vsBenchmark": "{ratio}× vs {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Costoso — compra invece lo standard"
+      },
+      "good": {
+        "title": "Buon affare"
+      },
+      "pricier": {
+        "title": "Più costoso dello standard"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Fornisce anche zolfo (24% S) — ottimo per oleaginose e terreni alcalini.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — la fonte di K più economica, contiene cloro.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — senza cloro, fornisce anche zolfo.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Fornisce anche zolfo (~12%) e calcio; rilascio più lento rispetto al DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP introvabile sul mercato, o SOP troppo costoso? Scegli il concime che volevi e quanti sacchi ti servivano — ti mostreremo le combinazioni più vicine in equivalenti nutritivi tra i prodotti solitamente disponibili.",
+      "eyebrow": "Aiuto carenza",
+      "noteText": "Il calcolo degli equivalenti nutritivi non prova la compatibilità chimica, la sicurezza dell'indice salino o l'idoneità dei tempi. Conferma qualsiasi sostituzione con il tuo agronomo di fiducia prima di applicarla.",
+      "noteTitle": "⚠️ Importante:",
+      "title": "Trova alternative al concime"
+    },
+    "notes": {
+      "ams": "L'ammonium sulphate fornisce anche zolfo (24% S) — un vantaggio per oleaginose, legumi e terreni a pH alto.",
+      "imperfect": "Questa è la corrispondenza pratica più vicina — una replica esatta dell'NPK con prodotti diversi è raramente possibile.",
+      "mop": "Il MOP contiene cloro — preferisci SOP per le colture sensibili al cloro (tabacco, patata, agrumi, uva).",
+      "ssp": "L'SSP rilascia il fosforo più lentamente del DAP — interralo nel terreno qualche giorno prima della semina per i migliori risultati.",
+      "urea": "Distribuisci l'Urea 1–2 giorni dopo l'irrigazione su terreno umido — non sommergerla con l'acqua di irrigazione (si può perdere fino al 40–50%)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {sacco} other {sacchi}}",
+      "fertLabel": "Concime per cui cerchi un'alternativa",
+      "findBtn": "Trova alternative",
+      "footnote": "Sono suggerimenti di equivalenti nutritivi basati sui titoli standard dei prodotti (sacchi da 50 kg). I titoli reali variano per marca — controlla sempre l'etichetta. Prezzi e disponibilità non sono monitorati qui; conferma con il tuo rivenditore prima di acquistare.",
+      "matchPct": "≈{pct}% di corrispondenza",
+      "noResult": "Nessuna alternativa pratica trovata per questo prodotto con i concimi comuni. Prova invece il calcolatore principale delle dosi per un piano completo.",
+      "optionTitle": "Opzione {rank}",
+      "qtyLabel": "Quantità (sacchi da 50 kg)",
+      "selectPh": "— Seleziona il concime —",
+      "summaryLine": "{count, plural, one {# sacco} other {# sacchi}} di {fertName} fornisce {nutrients}.",
+      "summaryTail": "Combinazioni equivalenti più vicine:",
+      "thGives": "Questa opzione fornisce",
+      "thNeeded": "Necessario",
+      "thNutrient": "Nutriente"
+    }
   }
 }

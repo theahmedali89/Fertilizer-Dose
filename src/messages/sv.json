@@ -1647,5 +1647,480 @@
     "viewAll": "Visa alla bidragsgivare",
     "priorityBadge": "⚡ Prioriterad granskning",
     "close": "Stäng"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Tillför borax (11% B) till jorden med 10–15 kg/ha, eller spruta 0.2% borax vid blomning. Överdosera inte — gränsen mellan brist och förgiftning är smal.",
+        "fertilizer": "Borax",
+        "fullName": "Bor (B)",
+        "name": "Borbrist",
+        "note": "Kritiskt vid blomning — påverkar pollen och fruktsättning."
+      },
+      "Ca": {
+        "correction": "Säkerställ jämn jordfuktighet först — de flesta kalciumproblem beror på vatten, inte på jorden. Tillför gypsum (ingen pH-förändring) eller calcium nitrate. Vid blomändröta är täckning och regelbunden vattning viktigare än gödsel.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Kalcium (Ca)",
+        "name": "Kalciumbrist",
+        "note": "Blomändröta beror oftast på ojämn vattning, inte på kalciumbrist."
+      },
+      "Fe": {
+        "correction": "Spruta 0.5–1% ferrous sulfate-lösning på bladen (upprepa efter 10–14 dagar). Jordgödsling fungerar sällan i alkaliska jordar — använd kelaterat järn (Fe-EDDHA) vid behov.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Järn (Fe)",
+        "name": "Järnbrist",
+        "note": "Beror nästan alltid på högt jord-pH, inte på lågt järn."
+      },
+      "K": {
+        "correction": "Tillför SOP (50% K₂O) eller MOP (60% K₂O) med 50–75 kg/ha. Dela givan i fruktgrödor — hälften vid blomning, hälften vid fruktutveckling.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Kalium (K)",
+        "name": "Kaliumbrist",
+        "note": "Förvärras i sandjordar och vid torka."
+      },
+      "Mg": {
+        "correction": "Tillför magnesium sulfate (Epsom salt, 9.8% Mg) till jorden med 25 kg/ha, eller spruta 2% lösning på bladen.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesium (Mg)",
+        "name": "Magnesiumbrist",
+        "note": "Förväxlas ofta med kväve — kontrollera om gulningen sitter mellan nerverna."
+      },
+      "Mn": {
+        "correction": "Spruta 0.5% manganese sulfate på bladen. Undvik överkalkning — högt pH låser fast manganet.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Mangan (Mn)",
+        "name": "Manganbrist",
+        "note": "Liknar järnbrist — ett jord-pH-test hjälper till att skilja dem åt."
+      },
+      "N": {
+        "correction": "Tillför Urea (46% N) med 50–100 kg/ha som övergödsling före bevattning, eller spruta 2% Urea-lösning på bladen för snabb effekt.",
+        "fertilizer": "Urea",
+        "fullName": "Kväve (N)",
+        "name": "Kvävebrist",
+        "note": "Den vanligaste bristen i världen. Svarar snabbt på kväve."
+      },
+      "P": {
+        "correction": "Tillför DAP (18-46-0) eller SSP vid sådd/plantering — fosfor rör sig långsamt i jorden, så placera det nära rotzonen. Bladsprutning är en svag lösning.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fosfor (P)",
+        "name": "Fosforbrist",
+        "note": "Vanligt i kalla jordar och sura jordar."
+      },
+      "S": {
+        "correction": "Tillför gypsum (18% S) med 200–250 kg/ha, eller byt kvävekälla till ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Svavel (S)",
+        "name": "Svavelbrist",
+        "note": "Ser ut som kvävebrist men börjar på NYA blad."
+      },
+      "Zn": {
+        "correction": "Tillför zinc sulfate (33% Zn) till jorden med 20–25 kg/ha, eller spruta 0.5% zinc sulfate + 0.25% kalk på bladen. En jordgiva räcker i 2–3 säsonger.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Zink (Zn)",
+        "name": "Zinkbrist",
+        "note": "Mycket vanligt i jordar med högt pH (alkaliska) och kalkrika jordar."
+      }
+    },
+    "hero": {
+      "desc": "Gula blad? Lila stjälkar? Brända kanter? Välj vad du ser på dina plantor så pekar vi ut den troliga näringsbristen — med rätt gödsel för att åtgärda den.",
+      "eyebrow": "Näringsbrist",
+      "title": "Symptomkontroll för näringsbrist"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Mörka insjunkna fläckar i botten av frukten",
+        "label": "Blomändröta på frukter"
+      },
+      "dark-delayed": {
+        "hint": "Långsam tillväxt, sen blomning",
+        "label": "Mörkgröna blad med försenad mognad"
+      },
+      "inter-old": {
+        "hint": "Nerverna förblir gröna, områdena mellan gulnar",
+        "label": "Gulning mellan nerverna på äldre blad"
+      },
+      "little-leaf": {
+        "hint": "Rosettliknande, tät tillväxt",
+        "label": "Onormalt små blad (småbladighet)"
+      },
+      "new-uniform": {
+        "hint": "Som kvävebrist men på unga blad",
+        "label": "Nya blad jämnt blekgula"
+      },
+      "new-yellow-veins": {
+        "hint": "Topptillväxten drabbas först",
+        "label": "Nya blad gula men nerverna förblir gröna"
+      },
+      "old-yellow": {
+        "hint": "Börjar nerifrån plantan",
+        "label": "Äldre / nedre blad som gulnar"
+      },
+      "poor-fruit": {
+        "hint": "Blommor faller av utan att bilda frukt",
+        "label": "Dålig fruktsättning / blomfall"
+      },
+      "purple": {
+        "hint": "Ovanlig färgning, inte sortens normala färg",
+        "label": "Lila eller rödaktiga blad / stjälkar"
+      },
+      "scorch": {
+        "hint": "Kanterna ser brända ut, börjar på äldre blad",
+        "label": "Bruna, brända bladkanter"
+      },
+      "spots-weak": {
+        "hint": "Stjälkarna lägger sig eller bryts lätt",
+        "label": "Bruna fläckar på blad, svaga stjälkar"
+      },
+      "stunted": {
+        "hint": "Hela plantan ser svag och liten ut",
+        "label": "Hämmad tillväxt, blekgröna plantor"
+      },
+      "tip-burn": {
+        "hint": "Vanligt i sallat, kål, blomkål",
+        "label": "Spetsbränna på unga inre blad"
+      },
+      "tip-death": {
+        "hint": "Ny tillväxt är deformerad eller död",
+        "label": "Tillväxtspetsen dör eller ser deformerad ut"
+      }
+    },
+    "ui": {
+      "bestMatch": "Bästa matchning",
+      "calcDose": "Beräkna exakt dos i gödselkalkylatorn →",
+      "checkButton": "Kontrollera brist ({count} valda)",
+      "clearAll": "Rensa allt",
+      "disclaimer": "Ansvarsfriskrivning:",
+      "disclaimerText": "Visuella symptom överlappar mellan brister, skadedjur och sjukdomar. Denna kontroll är en pedagogisk guide baserad på standardmässiga agronomiska referenser — den ersätter inte ett laboratoriebaserat jord- eller vävnadstest. Vid tvekan, testa jorden innan du tillför korrigerande gödsel.",
+      "howToCorrect": "Så här åtgärdar du det",
+      "matchedOf": "Matchade {matched} av {total} nyckelsymptom",
+      "noMatches1": "Inga matchningar hittades. Prova att välja andra symptom, eller kolla",
+      "noMatches2": "för en fotobaserad diagnos.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Rangordnat efter hur många av dina symptom som matchar. Detta är en guide, inte ett labbtest — bekräfta med ett jordtest för säkerhet.",
+      "recFert": "Rekommenderat gödsel",
+      "refTitle": "Snabbreferens — alla brister",
+      "step1Desc": "Tryck på allt som stämmer. Du kan välja mer än ett.",
+      "step1Title": "Steg 1 — Välj symptomen du ser",
+      "step2Title": "Steg 2 — Troliga brister",
+      "thFix": "Åtgärda med",
+      "thNutrient": "Näringsämne",
+      "thSymptom": "Klassiskt symptom"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Bor",
+        "short": "Bor"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Ska du blanda två gödselmedel i samma tunna eller spruttank? Kolla först — vissa kombinationer bildar olösligt slam som slösar dina pengar och täpper till munstycken. Välj två gödselmedel och få ett direkt besked.",
+      "eyebrow": "Tankblandningskompatibilitet",
+      "title": "Kompatibilitetskontroll för gödseltankblandning"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Bildar kalciumfosfatutfällning"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Bildar olösligt zinkfosfatslam"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Fosfat låser ute zink"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Mjölkig utfällning, näring går förlorad"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate blandas säkert. Båda är kvävekällor; kombinationen tillför också svavel. Ingen negativ reaktion.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Bor är säkert tillsammans i lösning — en vanlig fertigeringspärning för fruktgrödor vid blomning.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Bor (borax/borsyra) är kompatibelt i lösning. Detta är en standard bladkombination — sprutas ofta tillsammans vid blomning och fruktsättning.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate bildar kalciumfosfatutfällning. Båda näringsämnena låser ute varandra och sjunker till botten av tanken — ett fullständigt slöseri med båda gödselmedlen.",
+        "instead": "Tillför calcium nitrate via fertigering en annan dag än något fosfatgödsel. Håll minst 3–4 dagars mellanrum.",
+        "title": "FARA — Blanda INTE"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 innehåller fosfat, som kan utfälla med kalcium från calcium nitrate. Vissa flytande NPK-sorter är kelaterade och fungerar — granulärt NPK är riskabelt i samma tank.",
+        "instead": "Om båda behövs, tillför NPK till jorden och fertigera calcium nitrate separat, med några dagars mellanrum.",
+        "title": "FÖRSIKTIGT — Kontrollera sorten"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate är kemiskt kompatibelt, men båda är starkt hygroskopiska — blandningen absorberar fukt från luften, blir klibbig och klumpar ihop sig inom några timmar.",
+        "instead": "Blanda precis före användning och sprid samma dag. Förvara de två gödselmedlen separat i förseglade säckar.",
+        "title": "FÖRSIKTIGT — Starkt hygroskopiskt"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP är en säker, mycket använd baskombination. Ingen utfällning mellan fosfat och kaliumsulfat.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "dap_urea": {
+        "explanation": "Att torrblanda DAP + Urea för spridning är säkert. Men att lösa upp båda tillsammans i en spruttank höjer pH och frigör ammoniakgas — du förlorar kväve och det höga pH-värdet kan bränna bladen.",
+        "instead": "Torrblandning är OK för spridning. För fertigering/sprutning, tillför dem i separata omgångar.",
+        "title": "FÖRSIKTIGT — OK torrt, riskabelt i lösning"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate bildar olösligt zinkfosfat — en tjock, kvargliknande utfällning. Zinken blir fastlåst och otillgänglig för plantan, och slammet täpper till sprutmunstycken och droppbevattning.",
+        "instead": "Tillför separat: sprid DAP vid sådd/jordbearbetning, och tillför zinc sulphate som separat jordgiva eller bladgödsling (0.5% lösning) 2–3 veckor senare.",
+        "title": "FARA — Blanda INTE"
+      },
+      "default": {
+        "explanation": "Det finns inga verifierade kompatibilitetsdata för denna kombination. Betrakta den inte som 'säker'. Följ gödselmedlets etikettanvisningar innan du blandar, eller gör ett burktest: blanda små mängder i vatten, vänta 15 minuter och kontrollera värme, gas, kvargliknande utfällning eller sediment. Blanda inte förrän du är säker.",
+        "instead": "Om båda gödselmedlen behövs, tillför dem separat — eller verifiera först i liten skala med ett burktest.",
+        "title": "OKÄNT — Ej verifierat"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP är kemiskt kompatibelt för torrspridning. (Obs: vid droppbevattning eller för kloridkänsliga grödor, föredra SOP framför MOP.)",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate blandas bra fysiskt, men MOP tillför en tung kloridbelastning. Vid droppbevattning eller för kloridkänsliga grödor (tobak, potatis, citrus, vindruvor) stressar denna kombination grödan.",
+        "instead": "Föredra SOP framför MOP vid blandning med mikronäringsämnen, särskilt vid droppbevattning eller för känsliga grödor.",
+        "title": "FÖRSIKTIGT — Kloridbelastning"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos innehåller fosfat, som reagerar med zink och bildar olösligt zinkfosfat — samma kvargliknande utfällning som DAP + Zinc. Zinken går förlorad och munstycken täpps till.",
+        "instead": "Tillför zinc sulphate separat — som basgiva i jorden eller 0.5% bladgödsling — minst 2 veckor från allt fosfatgödsel.",
+        "title": "FARA — Blanda INTE"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP är säkert och används ofta för att höja kalium i fruktgrödor utan att tillföra klorid.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea är säkert — används ofta för att boosta kväve i en basgiva. Ingen negativ reaktion.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "same": {
+        "explanation": "Du valde {name} två gånger — inget att blanda. Välj två olika gödselmedel för att kontrollera kompatibilitet.",
+        "instead": "",
+        "title": "Samma gödsel"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP är en fullt kompatibel blandning, torr eller upplöst. Ingen utfällning, ingen näringsförlust. En vanlig och effektiv kombination för övergödsling.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate är säkert i tanken. Sulfatbaserade gödselmedel reagerar inte med zink, och båda löses upp rent tillsammans.",
+        "instead": "",
+        "title": "SÄKERT — Kompatibelt"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP är kemiskt kompatibelt, men blandningen kakar och hårdnar snabbt eftersom urea absorberar fukt och SSP är surt. Den blir svår att sprida jämnt.",
+        "instead": "Blanda bara den mängd du sprider inom 1–2 timmar. Förvara inte blandningen över natten.",
+        "title": "FÖRSIKTIGT — Använd omedelbart"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP innehåller fosfat + kalcium. Blandat med zinc sulphate bildar det olösligt zinkfosfat och kalciumutfällningar — blandningen blir mjölkig och oanvändbar.",
+        "instead": "Tillför zink separat som bladgödsling eller basgiva, borta från SSP-givan.",
+        "title": "FARA — Blanda INTE"
+      }
+    },
+    "ui": {
+      "checkBtn": "Kontrollera kompatibilitet",
+      "fertA": "Gödsel A",
+      "fertB": "Gödsel B",
+      "insteadTitle": "💡 Vad du ska göra istället",
+      "jarTest": "Gör alltid ett burktest före en full tankblandning: blanda små mängder i vatten, vänta 15 minuter och kontrollera värme, gas, kvargliknande utfällning eller sediment.",
+      "quickRefTitle": "Snabbreferens: blanda aldrig dessa",
+      "selectPlaceholder": "— Välj gödsel —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Vätskor behandlas som 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Näringshalt (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Förpackningsstorlek",
+      "packSizePh": "t.ex. 1",
+      "price": "Pris (Rs per förpackning)",
+      "pricePh": "t.ex. 3500",
+      "productName": "Produktnamn",
+      "productPh": "t.ex. SuperPhos Liquid 10%",
+      "submit": "💰 Beräkna verklig kostnad"
+    },
+    "hero": {
+      "desc": "Ett tjusigt flytande fosforgödsel för Rs 3,500 per liter — fynd eller bluff? Ange valfri produkts pris och NPK-procent så avslöjar vi dess verkliga kostnad per kg näringsämne, jämfört med standard DAP, Urea, SOP och MOP.",
+      "eyebrow": "Pris vs. värde",
+      "noteText": "Referenspriserna är illustrativa och redigerbara — inte live marknadspriser. Använd ditt områdes verkliga priser för korrekt jämförelse.",
+      "noteTitle": "⚠️ Obs:",
+      "title": "Kalkylator för gödselkostnad per näringsämne"
+    },
+    "nutrients": {
+      "k": "K₂O (kalium)",
+      "n": "N (kväve)",
+      "p": "P₂O₅ (fosfor)"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg säck",
+      "perBag": "Rs / säck",
+      "priceAria": "{name} pris i Rs",
+      "reset": "Återställ till standard",
+      "title": "📊 Referenspriser (Pakistan, Rs / 50 kg säck)"
+    },
+    "results": {
+      "benchTitle": "📋 Jämförelse mot referens",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Billigaste näringskällorna just nu",
+      "footnote": "Referenspriserna gäller Pakistan och kan redigeras ovan. Näringskostnad = förpackningspris ÷ (förpackningsvikt × närings%). Uppdatera priserna när marknaden rör sig.",
+      "kgInPack": "{kg} kg i förpackningen",
+      "noInput": "⚠️ Ange förpackningsstorlek, pris och minst en näringsprocent över noll.",
+      "perKg": "/ kg",
+      "thCheapest": "Billigaste standard",
+      "thNutrient": "Näringsämne",
+      "thRatio": "Förhållande",
+      "thYours": "Din produkt",
+      "thisProduct": "Denna produkt",
+      "verdictExpensive": "Du betalar {ratio}× mer för {nutrient} än för {product} ({price}/kg). Köp {product} — låt inte handlaren lura dig.",
+      "verdictGood": "Rättvist pris. {name} kostar ungefär som standardgödsel — kör på.",
+      "verdictPricier": "{nutrient} är {ratio}× dyrare än {product} ({price}/kg). Överväg standardprodukten istället.",
+      "vsBenchmark": "{ratio}× vs {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Dyrt — köp standarden istället"
+      },
+      "good": {
+        "title": "Bra pris"
+      },
+      "pricier": {
+        "title": "Dyrare än standard"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Tillför också svavel (24% S) — bra för oljeväxter och alkaliska jordar.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — billigaste K-källan, innehåller klorid.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — kloridfritt, tillför också svavel.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Tillför också svavel (~12%) och kalcium; långsammare frisättning än DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP saknas på marknaden, eller SOP för dyrt? Välj det gödsel du ville ha och hur många säckar du behövde — vi visar de närmaste näringsekvivalenta kombinationerna från produkter som oftast finns tillgängliga.",
+      "eyebrow": "Hjälp vid bristsituation",
+      "noteText": "Näringsekvivalent matematik bevisar inte kemisk kompatibilitet, saltsäkerhet eller timing. Bekräfta varje ersättning med din lokala agronom innan du tillför.",
+      "noteTitle": "⚠️ Viktigt:",
+      "title": "Sökare av gödselalternativ"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate tillför också svavel (24% S) — ett plus för oljeväxter, baljväxter och jordar med högt pH.",
+      "imperfect": "Detta är den närmaste praktiska matchningen — en exakt NPK-kopia med andra produkter är sällan möjlig.",
+      "mop": "MOP innehåller klorid — föredra SOP för kloridkänsliga grödor (tobak, potatis, citrus, vindruvor).",
+      "ssp": "SSP frigör fosfor långsammare än DAP — arbeta ner det i jorden några dagar före sådd för bästa resultat.",
+      "urea": "Sprid Urea 1–2 dagar efter bevattning på fuktig jord — dränk det inte med bevattningsvattnet (upp till 40–50% kan gå förlorat)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {säck} other {säckar}}",
+      "fertLabel": "Gödsel du behöver ett alternativ för",
+      "findBtn": "Hitta alternativ",
+      "footnote": "Detta är näringsekvivalenta förslag baserade på standardproduktsorter (50 kg säckar). Sorterna varierar mellan märken — kontrollera alltid etiketten. Priser och tillgänglighet spåras inte här; bekräfta med din lokala handlare före köp.",
+      "matchPct": "≈{pct}% matchning",
+      "noResult": "Inget praktiskt alternativ hittades för denna produkt med vanliga gödselmedel. Prova huvudkalkylatorn för ett fullständigt schema istället.",
+      "optionTitle": "Alternativ {rank}",
+      "qtyLabel": "Mängd (50 kg säckar)",
+      "selectPh": "— Välj gödsel —",
+      "summaryLine": "{count, plural, one {# säck} other {# säckar}} av {fertName} ger {nutrients}.",
+      "summaryTail": "Närmaste ekvivalenta kombinationer:",
+      "thGives": "Detta alternativ ger",
+      "thNeeded": "Behövs",
+      "thNutrient": "Näringsämne"
+    }
   }
 }

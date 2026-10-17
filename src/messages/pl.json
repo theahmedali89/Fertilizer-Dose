@@ -1647,5 +1647,480 @@
     "viewAll": "Zobacz wszystkich współtwórców",
     "priorityBadge": "⚡ Priorytetowa recenzja",
     "close": "Zamknij"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Zastosuj borax (11% B) do gleby w dawce 10–15 kg/ha lub opryskaj 0.2% roztworem borax w czasie kwitnienia. Nie przesadzaj z dawką — granica między niedoborem a toksycznością jest bardzo wąska.",
+        "fertilizer": "Borax",
+        "fullName": "Bor (B)",
+        "name": "Niedobór boru",
+        "note": "Krytyczny w czasie kwitnienia — wpływa na pyłek i zawiązywanie owoców."
+      },
+      "Ca": {
+        "correction": "Najpierw zapewnij równomierną wilgotność gleby — większość problemów z wapniem wynika z wody, nie z gleby. Zastosuj gypsum (bez zmiany pH) lub calcium nitrate. Przy suchej zgniliźnie wierzchołkowej owoców ściółkowanie i regularne podlewanie znaczą więcej niż nawóz.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Wapń (Ca)",
+        "name": "Niedobór wapnia",
+        "note": "Sucha zgnilizna wierzchołkowa to zwykle efekt nierównego podlewania, a nie braku wapnia."
+      },
+      "Fe": {
+        "correction": "Opryskaj liście 0.5–1% roztworem ferrous sulfate (powtórz po 10–14 dniach). Nawożenie doglebowe rzadko działa na glebach alkalicznych — w razie potrzeby użyj chelatu żelaza (Fe-EDDHA).",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Żelazo (Fe)",
+        "name": "Niedobór żelaza",
+        "note": "Prawie zawsze wywołany wysokim pH gleby, a nie niską zawartością żelaza."
+      },
+      "K": {
+        "correction": "Zastosuj SOP (50% K₂O) lub MOP (60% K₂O) w dawce 50–75 kg/ha. W uprawach owocujących podziel dawkę — połowa w czasie kwitnienia, połowa w fazie rozwoju owoców.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Potas (K)",
+        "name": "Niedobór potasu",
+        "note": "Nasilenie na glebach piaszczystych i w warunkach suszy."
+      },
+      "Mg": {
+        "correction": "Zastosuj magnesium sulfate (Epsom salt, 9.8% Mg) do gleby w dawce 25 kg/ha lub opryskaj liście 2% roztworem.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnez (Mg)",
+        "name": "Niedobór magnezu",
+        "note": "Często mylony z niedoborem azotu — sprawdź, czy żółknięcie występuje między nerwami liścia."
+      },
+      "Mn": {
+        "correction": "Opryskaj liście 0.5% roztworem manganese sulfate. Unikaj nadmiernego wapnowania — wysokie pH blokuje mangan.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Mangan (Mn)",
+        "name": "Niedobór manganu",
+        "note": "Podobny do niedoboru żelaza — test pH gleby pomoże je rozróżnić."
+      },
+      "N": {
+        "correction": "Zastosuj Urea (46% N) w dawce 50–100 kg/ha pogłównie przed nawadnianiem lub opryskaj liście 2% roztworem Urea dla szybkiego efektu.",
+        "fertilizer": "Urea",
+        "fullName": "Azot (N)",
+        "name": "Niedobór azotu",
+        "note": "Najczęstszy niedobór na świecie. Szybko reaguje na azot."
+      },
+      "P": {
+        "correction": "Zastosuj DAP (18-46-0) lub SSP przy siewie/sadzeniu — fosfor przemieszcza się w glebie powoli, więc umieść go blisko strefy korzeniowej. Opryski dolistne to słabe rozwiązanie.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fosfor (P)",
+        "name": "Niedobór fosforu",
+        "note": "Częsty na glebach zimnych i kwaśnych."
+      },
+      "S": {
+        "correction": "Zastosuj gypsum (18% S) w dawce 200–250 kg/ha lub zmień źródło azotu na ammonium sulfate (21% N + 24% S).",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Siarka (S)",
+        "name": "Niedobór siarki",
+        "note": "Wygląda jak niedobór azotu, ale zaczyna się na MŁODYCH liściach."
+      },
+      "Zn": {
+        "correction": "Zastosuj zinc sulfate (33% Zn) do gleby w dawce 20–25 kg/ha lub opryskaj liście 0.5% zinc sulfate + 0.25% wapna. Jedna dawka doglebowa wystarcza na 2–3 sezony.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Cynk (Zn)",
+        "name": "Niedobór cynku",
+        "note": "Bardzo częsty na glebach o wysokim pH (alkalicznych) i wapiennych."
+      }
+    },
+    "hero": {
+      "desc": "Żółte liście? Fioletowe łodygi? Przypalone brzegi? Wybierz to, co widzisz na swoich roślinach, a wskażemy prawdopodobny niedobór składnika pokarmowego — wraz z odpowiednim nawozem, który go usunie.",
+      "eyebrow": "Niedobór składników pokarmowych",
+      "title": "Identyfikator objawów niedoborów pokarmowych"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Ciemne, zapadnięte plamy na spodzie owocu",
+        "label": "Sucha zgnilizna wierzchołkowa owoców"
+      },
+      "dark-delayed": {
+        "hint": "Wolny wzrost, późne kwitnienie",
+        "label": "Ciemnozielone liście z opóźnionym dojrzewaniem"
+      },
+      "inter-old": {
+        "hint": "Nerwy pozostają zielone, a obszary między nimi żółkną",
+        "label": "Żółknięcie między nerwami na starszych liściach"
+      },
+      "little-leaf": {
+        "hint": "Rozetowaty, zbity wzrost",
+        "label": "Nieprawidłowo małe liście (little leaf)"
+      },
+      "new-uniform": {
+        "hint": "Jak niedobór azotu, ale na młodych liściach",
+        "label": "Młode liście równomiernie bladożółte"
+      },
+      "new-yellow-veins": {
+        "hint": "Najpierw porażony jest wierzchołek",
+        "label": "Młode liście żółte, ale nerwy pozostają zielone"
+      },
+      "old-yellow": {
+        "hint": "Zaczyna się od dołu rośliny",
+        "label": "Starsze / dolne liście żółkną"
+      },
+      "poor-fruit": {
+        "hint": "Kwiaty opadają, nie tworząc owoców",
+        "label": "Słabe zawiązywanie owoców / opadanie kwiatów"
+      },
+      "purple": {
+        "hint": "Nietypowe zabarwienie, nie kolor odmiany",
+        "label": "Fioletowe lub czerwonawe liście / łodygi"
+      },
+      "scorch": {
+        "hint": "Brzegi wyglądają na spalone, zaczynając od starszych liści",
+        "label": "Brązowe, przypalone brzegi liści"
+      },
+      "spots-weak": {
+        "hint": "Łodygi łatwo się łamią lub wylegają",
+        "label": "Brązowe plamy na liściach, słabe łodygi"
+      },
+      "stunted": {
+        "hint": "Cała roślina wygląda na słabą i małą",
+        "label": "Zahamowany wzrost, bladozielone rośliny"
+      },
+      "tip-burn": {
+        "hint": "Częste u sałaty, kapusty, kalafiora",
+        "label": "Przypalenie wierzchołków młodych liści wewnętrznych"
+      },
+      "tip-death": {
+        "hint": "Nowy przyrost jest zdeformowany lub martwy",
+        "label": "Wierzchołek wzrostu zamiera lub wygląda na zdeformowany"
+      }
+    },
+    "ui": {
+      "bestMatch": "Najlepsze dopasowanie",
+      "calcDose": "Oblicz dokładną dawkę w kalkulatorze nawozów →",
+      "checkButton": "Sprawdź niedobór (wybrano: {count})",
+      "clearAll": "Wyczyść wszystko",
+      "disclaimer": "Zastrzeżenie:",
+      "disclaimerText": "Objawy wizualne niedoborów, szkodników i chorób nakładają się na siebie. Ten test to materiał edukacyjny oparty na standardowych źródłach agronomicznych — nie zastępuje laboratoryjnego badania gleby ani tkanek roślin. W razie wątpliwości przed zastosowaniem nawozu korygującego zbadaj glebę.",
+      "howToCorrect": "Jak to skorygować",
+      "matchedOf": "Dopasowano {matched} z {total} kluczowych objawów",
+      "noMatches1": "Nie znaleziono dopasowań. Spróbuj wybrać inne objawy lub sprawdź",
+      "noMatches2": "w celu diagnozy na podstawie zdjęcia.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Ranking według liczby pasujących objawów. To wskazówka, nie badanie laboratoryjne — dla pewności potwierdź badaniem gleby.",
+      "recFert": "Zalecany nawóz",
+      "refTitle": "Ściąga — wszystkie niedobory",
+      "step1Desc": "Zaznacz wszystko, co pasuje. Możesz wybrać więcej niż jedno.",
+      "step1Title": "Krok 1 — Wybierz widoczne objawy",
+      "step2Title": "Krok 2 — Prawdopodobne niedobory",
+      "thFix": "Napraw za pomocą",
+      "thNutrient": "Składnik",
+      "thSymptom": "Klasyczny objaw"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Mieszasz dwa nawozy w jednym zbiorniku lub opryskiwaczu? Sprawdź najpierw — niektóre połączenia tworzą nierozpuszczalny osad, który marnuje Twoje pieniądze i zatyka dysze. Wybierz dwa nawozy i poznaj natychmiastowy werdykt.",
+      "eyebrow": "Kompatybilność mieszanek zbiornikowych",
+      "title": "Test kompatybilności mieszanek nawozowych w zbiorniku"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Tworzy osad fosforanu wapnia"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Tworzy nierozpuszczalny osad fosforanu cynku"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Fosforan blokuje cynk"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Mleczny osad, składniki stracone"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate miesza się bezpiecznie. Oba są źródłami azotu; połączenie dostarcza też siarki. Brak niepożądanej reakcji.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Boron są bezpieczne razem w roztworze — częste połączenie do fertygacji upraw sadowniczych w czasie kwitnienia.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Boron (borax/boric acid) są kompatybilne w roztworze. To standardowe połączenie dolistne — często opryskiwane razem w czasie kwitnienia i zawiązywania owoców.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate tworzy osad fosforanu wapnia. Oba składniki wzajemnie się blokują i osiadają na dnie zbiornika — całkowite zmarnowanie obu nawozów.",
+        "instead": "Stosuj calcium nitrate przez fertygację w innym dniu niż jakikolwiek nawóz fosforanowy. Zachowaj co najmniej 3–4 dni przerwy.",
+        "title": "NIEBEZPIECZEŃSTWO — NIE mieszać"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 zawiera fosforan, który może strącać się z wapniem z calcium nitrate. Niektóre płynne gatunki NPK są chelatowane i bezpieczne — granulowany NPK w tym samym zbiorniku to ryzyko.",
+        "instead": "Jeśli potrzebne są oba, zastosuj NPK do gleby, a calcium nitrate podaj osobno przez fertygację, w odstępie kilku dni.",
+        "title": "OSTROŻNIE — Sprawdź gatunek"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate są chemicznie kompatybilne, ale oba są silnie higroskopijne — mieszanina pochłania wilgoć z powietrza, robi się lepka i zbryla w ciągu godzin.",
+        "instead": "Mieszaj tuż przed użyciem i rozsiej tego samego dnia. Przechowuj oba nawozy osobno w szczelnych workach.",
+        "title": "OSTROŻNIE — Silnie higroskopijne"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP to bezpieczne, powszechnie stosowane połączenie podstawowe. Brak strącania między fosforanem a sulphate of potash.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "dap_urea": {
+        "explanation": "Mieszanie DAP + Urea na sucho do rozsiewu jest bezpieczne. Ale rozpuszczenie obu razem w zbiorniku opryskiwacza podnosi pH i uwalnia amoniak — tracisz azot, a wysokie pH może poparzyć liście.",
+        "instead": "Sucha mieszanka nadaje się do rozsiewu. Do fertygacji/oprysku stosuj je w osobnych przejazdach.",
+        "title": "OSTROŻNIE — Na sucho OK, w roztworze ryzykowne"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate tworzy nierozpuszczalny fosforan cynku — gęsty, twarogowaty osad. Cynk zostaje zablokowany i niedostępny dla roślin, a osad zatyka dysze opryskiwacza i emitery kroplowe.",
+        "instead": "Stosuj osobno: rozsiej DAP przy siewie/przygotowaniu pola, a zinc sulphate podaj jako osobną dawkę doglebową lub oprysk dolistny (0.5% roztwór) 2–3 tygodnie później.",
+        "title": "NIEBEZPIECZEŃSTWO — NIE mieszać"
+      },
+      "default": {
+        "explanation": "Brak zweryfikowanych danych o kompatybilności tego połączenia. Nie uznawaj go za „bezpieczne\". Przed zmieszaniem postępuj zgodnie z instrukcją na etykiecie nawozu lub wykonaj test słoikowy: wymieszaj małą ilość w wodzie, odczekaj 15 minut i sprawdź, czy nie ma ciepła, gazu, zwarzenia ani osadu. Dopóki nie masz pewności, nie mieszaj.",
+        "instead": "Jeśli oba nawozy są potrzebne, stosuj je osobno — lub najpierw zweryfikuj testem słoikowym na małą skalę.",
+        "title": "NIEZNANE — Niezweryfikowane"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP są chemicznie kompatybilne do rozsiewu na sucho. (Uwaga: w nawadnianiu kroplowym lub dla upraw wrażliwych na chlorki wybierz SOP zamiast MOP.)",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate miesza się fizycznie dobrze, ale MOP wnosi duże obciążenie chlorkami. W nawadnianiu kroplowym lub dla upraw wrażliwych na chlorki (tytoń, ziemniaki, cytrusy, winogrona) to połączenie stresuje rośliny.",
+        "instead": "Przy mieszaniu z mikroskładnikami wybieraj SOP zamiast MOP, zwłaszcza w nawadnianiu kroplowym lub dla wrażliwych upraw.",
+        "title": "OSTROŻNIE — Obciążenie chlorkami"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos zawiera fosforan, który reaguje z cynkiem, tworząc nierozpuszczalny fosforan cynku — ten sam twarogowaty osad co DAP + Zinc. Cynk jest tracony, a dysze się zatykają.",
+        "instead": "Stosuj zinc sulphate osobno — jako podstawową dawkę doglebową lub 0.5% oprysk dolistny — co najmniej 2 tygodnie od jakiegokolwiek nawozu fosforanowego.",
+        "title": "NIEBEZPIECZEŃSTWO — NIE mieszać"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP jest bezpieczne i powszechnie stosowane do podnoszenia potasu w uprawach owocujących bez dodawania chlorków.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea jest bezpieczne — powszechnie stosowane do zwiększania azotu w dawce podstawowej. Brak niepożądanej reakcji.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "same": {
+        "explanation": "Wybrałeś {name} dwa razy — nie ma czego mieszać. Wybierz dwa różne nawozy, aby sprawdzić kompatybilność.",
+        "instead": "",
+        "title": "Ten sam nawóz"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP to w pełni kompatybilna mieszanka, na sucho i w roztworze. Brak strącania, brak strat składników. Popularne i skuteczne połączenie do nawożenia pogłównego.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate jest bezpieczne w zbiorniku. Nawozy siarczanowe nie reagują z cynkiem, a oba rozpuszczają się razem czysto.",
+        "instead": "",
+        "title": "BEZPIECZNE — Kompatybilne"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP są chemicznie kompatybilne, ale mieszanina szybko się zbryla i twardnieje, ponieważ Urea pochłania wilgoć, a SSP jest kwaśny. Trudno ją równomiernie rozsiać.",
+        "instead": "Mieszaj tylko tyle, ile rozsiejesz w ciągu 1–2 godzin. Nie przechowuj mieszaniny przez noc.",
+        "title": "OSTROŻNIE — Użyj natychmiast"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP zawiera fosforan + wapń. Zmieszany z zinc sulphate tworzy nierozpuszczalny fosforan cynku i osady wapnia — mieszanina robi się mleczna i niezdatna do użycia.",
+        "instead": "Stosuj cynk osobno jako oprysk dolistny lub dawkę podstawową, z dala od stosowania SSP.",
+        "title": "NIEBEZPIECZEŃSTWO — NIE mieszać"
+      }
+    },
+    "ui": {
+      "checkBtn": "Sprawdź kompatybilność",
+      "fertA": "Nawóz A",
+      "fertB": "Nawóz B",
+      "insteadTitle": "💡 Co zrobić zamiast tego",
+      "jarTest": "Zawsze wykonaj test słoikowy przed pełną mieszanką zbiornikową: wymieszaj małe ilości w wodzie, odczekaj 15 minut i sprawdź, czy nie ma ciepła, gazu, zwarzenia ani osadu.",
+      "quickRefTitle": "Ściąga: nigdy nie mieszaj tych",
+      "selectPlaceholder": "— Wybierz nawóz —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Ciecze traktowane są jako 1 L ≈ 1 kg.",
+      "nPct": "N %",
+      "nutrientPct": "Zawartość składnika (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Wielkość opakowania",
+      "packSizePh": "np. 1",
+      "price": "Cena (Rs za opakowanie)",
+      "pricePh": "np. 3500",
+      "productName": "Nazwa produktu",
+      "productPh": "e.g. SuperPhos Liquid 10%",
+      "submit": "💰 Oblicz rzeczywisty koszt"
+    },
+    "hero": {
+      "desc": "Wymyślny płynny fosfor za Rs 3,500 za litr — okazja czy oszustwo? Wpisz cenę dowolnego produktu i procent NPK, a pokażemy jego prawdziwy koszt za kg składnika w porównaniu ze standardowymi DAP, Urea, SOP i MOP.",
+      "eyebrow": "Cena a wartość",
+      "noteText": "Ceny referencyjne są poglądowe i edytowalne — to nie są aktualne ceny rynkowe. Do dokładnego porównania użyj rzeczywistych cen z Twojej okolicy.",
+      "noteTitle": "⚠️ Uwaga:",
+      "title": "Kalkulator kosztu nawozu na składnik"
+    },
+    "nutrients": {
+      "k": "K₂O (potas)",
+      "n": "N (azot)",
+      "p": "P₂O₅ (fosfor)"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg worek",
+      "perBag": "Rs / worek",
+      "priceAria": "Cena {name} w Rs",
+      "reset": "Przywróć domyślne",
+      "title": "📊 Ceny referencyjne (Pakistan, Rs / worek 50 kg)"
+    },
+    "results": {
+      "benchTitle": "📋 Porównanie z benchmarkiem",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Najtańsze źródła składników w tej chwili",
+      "footnote": "Ceny referencyjne dotyczą Pakistanu i można je edytować powyżej. Koszt składnika = cena opakowania ÷ (masa opakowania × % składnika). Aktualizuj ceny, gdy rynek się zmienia.",
+      "kgInPack": "{kg} kg w opakowaniu",
+      "noInput": "⚠️ Wprowadź wielkość opakowania, cenę i co najmniej jeden procent składnika powyżej zera.",
+      "perKg": "/ kg",
+      "thCheapest": "Najtańszy standard",
+      "thNutrient": "Składnik",
+      "thRatio": "Stosunek",
+      "thYours": "Twój produkt",
+      "thisProduct": "Ten produkt",
+      "verdictExpensive": "Płacisz {ratio}× więcej za {nutrient} niż za {product} ({price}/kg). Kup {product} — nie daj się nabrać sprzedawcy.",
+      "verdictGood": "Uczciwa cena. {name} kosztuje mniej więcej tyle samo co standardowe nawozy — śmiało.",
+      "verdictPricier": "{nutrient} jest {ratio}× droższy niż {product} ({price}/kg). Rozważ zamiast tego standardowy produkt.",
+      "vsBenchmark": "{ratio}× vs {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Drogie — kup standardowy zamiast tego"
+      },
+      "good": {
+        "title": "Dobra okazja"
+      },
+      "pricier": {
+        "title": "Droższy niż standard"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Dostarcza też siarki (24% S) — dobre dla roślin oleistych i gleb alkalicznych.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — najtańsze źródło K, zawiera chlorki.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — bez chlorków, dostarcza też siarki.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Dostarcza też siarki (~12%) i wapnia; wolniejsze uwalnianie niż DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "Brakuje DAP na rynku albo SOP jest poza zasięgiem cenowym? Wybierz nawóz, którego potrzebujesz, i ile worków chciałeś — pokażemy najbliższe kombinacje równoważne pod względem składników z produktów zwykle dostępnych.",
+      "eyebrow": "Pomoc przy brakach",
+      "noteText": "Obliczenia równoważności składników nie dowodzą kompatybilności chemicznej, bezpieczeństwa indeksu solnego ani odpowiedniości terminu. Każdą zamianę potwierdź z lokalnym agronomem przed zastosowaniem.",
+      "noteTitle": "⚠️ Ważne:",
+      "title": "Wyszukiwarka zamienników nawozów"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate dostarcza też siarki (24% S) — plus dla roślin oleistych, strączkowych i gleb o wysokim pH.",
+      "imperfect": "To najbliższe praktyczne dopasowanie — dokładna replika NPK z innych produktów jest rzadko możliwa.",
+      "mop": "MOP zawiera chlorki — dla upraw wrażliwych na chlorki (tytoń, ziemniaki, cytrusy, winogrona) wybierz SOP.",
+      "ssp": "SSP uwalnia fosfor wolniej niż DAP — dla najlepszych efektów wymieszaj go z glebą na kilka dni przed siewem.",
+      "urea": "Rozsiej Urea 1–2 dni po nawadnianiu na wilgotną glebę — nie zalewaj jej wodą nawadniającą (można stracić nawet 40–50%)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {worek} other {worki}}",
+      "fertLabel": "Nawóz, dla którego szukasz zamiennika",
+      "findBtn": "Znajdź zamienniki",
+      "footnote": "To sugestie równoważne pod względem składników, oparte na standardowych gatunkach produktów (worki 50 kg). Rzeczywiste gatunki różnią się w zależności od marki — zawsze sprawdzaj etykietę. Ceny i dostępność nie są tu śledzone; przed zakupem potwierdź u lokalnego sprzedawcy.",
+      "matchPct": "≈{pct}% dopasowania",
+      "noResult": "Nie znaleziono praktycznego zamiennika tego produktu wśród popularnych nawozów. Spróbuj zamiast tego głównego kalkulatora dawek dla pełnego harmonogramu.",
+      "optionTitle": "Opcja {rank}",
+      "qtyLabel": "Ilość (worki 50 kg)",
+      "selectPh": "— Wybierz nawóz —",
+      "summaryLine": "{count, plural, one {# worek} other {# worki}} {fertName} dostarcza {nutrients}.",
+      "summaryTail": "Najbliższe równoważne kombinacje:",
+      "thGives": "Ta opcja daje",
+      "thNeeded": "Potrzebne",
+      "thNutrient": "Składnik"
+    }
   }
 }

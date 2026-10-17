@@ -1647,5 +1647,480 @@
     "viewAll": "Tüm katkıda bulunanları görüntüle",
     "priorityBadge": "⚡ Öncelikli inceleme",
     "close": "Kapalı"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Toprağa 10–15 kg/ha dozunda borax (11% B) uygulayın veya çiçeklenmede 0.2% borax püskürtün. Fazla uygulamayın — eksiklik ile zehirlenme arasındaki sınır çok dardır.",
+        "fertilizer": "Borax",
+        "fullName": "Bor (B)",
+        "name": "Bor eksikliği",
+        "note": "Çiçeklenmede kritik — poleni ve meyve tutumunu etkiler."
+      },
+      "Ca": {
+        "correction": "Önce toprağın nemini düzenli tutun — çoğu kalsiyum sorunu topraktan değil sudan kaynaklanır. Gypsum (pH'ı değiştirmez) veya calcium nitrate uygulayın. Çiçek burnu çürüklüğünde malçlama ve düzenli sulama gübreden daha önemlidir.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Kalsiyum (Ca)",
+        "name": "Kalsiyum eksikliği",
+        "note": "Çiçek burnu çürüklüğü genellikle kalsiyum eksikliğinden değil, düzensiz sulamadan olur."
+      },
+      "Fe": {
+        "correction": "Yapraklara 0.5–1% ferrous sulfate çözeltisi püskürtün (10–14 gün sonra tekrarlayın). Alkali topraklarda topraktan uygulama nadiren işe yarar — gerekirse şelatlı demir (Fe-EDDHA) kullanın.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Demir (Fe)",
+        "name": "Demir eksikliği",
+        "note": "Neredeyse her zaman yüksek toprak pH'ından kaynaklanır, demir azlığından değil."
+      },
+      "K": {
+        "correction": "50–75 kg/ha dozunda SOP (50% K₂O) veya MOP (60% K₂O) uygulayın. Meyve bitkilerinde bölün — yarısı çiçeklenmede, yarısı meyve gelişiminde.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Potasyum (K)",
+        "name": "Potasyum eksikliği",
+        "note": "Kumlu topraklarda ve kuraklık stresinde kötüleşir."
+      },
+      "Mg": {
+        "correction": "Toprağa 25 kg/ha dozunda magnesium sulfate (Epsom salt, 9.8% Mg) uygulayın veya yapraklara 2% çözelti püskürtün.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnezyum (Mg)",
+        "name": "Magnezyum eksikliği",
+        "note": "Genellikle azotla karıştırılır — sararmanın damarlar arasında olup olmadığını kontrol edin."
+      },
+      "Mn": {
+        "correction": "Yapraklara 0.5% manganese sulfate püskürtün. Aşırı kireçlemeden kaçının — yüksek pH manganı kilitler.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Mangan (Mn)",
+        "name": "Mangan eksikliği",
+        "note": "Demir eksikliğine benzer — toprak pH testi ayırt etmeye yardımcı olur."
+      },
+      "N": {
+        "correction": "Sulama öncesi üst gübre olarak 50–100 kg/ha dozunda Urea (46% N) uygulayın veya hızlı etki için yapraklara 2% Urea çözeltisi püskürtün.",
+        "fertilizer": "Urea",
+        "fullName": "Azot (N)",
+        "name": "Azot eksikliği",
+        "note": "Dünyada en yaygın eksiklik. Azota hızlı yanıt verir."
+      },
+      "P": {
+        "correction": "Ekim/dikimde DAP (18-46-0) veya SSP uygulayın — fosfor toprakta yavaş hareket eder, bu yüzden kök bölgesine yakın yerleştirin. Yaprak spreyleri zayıf bir çözümdür.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Fosfor (P)",
+        "name": "Fosfor eksikliği",
+        "note": "Soğuk ve asidik topraklarda yaygındır."
+      },
+      "S": {
+        "correction": "200–250 kg/ha dozunda gypsum (18% S) uygulayın veya azot kaynağını ammonium sulfate (21% N + 24% S) olarak değiştirin.",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Kükürt (S)",
+        "name": "Kükürt eksikliği",
+        "note": "Azot eksikliğine benzer ama YENİ yapraklarda başlar."
+      },
+      "Zn": {
+        "correction": "Toprağa 20–25 kg/ha dozunda zinc sulfate (33% Zn) uygulayın veya yapraklara 0.5% zinc sulfate + 0.25% kireç püskürtün. Bir toprak uygulaması 2–3 sezon yeter.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Çinko (Zn)",
+        "name": "Çinko eksikliği",
+        "note": "Yüksek pH'lı (alkali) ve kireçli topraklarda çok yaygındır."
+      }
+    },
+    "hero": {
+      "desc": "Sarı yapraklar? Mor saplar? Yanık kenarlar? Bitkilerinizde gördüklerinizi seçin, size olası besin eksikliğini — ve düzeltecek doğru gübreyi — gösterelim.",
+      "eyebrow": "Besin Eksikliği",
+      "title": "Gübre Eksikliği Belirti Kontrolü"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Meyvenin alt kısmında koyu çökük lekeler",
+        "label": "Meyvelerde çiçek burnu çürüklüğü"
+      },
+      "dark-delayed": {
+        "hint": "Yavaş büyüme, geç çiçeklenme",
+        "label": "Gecikmiş olgunlaşmayla koyu yeşil yapraklar"
+      },
+      "inter-old": {
+        "hint": "Damarlar yeşil kalır, aralar sararır",
+        "label": "Yaşlı yapraklarda damarlar arası sararma"
+      },
+      "little-leaf": {
+        "hint": "Rozet gibi sıkışık büyüme",
+        "label": "Anormal derecede küçük yapraklar (küçük yaprak)"
+      },
+      "new-uniform": {
+        "hint": "Azot eksikliği gibi ama genç yapraklarda",
+        "label": "Yeni yapraklar düzgün soluk sarı"
+      },
+      "new-yellow-veins": {
+        "hint": "Önce üst sürgün etkilenir",
+        "label": "Yeni yapraklar sarı ama damarlar yeşil kalır"
+      },
+      "old-yellow": {
+        "hint": "Bitkinin altından başlar",
+        "label": "Yaşlı / alt yapraklar sararıyor"
+      },
+      "poor-fruit": {
+        "hint": "Çiçekler meyve tutmadan dökülür",
+        "label": "Zayıf meyve tutumu / çiçek dökümü"
+      },
+      "purple": {
+        "hint": "Olağandışı renklenme, çeşidin normal rengi değil",
+        "label": "Mor veya kırmızımsı yapraklar / saplar"
+      },
+      "scorch": {
+        "hint": "Kenarlar yanmış gibi, yaşlı yapraklarda başlar",
+        "label": "Kahverengi, yanık yaprak kenarları"
+      },
+      "spots-weak": {
+        "hint": "Saplar kolayca yatar veya kırılır",
+        "label": "Yapraklarda kahverengi lekeler, zayıf saplar"
+      },
+      "stunted": {
+        "hint": "Bitkinin tamamı zayıf ve küçük görünür",
+        "label": "Bodur büyüme, soluk yeşil bitkiler"
+      },
+      "tip-burn": {
+        "hint": "Marul, lahana, karnabaharda yaygın",
+        "label": "Genç iç yapraklarda uç yanıklığı"
+      },
+      "tip-death": {
+        "hint": "Yeni büyüme deforme veya ölü",
+        "label": "Büyüme ucu ölür veya deforme görünür"
+      }
+    },
+    "ui": {
+      "bestMatch": "En iyi eşleşme",
+      "calcDose": "Gübre hesaplayıcıda tam dozu hesaplayın →",
+      "checkButton": "Eksikliği kontrol et ({count} seçili)",
+      "clearAll": "Tümünü temizle",
+      "disclaimer": "Uyarı:",
+      "disclaimerText": "Görsel belirtiler eksiklikler, zararlılar ve hastalıklar arasında örtüşür. Bu kontrol, standart tarımsal kaynaklara dayalı eğitici bir rehberdir — laboratuvar toprak veya doku testinin yerini tutmaz. Emin değilseniz, düzeltici gübre uygulamadan önce toprağınızı test ettirin.",
+      "howToCorrect": "Nasıl düzeltilir",
+      "matchedOf": "{total} temel belirtiden {matched} tanesi eşleşti",
+      "noMatches1": "Eşleşme bulunamadı. Farklı belirtiler seçmeyi deneyin veya",
+      "noMatches2": "bölümüne fotoğrafla tanı için bakın.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Belirtilerinizin kaçıyla eşleştiğine göre sıralanır. Bu bir rehberdir, laboratuvar testi değil — emin olmak için toprak testiyle doğrulayın.",
+      "recFert": "Önerilen gübre",
+      "refTitle": "Hızlı başvuru — tüm eksiklikler",
+      "step1Desc": "Uyanların hepsine dokunun. Birden fazla seçebilirsiniz.",
+      "step1Title": "Adım 1 — Gördüğünüz belirtileri seçin",
+      "step2Title": "Adım 2 — Olası eksiklikler",
+      "thFix": "Bununla düzelt",
+      "thNutrient": "Besin",
+      "thSymptom": "Klasik belirti"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Bor",
+        "short": "Bor"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "İki gübreyi tek bidonda veya ilaç tankında karıştıracak mısınız? Önce kontrol edin — bazı kombinasyonlar paranızı boşa harcayan ve nozulları tıkayan çözünmez çamur oluşturur. İki gübre seçin ve anında sonuç alın.",
+      "eyebrow": "Tank Karışım Uyumluluğu",
+      "title": "Gübre Tank Karışım Uyumluluk Kontrolü"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Kalsiyum fosfat çökeltisi oluşturur"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Çözünmez çinko fosfat çamuru oluşturur"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Fosfat çinkoyu kilitler"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Sütlü çökelti, besinler kaybolur"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate güvenle karışır. İkisi de azot kaynağıdır; kombinasyon ayrıca kükürt sağlar. Olumsuz tepki yok.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Bor çözeltide birlikte güvenlidir — çiçeklenme döneminde meyve bitkileri için yaygın bir sulama gübrelemesi eşleşmesidir.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Bor (borax/borik asit) çözeltide uyumludur. Bu standart bir yaprak kombinasyonudur — çiçeklenme ve meyve tutumunda genellikle birlikte püskürtülür.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate kalsiyum fosfat çökeltisi oluşturur. İki besin de birbirini kilitler ve tankın dibine çöker — iki gübrenin de tamamen israfı.",
+        "instead": "Calcium nitrate'ı herhangi bir fosfatlı gübreden farklı bir günde sulama gübrelemesiyle uygulayın. Arada en az 3–4 gün bırakın.",
+        "title": "TEHLİKE — Karıştırmayın"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 fosfat içerir, bu da calcium nitrate'taki kalsiyumla çökelebilir. Bazı sıvı NPK cinsleri şelatlıdır ve sorunsuzdur — granül NPK aynı tankta risklidir.",
+        "instead": "İkisi de gerekliyse NPK'yı toprağa uygulayın, calcium nitrate'ı birkaç gün arayla ayrı sulama gübrelemesiyle verin.",
+        "title": "DİKKAT — Cinsi kontrol edin"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate kimyasal olarak uyumludur, ancak ikisi de güçlü higroskopiktir — karışım havadan nem çeker, yapışkanlaşır ve saatler içinde topaklanır.",
+        "instead": "Kullanımdan hemen önce karıştırın ve aynı gün serpin. İki gübreyi kapalı torbalarda ayrı saklayın.",
+        "title": "DİKKAT — Çok higroskopik"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP güvenli, yaygın kullanılan bir taban kombinasyonudur. Fosfat ile potasyum sülfat arasında çökelme olmaz.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "dap_urea": {
+        "explanation": "Serpmek için DAP + Urea'yı kuru karıştırmak güvenlidir. Ancak ikisini birlikte ilaç tankında çözmek pH'ı yükseltir ve amonyak gazı çıkarır — azot kaybedersiniz ve yüksek pH yaprakları yakabilir.",
+        "instead": "Serpmek için kuru karışım iyidir. Sulama gübrelemesi/sprey için ayrı geçişlerde uygulayın.",
+        "title": "DİKKAT — Kuruda iyi, çözeltide riskli"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate çözünmez çinko fosfat oluşturur — koyu, lor peyniri gibi bir çökelti. Çinko sabitlenir ve bitkiye ulaşamaz, çamur da sprey nozullarını ve damlatıcıları tıkar.",
+        "instead": "Ayrı uygulayın: ekim/tarla hazırlığında DAP'ı serpin, zinc sulphate'ı ise 2–3 hafta sonra ayrı toprak uygulaması veya yaprak spreyi (0.5% çözelti) olarak verin.",
+        "title": "TEHLİKE — Karıştırmayın"
+      },
+      "default": {
+        "explanation": "Bu kombinasyon için doğrulanmış uyumluluk verisi yok. Bunu 'güvenli' saymayın. Karıştırmadan önce gübre etiketindeki talimatları izleyin veya kavanoz testi yapın: suda az miktarda karıştırın, 15 dakika bekleyin, ısı, gaz, lor gibi kesilme veya tortu kontrol edin. Emin olana kadar karıştırmayın.",
+        "instead": "İki gübre de gerekliyse ayrı ayrı uygulayın — veya önce küçük ölçekte kavanoz testiyle doğrulayın.",
+        "title": "BİLİNMEYEN — Doğrulanmadı"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP kuru serpme için kimyasal olarak uyumludur. (Not: damla sulamada veya klorüre duyarlı bitkilerde MOP yerine SOP tercih edin.)",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate fiziksel olarak iyi karışır, ancak MOP ağır bir klorür yükü ekler. Damla sulamada veya klorüre duyarlı bitkilerde (tütün, patates, turunçgil, üzüm) bu kombinasyon bitkiyi strese sokar.",
+        "instead": "Mikro besinlerle karıştırırken, özellikle damla sulamada veya hassas bitkilerde MOP yerine SOP tercih edin.",
+        "title": "DİKKAT — Klorür yükü"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos fosfat içerir, bu da çinkoyla tepkimeye girerek çözünmez çinko fosfat oluşturur — DAP + Çinko ile aynı lor gibi çökelti. Çinko kaybolur ve nozullar tıkanır.",
+        "instead": "Zinc sulphate'ı ayrı uygulayın — taban toprak dozu veya 0.5% yaprak spreyi olarak — herhangi bir fosfatlı gübreden en az 2 hafta uzakta.",
+        "title": "TEHLİKE — Karıştırmayın"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP güvenlidir ve meyve bitkilerinde klorür eklemeden potasyumu artırmak için yaygın kullanılır.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea güvenlidir — taban dozda azotu artırmak için yaygın kullanılır. Olumsuz tepki yok.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "same": {
+        "explanation": "{name} gübresini iki kez seçtiniz — karıştıracak bir şey yok. Uyumluluk için iki farklı gübre seçin.",
+        "instead": "",
+        "title": "Aynı gübre"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP kuru veya çözünmüş, tamamen uyumlu bir karışımdır. Çökelme yok, besin kaybı yok. Üst gübreleme için yaygın ve etkili bir kombinasyon.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate tankta güvenlidir. Sülfat bazlı gübreler çinkoyla tepkimeye girmez ve ikisi de birlikte temiz çözünür.",
+        "instead": "",
+        "title": "GÜVENLİ — Uyumlu"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP kimyasal olarak uyumludur, ancak urea nem çektiği ve SSP asidik olduğu için karışım hızla topaklanır ve sertleşir. Eşit serpmek zorlaşır.",
+        "instead": "Yalnızca 1–2 saat içinde serpeceğiniz miktarı karıştırın. Karışımı gece boyu saklamayın.",
+        "title": "DİKKAT — Hemen kullanın"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP fosfat + kalsiyum içerir. Zinc sulphate ile karışınca çözünmez çinko fosfat ve kalsiyum çökeltileri oluşturur — karışım süt gibi olur ve kullanılamaz hale gelir.",
+        "instead": "Çinkoyu SSP uygulamasından uzakta, yaprak spreyi veya taban dozu olarak ayrı uygulayın.",
+        "title": "TEHLİKE — Karıştırmayın"
+      }
+    },
+    "ui": {
+      "checkBtn": "Uyumluluğu Kontrol Et",
+      "fertA": "Gübre A",
+      "fertB": "Gübre B",
+      "insteadTitle": "💡 Bunun yerine ne yapmalı",
+      "jarTest": "Tam tank karışımından önce mutlaka kavanoz testi yapın: suda az miktarda karıştırın, 15 dakika bekleyin, ısı, gaz, kesilme veya tortu kontrol edin.",
+      "quickRefTitle": "Hızlı başvuru: bunları asla karıştırmayın",
+      "selectPlaceholder": "— Gübre seçin —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Sıvılar 1 L ≈ 1 kg olarak hesaplanır.",
+      "nPct": "N %",
+      "nutrientPct": "Besin içeriği (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Paket boyutu",
+      "packSizePh": "örn. 1",
+      "price": "Fiyat (paket başına Rs)",
+      "pricePh": "örn. 3500",
+      "productName": "Ürün adı",
+      "productPh": "örn. SuperPhos Liquid 10%",
+      "submit": "💰 Gerçek maliyeti hesapla"
+    },
+    "hero": {
+      "desc": "Litresi Rs 3,500 olan gösterişli bir sıvı fosfor — kelepir mi kazık mı? Herhangi bir ürünün fiyatını ve NPK yüzdesini girin, standart DAP, Urea, SOP ve MOP ile karşılaştırmalı olarak kg besin başına gerçek maliyetini ortaya çıkaralım.",
+      "eyebrow": "Fiyat ve Değer",
+      "noteText": "Referans fiyatlar örnektir ve düzenlenebilir — güncel piyasa fiyatları değildir. Doğru karşılaştırma için bölgenizin gerçek fiyatlarını kullanın.",
+      "noteTitle": "⚠️ Not:",
+      "title": "Gübre Besin Başına Maliyet Hesaplayıcı"
+    },
+    "nutrients": {
+      "k": "K₂O (Potas)",
+      "n": "N (Azot)",
+      "p": "P₂O₅ (Fosfor)"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg torba",
+      "perBag": "Rs / torba",
+      "priceAria": "{name} fiyatı (Rs)",
+      "reset": "Varsayılanlara sıfırla",
+      "title": "📊 Referans fiyatlar (Pakistan, Rs / 50 kg torba)"
+    },
+    "results": {
+      "benchTitle": "📋 Kıyaslama karşılaştırması",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Şu an en ucuz besin kaynakları",
+      "footnote": "Referans fiyatlar Pakistan içindir ve yukarıdan düzenlenebilir. Besin maliyeti = paket fiyatı ÷ (paket ağırlığı × besin %). Piyasa değiştiğinde fiyatları güncelleyin.",
+      "kgInPack": "Pakette {kg} kg",
+      "noInput": "⚠️ Lütfen bir paket boyutu, fiyat ve sıfırdan büyük en az bir besin yüzdesi girin.",
+      "perKg": "/ kg",
+      "thCheapest": "En ucuz standart",
+      "thNutrient": "Besin",
+      "thRatio": "Oran",
+      "thYours": "Ürününüz",
+      "thisProduct": "Bu ürün",
+      "verdictExpensive": "{nutrient} için {product}'a ({price}/kg) göre {ratio}× fazla ödüyorsunuz. {product} alın — satıcının sizi kandırmasına izin vermeyin.",
+      "verdictGood": "Adil fiyat. {name} standart gübrelerle yaklaşık aynı — devam edin.",
+      "verdictPricier": "{nutrient}, {product}'a ({price}/kg) göre {ratio}× daha pahalı. Bunun yerine standart ürünü düşünün.",
+      "vsBenchmark": "{product}'a göre {ratio}×"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Pahalı — bunun yerine standardı alın"
+      },
+      "good": {
+        "title": "İyi fırsat"
+      },
+      "pricier": {
+        "title": "Standarttan pahalı"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Ayrıca kükürt sağlar (24% S) — yağlı tohumlar ve alkali topraklar için iyi.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — en ucuz K kaynağı, klorür içerir.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — klorürsüz, ayrıca kükürt sağlar.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Ayrıca kükürt (~12%) ve kalsiyum sağlar; DAP'tan daha yavaş salınır.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP piyasada yok mu, yoksa SOP ulaşılamayacak kadar pahalı mı? İstediğiniz gübreyi ve kaç torbaya ihtiyacınız olduğunu seçin — genellikle bulunabilen ürünlerden en yakın besin-eşdeğer kombinasyonları gösterelim.",
+      "eyebrow": "Kıtlık Yardımcısı",
+      "noteText": "Besin-eşdeğer hesap kimyasal uyumluluğu, tuz güvenliği veya zamanlama uygunluğunu kanıtlamaz. Uygulamadan önce her ikameyi yerel ziraatçınızla doğrulayın.",
+      "noteTitle": "⚠️ Önemli:",
+      "title": "Gübre Alternatif Bulucu"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate ayrıca kükürt sağlar (24% S) — yağlı tohumlar, baklagiller ve yüksek pH'lı topraklar için artı.",
+      "imperfect": "Bu en yakın pratik eşleşmedir — farklı ürünlerle tam bir NPK kopyası nadiren mümkündür.",
+      "mop": "MOP klorür içerir — klorüre duyarlı bitkilerde (tütün, patates, turunçgil, üzüm) SOP tercih edin.",
+      "ssp": "SSP fosforu DAP'tan daha yavaş salar — en iyi sonuç için ekimden birkaç gün önce toprağa karıştırın.",
+      "urea": "Urea'yı sulamadan 1–2 gün sonra nemli toprağa serpin — sulama suyuyla boğmayın (%40–50'ye kadarı kaybolabilir)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {torba} other {torba}}",
+      "fertLabel": "Alternatif aradığınız gübre",
+      "findBtn": "Alternatifleri bul",
+      "footnote": "Bunlar standart ürün cinslerine (50 kg torba) dayalı besin-eşdeğer önerilerdir. Gerçek cinsler markaya göre değişir — etiketi mutlaka kontrol edin. Fiyatlar ve bulunabilirlik burada takip edilmez; satın almadan önce yerel bayinizle doğrulayın.",
+      "matchPct": "≈{pct}% eşleşme",
+      "noResult": "Bu ürün için yaygın gübrelerle pratik bir alternatif bulunamadı. Tam program için ana doz hesaplayıcıyı deneyin.",
+      "optionTitle": "Seçenek {rank}",
+      "qtyLabel": "Miktar (50 kg torba)",
+      "selectPh": "— Gübre seçin —",
+      "summaryLine": "{count, plural, one {# torba} other {# torba}} {fertName} şunları sağlar: {nutrients}.",
+      "summaryTail": "En yakın eşdeğer kombinasyonlar:",
+      "thGives": "Bu seçenek verir",
+      "thNeeded": "Gerekli",
+      "thNutrient": "Besin"
+    }
   }
 }

@@ -1647,5 +1647,480 @@
     "viewAll": "Alle Mitwirkenden anzeigen",
     "priorityBadge": "⚡ Vorrangige Prüfung",
     "close": "Schließen"
+  },
+  "deficiencyChecker": {
+    "deficiencies": {
+      "B": {
+        "correction": "Borax (11 % B) mit 10–15 kg/ha in den Boden einarbeiten oder zur Blüte 0,2 % Borax sprühen. Nicht überdosieren — die Spanne zwischen Mangel und Vergiftung ist schmal.",
+        "fertilizer": "Borax",
+        "fullName": "Bor (B)",
+        "name": "Bor-Mangel",
+        "note": "Zur Blüte besonders kritisch — beeinträchtigt Pollen und Fruchtansatz."
+      },
+      "Ca": {
+        "correction": "Zuerst auf gleichmäßige Bodenfeuchte achten — die meisten Kalziumprobleme hängen mit Wasser zusammen, nicht mit dem Boden. Gypsum (ändert den pH nicht) oder Calcium nitrate geben. Bei Blütenendfäule sind Mulch und regelmäßiges Gießen wichtiger als Dünger.",
+        "fertilizer": "Gypsum / Calcium nitrate",
+        "fullName": "Kalzium (Ca)",
+        "name": "Kalzium-Mangel",
+        "note": "Blütenendfäule entsteht meist durch ungleichmäßiges Gießen, nicht durch Kalziummangel."
+      },
+      "Fe": {
+        "correction": "0,5–1 % Ferrous sulfate-Lösung auf die Blätter sprühen (nach 10–14 Tagen wiederholen). Bodengaben wirken in alkalischen Böden kaum — bei Bedarf chelatiertes Eisen (Fe-EDDHA) verwenden.",
+        "fertilizer": "Ferrous sulfate / Fe-EDDHA",
+        "fullName": "Eisen (Fe)",
+        "name": "Eisen-Mangel",
+        "note": "Fast immer durch hohen Boden-pH ausgelöst, nicht durch zu wenig Eisen."
+      },
+      "K": {
+        "correction": "SOP (50 % K₂O) oder MOP (60 % K₂O) mit 50–75 kg/ha geben. Bei Fruchtkulturen teilen — die Hälfte zur Blüte, die Hälfte zur Fruchtbildung.",
+        "fertilizer": "SOP / MOP",
+        "fullName": "Kalium (K)",
+        "name": "Kalium-Mangel",
+        "note": "Verschlimmert sich auf Sandböden und bei Trockenstress."
+      },
+      "Mg": {
+        "correction": "Magnesium sulfate (Epsom salt, 9,8 % Mg) mit 25 kg/ha in den Boden geben oder 2 % Lösung auf die Blätter sprühen.",
+        "fertilizer": "Magnesium sulfate",
+        "fullName": "Magnesium (Mg)",
+        "name": "Magnesium-Mangel",
+        "note": "Wird oft mit Stickstoff verwechselt — prüfen Sie, ob die Gelbfärbung zwischen den Adern auftritt."
+      },
+      "Mn": {
+        "correction": "0,5 % Manganese sulfate auf die Blätter sprühen. Nicht überkalken — hoher pH blockiert Mangan.",
+        "fertilizer": "Manganese sulfate",
+        "fullName": "Mangan (Mn)",
+        "name": "Mangan-Mangel",
+        "note": "Ähnlich wie Eisenmangel — ein Boden-pH-Test hilft, sie zu unterscheiden."
+      },
+      "N": {
+        "correction": "Urea (46 % N) mit 50–100 kg/ha als Kopfdüngung vor dem Bewässern geben oder 2 % Urea-Lösung für eine schnelle Wirkung auf die Blätter sprühen.",
+        "fertilizer": "Urea",
+        "fullName": "Stickstoff (N)",
+        "name": "Stickstoff-Mangel",
+        "note": "Der weltweit häufigste Mangel. Reagiert schnell auf Stickstoff."
+      },
+      "P": {
+        "correction": "DAP (18-46-0) oder SSP zur Saat/Pflanzung geben — Phosphor bewegt sich langsam im Boden, daher nah an die Wurzelzone platzieren. Blattdüngung hilft kaum.",
+        "fertilizer": "DAP / SSP",
+        "fullName": "Phosphor (P)",
+        "name": "Phosphor-Mangel",
+        "note": "Häufig auf kalten und sauren Böden."
+      },
+      "S": {
+        "correction": "Gypsum (18 % S) mit 200–250 kg/ha geben oder die Stickstoffquelle auf Ammonium sulfate (21 % N + 24 % S) umstellen.",
+        "fertilizer": "Gypsum / Ammonium sulfate",
+        "fullName": "Schwefel (S)",
+        "name": "Schwefel-Mangel",
+        "note": "Sieht aus wie Stickstoffmangel, beginnt aber an den NEUEN Blättern."
+      },
+      "Zn": {
+        "correction": "Zinc sulfate (33 % Zn) mit 20–25 kg/ha in den Boden geben oder 0,5 % Zinc sulfate + 0,25 % Kalk auf die Blätter sprühen. Eine Bodengabe hält 2–3 Saisons.",
+        "fertilizer": "Zinc sulfate",
+        "fullName": "Zink (Zn)",
+        "name": "Zink-Mangel",
+        "note": "Sehr häufig auf Böden mit hohem pH (alkalisch) und kalkhaltigen Böden."
+      }
+    },
+    "hero": {
+      "desc": "Gelbe Blätter? Violette Stängel? Verbrannte Ränder? Wählen Sie aus, was Sie an Ihren Pflanzen sehen — wir zeigen Ihnen den wahrscheinlichen Nährstoffmangel und den richtigen Dünger dagegen.",
+      "eyebrow": "Nährstoffmangel",
+      "title": "Dünger-Mangel-Symptomprüfer"
+    },
+    "symptoms": {
+      "ber": {
+        "hint": "Dunkle, eingesunkene Stellen am Fruchtboden",
+        "label": "Blütenendfäule an Früchten"
+      },
+      "dark-delayed": {
+        "hint": "Langsames Wachstum, späte Blüte",
+        "label": "Dunkelgrüne Blätter mit verzögerter Reife"
+      },
+      "inter-old": {
+        "hint": "Adern bleiben grün, Bereiche dazwischen werden gelb",
+        "label": "Gelbfärbung zwischen den Adern an älteren Blättern"
+      },
+      "little-leaf": {
+        "hint": "Rosettenartiger, gestauchter Wuchs",
+        "label": "Abnorm kleine Blätter (Kleinblättrigkeit)"
+      },
+      "new-uniform": {
+        "hint": "Wie Stickstoffmangel, aber an jungen Blättern",
+        "label": "Neue Blätter gleichmäßig blassgelb"
+      },
+      "new-yellow-veins": {
+        "hint": "Junger Austrieb zuerst betroffen",
+        "label": "Neue Blätter gelb, Adern bleiben grün"
+      },
+      "old-yellow": {
+        "hint": "Beginnt unten an der Pflanze",
+        "label": "Ältere / untere Blätter werden gelb"
+      },
+      "poor-fruit": {
+        "hint": "Blüten fallen ab, ohne Früchte zu bilden",
+        "label": "Schlechter Fruchtansatz / Blütenfall"
+      },
+      "purple": {
+        "hint": "Ungewöhnliche Färbung, nicht die normale Sortenfarbe",
+        "label": "Violette oder rötliche Blätter / Stängel"
+      },
+      "scorch": {
+        "hint": "Ränder wirken verbrannt, beginnend an älteren Blättern",
+        "label": "Braune, verbrannte Blattränder"
+      },
+      "spots-weak": {
+        "hint": "Stängel lagern oder brechen leicht",
+        "label": "Braune Flecken auf Blättern, schwache Stängel"
+      },
+      "stunted": {
+        "hint": "Gesamte Pflanze wirkt schwach und klein",
+        "label": "Kümmerwuchs, blassgrüne Pflanzen"
+      },
+      "tip-burn": {
+        "hint": "Häufig bei Salat, Kohl, Blumenkohl",
+        "label": "Spitzenbrand an jungen inneren Blättern"
+      },
+      "tip-death": {
+        "hint": "Neuer Austrieb ist verformt oder abgestorben",
+        "label": "Wachstumsspitze stirbt ab oder wirkt verformt"
+      }
+    },
+    "ui": {
+      "bestMatch": "Bester Treffer",
+      "calcDose": "Genaue Dosis im Düngerrechner berechnen →",
+      "checkButton": "Mangel prüfen ({count} ausgewählt)",
+      "clearAll": "Alle löschen",
+      "disclaimer": "Hinweis:",
+      "disclaimerText": "Optische Symptome überschneiden sich bei Mängeln, Schädlingen und Krankheiten. Dieser Prüfer ist eine Lernhilfe nach gängigen agronomischen Referenzen — kein Ersatz für eine Boden- oder Pflanzenanalyse im Labor. Lassen Sie im Zweifel Ihren Boden testen, bevor Sie Korrekturdünger ausbringen.",
+      "howToCorrect": "So beheben Sie ihn",
+      "matchedOf": "{matched} von {total} Hauptsymptomen übereinstimmend",
+      "noMatches1": "Keine Treffer gefunden. Wählen Sie andere Symptome oder prüfen Sie den",
+      "noMatches2": "für eine fotobasierte Diagnose.",
+      "noMatchesLink": "Plant Doctor",
+      "rankedDesc": "Sortiert danach, wie viele Ihrer Symptome zutreffen. Dies ist eine Orientierung, kein Labortest — zur Sicherheit mit einer Bodenuntersuchung bestätigen.",
+      "recFert": "Empfohlener Dünger",
+      "refTitle": "Kurzreferenz — alle Mängel",
+      "step1Desc": "Tippen Sie alles an, was zutrifft. Mehrfachauswahl möglich.",
+      "step1Title": "Schritt 1 — Wählen Sie die Symptome, die Sie sehen",
+      "step2Title": "Schritt 2 — Wahrscheinliche Mängel",
+      "thFix": "Beheben mit",
+      "thNutrient": "Nährstoff",
+      "thSymptom": "Typisches Symptom"
+    }
+  },
+  "tankMix": {
+    "fertilizers": {
+      "ams": {
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "boron": {
+        "name": "Borax / Boron",
+        "short": "Boron"
+      },
+      "calnit": {
+        "name": "Calcium Nitrate",
+        "short": "Calcium Nitrate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "name": "MOP / Muriate of Potash (60% K₂O)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos / NP (22-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "name": "SOP / Sulphate of Potash (50% K₂O)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "name": "SSP / Single Super Phosphate",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      },
+      "zinc": {
+        "name": "Zinc Sulphate (Heptahydrate)",
+        "short": "Zinc Sulphate"
+      }
+    },
+    "hero": {
+      "desc": "Zwei Dünger in einem Fass oder einer Spritze mischen? Erst prüfen — manche Kombinationen bilden unlöslichen Schlamm, der Ihr Geld kostet und Düsen verstopft. Wählen Sie zwei Dünger und erhalten Sie sofort ein Urteil.",
+      "eyebrow": "Tankmisch-Verträglichkeit",
+      "title": "Verträglichkeitsprüfer für Dünger-Tankmischungen"
+    },
+    "quickRef": {
+      "dap-calnit": {
+        "pair": "DAP + Calcium Nitrate",
+        "why": "Bildet Calciumphosphat-Niederschlag"
+      },
+      "dap-zinc": {
+        "pair": "DAP + Zinc Sulphate",
+        "why": "Bildet unlöslichen Zinkphosphat-Schlamm"
+      },
+      "np-zinc": {
+        "pair": "Nitrophos + Zinc Sulphate",
+        "why": "Phosphat blockiert Zink"
+      },
+      "ssp-zinc": {
+        "pair": "SSP + Zinc Sulphate",
+        "why": "Milchiger Niederschlag, Nährstoffe verloren"
+      }
+    },
+    "rules": {
+      "ams_urea": {
+        "explanation": "Urea + Ammonium Sulphate mischen sich problemlos. Beides sind Stickstoffquellen; die Kombination liefert zusätzlich Schwefel. Keine unerwünschte Reaktion.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "boron_sop": {
+        "explanation": "SOP + Boron ist zusammen in Lösung sicher — eine gängige Fertigationskombination für Obstkulturen zur Blüte.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "boron_urea": {
+        "explanation": "Urea + Boron (borax/boric acid) ist in Lösung verträglich. Dies ist eine Standard-Blattkombination — wird oft gemeinsam zur Blüte und zum Fruchtansatz gespritzt.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "calnit_dap": {
+        "explanation": "DAP + Calcium Nitrate bildet Calciumphosphat-Niederschlag. Beide Nährstoffe blockieren sich gegenseitig und setzen sich am Tankboden ab — eine komplette Verschwendung beider Dünger.",
+        "instead": "Calcium nitrate an einem anderen Tag als jeden Phosphatdünger fertigieren. Mindestens 3–4 Tage Abstand halten.",
+        "title": "GEFAHR — Nicht mischen"
+      },
+      "calnit_npk": {
+        "explanation": "NPK 15-15-15 enthält Phosphat, das mit Calcium aus Calcium nitrate ausfallen kann. Manche flüssigen NPK-Sorten sind chelatiert und unbedenklich — granuliertes NPK ist riskant im selben Tank.",
+        "instead": "Wenn beides nötig ist, das NPK in den Boden geben und Calcium nitrate separat, einige Tage später, fertigieren.",
+        "title": "VORSICHT — Sorte prüfen"
+      },
+      "calnit_urea": {
+        "explanation": "Urea + Calcium Nitrate ist chemisch verträglich, aber beide sind stark hygroskopisch — die Mischung zieht Feuchtigkeit aus der Luft, wird klebrig und verklumpt innerhalb von Stunden.",
+        "instead": "Erst kurz vor Gebrauch mischen und noch am selben Tag ausbringen. Die beiden Dünger getrennt in versiegelten Säcken lagern.",
+        "title": "VORSICHT — Stark hygroskopisch"
+      },
+      "dap_sop": {
+        "explanation": "DAP + SOP ist eine sichere, weit verbreitete Grunddünger-Kombination. Kein Niederschlag zwischen Phosphat und Sulphate of potash.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "dap_urea": {
+        "explanation": "Trockenmischen von DAP + Urea zum Streuen ist sicher. Aber beide zusammen im Spritztank zu lösen erhöht den pH und setzt Ammoniakgas frei — Sie verlieren Stickstoff und der hohe pH kann Blätter verbrennen.",
+        "instead": "Trockenmischung ist zum Streuen in Ordnung. Für Fertigation/Spritze in getrennten Durchgängen ausbringen.",
+        "title": "VORSICHT — Trocken ok, riskant in Lösung"
+      },
+      "dap_zinc": {
+        "explanation": "DAP + Zinc Sulphate bildet unlösliches Zinkphosphat — einen dicken, quarkartigen Niederschlag. Das Zink wird festgelegt und ist für die Pflanze nicht verfügbar, und der Schlamm verstopft Spritzdüsen und Tropfer.",
+        "instead": "Getrennt ausbringen: DAP zur Saat/Bodenvorbereitung streuen und Zinc sulphate als separate Bodengabe oder Blattdüngung (0,5 % Lösung) 2–3 Wochen später geben.",
+        "title": "GEFAHR — Nicht mischen"
+      },
+      "default": {
+        "explanation": "Für diese Kombination liegen keine geprüften Verträglichkeitsdaten vor. Verlassen Sie sich nicht darauf, dass sie 'sicher' ist. Beachten Sie vor dem Mischen die Anleitung auf dem Düngersack, oder machen Sie einen Glastest: kleine Mengen in Wasser mischen, 15 Minuten warten und auf Hitze, Gas, Ausflockung (wie geronnene Milch) oder Bodensatz prüfen. Bis Sie sicher sind, nicht mischen.",
+        "instead": "Wenn beide Dünger nötig sind, bringen Sie sie getrennt aus — oder prüfen Sie sie zuerst im kleinen Glastest.",
+        "title": "UNBEKANNT — Nicht geprüft"
+      },
+      "mop_urea": {
+        "explanation": "Urea + MOP ist chemisch verträglich zum trockenen Streuen. (Hinweis: Bei Tropfbewässerung oder chloridempfindlichen Kulturen lieber SOP als MOP.)",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "mop_zinc": {
+        "explanation": "MOP + Zinc Sulphate mischt sich physikalisch gut, aber MOP bringt eine hohe Chloridlast mit. Bei Tropfbewässerung oder chloridempfindlichen Kulturen (Tabak, Kartoffel, Zitrus, Weintrauben) stresst diese Kombination die Kultur.",
+        "instead": "SOP statt MOP bevorzugen, wenn mit Mikronährstoffen gemischt wird — besonders bei Tropfbewässerung oder empfindlichen Kulturen.",
+        "title": "VORSICHT — Chloridlast"
+      },
+      "np_zinc": {
+        "explanation": "Nitrophos enthält Phosphat, das mit Zink zu unlöslichem Zinkphosphat reagiert — derselbe quarkartige Niederschlag wie bei DAP + Zinc. Zink geht verloren und Düsen verstopfen.",
+        "instead": "Zinc sulphate getrennt ausbringen — als Bodengabe oder 0,5 % Blattdüngung — mindestens 2 Wochen Abstand zu jedem Phosphatdünger.",
+        "title": "GEFAHR — Nicht mischen"
+      },
+      "npk_sop": {
+        "explanation": "NPK + SOP ist sicher und wird häufig verwendet, um Kali bei Fruchtkulturen ohne Chlorid zu erhöhen.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "npk_urea": {
+        "explanation": "NPK 15-15-15 + Urea ist sicher — wird häufig zur Stickstoffanhebung in der Grunddüngung verwendet. Keine unerwünschte Reaktion.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "same": {
+        "explanation": "Sie haben {name} zweimal gewählt — nichts zu mischen. Wählen Sie zwei verschiedene Dünger zur Verträglichkeitsprüfung.",
+        "instead": "",
+        "title": "Gleicher Dünger"
+      },
+      "sop_urea": {
+        "explanation": "Urea + SOP ist eine voll verträgliche Mischung, trocken oder gelöst. Kein Niederschlag, kein Nährstoffverlust. Eine gängige und wirksame Kombination für die Kopfdüngung.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "sop_zinc": {
+        "explanation": "SOP + Zinc Sulphate ist sicher im Tank. Sulfatbasierte Dünger reagieren nicht mit Zink, und beide lösen sich sauber zusammen.",
+        "instead": "",
+        "title": "SICHER — Verträglich"
+      },
+      "ssp_urea": {
+        "explanation": "Urea + SSP ist chemisch verträglich, aber die Mischung verklumpt und härtet schnell aus, weil Urea Feuchtigkeit zieht und SSP sauer ist. Sie lässt sich dann schwer gleichmäßig streuen.",
+        "instead": "Nur die Menge mischen, die Sie innerhalb von 1–2 Stunden streuen. Die Mischung nicht über Nacht lagern.",
+        "title": "VORSICHT — Sofort verwenden"
+      },
+      "ssp_zinc": {
+        "explanation": "SSP enthält Phosphat + Calcium. Gemischt mit Zinc sulphate bildet es unlösliches Zinkphosphat und Calcium-Niederschläge — die Mischung wird milchig und unbrauchbar.",
+        "instead": "Zink getrennt als Blattdüngung oder Bodengabe ausbringen, abseits der SSP-Gabe.",
+        "title": "GEFAHR — Nicht mischen"
+      }
+    },
+    "ui": {
+      "checkBtn": "Verträglichkeit prüfen",
+      "fertA": "Dünger A",
+      "fertB": "Dünger B",
+      "insteadTitle": "💡 Was stattdessen tun",
+      "jarTest": "Machen Sie vor jeder vollen Tankmischung immer einen Glastest: kleine Mengen in Wasser mischen, 15 Minuten warten und auf Hitze, Gas, Ausflockung oder Bodensatz prüfen.",
+      "quickRefTitle": "Kurzreferenz: Diese niemals mischen",
+      "selectPlaceholder": "— Dünger wählen —"
+    }
+  },
+  "costCalculator": {
+    "form": {
+      "kPct": "K₂O %",
+      "liquidNote": "Flüssigkeiten werden wie 1 L ≈ 1 kg behandelt.",
+      "nPct": "N %",
+      "nutrientPct": "Nährstoffgehalt (%)",
+      "pPct": "P₂O₅ %",
+      "packSize": "Packungsgröße",
+      "packSizePh": "z. B. 1",
+      "price": "Preis (Rs pro Packung)",
+      "pricePh": "z. B. 3500",
+      "productName": "Produktname",
+      "productPh": "z. B. SuperPhos Liquid 10%",
+      "submit": "💰 Echte Kosten berechnen"
+    },
+    "hero": {
+      "desc": "Ein schicker flüssiger Phosphor für Rs 3.500 pro Liter — Schnäppchen oder Abzocke? Geben Sie Preis und NPK-Prozente eines beliebigen Produkts ein und wir zeigen Ihnen die wahren Kosten pro kg Nährstoff — im Vergleich zu Standard-DAP, Urea, SOP und MOP.",
+      "eyebrow": "Preis vs. Wert",
+      "noteText": "Referenzpreise sind beispielhaft und anpassbar — keine Live-Marktpreise. Verwenden Sie die tatsächlichen Preise Ihrer Region für einen genauen Vergleich.",
+      "noteTitle": "⚠️ Hinweis:",
+      "title": "Dünger-Kostenrechner pro Nährstoff"
+    },
+    "nutrients": {
+      "k": "K₂O (Kali)",
+      "n": "N (Stickstoff)",
+      "p": "P₂O₅ (Phosphor)"
+    },
+    "refs": {
+      "bagUnit": "{bagKg} kg Sack",
+      "perBag": "Rs / Sack",
+      "priceAria": "{name} Preis in Rs",
+      "reset": "Auf Standardwerte zurücksetzen",
+      "title": "📊 Referenzpreise (Pakistan, Rs / 50 kg Sack)"
+    },
+    "results": {
+      "benchTitle": "📋 Vergleichsübersicht",
+      "cheapLine": "{nutrient}: {product} @ {price}/kg",
+      "cheapTitle": "💡 Günstigste Nährstoffquellen aktuell",
+      "footnote": "Referenzpreise gelten für Pakistan und sind oben anpassbar. Nährstoffkosten = Packungspreis ÷ (Packungsgewicht × Nährstoff %). Preise bei Marktveränderungen aktualisieren.",
+      "kgInPack": "{kg} kg in der Packung",
+      "noInput": "⚠️ Bitte geben Sie oben Packungsgröße, Preis und mindestens einen Nährstoffanteil über null ein.",
+      "perKg": "/ kg",
+      "thCheapest": "Günstigster Standard",
+      "thNutrient": "Nährstoff",
+      "thRatio": "Verhältnis",
+      "thYours": "Ihr Produkt",
+      "thisProduct": "Dieses Produkt",
+      "verdictExpensive": "Sie zahlen {ratio}× mehr für {nutrient} als für {product} ({price}/kg). Kaufen Sie {product} — lassen Sie sich vom Händler nicht übervorteilen.",
+      "verdictGood": "Fairer Preis. {name} kostet etwa so viel wie Standarddünger — zugreifen.",
+      "verdictPricier": "{nutrient} ist {ratio}× teurer als {product} ({price}/kg). Ziehen Sie stattdessen das Standardprodukt in Betracht.",
+      "vsBenchmark": "{ratio}× ggü. {product}"
+    },
+    "verdicts": {
+      "expensive": {
+        "title": "Teuer — lieber den Standard kaufen"
+      },
+      "good": {
+        "title": "Gutes Angebot"
+      },
+      "pricier": {
+        "title": "Teurer als Standard"
+      }
+    }
+  },
+  "alternativeFinder": {
+    "fertilizers": {
+      "ams": {
+        "extras": "Liefert zusätzlich Schwefel (24 % S) — gut für Ölsaaten und alkalische Böden.",
+        "name": "Ammonium Sulphate (21% N)",
+        "short": "Ammonium Sulphate"
+      },
+      "dap": {
+        "name": "DAP (18-46-0)",
+        "short": "DAP"
+      },
+      "mop": {
+        "extras": "Muriate of potash — günstigste K-Quelle, enthält Chlorid.",
+        "name": "MOP (0-0-60)",
+        "short": "MOP"
+      },
+      "np": {
+        "name": "Nitrophos (20-20-0)",
+        "short": "Nitrophos"
+      },
+      "npk": {
+        "name": "NPK 15-15-15",
+        "short": "NPK 15-15-15"
+      },
+      "sop": {
+        "extras": "Sulphate of potash — chloridfrei, liefert zusätzlich Schwefel.",
+        "name": "SOP (0-0-50)",
+        "short": "SOP"
+      },
+      "ssp": {
+        "extras": "Liefert zusätzlich Schwefel (~12 %) und Calcium; langsamere Freisetzung als DAP.",
+        "name": "SSP (16% P₂O₅)",
+        "short": "SSP"
+      },
+      "urea": {
+        "name": "Urea (46% N)",
+        "short": "Urea"
+      }
+    },
+    "hero": {
+      "desc": "DAP nicht auf dem Markt, oder SOP zu teuer? Wählen Sie den gewünschten Dünger und wie viele Säcke Sie brauchten — wir zeigen die nächstliegenden nährstoffgleichen Kombinationen aus meist verfügbaren Produkten.",
+      "eyebrow": "Helfer bei Engpässen",
+      "noteText": "Nährstoffgleiche Rechnung beweist weder chemische Verträglichkeit noch Salzsicherheit oder passenden Zeitpunkt. Klären Sie jede Substitution vor der Anwendung mit Ihrem Agrarberater.",
+      "noteTitle": "⚠️ Wichtig:",
+      "title": "Dünger-Alternativfinder"
+    },
+    "notes": {
+      "ams": "Ammonium sulphate liefert zusätzlich Schwefel (24 % S) — ein Plus für Ölsaaten, Hülsenfrüchte und Böden mit hohem pH.",
+      "imperfect": "Dies ist die nächstliegende praktikable Übereinstimmung — eine exakte NPK-Nachbildung mit anderen Produkten ist selten möglich.",
+      "mop": "MOP enthält Chlorid — bei chloridempfindlichen Kulturen (Tabak, Kartoffel, Zitrus, Weintrauben) lieber SOP.",
+      "ssp": "SSP gibt Phosphor langsamer frei als DAP — für beste Ergebnisse einige Tage vor der Saat in den Boden einarbeiten.",
+      "urea": "Urea 1–2 Tage nach dem Bewässern auf feuchten Boden streuen — nicht mit dem Bewässerungswasser fluten (bis zu 40–50 % können verloren gehen)."
+    },
+    "ui": {
+      "bagCount": "{count} {n, plural, one {Sack} other {Säcke}}",
+      "fertLabel": "Dünger, für den Sie eine Alternative brauchen",
+      "findBtn": "Alternativen finden",
+      "footnote": "Dies sind nährstoffgleiche Vorschläge auf Basis von Standardproduktsorten (50-kg-Säcke). Die Sorten variieren je nach Marke — prüfen Sie immer das Etikett. Preise und Verfügbarkeit werden hier nicht erfasst; vor dem Kauf beim Händler vor Ort bestätigen.",
+      "matchPct": "≈{pct} % Übereinstimmung",
+      "noResult": "Keine praktikable Alternative für dieses Produkt mit gängigen Düngern gefunden. Versuchen Sie stattdessen den Hauptdosisrechner für einen vollständigen Plan.",
+      "optionTitle": "Option {rank}",
+      "qtyLabel": "Menge (50-kg-Säcke)",
+      "selectPh": "— Dünger wählen —",
+      "summaryLine": "{count, plural, one {# Sack} other {# Säcke}} von {fertName} liefern {nutrients}.",
+      "summaryTail": "Nächstliegende gleichwertige Kombinationen:",
+      "thGives": "Diese Option liefert",
+      "thNeeded": "Benötigt",
+      "thNutrient": "Nährstoff"
+    }
   }
 }
