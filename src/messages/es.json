@@ -101,6 +101,14 @@
       {
         "q": "¿Por qué algunos cultivos están deshabilitados?",
         "a": "Un cultivo solo es seleccionable cuando su dosis recomendada de NPK está verificada con una fuente publicada. Preferimos deshabilitar un cultivo antes que inventar sus cifras: los cultivos no verificados se marcan como \"datos en revisión\" hasta su confirmación."
+      },
+      {
+        "q": "¿Cómo se convierten kanal y marla?",
+        "a": "1 acre = 8 kanal = 160 marla, y 1 kanal = 20 marla. En sistema métrico: 1 acre = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. La calculadora convierte su área a hectáreas, aplica la dosis por hectárea y luego la escala a su unidad."
+      },
+      {
+        "q": "¿Por qué algunos cultivos están deshabilitados?",
+        "a": "Un cultivo solo se puede seleccionar cuando su dosis recomendada de NPK está verificada por una fuente publicada. Preferimos deshabilitar un cultivo antes que inventar sus cifras — los no verificados se marcan como \"datos en revisión\" hasta confirmarse."
       }
     ],
     "organic": {
@@ -184,6 +192,50 @@
       {
         "a": "Sí: la calculadora, las bibliotecas y las guías son gratuitas. Solo se necesita una cuenta para funciones como guardar diagnósticos.",
         "q": "¿Fertilizer Dose es gratuito?"
+      },
+      {
+        "q": "¿Puedo mezclar Urea y DAP juntos?",
+        "a": "Sí, Urea y DAP se pueden aplicar juntos como dosis basal en la siembra. DAP proporciona fósforo (46% P₂O₅) más 18% de nitrógeno, mientras que Urea agrega más nitrógeno (46% N). Una práctica común es mezclarlos antes de esparcirlos. Sin embargo, evite mezclar Urea con SSP (single super phosphate) si la mezcla reposará — puede formar grumos. Siempre revise primero la proporción de NPK recomendada para su cultivo."
+      },
+      {
+        "q": "¿Qué es la dosis basal en fertilización?",
+        "a": "La dosis basal es el fertilizante aplicado en o antes de la siembra/plantación, incorporado al suelo. Por lo general, incluye el requerimiento completo de fósforo y potasio más una porción de nitrógeno (usualmente de 1/3 a 1/2). El nitrógeno restante se suministra posteriormente en cobertera — por ejemplo, Urea en el macollamiento del trigo. La aplicación basal asegura nutrientes disponibles para las raíces jóvenes desde el primer día."
+      },
+      {
+        "q": "DAP vs SSP — ¿cuál es mejor?",
+        "a": "Depende de su suelo y cultivo. DAP (18-46-0) tiene mayor concentración de fósforo (46% P₂O₅), por lo que necesita menos producto por acre — ideal para transporte y manejo. SSP (16% P₂O₅) también aporta azufre (~11%) y calcio (~19%), siendo mejor para semillas oleaginosas, legumbres y suelos deficientes en azufre. DAP suele ser más económico por kg de fósforo, pero SSP aporta nutrientes secundarios. Use nuestra herramienta Comparar para ver cuál es más conveniente según sus precios locales."
+      },
+      {
+        "q": "¿Qué es la dosis de fertilizante basada en análisis de suelo?",
+        "a": "Un análisis de suelo mide nitrógeno, fósforo, potasio, pH y materia orgánica disponibles. En lugar de aplicar una dosis estándar fija, la dosis de fertilizante se ajusta: si su suelo ya tiene alto contenido de fósforo, aplica menos fertilizante P. Esto ahorra dinero y evita la sobrefertilización. Recomendamos hacer un análisis de suelo cada 2-3 años con su oficina agrícola local."
+      },
+      {
+        "q": "¿Cuánto dura la Urea en el suelo?",
+        "a": "Una vez aplicada, la Urea se convierte en amonio disponible para la planta en aproximadamente 2–4 días mediante enzimas naturales del suelo, y luego a nitrato durante las siguientes 2–4 semanas según la temperatura y humedad. Prácticamente, una sola aplicación alimenta al cultivo durante 4–6 semanas, razón por la cual el nitrógeno suele dividirse en 2–3 dosis por temporada. Las pérdidas por gas amoníaco son más altas en suelos cálidos, secos y alcalinos cuando la Urea queda expuesta en la superficie — incorporarla en suelo húmedo reduce esto."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre Urea y DAP?",
+        "a": "Urea (46-0-0) solo suministra nitrógeno al 46% N — el fertilizante nitrogenado más concentrado en uso común. DAP (18-46-0) suministra 18% de nitrógeno más 46% de fosfato (P₂O₅). En la práctica, DAP se usa como dosis basal en la siembra cuando el cultivo necesita fósforo para el enraizamiento, mientras que Urea se usa en cobertera durante el crecimiento activo. Cumplen propósitos principales distintos."
+      },
+      {
+        "q": "¿Cómo calculo la dosis de fertilizante para plantas?",
+        "a": "Comience con un análisis de suelo si es posible — le indica qué contiene su suelo para añadir solo lo que falta. Luego use la Calculadora de Dosis de Plantas en Fertilizer Dose: ingrese su tipo de planta y tamaño de maceta o cantero, y obtendrá los gramos exactos por planta. Como regla general, aplique en pequeñas dosis divididas, riegue tras fertilizantes granulares y siga siempre las instrucciones de la etiqueta."
+      },
+      {
+        "q": "¿Cuánto NPK contiene el estiércol de granja (FYM)?",
+        "a": "El estiércol de granja bien madurado (FYM) contiene típicamente alrededor de 0.5–1.0% de nitrógeno, 0.2–0.5% de fosfato (P₂O₅) y 0.5–1.0% de potasa (K₂O), aunque varía según el animal, alimento y almacenamiento. Al tener menor concentración que los fertilizantes minerales, FYM funciona mejor como mejorador de suelo — aporta materia orgánica y estructura — mientras los fertilizantes minerales aportan la dosis precisa de NPK."
+      },
+      {
+        "q": "¿Cuál es el mejor momento del día para pulverizar fertilizante foliar?",
+        "a": "Temprano en la mañana (antes de las 9–10 am) o al atardecer son los mejores momentos. Los estomas de las hojas están abiertos, las temperaturas son frescas y las gotas tardan más en secarse, mejorando la absorción. Evite pulverizar con el calor del mediodía — las gotas se secan rápido y pueden quemar las hojas. También evite aplicar justo antes de lluvias previstas."
+      },
+      {
+        "q": "¿Qué significa NPK en un saco de fertilizante?",
+        "a": "Los tres números en un saco (por ejemplo 15-15-15) representan el porcentaje en peso de nitrógeno (N), fosfato (P₂O₅) y potasa (K₂O). Así, un saco de 50 kg de 15-15-15 contiene 7.5 kg de cada elemento. Tenga en cuenta que el fósforo y el potasio se expresan en sus formas de óxido por convención de la industria — la calculadora Fertilizer Dose gestiona esta conversión automáticamente."
+      },
+      {
+        "q": "¿Para qué se utiliza el fertilizante ammonium sulphate?",
+        "a": "Ammonium sulphate (21-0-0 más 24% de azufre) suministra nitrógeno junto con azufre, muy útil en suelos deficientes en azufre. Tiene un efecto acidificante en el suelo, por lo que resulta ideal para suelos neutros a alcalinos, pero debe usarse con precaución en suelos que ya son ácidos."
       }
     ],
     "title": "Preguntas que nos hacen los agricultores",
@@ -539,7 +591,20 @@
     "eyebrow": "Plant Doctor",
     "title": "Muéstrenos la hoja. Le ayudaremos a interpretarla.",
     "metaTitle": "Plant Doctor: diagnóstico de problemas de cultivos con IA",
-    "metaDescription": "Suba una foto de su cultivo y describa los síntomas para un diagnóstico asistido por IA con causas, acciones y pasos de prevención."
+    "metaDescription": "Suba una foto de su cultivo y describa los síntomas para un diagnóstico asistido por IA con causas, acciones y pasos de prevención.",
+    "form": {
+      "photoLabel": "Foto de la planta",
+      "photoHint": "Haga clic o arrastre una foto aquí",
+      "photoTypes": "JPG, PNG o WebP, máx 5 MB",
+      "cropLabel": "Cultivo (si lo conoce)",
+      "cropPlaceholder": "No estoy seguro / otro",
+      "symptomsLabel": "Describa los síntomas",
+      "symptomsHint": "¿Qué observa? Manchas amarillas, marchitamiento, agujeros en hojas, cuándo empezó, parte afectada…",
+      "symptomsPlaceholder": "ej. Manchas amarillas con bordes marrones en hojas inferiores de trigo, comenzó hace una semana tras la lluvia…",
+      "submit": "Diagnosticar mi planta",
+      "analyzing": "Analizando…",
+      "diagnosisTitle": "Diagnóstico"
+    }
   },
   "growing": {
     "searchPlaceholder": "Buscar por nombre…",
@@ -929,7 +994,19 @@
       "detailCta": "Ver detalles"
     },
     "searchPlaceholder": "Buscar fertilizantes…",
-    "searchNoResults": "Ningún fertilizante coincide con su búsqueda."
+    "searchNoResults": "Ningún fertilizante coincide con su búsqueda.",
+    "taglines": {
+      "urea": "El fertilizante nitrogenado más concentrado de uso común.",
+      "dap": "La fuente estándar de fósforo basal — con el beneficio adicional de nitrógeno.",
+      "mop": "La fuente económica de potasio para la mayoría de cultivos de campo.",
+      "ssp": "Fósforo más azufre y calcio en un solo gránulo.",
+      "sop": "Potasio libre de cloruro para cultivos sensibles y de alto valor.",
+      "ammonium-sulphate": "Nitrógeno más azufre, con un efecto acidificante en el suelo.",
+      "farmyard-manure": "El estiércol tradicional — bajo en nutrientes, alto en acondicionamiento del suelo.",
+      "compost": "Residuos agrícolas y domésticos descompuestos — nutrición variable según la materia prima.",
+      "vermicompost": "Abono procesado por lombrices — más rico que el estiércol común.",
+      "green-manure": "Fábrica viva de nitrógeno — cultivado e incorporado al suelo antes del cultivo principal."
+    }
   },
   "chart": {
     "metaTitle": "Tabla de dosis de fertilizantes: referencia rápida NPK",
@@ -1015,7 +1092,8 @@
       "startDate": "Primera alimentación",
       "addToGarden": "Agregar horario a Mi Jardín",
       "addedToGarden": "Agregado: consulte Mi jardín → Recordatorios.",
-      "gardenHint": "Los recordatorios son sugerencias genéricas de tiempos, no prescripciones. Omita la alimentación si las plantas parecen estresadas."
+      "gardenHint": "Los recordatorios son sugerencias genéricas de tiempos, no prescripciones. Omita la alimentación si las plantas parecen estresadas.",
+      "scheduleTitle": "Sugerido: Nutrir plantas ({ppm} ppm {nutrient})"
     },
     "presets": {
       "gentle": {
@@ -1048,18 +1126,60 @@
       "perBed": "Total por la cama",
       "perBedHint": "Mezcle con el agua de riego aplicada uniformemente sobre la cama.",
       "scheduleTitle": "Horario de alimentación (próximos 6)",
-      "scheduleHint": "Según la frecuencia elegida. Estas son ayudas para la planificación: ajústelas a cómo responden las plantas."
+      "scheduleHint": "Según la frecuencia elegida. Estas son ayudas para la planificación: ajústelas a cómo responden las plantas.",
+      "total": "Total para {litres} L",
+      "formulaNote": "Cálculo: {grade} a {ppm} ppm {nutrient} → gramos por litro = {ppm} ÷ (%{nutrient} × 10).",
+      "bedVolumeHint": "{area} {unit} × {depth} cm de zona radicular.",
+      "formulaNoteLiquid": "Cálculo: {grade} a {ppm} ppm {nutrient} → gramos por litro = {ppm} ÷ (%{nutrient} × 10), luego ÷ {density} g/ml densidad = ml por litro.",
+      "formulaNoteBed": "Volumen de cantero = área × {depth} cm profundidad."
     },
     "method": {
       "eyebrow": "como funciona",
       "title": "Dosificación por ppm, como lo hacen los productores",
-      "desc": "Los productores comerciales no adivinan las cucharadas: mezclan fertilizante hasta alcanzar una concentración objetivo de nutrientes en partes por millón (ppm). Esta calculadora ofrece el mismo método a los jardineros domésticos."
+      "desc": "Los productores comerciales no adivinan las cucharadas: mezclan fertilizante hasta alcanzar una concentración objetivo de nutrientes en partes por millón (ppm). Esta calculadora ofrece el mismo método a los jardineros domésticos.",
+      "steps": [
+        {
+          "t": "Elija la graduación del fertilizante",
+          "d": "Lea los números N-P-K del saco, ej. 20-20-20, o ingrese una graduación personalizada."
+        },
+        {
+          "t": "Elija la concentración de nutrición",
+          "d": "Plantas de interior crecen bien con dosis suaves (~100 ppm N); la mayoría de plantas en maceta con dosis regulares (~150 ppm N); plantas vigorosas y exigentes toleran ~200 ppm N."
+        },
+        {
+          "t": "Mezcle y riegue con normalidad",
+          "d": "Disuelva los gramos calculados en su regadera y riegue normalmente, permitiendo que drene el exceso. Nutra en cada riego a esta tasa o la mitad de veces al doble de fuerza — nunca ambas opciones."
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Fuentes",
       "title": "De dónde provienen las tasas de alimentación",
-      "note": "Los ajustes preestablecidos utilizan el extremo inferior de cada rango publicado, la opción conservadora para los niveles de iluminación del hogar. Siga siempre la etiqueta de su producto y los consejos de su servicio de extensión local."
-    }
+      "note": "Los ajustes preestablecidos utilizan el extremo inferior de cada rango publicado, la opción conservadora para los niveles de iluminación del hogar. Siga siempre la etiqueta de su producto y los consejos de su servicio de extensión local.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): plántulas en canteros 200–250 ppm N continuo; plantas lentas 100–150 ppm N hasta su establecimiento.",
+        "Michigan State University Extension (E2186): plantas en maceta — fertilizante de liberación lenta más nutrición líquida a 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": fórmula g/L = ppm ÷ (%N × 10) y ejemplo resuelto de 200 ppm N."
+      ]
+    },
+    "faq": [
+      {
+        "q": "¿Cuánto fertilizante necesitan las plantas en maceta?",
+        "a": "La mayoría de plantas en maceta crecen bien con una solución de riego de 100–150 ppm de nitrógeno — aproximadamente 0.5–1 g de 20-20-20 por litro de agua. Plantas con floración vigorosa toleran hasta 200 ppm. Comience suave; siempre podrá aumentar después."
+      },
+      {
+        "q": "¿Puedo usar una cuchara en lugar de pesar?",
+        "a": "Una cucharadita al ras de fertilizante granular pesa unos 5–6 g, pero la densidad varía según el producto. Para macetas pequeñas y plántulas, una báscula digital en gramos es mucho más confiable para evitar quemar las raíces."
+      },
+      {
+        "q": "¿Debo fertilizar cada vez que riego?",
+        "a": "Con las dosis suaves y regulares anteriores, sí — así lo hacen los cultivadores profesionales (\"fertirrigación\"). La alternativa es fertilizar con la mitad de frecuencia al doble de dosis. Elija un solo método."
+      },
+      {
+        "q": "¿Cuáles son los signos de exceso de fertilizante?",
+        "a": "Bordes de hojas marrones y crujientes, marchitamiento a pesar de la tierra húmeda y una costra blanca en la superficie del sustrato. Si observa esto, lave la maceta con agua limpia abundante hasta que drene libremente y omita la siguiente fertilización."
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Herramienta agrícola gratuita",
@@ -1145,10 +1265,84 @@
       "conversionTitle": "Tabla de conversión de superficie terrestre",
       "conversionNote": "Definiciones exactas. Las unidades regionales aparecen sólo cuando están verificadas.",
       "sourcesTitle": "Fuentes y metodología",
-      "sourcesBody": "Las unidades universales utilizan definiciones SI e imperiales exactas (1 acre = 4.046,8564224 m²; 1 hectárea = 10.000 m²). Kanal y Marla utilizan el estándar de ingresos de Punjab: 1 karam = 5,5 pies, 1 marla = 9 karam cuadrados = 272,25 pies cuadrados, 1 kanal = 20 marla = 5445 pies cuadrados. Todos los cálculos se ejecutan internamente en metros cuadrados y se convierten una vez a la unidad de visualización, sin redondeo encadenado."
+      "sourcesBody": "Las unidades universales utilizan definiciones SI e imperiales exactas (1 acre = 4.046,8564224 m²; 1 hectárea = 10.000 m²). Kanal y Marla utilizan el estándar de ingresos de Punjab: 1 karam = 5,5 pies, 1 marla = 9 karam cuadrados = 272,25 pies cuadrados, 1 kanal = 20 marla = 5445 pies cuadrados. Todos los cálculos se ejecutan internamente en metros cuadrados y se convierten una vez a la unidad de visualización, sin redondeo encadenado.",
+      "formulas": [
+        {
+          "name": "Rectángulo",
+          "formula": "Área = longitud × anchura",
+          "example": "100 m × 50 m = 5,000 m²"
+        },
+        {
+          "name": "Cuadrado",
+          "formula": "Área = lado²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Triángulo",
+          "formula": "Área = ½ × base × altura",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapecio",
+          "formula": "Área = ((lado A + lado B) / 2) × altura",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1,500 m²"
+        },
+        {
+          "name": "Cuatro lados + diagonal",
+          "formula": "Divida en dos triángulos a lo largo de la diagonal; resuelva cada uno con la fórmula de Herón y sume",
+          "example": "Exacto — sin aproximaciones"
+        }
+      ]
     },
     "relatedTitle": "Herramientas agrícolas relacionadas",
-    "relatedCurrent": "Usted está aquí"
+    "relatedCurrent": "Usted está aquí",
+    "savedPlotName": "Parcela medida ({date})",
+    "faq": [
+      {
+        "q": "¿Cómo calculo el área de un terreno?",
+        "a": "Mida longitud y anchura en la misma unidad y multiplique: área = largo × ancho. Para formas irregulares, divida el terreno en rectángulos y triángulos, calcule cada uno y súmelos."
+      },
+      {
+        "q": "¿Cómo calculo el área de un terreno agrícola?",
+        "a": "Use la misma geometría y convierta a la unidad de su región — acres, hectáreas o unidades locales como kanal y marla en Pakistán. Esta calculadora convierte automáticamente y puede enviar el resultado directo a la Calculadora de Dosis de Fertilizante."
+      },
+      {
+        "q": "¿Cuántos acres tiene esta parcela?",
+        "a": "Ingrese el largo y ancho de su parcela arriba y lea la cifra en acres directamente. Si midió en pies, la calculadora convierte pies cuadrados a acres automáticamente (43,560 sq ft = 1 acre)."
+      },
+      {
+        "q": "¿Cómo calculo el área de terreno en pies cuadrados?",
+        "a": "Multiplique el largo en pies por el ancho en pies: 100 ft × 50 ft = 5,000 sq ft. Un acre equivale a 43,560 sq ft."
+      },
+      {
+        "q": "¿Pueden cuatro lados calcular una parcela irregular con exactitud?",
+        "a": "No. Cuatro lados solos no pueden fijar el área de un cuadrilátero porque los ángulos varían. Mida también una diagonal para dividir la parcela en dos triángulos de resolución exacta."
+      },
+      {
+        "q": "¿Cómo convierto acres a hectáreas?",
+        "a": "Multiplique los acres por 0.404686. Una hectárea equivale a 2.471 acres. Use el modo Convertidor arriba para cualquier par de unidades."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre un acre y una hectárea?",
+        "a": "Una hectárea (10,000 m²) es aproximadamente 2.47 veces más grande que un acre (4,047 m²). La hectárea es estándar internacional; el acre es común en Pakistán, India y EE.UU."
+      },
+      {
+        "q": "¿Puedo calcular el área de un campo irregular?",
+        "a": "Sí — use el modo Irregular: divida su campo en rectángulos, cuadrados, triángulos o trapecios, ingrese cada sección y la calculadora las sumará."
+      },
+      {
+        "q": "¿Por qué algunas unidades tradicionales varían según la región?",
+        "a": "Unidades como bigha, marla y kanal surgieron de sistemas catastrales locales, por lo que su tamaño varía según la provincia. Solo incluimos unidades cuya conversión esté oficialmente verificada."
+      },
+      {
+        "q": "¿Puedo usar el área calculada en la Calculadora de Dosis de Fertilizante?",
+        "a": "Sí. Toque 'Usar en Calculadora de Fertilizante' y su área, unidad, país y región se transferirán automáticamente."
+      },
+      {
+        "q": "¿Es este un levantamiento topográfico legal?",
+        "a": "No. Esta herramienta proporciona estimaciones útiles a partir de sus propias mediciones para la toma de decisiones agrícolas. Para límites legales o registros oficiales, contrate a un topógrafo matriculado."
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Herramientas agrícolas",
@@ -1209,7 +1403,35 @@
     "bannerProfit": "Estimar beneficio",
     "bannerDismiss": "Despedir",
     "relatedTitle": "Herramientas relacionadas",
-    "relatedCurrent": "Usted está aquí"
+    "relatedCurrent": "Usted está aquí",
+    "howSteps": [
+      "Abra el mapa y busque su campo — no necesita buscar texto; desplace y haga zoom, o céntrese en su ubicación.",
+      "Toque el mapa para colocar puntos limítrofes alrededor del campo. Arrastre cualquier punto para ajustarlo; toque un punto numerado para eliminarlo.",
+      "Con 3 o más puntos, el área se calcula mediante matemática geodésica (corrigiendo la curvatura terrestre) — exacta en cualquier latitud.",
+      "Use el área en la Calculadora de Área de Terreno y luego llévela a la Calculadora de Dosis o Calculadora de Beneficios."
+    ],
+    "faq": [
+      {
+        "q": "¿Cómo funciona la calculadora de área en mapa?",
+        "a": "Toque el mapa para fijar los límites de su campo. Con 3 puntos o más, la herramienta calcula el área mediante fórmulas geodésicas que consideran la curvatura de la tierra."
+      },
+      {
+        "q": "¿Es el área medida tan precisa como un levantamiento pericial?",
+        "a": "No. Es una estimación práctica basada en los puntos colocados y el alineamiento satelital. Para disputas legales, contrate a un profesional."
+      },
+      {
+        "q": "¿Utiliza esto Google Maps?",
+        "a": "No. El mapa funciona con OpenStreetMap, un mapa comunitario libre y abierto. No tiene relación con Google Maps."
+      },
+      {
+        "q": "¿Puedo usar el área medida para calcular fertilizantes?",
+        "a": "Sí — el botón “Usar esta área” envía el valor medido a la Calculadora de Terreno y de allí a la Calculadora de Fertilizantes."
+      },
+      {
+        "q": "¿Se guarda o comparte mi ubicación o los límites de mi campo?",
+        "a": "No. Los puntos solo residen en la memoria de su navegador durante la medición. Sus coordenadas nunca se almacenan en nuestros servidores."
+      }
+    ]
   },
   "kitchenGarden": {
     "eyebrow": "Planificador de huertas",
@@ -1257,7 +1479,31 @@
     "savePlan": "Guardar plan en Mi jardín",
     "saved": "Plan guardado en Mi jardín.",
     "openMyGarden": "Abre mi jardín",
-    "faqTitle": "Preguntas frecuentes sobre jardinería"
+    "faqTitle": "Preguntas frecuentes sobre jardinería",
+    "emptyBody": "Aún no disponemos de un calendario de siembra verificado para hortalizas o hierbas en {region} para el mes de {month}. No inventamos datos — elija otro mes o región.",
+    "savedPlotName": "Huerto familiar — {date}",
+    "faq": [
+      {
+        "q": "¿Qué puedo plantar en un huerto pequeño este mes?",
+        "a": "Depende de su región y del mes. Ingrese los detalles de su parcela arriba y el planificador listará solo hortalizas y hierbas con ventanas de siembra verificadas."
+      },
+      {
+        "q": "¿El planificador indica la distancia de siembra entre plantas?",
+        "a": "Aún no. La distancia entre hileras y plantas no ha sido verificada en nuestra base de datos para estos cultivos; preferimos ser honestos antes que inventar cifras."
+      },
+      {
+        "q": "¿En qué se diferencia del calendario de siembra general?",
+        "a": "El calendario de siembra incluye cultivos de campo extensivos. Este planificador se enfoca exclusivamente en huertos caseros, adaptándose a su espacio y luz solar."
+      },
+      {
+        "q": "¿Puedo usar aquí la medición de mi terreno?",
+        "a": "Sí. El botón “Planificar un huerto” en la Calculadora de Área de Terreno envía su medición directamente a este planificador."
+      },
+      {
+        "q": "¿Dónde se guarda mi plan?",
+        "a": "En la sección Mi Huerto de su navegador (almacenamiento local) al presionar “Guardar plan en Mi Huerto”. Inicie sesión para sincronizarlo entre dispositivos."
+      }
+    ]
   },
   "suggestions": {
     "improveTranslation": "Mejorar esta traducción",
