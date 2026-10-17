@@ -820,7 +820,14 @@
     "saveCalculation": "Salvar no Meu Jardim",
     "savedToGarden": "Salvo no Meu Jardim",
     "viewGarden": "Ver Meu Jardim",
-    "organicApplicationLabel": "Aplicação de adubo orgânico"
+    "organicApplicationLabel": "Aplicação de adubo orgânico",
+    "soilTypes": {
+      "Clay": "Argiloso",
+      "Loamy": "Franco",
+      "Saline": "Salino",
+      "Sandy": "Arenoso",
+      "Silty": "Siltoso"
+    }
   },
   "tools": {
     "profit": {

@@ -820,7 +820,14 @@
     "saveCalculation": "マイガーデンに保存",
     "savedToGarden": "マイガーデンに保存しました",
     "viewGarden": "マイガーデンを見る",
-    "organicApplicationLabel": "有機肥料の散布"
+    "organicApplicationLabel": "有機肥料の散布",
+    "soilTypes": {
+      "Clay": "粘土",
+      "Loamy": "壌土",
+      "Saline": "塩類土",
+      "Sandy": "砂質土",
+      "Silty": "シルト質土"
+    }
   },
   "tools": {
     "profit": {

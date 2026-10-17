@@ -820,7 +820,14 @@
     "saveCalculation": "Bahçem'e kaydet",
     "savedToGarden": "Bahçem'e kaydedildi",
     "viewGarden": "Bahçem'i görüntüle",
-    "organicApplicationLabel": "Organik gübre uygulaması"
+    "organicApplicationLabel": "Organik gübre uygulaması",
+    "soilTypes": {
+      "Clay": "Killi",
+      "Loamy": "Tınlı",
+      "Saline": "Tuzlu",
+      "Sandy": "Kumlu",
+      "Silty": "Siltli"
+    }
   },
   "tools": {
     "profit": {

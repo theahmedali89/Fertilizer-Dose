@@ -820,7 +820,14 @@
     "saveCalculation": "Guardar en Mi huerto",
     "savedToGarden": "Guardado en Mi huerto",
     "viewGarden": "Ver Mi huerto",
-    "organicApplicationLabel": "Aplicación de abono orgánico"
+    "organicApplicationLabel": "Aplicación de abono orgánico",
+    "soilTypes": {
+      "Clay": "Arcilloso",
+      "Loamy": "Franco",
+      "Saline": "Salino",
+      "Sandy": "Arenoso",
+      "Silty": "Limoso"
+    }
   },
   "tools": {
     "profit": {

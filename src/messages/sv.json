@@ -820,7 +820,14 @@
     "saveCalculation": "Spara i Min trädgård",
     "savedToGarden": "Sparad i Min trädgård",
     "viewGarden": "Visa Min trädgård",
-    "organicApplicationLabel": "Spridning av organisk gödsel"
+    "organicApplicationLabel": "Spridning av organisk gödsel",
+    "soilTypes": {
+      "Clay": "Lerig",
+      "Loamy": "Mulljord",
+      "Saline": "Salthaltig",
+      "Sandy": "Sandig",
+      "Silty": "Mjälig"
+    }
   },
   "tools": {
     "profit": {

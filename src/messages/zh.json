@@ -716,7 +716,14 @@
     "saveCalculation": "保存到我的花园",
     "savedToGarden": "已保存到我的花园",
     "viewGarden": "查看我的花园",
-    "organicApplicationLabel": "有机肥施用"
+    "organicApplicationLabel": "有机肥施用",
+    "soilTypes": {
+      "Clay": "黏土",
+      "Loamy": "壤土",
+      "Saline": "盐渍土",
+      "Sandy": "砂质土",
+      "Silty": "粉砂质土"
+    }
   },
   "tools": {
     "profit": {

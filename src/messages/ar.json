@@ -813,7 +813,14 @@
     "saveCalculation": "احفظ في حديقتي",
     "savedToGarden": "تم الحفظ في حديقتي",
     "viewGarden": "اعرض حديقتي",
-    "organicApplicationLabel": "تطبيق السماد العضوي"
+    "organicApplicationLabel": "تطبيق السماد العضوي",
+    "soilTypes": {
+      "Clay": "طينية",
+      "Loamy": "طميية",
+      "Saline": "ملحية",
+      "Sandy": "رملية",
+      "Silty": "غرينية"
+    }
   },
   "tools": {
     "profit": {

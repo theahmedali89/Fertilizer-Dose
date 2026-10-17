@@ -820,7 +820,14 @@
     "saveCalculation": "Simpan ke Kebunku",
     "savedToGarden": "Tersimpan ke Kebunku",
     "viewGarden": "Lihat Kebunku",
-    "organicApplicationLabel": "Aplikasi pupuk organik"
+    "organicApplicationLabel": "Aplikasi pupuk organik",
+    "soilTypes": {
+      "Clay": "Liat",
+      "Loamy": "Lempung",
+      "Saline": "Salin",
+      "Sandy": "Berpasir",
+      "Silty": "Berdebu"
+    }
   },
   "tools": {
     "profit": {

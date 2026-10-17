@@ -716,7 +716,14 @@
     "saveCalculation": "میرے باغ میں محفوظ کریں",
     "savedToGarden": "میرے باغ میں محفوظ کر دیا گیا",
     "viewGarden": "میرا باغ دیکھیں",
-    "organicApplicationLabel": "نامیاتی کھاد کی درخواست"
+    "organicApplicationLabel": "نامیاتی کھاد کی درخواست",
+    "soilTypes": {
+      "Clay": "چکنی",
+      "Loamy": "دومٹ",
+      "Saline": "شورزدہ",
+      "Sandy": "ریتلی",
+      "Silty": "سلٹی"
+    }
   },
   "tools": {
     "profit": {

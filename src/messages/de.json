@@ -820,7 +820,14 @@
     "saveCalculation": "In Mein Garten speichern",
     "savedToGarden": "In Mein Garten gespeichert",
     "viewGarden": "Mein Garten ansehen",
-    "organicApplicationLabel": "Ausbringen von organischem Dünger"
+    "organicApplicationLabel": "Ausbringen von organischem Dünger",
+    "soilTypes": {
+      "Clay": "Tonig",
+      "Loamy": "Lehmig",
+      "Saline": "Versalzen",
+      "Sandy": "Sandig",
+      "Silty": "Schluffig"
+    }
   },
   "tools": {
     "profit": {

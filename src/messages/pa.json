@@ -716,7 +716,14 @@
     "savedToGarden": "ਮੇਰੇ ਬਾਗ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ",
     "viewGarden": "ਮੇਰਾ ਬਾਗ ਦੇਖੋ",
     "organicApplicationLabel": "ਜੈਵਿਕ ਖਾਦ ਦੀ ਵਰਤੋਂ",
-    "plantedDaysAgo": "{days} ਦਿਨ ਪਹਿਲਾਂ ਬੀਜਿਆ"
+    "plantedDaysAgo": "{days} ਦਿਨ ਪਹਿਲਾਂ ਬੀਜਿਆ",
+    "soilTypes": {
+      "Clay": "ਚੀਕਣੀ",
+      "Loamy": "ਦੋਮਟ",
+      "Saline": "ਖਾਰੀ",
+      "Sandy": "ਰੇਤਲੀ",
+      "Silty": "ਸਿਲਟੀ"
+    }
   },
   "tools": {
     "profit": {

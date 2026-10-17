@@ -820,7 +820,14 @@
     "saveCalculation": "나의 정원에 저장",
     "savedToGarden": "나의 정원에 저장됨",
     "viewGarden": "나의 정원 보기",
-    "organicApplicationLabel": "유기 비료 적용"
+    "organicApplicationLabel": "유기 비료 적용",
+    "soilTypes": {
+      "Clay": "점토",
+      "Loamy": "양토",
+      "Saline": "염류토",
+      "Sandy": "사질토",
+      "Silty": "미사질토"
+    }
   },
   "tools": {
     "profit": {

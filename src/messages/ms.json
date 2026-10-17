@@ -820,7 +820,14 @@
     "saveCalculation": "Simpan ke Kebun Saya",
     "savedToGarden": "Tersimpan ke Kebun Saya",
     "viewGarden": "Lihat Kebun Saya",
-    "organicApplicationLabel": "Aplikasi baja organik"
+    "organicApplicationLabel": "Aplikasi baja organik",
+    "soilTypes": {
+      "Clay": "Liat",
+      "Loamy": "Lempung",
+      "Saline": "Salin",
+      "Sandy": "Berpasir",
+      "Silty": "Lodak"
+    }
   },
   "tools": {
     "profit": {

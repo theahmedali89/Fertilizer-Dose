@@ -820,7 +820,14 @@
     "saveCalculation": "Zapisz w Moim ogrodzie",
     "savedToGarden": "Zapisano w Moim ogrodzie",
     "viewGarden": "Zobacz Mój ogród",
-    "organicApplicationLabel": "Zastosowanie obornika organicznego"
+    "organicApplicationLabel": "Zastosowanie obornika organicznego",
+    "soilTypes": {
+      "Clay": "Iłowa",
+      "Loamy": "Gliniasta",
+      "Saline": "Zasolona",
+      "Sandy": "Piaszczysta",
+      "Silty": "Pyłowa"
+    }
   },
   "tools": {
     "profit": {

@@ -820,7 +820,14 @@
     "saveCalculation": "Запази в Моята градина",
     "savedToGarden": "Запазено в Моята градина",
     "viewGarden": "Виж Моята градина",
-    "organicApplicationLabel": "Прилагане на органичен тор"
+    "organicApplicationLabel": "Прилагане на органичен тор",
+    "soilTypes": {
+      "Clay": "Глинеста",
+      "Loamy": "Глинесто-песъчлива",
+      "Saline": "Засолена",
+      "Sandy": "Песъчлива",
+      "Silty": "Тинеста"
+    }
   },
   "tools": {
     "profit": {

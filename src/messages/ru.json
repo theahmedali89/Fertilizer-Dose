@@ -820,7 +820,14 @@
     "saveCalculation": "Сохранить в Мой сад",
     "savedToGarden": "Сохранено в Мой сад",
     "viewGarden": "Открыть Мой сад",
-    "organicApplicationLabel": "Внесение органического навоза"
+    "organicApplicationLabel": "Внесение органического навоза",
+    "soilTypes": {
+      "Clay": "Глинистая",
+      "Loamy": "Суглинистая",
+      "Saline": "Засоленная",
+      "Sandy": "Песчаная",
+      "Silty": "Пылеватая"
+    }
   },
   "tools": {
     "profit": {

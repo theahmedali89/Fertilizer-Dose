@@ -816,7 +816,14 @@
     "saveCalculation": "আমার বাগানে সংরক্ষণ করুন",
     "savedToGarden": "আমার বাগানে সংরক্ষিত",
     "viewGarden": "আমার বাগান দেখুন",
-    "organicApplicationLabel": "জৈব সার প্রয়োগ"
+    "organicApplicationLabel": "জৈব সার প্রয়োগ",
+    "soilTypes": {
+      "Clay": "এঁটেল",
+      "Loamy": "দোআঁশ",
+      "Saline": "লবণাক্ত",
+      "Sandy": "বেলে",
+      "Silty": "পলিযুক্ত"
+    }
   },
   "tools": {
     "profit": {

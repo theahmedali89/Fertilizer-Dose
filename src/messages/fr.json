@@ -820,7 +820,14 @@
     "saveCalculation": "Enregistrer dans Mon jardin",
     "savedToGarden": "Enregistré dans Mon jardin",
     "viewGarden": "Voir Mon jardin",
-    "organicApplicationLabel": "Application de fumier organique"
+    "organicApplicationLabel": "Application de fumier organique",
+    "soilTypes": {
+      "Clay": "Argileux",
+      "Loamy": "Limoneux",
+      "Saline": "Salin",
+      "Sandy": "Sableux",
+      "Silty": "Silteux"
+    }
   },
   "tools": {
     "profit": {

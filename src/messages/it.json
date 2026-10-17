@@ -820,7 +820,14 @@
     "saveCalculation": "Salva in Il mio giardino",
     "savedToGarden": "Salvato in Il mio giardino",
     "viewGarden": "Vedi Il mio giardino",
-    "organicApplicationLabel": "Applicazione di letame organico"
+    "organicApplicationLabel": "Applicazione di letame organico",
+    "soilTypes": {
+      "Clay": "Argilloso",
+      "Loamy": "Franco",
+      "Saline": "Salino",
+      "Sandy": "Sabbioso",
+      "Silty": "Limoso"
+    }
   },
   "tools": {
     "profit": {

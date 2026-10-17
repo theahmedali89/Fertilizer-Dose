@@ -816,7 +816,14 @@
     "saveCalculation": "मेरे बगीचे में सहेजें",
     "savedToGarden": "मेरे बगीचे में सहेजा गया",
     "viewGarden": "मेरा बगीचा देखें",
-    "organicApplicationLabel": "जैविक खाद का प्रयोग"
+    "organicApplicationLabel": "जैविक खाद का प्रयोग",
+    "soilTypes": {
+      "Clay": "चिकनी",
+      "Loamy": "दोमट",
+      "Saline": "खारी",
+      "Sandy": "रेतीली",
+      "Silty": "सिल्टी"
+    }
   },
   "tools": {
     "profit": {
