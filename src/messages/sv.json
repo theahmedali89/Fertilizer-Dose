@@ -25,7 +25,17 @@
       "soil": "Jordtyp (valfritt)",
       "soilHint": "Jordtypen ändrar inte beräkningen – den ändrar rådgivningen. Sandjordar läcker kväve snabbare; salthaltiga jordar kräver försiktighet med MOP.",
       "submit": "Beräkna dos",
-      "unit": "Enhet"
+      "unit": "Enhet",
+      "underReviewBadge": "Under granskning",
+      "targetYield": "Målavkastning (valfritt)",
+      "targetYieldUnitHa": "t/ha",
+      "targetYieldUnitAcre": "t/acre",
+      "targetYieldPlaceholder": "till exempel 5",
+      "targetYieldHint": "Skalar dosen till ditt avkastningsmål – begränsat till 2× basdosen.",
+      "targetYieldWarning": "Detta är endast en uppskattning. Det faktiska gödningsbehovet beror på jordtest, variation och fältförhållanden. Skalning över 2× är inte agronomiskt giltigt.",
+      "yieldError": "Ange ett giltigt målavkastning som är större än noll.",
+      "rangeHint": "Dosintervall",
+      "rangeBadge": "Räckvidd"
     },
     "method": {
       "desc": "Ingen svart låda. Detta är samma DAP-först-metod som lärs ut i agronomiutbildningar.",
@@ -51,7 +61,25 @@
       "splitTitle": "Schema för delad dos",
       "splitGenericBadge": "Generellt schema",
       "recommendedLine": "Rekommenderat {n}–{p}–{k} kg N–P₂O₅–K₂O/ha · {region}",
-      "soilCustom": "Du valde ”{soil}”. På {soilLower}jordar bör du överväga ett jordprov innan du ändrar dosen – grundberäkningen ovan förblir densamma."
+      "soilCustom": "Du valde ”{soil}”. På {soilLower}jordar bör du överväga ett jordprov innan du ändrar dosen – grundberäkningen ovan förblir densamma.",
+      "recommendedRangeLine": "Rekommenderat dosintervall: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}. Välj inom intervallet baserat på ditt jordtest.",
+      "yieldAdjusted": "Justerad för {yield} t/ha målavkastning",
+      "rangeSaveNote": "Saving to My Garden är tillgängligt för exakta doser. För intervall, notera ditt valda värde inom intervallet.",
+      "tipsTitle": "Applikationstips",
+      "tipsSubtitle": "Hur man applicerar varje gödningsmedel så att inget går till spillo.",
+      "tipUreaTitle": "Urea - översvämma INTE",
+      "tipUreaBody": "Sprid ut (chhatta) 1–2 dagar efter vattning på fuktig jord för 30–40 % bättre absorption. Översvämning slöser 40–50 % av urean genom urlakning och denitrifikation.",
+      "tipDapTitle": "DAP — gödsla om det missas vid sådd",
+      "tipDapBody": "Om du missade det vid sådd, lös upp med DAP-lösningsmedel och gödsla. Starta efter att vattnet täcker 25 % av tomten och sluta 10 minuter innan vattenavstängningen.",
+      "tipPotashTitle": "Potaska (SOP / MOP) — översvämningsvänlig",
+      "tipPotashBody": "Översvämningsapplicering fungerar bra för kaliumklorid. För bästa resultat: 50 % vid sådd + 50 % vid blomning eller fruktsättning.",
+      "tipSspTitle": "SSP — applicera basal",
+      "tipSspBody": "Applicera basal vid markberedning och blanda i jorden. SSP är långsam släpper, så tidig inkorporering lönar sig.",
+      "tipGeneralTitle": "Befruktningsprotokoll",
+      "tipGeneralBody": "Öppna trumventilen först efter att 1–1,5 kanal vatten har kommit in i fältet (inte vid starten) för jämn fördelning.",
+      "shareButton": "Dela på WhatsApp",
+      "shareCopy": "Kopiera",
+      "shareCopied": "Kopierade!"
     },
     "title": "Exakt gödseldos, med beräkningen visad.",
     "soilTestCard": {
@@ -98,7 +126,37 @@
       "dismiss": "Stäng",
       "resultN": "Kväve (N)",
       "resultP": "Fosfat (P₂O₅)",
-      "resultK": "Kalium (K₂O)"
+      "resultK": "Kalium (K₂O)",
+      "labTitle": "Din labbanalys (valfritt)",
+      "labDesc": "Om du lät testa ditt material, registrera labdetaljerna här för insyn. Beräkningen använder endast de procentsatser du anger ovan.",
+      "labNameLabel": "Laboratorium / källa",
+      "labNamePlaceholder": "till exempel Distriktsjordlabb, Lahore",
+      "labDateLabel": "Analysdatum",
+      "moistureLabel": "Fukt %",
+      "moistureHint": "Om det rapporteras — endast informativt, används inte i matematiken.",
+      "topupTitle": "Offset mot mineralgödsel",
+      "topupDesc": "Ange grödans näringsbehov (kg N–P₂O₅–K₂O per hektar, t.ex. från kalkylatorn ovan eller din förlängningsrekommendation) för att se hur mycket mineralgödsel som fortfarande behövs efter denna ekologiska applicering.",
+      "baseNLabel": "Skördbehov — N (kg/ha)",
+      "basePLabel": "Skördbehov — P₂O₅ (kg/ha)",
+      "baseKLabel": "Skördbehov — K₂O (kg/ha)",
+      "topupResultsTitle": "Mineralpåfyllning behövs fortfarande",
+      "topupN": "Kväve (N)",
+      "topupP": "Fosfat (P₂O5)",
+      "topupK": "Potaska (K₂O)",
+      "topupNote": "Detta är MAXIMAL offset. Organiskt kväve mineraliseras långsamt - endast en bråkdel (cirka 30% av FYM-kväve, per TNAU) är tillgänglig för den första grödan - så i praktiken kan du fortfarande behöva mer mineralkväve än vad som visas. Behandla detta som en planeringsvägledning, inte ett recept.",
+      "formulaOffsetLabel": "Formel",
+      "formulaOffset": "påfyllning = max(0, gröda behov − organiskt tillämpat)",
+      "enterBase": "Ange minst ett grödabehov ovan för att se den återstående mineralpåfyllningen.",
+      "analysisSummary": "Analys N {n}% / P2O5 {p}% / K2O {k}% → tillför N {nKg} / P2O5 {pKg} / K2O {kKg} kg/ha.",
+      "noLabRecord": "Ingen labbpost inmatad – användarinmatade värden, ej verifierade.",
+      "topupSummary": "Återstående mineralpåfyllning: N {n} / P₂O₅ {p} / K₂O {k} kg/ha (maximal offset; långsam frisättning beaktas inte).",
+      "saveDisclaimer": "Användarinmatad organisk applikation. Näringssiffror är aritmetiska på användarinmatningar, inte labbverifierade av appen."
+    },
+    "plantDoseCard": {
+      "eyebrow": "Krukväxter?",
+      "title": "Dosering av gödsel för krukväxter och krukväxter.",
+      "desc": "Blanda vattenlösligt gödselmedel i ppm - gram per liter och per kruka - med förlängningsbaserad utfodringshastighet för skonsamma, vanliga och tunga matare.",
+      "cta": "Öppna växtdosberäknaren →"
     }
   },
   "common": {
@@ -169,7 +227,9 @@
       "optional": "valfritt",
       "nProxyNote": "Jordlaboratorier rapporterar sällan en kväveklass, så organiskt kol används som indikator på din jords förmåga att tillföra kväve.",
       "submit": "Justera dos",
-      "soilTestHint": "Från ditt jordhälsokort eller laboratorierapport. Lämna tomt varje värde du inte har — det näringsämnet behåller sin basdos."
+      "soilTestHint": "Från ditt jordhälsokort eller laboratorierapport. Lämna tomt varje värde du inte har — det näringsämnet behåller sin basdos.",
+      "underReviewBadge": "Under granskning",
+      "rangeHint": "Dosintervall"
     },
     "results": {
       "title": "Jordanalysjusterad dos",
@@ -204,7 +264,9 @@
       ],
       "sourceLabel": "Datakälla:",
       "genericLabel": "Egen bas (endast generell vägledning — ingen verifierad rekommendation)",
-      "disclaimer": "Alla doser är uppskattningar. Bekräfta med din lokala agronom / lantbruksrådgivare innan du gödslar."
+      "disclaimer": "Alla doser är uppskattningar. Bekräfta med din lokala agronom / lantbruksrådgivare innan du gödslar.",
+      "baseRangeLine": "Basdosintervall: N {n} – P₂O₅ {p} – K₂O {k} kg/ha",
+      "adjustedRangeLine": "Justerat dosintervall: N {n} – P₂O₅ {p} – K₂O {k} kg/ha · {region}"
     },
     "method": {
       "eyebrow": "Metod",
@@ -857,5 +919,49 @@
     "selectCountry": "Land",
     "selectRegion": "Region / provins",
     "selectedCountry": "Valt land"
+  },
+  "plantDose": {
+    "eyebrow": "Trädgårdsredskap för hemmet",
+    "title": "Hur man doserar gödselmedel för växter",
+    "desc": "En gratis kalkylator för att dosera växter i krukor och trädgårdar: blanda rätt mängd vattenlösligt gödselmedel per liter vatten, baserat på utfodringshastigheter vid universitetet.",
+    "faqTitle": "Dosering av växtgödsel — vanliga frågor",
+    "metaTitle": "Hur man doserar gödselmedel för växter — Växtdosberäknare",
+    "metaDescription": "Lär dig hur du doserar gödsel för växter med vår kostnadsfria kalkylator. Få rätt gödseldos för krukväxter i gram per liter — förlängningsbaserad matningshastighet för krukväxter och krukväxter.",
+    "form": {
+      "grade": "Gödselkvalitet (N-P-K)",
+      "gradeHint": "De tre siffrorna tryckta på väskan, t.ex. 20-20-20.",
+      "custom": "Anpassat betyg...",
+      "nitrogen": "N %",
+      "phosphorus": "P2O5 %",
+      "potash": "K₂O %",
+      "strength": "Matningsstyrka",
+      "strengthHint": "Målkvävekoncentration i vattningslösningen. Förinställningar använder den konservativa delen av publicerade tilläggsintervall.",
+      "customPpm": "Anpassad ppm...",
+      "targetPpm": "Målkväve (ppm)",
+      "targetPpmHint": "Milligram kväve per liter vatten. De flesta krukväxter klarar sig bra vid 100–150 ppm; överstig aldrig 300 ppm utan en specifik rekommendation.",
+      "litres": "Vatten att förbereda (liter)",
+      "litresHint": "Storleken på din vattenkanna eller tank.",
+      "potSize": "Krukstorlek (för dos per pott)",
+      "potSizeHint": "Ungefärlig jordvolym för en vanlig plantskola.",
+      "potOption": "{cm} cm kruka",
+      "customGradeLabel": "{n}-{p}-{k}",
+      "submit": "Beräkna växtdosen",
+      "mode": "Dosera för",
+      "modeCan": "Vattenkanna/krukor",
+      "modeCanHint": "Blanda gödselmedel i vatten: gram per liter, totalt för din burk och dos per kruka.",
+      "modeBed": "Trädgårdssäng",
+      "modeBedHint": "Dosering för en trädgård bädd för område: bäddvolymen kommer från ditt område × rotzonens djup.",
+      "productForm": "Produktform",
+      "solid": "Fast (pulver / granulat)",
+      "liquid": "Flytande koncentrat",
+      "density": "Densitet (g/ml)",
+      "densityHint": "Från din produktetikett — t.ex. 1.2. Aldrig antagit: vätskedensiteter varierar kraftigt.",
+      "nutrient": "Mål näringsämne",
+      "nutrientHint": "Utfodringsförinställningar publiceras för kväve. För fosfat eller kaliumklorid, ange ditt eget mål.",
+      "nutrientN": "Kväve (N)",
+      "nutrientP": "Fosfat (P₂O5)",
+      "nutrientK": "Potaska (K₂O)",
+      "pkCustomNote": "Det finns ingen förinställning av förlängningsmatning för fosfat/potaska i trädgårdsskala – ange din egen målkoncentration. Samma ppm matematik gäller."
+    }
   }
 }
