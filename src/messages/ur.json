@@ -1095,7 +1095,8 @@
       "startDate": "پہلے کھانا کھلانا",
       "addToGarden": "میرے باغ میں شیڈول شامل کریں۔",
       "addedToGarden": "شامل کیا گیا — میرا گارڈن → یاد دہانیاں دیکھیں۔",
-      "gardenHint": "یاد دہانیاں وقت کی عمومی تجاویز ہیں، نسخے نہیں۔ اگر پودے دباؤ میں نظر آتے ہیں تو کھانا کھلانا چھوڑ دیں۔"
+      "gardenHint": "یاد دہانیاں وقت کی عمومی تجاویز ہیں، نسخے نہیں۔ اگر پودے دباؤ میں نظر آتے ہیں تو کھانا کھلانا چھوڑ دیں۔",
+      "scheduleTitle": "Suggested: Feed plants ({ppm} ppm {nutrient})"
     },
     "presets": {
       "gentle": {
@@ -1128,7 +1129,12 @@
       "perBed": "بستر کے لیے کل",
       "perBedHint": "بستر پر یکساں طور پر لگائیں آبپاشی کے پانی میں مکس کریں۔",
       "scheduleTitle": "کھانا کھلانے کا شیڈول (اگلا 6)",
-      "scheduleHint": "آپ کی منتخب کردہ تعدد کی بنیاد پر۔ یہ منصوبہ بندی کی مدد ہیں - پودوں کے ردعمل کو ایڈجسٹ کریں۔"
+      "scheduleHint": "آپ کی منتخب کردہ تعدد کی بنیاد پر۔ یہ منصوبہ بندی کی مدد ہیں - پودوں کے ردعمل کو ایڈجسٹ کریں۔",
+      "total": "Total for {litres} L",
+      "formulaNote": "Math: {grade} at {ppm} ppm {nutrient} → grams per litre = {ppm} ÷ (%{nutrient} × 10).",
+      "bedVolumeHint": "{area} {unit} × {depth} cm root zone.",
+      "formulaNoteLiquid": "Math: {grade} at {ppm} ppm {nutrient} → grams per litre = {ppm} ÷ (%{nutrient} × 10), then ÷ {density} g/ml density = ml per litre.",
+      "formulaNoteBed": "Bed volume = area × {depth} cm depth."
     },
     "method": {
       "eyebrow": "یہ کیسے کام کرتا ہے۔",
@@ -1417,6 +1423,9 @@
         "q": "کیا میرا مقام یا کھیت کی حد محفوظ یا شیئر کی جاتی ہے؟",
         "a": "نہیں۔ حد بندی کے نکات صرف آپ کے براؤزر کی میموری میں رہتے ہیں جب تک آپ ناپتے ہیں۔ ٹولز کے درمیان صرف حتمی رقبے کا عدد منتقل ہوتا ہے — آپ کے نقاط کبھی عوامی طور پر محفوظ نہیں کیے جاتے، شیئر ہونے والے لنکس میں نہیں ڈالے جاتے، اور نہ ہمارے سرورز کو بھیجے جاتے ہیں۔"
       }
+    ],
+    "howSteps": [
+      "Open the map and find your field"
     ]
   },
   "kitchenGarden": {
@@ -1488,7 +1497,8 @@
         "q": "میرا منصوبہ کہاں محفوظ ہوتا ہے؟",
         "a": "'Save plan to My Garden' دبانے پر آپ کے براؤزر کے My Garden (مقامی اسٹوریج) میں، بالکل لینڈ ایریا کیلکولیٹر کے محفوظ شدہ پلاٹس کی طرح۔ آلات کے درمیان ہم آہنگی کے لیے سائن ان کریں۔"
       }
-    ]
+    ],
+    "savedPlotName": "Kitchen garden — {date}"
   },
   "suggestions": {
     "improveTranslation": "اس ترجمہ کو بہتر بنائیں",
