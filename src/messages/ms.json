@@ -78,7 +78,8 @@
       "tipGeneralBody": "Buka injap dram hanya selepas 1–1.5 saluran air telah memasuki medan (bukan pada permulaan) untuk pengagihan seragam.",
       "shareButton": "Kongsi di WhatsApp",
       "shareCopy": "salin",
-      "shareCopied": "disalin!"
+      "shareCopied": "disalin!",
+      "yieldAdjusted": "Dilaraskan untuk sasaran hasil {yield} t/ha"
     },
     "title": "Dos baja yang tepat, lengkap dengan kiraannya.",
     "soilTestCard": {
@@ -101,6 +102,14 @@
       {
         "q": "Mengapa sesetengah tanaman tidak boleh dipilih?",
         "a": "Tanaman hanya boleh dipilih jika dos NPK yang disyorkan telah disahkan terhadap sumber yang diterbitkan. Kami lebih rela menyahdayakan tanaman daripada mereka angkanya — tanaman yang belum disahkan ditanda \"data dalam semakan\" sehingga disahkan."
+      },
+      {
+        "q": "Bagaimanakah kanal dan marla ditukar?",
+        "a": "1 ekar = 8 kanal = 160 marla, dan 1 kanal = 20 marla. Dalam metrik: 1 ekar = 0.4047 ha, 1 kanal = 0.0506 ha, 1 marla = 0.00253 ha. Kalkulator ini menukar kawasan anda kepada hektar, menggunakan dos per hektar, kemudian menskalakannya kembali."
+      },
+      {
+        "q": "Mengapakah sesetengah tanaman dinyahdayakan?",
+        "a": "Tanaman hanya boleh dipilih apabila dos NPK yang disyorkan telah disahkan daripada sumber yang diterbitkan. Kami lebih rela menyahdayakan tanaman daripada mereka-reka angkanya — tanaman yang belum disahkan ditandakan \"data sedang disemak\" sehingga disahkan."
       }
     ],
     "organic": {
@@ -184,6 +193,50 @@
       {
         "a": "Ya — kalkulator, pustaka dan panduan adalah percuma. Akaun hanya diperlukan untuk ciri seperti menyimpan diagnosis.",
         "q": "Adakah Fertilizer Dose percuma?"
+      },
+      {
+        "q": "Bolehkah saya mencampurkan Urea dan DAP bersama-sama?",
+        "a": "Ya, Urea dan DAP boleh diaplikasikan bersama sebagai dos asas (basal) semasa menyemai. DAP membekalkan fosforus (46% P₂O₅) serta 18% nitrogen, manakala Urea menambah lebih banyak nitrogen (46% N). Amalan biasa adalah dengan mencampurkannya sebelum ditabur. Walau bagaimanapun, elakkan mencampurkan Urea dengan SSP (single super phosphate) dalam aplikasi yang sama jika bancuhan dibiarkan lama — ia boleh menjadi berketul. Sentiasa semak nisbah NPK yang disyorkan untuk tanaman anda terlebih dahulu."
+      },
+      {
+        "q": "Apakah itu dos asas (basal) dalam pembajaan?",
+        "a": "Dos asas (basal) ialah baja yang diaplikasikan semasa atau sebelum menyemai/menanam, digaul ke dalam tanah. Ia biasanya merangkumi keperluan penuh fosforus dan kalium serta sebahagian nitrogen (biasanya 1/3 hingga 1/2). Baki nitrogen diberikan kemudian sebagai baja tabur atas — contohnya, Urea semasa fasa pembentukan anak (tillering) untuk gandum. Aplikasi asas memastikan nutrien sedia ada untuk akar muda sejak hari pertama."
+      },
+      {
+        "q": "DAP vs SSP — mana yang lebih baik?",
+        "a": "Ia bergantung pada tanah dan tanaman anda. DAP (18-46-0) mempunyai kepekatan fosforus yang lebih tinggi (46% P₂O₅), jadi anda memerlukan kurang produk per ekar — memudahkan pengangkutan dan pengendalian. SSP (16% P₂O₅) turut membekalkan sulfur (~11%) dan kalsium (~19%), menjadikannya lebih baik untuk tanaman biji minyak, kekacang, dan tanah yang kekurangan sulfur. DAP biasanya lebih murah per kg fosforus, tetapi SSP menambah nutrien sekunder. Gunakan alat Banding kami untuk menyemak mana yang lebih murah per kg P₂O₅ mengikut harga tempatan anda."
+      },
+      {
+        "q": "Apakah itu dos baja berasaskan ujian tanah?",
+        "a": "Ujian tanah mengukur nitrogen, fosforus, kalium, pH, dan bahan organik sedia ada di dalam tanah anda. Daripada menggunakan cadangan umum, dos baja diselaraskan — jika tanah anda sudah mempunyai fosforus yang tinggi, anda kurang menggunakan baja P. Ini menjimatkan wang dan mengelakkan pembajaan berlebihan. Kami mengesyorkan agar membuat ujian tanah setiap 2-3 tahun melalui jabatan pertanian tempatan anda. Kalkulator kami menggunakan syor standard; untuk dos ketepatan berasaskan ujian tanah, rujuk makmal ujian tanah tempatan anda menggunakan angka standard ini sebagai panduan permulaan."
+      },
+      {
+        "q": "Berapa lamakah Urea bertahan di dalam tanah?",
+        "a": "Selepas diaplikasikan, Urea bertukar kepada ammonium yang boleh diserap tumbuhan dalam tempoh kira-kira 2–4 hari melalui enzim tanah semula jadi, kemudian kepada nitrat sepanjang 2–4 minggu berikutnya bergantung pada suhu dan kelembapan tanah. Secara praktikal, satu aplikasi Urea membekalkan nutrien kepada tanaman selama kira-kira 4–6 minggu, sebab itulah nitrogen biasanya dibahagikan kepada 2–3 dos sepanjang musim. Kehilangan sebagai gas ammonia adalah paling tinggi pada tanah yang panas, kering, dan beralkali apabila Urea dibiarkan di permukaan tanah — menggaulkannya ke dalam tanah lembap dapat mengurangkan perkara ini."
+      },
+      {
+        "q": "Apakah perbezaan antara Urea dan DAP?",
+        "a": "Urea (46-0-0) hanya membekalkan nitrogen pada kadar 46% N — baja nitrogen paling pekat yang biasa didapati. DAP (18-46-0) membekalkan 18% nitrogen serta 46% fosfat (P₂O₅). Secara amali, DAP digunakan sebagai dos asas semasa menyemai apabila tanaman memerlukan fosforus untuk pertumbuhan akar, manakala Urea digunakan untuk taburan atas nitrogen semasa fasa pertumbuhan aktif. Kedua-duanya memenuhi fungsi utama yang berbeza, sebab itulah petani sering menggunakannya bersama dan bukannya sebagai pengganti antara satu sama lain."
+      },
+      {
+        "q": "Bagaimanakah cara saya menentukan dos baja untuk pokok?",
+        "a": "Mulakan dengan ujian tanah jika boleh — ia memberitahu apa yang sedia ada dalam tanah supaya anda hanya menambah apa yang kurang. Kemudian gunakan Kalkulator Dos Pokok di Fertilizer Dose: masukkan jenis pokok dan saiz pasu atau batas anda, dan ia akan memberikan gram tepat bagi setiap pokok. Sebagai panduan, aplikasikan dalam dos kecil secara berperingkat berbanding sekali gus, siram selepas aplikasi butiran, dan sentiasa ikut kadar pada label — lebih banyak baja tidak bermakna pertumbuhan bertambah baik dan boleh merosakkan akar."
+      },
+      {
+        "q": "Berapakah jumlah NPK yang terdapat dalam tahi kandang (FYM)?",
+        "a": "Tahi kandang (FYM) yang telah reput sempurna biasanya mengandungi sekitar 0.5–1.0% nitrogen, 0.2–0.5% fosfat (P₂O₅), dan 0.5–1.0% potasy (K₂O), namun ia sangat berbeza mengikut sumber haiwan, makanan, bahan lapik, dan cara ia disimpan serta dikompos. Oleh kerana kandungan nutriennya rendah dan tidak sekata berbanding baja mineral, FYM berfungsi paling baik sebagai perapi tanah — ia menambah bahan organik, memperbaiki struktur tanah, dan membekalkan mikronutrien — manakala baja mineral menyediakan dos NPK yang tepat mengikut keperluan tanaman."
+      },
+      {
+        "q": "Bilakah waktu terbaik untuk menyembur baja foliar?",
+        "a": "Awal pagi (sebelum kira-kira jam 9–10 pagi) atau lewat petang adalah waktu terbaik untuk semburan foliar pokok. Liang daun (stoma) terbuka, suhu lebih sejuk, dan titisan semburan kekal basah lebih lama, yang meningkatkan penyerapan nutrien. Elakkan menyembur ketika cuaca panas terik tengah hari — titisan kering terlalu cepat untuk penyerapan yang baik dan baki pekat boleh membakar daun. Elakkan juga menyembur sejurus sebelum hujan yang dijangkakan, kerana ia akan membasuh baja tersebut."
+      },
+      {
+        "q": "Apakah maksud NPK pada beg baja?",
+        "a": "Tiga nombor pada beg baja (contohnya 15-15-15) ialah peratusan mengikut berat untuk nitrogen (N), fosfat (P₂O₅), dan potasy (K₂O). Jadi satu beg 50 kg 15-15-15 mengandungi 7.5 kg bagi setiap N, P₂O₅, dan K₂O. Perhatikan bahawa fosforus dan kalium dinyatakan dalam bentuk oksidanya mengikut kebiasaan industri, bukannya P dan K unsur — kalkulator Fertilizer Dose mengendalikan penukaran ini untuk anda."
+      },
+      {
+        "q": "Apakah kegunaan baja ammonium sulphate?",
+        "a": "Ammonium sulphate (21-0-0 serta 24% sulfur) membekalkan nitrogen bersama-sama sulfur, menjadikannya berguna di kawasan tanah yang kekurangan sulfur — lazim dalam bijirin berhasil tinggi dan biji minyak. Ia mempunyai kesan mengasidkan tanah, jadi ia sangat sesuai untuk tanah neutral hingga beralkali, tetapi gunakannya dengan berhati-hati pada tanah yang sedia berasid. Ia juga merupakan pilihan baik apabila anda memerlukan nitrogen tanpa menambah sebarang fosforus atau kalium."
       }
     ],
     "title": "Soalan yang sering ditanya petani",
@@ -540,7 +593,20 @@
     "eyebrow": "Plant Doctor",
     "title": "Tunjukkan daunnya. Kami bantu membacanya.",
     "metaTitle": "Plant Doctor — Diagnosis Masalah Tanaman dengan AI",
-    "metaDescription": "Muat naik foto tanaman dan jelaskan gejala untuk diagnosis berbantukan AI yang mengandungi punca, tindakan dan langkah pencegahan."
+    "metaDescription": "Muat naik foto tanaman dan jelaskan gejala untuk diagnosis berbantukan AI yang mengandungi punca, tindakan dan langkah pencegahan.",
+    "form": {
+      "photoLabel": "Foto tanaman",
+      "photoHint": "Klik atau lepaskan foto di sini",
+      "photoTypes": "JPG, PNG atau WebP, maks 5 MB",
+      "cropLabel": "Tanaman (jika tahu)",
+      "cropPlaceholder": "Tidak pasti / lain-lain",
+      "symptomsLabel": "Terangkan gejala",
+      "symptomsHint": "Apa yang anda nampak? Bintik kuning, layu, daun berlubang, bila ia bermula, bahagian pokok mana…",
+      "symptomsPlaceholder": "cth. Bintik kuning dengan tepi coklat pada daun bawah gandum, bermula kira-kira seminggu lalu selepas hujan…",
+      "submit": "Diagnosis tanaman saya",
+      "analyzing": "Menganalisis…",
+      "diagnosisTitle": "Diagnosis"
+    }
   },
   "growing": {
     "searchPlaceholder": "Cari mengikut nama…",
@@ -933,7 +999,19 @@
       "detailCta": "Lihat butiran"
     },
     "searchPlaceholder": "Cari baja…",
-    "searchNoResults": "Tiada baja yang sepadan dengan carian anda."
+    "searchNoResults": "Tiada baja yang sepadan dengan carian anda.",
+    "taglines": {
+      "urea": "Baja nitrogen paling pekat yang biasa digunakan.",
+      "dap": "Sumber fosforus asas standard — dengan tambahan nitrogen.",
+      "mop": "Sumber kalium yang menjimatkan untuk kebanyakan tanaman ladang.",
+      "ssp": "Fosforus serta sulfur dan kalsium dalam satu butiran.",
+      "sop": "Kalium bebas klorida untuk tanaman bernilai tinggi dan sensitif.",
+      "ammonium-sulphate": "Nitrogen serta sulfur, dengan kesan pengasidan ke atas tanah.",
+      "farmyard-manure": "Tahi kandang tradisional — rendah nutrien, tinggi nilai pembaikan tanah.",
+      "compost": "Sisa ladang dan dapur yang terurai — nutrien berbeza mengikut bahan asal.",
+      "vermicompost": "Baja diproses cacing tanah — lebih kaya daripada FYM, tetapi bergantung pada bahan suapan.",
+      "green-manure": "Kilang nitrogen hidup — ditanam, kemudian dibajak masuk ke tanah sebelum tanaman utama."
+    }
   },
   "chart": {
     "metaTitle": "Fertilizer Dose — Carta Dos Baja & Rujukan Pantas NPK",
@@ -1021,7 +1099,8 @@
       "startDate": "Memberi makan pertama",
       "addToGarden": "Tambahkan jadual pada My Garden",
       "addedToGarden": "Ditambah — lihat Taman Saya → Peringatan.",
-      "gardenHint": "Peringatan ialah cadangan masa generik, bukan preskripsi. Langkau penyusuan jika tumbuhan kelihatan tertekan."
+      "gardenHint": "Peringatan ialah cadangan masa generik, bukan preskripsi. Langkau penyusuan jika tumbuhan kelihatan tertekan.",
+      "scheduleTitle": "Dicadangkan: Baja tanaman ({ppm} ppm {nutrient})"
     },
     "presets": {
       "gentle": {
@@ -1054,18 +1133,60 @@
       "perBed": "Jumlah untuk katil",
       "perBedHint": "Campurkan ke dalam air pengairan yang disapu rata di atas katil.",
       "scheduleTitle": "Jadual pemakanan (6 seterusnya)",
-      "scheduleHint": "Berdasarkan kekerapan pilihan anda. Ini adalah alat bantu perancangan — sesuaikan dengan cara tumbuhan bertindak balas."
+      "scheduleHint": "Berdasarkan kekerapan pilihan anda. Ini adalah alat bantu perancangan — sesuaikan dengan cara tumbuhan bertindak balas.",
+      "total": "Jumlah untuk {litres} L",
+      "formulaNote": "Kiraan: {grade} pada {ppm} ppm {nutrient} → gram seliter = {ppm} ÷ (%{nutrient} × 10).",
+      "bedVolumeHint": "{area} {unit} × {depth} cm zon akar.",
+      "formulaNoteLiquid": "Kiraan: {grade} pada {ppm} ppm {nutrient} → gram seliter = {ppm} ÷ (%{nutrient} × 10), kemudian ÷ ketumpatan {density} g/ml = ml seliter.",
+      "formulaNoteBed": "Isipadu batas = luas × {depth} cm kedalaman."
     },
     "method": {
       "eyebrow": "Bagaimana ia berfungsi",
       "title": "Dos mengikut ppm, cara penanam melakukannya",
-      "desc": "Penanam komersial tidak meneka sesudu — mereka mencampurkan baja kepada kepekatan nutrien sasaran dalam bahagian per juta (ppm). Kalkulator ini membawa kaedah yang sama kepada tukang kebun rumah."
+      "desc": "Penanam komersial tidak meneka sesudu — mereka mencampurkan baja kepada kepekatan nutrien sasaran dalam bahagian per juta (ppm). Kalkulator ini membawa kaedah yang sama kepada tukang kebun rumah.",
+      "steps": [
+        {
+          "t": "Pilih gred baja anda",
+          "d": "Baca nombor N-P-K pada beg baja, cth. 20-20-20, atau masukkan gred tersuai."
+        },
+        {
+          "t": "Pilih kepekatan pembajaan",
+          "d": "Tumbuhan dalam rumah dan yang lambat tumbuh hidup subur pada kadar lembut (~100 ppm N); kebanyakan tumbuhan pasu pada kadar biasa (~150 ppm N); tumbuhan aktif yang memerlukan banyak nutrien boleh menerima ~200 ppm N."
+        },
+        {
+          "t": "Bancuh dan siram seperti biasa",
+          "d": "Larutkan jumlah gram yang dikira dalam bekas siraman anda dan siram seperti biasa, biarkan lebihan mengalir keluar. Baja setiap kali menyiram pada kadar ini, atau selang sekali pada kepekatan ganda dua — jangan buat kedua-duanya sekali."
+        }
+      ]
     },
     "sources": {
       "eyebrow": "Sumber",
       "title": "Dari mana datangnya kadar pemakanan",
-      "note": "Pratetap menggunakan hujung rendah setiap julat yang diterbitkan, pilihan konservatif untuk tahap cahaya rumah. Sentiasa ikuti label produk anda dan nasihat perkhidmatan sambungan tempatan anda."
-    }
+      "note": "Pratetap menggunakan hujung rendah setiap julat yang diterbitkan, pilihan konservatif untuk tahap cahaya rumah. Sentiasa ikuti label produk anda dan nasihat perkhidmatan sambungan tempatan anda.",
+      "items": [
+        "UMass Extension — \"Fertilizing Bedding Plant Seedlings\" (D. Cox, 2011): anak benih batas 200–250 ppm N pembajaan berterusan; jenis tumbuh perlahan 100–150 ppm N sehingga stabil.",
+        "Michigan State University Extension (E2186): tanaman dalam pasu/bekas — baja pelepasan perlahan serta suplemen baja cecair pada 150–200 ppm N.",
+        "Virginia Tech SPES-744 — \"The Basics of Fertilizer Calculations for Greenhouse Crops\": formula g/L = ppm ÷ (%N × 10) dan contoh pengiraan 200 ppm N."
+      ]
+    },
+    "faq": [
+      {
+        "q": "Berapa banyak baja yang diperlukan oleh tanaman dalam pasu?",
+        "a": "Kebanyakan tanaman pasu tumbuh subur dengan larutan siraman 100–150 ppm nitrogen — kira-kira 0.5–1 g 20-20-20 seliter air. Tanaman yang memerlukan banyak nutrien seperti pokok berbunga semusim yang aktif boleh menerima sehingga 200 ppm. Mulakan dengan kadar sederhana; anda sentiasa boleh menambah dos pada masa akan datang."
+      },
+      {
+        "q": "Bolehkah saya gunakan sudu sahaja dan bukannya menimbang?",
+        "a": "Satu sudu teh paras baja butiran adalah kira-kira 5–6 g, tetapi ketumpatan berbeza mengikut produk, jadi sudu hanyalah panduan kasar. Untuk pasu kecil dan anak benih, penimbang gram digital jauh lebih tepat — kesilapan 50% menggunakan sudu sangat mudah berlaku dan mencukupi untuk membakar akar."
+      },
+      {
+        "q": "Patutkah saya membaja setiap kali saya menyiram?",
+        "a": "Pada kadar sederhana dan biasa di atas, ya — begitulah cara penanam komersial melakukannya (\"fertigasi\"). Alternatifnya ialah membaja separuh lebih jarang dengan kepekatan ganda dua. Jangan buat kedua-duanya: pilih satu jadual dan perhatikan tindak balas tanaman."
+      },
+      {
+        "q": "Apakah tanda-tanda terlebih baja?",
+        "a": "Tepi daun menjadi coklat dan garing, pokok layu walaupun tanah basah, dan lapisan kerak putih terbentuk di permukaan tanah. Jika anda melihat tanda-tanda ini, siram pasu dengan air kosong sehingga air mengalir keluar dari lubang saliran, dan langkau jadual pembajaan seterusnya."
+      }
+    ]
   },
   "landArea": {
     "eyebrow": "Alat pertanian percuma",
@@ -1152,10 +1273,84 @@
       "conversionTitle": "Jadual penukaran kawasan tanah",
       "conversionNote": "Definisi yang tepat. Unit serantau hanya muncul di tempat yang disahkan.",
       "sourcesTitle": "Sumber & metodologi",
-      "sourcesBody": "Unit universal menggunakan definisi SI dan empayar yang tepat (1 ekar = 4,046.8564224 m²; 1 hektar = 10,000 m²). Kanal dan Marla menggunakan standard hasil Punjab: 1 karam = 5.5 kaki, 1 marla = 9 karam persegi = 272.25 kaki persegi, 1 kanal = 20 marla = 5,445 kaki persegi. Semua pengiraan dijalankan dalam meter persegi secara dalaman dan tukar sekali kepada unit paparan — tiada pembulatan berantai."
+      "sourcesBody": "Unit universal menggunakan definisi SI dan empayar yang tepat (1 ekar = 4,046.8564224 m²; 1 hektar = 10,000 m²). Kanal dan Marla menggunakan standard hasil Punjab: 1 karam = 5.5 kaki, 1 marla = 9 karam persegi = 272.25 kaki persegi, 1 kanal = 20 marla = 5,445 kaki persegi. Semua pengiraan dijalankan dalam meter persegi secara dalaman dan tukar sekali kepada unit paparan — tiada pembulatan berantai.",
+      "formulas": [
+        {
+          "name": "Segi empat tepat",
+          "formula": "Luas = panjang × lebar",
+          "example": "100 m × 50 m = 5,000 m²"
+        },
+        {
+          "name": "Segi empat sama",
+          "formula": "Luas = sisi²",
+          "example": "25 m × 25 m = 625 m²"
+        },
+        {
+          "name": "Segi tiga",
+          "formula": "Luas = ½ × tapak × tinggi",
+          "example": "½ × 40 m × 30 m = 600 m²"
+        },
+        {
+          "name": "Trapezium",
+          "formula": "Luas = ((sisi A + sisi B) / 2) × tinggi",
+          "example": "((60 m + 40 m) / 2) × 30 m = 1,500 m²"
+        },
+        {
+          "name": "Empat sisi + pepenjuru",
+          "formula": "Bahagikan kepada dua segi tiga sepanjang pepenjuru; selesaikan setiap satu menggunakan formula Heron dan jumlahkan",
+          "example": "Tepat — bukan anggaran"
+        }
+      ]
     },
     "relatedTitle": "Alat pertanian yang berkaitan",
-    "relatedCurrent": "Anda di sini"
+    "relatedCurrent": "Anda di sini",
+    "savedPlotName": "Plot diukur ({date})",
+    "faq": [
+      {
+        "q": "Bagaimanakah cara mengira luas tanah?",
+        "a": "Ukur panjang dan lebar dalam unit yang sama dan darabkan: luas = panjang × lebar. Untuk bentuk ganjil, bahagikan tanah kepada segi empat dan segi tiga, kira setiap satu, dan jumlahkannya."
+      },
+      {
+        "q": "Bagaimanakah cara mengira luas tanah pertanian?",
+        "a": "Gunakan geometri yang sama, kemudian tukar kepada unit yang digunakan di wilayah anda — ekar, hektar, atau unit tempatan seperti kanal dan marla di Pakistan. Kalkulator luas tanah pertanian ini menukar secara automatik dan boleh menghantar hasilnya terus ke Kalkulator Dos Baja."
+      },
+      {
+        "q": "Berapakah ekar plot ini?",
+        "a": "Masukkan panjang dan lebar plot anda di atas dan lihat angka ekar daripada keputusan — tanpa perlu mengira secara manual. Jika anda mengukur dalam kaki, kalkulator menukar kaki persegi kepada ekar secara automatik (43,560 kaki persegi = 1 ekar)."
+      },
+      {
+        "q": "Bagaimanakah cara mengira luas tanah dalam kaki persegi?",
+        "a": "Darabkan panjang dalam kaki dengan lebar dalam kaki: 100 kaki × 50 kaki = 5,000 kaki persegi. Satu ekar bersamaan 43,560 kaki persegi."
+      },
+      {
+        "q": "Bolehkah panjang empat sisi mengira plot tidak sekata dengan tepat?",
+        "a": "Tidak. Empat sisi sahaja tidak dapat menentukan luas sisi empat secara tepat — bentuknya boleh berubah sudut. Ukur pepenjuru juga dan plot tersebut boleh dibahagikan kepada dua segi tiga yang boleh diselesaikan dengan tepat. Tanpa pepenjuru, hanya anggaran berlabel boleh diberikan."
+      },
+      {
+        "q": "Bagaimanakah cara menukar ekar kepada hektar?",
+        "a": "Darabkan ekar dengan 0.404686. Satu hektar bersamaan 2.471 ekar. Gunakan mod Penukar di atas untuk sebarang pasangan unit."
+      },
+      {
+        "q": "Apakah perbezaan antara ekar dan hektar?",
+        "a": "Satu hektar (10,000 m²) adalah kira-kira 2.47 kali lebih besar daripada satu ekar (4,047 m²). Hektar adalah standard di kebanyakan negara; ekar biasa digunakan di Pakistan, India, Bangladesh dan AS."
+      },
+      {
+        "q": "Bolehkah saya mengira keluasan ladang yang tidak sekata?",
+        "a": "Ya — gunakan mod Tidak Sekata: bahagikan ladang anda kepada segi empat tepat, segi empat sama, segi tiga atau trapezium, masukkan setiap bahagian, dan kalkulator akan menjumlahkannya."
+      },
+      {
+        "q": "Mengapakah sesetengah unit tanah tradisional berbeza mengikut wilayah?",
+        "a": "Unit seperti bigha, marla dan kanal berasal daripada sistem hasil tanah tempatan, jadi saiznya berbeza mengikut wilayah dan kebiasaan. Kami hanya menawarkan unit serantau yang penukarannya telah disahkan — contohnya standard hasil Punjab untuk kanal/marla — dan kami melabelkan standard yang digunakan."
+      },
+      {
+        "q": "Bolehkah saya menggunakan kawasan yang dikira dalam Kalkulator Dos Baja?",
+        "a": "Ya. Tekan 'Gunakan dalam Kalkulator Baja' dan kawasan, unit, negara serta wilayah anda dipindahkan secara automatik — tidak perlu menaip semula. Anda masih perlu memilih tanaman anda di sana, kerana keluasan tanah sahaja tidak menentukan dos baja."
+      },
+      {
+        "q": "Adakah ini ukur tanah rasmi yang sah di sisi undang-undang?",
+        "a": "Tidak. Alat ini memberikan anggaran berguna daripada ukuran anda sendiri untuk keputusan perladangan. Sempadan undang-undang, pertikaian dan rekod rasmi memerlukan juruukur bertauliah atau pihak berkuasa hasil tanah."
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Alat Pertanian",
@@ -1216,7 +1411,35 @@
     "bannerProfit": "Anggaran Keuntungan",
     "bannerDismiss": "Tolak",
     "relatedTitle": "Alat berkaitan",
-    "relatedCurrent": "Anda di sini"
+    "relatedCurrent": "Anda di sini",
+    "howSteps": [
+      "Buka peta dan cari ladang anda — carian tidak diperlukan; gerakkan dan zum ke kawasan tersebut, atau pusatkan pada lokasi anda.",
+      "Ketik peta untuk meletakkan titik sempadan di sekeliling ladang. Seret mana-mana titik untuk melaraskannya; ketik titik bernombor untuk memadamkannya.",
+      "Dengan 3 atau lebih titik, keluasan dikira menggunakan matematik geodesik (mengambil kira kelengkungan bumi) — tepat untuk sebarang latitud.",
+      "Gunakan keluasan tersebut dalam Kalkulator Luas Tanah, kemudian dalam Kalkulator Dos Baja atau Kalkulator Keuntungan."
+    ],
+    "faq": [
+      {
+        "q": "Bagaimanakah kalkulator keluasan peta berfungsi?",
+        "a": "Ketik peta untuk meletakkan titik sempadan di sekeliling ladang anda. Sebaik sahaja anda mempunyai sekurang-kurangnya 3 titik, alat ini mengira kawasan tertutup menggunakan matematik geodesik yang mengambil kira kelengkungan bumi — tepat pada mana-mana latitud, tidak seperti ukuran skrin rata."
+      },
+      {
+        "q": "Adakah kawasan yang diukur setepat ukuran juruukur rasmi?",
+        "a": "Tidak. Ia adalah anggaran berguna berdasarkan tempat anda meletakkan titik dan penjajaran imej peta. Untuk pertikaian undang-undang, rekod tanah, atau transaksi rasmi, lantik juruukur tempatan yang bertauliah."
+      },
+      {
+        "q": "Adakah ini menggunakan Google Maps?",
+        "a": "Tidak. Peta ini dikuasakan oleh OpenStreetMap, peta komuniti percuma dan terbuka. Tiada integrasi Google Maps dan tiada kaitan dengan Google."
+      },
+      {
+        "q": "Bolehkah saya menggunakan kawasan yang diukur untuk pengiraan baja?",
+        "a": "Ya — butang “Gunakan Kawasan Ini” menghantar kawasan yang diukur ke Kalkulator Luas Tanah, dari mana ia mengalir ke Kalkulator Dos Baja dan Kalkulator Keuntungan. Keluasan tanah sahaja tidak menghasilkan cadangan baja; tanaman dan wilayah yang disahkan masih diperlukan."
+      },
+      {
+        "q": "Adakah lokasi atau sempadan ladang saya disimpan atau dikongsi?",
+        "a": "Tidak. Titik sempadan hanya wujud dalam memori pelayar anda semasa anda mengukur. Hanya angka keluasan akhir yang dipindahkan antara alat — koordinat anda tidak pernah disimpan secara terbuka, diletakkan dalam pautan yang boleh dikongsi, atau dihantar ke pelayan kami."
+      }
+    ]
   },
   "kitchenGarden": {
     "eyebrow": "Perancang taman dapur",
@@ -1266,7 +1489,31 @@
     "saved": "Pelan disimpan ke Taman Saya.",
     "openMyGarden": "Buka Taman Saya",
     "savedPlotNote": "{sqm} m² pelan taman dapur untuk {month}, {region}; {count} tanaman dipilih.",
-    "faqTitle": "Soalan Lazim berkebun dapur"
+    "faqTitle": "Soalan Lazim berkebun dapur",
+    "emptyBody": "Kami belum mempunyai tempoh penanaman sayur-sayuran atau herba yang disahkan untuk {region} pada bulan {month}. Kami tidak mereka-reka maklumat — cuba bulan atau wilayah lain, atau semak kalendar penanaman penuh apabila lebih banyak data serantau disahkan.",
+    "savedPlotName": "Kebun dapur — {date}",
+    "faq": [
+      {
+        "q": "Apakah yang boleh saya tanam di kebun dapur kecil pada bulan ini?",
+        "a": "Ia bergantung pada wilayah anda dan bulan tersebut. Masukkan butiran plot anda di atas dan perancang hanya akan menyenaraikan sayur-sayuran dan herba dengan tempoh penanaman yang disahkan untuk pilihan anda — dengan sumber dinyatakan pada setiap cadangan."
+      },
+      {
+        "q": "Adakah perancang memberitahu jarak tanaman?",
+        "a": "Belum lagi. Jarak barisan dan pokok belum disahkan untuk tanaman ini dalam data kami, jadi perancang menyatakan hal ini secara telus daripada mereka-reka angka. Rujuk panduan khidmat nasihat pertanian tempatan anda untuk maklumat jarak tanaman."
+      },
+      {
+        "q": "Bagaimanakah ini berbeza daripada kalendar penanaman?",
+        "a": "Kalendar penanaman menunjukkan setiap tempoh yang disahkan untuk wilayah dan bulan, termasuk tanaman ladang. Perancang ini memfokuskan kepada sayur-sayuran dan herba yang sesuai untuk kebun rumah, menambah saiz plot dan pendedahan cahaya matahari anda, lalu menukar pilihan tersebut kepada pelan susun atur mudah yang boleh anda simpan ke Kebun Saya."
+      },
+      {
+        "q": "Bolehkah saya menggunakan ukuran keluasan tanah saya di sini?",
+        "a": "Ya. Butang “Rancang Kebun Dapur” pada Kalkulator Luas Tanah menghantar ukuran keluasan anda terus ke dalam perancang ini."
+      },
+      {
+        "q": "Di manakah pelan saya disimpan?",
+        "a": "Dalam Kebun Saya (storan tempatan pelayar anda) apabila anda menekan “Simpan pelan ke Kebun Saya”, sama seperti plot yang disimpan daripada Kalkulator Luas Tanah. Log masuk untuk menyegerakkannya merentas peranti."
+      }
+    ]
   },
   "suggestions": {
     "improveTranslation": "Perbaiki terjemahan ini",
