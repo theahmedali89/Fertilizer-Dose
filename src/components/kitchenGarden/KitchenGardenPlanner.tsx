@@ -350,7 +350,7 @@ export function KitchenGardenPlanner({
                         {s.localName ?? s.itemName}
                         {s.itemUrdu && <span className="font-normal text-ink-soft"> · {s.itemUrdu}</span>}
                       </p>
-                      {s.scientificName && (
+                      {s.scientificName && locale === "en" && (
                         <p className="text-xs italic text-ink-faint mt-0.5">{s.scientificName}</p>
                       )}
                       <div className="flex flex-wrap gap-1.5 mt-2">

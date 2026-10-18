@@ -106,7 +106,7 @@ export async function GrowingDetail({
               <Badge variant="review">{t("inReviewBadge")}</Badge>
             )}
           </div>
-          {item.scientificName && (
+          {item.scientificName && !localName && (
             <p className="mt-2 italic text-ink-faint">{item.scientificName}</p>
           )}
           {item.plantSubcategory && (

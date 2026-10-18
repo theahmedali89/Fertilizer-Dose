@@ -104,7 +104,7 @@ export async function GrowThisMonth({ locale }: { locale: string }) {
                     {activityLabel[h.activityType]}
                   </span>
                 </div>
-                {h.scientificName && (
+                {h.scientificName && locale === "en" && (
                   <p className="text-xs italic text-ink-faint mt-0.5">{h.scientificName}</p>
                 )}
                 <p className="mt-2 text-sm text-ink-soft capitalize">

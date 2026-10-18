@@ -74,7 +74,7 @@ export function PlantingHitCard({
                 </span>
               )}
             </h3>
-            {hit.scientificName && (
+            {hit.scientificName && locale === "en" && (
               <p className="text-xs italic text-ink-faint mt-0.5">{hit.scientificName}</p>
             )}
           </div>

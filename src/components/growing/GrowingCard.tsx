@@ -51,7 +51,7 @@ export function GrowingCard({
               <Badge variant="review">{inReviewLabel}</Badge>
             )}
           </div>
-          {item.scientificName && (
+          {item.scientificName && locale === "en" && (
             <p className="text-sm italic text-ink-faint mt-0.5">{item.scientificName}</p>
           )}
           {(seasonText || item.region) && (
