@@ -110,6 +110,10 @@
       {
         "a": "Una coltura è selezionabile solo quando la dose NPK raccomandata è verificata rispetto a una fonte pubblicata. Preferiamo disabilitare una coltura piuttosto che inventarne i valori — le colture non verificate sono contrassegnate come \"data in review\" fino a conferma.",
         "q": "Perché alcune colture sono disabilitate?"
+      },
+      {
+        "a": "Stabilisci prima quanti chilogrammi di ciascun nutriente (N, P₂O₅, K₂O) servono alla tua coltura, poi dividi per la percentuale del fertilizzante — ad esempio, 100 kg di azoto richiedono circa 217 kg di Urea (46% N). Il calcolatore in questa pagina lo fa automaticamente per la tua coltura e la dimensione del campo.",
+        "q": "Come si calcola il fertilizzante NPK in kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Apri la guida alla coltura",
       "openCalculator": "Calcola il costo del fertilizzante",
       "figuresDisclaimerTitle": "Avviso sui dati",
-      "figuresDisclaimer": "Tutti i prezzi, le rese e i costi utilizzati qui sono tue supposizioni: non forniamo dati di mercato. I risultati sono solo stime di pianificazione; verifica le tariffe attuali del mercato locale prima di prendere decisioni."
+      "figuresDisclaimer": "Tutti i prezzi, le rese e i costi utilizzati qui sono tue supposizioni: non forniamo dati di mercato. I risultati sono solo stime di pianificazione; verifica le tariffe attuali del mercato locale prima di prendere decisioni.",
+      "faqTitle": "Domande frequenti sul profitto agricolo",
+      "faq": [
+        {
+          "q": "Cos'è un calcolatore del profitto agricolo?",
+          "a": "Un calcolatore del profitto agricolo stima il profitto netto della tua coltura: ricavi attesi (resa × prezzo di vendita) meno tutti i costi degli input — sementi, fertilizzanti, antiparassitari, manodopera, irrigazione e affitto. Mostra anche il profitto per acro o ettaro, la resa di pareggio e il ROI."
+        },
+        {
+          "q": "Come calcolo la redditività di una coltura?",
+          "a": "Inserisci la resa attesa, il prezzo di vendita e tutti i costi nel calcolatore qui sopra. Calcola automaticamente profitto netto, costo per unità di resa, resa di pareggio e prezzo di pareggio. I risultati sono stime — i risultati reali dipendono dal meteo, dai prezzi di mercato e dai tuoi costi."
+        },
+        {
+          "q": "Posso calcolare il profitto per ettaro oltre che per acro?",
+          "a": "Sì. Scegli l'unità di superficie all'inizio e ogni valore — ricavi, costi, profitto, punti di pareggio — viene calcolato di conseguenza per ettaro o per acro."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Confronta fertilizzanti e colture — Confronto del costo dei nutrienti",
@@ -1038,6 +1057,69 @@
       "ssp": "Fosforo più zolfo e calcio in un unico granulo.",
       "urea": "Il concime azotato più concentrato di uso comune.",
       "vermicompost": "Letame elaborato dai lombrichi — più ricco del FYM, ma la materia prima decide tutto."
+    },
+    "detailFaqTitle": "Domande frequenti su {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "La dose esatta dipende dal fabbisogno di azoto della tua coltura — inserisci la coltura nel calcolatore di dose per una cifra precisa. L'ammonium sulphate (21-0-0 più 24% di zolfo) si applica in copertura quando la coltura ha bisogno di azoto e zolfo insieme, ed è adatto ai terreni da neutri ad alcalini grazie al suo lieve effetto acidificante.",
+          "q": "Qual è la dose di ammonium sulphate per acre?"
+        },
+        {
+          "a": "Usa l'ammonium sulphate nei terreni carenti di zolfo (comune in cereali e oleaginose) o nei terreni alcalini; usa l'Urea dove serve solo azoto economico. Entrambi forniscono azoto, ma solo l'ammonium sulphate fornisce anche zolfo.",
+          "q": "Ammonium sulphate o Urea — quale devo usare?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "Il DAP (Di-Ammonium Phosphate) è un fertilizzante minerale che fornisce il 18% di azoto e il 46% di P₂O₅ — la fonte standard di fosforo di fondo alla semina, con un bonus di azoto che aiuta le giovani colture ad attecchire.",
+          "q": "Cos'è il fertilizzante DAP?"
+        },
+        {
+          "a": "Nessuno dei due è migliore da solo: il DAP fornisce fosforo con un po' di azoto, mentre l'Urea fornisce solo azoto. La pratica comune è DAP come dose di fondo alla semina e Urea come concimazione azotata di copertura più avanti nella stagione. Usa il calcolatore di dose per trovare la giusta quantità di ciascuno per la tua coltura.",
+          "q": "DAP o Urea — quale è meglio?"
+        },
+        {
+          "a": "La dose giusta di DAP dipende dalla tua coltura e dal tuo terreno, quindi non esiste una cifra unica — inserisci la coltura nel calcolatore di dose per una raccomandazione esatta. Il DAP si applica come dose di fondo, collocato nel letto di semina al momento della semina o prima.",
+          "q": "Qual è la dose di DAP per acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "Il FYM (farmyard manure) è letame bovino ben maturo misto a lettiera — il fertilizzante organico più usato. Rilascia i nutrienti lentamente nell'arco di settimane o mesi e costruisce la struttura del suolo come i fertilizzanti chimici da soli non possono.",
+          "q": "Cos'è il fertilizzante FYM?"
+        },
+        {
+          "a": "Non per le colture ad alta resa: il FYM è ingombrante e il suo contenuto di nutrienti è basso e variabile (tipicamente 0,5–1,0% di azoto). Funziona meglio combinato con i fertilizzanti minerali — l'intervallo tipico di nutrienti per questo lotto è mostrato in questa pagina.",
+          "q": "Il FYM può sostituire completamente il fertilizzante chimico?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash è il nome comune del fertilizzante a base di cloruro di potassio. Fornisce il 60% di K₂O, rendendolo la fonte di potassio più economica per la maggior parte delle colture di campo. Potresti vederlo scritto anche come 'MOP fertilizer' o 'MOP fertiliser'.",
+          "q": "Cos'è il fertilizzante muriate of potash (MOP)?"
+        },
+        {
+          "a": "Il MOP si applica normalmente come parte della dose di fondo alla semina, insieme al tuo fertilizzante fosfatico. Evita di metterlo a diretto contatto con il seme, soprattutto nei terreni salini, a causa del suo contenuto di cloruro.",
+          "q": "Quando si deve applicare il fertilizzante MOP?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "L'Urea si converte in ammonio disponibile per le piante entro circa 2–4 giorni, poi in nitrato nelle 2–4 settimane successive a seconda della temperatura e dell'umidità del suolo. In pratica, un'applicazione di Urea nutre la coltura per circa 4–6 settimane — ecco perché l'azoto viene solitamente suddiviso in 2–3 applicazioni durante la stagione.",
+          "q": "Quanto dura l'Urea nel terreno?"
+        },
+        {
+          "a": "L'Urea fornisce solo azoto (46% N), mentre un fertilizzante NPK fornisce azoto, fosforo e potassio insieme — ad esempio, l'NPK 19-19-19 contiene il 19% di ciascuno. Se manca solo l'azoto, basta l'Urea da sola; se servono tutti e tre, usa un NPK o una combinazione di fertilizzanti semplici.",
+          "q": "Urea o NPK — qual è la differenza?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Il vermicompost è un fertilizzante organico a lento rilascio prodotto dai lombrichi, contenente azoto, fosforo, potassio più micronutrienti e microrganismi benefici. Il suo contenuto esatto di nutrienti varia con la materia prima, quindi l'intervallo tipico mostrato in questa pagina è una guida migliore di qualsiasi singola cifra.",
+          "q": "Quali nutrienti contiene il vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

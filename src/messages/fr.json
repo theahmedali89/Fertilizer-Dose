@@ -110,6 +110,10 @@
       {
         "q": "Pourquoi certaines cultures sont-elles désactivées ?",
         "a": "Une culture n'est sélectionnable que lorsque sa dose NPK recommandée est vérifiée d'après une source publiée. Nous préférons désactiver une culture plutôt qu'inventer des chiffres — les cultures non vérifiées sont marquées « données en cours d'examen »."
+      },
+      {
+        "a": "Fixez d'abord le nombre de kilogrammes de chaque élément nutritif (N, P₂O₅, K₂O) dont votre culture a besoin, puis divisez par le pourcentage de l'engrais — par exemple, 100 kg d'azote nécessitent environ 217 kg d'Urea (46 % N). Le calculateur de cette page le fait automatiquement pour votre culture et la taille de votre parcelle.",
+        "q": "Comment calculer l'engrais NPK en kg ?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Ouvrir le guide de la culture",
       "openCalculator": "Calculer le coût des engrais",
       "figuresDisclaimerTitle": "Avertissement sur les chiffres",
-      "figuresDisclaimer": "Tous les prix, rendements et coûts utilisés ici sont vos propres hypothèses — nous ne fournissons aucune donnée de marché. Les résultats ne sont que des estimations de planification ; vérifiez les tarifs actuels du marché local avant de prendre des décisions."
+      "figuresDisclaimer": "Tous les prix, rendements et coûts utilisés ici sont vos propres hypothèses — nous ne fournissons aucune donnée de marché. Les résultats ne sont que des estimations de planification ; vérifiez les tarifs actuels du marché local avant de prendre des décisions.",
+      "faqTitle": "Questions fréquentes sur le bénéfice agricole",
+      "faq": [
+        {
+          "q": "Qu'est-ce qu'un calculateur de bénéfice agricole ?",
+          "a": "Un calculateur de bénéfice agricole estime le bénéfice net de votre culture : les revenus attendus (rendement × prix de vente) moins tous les coûts des intrants — semences, engrais, pesticides, main-d'œuvre, irrigation et fermage. Il affiche aussi le bénéfice par acre ou par hectare, le rendement d'équilibre et le ROI."
+        },
+        {
+          "q": "Comment calculer la rentabilité d'une culture ?",
+          "a": "Saisissez votre rendement attendu, votre prix de vente et tous vos coûts dans le calculateur ci-dessus. Il calcule automatiquement le bénéfice net, le coût par unité de rendement, le rendement d'équilibre et le prix d'équilibre. Les résultats sont des estimations — les résultats réels dépendent de la météo, des prix du marché et de vos coûts."
+        },
+        {
+          "q": "Puis-je calculer le bénéfice par hectare aussi bien que par acre ?",
+          "a": "Oui. Choisissez votre unité de surface au début et chaque chiffre — revenus, coûts, bénéfice, seuils d'équilibre — est calculé par hectare ou par acre en conséquence."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Comparer engrais et cultures — Comparaison du coût des nutriments",
@@ -1038,6 +1057,69 @@
       "compost": "Matières organiques compostées — composition selon intrants.",
       "vermicompost": "Lombricompost riche en micro-organismes et nutriments.",
       "green-manure": "Engrais vert piégeur d'azote — cultivé puis enfoui au sol."
+    },
+    "detailFaqTitle": "Questions fréquentes sur {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "La dose exacte dépend des besoins en azote de votre culture — saisissez votre culture dans le calculateur de dose pour obtenir un chiffre précis. L'ammonium sulphate (21-0-0 plus 24 % de soufre) s'applique en couverture lorsque la culture a besoin d'azote et de soufre ensemble, et il convient aux sols neutres à alcalins grâce à son léger effet acidifiant.",
+          "q": "Quelle est la dose d'ammonium sulphate par acre ?"
+        },
+        {
+          "a": "Utilisez l'ammonium sulphate sur les sols carencés en soufre (fréquent en céréales et oléagineux) ou sur les sols alcalins ; utilisez l'Urea là où seul un azote bon marché est nécessaire. Les deux apportent de l'azote, mais seul l'ammonium sulphate apporte aussi du soufre.",
+          "q": "Ammonium sulphate ou Urea — lequel dois-je utiliser ?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "Le DAP (Di-Ammonium Phosphate) est un engrais minéral apportant 18 % d'azote et 46 % de P₂O₅ — la source de phosphore de fond standard au semis, avec un bonus d'azote qui aide les jeunes cultures à s'installer.",
+          "q": "Qu'est-ce que l'engrais DAP ?"
+        },
+        {
+          "a": "Aucun n'est meilleur à lui seul : le DAP apporte du phosphore avec un peu d'azote, tandis que l'Urea n'apporte que de l'azote. La pratique habituelle est le DAP en dose de fond au semis et l'Urea en apport d'azote en couverture plus tard dans la saison. Utilisez le calculateur de dose pour déterminer la bonne quantité de chacun pour votre culture.",
+          "q": "DAP ou Urea — lequel est le meilleur ?"
+        },
+        {
+          "a": "La bonne dose de DAP dépend de votre culture et de votre sol, il n'existe donc pas de chiffre unique — saisissez votre culture dans le calculateur de dose pour une recommandation exacte. Le DAP s'applique en dose de fond, placé dans le lit de semence au moment du semis ou avant.",
+          "q": "Quelle est la dose de DAP par acre ?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "Le FYM (farmyard manure) est du fumier de bovins bien décomposé mélangé à de la litière — l'engrais organique le plus utilisé. Il libère les éléments nutritifs lentement sur des semaines ou des mois et améliore la structure du sol comme les engrais chimiques seuls ne le peuvent pas.",
+          "q": "Qu'est-ce que l'engrais FYM ?"
+        },
+        {
+          "a": "Pas pour les cultures à haut rendement : le FYM est volumineux et sa teneur en éléments nutritifs est faible et variable (généralement 0,5–1,0 % d'azote). Il fonctionne mieux combiné aux engrais minéraux — la plage typique d'éléments nutritifs de ce lot est indiquée sur cette page.",
+          "q": "Le FYM peut-il remplacer complètement l'engrais chimique ?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash est le nom courant de l'engrais au chlorure de potassium. Il apporte 60 % de K₂O, ce qui en fait la source de potassium la plus économique pour la plupart des grandes cultures. Vous pouvez aussi le voir écrit « MOP fertilizer » ou « MOP fertiliser ».",
+          "q": "Qu'est-ce que l'engrais muriate of potash (MOP) ?"
+        },
+        {
+          "a": "Le MOP s'applique normalement dans la dose de fond au semis, avec votre engrais phosphaté. Évitez de le placer en contact direct avec la semence, surtout dans les sols salins, en raison de sa teneur en chlorure.",
+          "q": "Quand faut-il appliquer l'engrais MOP ?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "L'Urea se convertit en ammonium assimilable par les plantes en 2 à 4 jours environ, puis en nitrate au cours des 2 à 4 semaines suivantes selon la température et l'humidité du sol. Concrètement, un apport d'Urea nourrit la culture pendant environ 4 à 6 semaines — c'est pourquoi l'azote est généralement fractionné en 2 à 3 apports dans la saison.",
+          "q": "Combien de temps l'Urea reste-t-elle dans le sol ?"
+        },
+        {
+          "a": "L'Urea n'apporte que de l'azote (46 % N), tandis qu'un engrais NPK apporte azote, phosphore et potassium ensemble — par exemple, le NPK 19-19-19 contient 19 % de chacun. Si seul l'azote manque, l'Urea seule suffit ; si les trois sont nécessaires, utilisez un NPK ou une combinaison d'engrais simples.",
+          "q": "Urea ou NPK — quelle est la différence ?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Le vermicompost est un engrais organique à libération lente produit par les vers de terre, contenant de l'azote, du phosphore, du potassium ainsi que des oligo-éléments et des micro-organismes bénéfiques. Sa teneur exacte en éléments nutritifs varie selon la matière première : la plage typique indiquée sur cette page est donc un meilleur repère qu'un chiffre unique.",
+          "q": "Quels éléments nutritifs le vermicompost contient-il ?"
+        }
+      ]
     }
   },
   "chart": {

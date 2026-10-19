@@ -110,6 +110,10 @@
       {
         "q": "Warum sind einige Feldfrüchte deaktiviert?",
         "a": "Eine Feldfrucht ist nur auswählbar, wenn ihre empfohlene NPK-Dosis anhand einer veröffentlichten Quelle überprüft wurde. Wir deaktivieren eine Feldfrucht lieber, als Zahlen zu erfinden — ungeprüfte Kulturen sind bis zur Bestätigung als „Daten in Überprüfung“ markiert."
+      },
+      {
+        "a": "Legen Sie zuerst fest, wie viele Kilogramm jedes Nährstoffs (N, P₂O₅, K₂O) Ihre Kultur braucht, und teilen Sie dann durch den Prozentgehalt des Düngers — zum Beispiel brauchen 100 kg Stickstoff etwa 217 kg Urea (46 % N). Der Rechner auf dieser Seite erledigt das automatisch für Ihre Kultur und Feldgröße.",
+        "q": "Wie berechnet man NPK-Dünger in kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Kulturanleitung öffnen",
       "openCalculator": "Düngerkosten berechnen",
       "figuresDisclaimerTitle": "Hinweis zu den Zahlen",
-      "figuresDisclaimer": "Alle hier verwendeten Preise, Erträge und Kosten sind Ihre eigenen Annahmen — wir liefern keine Marktdaten. Die Ergebnisse sind nur Planungsschätzungen; prüfen Sie vor Entscheidungen die aktuellen lokalen Marktpreise."
+      "figuresDisclaimer": "Alle hier verwendeten Preise, Erträge und Kosten sind Ihre eigenen Annahmen — wir liefern keine Marktdaten. Die Ergebnisse sind nur Planungsschätzungen; prüfen Sie vor Entscheidungen die aktuellen lokalen Marktpreise.",
+      "faqTitle": "Häufige Fragen zum landwirtschaftlichen Gewinn",
+      "faq": [
+        {
+          "q": "Was ist ein Gewinnrechner für den Bauernhof?",
+          "a": "Ein Gewinnrechner für den Bauernhof schätzt den Reingewinn Ihrer Kulturpflanzen: erwartete Einnahmen (Ertrag × Verkaufspreis) abzüglich aller Betriebsmittelkosten — Saatgut, Dünger, Pflanzenschutz, Arbeit, Bewässerung und Pacht. Er zeigt auch den Gewinn pro Acre oder Hektar, die Gewinnschwelle beim Ertrag und den ROI."
+        },
+        {
+          "q": "Wie berechne ich die Rentabilität meiner Kulturen?",
+          "a": "Geben Sie Ihren erwarteten Ertrag, Verkaufspreis und alle Kosten in den obigen Rechner ein. Er berechnet automatisch Reingewinn, Kosten pro Ertragseinheit, Gewinnschwelle beim Ertrag und Gewinnschwellenpreis. Die Ergebnisse sind Schätzungen — die tatsächlichen Ergebnisse hängen von Wetter, Marktpreisen und Ihren Kosten ab."
+        },
+        {
+          "q": "Kann ich den Gewinn auch pro Hektar und nicht nur pro Acre berechnen?",
+          "a": "Ja. Wählen Sie zu Beginn Ihre Flächeneinheit, und jede Kennzahl — Einnahmen, Kosten, Gewinn, Gewinnschwellen — wird entsprechend pro Hektar oder pro Acre berechnet."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Dünger & Kulturen vergleichen — Nährstoffkostenvergleich",
@@ -1038,6 +1057,69 @@
       "compost": "Zersetzte Hof- und Haushaltsabfälle — variable Nährstoffe je nach Ausgangsstoff.",
       "vermicompost": "Wurmkompost — nährstoffreicher als normaler Mist, abhängig vom Futter.",
       "green-manure": "Eine lebende Stickstofffabrik — angebaut und vor der Hauptfrucht untergepflügt."
+    },
+    "detailFaqTitle": "Häufige Fragen zu {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "Die genaue Dosis hängt vom Stickstoffbedarf Ihrer Kultur ab — geben Sie Ihre Kultur in den Dosierrechner ein, um einen präzisen Wert zu erhalten. Ammonium sulphate (21-0-0 plus 24 % Schwefel) wird als Kopfdüngung ausgebracht, wenn die Kultur Stickstoff und Schwefel gemeinsam braucht, und eignet sich wegen seiner leicht versauernden Wirkung für neutrale bis alkalische Böden.",
+          "q": "Wie hoch ist die ammonium sulphate-Dosis pro Acre?"
+        },
+        {
+          "a": "Verwenden Sie ammonium sulphate auf schwefelarmen Böden (häufig bei Getreide und Ölsaaten) oder auf alkalischen Böden; verwenden Sie Urea, wenn nur günstiger Stickstoff gebraucht wird. Beide liefern Stickstoff, aber nur ammonium sulphate liefert zusätzlich Schwefel.",
+          "q": "Ammonium sulphate oder Urea — was sollte ich verwenden?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "DAP (Di-Ammonium Phosphate) ist ein Mineraldünger mit 18 % Stickstoff und 46 % P₂O₅ — die Standard-Phosphor-Grunddüngung zur Aussaat, mit einem Stickstoffbonus, der jungen Pflanzen beim Anwachsen hilft.",
+          "q": "Was ist DAP-Dünger?"
+        },
+        {
+          "a": "Keines ist für sich allein besser: DAP liefert Phosphor mit etwas Stickstoff, während Urea nur Stickstoff liefert. Üblich ist DAP als Grunddüngung zur Aussaat und Urea als Stickstoff-Kopfdüngung später in der Saison. Nutzen Sie den Dosierrechner, um die richtige Menge jedes Düngers für Ihre Kultur zu berechnen.",
+          "q": "DAP oder Urea — was ist besser?"
+        },
+        {
+          "a": "Die richtige DAP-Dosis hängt von Ihrer Kultur und Ihrem Boden ab — es gibt keinen pauschalen Wert. Geben Sie Ihre Kultur in den Dosierrechner ein, um eine genaue Empfehlung zu erhalten. DAP wird als Grunddüngung ausgebracht und im Saatbett zur oder vor der Aussaat platziert.",
+          "q": "Wie hoch ist die DAP-Dosis pro Acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "FYM (farmyard manure) ist gut verrotteter Rindermist mit Einstreu — der am weitesten verbreitete organische Dünger. Er gibt Nährstoffe langsam über Wochen bis Monate frei und baut die Bodenstruktur auf, was chemische Dünger allein nicht können.",
+          "q": "Was ist FYM-Dünger?"
+        },
+        {
+          "a": "Nicht bei Hochertragskulturen: FYM ist sperrig und sein Nährstoffgehalt ist gering und schwankend (typischerweise 0,5–1,0 % Stickstoff). Am besten wirkt er in Kombination mit Mineraldüngern — die typische Nährstoffspanne dieser Charge ist auf dieser Seite angegeben.",
+          "q": "Kann FYM chemische Dünger vollständig ersetzen?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash ist der gebräuchliche Name für Kaliumchlorid-Dünger. Er liefert 60 % K₂O und ist damit die wirtschaftlichste Kaliumquelle für die meisten Feldkulturen. Sie finden ihn auch als „MOP fertilizer“ oder „MOP fertiliser“ bezeichnet.",
+          "q": "Was ist muriate of potash (MOP)-Dünger?"
+        },
+        {
+          "a": "MOP wird normalerweise als Teil der Grunddüngung zur Aussaat ausgebracht, zusammen mit Ihrem Phosphordünger. Vermeiden Sie den direkten Kontakt mit dem Saatgut, besonders in salzhaltigen Böden, wegen seines Chloridgehalts.",
+          "q": "Wann sollte MOP-Dünger ausgebracht werden?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "Urea wird innerhalb von etwa 2–4 Tagen in pflanzenverfügbares Ammonium umgewandelt, dann in den folgenden 2–4 Wochen zu Nitrat — je nach Bodentemperatur und Feuchtigkeit. Praktisch versorgt eine Urea-Gabe die Kultur etwa 4–6 Wochen lang — deshalb wird Stickstoff meist auf 2–3 Gaben in der Saison aufgeteilt.",
+          "q": "Wie lange wirkt Urea im Boden?"
+        },
+        {
+          "a": "Urea liefert nur Stickstoff (46 % N), während ein NPK-Dünger Stickstoff, Phosphor und Kalium gemeinsam liefert — zum Beispiel enthält NPK 19-19-19 jeweils 19 %. Wenn nur Stickstoff fehlt, reicht Urea allein; werden alle drei Nährstoffe gebraucht, verwenden Sie einen NPK-Dünger oder eine Kombination aus Einzeldüngern.",
+          "q": "Urea oder NPK — was ist der Unterschied?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Vermicompost ist ein langsam wirkender organischer Dünger aus Regenwurmhumus, der Stickstoff, Phosphor, Kalium sowie Mikronährstoffe und nützliche Mikroorganismen enthält. Sein genauer Nährstoffgehalt hängt vom Ausgangsmaterial ab — die auf dieser Seite angegebene typische Spanne ist daher ein besserer Richtwert als ein einzelner Wert.",
+          "q": "Welche Nährstoffe enthält vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

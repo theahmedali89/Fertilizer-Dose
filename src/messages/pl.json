@@ -110,6 +110,10 @@
       {
         "q": "Dlaczego niektóre uprawy są niedostępne?",
         "a": "Uprawa jest dostępna do wyboru tylko wtedy, gdy jej zalecana dawka NPK została zweryfikowana względem opublikowanego źródła. Wolimy wyłączyć uprawę, niż wymyślać dane — niezweryfikowane uprawy są oznaczone jako „w trakcie weryfikacji” do czasu potwierdzenia."
+      },
+      {
+        "a": "Najpierw ustal, ilu kilogramów każdego składnika pokarmowego (N, P₂O₅, K₂O) potrzebuje Twoja uprawa, a następnie podziel przez procentową zawartość nawozu — na przykład 100 kg azotu wymaga około 217 kg produktu Urea (46% N). Kalkulator na tej stronie robi to automatycznie dla Twojej uprawy i wielkości pola.",
+        "q": "Jak obliczyć nawóz NPK w kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Otwórz przewodnik uprawy",
       "openCalculator": "Oblicz koszt nawozu",
       "figuresDisclaimerTitle": "Zastrzeżenie dotyczące danych",
-      "figuresDisclaimer": "Wszystkie ceny, plony i koszty użyte tutaj to Twoje własne założenia — nie dostarczamy danych rynkowych. Wyniki są jedynie szacunkami planistycznymi; przed podjęciem decyzji zweryfikuj je z aktualnymi lokalnymi cenami rynkowymi."
+      "figuresDisclaimer": "Wszystkie ceny, plony i koszty użyte tutaj to Twoje własne założenia — nie dostarczamy danych rynkowych. Wyniki są jedynie szacunkami planistycznymi; przed podjęciem decyzji zweryfikuj je z aktualnymi lokalnymi cenami rynkowymi.",
+      "faqTitle": "Częste pytania o zysk z gospodarstwa",
+      "faq": [
+        {
+          "q": "Czym jest kalkulator zysku z gospodarstwa?",
+          "a": "Kalkulator zysku z gospodarstwa szacuje zysk netto Twojej uprawy: oczekiwane przychody (plon × cena sprzedaży) minus wszystkie koszty nakładów — nasiona, nawozy, pestycydy, praca, nawadnianie i dzierżawa. Pokazuje też zysk z akra lub hektara, próg rentowności plonu oraz ROI."
+        },
+        {
+          "q": "Jak obliczyć opłacalność uprawy?",
+          "a": "Wpisz oczekiwany plon, cenę sprzedaży i wszystkie koszty do powyższego kalkulatora. Automatycznie obliczy zysk netto, koszt na jednostkę plonu, próg rentowności plonu i cenę progową. Wyniki są szacunkowe — rzeczywiste wyniki zależą od pogody, cen rynkowych i Twoich kosztów."
+        },
+        {
+          "q": "Czy mogę obliczyć zysk z hektara, a także z akra?",
+          "a": "Tak. Wybierz na początku jednostkę powierzchni, a każda wartość — przychody, koszty, zysk, progi rentowności — zostanie odpowiednio obliczona z hektara lub z akra."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Porównaj nawozy i uprawy — porównanie kosztów składników",
@@ -1038,6 +1057,69 @@
       "compost": "Przekompostowane odpady rolne i domowe — zmienne żywienie zależne od surowca.",
       "vermicompost": "Obornik przetworzony przez dżdżownice — bogatszy niż FYM, ale o wszystkim decyduje surowiec.",
       "green-manure": "Żywa fabryka azotu — uprawiana, a potem przyorana przed uprawą główną."
+    },
+    "detailFaqTitle": "Częste pytania o {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "Dokładna dawka zależy od zapotrzebowania Twojej uprawy na azot — wpisz uprawę w kalkulatorze dawki, aby uzyskać precyzyjną liczbę. Ammonium sulphate (21-0-0 plus 24% siarki) stosuje się pogłównie, gdy uprawa potrzebuje azotu i siarki jednocześnie, i nadaje się na gleby od obojętnych do alkalicznych dzięki łagodnemu działaniu zakwaszającemu.",
+          "q": "Jaka jest dawka ammonium sulphate na akr?"
+        },
+        {
+          "a": "Stosuj ammonium sulphate na glebach ubogich w siarkę (częste w zbożach i oleistych) lub na glebach alkalicznych; stosuj Urea tam, gdzie potrzebny jest tylko tani azot. Oba dostarczają azot, ale tylko ammonium sulphate dostarcza także siarkę.",
+          "q": "Ammonium sulphate czy Urea — którego użyć?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "DAP (Di-Ammonium Phosphate) to nawóz mineralny dostarczający 18% azotu i 46% P₂O₅ — standardowe źródło fosforu w dawce podstawowej podczas siewu, z bonusem azotowym, który pomaga młodym uprawom się ukorzenić.",
+          "q": "Czym jest nawóz DAP?"
+        },
+        {
+          "a": "Żaden nie jest lepszy samodzielnie: DAP dostarcza fosfor z odrobiną azotu, a Urea tylko azot. Zwykła praktyka to DAP jako dawka podstawowa podczas siewu i Urea jako azotowa dawka pogłówna później w sezonie. Użyj kalkulatora dawki, aby obliczyć właściwą ilość każdego z nich dla Twojej uprawy.",
+          "q": "DAP czy Urea — który lepszy?"
+        },
+        {
+          "a": "Właściwa dawka DAP zależy od Twojej uprawy i gleby, więc nie ma jednej liczby — wpisz uprawę w kalkulatorze dawki, aby uzyskać dokładne zalecenie. DAP stosuje się w dawce podstawowej, umieszczając w łożu siewnym podczas siewu lub przed nim.",
+          "q": "Jaka jest dawka DAP na akr?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "FYM (farmyard manure) to dobrze przefermentowany obornik bydlęcy zmieszany ze ściółką — najczęściej stosowany nawóz organiczny. Uwalnia składniki powoli przez tygodnie i miesiące oraz buduje strukturę gleby tak, jak nie potrafią same nawozy chemiczne.",
+          "q": "Czym jest nawóz FYM?"
+        },
+        {
+          "a": "Nie w uprawach wysokoplonujących: FYM jest objętościowy, a zawartość składników jest niska i zmienna (zwykle 0,5–1,0% azotu). Najlepiej działa w połączeniu z nawozami mineralnymi — typowy zakres składników dla tej partii pokazano na tej stronie.",
+          "q": "Czy FYM może całkowicie zastąpić nawóz chemiczny?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash to potoczna nazwa nawozu chlorku potasu. Dostarcza 60% K₂O, co czyni go najbardziej ekonomicznym źródłem potasu dla większości upraw polowych. Możesz też zobaczyć zapis 'MOP fertilizer' lub 'MOP fertiliser'.",
+          "q": "Czym jest nawóz muriate of potash (MOP)?"
+        },
+        {
+          "a": "MOP stosuje się zwykle jako część dawki podstawowej podczas siewu, razem z nawozem fosforowym. Unikaj umieszczania go w bezpośrednim kontakcie z nasionami, zwłaszcza na glebach zasolonych, ze względu na zawartość chlorków.",
+          "q": "Kiedy należy stosować nawóz MOP?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "Urea przekształca się w dostępny dla roślin amon w ciągu około 2–4 dni, a następnie w azotan w ciągu kolejnych 2–4 tygodni, w zależności od temperatury i wilgotności gleby. W praktyce jedna dawka Urea żywi uprawę przez około 4–6 tygodni — dlatego azot zwykle dzieli się na 2–3 dawki w sezonie.",
+          "q": "Jak długo Urea utrzymuje się w glebie?"
+        },
+        {
+          "a": "Urea dostarcza tylko azot (46% N), natomiast nawóz NPK dostarcza azot, fosfor i potas razem — na przykład NPK 19-19-19 zawiera po 19% każdego. Jeśli brakuje tylko azotu, wystarczy sama Urea; jeśli potrzebne są wszystkie trzy, użyj NPK lub kombinacji nawozów jednoskładnikowych.",
+          "q": "Urea czy NPK — jaka jest różnica?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Vermicompost to wolno działający nawóz organiczny wytwarzany przez dżdżownice, zawierający azot, fosfor, potas oraz mikroelementy i pożyteczne mikroorganizmy. Dokładna zawartość składników zależy od surowca, więc typowy zakres pokazany na tej stronie jest lepszym wskaźnikiem niż pojedyncza liczba.",
+          "q": "Jakie składniki odżywcze zawiera vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

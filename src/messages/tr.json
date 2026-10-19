@@ -110,6 +110,10 @@
       {
         "a": "Bir ürün, önerilen NPK dozu yayımlanmış bir kaynakla doğrulanmışsa seçilebilir. Rakamları uydurmaktansa ürünü devre dışı bırakmayı tercih ediyoruz — doğrulanmamış ürünler onaylanana kadar \"veri incelemede\" olarak işaretlenir.",
         "q": "Bazı ürünler neden devre dışı?"
+      },
+      {
+        "a": "Önce ürününüzün her besin maddesinden (N, P₂O₅, K₂O) kaç kilograma ihtiyacı olduğunu belirleyin, sonra gübrenin yüzdesine bölün — örneğin 100 kg azot için yaklaşık 217 kg Urea (%46 N) gerekir. Bu sayfadaki hesaplayıcı, ürününüze ve tarla büyüklüğünüze göre bunu otomatik olarak yapar.",
+        "q": "NPK gübre kg cinsinden nasıl hesaplanır?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Ürün kılavuzunu aç",
       "openCalculator": "Gübre maliyetini hesapla",
       "figuresDisclaimerTitle": "Veri sorumluluk reddi",
-      "figuresDisclaimer": "Burada kullanılan tüm fiyatlar, verimler ve maliyetler kendi varsayımlarınızdır — pazar verisi sağlamıyoruz. Sonuçlar yalnızca planlama tahminidir; karar vermeden önce güncel yerel pazar fiyatlarıyla doğrulayın."
+      "figuresDisclaimer": "Burada kullanılan tüm fiyatlar, verimler ve maliyetler kendi varsayımlarınızdır — pazar verisi sağlamıyoruz. Sonuçlar yalnızca planlama tahminidir; karar vermeden önce güncel yerel pazar fiyatlarıyla doğrulayın.",
+      "faqTitle": "Çiftlik kârı hakkında sık sorulan sorular",
+      "faq": [
+        {
+          "q": "Çiftlik kâr hesaplayıcı nedir?",
+          "a": "Çiftlik kâr hesaplayıcı, ürününüzün net kârını tahmin eder: beklenen gelir (verim × satış fiyatı) eksi tüm girdi maliyetleri — tohum, gübre, ilaç, işçilik, sulama ve kira. Ayrıca acre veya hektar başına kârı, başabaş verimi ve ROI'yi gösterir."
+        },
+        {
+          "q": "Ürün kârlılığını nasıl hesaplarım?",
+          "a": "Yukarıdaki hesaplayıcıya beklenen veriminizi, satış fiyatınızı ve tüm maliyetleri girin. Net kârı, verim birimi başına maliyeti, başabaş verimi ve başabaş fiyatı otomatik olarak hesaplar. Sonuçlar tahmindir — gerçek sonuçlar hava durumuna, piyasa fiyatlarına ve maliyetlerinize bağlıdır."
+        },
+        {
+          "q": "Kârı acre başına olduğu gibi hektar başına da hesaplayabilir miyim?",
+          "a": "Evet. Başta arazi biriminizi seçin; gelir, maliyet, kâr ve başabaş noktaları dahil her rakam buna göre hektar veya acre başına hesaplanır."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Gübre ve Ürün Karşılaştırma — Besin Maliyeti Karşılaştırması",
@@ -1038,6 +1057,69 @@
       "ssp": "Tek granülde fosfor artı kükürt ve kalsiyum.",
       "urea": "Yaygın kullanımda en yoğun azotlu gübre.",
       "vermicompost": "Solucanla işlenmiş gübre — FYM'den daha zengin, ama ham madde her şeyi belirler."
+    },
+    "detailFaqTitle": "{name} hakkında sık sorulan sorular",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "Tam doz, ürününüzün azot ihtiyacına bağlıdır — kesin rakam için doz hesaplayıcıya ürününüzü girin. Ammonium sulphate (21-0-0 artı %24 kükürt), ürünün azot ve kükürde birlikte ihtiyaç duyduğu durumlarda üst gübre olarak uygulanır ve hafif asitleştirici etkisi sayesinde nötrden alkaliye topraklara uygundur.",
+          "q": "Acre başına ammonium sulphate dozu nedir?"
+        },
+        {
+          "a": "Kükürtçe fakir topraklarda (tahıl ve yağlı tohumlarda yaygın) veya alkali topraklarda ammonium sulphate kullanın; yalnızca ucuz azot gereken yerlerde Urea kullanın. İkisi de azot sağlar, ancak kükürtü yalnızca ammonium sulphate sağlar.",
+          "q": "Ammonium sulphate mu Urea mı kullanmalıyım?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "DAP (Di-Ammonium Phosphate), %18 azot ve %46 P₂O₅ sağlayan mineral bir gübredir — ekimde standart taban fosfor kaynağıdır ve genç bitkilerin tutunmasına yardımcı olan bir azot bonusu içerir.",
+          "q": "DAP gübre nedir?"
+        },
+        {
+          "a": "Tek başına hiçbiri daha iyi değildir: DAP biraz azotla birlikte fosfor sağlar, Urea ise yalnızca azot sağlar. Olağan uygulama, ekimde taban gübre olarak DAP, sezonun ilerleyen döneminde azot üst gübresi olarak Urea'dır. Ürününüz için her birinden doğru miktarı bulmak üzere doz hesaplayıcıyı kullanın.",
+          "q": "DAP mı Urea mı — hangisi daha iyi?"
+        },
+        {
+          "a": "Doğru DAP dozu ürününüze ve toprağınıza bağlıdır, tek bir rakam yoktur — tam öneri için doz hesaplayıcıya ürününüzü girin. DAP taban gübre olarak uygulanır, ekimde veya ekimden önce tohum yatağına yerleştirilir.",
+          "q": "Acre başına DAP dozu nedir?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "FYM (farmyard manure), altlıkla karışmış iyi çürümüş sığır gübresidir — en yaygın kullanılan organik gübre. Besinleri haftalar ila aylar boyunca yavaşça salar ve kimyasal gübrelerin tek başına yapamadığı toprak yapısını oluşturur.",
+          "q": "FYM gübre nedir?"
+        },
+        {
+          "a": "Yüksek verimli ürünler için değil: FYM hacimlidir ve besin içeriği düşük ve değişkendir (genellikle %0,5–1,0 azot). Mineral gübrelerle birlikte en iyi sonucu verir — bu partinin tipik besin aralığı bu sayfada gösterilmektedir.",
+          "q": "FYM kimyasal gübrenin yerini tamamen alabilir mi?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash, potasyum klorür gübresinin yaygın adıdır. %60 K₂O sağlar ve çoğu tarla ürünü için en ekonomik potasyum kaynağıdır. 'MOP fertilizer' veya 'MOP fertiliser' olarak yazıldığını da görebilirsiniz.",
+          "q": "Muriate of potash (MOP) gübre nedir?"
+        },
+        {
+          "a": "MOP normalde ekimde fosforlu gübrenizle birlikte taban gübrenin bir parçası olarak uygulanır. Klorür içeriği nedeniyle, özellikle tuzlu topraklarda tohumla doğrudan temasından kaçının.",
+          "q": "MOP gübre ne zaman uygulanmalıdır?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "Urea yaklaşık 2–4 gün içinde bitkinin alabildiği amonyuma dönüşür, ardından toprak sıcaklığı ve nemine bağlı olarak sonraki 2–4 haftada nitrata dönüşür. Pratikte, bir Urea uygulaması ürünü kabaca 4–6 hafta besler — bu yüzden azot genellikle sezonda 2–3 uygulamaya bölünür.",
+          "q": "Urea toprakta ne kadar dayanır?"
+        },
+        {
+          "a": "Urea yalnızca azot sağlar (%46 N), oysa NPK gübre azot, fosfor ve potasyumu birlikte sağlar — örneğin NPK 19-19-19 her birinden %19 içerir. Yalnızca azot eksikse tek başına Urea yeterlidir; üçü de gerekliyse NPK veya tekli gübrelerin birleşimini kullanın.",
+          "q": "Urea ile NPK arasındaki fark nedir?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Vermicompost, solucanlar tarafından üretilen yavaş salınımlı organik bir gübredir; azot, fosfor, potasyumun yanı sıra mikro besinler ve faydalı mikroorganizmalar içerir. Tam besin içeriği ham maddeye göre değiştiğinden, bu sayfada gösterilen tipik aralık tek bir rakamdan daha iyi bir kılavuzdur.",
+          "q": "Vermicompost hangi besinleri içerir?"
+        }
+      ]
     }
   },
   "chart": {

@@ -110,6 +110,10 @@
       {
         "a": "Uma cultura só pode ser selecionada quando sua dose de NPK recomendada está verificada em uma fonte publicada. Preferimos desativar uma cultura a inventar seus números — culturas não verificadas são marcadas como \"data in review\" até a confirmação.",
         "q": "Por que algumas culturas estão desativadas?"
+      },
+      {
+        "a": "Primeiro defina de quantos quilogramas de cada nutriente (N, P₂O₅, K₂O) sua lavoura precisa, depois divida pelo percentual do fertilizante — por exemplo, 100 kg de nitrogênio precisam de cerca de 217 kg de Urea (46% N). A calculadora desta página faz isso automaticamente para sua lavoura e o tamanho do talhão.",
+        "q": "Como calcular fertilizante NPK em kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Abrir guia da cultura",
       "openCalculator": "Calcular custo do fertilizante",
       "figuresDisclaimerTitle": "Aviso sobre os valores",
-      "figuresDisclaimer": "Todos os preços, produtividades e custos usados aqui são suas próprias suposições — não fornecemos dados de mercado. Os resultados são apenas estimativas de planejamento; verifique com as tarifas atuais do mercado local antes de tomar decisões."
+      "figuresDisclaimer": "Todos os preços, produtividades e custos usados aqui são suas próprias suposições — não fornecemos dados de mercado. Os resultados são apenas estimativas de planejamento; verifique com as tarifas atuais do mercado local antes de tomar decisões.",
+      "faqTitle": "Perguntas frequentes sobre o lucro da fazenda",
+      "faq": [
+        {
+          "q": "O que é uma calculadora de lucro agrícola?",
+          "a": "Uma calculadora de lucro agrícola estima o lucro líquido da sua lavoura: receita esperada (produtividade × preço de venda) menos todos os custos de insumos — sementes, fertilizantes, defensivos, mão de obra, irrigação e arrendamento. Ela também mostra o lucro por acre ou hectare, a produtividade de equilíbrio e o ROI."
+        },
+        {
+          "q": "Como calculo a rentabilidade da lavoura?",
+          "a": "Digite a produtividade esperada, o preço de venda e todos os custos na calculadora acima. Ela calcula automaticamente o lucro líquido, o custo por unidade de produtividade, a produtividade de equilíbrio e o preço de equilíbrio. Os resultados são estimativas — os resultados reais dependem do clima, dos preços de mercado e dos seus custos."
+        },
+        {
+          "q": "Posso calcular o lucro por hectare além de por acre?",
+          "a": "Sim. Escolha sua unidade de área no início e cada número — receita, custos, lucro, pontos de equilíbrio — é calculado por hectare ou por acre conforme a escolha."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Comparar Fertilizantes e Culturas — Comparação de Custo de Nutrientes",
@@ -1038,6 +1057,69 @@
       "ssp": "Fósforo mais enxofre e cálcio em um único grânulo.",
       "urea": "O fertilizante nitrogenado mais concentrado em uso comum.",
       "vermicompost": "Esterco processado por minhocas — mais rico que o FYM, mas a matéria-prima decide tudo."
+    },
+    "detailFaqTitle": "Perguntas frequentes sobre {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "A dose exata depende da necessidade de nitrogênio da sua lavoura — informe sua lavoura na calculadora de dose para obter um número preciso. O ammonium sulphate (21-0-0 mais 24% de enxofre) é aplicado em cobertura quando a lavoura precisa de nitrogênio e enxofre juntos, e é adequado para solos neutros a alcalinos por seu leve efeito acidificante.",
+          "q": "Qual é a dose de ammonium sulphate por acre?"
+        },
+        {
+          "a": "Use ammonium sulphate em solos deficientes em enxofre (comum em cereais e oleaginosas) ou em solos alcalinos; use Urea onde só for preciso nitrogênio barato. Ambos fornecem nitrogênio, mas só o ammonium sulphate também fornece enxofre.",
+          "q": "Ammonium sulphate ou Urea — qual devo usar?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "O DAP (Di-Ammonium Phosphate) é um fertilizante mineral que fornece 18% de nitrogênio e 46% de P₂O₅ — a fonte padrão de fósforo de base no plantio, com um bônus de nitrogênio que ajuda as lavouras jovens a se estabelecer.",
+          "q": "O que é o fertilizante DAP?"
+        },
+        {
+          "a": "Nenhum é melhor sozinho: o DAP fornece fósforo com um pouco de nitrogênio, enquanto a Urea fornece só nitrogênio. A prática comum é DAP como dose de base no plantio e Urea como cobertura nitrogenada mais adiante na safra. Use a calculadora de dose para descobrir a quantidade certa de cada um para sua lavoura.",
+          "q": "DAP ou Urea — qual é melhor?"
+        },
+        {
+          "a": "A dose certa de DAP depende da sua lavoura e do seu solo, então não há um número único — informe sua lavoura na calculadora de dose para uma recomendação exata. O DAP é aplicado como dose de base, colocado no canteiro de plantio no momento do plantio ou antes.",
+          "q": "Qual é a dose de DAP por acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "O FYM (farmyard manure) é esterco bovino bem curtido misturado com cama — o fertilizante orgânico mais usado. Ele libera nutrientes lentamente ao longo de semanas a meses e constrói a estrutura do solo como os fertilizantes químicos sozinhos não conseguem.",
+          "q": "O que é o fertilizante FYM?"
+        },
+        {
+          "a": "Não para lavouras de alta produtividade: o FYM é volumoso e seu teor de nutrientes é baixo e variável (tipicamente 0,5–1,0% de nitrogênio). Ele funciona melhor combinado com fertilizantes minerais — a faixa típica de nutrientes deste lote é mostrada nesta página.",
+          "q": "O FYM pode substituir totalmente o fertilizante químico?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash é o nome comum do fertilizante de cloreto de potássio. Ele fornece 60% de K₂O, o que o torna a fonte de potássio mais econômica para a maioria das lavouras. Você também pode vê-lo escrito como 'MOP fertilizer' ou 'MOP fertiliser'.",
+          "q": "O que é o fertilizante muriate of potash (MOP)?"
+        },
+        {
+          "a": "O MOP normalmente é aplicado como parte da dose de base no plantio, junto com seu fertilizante fosfatado. Evite colocá-lo em contato direto com a semente, especialmente em solos salinos, por causa do seu teor de cloreto.",
+          "q": "Quando o fertilizante MOP deve ser aplicado?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "A Urea se converte em amônio disponível para a planta em cerca de 2–4 dias, depois em nitrato ao longo das 2–4 semanas seguintes, conforme a temperatura e a umidade do solo. Na prática, uma aplicação de Urea alimenta a lavoura por cerca de 4–6 semanas — por isso o nitrogênio costuma ser dividido em 2–3 aplicações durante a safra.",
+          "q": "Quanto tempo a Urea dura no solo?"
+        },
+        {
+          "a": "A Urea fornece só nitrogênio (46% N), enquanto um fertilizante NPK fornece nitrogênio, fósforo e potássio juntos — por exemplo, o NPK 19-19-19 contém 19% de cada um. Se só faltar nitrogênio, a Urea sozinha basta; se os três forem necessários, use um NPK ou uma combinação de fertilizantes simples.",
+          "q": "Urea ou NPK — qual é a diferença?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "O vermicompost é um fertilizante orgânico de liberação lenta produzido por minhocas, contendo nitrogênio, fósforo, potássio além de micronutrientes e microrganismos benéficos. Seu teor exato de nutrientes varia com a matéria-prima, então a faixa típica mostrada nesta página é um guia melhor do que qualquer número isolado.",
+          "q": "Quais nutrientes há no vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

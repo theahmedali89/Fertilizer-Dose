@@ -110,6 +110,10 @@
       {
         "q": "¿Por qué algunos cultivos están deshabilitados?",
         "a": "Un cultivo solo se puede seleccionar cuando su dosis recomendada de NPK está verificada por una fuente publicada. Preferimos deshabilitar un cultivo antes que inventar sus cifras — los no verificados se marcan como \"datos en revisión\" hasta confirmarse."
+      },
+      {
+        "a": "Primero define cuántos kilogramos de cada nutriente (N, P₂O₅, K₂O) necesita tu cultivo, y luego divide entre el porcentaje del fertilizante — por ejemplo, 100 kg de nitrógeno requieren unos 217 kg de Urea (46 % N). La calculadora de esta página lo hace automáticamente para tu cultivo y el tamaño de tu parcela.",
+        "q": "¿Cómo se calcula el fertilizante NPK en kg?"
       }
     ],
     "organic": {
@@ -1053,6 +1057,69 @@
       "compost": "Residuos agrícolas y domésticos descompuestos — nutrición variable según la materia prima.",
       "vermicompost": "Abono procesado por lombrices — más rico que el estiércol común.",
       "green-manure": "Fábrica viva de nitrógeno — cultivado e incorporado al suelo antes del cultivo principal."
+    },
+    "detailFaqTitle": "Preguntas frecuentes sobre {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "La dosis exacta depende del requerimiento de nitrógeno de tu cultivo — ingresa tu cultivo en la calculadora de dosis para obtener una cifra precisa. El ammonium sulphate (21-0-0 más 24 % de azufre) se aplica como abono de cobertura cuando el cultivo necesita nitrógeno y azufre juntos, y es adecuado para suelos neutros a alcalinos por su leve efecto acidificante.",
+          "q": "¿Cuál es la dosis de ammonium sulphate por acre?"
+        },
+        {
+          "a": "Usa ammonium sulphate en suelos deficientes en azufre (común en cereales y oleaginosas) o en suelos alcalinos; usa Urea donde solo se necesite nitrógeno barato. Ambos aportan nitrógeno, pero solo el ammonium sulphate aporta también azufre.",
+          "q": "Ammonium sulphate o Urea — ¿cuál debo usar?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "El DAP (Di-Ammonium Phosphate) es un fertilizante mineral que aporta 18 % de nitrógeno y 46 % de P₂O₅ — la fuente estándar de fósforo de fondo a la siembra, con un extra de nitrógeno que ayuda a los cultivos jóvenes a establecerse.",
+          "q": "¿Qué es el fertilizante DAP?"
+        },
+        {
+          "a": "Ninguno es mejor por sí solo: el DAP aporta fósforo con algo de nitrógeno, mientras que la Urea aporta solo nitrógeno. La práctica habitual es DAP como dosis de fondo a la siembra y Urea como cobertura nitrogenada más adelante en el ciclo. Usa la calculadora de dosis para obtener la cantidad correcta de cada uno para tu cultivo.",
+          "q": "DAP o Urea — ¿cuál es mejor?"
+        },
+        {
+          "a": "La dosis correcta de DAP depende de tu cultivo y tu suelo, así que no hay una cifra única — ingresa tu cultivo en la calculadora de dosis para una recomendación exacta. El DAP se aplica como dosis de fondo, colocado en la cama de siembra al momento de la siembra o antes.",
+          "q": "¿Cuál es la dosis de DAP por acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "El FYM (farmyard manure) es estiércol de ganado bien descompuesto mezclado con cama — el fertilizante orgánico más usado. Libera nutrientes lentamente durante semanas o meses y mejora la estructura del suelo como los fertilizantes químicos solos no pueden.",
+          "q": "¿Qué es el fertilizante FYM?"
+        },
+        {
+          "a": "No para cultivos de alto rendimiento: el FYM es voluminoso y su contenido de nutrientes es bajo y variable (típicamente 0,5–1,0 % de nitrógeno). Funciona mejor combinado con fertilizantes minerales — el rango típico de nutrientes de este lote se muestra en esta página.",
+          "q": "¿Puede el FYM reemplazar por completo al fertilizante químico?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash es el nombre común del fertilizante de cloruro de potasio. Aporta 60 % de K₂O, lo que lo convierte en la fuente de potasio más económica para la mayoría de los cultivos extensivos. También puedes verlo escrito como 'MOP fertilizer' o 'MOP fertiliser'.",
+          "q": "¿Qué es el fertilizante muriate of potash (MOP)?"
+        },
+        {
+          "a": "El MOP normalmente se aplica como parte de la dosis de fondo a la siembra, junto con tu fertilizante fosfatado. Evita colocarlo en contacto directo con la semilla, especialmente en suelos salinos, por su contenido de cloruro.",
+          "q": "¿Cuándo se debe aplicar el fertilizante MOP?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "La Urea se convierte en amonio disponible para la planta en unos 2–4 días, y luego en nitrato durante las 2–4 semanas siguientes según la temperatura y la humedad del suelo. En la práctica, una aplicación de Urea alimenta al cultivo durante unas 4–6 semanas — por eso el nitrógeno suele dividirse en 2–3 aplicaciones durante el ciclo.",
+          "q": "¿Cuánto dura la Urea en el suelo?"
+        },
+        {
+          "a": "La Urea aporta solo nitrógeno (46 % N), mientras que un fertilizante NPK aporta nitrógeno, fósforo y potasio juntos — por ejemplo, el NPK 19-19-19 contiene 19 % de cada uno. Si solo falta nitrógeno, basta con Urea; si se necesitan los tres, usa un NPK o una combinación de fertilizantes simples.",
+          "q": "Urea o NPK — ¿cuál es la diferencia?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "El vermicompost es un fertilizante orgánico de liberación lenta producido por lombrices, que contiene nitrógeno, fósforo, potasio además de micronutrientes y microbios benéficos. Su contenido exacto de nutrientes varía según el material de origen, así que el rango típico mostrado en esta página es una mejor guía que cualquier cifra única.",
+          "q": "¿Qué nutrientes contiene el vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

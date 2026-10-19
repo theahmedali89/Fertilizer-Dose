@@ -110,6 +110,10 @@
       {
         "a": "Tanaman hanya bisa dipilih jika dosis NPK yang disarankan terverifikasi dari sumber yang diterbitkan. Kami lebih memilih menonaktifkan tanaman daripada mengarang angkanya — tanaman yang belum terverifikasi ditandai \"data dalam peninjauan\" hingga terkonfirmasi.",
         "q": "Mengapa sebagian tanaman dinonaktifkan?"
+      },
+      {
+        "a": "Pertama-tama tentukan berapa kilogram setiap unsur hara (N, P₂O₅, K₂O) yang dibutuhkan tanaman Anda, lalu bagi dengan persentase pupuk — misalnya, 100 kg nitrogen membutuhkan sekitar 217 kg Urea (46% N). Kalkulator di halaman ini melakukannya secara otomatis untuk tanaman dan luas lahan Anda.",
+        "q": "Bagaimana cara menghitung pupuk NPK dalam kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Buka panduan tanaman",
       "openCalculator": "Hitung biaya pupuk",
       "figuresDisclaimerTitle": "Penafian angka",
-      "figuresDisclaimer": "Semua harga, hasil, dan biaya yang digunakan di sini adalah asumsi Anda sendiri — kami tidak menyediakan data pasar. Hasilnya hanya estimasi perencanaan; verifikasi dengan tarif pasar lokal terkini sebelum mengambil keputusan."
+      "figuresDisclaimer": "Semua harga, hasil, dan biaya yang digunakan di sini adalah asumsi Anda sendiri — kami tidak menyediakan data pasar. Hasilnya hanya estimasi perencanaan; verifikasi dengan tarif pasar lokal terkini sebelum mengambil keputusan.",
+      "faqTitle": "Pertanyaan umum tentang keuntungan usaha tani",
+      "faq": [
+        {
+          "q": "Apa itu kalkulator keuntungan usaha tani?",
+          "a": "Kalkulator keuntungan usaha tani memperkirakan laba bersih tanaman Anda: perkiraan pendapatan (hasil × harga jual) dikurangi semua biaya input — benih, pupuk, pestisida, tenaga kerja, irigasi, dan sewa lahan. Kalkulator ini juga menampilkan laba per acre atau hektare, hasil impas, dan ROI."
+        },
+        {
+          "q": "Bagaimana cara menghitung profitabilitas tanaman?",
+          "a": "Masukkan perkiraan hasil, harga jual, dan semua biaya ke dalam kalkulator di atas. Kalkulator ini menghitung laba bersih, biaya per unit hasil, hasil impas, dan harga impas secara otomatis. Hasilnya adalah perkiraan — hasil sebenarnya bergantung pada cuaca, harga pasar, dan biaya Anda."
+        },
+        {
+          "q": "Bisakah saya menghitung laba per hektare maupun per acre?",
+          "a": "Ya. Pilih satuan lahan Anda di awal, dan setiap angka — pendapatan, biaya, laba, titik impas — dihitung per hektare atau per acre sesuai pilihan."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Bandingkan Pupuk & Tanaman — Perbandingan Biaya Hara",
@@ -1038,6 +1057,69 @@
       "ssp": "Fosfor plus sulfur dan kalsium dalam satu butir.",
       "urea": "Pupuk nitrogen paling pekat yang umum digunakan.",
       "vermicompost": "Pupuk kandang yang diolah cacing tanah — lebih kaya dari FYM, tetapi bahan baku menentukan segalanya."
+    },
+    "detailFaqTitle": "Pertanyaan umum tentang {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "Dosis yang tepat tergantung pada kebutuhan nitrogen tanaman Anda — masukkan tanaman Anda ke kalkulator dosis untuk angka yang akurat. Ammonium sulphate (21-0-0 plus 24% sulfur) diaplikasikan sebagai pupuk susulan saat tanaman membutuhkan nitrogen dan sulfur bersamaan, dan cocok untuk tanah netral hingga alkalis karena efek pengasam ringannya.",
+          "q": "Berapa dosis ammonium sulphate per acre?"
+        },
+        {
+          "a": "Gunakan ammonium sulphate pada tanah yang kekurangan sulfur (umum pada serealia dan kacang-kacangan penghasil minyak) atau pada tanah alkalis; gunakan Urea jika hanya butuh nitrogen murah. Keduanya memasok nitrogen, tetapi hanya ammonium sulphate yang juga memasok sulfur.",
+          "q": "Ammonium sulphate atau Urea — mana yang harus saya gunakan?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "DAP (Di-Ammonium Phosphate) adalah pupuk mineral yang memasok 18% nitrogen dan 46% P₂O₅ — sumber fosfor basal standar saat tanam, dengan bonus nitrogen yang membantu tanaman muda tumbuh kokoh.",
+          "q": "Apa itu pupuk DAP?"
+        },
+        {
+          "a": "Tidak ada yang lebih baik sendirian: DAP memasok fosfor dengan sedikit nitrogen, sedangkan Urea hanya memasok nitrogen. Praktik umumnya adalah DAP sebagai dosis basal saat tanam dan Urea sebagai pupuk susulan nitrogen di pertengahan musim. Gunakan kalkulator dosis untuk menghitung jumlah yang tepat dari masing-masing untuk tanaman Anda.",
+          "q": "DAP vs Urea — mana yang lebih baik?"
+        },
+        {
+          "a": "Dosis DAP yang tepat tergantung pada tanaman dan tanah Anda, jadi tidak ada angka tunggal — masukkan tanaman Anda ke kalkulator dosis untuk rekomendasi yang akurat. DAP diaplikasikan sebagai dosis basal, ditempatkan di bedengan benih saat atau sebelum tanam.",
+          "q": "Berapa dosis DAP per acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "FYM (farmyard manure) adalah kotoran sapi yang sudah matang bercampur alas kandang — pupuk organik yang paling banyak digunakan. Ia melepaskan hara perlahan selama berminggu-minggu hingga berbulan-bulan dan membangun struktur tanah yang tidak bisa dibentuk oleh pupuk kimia saja.",
+          "q": "Apa itu pupuk FYM?"
+        },
+        {
+          "a": "Tidak untuk tanaman berproduksi tinggi: FYM bersifat ruah dan kandungan haranya rendah dan beragam (biasanya 0,5–1,0% nitrogen). Ia bekerja paling baik dikombinasikan dengan pupuk mineral — kisaran hara tipikal untuk batch ini ditampilkan di halaman ini.",
+          "q": "Bisakah FYM sepenuhnya menggantikan pupuk kimia?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash adalah nama umum untuk pupuk kalium klorida. Ia memasok 60% K₂O, menjadikannya sumber kalium paling ekonomis untuk sebagian besar tanaman pangan. Anda juga bisa melihatnya ditulis sebagai 'MOP fertilizer' atau 'MOP fertiliser'.",
+          "q": "Apa itu pupuk muriate of potash (MOP)?"
+        },
+        {
+          "a": "MOP biasanya diaplikasikan sebagai bagian dari dosis basal saat tanam, bersama dengan pupuk fosfor Anda. Hindari menempatkannya bersentuhan langsung dengan benih, terutama di tanah salin, karena kandungan kloridanya.",
+          "q": "Kapan pupuk MOP sebaiknya diaplikasikan?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "Urea berubah menjadi amonium yang tersedia bagi tanaman dalam waktu sekitar 2–4 hari, kemudian menjadi nitrat selama 2–4 minggu berikutnya tergantung suhu dan kelembapan tanah. Secara praktis, satu aplikasi Urea memberi makan tanaman selama kurang lebih 4–6 minggu — itulah sebabnya nitrogen biasanya dibagi menjadi 2–3 aplikasi selama musim tanam.",
+          "q": "Berapa lama Urea bertahan di dalam tanah?"
+        },
+        {
+          "a": "Urea hanya memasok nitrogen (46% N), sedangkan pupuk NPK memasok nitrogen, fosfor, dan kalium sekaligus — misalnya, NPK 19-19-19 mengandung 19% dari masing-masing unsur. Jika hanya nitrogen yang kurang, Urea saja sudah cukup; jika ketiganya dibutuhkan, gunakan NPK atau kombinasi pupuk tunggal.",
+          "q": "Urea vs NPK — apa bedanya?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Vermicompost adalah pupuk organik lepas lambat yang dibuat oleh cacing tanah, mengandung nitrogen, fosfor, kalium ditambah mikronutrien dan mikroba bermanfaat. Kandungan hara pastinya bervariasi menurut bahan bakunya, sehingga kisaran tipikal yang ditampilkan di halaman ini merupakan panduan yang lebih baik daripada angka tunggal mana pun.",
+          "q": "Nutrisi apa saja yang terkandung dalam vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

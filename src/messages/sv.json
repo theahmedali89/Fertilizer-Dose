@@ -110,6 +110,10 @@
       {
         "q": "Varför är vissa grödor inaktiverade?",
         "a": "En gröda kan bara väljas när den rekommenderade NPK-dosen är verifierad mot en publicerad källa. Vi inaktiverar hellre en gröda än att hitta på siffror — overifierade grödor markeras \"data under granskning\" tills de bekräftats."
+      },
+      {
+        "a": "Bestäm först hur många kilogram av varje näringsämne (N, P₂O₅, K₂O) din gröda behöver och dividera sedan med gödselmedlets procenthalt — till exempel kräver 100 kg kväve cirka 217 kg Urea (46 % N). Kalkylatorn på den här sidan gör det automatiskt för din gröda och fältstorlek.",
+        "q": "Hur beräknar man NPK-gödsel i kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Öppna grödguide",
       "openCalculator": "Beräkna gödselkostnad",
       "figuresDisclaimerTitle": "Friskrivning för siffror",
-      "figuresDisclaimer": "Alla priser, skördar och kostnader som används här är dina egna antaganden — vi tillhandahåller inga marknadsdata. Resultaten är endast planeringsestimat; verifiera med aktuella lokala marknadspriser innan du fattar beslut."
+      "figuresDisclaimer": "Alla priser, skördar och kostnader som används här är dina egna antaganden — vi tillhandahåller inga marknadsdata. Resultaten är endast planeringsestimat; verifiera med aktuella lokala marknadspriser innan du fattar beslut.",
+      "faqTitle": "Vanliga frågor om gårdens vinst",
+      "faq": [
+        {
+          "q": "Vad är en vinstkalkylator för gården?",
+          "a": "En vinstkalkylator för gården uppskattar din grödas nettovinst: förväntade intäkter (skörd × försäljningspris) minus alla insatskostnader — utsäde, gödsel, bekämpningsmedel, arbete, bevattning och arrende. Den visar också vinst per acre eller hektar, nollpunktskörd och ROI."
+        },
+        {
+          "q": "Hur beräknar jag en grödas lönsamhet?",
+          "a": "Ange förväntad skörd, försäljningspris och alla kostnader i kalkylatorn ovan. Den beräknar automatiskt nettovinst, kostnad per skördeenhet, nollpunktskörd och nollpunktspris. Resultaten är uppskattningar — de verkliga resultaten beror på väder, marknadspriser och dina kostnader."
+        },
+        {
+          "q": "Kan jag beräkna vinsten per hektar såväl som per acre?",
+          "a": "Ja. Välj din ytenhet i början så beräknas varje siffra — intäkter, kostnader, vinst, nollpunkter — per hektar eller per acre därefter."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Jämför gödsel & grödor — Näringskostnadsjämförelse",
@@ -1038,6 +1057,69 @@
       "compost": "Nedbrutet lantbruks- och hushållsavfall — varierande, råvaruberoende näring.",
       "vermicompost": "Maskbearbetad gödsel — rikare än FYM, men råvaran avgör allt.",
       "green-manure": "En levande kvävefabrik — odlas, plöjs sedan ner före huvudgrödan."
+    },
+    "detailFaqTitle": "Vanliga frågor om {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "Den exakta givan beror på din grödas kvävebehov — ange din gröda i doskalkylatorn för en exakt siffra. Ammonium sulphate (21-0-0 plus 24 % svavel) sprids som övergödsling när grödan behöver kväve och svavel tillsammans, och passar neutrala till basiska jordar tack vare sin milt försurande verkan.",
+          "q": "Vilken dos ammonium sulphate per acre?"
+        },
+        {
+          "a": "Använd ammonium sulphate på svavelfattiga jordar (vanligt i spannmål och oljeväxter) eller på basiska jordar; använd Urea där endast billigt kväve behövs. Båda ger kväve, men bara ammonium sulphate ger också svavel.",
+          "q": "Ammonium sulphate eller Urea — vad ska jag använda?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "DAP (Di-Ammonium Phosphate) är ett mineralgödsel som ger 18 % kväve och 46 % P₂O₅ — standardkällan för grundgödsling med fosfor vid sådd, med en kvävebonus som hjälper unga grödor att etablera sig.",
+          "q": "Vad är DAP-gödsel?"
+        },
+        {
+          "a": "Ingetdera är bättre på egen hand: DAP ger fosfor med lite kväve, medan Urea bara ger kväve. Vanlig praxis är DAP som grundgiva vid sådd och Urea som kväveövergödsling senare under säsongen. Använd doskalkylatorn för att räkna ut rätt mängd av varje för din gröda.",
+          "q": "DAP eller Urea — vad är bäst?"
+        },
+        {
+          "a": "Rätt DAP-giva beror på din gröda och din jord, så det finns ingen enskild siffra — ange din gröda i doskalkylatorn för en exakt rekommendation. DAP sprids som grundgiva och placeras i såbädden vid eller före sådd.",
+          "q": "Vilken dos DAP per acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "FYM (farmyard manure) är välbrunnen kogödsel blandad med strö — det mest använda organiska gödselmedlet. Det frigör näring långsamt under veckor till månader och bygger upp markstrukturen på ett sätt som kemiska gödselmedel ensamma inte kan.",
+          "q": "Vad är FYM-gödsel?"
+        },
+        {
+          "a": "Inte för högavkastande grödor: FYM är skrymmande och näringsinnehållet är lågt och varierande (vanligen 0,5–1,0 % kväve). Det fungerar bäst tillsammans med mineralgödsel — det typiska näringsintervallet för denna sats visas på den här sidan.",
+          "q": "Kan FYM helt ersätta kemiskt gödsel?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash är det vanliga namnet på kaliumkloridgödsel. Det ger 60 % K₂O, vilket gör det till den mest ekonomiska kaliumkällan för de flesta fältgrödor. Du kan också se det skrivet som 'MOP fertilizer' eller 'MOP fertiliser'.",
+          "q": "Vad är muriate of potash (MOP)-gödsel?"
+        },
+        {
+          "a": "MOP sprids normalt som en del av grundgivan vid sådd, tillsammans med ditt fosforgödsel. Undvik att placera det i direkt kontakt med utsädet, särskilt i salta jordar, på grund av kloridinnehållet.",
+          "q": "När ska MOP-gödsel spridas?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "Urea omvandlas till växttillgängligt ammonium inom cirka 2–4 dagar och sedan till nitrat under de följande 2–4 veckorna beroende på marktemperatur och fuktighet. I praktiken försörjer en Urea-giva grödan i ungefär 4–6 veckor — därför delas kvävet vanligen upp i 2–3 givor under säsongen.",
+          "q": "Hur länge varar Urea i jorden?"
+        },
+        {
+          "a": "Urea ger bara kväve (46 % N), medan ett NPK-gödsel ger kväve, fosfor och kalium tillsammans — till exempel innehåller NPK 19-19-19 19 % av varje. Om bara kväve saknas räcker Urea ensamt; behövs alla tre, använd ett NPK eller en kombination av engödselmedel.",
+          "q": "Urea eller NPK — vad är skillnaden?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Vermicompost är ett långsamverkande organiskt gödselmedel som tillverkas av daggmaskar och innehåller kväve, fosfor, kalium samt mikronäringsämnen och nyttiga mikroorganismer. Det exakta näringsinnehållet varierar med råvaran, så det typiska intervall som visas på den här sidan är en bättre vägledning än en enskild siffra.",
+          "q": "Vilka näringsämnen finns i vermicompost?"
+        }
+      ]
     }
   },
   "chart": {

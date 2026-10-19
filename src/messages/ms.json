@@ -110,6 +110,10 @@
       {
         "q": "Mengapakah sesetengah tanaman dinyahdayakan?",
         "a": "Tanaman hanya boleh dipilih apabila dos NPK yang disyorkan telah disahkan daripada sumber yang diterbitkan. Kami lebih rela menyahdayakan tanaman daripada mereka-reka angkanya — tanaman yang belum disahkan ditandakan \"data sedang disemak\" sehingga disahkan."
+      },
+      {
+        "a": "Mula-mula tetapkan berapa kilogram setiap nutrien (N, P₂O₅, K₂O) yang diperlukan tanaman anda, kemudian bahagikan dengan peratusan baja — contohnya, 100 kg nitrogen memerlukan kira-kira 217 kg Urea (46% N). Kalkulator di halaman ini melakukannya secara automatik untuk tanaman dan saiz ladang anda.",
+        "q": "Bagaimanakah cara mengira baja NPK dalam kg?"
       }
     ],
     "organic": {
@@ -880,7 +884,22 @@
       "openCropGuide": "Buka panduan tanaman",
       "openCalculator": "Kira kos baja",
       "figuresDisclaimerTitle": "Penafian angka",
-      "figuresDisclaimer": "Semua harga, hasil dan kos yang digunakan di sini adalah andaian anda sendiri — kami tidak menyediakan data pasaran. Keputusan hanyalah anggaran perancangan; sahkan dengan kadar pasaran tempatan terkini sebelum membuat keputusan."
+      "figuresDisclaimer": "Semua harga, hasil dan kos yang digunakan di sini adalah andaian anda sendiri — kami tidak menyediakan data pasaran. Keputusan hanyalah anggaran perancangan; sahkan dengan kadar pasaran tempatan terkini sebelum membuat keputusan.",
+      "faqTitle": "Soalan lazim tentang keuntungan ladang",
+      "faq": [
+        {
+          "q": "Apakah kalkulator keuntungan ladang?",
+          "a": "Kalkulator keuntungan ladang menganggarkan keuntungan bersih tanaman anda: hasil yang dijangka (pengeluaran × harga jualan) ditolak semua kos input — benih, baja, racun perosak, buruh, pengairan dan sewa. Ia juga menunjukkan keuntungan setiap acre atau hektar, hasil pulang modal dan ROI."
+        },
+        {
+          "q": "Bagaimana cara mengira keberuntungan tanaman?",
+          "a": "Masukkan jangkaan hasil, harga jualan dan semua kos ke dalam kalkulator di atas. Ia mengira keuntungan bersih, kos seunit hasil, hasil pulang modal dan harga pulang modal secara automatik. Keputusannya adalah anggaran — hasil sebenar bergantung pada cuaca, harga pasaran dan kos anda."
+        },
+        {
+          "q": "Bolehkah saya mengira keuntungan sehektar dan juga seacre?",
+          "a": "Ya. Pilih unit tanah anda pada mulanya dan setiap angka — hasil, kos, keuntungan, titik pulang modal — dikira sehektar atau seacre dengan sewajarnya."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Banding Baja & Tanaman — Perbandingan Kos Nutrien",
@@ -1038,6 +1057,69 @@
       "compost": "Sisa ladang dan dapur yang terurai — nutrien berbeza mengikut bahan asal.",
       "vermicompost": "Baja diproses cacing tanah — lebih kaya daripada FYM, tetapi bergantung pada bahan suapan.",
       "green-manure": "Kilang nitrogen hidup — ditanam, kemudian dibajak masuk ke tanah sebelum tanaman utama."
+    },
+    "detailFaqTitle": "Soalan lazim tentang {name}",
+    "faqs": {
+      "ammonium-sulphate": [
+        {
+          "a": "Dos yang tepat bergantung pada keperluan nitrogen tanaman anda — masukkan tanaman anda dalam kalkulator dos untuk angka yang tepat. Ammonium sulphate (21-0-0 tambah 24% sulfur) digunakan sebagai baja susulan apabila tanaman memerlukan nitrogen dan sulfur serentak, dan sesuai untuk tanah neutral hingga beralkali kerana kesan pengasidan ringannya.",
+          "q": "Apakah dos ammonium sulphate per acre?"
+        },
+        {
+          "a": "Gunakan ammonium sulphate pada tanah yang kekurangan sulfur (biasa pada bijirin dan biji minyak) atau pada tanah beralkali; gunakan Urea jika hanya nitrogen murah yang diperlukan. Kedua-duanya membekalkan nitrogen, tetapi hanya ammonium sulphate yang turut membekalkan sulfur.",
+          "q": "Ammonium sulphate atau Urea — yang mana harus saya gunakan?"
+        }
+      ],
+      "dap": [
+        {
+          "a": "DAP (Di-Ammonium Phosphate) ialah baja mineral yang membekalkan 18% nitrogen dan 46% P₂O₅ — sumber fosforus basal piawai semasa menyemai, dengan bonus nitrogen yang membantu tanaman muda tumbuh kukuh.",
+          "q": "Apakah baja DAP?"
+        },
+        {
+          "a": "Tiada satu pun yang lebih baik dengan sendirinya: DAP membekalkan fosforus dengan sedikit nitrogen, manakala Urea hanya membekalkan nitrogen. Amalan biasa ialah DAP sebagai dos basal semasa menyemai dan Urea sebagai baja susulan nitrogen lewat musim. Gunakan kalkulator dos untuk mengira jumlah yang betul bagi setiap satunya untuk tanaman anda.",
+          "q": "DAP lawan Urea — yang mana lebih baik?"
+        },
+        {
+          "a": "Dos DAP yang betul bergantung pada tanaman dan tanah anda, jadi tiada angka tunggal — masukkan tanaman anda dalam kalkulator dos untuk syor yang tepat. DAP digunakan sebagai dos basal, diletakkan di batas semaian semasa atau sebelum menyemai.",
+          "q": "Apakah dos DAP per acre?"
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "a": "FYM (farmyard manure) ialah najis lembu yang telah reput dengan baik bercampur alas kandang — baja organik yang paling banyak digunakan. Ia membebaskan nutrien perlahan-lahan selama berminggu-minggu hingga berbulan-bulan dan membina struktur tanah yang tidak mampu dibina oleh baja kimia sahaja.",
+          "q": "Apakah baja FYM?"
+        },
+        {
+          "a": "Bukan untuk tanaman berhasil tinggi: FYM bersifat pukal dan kandungan nutriennya rendah dan berubah-ubah (biasanya 0.5–1.0% nitrogen). Ia paling berkesan digabungkan dengan baja mineral — julat nutrien tipikal untuk kelompok ini ditunjukkan di halaman ini.",
+          "q": "Bolehkah FYM menggantikan sepenuhnya baja kimia?"
+        }
+      ],
+      "mop": [
+        {
+          "a": "Muriate of potash ialah nama umum bagi baja kalium klorida. Ia membekalkan 60% K₂O, menjadikannya sumber kalium paling ekonomi untuk kebanyakan tanaman ladang. Anda juga boleh melihatnya ditulis sebagai 'MOP fertilizer' atau 'MOP fertiliser'.",
+          "q": "Apakah baja muriate of potash (MOP)?"
+        },
+        {
+          "a": "MOP biasanya digunakan sebagai sebahagian daripada dos basal semasa menyemai, bersama-sama baja fosforus anda. Elakkan meletakkannya bersentuhan langsung dengan benih, terutamanya di tanah masin, kerana kandungan kloridanya.",
+          "q": "Bilakah baja MOP perlu digunakan?"
+        }
+      ],
+      "urea": [
+        {
+          "a": "Urea bertukar menjadi ammonium yang tersedia untuk tumbuhan dalam masa kira-kira 2–4 hari, kemudian menjadi nitrat dalam 2–4 minggu berikutnya bergantung pada suhu dan kelembapan tanah. Secara praktikal, satu penggunaan Urea memberi makan kepada tanaman selama kira-kira 4–6 minggu — itulah sebabnya nitrogen biasanya dibahagikan kepada 2–3 penggunaan sepanjang musim.",
+          "q": "Berapa lama Urea tahan dalam tanah?"
+        },
+        {
+          "a": "Urea hanya membekalkan nitrogen (46% N), manakala baja NPK membekalkan nitrogen, fosforus dan kalium serentak — contohnya, NPK 19-19-19 mengandungi 19% bagi setiap satu. Jika hanya nitrogen yang kurang, Urea sahaja sudah mencukupi; jika ketiga-tiganya diperlukan, gunakan NPK atau gabungan baja tunggal.",
+          "q": "Urea lawan NPK — apakah bezanya?"
+        }
+      ],
+      "vermicompost": [
+        {
+          "a": "Vermicompost ialah baja organik pelepasan perlahan yang dihasilkan oleh cacing tanah, mengandungi nitrogen, fosforus, kalium serta mikronutrien dan mikrob bermanfaat. Kandungan nutrien tepatnya berbeza mengikut bahan mentah, jadi julat tipikal yang ditunjukkan di halaman ini merupakan panduan yang lebih baik daripada mana-mana angka tunggal.",
+          "q": "Apakah nutrien yang terkandung dalam vermicompost?"
+        }
+      ]
     }
   },
   "chart": {
