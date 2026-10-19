@@ -880,7 +880,22 @@
       "openCropGuide": "Abrir guía del cultivo",
       "openCalculator": "Calcular costo de fertilizante",
       "figuresDisclaimerTitle": "Aviso sobre las cifras",
-      "figuresDisclaimer": "Todos los precios, rendimientos y costos utilizados aquí son sus propias suposiciones; no proporcionamos datos de mercado. Los resultados son solo estimaciones de planificación; verifíquelos con las tarifas actuales del mercado local antes de tomar decisiones."
+      "figuresDisclaimer": "Todos los precios, rendimientos y costos utilizados aquí son sus propias suposiciones; no proporcionamos datos de mercado. Los resultados son solo estimaciones de planificación; verifíquelos con las tarifas actuales del mercado local antes de tomar decisiones.",
+      "faqTitle": "Preguntas frecuentes sobre la rentabilidad agrícola",
+      "faq": [
+        {
+          "q": "¿Qué es una calculadora de rentabilidad agrícola?",
+          "a": "Es una herramienta que calcula la rentabilidad agrícola de tu cultivo: resta todos los costes (semillas, fertilizantes, pesticidas, mano de obra, riego y renta) de los ingresos esperados (rendimiento × precio). También muestra el beneficio por hectárea, el punto de equilibrio y el retorno de la inversión."
+        },
+        {
+          "q": "¿Cómo calcular la rentabilidad de un cultivo?",
+          "a": "Introduce el rendimiento esperado, el precio de venta y todos los costes en la calculadora de arriba. Obtendrás automáticamente el beneficio neto, el coste por unidad de rendimiento y el rendimiento mínimo para no perder dinero."
+        },
+        {
+          "q": "¿La calculadora de rendimiento funciona por hectárea y por acre?",
+          "a": "Sí. Esta herramienta de análisis de rentabilidad agrícola calcula el rendimiento y el beneficio por hectárea y por acre: elige tu unidad al empezar y todos los resultados se adaptan."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Comparar fertilizantes y cultivos: comparación de costos de nutrientes",

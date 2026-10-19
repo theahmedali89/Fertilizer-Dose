@@ -109,6 +109,10 @@
       {
         "q": "Why are some crops disabled?",
         "a": "A crop is only selectable when its recommended NPK dose is verified against a published source. We would rather disable a crop than invent its figures — unverified crops are marked \"data in review\" until confirmed."
+      },
+      {
+        "q": "How do you calculate NPK fertilizer in kg?",
+        "a": "First fix how many kilograms of each nutrient (N, P₂O₅, K₂O) your crop needs, then divide by the fertilizer's percentage — for example, 100 kg of nitrogen needs about 217 kg of urea (46% N). The calculator on this page does this automatically for your crop and field size."
       }
     ],
     "organic": {
@@ -1019,7 +1023,22 @@
       "openCropGuide": "Open crop guide",
       "openCalculator": "Calculate fertilizer cost",
       "figuresDisclaimerTitle": "Figures disclaimer",
-      "figuresDisclaimer": "All prices, yields and costs used here are your own assumptions — we provide no market data. Results are planning estimates only; verify with current local market rates before making decisions."
+      "figuresDisclaimer": "All prices, yields and costs used here are your own assumptions — we provide no market data. Results are planning estimates only; verify with current local market rates before making decisions.",
+      "faqTitle": "Common questions about farm profit",
+      "faq": [
+        {
+          "q": "What is a farm profit calculator?",
+          "a": "A farm profit calculator estimates your crop's net profit: expected revenue (yield × selling price) minus all input costs — seed, fertilizer, pesticide, labor, irrigation and rent. It also shows profit per acre or hectare, break-even yield and ROI."
+        },
+        {
+          "q": "How do I calculate crop profitability?",
+          "a": "Enter your expected yield, selling price and all costs in the calculator above. It computes net profit, cost per yield unit, break-even yield and break-even price automatically. Results are estimates — real outcomes depend on weather, market prices and your costs."
+        },
+        {
+          "q": "Can I calculate profit per hectare as well as per acre?",
+          "a": "Yes. Choose your land unit at the start and every figure — revenue, costs, profit, break-even points — is calculated per hectare or per acre accordingly."
+        }
+      ]
     },
     "compare": {
       "metaTitle": "Compare Fertilizers & Crops — Nutrient Cost Comparison",
@@ -1177,6 +1196,69 @@
       "compost": "Decomposed farm and household waste — variable, feedstock-dependent nutrition.",
       "vermicompost": "Earthworm-processed manure — richer than FYM, but feedstock decides everything.",
       "green-manure": "A living nitrogen factory — grown, then ploughed in before the main crop."
+    },
+    "detailFaqTitle": "Common questions about {name}",
+    "faqs": {
+      "dap": [
+        {
+          "q": "What is DAP fertilizer?",
+          "a": "DAP (Di-Ammonium Phosphate) is a mineral fertilizer supplying 18% nitrogen and 46% P₂O₅ — the standard basal phosphorus source at sowing, with a nitrogen bonus that helps young crops establish."
+        },
+        {
+          "q": "DAP vs urea — which is better?",
+          "a": "Neither is better on its own: DAP supplies phosphorus with some nitrogen, while urea supplies nitrogen only. The usual practice is DAP as the basal dose at sowing and urea as a nitrogen top-dress later in the season. Use the dose calculator to work out the right amount of each for your crop."
+        },
+        {
+          "q": "What is the DAP dose per acre?",
+          "a": "The right DAP dose depends on your crop and soil, so there is no single figure — enter your crop in the dose calculator for an exact recommendation. DAP is applied as a basal dose, placed in the seedbed at or before sowing."
+        }
+      ],
+      "urea": [
+        {
+          "q": "How long does urea last in soil?",
+          "a": "Urea converts to plant-available ammonium within about 2–4 days, then to nitrate over the following 2–4 weeks depending on soil temperature and moisture. In practical terms, one urea application feeds the crop for roughly 4–6 weeks — which is why nitrogen is usually split into 2–3 applications during the season."
+        },
+        {
+          "q": "Urea vs NPK — what's the difference?",
+          "a": "Urea supplies nitrogen only (46% N), while an NPK fertilizer supplies nitrogen, phosphorus and potassium together — for example, NPK 19-19-19 contains 19% of each. If only nitrogen is short, urea alone is enough; if all three are needed, use an NPK or a combination of single fertilizers."
+        }
+      ],
+      "mop": [
+        {
+          "q": "What is muriate of potash (MOP) fertilizer?",
+          "a": "Muriate of potash is the common name for potassium chloride fertilizer. It supplies 60% K₂O, making it the most economical potassium source for most field crops. You may also see it written as 'MOP fertilizer' or 'MOP fertiliser'."
+        },
+        {
+          "q": "When should MOP fertilizer be applied?",
+          "a": "MOP is normally applied as part of the basal dose at sowing, together with your phosphorus fertilizer. Avoid placing it in direct contact with seed, especially in saline soils, because of its chloride content."
+        }
+      ],
+      "ammonium-sulphate": [
+        {
+          "q": "What is the ammonium sulphate dose per acre?",
+          "a": "The exact dose depends on your crop's nitrogen requirement — enter your crop in the dose calculator for a precise figure. Ammonium sulphate (21-0-0 plus 24% sulphur) is applied as a top-dress when the crop needs nitrogen and sulphur together, and it suits neutral to alkaline soils because of its mild acidifying effect."
+        },
+        {
+          "q": "Ammonium sulphate vs urea — which should I use?",
+          "a": "Use ammonium sulphate where soils are sulphur-deficient (common in cereals and oilseeds) or on alkaline soils; use urea where only cheap nitrogen is needed. Both supply nitrogen, but only ammonium sulphate also supplies sulphur."
+        }
+      ],
+      "farmyard-manure": [
+        {
+          "q": "What is FYM fertilizer?",
+          "a": "FYM (farmyard manure) is well-rotted cattle dung mixed with bedding — the most widely used organic fertilizer. It releases nutrients slowly over weeks to months and builds soil structure that chemical fertilizers alone cannot."
+        },
+        {
+          "q": "Can FYM replace chemical fertilizer completely?",
+          "a": "Not for high-yield crops: FYM is bulky and its nutrient content is low and variable (typically 0.5–1.0% nitrogen). It works best combined with mineral fertilizers — the typical nutrient range for this batch is shown on this page."
+        }
+      ],
+      "vermicompost": [
+        {
+          "q": "What nutrients are in vermicompost?",
+          "a": "Vermicompost is a slow-release organic fertilizer made by earthworms, containing nitrogen, phosphorus, potassium plus micronutrients and beneficial microbes. Its exact nutrient content varies with the feedstock, so the typical range shown on this page is a better guide than any single figure."
+        }
+      ]
     }
   },
   "chart": {

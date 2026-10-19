@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import { getFertilizers, getFertilizer, getFertilizerLocalized, getFertilizersLocalized } from "@/server/data";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { FertilizerLocalName } from "@/components/fertilizers/FertilizerLocalName";
+import { FertilizerFaq } from "@/components/fertilizers/FertilizerFaq";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
@@ -169,6 +170,7 @@ export default async function FertilizerDetail({
               <h2 className="font-display text-xl font-semibold mb-2">Application guidance</h2>
               <p className="text-ink-soft leading-relaxed">{f.application}</p>
             </CardBody></Card>
+            <FertilizerFaq slug={slug} name={f.name} />
           </div>
           <aside className="space-y-4 lg:sticky lg:top-24">
             <Card className="bg-leaf-950 dark:bg-leaf-950 text-white border-leaf-900">
