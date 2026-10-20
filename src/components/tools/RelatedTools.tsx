@@ -11,6 +11,7 @@ import { Card, CardBody } from "@/components/ui/Card";
 
 const TOOLS = [
   { href: "/calculator", navKey: "calculator" },
+  { href: "/fertilizer-schedule", navKey: "fertilizerSchedule" },
   { href: "/soil-test-calculator", navKey: "soilTestCalculator" },
   { href: "/plant-dose-calculator", navKey: "plantDoseCalculator" },
   { href: "/land-area-calculator", navKey: "landAreaCalculator" },

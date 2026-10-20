@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { Accordion } from "@/components/ui/Accordion";
 import { getPostsLocalized, getPostLocalized } from "@/server/data";
-import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { POST_FAQS } from "@/lib/blog";
+import { ArticleJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
@@ -48,9 +50,11 @@ export default async function BlogPostPage({
   if (!post) notFound();
   const related = (await getPostsLocalized(locale)).filter((p) => p.slug !== post.slug).slice(0, 2);
   const postUrl = `${siteConfig.url}/blog/${post.slug}`;
+  const faqs = POST_FAQS[post.slug];
 
   return (
     <>
+      {faqs && <FaqJsonLd items={faqs} />}
       <ArticleJsonLd
         title={post.title}
         description={post.excerpt}
@@ -137,6 +141,17 @@ export default async function BlogPostPage({
               ))}
             </div>
           </CardBody></Card>
+
+          {faqs && (
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-semibold mb-4">
+                Frequently asked questions
+              </h2>
+              <Card><CardBody className="sm:p-8">
+                <Accordion items={faqs} />
+              </CardBody></Card>
+            </div>
+          )}
 
           {related.length > 0 && (
             <div className="mt-10">

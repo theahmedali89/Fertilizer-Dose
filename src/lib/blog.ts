@@ -662,8 +662,231 @@ export const POSTS: BlogPost[] = [
       "Why are my plant's leaf tips brown after fertilizing? Classic mild fertilizer burn from too strong a solution or feeding dry soil. Leach with plain water and resume at half the previous strength.",
       "Bottom line: dosing fertilizer for plants is one formula — grams per litre equals target ppm divided by (nitrogen % × 10) — applied at an extension-backed strength of 100–200 ppm nitrogen, weighed not guessed, and never on dry or dormant plants. Run your numbers through our /plant-dose-calculator and you will never pinch-and-pray again."
     ]
+  },
+  {
+    slug: "best-fertilizer-for-tomato-plants",
+    image: "/blog/how-to-dose-fertilizer-for-plants.webp",
+    title: "Best Fertilizer for Tomato Plants: Verified NPK Doses and Schedule by Region",
+    excerpt:
+      "What is the best fertilizer for tomato plants? The verified answer is a dose plus a schedule: in Punjab (Pakistan) officials recommend 110–130 kg N, 75–90 kg P₂O₅ and 80–100 kg K₂O per hectare, with nitrogen split three ways. Here are the sourced doses for six regions.",
+    category: "Guides",
+    date: "2026-10-20",
+    readMinutes: 8,
+    body: [
+      "There is no single magic product that is 'the best fertilizer for tomato plants' everywhere. What research institutes actually recommend is a verified NPK dose for your region, applied on a split schedule: all the phosphorus and part of the potash at transplanting, and the nitrogen in three splits as the crop grows. Match that dose and schedule, and the choice between brands matters far less.",
+      "## The verified doses (kg N–P₂O₅–K₂O per hectare)",
+      "Pakistan (Punjab): 110–130 kg N, 75–90 kg P₂O₅ and 80–100 kg K₂O per hectare, from the Vegetable Research Institute, AARI Faisalabad and the PARC horticultural research programme. India (Punjab, UP, Haryana): the same nitrogen range, 110–130 kg N with 60–80 kg P₂O₅ and 60–80 kg K₂O (ICAR-IIVR and PAU). PAU's vegetable package of practices also states the dose per acre: 25 kg each of N, P₂O₅ and K₂O per acre as basal, plus 35 kg N per acre as top-dress.",
+      "Bangladesh (BARI / BARC Fertilizer Recommendation Guide): 100–125 kg N, 55–75 kg P₂O₅ and 60–80 kg K₂O per hectare; the FRG point recommendation is 126 kg N and 64 kg P₂O₅, with the urea split at 20 and 40 days after transplanting. Tamil Nadu (TNAU): 150-100-50 as a soil-applied dose, and a separate drip-fertigation programme of 200-250-250. United States (Southeast and California, UF/IFAS and UC Agriculture & Natural Resources): 170–240 kg N, 90–135 kg P₂O₅ and 180–270 kg K₂O per hectare — note how much heavier the potash is where fruit quality and firmness drive the grade. Italy (Emilia-Romagna technical norms): 130-130-200.",
+      "Two lessons stand out. First, tomato is a potash-hungry crop at fruiting — every recommendation above carries substantial K₂O. Second, the spread between regions is real agronomy (soil, climate, variety, fresh-market vs processing), which is why a dose copied from another country can underfeed or burn a crop. Use the recommendation written for your region.",
+      "## The schedule: why the splits matter",
+      "In the Pakistan, India and Bangladesh recommendations the pattern is the same: apply all the phosphorus and 50% of the potash in the transplanting beds, then split the nitrogen into three equal parts — one third at transplanting, one third about 30 days after transplanting (flower cluster initiation), and one third, together with the remaining potash, at 55–60 days after transplanting (fruit development and ripening). The sources are explicit about why the last potash share waits: potassium at the fruit stage maintains fruit weight and shape.",
+      "Under drip fertigation the same logic is stretched over the season: TNAU's programme applies 75% of the phosphorus as basal and fertigates the nitrogen and potash in rising shares — vegetative stage first, then flowering and early fruit, then the largest share during fruit development and harvest. Our Schedule Builder at /fertilizer-schedule turns these verified splits for your country into dated stages from your own transplanting date.",
+      "## Which products supply the dose",
+      "The basal phosphorus is normally applied as DAP or SSP, the potash as MOP or SOP, and the nitrogen splits as urea. The recommendation is written in nutrients (kg N–P₂O₅–K₂O), not bags — converting it into product quantities for your exact field size is arithmetic, and it is exactly what the fertilizer calculator at /calculator does, showing every step. For a few plants in pots or a kitchen garden, doses are worked per plant instead — see the tomato page under /vegetables and the plant dose calculator.",
+      "## Mistakes these recommendations warn against, indirectly",
+      "Applying all the nitrogen at transplanting contradicts every split schedule above — mobile nitrogen is lost before the fruiting stage needs it. Skipping the fruit-stage potash contradicts them too: the K₂O held back for 55–60 days is there for fruit weight, shape and ripening. And borrowing a dose from a different region ignores the spread documented in the table above. Get a soil test when you can, follow your region's verified dose, and split it the way the source prescribes.",
+      "Bottom line: the best fertilizer for tomato plants is your region's verified NPK dose — for Punjab (Pakistan), 110–130 / 75–90 / 80–100 kg per hectare — with phosphorus and half the potash basal at transplanting and nitrogen in three splits. Run your field size through /calculator for exact bags, and build the dated split plan in /fertilizer-schedule."
+    ]
+  },
+  {
+    slug: "best-fertilizer-for-potato",
+    image: "/blog/fertilizer-calculation.webp",
+    title: "Best Fertilizer for Potatoes: Verified NPK Doses and the Two-Split Schedule",
+    excerpt:
+      "The best fertilizer for potatoes is a verified regional dose applied in two splits — half the nitrogen at planting, half at earthing-up. Punjab (Pakistan): 150–180 kg N, 100–125 kg P₂O₅ and 125–150 kg K₂O per hectare. Sourced doses for six more regions inside.",
+    category: "Guides",
+    date: "2026-10-20",
+    readMinutes: 8,
+    body: [
+      "Ask ten potato growers for the best fertilizer and you will hear ten brand names. Ask the research institutes and you get something more useful: a verified NPK dose for your region and a two-split schedule — half the nitrogen in the furrow at planting, the other half side-dressed at earthing-up, just before tuber initiation. Potato is a heavy potash feeder, and every official dose below reflects that.",
+      "## The verified doses (kg N–P₂O₅–K₂O per hectare)",
+      "Pakistan (Punjab potato belt, Potato Research Institute Sahiwal / AARI Faisalabad): 150–180 kg N, 100–125 kg P₂O₅ and 125–150 kg K₂O per hectare; the point recommendation is 165-112-137. India (ICAR Central Potato Research Institute): 150–180 kg N, 80–100 kg P₂O₅ and 120–150 kg K₂O per hectare for the UP/Punjab/Haryana plains. PAU's vegetable package states products directly per acre: 165 kg urea + 155 kg SSP + 40 kg MOP per acre, plus 20 tonnes of farmyard manure per acre (a nutrient dose of 185-62-62 kg/ha).",
+      "Bangladesh (BARI Tuber Crops Research Centre): 135–165 kg N, 65–85 kg P₂O₅ and 135–165 kg K₂O per hectare; the FRG-based recommendations include 90-20-90 (with half the nitrogen basal and the rest at 35 days after planting) and 161-32-150, plus sulphur, zinc and boron where the guide prescribes them. United States Pacific Northwest (University of Idaho / WSU / UW-Madison extension): the heaviest programme we hold — 200–270 kg N, 135–200 kg P₂O₅ and 200–290 kg K₂O per hectare for high-yield irrigated production. Germany (Lower Saxony): 180-85-260. Poland (IUNG-PIB): 125-80-210 for one production class and 70-60-150 for another — a reminder that target yield and use (table vs processing) move the dose.",
+      "## The schedule: planting, then earthing-up",
+      "Across Pakistan, India, Bangladesh, Germany, France and Poland the verified pattern is consistent: all the phosphorus, all or half the potash, and half the nitrogen go into the furrow or ridge at planting; the remaining nitrogen (and potash, where it was split) is side-dressed at earthing-up, roughly 25–35 days after planting, before tuber initiation. The US Pacific Northwest programme splits three ways instead — 30% at planting, 40% at tuber initiation, 30% at bulking — and stops two to three weeks before vine killing.",
+      "One product note appears in the Indian guidance: SOP (sulphate of potash) is preferred over MOP for processing tubers, where dry matter and fry quality matter. Build the dated version of your country's schedule in the Schedule Builder at /fertilizer-schedule.",
+      "## Converting the dose into bags",
+      "Recommendations are published as nutrients per hectare, not as bags. PAU's per-acre product line above (165 kg urea + 155 kg SSP + 40 kg MOP per acre) is the exception that proves the rule — most sources leave the conversion to you. The fertilizer calculator at /calculator converts any of these doses into urea, DAP and MOP quantities for your exact area, per acre or per hectare, and shows the math. Potato is a field crop in the calculator, so it is pre-filled there.",
+      "Bottom line: the best fertilizer for potatoes is your region's verified dose — 150–180 / 100–125 / 125–150 kg per hectare in Punjab (Pakistan) — with everything except half the nitrogen placed at planting and the rest at earthing-up. Check your region's dose on the potato country pages, then run your area through /calculator for exact product quantities."
+    ]
+  },
+  {
+    slug: "best-fertilizer-for-onion",
+    image: "/blog/yellow-leaves-nutrient-guide.webp",
+    title: "Best Fertilizer for Onions: Verified NPK Doses and Why Late Nitrogen Hurts",
+    excerpt:
+      "Onion recommendations agree on two things: a moderate verified NPK dose — 100–115 kg N, 50–65 kg P₂O₅ and 60–75 kg K₂O per hectare in northern India — and no nitrogen after bulb formation begins. Sourced doses and the three-split schedule inside.",
+    category: "Guides",
+    date: "2026-10-20",
+    readMinutes: 7,
+    body: [
+      "Onion is a shallow-rooted, stage-sensitive crop: it needs its nitrogen early and in splits, and it is actively harmed by nitrogen applied too late. The best fertilizer for onions is therefore a verified regional dose on a strict schedule — three nitrogen splits that finish before bulb initiation — rather than any particular bag.",
+      "## The verified doses (kg N–P₂O₅–K₂O per hectare)",
+      "India (ICAR Directorate of Onion & Garlic Research, with NHRDF): 100–115 kg N, 50–65 kg P₂O₅ and 60–75 kg K₂O per hectare for the northern plains. PAU's vegetable package gives the point dose 98.8-49.4-49.4. Tamil Nadu (TNAU): 150-60-108. Bangladesh (BARI Spices Research Centre, soil-test based): 108.8 kg N, 28.5 kg P₂O₅ and 75.2 kg K₂O per hectare, with 19.6 kg sulphur and 1.3 kg boron per hectare — onion is notably sulphur-responsive, and the Bangladeshi guide says so in numbers. Japan (Hokkaido) publishes a nitrogen programme of 150 kg N/ha, and a Korean nitrogen-input study works at 240 kg N/ha — both are nitrogen-only figures in our records, so we present them as such rather than inventing their phosphorus and potash.",
+      "## The schedule: three splits, then stop",
+      "The Indian recommendation applies all the phosphorus, potash, sulphur and one third of the nitrogen at final ploughing, just before transplanting. The remaining nitrogen follows in two splits: one third at 30 days after transplanting and one third at 50 days, just before bulb initiation. The same source is blunt about the deadline: no late nitrogen after bulb formation begins, because it prevents thick necks and storage rot. TNAU's drip-fertigation programme follows the same logic over a longer season and stops nitrogen entirely 15–20 days before harvest.",
+      "## Products and conversion",
+      "Basal phosphorus and potash go in as DAP/SSP and MOP at land preparation; the nitrogen splits are urea (or fertigation grades under drip). Sulphur, where the guide prescribes it, is part of the basal. To turn the per-hectare nutrient dose into bags for your field, use the fertilizer calculator at /calculator — and for the dated split plan for your country, the Schedule Builder at /fertilizer-schedule. For a kitchen-garden row of onions, the per-plant dosing guide under /vegetables is the right scale.",
+      "Bottom line: feed onions their verified regional dose — about 100–115 / 50–65 / 60–75 kg per hectare in northern India, 150-60-108 under TNAU — with all phosphorus, potash and sulphur basal, nitrogen in three splits, and nothing after bulb initiation. The discipline of the schedule is worth as much as the dose."
+    ]
+  },
+  {
+    slug: "best-fertilizer-for-cabbage",
+    image: "/blog/organic-fertilizers-for-plants.webp",
+    title: "Best Fertilizer for Cabbage: Verified NPK Doses and the Three-Split Nitrogen Plan",
+    excerpt:
+      "Cabbage wants all its phosphorus and potash up front and its nitrogen in three splits timed to head formation: 120–140 kg N, 60–75 kg P₂O₅ and 60–75 kg K₂O per hectare in northern India; 110–135 / 60–75 / 60–75 in Punjab (Pakistan). Verified doses for six regions inside.",
+    category: "Guides",
+    date: "2026-10-20",
+    readMinutes: 7,
+    body: [
+      "Cabbage builds a heavy head in a short season, and its verified fertilizer programmes share one shape: all the phosphorus and potash worked in at final ploughing, and the nitrogen split into three — at transplanting, in the rosette stage, and just before the head forms. The best fertilizer for cabbage is that dose-and-schedule combination for your region.",
+      "## The verified doses (kg N–P₂O₅–K₂O per hectare)",
+      "India (ICAR-IARI New Delhi / PAU): 120–140 kg N, 60–75 kg P₂O₅ and 60–75 kg K₂O per hectare; PAU's package point dose is 123.6-61.8-61.8. Pakistan (Vegetable Research Institute, AARI Faisalabad, for Punjab): 110–135 kg N, 60–75 kg P₂O₅ and 60–75 kg K₂O. Bangladesh: a Fertilizer Recommendation Guide range of 110–130 / 55–70 / 60–75, and a BJAR-published point dose of 140-40-125 with 20 kg sulphur and 1 kg boron per hectare.",
+      "United States (Midwest Vegetable Production Guide): 140–190 kg N, 80–120 kg P₂O₅ and 110–170 kg K₂O per hectare; California (UC): 160–200 / 60–90 / 110–150. Japan (Aichi Prefecture fertilization standards): 290-150-290 — by far the heaviest programme we hold, written for intensive Japanese production. Tamil Nadu's TNAU fertigation programme applies 135-135-135 through drip. The spread is a warning against copying doses across regions: soil and production system move the numbers more than the crop does.",
+      "## The schedule: nitrogen in thirds, timed to the head",
+      "In the Indian and Pakistani programmes the nitrogen is split into three equal parts: at transplanting, at 25–30 days after transplanting, and at 45–50 days, at head formation. The stated purpose in the sources is compact head formation and preventing head splitting — a late nitrogen surge pushes loose, cracked heads. The US Midwest guide uses the same skeleton with different weights: full phosphorus and potash plus 50 kg N/ha pre-plant, then the remaining nitrogen in two splits, the second at cupping / early head formation. The dated plan for your country is in the Schedule Builder at /fertilizer-schedule.",
+      "## Products and conversion",
+      "Basal phosphorus (DAP or SSP) and potash (MOP) go in at final ploughing or bed preparation; the nitrogen splits are urea, side-dressed or fertigated. Boron appears in the Bangladeshi and US programmes as part of the basal — cole crops are boron-sensitive, and the guides include it deliberately. Convert any dose above into product bags for your area with the fertilizer calculator at /calculator; for a few heads in a home garden, scale down through the cabbage page under /vegetables instead.",
+      "Bottom line: the best fertilizer for cabbage is your region's verified dose — 120–140 / 60–75 / 60–75 kg per hectare in northern India — with phosphorus and potash all basal and nitrogen in three splits that end at head formation. Dose and timing together make the head."
+    ]
+  },
+  {
+    slug: "best-fertilizer-for-cauliflower",
+    image: "/blog/soil-testing.webp",
+    title: "Best Fertilizer for Cauliflower: Verified NPK Doses, Boron and the Curd-Stage Split",
+    excerpt:
+      "Cauliflower programmes put phosphorus, potash and boron in the basal and split nitrogen three ways, with the last split at curd initiation: 125–150 kg N, 75–85 kg P₂O₅ and 75–85 kg K₂O per hectare in northern India. Verified doses for six regions inside.",
+    category: "Guides",
+    date: "2026-10-20",
+    readMinutes: 7,
+    body: [
+      "Cauliflower is the most timing-sensitive of the cole crops: the last nitrogen split is deliberately placed at curd initiation, and boron sits in the basal dose in the Indian and Pakistani programmes. The best fertilizer for cauliflower is your region's verified dose applied on that schedule — not a generic vegetable blend.",
+      "## The verified doses (kg N–P₂O₅–K₂O per hectare)",
+      "India (ICAR-IIVR Varanasi / CCS HAU Hisar): 125–150 kg N, 75–85 kg P₂O₅ and 75–85 kg K₂O per hectare. PAU's vegetable package point dose: 123.6-61.8-61.8. Pakistan (Vegetable Research Institute, AARI Faisalabad, for Punjab): 120–150 kg N, 75–90 kg P₂O₅ and 75–90 kg K₂O. Bangladesh (BARI / BARC FRG): 120–140 kg N, 65–80 kg P₂O₅ and 70–85 kg K₂O.",
+      "United States (Midwest Vegetable Production Guide): 160–210 kg N, 90–135 kg P₂O₅ and 130–190 kg K₂O per hectare; the Southeast (UF/IFAS) runs 170–225 / 90–135 / 135–190 with weekly fertigation after a basal. Tamil Nadu (TNAU) fertigates 135-135-135 through drip. As with cabbage, the regional spread is wide — Japanese and American programmes run far heavier than South Asian ones — so always work from your own region's recommendation.",
+      "## The schedule: basal with boron, last split at curd initiation",
+      "The Indian programme applies all the phosphorus, potash, borax and one third of the nitrogen at transplanting, during ridge formation. The remaining nitrogen follows in two side-dress splits: at 30 days after transplanting (active vegetative phase) and at 50 days (curd initiation). Pakistan's programme is the same shape — phosphorus, potash, boron and one third of the nitrogen incorporated at ridging, the rest in two equal side-dressings, the last at curd initiation (50–60 days). Bangladesh rings the side-dress around the plants. The US Midwest programme splits nitrogen three ways by weight: 50 kg/ha pre-plant, 60 kg/ha three weeks after transplanting, and the remainder just before curd initiation.",
+      "Boron deserves its own sentence: it appears in the basal of the Indian, Pakistani and Bangladeshi programmes (as borax) because cauliflower is boron-sensitive — hollow stem and browning are the classic deficiency picture the guides are written to prevent. The Schedule Builder at /fertilizer-schedule shows the dated split plan for your country.",
+      "## Products and conversion",
+      "Basal phosphorus as DAP or SSP, potash as MOP, borax for the boron share, and urea for the nitrogen splits — that is the product skeleton behind every programme above. The recommendations are written in nutrients per hectare; the fertilizer calculator at /calculator converts them into product quantities for your exact area with the math shown. Garden-scale growers should use the cauliflower page under /vegetables for per-plant guidance.",
+      "Bottom line: the best fertilizer for cauliflower is the verified regional dose — 125–150 / 75–85 / 75–85 kg per hectare in northern India — with phosphorus, potash and boron basal at transplanting and nitrogen split so the last share lands at curd initiation."
+    ]
   }
 ];
+
+export const POST_FAQS: Record<string, { q: string; a: string }[]> = {
+  "best-fertilizer-for-tomato-plants": [
+    {
+      q: "What is the best fertilizer for tomato plants?",
+      a: "The best fertilizer is the one that delivers your region's verified NPK dose on the recommended schedule. In Punjab (Pakistan) that is 110–130 kg N, 75–90 kg P₂O₅ and 80–100 kg K₂O per hectare (AARI/PARC): all phosphorus and half the potash at transplanting, nitrogen in three splits. In the US Southeast it is 170–240 kg N, 90–135 kg P₂O₅ and 180–270 kg K₂O per hectare (UF/IFAS).",
+    },
+    {
+      q: "How much fertilizer does a tomato crop need per acre?",
+      a: "PAU's vegetable package of practices states the dose per acre directly: 25 kg each of N, P₂O₅ and K₂O per acre as a basal dose, plus 35 kg N per acre as top-dress. Per-hectare recommendations convert to per acre by dividing by 2.471.",
+    },
+    {
+      q: "When should fertilizer be applied to tomatoes?",
+      a: "In the Pakistan, India and Bangladesh recommendations: phosphorus and half the potash at transplanting, then nitrogen in three equal splits — at transplanting, about 30 days after transplanting, and at 55–60 days with the remaining potash, at fruit development.",
+    },
+    {
+      q: "Why do tomato recommendations hold back half the potash?",
+      a: "Because the fruit stage needs it most. The sources state that potassium applied at fruit development maintains fruit weight and shape, so 50% of the K₂O is deliberately kept for the last split instead of going in at transplanting.",
+    },
+    {
+      q: "How do I convert the tomato NPK dose into bags of urea, DAP and MOP?",
+      a: "Use the FertDose fertilizer calculator: enter the crop and your area and it converts the nutrient dose into product quantities and 50 kg bags, showing every step of the math.",
+    },
+  ],
+  "best-fertilizer-for-potato": [
+    {
+      q: "What is the best fertilizer for potatoes?",
+      a: "A verified regional NPK dose applied in two splits. In Punjab (Pakistan) the Potato Research Institute / AARI recommendation is 150–180 kg N, 100–125 kg P₂O₅ and 125–150 kg K₂O per hectare; in India, ICAR-CPRI recommends 150–180 / 80–100 / 120–150 kg per hectare.",
+    },
+    {
+      q: "How much fertilizer does one acre of potato need?",
+      a: "PAU's vegetable package states products per acre directly: 165 kg urea + 155 kg SSP + 40 kg MOP per acre, plus 20 tonnes of farmyard manure per acre. Per-hectare doses convert to per acre by dividing by 2.471.",
+    },
+    {
+      q: "When should the second nitrogen split be applied to potatoes?",
+      a: "At earthing-up, roughly 25–35 days after planting and before tuber initiation. Half the nitrogen goes in the furrow at planting; the remaining half is side-dressed at earthing-up in the Pakistan, India, Bangladesh, German, French and Polish recommendations.",
+    },
+    {
+      q: "Is SOP or MOP better for potatoes?",
+      a: "The Indian (ICAR-CPRI) guidance prefers SOP — sulphate of potash — for processing tubers, where dry matter and fry quality matter. MOP is the standard potash source in the other recommendations we hold.",
+    },
+    {
+      q: "How many bags of fertilizer per hectare does the potato dose make?",
+      a: "It depends on the products chosen. Enter the dose and your area in the FertDose calculator and it returns exact urea, DAP and MOP quantities and 50 kg bag counts.",
+    },
+  ],
+  "best-fertilizer-for-onion": [
+    {
+      q: "What is the best fertilizer for onions?",
+      a: "A verified regional dose on a strict split schedule: 100–115 kg N, 50–65 kg P₂O₅ and 60–75 kg K₂O per hectare in northern India (ICAR-DOGR/NHRDF), or 150-60-108 under TNAU in Tamil Nadu — with all phosphorus, potash and sulphur basal and nitrogen in three splits.",
+    },
+    {
+      q: "When should nitrogen be applied to onions?",
+      a: "One third at final ploughing before transplanting, one third at 30 days after transplanting, and one third at 50 days, just before bulb initiation. The Indian recommendation explicitly warns against nitrogen after bulb formation begins.",
+    },
+    {
+      q: "Why is late nitrogen bad for onions?",
+      a: "The ICAR-DOGR/NHRDF guidance states that nitrogen applied after bulb formation begins causes thick necks and storage rot. TNAU's fertigation programme likewise stops nitrogen 15–20 days before harvest.",
+    },
+    {
+      q: "Does onion need sulphur and boron?",
+      a: "In the Bangladesh (BARI) soil-test-based recommendation, yes: alongside 108.8 kg N, 28.5 kg P₂O₅ and 75.2 kg K₂O per hectare, it prescribes 19.6 kg sulphur and 1.3 kg boron per hectare.",
+    },
+    {
+      q: "How do I convert the onion dose into bags for my field?",
+      a: "Enter your area in the FertDose fertilizer calculator — it converts the per-hectare nutrient dose into urea, DAP and MOP quantities and 50 kg bags.",
+    },
+  ],
+  "best-fertilizer-for-cabbage": [
+    {
+      q: "What is the best fertilizer for cabbage?",
+      a: "Your region's verified dose with split nitrogen: 120–140 kg N, 60–75 kg P₂O₅ and 60–75 kg K₂O per hectare in northern India (ICAR-IARI/PAU), or 110–135 / 60–75 / 60–75 in Punjab, Pakistan (AARI). All phosphorus and potash go in at final ploughing; nitrogen is split three ways.",
+    },
+    {
+      q: "When should nitrogen be applied to cabbage?",
+      a: "In three equal splits: at transplanting, at 25–30 days after transplanting, and at 45–50 days at head formation. The sources link this timing to compact heads and preventing head splitting.",
+    },
+    {
+      q: "How much fertilizer does cabbage need per hectare?",
+      a: "It depends on the region: 120–140 kg N in northern India, 140–190 kg N in the US Midwest guide, and 290 kg N under Japan's Aichi standards. Always use the recommendation written for your region and production system.",
+    },
+    {
+      q: "Does cabbage need boron?",
+      a: "The Bangladeshi recommendation (140-40-125 kg/ha) includes 1 kg boron per hectare, and the US Midwest programme also applies boron with the basal. Cole crops are boron-sensitive, so several official guides include it deliberately.",
+    },
+    {
+      q: "How do I work out bags of urea, DAP and MOP for cabbage?",
+      a: "The FertDose calculator converts the per-hectare nutrient dose into product quantities and 50 kg bags for your exact area, showing the calculation.",
+    },
+  ],
+  "best-fertilizer-for-cauliflower": [
+    {
+      q: "What is the best fertilizer for cauliflower?",
+      a: "A verified regional dose with boron in the basal and the last nitrogen split at curd initiation: 125–150 kg N, 75–85 kg P₂O₅ and 75–85 kg K₂O per hectare in northern India (ICAR-IIVR/CCS HAU), or 120–150 / 75–90 / 75–90 in Punjab, Pakistan (AARI).",
+    },
+    {
+      q: "When is the last nitrogen split for cauliflower?",
+      a: "At curd initiation — about 50 days after transplanting in the Indian programme and 50–60 days in the Pakistani one. The earlier split lands at 30 days, in the active vegetative phase.",
+    },
+    {
+      q: "Why does cauliflower fertilizer include borax?",
+      a: "The Indian, Pakistani and Bangladeshi programmes all place borax (boron) in the basal dose at transplanting because cauliflower is boron-sensitive; the guides are written to prevent deficiency problems such as hollow stem and browning.",
+    },
+    {
+      q: "How much fertilizer does cauliflower need per hectare?",
+      a: "Northern India: 125–150 kg N, 75–85 kg P₂O₅, 75–85 kg K₂O. The US Midwest guide runs heavier at 160–210 kg N, 90–135 kg P₂O₅ and 130–190 kg K₂O. Use your own region's figure.",
+    },
+    {
+      q: "How do I convert the cauliflower dose into bags?",
+      a: "Use the FertDose fertilizer calculator: it turns the nutrient dose into urea, DAP and MOP quantities and 50 kg bags for your field size, with the math shown.",
+    },
+  ],
+};
 
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);

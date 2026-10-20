@@ -1,11 +1,11 @@
 {
   "calculator": {
-    "desc": "Pick your crop, enter your land in the unit you use — acre, kanal, marla or hectare — and get precise urea, DAP and MOP quantities plus a stage-wise application schedule.",
+    "desc": "Use this fertilizer calculator: pick your crop, enter your land in the unit you use — acre, kanal, marla or hectare — and get precise urea, DAP and MOP quantities plus a stage-wise application schedule.",
     "empty": {
       "desc": "Choose a crop, enter your land area, and hit calculate. Every step of the math is shown.",
       "title": "Your dose will appear here"
     },
-    "eyebrow": "Dose calculator",
+    "eyebrow": "Fertilizer calculator",
     "form": {
       "area": "Land area",
       "areaError": "Please enter a valid land area greater than zero.",
@@ -74,7 +74,7 @@
       "shareCopy": "Copy",
       "shareCopied": "Copied!"
     },
-    "title": "Exact fertilizer dose, with the math shown.",
+    "title": "Fertilizer calculator — exact dose, with the math shown.",
     "soilTestCard": {
       "eyebrow": "Soil test?",
       "title": "Have your soil-test results? Get a precision dose.",
@@ -87,8 +87,8 @@
       "desc": "Mix water-soluble fertilizer by ppm — grams per litre and per pot — with extension-based feeding rates for gentle, regular and heavy feeders.",
       "cta": "Open the plant dose calculator →"
     },
-    "metaTitle": "Fertilizer Dose Calculator — Urea, DAP & MOP per Acre/Kanal/Marla",
-    "metaDescription": "Calculate exact urea, DAP and MOP doses per acre, kanal, marla or hectare — see how many 50 kg bags you need for wheat, rice, maize and more crops.",
+    "metaTitle": "Fertilizer Calculator — Urea, DAP & MOP Dose per Acre, Kanal, Marla & Hectare",
+    "metaDescription": "Free fertilizer calculator: pick your crop, enter your land (acre, kanal, marla or hectare) and get exact urea, DAP and MOP quantities, 50 kg bags, cost and a stage-wise application schedule.",
     "methodFaq": [
       {
         "q": "Why is DAP calculated first?",
@@ -162,7 +162,40 @@
       "noLabRecord": "No lab record entered — user-entered values, unverified.",
       "topupSummary": "Mineral top-up remaining: N {n} / P₂O₅ {p} / K₂O {k} kg/ha (maximum offset; slow release not accounted).",
       "saveDisclaimer": "User-entered organic application. Nutrient figures are arithmetic on user inputs, not lab-verified by the app."
-    }
+    },
+    "scheduleCard": {
+      "eyebrow": "Fertilizer schedule",
+      "title": "Want the stage-wise schedule on its own?",
+      "desc": "The Schedule Builder turns the verified recommendation for your crop and country into a stage-by-stage plan — basal, top-dress and fertigation splits — with calendar dates from your sowing date.",
+      "cta": "Build my schedule"
+    },
+    "perAcre": {
+      "eyebrow": "Per-acre doses",
+      "title": "How much fertilizer per acre?",
+      "desc": "Most official recommendations are published per hectare, but many farmers plan per acre. Divide the per-hectare figure by 2.471 to get the per-acre amount. The table below does that conversion for the verified recommendations of your selected country — the same numbers the calculator above uses.",
+      "cropHeader": "Crop",
+      "doseHeader": "NPK per acre (kg N–P₂O₅–K₂O)",
+      "note": "Converted from the verified per-hectare recommendation (kg/ha ÷ 2.471). Where the source dose is a range, the per-acre range is shown — never a midpoint.",
+      "faqTitle": "Per-acre fertilizer — frequently asked questions"
+    },
+    "perAcreFaq": [
+      {
+        "q": "How much fertilizer per acre do I need?",
+        "a": "There is no single number — it depends on the crop, your soil, and your country's official recommendation. Recommendations are published per hectare; divide by 2.471 for the per-acre amount (for example, 120 kg N/ha is 48.6 kg N per acre). Use the table on this page for your crop, or run the calculator for exact product quantities."
+      },
+      {
+        "q": "How do I convert a per-hectare dose to per acre?",
+        "a": "Divide by 2.471 (1 hectare = 2.471 acres). In Pakistan, divide the per-acre figure by 4 for one kanal or by 80 for one marla."
+      },
+      {
+        "q": "How many bags of fertilizer per acre is that?",
+        "a": "Divide the kilograms per acre by 50 for standard 50 kg bags. The calculator on this page works out urea, DAP and MOP bags for your exact area and shows every step."
+      },
+      {
+        "q": "Should I apply the whole per-acre dose at once?",
+        "a": "No. Phosphorus and potash are usually applied in full as a basal dose at sowing, while nitrogen is split across growth stages. The Schedule Builder shows the verified stage-wise split for your crop and country."
+      }
+    ]
   },
   "common": {
     "themeDark": "Switch to dark mode",
@@ -749,7 +782,8 @@
     "deficiencyChecker": "Deficiency Checker",
     "tankMixChecker": "Tank-Mix Checker",
     "costCalculator": "Cost Calculator",
-    "alternativeFinder": "Alternative Finder"
+    "alternativeFinder": "Alternative Finder",
+    "fertilizerSchedule": "Fertilizer Schedule"
   },
   "plantDoctor": {
     "desc": "Upload a clear photo, describe the symptoms, and get a structured assessment — possible issues with honest confidence levels, likely causes, and what to do next.",
@@ -2197,5 +2231,56 @@
       "thNeeded": "Needed",
       "thNutrient": "Nutrient"
     }
+  },
+  "schedule": {
+    "metaTitle": "Fertilizer Schedule Builder — Stage-Wise Application Schedule for Your Crop",
+    "metaDescription": "Build a fertilizer schedule from verified official recommendations: pick your crop, add your sowing date, and get the stage-wise basal, top-dress and fertigation plan for your country.",
+    "eyebrow": "Fertilizer schedule",
+    "title": "Fertilizer Schedule Builder",
+    "desc": "Pick a crop and your sowing or transplanting date. The builder turns the verified recommendation for your country into a stage-wise application schedule — what goes in as basal, what is top-dressed or fertigated later, and on which dates.",
+    "form": {
+      "crop": "Crop",
+      "date": "Sowing / transplanting date (optional)",
+      "dateHint": "Stages in official recommendations are stated as offsets (for example, “30 days after transplanting”). Add your date and the builder converts them into calendar dates.",
+      "submit": "Build schedule",
+      "countryNote": "Schedules use the country selected at the top of the site. Change the country there to see another country's official schedule."
+    },
+    "results": {
+      "doseTitle": "Total recommended dose",
+      "perHa": "kg N–P₂O₅–K₂O per hectare",
+      "scheduleTitle": "Stage-wise schedule",
+      "dateLabel": "Your dates",
+      "sourceLabel": "Data source:",
+      "otherTitle": "Other verified schedules for this crop",
+      "badgeVerified": "Verified",
+      "badgeReview": "Under review",
+      "noDateNote": "Add your sowing or transplanting date above to turn stage offsets into calendar dates.",
+      "calcCtaTitle": "Need bags and product amounts for your field?",
+      "calcCtaDesc": "The dose calculator converts this recommendation into urea, DAP and MOP quantities for your exact area.",
+      "calcCta": "Open the fertilizer calculator"
+    },
+    "empty": {
+      "title": "No stage-wise schedule for this crop yet",
+      "desc": "We don't hold a verified stage-wise recommendation for {crop} in {country} yet, so no schedule can be built — nothing is guessed. You can still calculate the crop's total dose, and its country page lists the full official recommendation where one exists."
+    },
+    "faqTitle": "Fertilizer schedule — frequently asked questions",
+    "faq": [
+      {
+        "q": "What is a fertilizer schedule?",
+        "a": "A fertilizer schedule splits a crop's total fertilizer dose across its growth stages — a basal dose at sowing or transplanting, then top-dressings or fertigation at stages such as tillering, flowering and fruit development — instead of applying everything at once."
+      },
+      {
+        "q": "Why is fertilizer split into stages?",
+        "a": "Nitrogen moves in soil and is lost to leaching and volatilization, so extension services split it across the stages when the crop needs it. Phosphorus and potash barely move in soil, so they are usually applied in full as a basal dose. Every schedule on this page comes from a published official recommendation for the crop and country shown."
+      },
+      {
+        "q": "How are the calendar dates calculated?",
+        "a": "Each stage's offset comes from the source recommendation (for example, 30 days after transplanting). When you enter your sowing or transplanting date, the builder adds that offset to your date. Stages whose source gives no day offset are shown without a date — a date is never guessed."
+      },
+      {
+        "q": "Can I get product quantities for each stage?",
+        "a": "The schedule shows the verified stage split and the total dose. For exact urea, DAP and MOP quantities and 50 kg bags for your field size, run the fertilizer calculator — it shows the split-dose schedule with amounts."
+      }
+    ]
   }
 }
