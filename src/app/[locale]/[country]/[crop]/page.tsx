@@ -15,7 +15,12 @@ import {
   type CountryCropRecommendation,
 } from "@/server/country-crop";
 
-export const revalidate = 86400;
+// 72h ISR: dose data changes in batches, so a longer cache window is safe and
+// cuts function regenerations ~3x vs 24h (Vercel Fluid CPU saving, 2026-10-22).
+// Full build-time pre-render is intentionally impossible here: isDbConfigured()
+// returns false during `next build` (static-datasets design), so
+// generateStaticParams yields no combos and pages generate on demand + cache.
+export const revalidate = 259200;
 
 export async function generateStaticParams() {
   const combos = await getCountryCropCombos();
