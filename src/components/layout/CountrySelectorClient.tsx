@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -17,21 +17,47 @@ function setCountryCookie(code: string) {
   document.cookie = `${REGION_COOKIE}=; path=/; max-age=0; SameSite=Lax`;
 }
 
+/** Server-side default; mirrors the fallback getSelectedCountryCode() used. */
+const DEFAULT_COUNTRY_CODE = "PK";
+
+function readCountryCookie(): string | null {
+  const match = document.cookie.match(
+    new RegExp(`(?:^|; )${COUNTRY_COOKIE}=([^;]*)`)
+  );
+  return match ? decodeURIComponent(match[1]).toUpperCase() : null;
+}
+
+function noopSubscribe() {
+  return () => {};
+}
+
 /**
  * Global country selector. Country and UI language are independent:
  * selecting a country never changes the locale.
  */
 export function CountrySelectorClient({
   countries,
-  selectedCode,
 }: {
   countries: CountryInfo[];
-  selectedCode: string;
 }) {
   const t = useTranslations("country");
   const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState(selectedCode);
+  // The selection lives in the FD_COUNTRY cookie, which only exists in the
+  // browser. Reading it here (instead of cookies() on the server) keeps the
+  // layout static-safe: useSyncExternalStore yields the server default during
+  // SSR/hydration, then the visitor's saved country right after mount.
+  const cookieCode = useSyncExternalStore(
+    noopSubscribe,
+    readCountryCookie,
+    () => null
+  );
+  const [picked, setPicked] = useState<string | null>(null);
+  const current =
+    picked ??
+    (cookieCode && countries.some((c) => c.code === cookieCode)
+      ? cookieCode
+      : DEFAULT_COUNTRY_CODE);
   const ref = useRef<HTMLDivElement>(null);
 
   const selected = countries.find((c) => c.code === current) ?? countries[0];
@@ -55,7 +81,7 @@ export function CountrySelectorClient({
     setOpen(false);
     if (code === current) return;
     setCountryCookie(code);
-    setCurrent(code);
+    setPicked(code);
     // Re-render server components that read the cookie (calendar, homepage…).
     router.refresh();
   };
