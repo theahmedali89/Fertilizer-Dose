@@ -16,7 +16,7 @@
  */
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
@@ -28,6 +28,8 @@ import {
   COUNTRY_COOKIE,
   REGION_COOKIE,
   COUNTRY_COOKIE_MAX_AGE,
+  readCountryCookie,
+  readRegionCookie,
 } from "@/lib/countryCookies";
 import {
   loadGarden,
@@ -83,12 +85,17 @@ export function KitchenGardenPlanner({
   suggestions,
   regionName,
   initial,
+  syncFromCookie = false,
 }: {
   countries: CountryInfo[];
   regionsByCountry: Record<string, RegionInfo[]>;
   suggestions: KitchenGardenSuggestion[];
   regionName: string;
   initial: KitchenGardenInitial;
+  /** True when the URL carried no country/region: resolve the visitor's
+   *  saved FD_COUNTRY/FD_REGION cookies here, on the client, instead of
+   *  the server calling cookies() (which forced the route dynamic). */
+  syncFromCookie?: boolean;
 }) {
   const t = useTranslations("kitchenGarden");
   const locale = useLocale();
@@ -109,8 +116,28 @@ export function KitchenGardenPlanner({
   const [pathWidth, setPathWidth] = useState("0.4");
   const [saved, setSaved] = useState(false);
 
-  const apply = (next: typeof sel) => {
-    setSel(next);
+  // Keep local selection in sync when the server echoes a different one
+  // via the URL (the cookie sync below). React-endorsed "adjust state
+  // during render" pattern; apply() already sets sel to the same values
+  // the URL echoes back, so this never loops. Area/unit are user-typed
+  // state — only the initial mount reads them from the URL.
+  const [prevInitial, setPrevInitial] = useState(initial);
+  if (
+    prevInitial.country !== initial.country ||
+    prevInitial.region !== initial.region ||
+    prevInitial.month !== initial.month ||
+    prevInitial.sunlight !== initial.sunlight
+  ) {
+    setPrevInitial(initial);
+    setSel({
+      country: initial.country,
+      region: initial.region,
+      month: initial.month,
+      sunlight: initial.sunlight,
+    });
+  }
+
+  const syncUrl = (next: typeof sel) => {
     setCookie(COUNTRY_COOKIE, next.country.toUpperCase());
     setCookie(REGION_COOKIE, next.region);
     const q = new URLSearchParams();
@@ -125,6 +152,34 @@ export function KitchenGardenPlanner({
     }
     router.replace(`${pathname}?${q.toString()}`, { scroll: false });
   };
+
+  const apply = (next: typeof sel) => {
+    setSel(next);
+    syncUrl(next);
+  };
+
+  // One-time cookie → URL sync on mount. Only the URL (an external
+  // system) is touched here; the server re-render then flows the resolved
+  // selection back through `initial`, handled by the pattern above.
+  const cookieSyncDone = useRef(false);
+  useEffect(() => {
+    if (!syncFromCookie || cookieSyncDone.current) return;
+    cookieSyncDone.current = true;
+    const cc = readCountryCookie();
+    if (!cc) return;
+    const country = cc.toLowerCase();
+    const regions = regionsByCountry[country];
+    if (!regions?.length) return;
+    const rc = readRegionCookie();
+    const region = regions.some((r) => r.slug === rc)
+      ? (rc as string)
+      : regions[0].slug;
+    if (country === initial.country && region === initial.region) return;
+    syncUrl({ ...initial, country, region });
+    // Mount-only by design (guarded by cookieSyncDone); the values it
+    // reads are the mount-time props and state.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [syncFromCookie]);
 
   const onCountry = (country: string) => {
     const first = regionsByCountry[country]?.[0]?.slug ?? "";

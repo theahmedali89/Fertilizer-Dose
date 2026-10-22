@@ -13,8 +13,6 @@ import {
 import {
   getCountries,
   getAllRegions,
-  getSelectedCountryCode,
-  getSelectedRegionSlug,
   type RegionInfo,
 } from "@/server/country";
 import {
@@ -58,23 +56,29 @@ export default async function KitchenGardenPage({
   const countries = await getCountries();
   const allRegions = await getAllRegions();
 
-  // Resolve country: ?country=pk → cookie → PK default.
+  // Resolve country: ?country=pk → PK default. The visitor's saved
+  // FD_COUNTRY cookie is no longer read on the server (cookies() forced
+  // this route dynamic and blocked ISR caching) — when neither country
+  // nor region is in the URL, KitchenGardenPlanner syncs from the cookie
+  // on the client and rewrites the URL, which re-renders this page with
+  // explicit params.
   const paramCountry = String(sp.country ?? "").toLowerCase();
   let countryCode = countries.some((c) => c.code.toLowerCase() === paramCountry)
     ? paramCountry.toUpperCase()
-    : await getSelectedCountryCode();
+    : "PK";
   if (!countries.some((c) => c.code === countryCode)) countryCode = "PK";
 
   const regions = allRegions.filter((r) => r.countryCode === countryCode);
 
-  // Resolve region: ?region= → cookie (validated) → first region.
+  // Resolve region: ?region= → first region of the country.
   const paramRegion = String(sp.region ?? "");
   let regionSlug = regions.some((r) => r.slug === paramRegion)
     ? paramRegion
-    : (await getSelectedRegionSlug(countryCode)) ?? regions[0]?.slug ?? "";
+    : regions[0]?.slug ?? "";
   if (!regions.some((r) => r.slug === regionSlug)) {
     regionSlug = regions[0]?.slug ?? "";
   }
+  const syncFromCookie = !sp.country && !sp.region;
 
   // Resolve month + sunlight.
   const rawMonth = parseInt(String(sp.month ?? ""), 10);
@@ -148,6 +152,7 @@ export default async function KitchenGardenPage({
           suggestions={suggestions}
           regionName={regionName}
           initial={initial}
+          syncFromCookie={syncFromCookie}
         />
       </Section>
 

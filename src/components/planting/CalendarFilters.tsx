@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
@@ -10,6 +10,8 @@ import {
   COUNTRY_COOKIE,
   REGION_COOKIE,
   COUNTRY_COOKIE_MAX_AGE,
+  readCountryCookie,
+  readRegionCookie,
 } from "@/lib/countryCookies";
 import type { CountryInfo, RegionInfo } from "@/server/country";
 
@@ -37,10 +39,15 @@ export function CalendarFilters({
   countries,
   regionsByCountry,
   initial,
+  syncFromCookie = false,
 }: {
   countries: CountryInfo[];
   regionsByCountry: Record<string, RegionInfo[]>;
   initial: CalendarSelection;
+  /** True when the URL carried no country/region: resolve the visitor's
+   *  saved FD_COUNTRY/FD_REGION cookies here, on the client, instead of
+   *  the server calling cookies() (which forced the route dynamic). */
+  syncFromCookie?: boolean;
 }) {
   const t = useTranslations("calendar");
   const locale = useLocale();
@@ -48,8 +55,22 @@ export function CalendarFilters({
   const pathname = usePathname();
   const [sel, setSel] = useState<CalendarSelection>(initial);
 
-  const apply = (next: CalendarSelection) => {
-    setSel(next);
+  // Keep local state in sync when the server echoes a different selection
+  // via the URL (month grid clicks, the cookie sync below). React-endorsed
+  // "adjust state during render" pattern — no effect, no setState loop:
+  // apply() already sets sel to the same values the URL then echoes back.
+  const [prevInitial, setPrevInitial] = useState(initial);
+  if (
+    prevInitial.country !== initial.country ||
+    prevInitial.region !== initial.region ||
+    prevInitial.month !== initial.month ||
+    prevInitial.category !== initial.category
+  ) {
+    setPrevInitial(initial);
+    setSel(initial);
+  }
+
+  const syncUrl = (next: CalendarSelection) => {
     setCookie(COUNTRY_COOKIE, next.country.toUpperCase());
     setCookie(REGION_COOKIE, next.region);
     const q = new URLSearchParams();
@@ -59,6 +80,34 @@ export function CalendarFilters({
     if (next.category !== "all") q.set("category", next.category);
     router.replace(`${pathname}?${q.toString()}`, { scroll: false });
   };
+
+  const apply = (next: CalendarSelection) => {
+    setSel(next);
+    syncUrl(next);
+  };
+
+  // One-time cookie → URL sync on mount. Only the URL (an external system)
+  // is touched here; the server re-render then flows the resolved
+  // selection back through `initial`, handled by the pattern above.
+  const cookieSyncDone = useRef(false);
+  useEffect(() => {
+    if (!syncFromCookie || cookieSyncDone.current) return;
+    cookieSyncDone.current = true;
+    const cc = readCountryCookie();
+    if (!cc) return;
+    const country = cc.toLowerCase();
+    const regions = regionsByCountry[country];
+    if (!regions?.length) return;
+    const rc = readRegionCookie();
+    const region = regions.some((r) => r.slug === rc)
+      ? (rc as string)
+      : regions[0].slug;
+    if (country === initial.country && region === initial.region) return;
+    syncUrl({ ...initial, country, region });
+    // Mount-only by design (guarded by cookieSyncDone); the values it reads
+    // are the mount-time props.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [syncFromCookie]);
 
   const onCountry = (country: string) => {
     const first = regionsByCountry[country]?.[0]?.slug ?? "";

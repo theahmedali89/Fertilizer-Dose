@@ -16,7 +16,14 @@ function setCountryCookie(code: string) {
 }
 
 /** Inline country picker shown on the homepage when no country is selected yet. */
-export function CountryPickerInline({ countries }: { countries: CountryInfo[] }) {
+export function CountryPickerInline({
+  countries,
+  onPick,
+}: {
+  countries: CountryInfo[];
+  /** Optional: parent (client) resolves the pick itself, no refresh needed. */
+  onPick?: (code: string) => void;
+}) {
   const t = useTranslations("home");
   const router = useRouter();
   const [picked, setPicked] = useState<string | null>(null);
@@ -24,7 +31,8 @@ export function CountryPickerInline({ countries }: { countries: CountryInfo[] })
   const choose = (code: string) => {
     setCountryCookie(code);
     setPicked(code);
-    router.refresh();
+    if (onPick) onPick(code);
+    else router.refresh();
   };
 
   return (
