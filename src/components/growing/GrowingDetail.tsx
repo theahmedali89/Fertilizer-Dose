@@ -13,9 +13,8 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 import { SuggestButton } from "@/components/suggestions/SuggestButton";
 import { ContributorStrip } from "@/components/suggestions/ContributorStrip";
-import { ApplicationTimeline } from "@/components/crop/ApplicationTimeline";
+import { CropTimeline } from "@/components/growing/CropTimeline";
 import { HowToApplyFaq } from "@/components/crop/HowToApplyFaq";
-import type { TimelineStage } from "@/lib/timeline-parse";
 
 function NoData({ title, hint }: { title: string; hint: string }) {
   return (
@@ -30,14 +29,20 @@ export async function GrowingDetail({
   item,
   related,
   localName,
-  timeline,
+  timelineSlug,
 }: {
   item: GrowingItem;
   related: GrowingItem[];
   /** Translated name for the active non-English locale (null → English). */
   localName?: string | null;
-  /** Parsed fertilizer application stages (optional — timeline hidden when empty). */
-  timeline?: TimelineStage[];
+  /**
+   * When set, the fertilizer application timeline loads client-side for
+   * this crop (CropTimeline reads the visitor's country cookie in the
+   * browser). The server must NOT resolve the timeline: reading cookies()
+   * on this statically prerendered page crashed it with "Page changed
+   * from static to dynamic at runtime, reason: cookies" (2026-10-25).
+   */
+  timelineSlug?: string;
 }) {
   const t = await getTranslations("growing");
   const meta = CATEGORY_META[item.category];
@@ -177,16 +182,14 @@ export async function GrowingDetail({
             {/* Community contributors — approved suggestions only */}
             <ContributorStrip cropSlug={item.slug} />
 
-            {/* Application timeline — visual split schedule */}
-            {timeline && timeline.length > 0 && (
-              <Card>
-                <CardBody>
-                  <h2 className="font-display text-xl font-semibold mb-4">
-                    {s.applicationTimeline ?? "Application Schedule"}
-                  </h2>
-                  <ApplicationTimeline stages={timeline} />
-                </CardBody>
-              </Card>
+            {/* Application timeline — visual split schedule, loaded
+                client-side (see CropTimeline): the visitor's country
+                cookie must not be read on the server here. */}
+            {timelineSlug && (
+              <CropTimeline
+                slug={timelineSlug}
+                title={s.applicationTimeline ?? "Application Schedule"}
+              />
             )}
 
             {/* How to apply — practical fertigation FAQ (SEO: FAQPage JSON-LD) */}

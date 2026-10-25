@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { localizedMetadata } from "@/lib/seo";
 import { GrowingDetail } from "@/components/growing/GrowingDetail";
-import { getGrowingItem, getGrowingByCategory, getApplicationTimeline } from "@/server/data";
+import { getGrowingItem, getGrowingByCategory } from "@/server/data";
 import { getTranslatedItemNames } from "@/server/i18n-names";
 
 export const revalidate = 86400;
@@ -47,6 +47,9 @@ export default async function CropDetail({
   if (!item || item.category !== "crop") notFound();
   const related = (await getGrowingByCategory("crop")).filter((i) => i.slug !== slug);
   const names = await getTranslatedItemNames([slug], locale);
-  const timeline = await getApplicationTimeline(slug);
-  return <GrowingDetail item={item} related={related} localName={names.get(slug) ?? null} timeline={timeline} />;
+  // No server-side timeline here: resolving it read the visitor's country
+  // cookie, which crashed this statically prerendered page ("Page changed
+  // from static to dynamic at runtime, reason: cookies", 2026-10-25).
+  // The timeline loads client-side via CropTimeline instead.
+  return <GrowingDetail item={item} related={related} localName={names.get(slug) ?? null} timelineSlug={slug} />;
 }
