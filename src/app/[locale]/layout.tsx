@@ -108,7 +108,7 @@ export default async function LocaleLayout({
               Skip to content
             </a>
             <Header countrySelector={<CountrySelector />} />
-            {locale !== "en" && <TranslationNotice />}
+            {locale !== "en" && <TranslationNotice locale={locale} />}
             <main id="main-content">
               <div className="field-texture" aria-hidden="true" />
               {children}

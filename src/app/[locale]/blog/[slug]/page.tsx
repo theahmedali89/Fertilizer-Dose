@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Accordion } from "@/components/ui/Accordion";
 import { getPostsLocalized, getPostLocalized } from "@/server/data";
 import { POST_FAQS } from "@/lib/blog";
+import { POST_FAQ_TRANSLATIONS } from "@/lib/post-faq-translations";
 import { ArticleJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/JsonLd";
 import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
@@ -50,7 +51,8 @@ export default async function BlogPostPage({
   if (!post) notFound();
   const related = (await getPostsLocalized(locale)).filter((p) => p.slug !== post.slug).slice(0, 2);
   const postUrl = `${siteConfig.url}/blog/${post.slug}`;
-  const faqs = POST_FAQS[post.slug];
+  const faqs =
+    POST_FAQ_TRANSLATIONS[locale]?.[post.slug] ?? POST_FAQS[post.slug];
 
   return (
     <>
