@@ -68,7 +68,7 @@ export function PlantingHitCard({
               >
                 {hit.localName ?? hit.itemName}
               </Link>{" "}
-              {hit.itemUrdu && (
+              {hit.itemUrdu && locale === "ur" && (
                 <span className="text-sm font-sans font-normal text-ink-faint" lang="ur">
                   {hit.itemUrdu}
                 </span>

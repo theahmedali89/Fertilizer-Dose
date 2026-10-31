@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import {
   COUNTRY_COOKIE,
@@ -42,6 +42,7 @@ export function CountrySelectorClient({
 }) {
   const t = useTranslations("country");
   const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   // The selection lives in the FD_COUNTRY cookie, which only exists in the
   // browser. Reading it here (instead of cookies() on the server) keeps the
@@ -82,8 +83,21 @@ export function CountrySelectorClient({
     if (code === current) return;
     setCountryCookie(code);
     setPicked(code);
-    // Re-render server components that read the cookie (calendar, homepage…).
-    router.refresh();
+    // Pages that carry the country in the URL (?country=…, e.g. the planting
+    // calendar and kitchen garden) resolve it from search params, NOT the
+    // cookie — a bare router.refresh() would re-render them with the stale
+    // ?country= value. Push the new country into the URL so their data
+    // follows the header selector; the region is dropped so the page
+    // recomputes the new country's default region.
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("country")) {
+      params.set("country", code.toLowerCase());
+      params.delete("region");
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    } else {
+      // Re-render server components that read the cookie (calculator, homepage…).
+      router.refresh();
+    }
   };
 
   return (
