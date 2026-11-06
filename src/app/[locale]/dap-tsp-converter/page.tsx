@@ -31,6 +31,11 @@ export default async function DapTspConverterPage({
   setRequestLocale(locale);
   const t = await getTranslations("dapTsp");
   const faq = t.raw("faq") as { q: string; a: string }[];
+  const prosDapGood = t.raw("guide.prosDapGood") as string[];
+  const prosDapBad = t.raw("guide.prosDapBad") as string[];
+  const prosTspGood = t.raw("guide.prosTspGood") as string[];
+  const prosTspBad = t.raw("guide.prosTspBad") as string[];
+  const methodSteps = t.raw("guide.methodSteps") as string[];
 
   return (
     <>
@@ -51,6 +56,67 @@ export default async function DapTspConverterPage({
 
       <Section>
         <DapTspForm />
+      </Section>
+
+      {/* Pros and cons */}
+      <div className="bg-surface border-t border-line">
+        <Section title={t("guide.prosTitle")}>
+          <p className="max-w-3xl text-ink-soft leading-relaxed">{t("guide.prosIntro")}</p>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 max-w-4xl">
+            <div>
+              <h3 className="font-display text-2xl font-semibold">{t("guide.prosDapLabel")}</h3>
+              <h4 className="mt-5 font-semibold text-leaf-700 dark:text-leaf-400">{t("guide.prosGoodLabel")}</h4>
+              <ul className="mt-2.5 space-y-2.5">
+                {prosDapGood.map((item, i) => (
+                  <li key={i} className="flex gap-2.5 text-ink-soft leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-leaf-600 shrink-0" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <h4 className="mt-5 font-semibold text-harvest-700 dark:text-harvest-300">{t("guide.prosBadLabel")}</h4>
+              <ul className="mt-2.5 space-y-2.5">
+                {prosDapBad.map((item, i) => (
+                  <li key={i} className="flex gap-2.5 text-ink-soft leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-harvest-500 shrink-0" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl font-semibold">{t("guide.prosTspLabel")}</h3>
+              <h4 className="mt-5 font-semibold text-leaf-700 dark:text-leaf-400">{t("guide.prosGoodLabel")}</h4>
+              <ul className="mt-2.5 space-y-2.5">
+                {prosTspGood.map((item, i) => (
+                  <li key={i} className="flex gap-2.5 text-ink-soft leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-leaf-600 shrink-0" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <h4 className="mt-5 font-semibold text-harvest-700 dark:text-harvest-300">{t("guide.prosBadLabel")}</h4>
+              <ul className="mt-2.5 space-y-2.5">
+                {prosTspBad.map((item, i) => (
+                  <li key={i} className="flex gap-2.5 text-ink-soft leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-harvest-500 shrink-0" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Section>
+      </div>
+
+      {/* Per-acre method */}
+      <Section title={t("guide.methodTitle")}>
+        <p className="max-w-3xl text-ink-soft leading-relaxed">{t("guide.methodIntro")}</p>
+        <ol className="mt-6 max-w-3xl list-decimal space-y-2.5 pl-6 text-ink-soft leading-relaxed">
+          {methodSteps.map((step, i) => (
+            <li key={i}>{step}</li>
+          ))}
+        </ol>
       </Section>
 
       {/* Educational sections */}

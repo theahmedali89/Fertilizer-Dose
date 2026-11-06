@@ -1544,6 +1544,40 @@
       "eyebrow": "How it works",
       "equivTitle": "The equivalence behind the math",
       "equivBody": "Both bags hold 23 kg of P2O5. DAP adds 9 kg of nitrogen; TSP adds none. Twenty kilograms of urea at 46 percent nitrogen supplies 9.2 kg of nitrogen, so 1 bag of TSP plus 20 kg of urea gives the same nitrogen and phosphorus as 1 bag of DAP.",
+      "prosTitle": "DAP vs TSP: pros and cons",
+      "prosIntro": "Yes, TSP can replace DAP, but only with urea. Both bags hold the same 23 kg of phosphorus; the only difference is nitrogen. The choice comes down to price, availability, and one extra step.",
+      "prosDapLabel": "DAP",
+      "prosTspLabel": "TSP",
+      "prosGoodLabel": "Pros",
+      "prosBadLabel": "Cons",
+      "prosDapGood": [
+        "Nitrogen and phosphorus in one bag, so nothing needs mixing.",
+        "The standard recommendation, stocked by most dealers.",
+        "Trusted from years of use in the field."
+      ],
+      "prosDapBad": [
+        "Most expensive option: Rs 17,153 per bag (PBS retail average, week ended 29 October 2026).",
+        "Farmers report it is often short at sowing time, and black marketing has been reported.",
+        "Some farmers doubt its genuineness, and there is no verified way to check a bag."
+      ],
+      "prosTspGood": [
+        "Cheaper per bag: Rs 12,995 in the retailer listing found.",
+        "Same 23 kg of phosphorus as DAP, bag for bag.",
+        "Usually cheaper overall even after the urea is added; check with your own prices above."
+      ],
+      "prosTspBad": [
+        "No nitrogen: needs 20 kg of urea per bag, or wheat turns yellow.",
+        "Urea is fine-grained and separates from TSP in the drill, farmers report.",
+        "Availability is not guaranteed; one cheaper listing was already out of stock."
+      ],
+      "methodTitle": "Wheat: the per-acre method",
+      "methodIntro": "For wheat, Punjab guidance is 2 bags of DAP per acre on irrigated land and 1 to 1.5 bags on barani land. The TSP route uses the same bag count: 1 bag of TSP plus 20 kg of urea for every bag of DAP.",
+      "methodSteps": [
+        "Set the bag count: 2 bags per acre irrigated, 1 to 1.5 bags barani.",
+        "If you use TSP, add 20 kg of urea per bag. Do not skip the urea: wheat turns yellow without it.",
+        "Band-place all phosphorus at sowing, 5 cm to the side and 5 cm below the seed. Do not broadcast it, and do not top-dress it later.",
+        "Check the local price and availability before buying: TSP only saves money if it is actually in stock near the listed price."
+      ],
       "soilTitle": "Phosphorus in Pakistani soil",
       "soilBody": "Most Pakistani soils are alkaline and calcareous, and only about 10 to 25 percent of applied phosphorus is used by the crop in the season. Placement matters more than product choice: band-place phosphorus 5 cm to the side and 5 cm below the seed at sowing, and apply it all at sowing time.",
       "pricesTitle": "About the prices",
