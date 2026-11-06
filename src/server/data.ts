@@ -29,6 +29,7 @@ import {
   type PlantingWindow,
 } from "@/lib/planting";
 import { POSTS as STATIC_POSTS, type BlogPost } from "@/lib/blog";
+import { POST_TRANSLATIONS } from "@/lib/post-translations";
 import type { TimelineStage } from "@/lib/timeline-parse";
 import { parseApplicationTimeline } from "@/lib/timeline-parse";
 
@@ -315,23 +316,47 @@ function applyTranslation(
 }
 
 /**
+ * Apply a static (file-based) translation onto a static blog post.
+ * Used for posts in src/lib/blog.ts that have no DB row: DB PostTranslation
+ * rows always take precedence for DB posts (see applyTranslation above),
+ * and static posts fall back to English when no entry exists here.
+ */
+function applyStaticTranslation(base: BlogPost, locale: string): BlogPost {
+  const t = POST_TRANSLATIONS[locale]?.[base.slug];
+  if (!t) return base;
+  return {
+    ...base,
+    title: t.title,
+    excerpt: t.excerpt,
+    body: t.body.length ? t.body : base.body,
+    readMinutes: Math.max(
+      1,
+      Math.round(t.body.join(" ").split(/\s+/).length / 200),
+    ),
+  };
+}
+
+/**
  * Blog posts with title/excerpt/body in the requested locale when a
  * translation exists; English fallback per post otherwise. "en" skips
  * the translation query entirely.
  */
 export async function getPostsLocalized(locale: string): Promise<BlogPost[]> {
   if (!locale || locale === "en") return getPosts();
+  const localizedStatic = STATIC_POSTS.map((p) =>
+    applyStaticTranslation(p, locale),
+  );
   return tryDb(async () => {
     const rows = await db.post.findMany({
       where: { published: true },
       orderBy: { publishedAt: "desc" },
       include: { translations: { where: { locale } } },
     });
-    if (!rows.length) return STATIC_POSTS;
+    if (!rows.length) return localizedStatic;
     const dbSlugs = new Set(rows.map((r) => r.slug));
     const localized = rows.map((r) => applyTranslation(toBlogPost(r), r.translations[0]));
-    return [...localized, ...STATIC_POSTS.filter((p) => !dbSlugs.has(p.slug))];
-  }, STATIC_POSTS);
+    return [...localized, ...localizedStatic.filter((p) => !dbSlugs.has(p.slug))];
+  }, localizedStatic);
 }
 
 export async function getPostLocalized(

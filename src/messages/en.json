@@ -777,6 +777,7 @@
     "logout": "Log out",
     "plantDoseCalculator": "Plant Dose Calculator",
     "landAreaCalculator": "Land Area Calculator",
+    "dapTspConverter": "DAP ↔ TSP Converter",
     "kitchenGarden": "Kitchen Garden Planner",
     "mapAreaCalculator": "Map Area Calculator",
     "deficiencyChecker": "Deficiency Checker",
@@ -1487,6 +1488,91 @@
     ],
     "relatedTitle": "Related agricultural tools",
     "relatedCurrent": "You are here"
+  },
+  "dapTsp": {
+    "eyebrow": "Free agricultural tool",
+    "title": "DAP ↔ TSP Converter",
+    "desc": "Compare DAP with TSP plus urea for the same phosphorus and nitrogen, using your own prices. One bag of TSP plus 20 kg of urea matches one bag of DAP.",
+    "metaTitle": "DAP vs TSP Converter – Compare Cost per Bag in Pakistan",
+    "metaDescription": "Compare DAP vs TSP with your own prices. One bag of TSP plus 20 kg urea equals one bag of DAP. See which option costs less.",
+    "modeLabel": "What do you want to convert?",
+    "modes": {
+      "bags": "DAP bags planned",
+      "phosphorus": "Phosphorus needed (P2O5)"
+    },
+    "bagsLabel": "DAP bags",
+    "bagsHint": "Bags of DAP you planned to buy. The TSP option uses the same number of bags.",
+    "p2o5Label": "Phosphorus needed (kg P2O5)",
+    "p2o5Hint": "The converter works out the bags from 23 kg P2O5 per bag.",
+    "dapPriceLabel": "DAP price (Rs per 50 kg bag)",
+    "tspPriceLabel": "TSP price (Rs per 50 kg bag)",
+    "ureaPriceLabel": "Urea price (Rs per 50 kg bag)",
+    "includeUrea": "Add urea with TSP to replace DAP's nitrogen",
+    "includeUreaHint": "One bag of TSP needs 20 kg of urea to match the 9 kg of nitrogen in one bag of DAP.",
+    "calculate": "Compare options",
+    "errors": {
+      "enterBags": "Please enter how many bags of DAP you planned.",
+      "enterP2O5": "Please enter the phosphorus needed in kg P2O5.",
+      "enterPrices": "Please enter a price above zero for DAP, TSP and urea.",
+      "invalid": "Those numbers do not form a valid comparison. Please check them."
+    },
+    "resultsTitle": "Side-by-side comparison",
+    "optionDap": "Option A: DAP",
+    "optionTsp": "Option B: TSP + urea",
+    "dapBags": "DAP bags",
+    "tspBags": "TSP bags",
+    "ureaNeeded": "Urea needed",
+    "ureaBags": "Urea bags",
+    "totalCost": "Total cost",
+    "p2o5Supplied": "Phosphorus (P2O5) supplied",
+    "nSupplied": "Nitrogen (N) supplied",
+    "costPerKgP": "Cost per kg of P2O5",
+    "savingTsp": "TSP route saves {amount}",
+    "savingDap": "DAP route saves {amount}",
+    "savingEqual": "Both options cost the same",
+    "nShortfall": "Missing nitrogen: {kg} kg. TSP without urea leaves the crop short at the critical early stage.",
+    "tspAvailabilityNote": "TSP price is a retailer listing, availability not guaranteed. The Engro listing at Rs 12,675 was out of stock in November 2026.",
+    "priceNote": "Default prices: DAP Rs 17,153 per bag (PBS retail average, week ended 29 October 2026); TSP Rs 12,995 per bag (Manuchar retailer listing, November 2026); urea Rs 4,750 per bag. Edit any price to match your local market.",
+    "nNote": "The urea in the TSP option supplies 9.2 kg of nitrogen per 20 kg, about 0.2 kg more than the 9 kg in DAP. The difference is negligible.",
+    "howCalculated": "How this was calculated",
+    "methodLine": "{bags} bags supply {p2o5} kg P2O5. DAP: {dapCost}. TSP: {tspBags} bags plus {ureaKg} kg urea ({ureaBags} bags) at {ureaPrice} per bag: {tspCost}.",
+    "readArticle": "Read the DAP vs TSP guide",
+    "readArticleDesc": "Same phosphorus, different bag: prices, soil behaviour and which crop suits which product.",
+    "openCalculator": "Open Fertilizer Calculator",
+    "dapDetails": "DAP fertilizer details",
+    "guide": {
+      "eyebrow": "How it works",
+      "equivTitle": "The equivalence behind the math",
+      "equivBody": "Both bags hold 23 kg of P2O5. DAP adds 9 kg of nitrogen; TSP adds none. Twenty kilograms of urea at 46 percent nitrogen supplies 9.2 kg of nitrogen, so 1 bag of TSP plus 20 kg of urea gives the same nitrogen and phosphorus as 1 bag of DAP.",
+      "soilTitle": "Phosphorus in Pakistani soil",
+      "soilBody": "Most Pakistani soils are alkaline and calcareous, and only about 10 to 25 percent of applied phosphorus is used by the crop in the season. Placement matters more than product choice: band-place phosphorus 5 cm to the side and 5 cm below the seed at sowing, and apply it all at sowing time.",
+      "pricesTitle": "About the prices",
+      "pricesBody": "DAP is tracked in the PBS weekly retail survey, so its price is a surveyed average. TSP is not in the survey, so its price comes from single-retailer listings and availability is not guaranteed. Prices change weekly, so always check your local dealer before buying.",
+      "sourcesTitle": "Sources and methodology",
+      "sourcesBody": "Prices: PBS retail average via Pakera (week ended 29 October 2026); TSP listings from KissanStore and IR Farm (November 2026). Soil and efficiency figures: University of Agriculture Faisalabad (MDPI Agronomy, 2023) and Pakistan Journal of Botany (2011). Equivalence: 1 bag TSP plus 20 kg urea equals 1 bag DAP (Punjab Agricultural University guidance, October 2024)."
+    },
+    "faq": [
+      {
+        "q": "Is TSP weaker than DAP?",
+        "a": "No. Bag for bag, both hold 23 kg of P2O5 (46 percent). TSP is only missing nitrogen, which about 20 kg of urea replaces. The phosphorus is identical."
+      },
+      {
+        "q": "How much urea do I add with one bag of TSP?",
+        "a": "About 20 kg of urea, which supplies 9.2 kg of nitrogen and matches the 9 kg in a bag of DAP. Some sources say 25 kg, but that overshoots nitrogen by 2.5 kg."
+      },
+      {
+        "q": "Why is TSP cheaper per kg of phosphorus?",
+        "a": "On the two retailer listings found, TSP costs Rs 551 to 565 per kg of P2O5 against Rs 698 to 746 for DAP. The catch is availability: the cheaper listing was out of stock, and TSP is fully imported in small volumes."
+      },
+      {
+        "q": "Does TSP keep phosphorus available longer in alkaline soil?",
+        "a": "Not proven. Its acidic granule gives a theoretical short-term advantage in calcareous soil, but no Pakistan field trial has shown longer availability over a season. Placement and timing matter far more than which of the two products you use."
+      },
+      {
+        "q": "Can I top-dress DAP or TSP later in the season?",
+        "a": "No. Phosphorus moves only 3 to 5 cm in soil and is needed at root establishment, so granular phosphorus applied late largely stays where it falls. Apply all phosphorus at sowing."
+      }
+    ]
   },
   "mapArea": {
     "eyebrow": "Agricultural Tools",

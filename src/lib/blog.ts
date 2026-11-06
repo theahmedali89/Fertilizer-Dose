@@ -772,7 +772,41 @@ export const POSTS: BlogPost[] = [
       "Basal phosphorus as DAP or SSP, potash as MOP, borax for the boron share, and urea for the nitrogen splits — that is the product skeleton behind every programme above. The recommendations are written in nutrients per hectare; the fertilizer calculator at /calculator converts them into product quantities for your exact area with the math shown. Garden-scale growers should use the cauliflower page under /vegetables for per-plant guidance.",
       "Bottom line: the best fertilizer for cauliflower is the verified regional dose — 125–150 / 75–85 / 75–85 kg per hectare in northern India — with phosphorus, potash and boron basal at transplanting and nitrogen split so the last share lands at curd initiation."
     ]
-  }
+  },
+  {
+    slug: "dap-vs-tsp-pakistan",
+    image: "",
+    title: "DAP vs TSP in Pakistan: Which Bag Should You Buy?",
+    excerpt:
+      "DAP and TSP hold the same phosphorus per bag. Compare prices, soil behaviour and the 1 bag TSP + 20 kg urea rule before you buy.",
+    category: "Fertilizers",
+    date: "2026-11-06",
+    readMinutes: 7,
+    body: [
+      "DAP and TSP look like rivals at the fertilizer shop, but bag for bag they carry exactly the same phosphorus: 23 kilograms of P₂O₅ in every 50 kilogram bag. The real difference is nitrogen. DAP adds 9 kilograms of it, while TSP adds none. Price and availability decide the rest, and in Pakistan both point the same way most of the time. This guide compares the two products with dated prices, explains what happens to phosphorus in alkaline soil, and shows when TSP is the smarter buy.",
+      "## The short answer",
+      "DAP is the default for most Pakistani farmers, most crops, most of the time. It is the product the extension system prescribes, the one dealers stock, and the one that delivers starter nitrogen and phosphorus in a single pass at sowing. TSP is nutritionally identical for phosphorus and cheaper per kilogram of it on the two retailer listings found, but it is fully imported, was out of stock at one listing, and is not tracked in the PBS weekly price survey. Buy TSP only when you can actually get it near the listed price and you add about 20 kilograms of urea per bag to replace the nitrogen DAP would have supplied. For legumes and fields already rich in nitrogen, TSP is the correct product even at equal price, because those crops do not need the nitrogen in DAP.",
+      "## What is in each bag",
+      "Both bags hold 23 kilograms of P₂O₅, which is 46 percent of the 50 kilogram bag. DAP (18-46-0) adds 9 kilograms of nitrogen, while TSP (0-46-0) adds none and carries about 13 to 15 percent calcium instead. That calcium is a small bonus on paper, but Pakistani calcareous soils are already rich in calcium, so it should not decide the purchase. Around the granule, the two behave differently: a DAP granule sits in an alkaline solution of pH 7.5 to 8.0, while a TSP granule sits in a strongly acidic solution of pH 1 to 3. Neither product changes the pH of the whole field at normal rates of one to two bags per acre. Only the millimetres around each granule are affected, and only for a short time.",
+      "Phosphorus (P₂O₅): DAP 23 kg per bag. TSP 23 kg per bag. Identical.",
+      "Nitrogen (N): DAP 9 kg per bag. TSP 0 kg per bag.",
+      "Calcium: DAP none of note. TSP about 13 to 15 percent.",
+      "Solution pH around the granule: DAP 7.5 to 8.0. TSP 1 to 3.",
+      "Water solubility of phosphorus: DAP high. TSP above 90 percent.",
+      "## What the prices say",
+      "DAP averaged Rs 17,153 per 50 kilogram bag in the Pakistan Bureau of Statistics retail survey for the week ended 29 October 2026, up 17.6 percent from a year earlier. City prices ranged from Rs 16,100 in Multan to Rs 17,744 in Quetta, while company-level DAP was about Rs 16,000 to 16,100 and imported DAP reached Rs 17,064 to 18,294. TSP has no PBS price at all, which already tells you it is not a mainstream product here. The only prices found were two single-retailer online listings: Engro TSP at Rs 12,675, shown as out of stock, and Manuchar TSP at Rs 12,995. Per kilogram of phosphorus, DAP costs Rs 698 to 746 and TSP costs Rs 551 to 565 where available. Adding 20 kilograms of urea to a bag of TSP brings the DAP-equivalent package to roughly Rs 14,575 to 14,895, against Rs 16,055 to 17,153 for DAP. That saving of about Rs 1,500 to 2,500 per bag is real only if TSP can actually be bought at the listed price.",
+      "## Why phosphorus disappears in Pakistani soil",
+      "Most Pakistani soils are alkaline and calcareous, with pH above 7.5 and calcium carbonate above 3 percent, and 80 to 90 percent of sub-soils are phosphorus-limited. Soluble phosphate reacts with calcium and precipitates into forms the crop cannot use, so only about 10 to 25 percent of applied phosphorus is used by the crop in the season. Some online posts claim 20 to 30 percent of DAP is fixed within 7 days and 75 to 85 percent within 60 to 90 days. Those day-by-day figures are unsourced and were not confirmed by any peer-reviewed study found in this research, so do not use them as fact. What the peer-reviewed work does support is the 10 to 25 percent seasonal recovery range, and the fix is placement, not product choice. Band-place phosphorus 5 cm to the side and 5 cm below the seed, keep it off the seed itself, and apply it all at sowing. A PARC band-placement drill tested in Chakwal gave about 24 percent higher rainfed wheat yield than a zero-till drill with half a bag of DAP, and about 9 percent more than broadcasting.",
+      "## Which crop, which bag",
+      "Wheat, rice, cotton, maize and sugarcane all need nitrogen and phosphorus together at sowing, so DAP is the default for them. Punjab Agriculture Department guidance prescribes DAP for wheat: 2 bags per acre on irrigated land, and 1 to 1.5 bags per acre on rainfed land by rainfall zone, all placed by drill at land preparation. Vegetables are a closer call, because nitrogen is often applied separately in splits and the nitrogen in DAP can be surplus or mistimed. Legumes and pulses are the clearest case for TSP: they fix their own nitrogen, so DAP's 9 kilograms of nitrogen per bag is largely unnecessary and can even suppress nodulation when over-applied. Fields with high residual nitrogen, after a legume or heavy manure, or a soil test showing nitrogen sufficiency, also suit TSP. When the soil already tests high in available phosphorus, skip phosphorus entirely and save the money.",
+      "## How to apply it",
+      "Apply all phosphorus at sowing or land preparation, never as a top-dressing. Phosphorus moves only 3 to 5 cm in soil and is needed at root establishment, so late granular phosphorus largely stays where it falls. Split nitrogen in two or three turns with irrigations, but never split phosphorus. Keep DAP granules slightly away from direct seed contact, because free ammonia can injure germination, especially in dry soil. Test the soil first: many fields test high in phosphorus after years of DAP use, and a soil test can save a whole bag per acre. Try the [DAP ↔ TSP converter](/dap-tsp-converter) with your own prices before you buy.",
+      "## Mistakes to avoid",
+      "Broadcasting DAP on the surface is the single biggest avoidable loss, because maximum soil contact means maximum fixation. Treating DAP as a top-dressing fertilizer wastes it for the same reason: phosphorus is immobile and needed early. Mixing DAP through the whole plough layer dilutes the band and increases fixation. Buying TSP without adding urea leaves the crop short of 9 kilograms of nitrogen per bag at the critical early stage. Ignoring the nitrogen already in DAP when planning urea over-applies nitrogen, which costs money and risks lodging. Believing TSP corrects alkaline soil is wrong: bulk soil pH does not change at field rates, and both products eventually precipitate with calcium.",
+      "## The bottom line",
+      "Choose DAP when you need nitrogen and phosphorus together at sowing, when TSP is unavailable, or when you simply want the product every dealer stocks. TSP is the better buy when you can get it near the listed price and you add 20 kilograms of urea per bag, or when the crop fixes its own nitrogen and does not need the nitrogen in DAP. Never delay sowing while waiting for TSP: a late sowing costs more than the price gap between the two bags. The phosphorus in both bags is the same, so let price, availability and your nitrogen need decide. Read the meaning of [phosphorus](https://www.merriam-webster.com/dictionary/phosphorus) before your next purchase.",
+    ],
+  },
 ];
 
 export const POST_FAQS: Record<string, { q: string; a: string }[]> = {
@@ -884,6 +918,28 @@ export const POST_FAQS: Record<string, { q: string; a: string }[]> = {
     {
       q: "How do I convert the cauliflower dose into bags?",
       a: "Use the FertDose fertilizer calculator: it turns the nutrient dose into urea, DAP and MOP quantities and 50 kg bags for your field size, with the math shown.",
+    },
+  ],
+  "dap-vs-tsp-pakistan": [
+    {
+      q: "Is TSP weaker than DAP?",
+      a: "No. Bag for bag, both hold 23 kg of P₂O₅ (46 percent). TSP is only missing nitrogen, which about 20 kg of urea replaces. The phosphorus is identical.",
+    },
+    {
+      q: "How much urea do I add with one bag of TSP?",
+      a: "About 20 kg of urea, which supplies 9.2 kg of nitrogen and matches the 9 kg in a bag of DAP. Some sources say 25 kg, but that overshoots nitrogen by 2.5 kg.",
+    },
+    {
+      q: "Why is TSP cheaper per kg of phosphorus?",
+      a: "On the two retailer listings found, TSP costs Rs 551 to 565 per kg of P₂O₅ against Rs 698 to 746 for DAP. The catch is availability: the cheaper listing was out of stock, and TSP is fully imported in small volumes.",
+    },
+    {
+      q: "Does TSP keep phosphorus available longer in alkaline soil?",
+      a: "Not proven. Its acidic granule gives a theoretical short-term advantage in calcareous soil, but no Pakistan field trial has shown longer availability over a season. Placement and timing matter far more than which of the two products you use.",
+    },
+    {
+      q: "Can I top-dress DAP or TSP later in the season?",
+      a: "No. Phosphorus moves only 3 to 5 cm in soil and is needed at root establishment, so granular phosphorus applied late largely stays where it falls. Apply all phosphorus at sowing.",
     },
   ],
 };

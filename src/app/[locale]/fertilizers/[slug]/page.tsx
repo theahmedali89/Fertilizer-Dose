@@ -182,6 +182,22 @@ export default async function FertilizerDetail({
                 </Link>
               </CardBody>
             </Card>
+            {slug === "dap" && (
+              <Card><CardBody>
+                <h3 className="font-semibold text-sm mb-1.5">DAP vs TSP</h3>
+                <p className="text-sm text-ink-soft leading-relaxed">
+                  Same phosphorus per bag, different price. Compare DAP with TSP plus urea at your own prices.
+                </p>
+                <div className="mt-3 flex flex-col gap-1.5">
+                  <Link href="/dap-tsp-converter" className="text-sm font-semibold text-leaf-700 dark:text-leaf-300 hover:underline">
+                    Open the DAP ↔ TSP converter
+                  </Link>
+                  <Link href="/blog/dap-vs-tsp-pakistan" className="text-sm font-semibold text-leaf-700 dark:text-leaf-300 hover:underline">
+                    Read: DAP vs TSP in Pakistan
+                  </Link>
+                </div>
+              </CardBody></Card>
+            )}
             <Card><CardBody>
               <h3 className="font-semibold text-sm mb-2">More fertilizers</h3>
               <ul className="space-y-1.5">

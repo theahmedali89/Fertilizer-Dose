@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
@@ -13,6 +14,37 @@ import { localizedMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
 export const revalidate = 86400;
+
+/** Render [text](url) inline links inside a body paragraph.
+ * Internal "/..." links use next-intl Link; external http(s) links open in
+ * a new tab with rel="nofollow noopener". Plain text is unchanged, so posts
+ * without the syntax render exactly as before. */
+function renderInlineLinks(text: string): ReactNode {
+  const parts = text.split(/\[([^\]]+)\]\(([^)]+)\)/g);
+  if (parts.length === 1) return text;
+  const className =
+    "text-leaf-700 dark:text-leaf-300 underline underline-offset-2 hover:text-leaf-800 dark:hover:text-leaf-200";
+  const out: ReactNode[] = [];
+  for (let i = 0; i < parts.length; i += 3) {
+    if (parts[i]) out.push(parts[i]);
+    if (i + 2 < parts.length) {
+      const label = parts[i + 1];
+      const href = parts[i + 2];
+      out.push(
+        href.startsWith("/") ? (
+          <Link key={i} href={href} className={className}>
+            {label}
+          </Link>
+        ) : (
+          <a key={i} href={href} target="_blank" rel="nofollow noopener" className={className}>
+            {label}
+          </a>
+        ),
+      );
+    }
+  }
+  return out;
+}
 
 export async function generateStaticParams() {
   const posts = await getPostsLocalized("en");
@@ -123,7 +155,7 @@ export default async function BlogPostPage({
                   }
                   return (
                     <p key={i} className={i === firstParaIdx ? "text-lg text-ink font-medium" : ""}>
-                      {block}
+                      {renderInlineLinks(block)}
                     </p>
                   );
                 });

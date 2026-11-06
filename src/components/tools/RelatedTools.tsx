@@ -1,5 +1,5 @@
 /**
- * RelatedTools — shared cross-linking card for all eight agricultural tools.
+ * RelatedTools — shared cross-linking card for all ten agricultural tools.
  * Ahmed's explicit order: every tool page links to the other tools.
  * Compact, tasteful, one section per tool page. The current page is shown
  * as non-clickable (aria-current) to avoid a self-link.
@@ -15,6 +15,7 @@ const TOOLS = [
   { href: "/soil-test-calculator", navKey: "soilTestCalculator" },
   { href: "/plant-dose-calculator", navKey: "plantDoseCalculator" },
   { href: "/land-area-calculator", navKey: "landAreaCalculator" },
+  { href: "/dap-tsp-converter", navKey: "dapTspConverter" },
   { href: "/map-area-calculator", navKey: "mapAreaCalculator" },
   { href: "/kitchen-garden", navKey: "kitchenGarden" },
   { href: "/profit-calculator", navKey: "profitCalculator" },
